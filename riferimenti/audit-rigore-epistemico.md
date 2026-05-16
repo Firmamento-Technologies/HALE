@@ -175,6 +175,8 @@ Il rigore si applica a *come supportiamo* queste posizioni e *come ci arriviamo*
 
 ## 4. Debito di rigore residuo (da affrontare in iterazioni future)
 
+> **Aggiornamento maggio 2026:** l'utente ha scaricato 13 fonti critiche in `/fonti/` (vedi `/fonti/INDEX.md`). Il debito sotto è stato rivalutato. **DR-004 e DR-009 sono ora parzialmente coperti.** Resto come prima.
+
 Items che richiedono **verifica esterna** (chiamate dirette, fonti ufficiali) prima di prossimi gate:
 
 | ID | Item | Azione richiesta | Owner | Deadline |
@@ -182,12 +184,12 @@ Items che richiedono **verifica esterna** (chiamate dirette, fonti ufficiali) pr
 | DR-001 | Pentema-Torriglia anagrafica | Verifica con Comune | snai-funding | M+2 |
 | DR-002 | Coopfond Cooding bando attivo 2026 | Contatto diretto Coopfond | snai-funding | M+1 |
 | DR-003 | TRL JOUAV CW-30E EASA-equivalent | Quotation + reference EU operatori | vtol-specialist | M+3 |
-| DR-004 | ENAC SAIL stima per Pentema | Pre-application meeting ENAC | regulatory-counsel | M+2 |
+| DR-004 | ENAC SAIL stima per Pentema | Pre-application meeting ENAC | regulatory-counsel | M+2 | ◐ Parzialmente coperto: `/fonti/LG-2023_006-UAS-Linee-Guida-U-Space.md` |
 | DR-005 | AGCOM spettro HAPS Italia status | Consultazione AGCOM Direzione Reti | telecom-payload | M+3 |
 | DR-006 | Garante Privacy posizione su sorveglianza HAPS | Analisi precedenti + eventual workshop | data-privacy | M+4 |
 | DR-007 | Base rate aerospace startup IT | Ricerca su database StartupItalia / AIAD | financial-cfo | M+3 |
 | DR-008 | EuroHAPS estensione civile/futuri call EDF | Engagement DG DEFIS | sovereign-strategist | M+4 |
-| DR-009 | IRIS² timeline e architettura stratosferica | Engagement DG CNECT | sovereign-strategist | M+4 |
+| DR-009 | IRIS² timeline e architettura stratosferica | Engagement DG CNECT | sovereign-strategist | M+4 | ◐ Parzialmente coperto: contesto AAM italiano in `/fonti/01_Piano-Strategico-Nazionale-AAM_ENAC_web-1.md` |
 | DR-010 | CIRA willingness for civilian HALE partnership | Engagement diretto CIRA | sovereign-strategist + CTO | M+3 |
 | DR-011 | Fibra di lino: qualificazione aerospace primaria | Ricerca peer-reviewed + esperti settore | aero-structures | M+6 |
 | DR-012 | Mercato HAPS triangulation (fonti non commerciali) | Ricerca Eurospace/AIAD/ITU reports | market-analyst | M+4 |

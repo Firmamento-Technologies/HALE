@@ -1,6 +1,42 @@
-# Fonti esterne da scaricare manualmente
+# Fonti esterne — download e indice
 
-**Perché manualmente:** il runtime cloud di Claude Code on the web ha una network policy restrittiva (`x-deny-reason: host_not_allowed`) che blocca i domini italiani ufficiali (`enac.gov.it`, `mimit.gov.it`, `dtascarl.org`, `politichecoesione.governo.it`, `agcom.it`, ecc.) e diversi domini europei e di standard tecnici. Lo script `download.sh` di questa cartella va eseguito **dalla tua macchina locale**, non dal runtime cloud.
+> **⚠️ Aggiornamento maggio 2026:** l'utente ha già scaricato manualmente i file critici e li ha messi in `fonti/` alla **root del repo** (non in questa cartella).
+>
+> **👉 Per l'inventario reale di cosa è stato scaricato, vedi: [`/fonti/INDEX.md`](../../fonti/INDEX.md)**
+>
+> Questa cartella `riferimenti/fonti/` resta come **piano originale** (40 fonti previste) e contiene lo script di download per i round successivi (T2 + T3).
+
+---
+
+## Storia
+
+Originariamente questa cartella era stata pensata come destinazione per lo script `download.sh` che scarica 40 fonti organizzate in 8 sotto-cartelle tematiche. Il problema è che il **runtime cloud di Claude Code on the web** ha una network policy restrittiva (`x-deny-reason: host_not_allowed`) che blocca i domini italiani ufficiali, quindi lo script va eseguito **dalla macchina locale dell'utente**.
+
+L'utente ha eseguito il download dei file critici **a mano** (non con lo script) e li ha messi in `/fonti/` alla root del repo. Per il prossimo round (T2 + T3), lo script `download.sh` di questa cartella resta utilizzabile.
+
+---
+
+## Cosa già scaricato
+
+Vedi **[`/fonti/INDEX.md`](../../fonti/INDEX.md)** per:
+- 13 file scaricati (10 T1 must-have + 3 bonus Allegati U-Space)
+- Stato copertura debito di rigore (DR-001..DR-015)
+- Lista dei T2/T3 ancora mancanti
+- Mappatura fonte → capitolo dello Studio dove usarla
+
+## Per il prossimo round di download
+
+Lo script `download.sh` in questa cartella scarica tutti i 40 file pianificati. Skip automatico dei file già esistenti, quindi può essere ri-eseguito.
+
+```bash
+cd riferimenti/fonti/
+chmod +x download.sh
+./download.sh tier2   # T1 + T2 (27 file totali, già scaricati 10)
+```
+
+(Lo script scarica in `riferimenti/fonti/NN-categoria/`. I file già presenti in `/fonti/` non vengono ri-scaricati, ma non vengono nemmeno spostati.)
+
+Se preferisci continuare il download a mano nella cartella `/fonti/` flat, vedi `/fonti/INDEX.md` §3 per la lista degli URL T2 prioritari.
 
 **Cosa farà:** scarica 40 fonti in 8 sotto-cartelle tematiche e prova a convertire i PDF in `.md` se hai `pdftotext` installato. Continua su errore (URL non più disponibili sono segnalati nel log, ma non bloccano il resto).
 
