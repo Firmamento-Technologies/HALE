@@ -100,6 +100,8 @@ Il capitolo è **sintesi delle evidenze** prodotte nei Cap. 1-9 e 11 dello Studi
 
 Il verdetto Go Condizionato è **subordinato** al raggiungimento delle seguenti condizioni:
 
+> **⚠️ Caveat probabilistico onesto (post Audit Red Team M+3)**: il verdetto "Go Condizionato" ha probabilità di trasformarsi in **Go pieno** al M+10/M+11 stimata effettivamente ~**15-35%** (non 60-80% come potrebbe suggerire una lettura ottimistica). Le 5 hard conditions sotto sono in AND logico: la P(tutte soddisfatte simultaneamente) è il prodotto delle probabilità marginali. Scenario base atteso: **Hold con piano di mitigazione** in 60-80% dei percorsi, con re-review M+13-14. Lo scenario "Go pieno immediato" richiede esecuzione perfetta multi-stakeholder + nessuno slittamento ENAC. Vedi `AUDIT-QUALITY-VOLUME-1.md` §6 per il calcolo dettagliato.
+
 **Hard conditions** (vincolanti, no-Go se mancanti):
 - ☐ **C1**: LoI o accordo formale Regione Liguria firmato entro M+9
 - ☐ **C2**: Autorizzazione SORA ENAC operativa entro M+9

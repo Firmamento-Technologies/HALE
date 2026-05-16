@@ -419,7 +419,7 @@ Il **Garante Privacy Italia** ha pubblicato linee guida e provvedimenti relativi
 - Geofence di esclusione su aree residenziali sensibili
 - Conservazione differenziata: imagery non-emergenza max 30 giorni raw, prodotti derivati anonimi
 
-> **Falsifying observation §5.6.2**: se il Garante Privacy, in risposta a un eventuale reclamo da cittadini Pentema o cooperative, emette provvedimento ex art. 58 GDPR sospendendo le missioni EO, l'intera linea di servizio EO ad alta risoluzione è bloccata fino a ridisegno con anonimizzazione hardware. Probabilità: L-M (Pentema piccola comunità di poche centinaia di abitanti, basso rischio reclami), impatto: M. Mitigazione: **engagement preventivo comunità Pentema** + DPIA pubblica + governance condivisa (vedi `agents/data-privacy-counsel.md`).
+> **Falsifying observation §5.6.2**: se il Garante Privacy, in risposta a un eventuale reclamo da cittadini Pentema o cooperative, emette provvedimento ex art. 58 GDPR sospendendo le missioni EO, l'intera linea di servizio EO ad alta risoluzione è bloccata fino a ridisegno con anonimizzazione hardware. Probabilità: L-M (Pentema comunità di **14 residenti ISTAT**, basso rischio numerico di reclami ma alto rischio mediatico se singolo evento polarizza), impatto: M. Mitigazione: **engagement preventivo comunità Pentema** + DPIA pubblica + governance condivisa (vedi `agents/data-privacy-counsel.md`).
 
 ### 5.6.3 Direttiva ePrivacy 2002/58/CE per Dati Telecom
 

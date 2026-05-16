@@ -171,7 +171,11 @@ In linea con boundary B2 (asset riusabili dal Percorso 6A al 6B), le scelte arch
 | Avionica VTOL JOUAV proprietaria | ❌ Non riusabile (HALE custom DAL-C) | |
 | Piattaforma volante | ❌ Non riusabile (concept diverso) | |
 
-**Riuso medio asset 6A → 6B: ~60%**, sufficiente per giustificare il "ladder" tecnologico.
+**Riuso medio asset 6A → 6B**:
+- **~60% in conteggio di categorie di asset riusabili** (ground segment + cloud + data governance + autorizzazioni + brand + payload adattabile vs piattaforma volante + avionica + propulsione 6A specifici)
+- **~30-40% in valore monetario riusato** (€250-550k di asset Y1 riusabili su CapEx 6A €700k-€2M — vedi Cap. 10 §10.3.1)
+
+Le due metriche misurano cose diverse e sono entrambe corrette. Confidence: medium (qualitativo); quantificazione monetaria precisa in Vol. 2 Allegato A.7.
 
 ---
 

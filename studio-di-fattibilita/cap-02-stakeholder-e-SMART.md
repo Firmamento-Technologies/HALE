@@ -148,7 +148,7 @@ In coerenza con NASA SE Handbook §4.1.1.2.1 [^1] e con la stakeholder map basel
 | S-04 | Regione Liguria | CUSTOMER + REGULATOR | Anchor customer + sponsor istituzionale + co-pianificatore SNAI | Accordo quadro + co-progettazione (art. 55 CTS) + LoI | Mensile | snai-funding-expert |
 | S-05 | Comune di Torriglia (Pentema) | CUSTOMER + COMMUNITY | Sede pilota, autorizzazioni locali, beneficiario diretto | Convenzione + workshop pubblico | Mensile in pilota | snai-funding-expert |
 | S-06 | Protezione Civile Liguria + ARPA Liguria | CUSTOMER | Cliente pilota PRIMARIO emergenze / monitoraggio | Convenzione operativa + ore-volo | Settimanale in stagione critica | aerospace-SE |
-| S-07 | Comunità Pentema (~150 residenti) | COMMUNITY | Accettabilità sociale, diritti privacy | Workshop pubblico + DPIA pubblica + canali web | Trimestrale (continuativa in pilota) | data-privacy-counsel |
+| S-07 | Comunità Pentema (**14 residenti ISTAT**, frazione 3.27 km da Torriglia, 11 famiglie, 100 edifici) | COMMUNITY | Accettabilità sociale, diritti privacy | Workshop pubblico + DPIA pubblica + canali web | Trimestrale (continuativa in pilota) | data-privacy-counsel |
 | S-08 | ENAC | REGULATOR | Autorizzazione operativa SORA, certificazione, vigilanza | Pre-application meeting + Operations Manual + SORA application | Mensile inizialmente, poi trimestrale | aviation-regulatory-counsel |
 | S-09 | EASA | REGULATOR | Framework europeo, Special Condition HAPS, NPA HAPS | Engagement RMT + comments NPA | Trimestrale | aviation-regulatory-counsel |
 | S-10 | AGCOM | REGULATOR | Spettro radio, licensing, posizione HAPS bands | Istanza licenze + position paper | Trimestrale | telecom-ntn-payload-expert |
@@ -761,7 +761,7 @@ Calendario dei gate decisionali (cf. Cap. 9 + skill `gate-review-checklist`):
 
 ### 2.5.4 Vincoli territoriali (Pentema + Aree Interne Liguria)
 
-**Pentema (Torriglia, GE)** — frazione di ~150 abitanti a 1100-1300 m s.l.m. nell'area Antola-Tigullio (SNAI 2014-2020 + 2021-2027). Caratteristiche operative:
+**Pentema (Torriglia, GE)** — frazione di **14 abitanti ISTAT** (7 M + 7 F, 11 famiglie, 100 edifici di cui 97 utilizzati, distanza 3.27 km dal capoluogo Torriglia) a 1100-1300 m s.l.m. nell'area SNAI Antola-Tigullio (2014-2020 + 2021-2027). Caratteristiche operative:
 
 | Caratteristica | Valore | Implicazione |
 |---|---|---|

@@ -163,7 +163,7 @@ La **frazione di Pentema**, nel **Comune di Torriglia (Città Metropolitana di G
 
 > **Caveat epistemico**: la rappresentatività di Pentema è un'**assunzione del progetto** (registrata come ASM-001 nel Cap. 3 §3.9), non un fatto dimostrato. Esistono Aree Interne con caratteristiche differenti (es. zone insulari, aree desertiche del meridione). La generalizzazione richiede verifica nella Fase 2 (M+12-24) con replica in almeno 2-3 contesti diversi. *Confidence rappresentatività: medium*.
 
-> **Falsifying observation**: se al gate M+10/M+11 il Comune di Torriglia o la comunità Pentema **non concedono accettabilità sociale** al volo persistente (es. per ragioni di rumore residuo, percezione di sorveglianza, opposizione locale al concept), il caso pilota va spostato in altra frazione/area SNAI Liguria (es. Beigua Sol, Val di Vara, Fontanabuona). *Probabilità: L-M* (comunità di poche centinaia di abitanti, basso rischio assoluto ma alto rischio relativo se un singolo evento mediatico polarizza); *impatto: M-H* (slittamento timeline 6 mesi). Mitigazione: workshop pubblico + DPIA pubblica + governance condivisa entro M+9 (vedi Cap. 5 §5.6.2 e OQ-CAP1-03).
+> **Falsifying observation**: se al gate M+10/M+11 il Comune di Torriglia o la comunità Pentema **non concedono accettabilità sociale** al volo persistente (es. per ragioni di rumore residuo, percezione di sorveglianza, opposizione locale al concept), il caso pilota va spostato in altra frazione/area SNAI Liguria (es. Beigua Sol, Val di Vara, Fontanabuona). *Probabilità: L-M* (comunità minima — 14 abitanti ISTAT — quindi basso rischio assoluto numerico ma alto rischio relativo se un singolo evento mediatico polarizza); *impatto: M-H* (slittamento timeline 6 mesi). Mitigazione: workshop pubblico + DPIA pubblica + governance condivisa entro M+9 (vedi Cap. 5 §5.6.2 e OQ-CAP1-03).
 
 ### 1.2.4 Le criticità delle Aree Interne che il progetto affronta
 
@@ -476,7 +476,7 @@ Il presente capitolo è stato sottoposto a stress-test dall'agente `red-team-ske
 
 ### Critica R2 (Regione Liguria): "Perché Pentema? Cosa garantisce che il pilota produca valore per la Regione?"
 
-**Critica dettagliata**: la Liguria ha **8 Aree SNAI riconosciute**, con criticità diverse (entroterra Imperia vs Antola Tigullio vs Val di Vara). Pentema è una frazione di poche centinaia di abitanti. Se il pilota funziona a Pentema, qual è il **percorso verso scale-up regionale**? Quali sono i **KPI quantitativi** che giustificano l'allocazione di tempo della Regione Liguria su una pilota di scala micro? Quali sono i **risultati che la Regione può portare a casa** per giustificarne politicamente l'adesione?
+**Critica dettagliata**: la Liguria ha **8 Aree SNAI riconosciute**, con criticità diverse (entroterra Imperia vs Antola Tigullio vs Val di Vara). Pentema è una frazione di sole **14 persone ISTAT** (dimensione micro-pilota deliberata). Se il pilota funziona a Pentema, qual è il **percorso verso scale-up regionale**? Quali sono i **KPI quantitativi** che giustificano l'allocazione di tempo della Regione Liguria su una pilota di scala micro? Quali sono i **risultati che la Regione può portare a casa** per giustificarne politicamente l'adesione?
 
 **Risposta**:
 
