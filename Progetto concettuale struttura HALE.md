@@ -1,0 +1,23 @@
+Il presente documento presenta il progetto concettuale di un velivolo a pilotaggio remoto (UAV) ad ala fissa, sviluppato nell'ambito della ricerca di piattaforme HALE (High Altitude Long Endurance). L'obiettivo primario del design è massimizzare l'autonomia operativa attraverso l'estrema efficienza aerodinamica e la riduzione della massa strutturale.
+
+<img src="media/image7.jpg" style="width:6.26772in;height:4.43056in" />**Caratteristiche Aerodinamiche e Strutturali**
+
+Il velivolo adotta una configurazione alare ad alto allungamento (high aspect ratio), scelta essenziale per minimizzare la resistenza indotta e ottimizzare l'efficienza in crociera. L'ala è caratterizzata da una geometria poliedrica con un diedro positivo marcato nelle sezioni esterne, che garantisce una stabilità laterale passiva e intrinseche capacità di auto-livellamento, cruciali per missioni di lunga durata.
+
+<img src="media/image3.jpg" style="width:6.26772in;height:4.43056in" />Per quanto riguarda la sostenibilità e l'innovazione, la struttura prevede l'uso di fibre naturali, in particolare la fibra di lino, per componenti strutturali e semi-strutturali, affiancando i compositi tradizionali. Questa scelta sfrutta le specifiche proprietà meccaniche della fibra di lino riducendo al contempo l'impatto ambientale.<img src="media/image5.jpg" style="width:6.26772in;height:4.43056in" />Il velivolo è caratterizzato da una configurazione alare ad elevato allungamento (high aspect ratio), una scelta geometrica critica per minimizzare la resistenza indotta e massimizzare l'efficienza durante le fasi di volo prolungato. L'ala presenta una geometria poliedrica, con le sezioni esterne caratterizzate da un marcato diedro positivo; questa soluzione fornisce una stabilità laterale passiva intrinseca, garantendo caratteristiche di auto-livellamento essenziali per missioni di lunga durata. In un'ottica di sostenibilità e innovazione dei materiali, il progetto strutturale considera, oltre ai compositi tradizionali, l'impiego di fibre naturali, specificamente la fibra di lino, per la realizzazione di componenti strutturali e semi-strutturali, sfruttandone le proprietà meccaniche specifiche e il ridotto impatto ambientale.<img src="media/image9.jpg" style="width:6.26772in;height:4.43056in" /><img src="media/image10.jpg" style="width:6.26772in;height:4.43056in" /><img src="media/image6.jpg" style="width:6.26772in;height:4.43056in" />
+
+**Configurazione della Propulsione e della Fusoliera**
+
+La fusoliera centrale è una gondola aerodinamica a bassa resistenza (low-drag pod) che alloggia l'avionica di missione, le batterie e il payload. Il sistema di propulsione è elettrico in configurazione traente, con un'elica posizionata nel cono di prua della fusoliera. Un lungo trave di coda (tail boom) ad elevato rapporto rigidità-peso collega la fusoliera all'impennaggio.
+
+<img src="media/image4.jpg" style="width:6.26772in;height:4.43056in" />L'architettura di coda è del tipo a T (T-tail), con lo stabilizzatore orizzontale montato in cima alla deriva verticale. Questa configurazione isola i piani orizzontali dalla scia turbolenta dell'ala e dal flusso dell'elica, migliorando la stabilità complessiva e l'autorità di controllo longitudinale.
+
+**Analisi di Configurazioni Alternative (Three Lifting Surface)**
+
+<img src="media/image1.jpg" style="width:6.26772in;height:1.52778in" />
+
+Un'immagine allegata illustra un'analisi fluidodinamica preliminare (ottenuta in ambiente XFLR5) relativa a una configurazione alternativa per un UAV di categoria C3 (apertura alare \< 3 m): un'architettura a tre superfici portanti (Three Lifting Surface Configuration). Ispirata al Piaggio P180 Avanti, questa soluzione incorpora un piano canard anteriore portante, un'ala principale e un impennaggio a T posteriore.
+
+<img src="media/image2.jpg" style="width:6.26772in;height:2.94444in" />
+
+Questa geometria sposta in avanti il centro aerodinamico, permettendo al canard di contribuire positivamente all'equilibrio del momento di beccheggio. Di conseguenza, si elimina la necessità di una forza di coda deportante, riducendo il carico complessivo sull'ala principale e assicurando un'efficienza superiore rispetto alla configurazione standard con ala e coda deportante. La visualizzazione del coefficiente di pressione conferma il carico aerodinamico attivo su canard e ala. Le linee di flusso evidenziano l'interazione fluidodinamica del canard sulla radice alare e il corretto posizionamento dello stabilizzatore orizzontale al di fuori della scia turbolenta. Questa piattaforma è ottimizzata per l'efficienza in crociera e mostra un potenziale per una futura integrazione ibrida VTOL.<img src="media/image8.jpg" style="width:6.26772in;height:3.56944in" />
