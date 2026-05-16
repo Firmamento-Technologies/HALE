@@ -150,7 +150,7 @@ PENTEMA┤      │      │      │      │      │      │      │      �
 | Y7-Y8 | + Connettività NTN commerciale scala regionale | ARPU mix wholesale + retail B2B |
 | Y9-Y10 | + Servizi sovrani EU (governativi secure + emergency + comm) | Concessione + canone EU governativo |
 
-### Capital structure target per fase
+### Capital structure target per fase (⚠️ stime preliminari, vedi caveat sotto)
 
 | Fase | Equity raise stimato | Grant target | Debito |
 |---|---|---|---|
@@ -160,7 +160,24 @@ PENTEMA┤      │      │      │      │      │      │      │      �
 | Y7-Y8 | €50-150M (Series C / strategic) | €30-100M (EU sovereign program) | €20-50M |
 | Y9-Y10 | IPO / strategic exit / consolidation | €100-500M (EU equivalent IRIS² stratospheric) | sovrano |
 
-**Totale capital intensity 10 anni:** **€500M - €2B** (range realistico, in funzione di velocità di adoption e finanziamenti EU sovrani).
+**Totale capital intensity 10 anni:** **€500M - €2B** (range "small fleet" 5-10 HAPS).
+
+### ⚠️ Caveat epistemico — capital intensity probabilmente sottostimata (Regola 7)
+
+Le cifre sopra sono **stime preliminari interne** `[expert judgment progetto | 2026 | confidence: low]`. La base rate aerospace suggerisce ranges più alti:
+
+**Scenari di scala**:
+- **Small fleet (5-10 HAPS operativi Y10)**: €500M-2B totale Y1-Y10 (cifra sopra)
+- **Medium fleet (20-50 HAPS, scala italiana operativa)**: €2-10B totale Y1-Y10
+- **Large fleet (100+ HAPS, scala "EU sovereign layer")**: €5-30B totale Y1-Y10
+
+**Confronto Starlink**: $30B+ per 6000+ sat (≈$5M/sat capex inclusivo). Una flotta HAPS perennial richiede unit cost stimabile €5-50M/piattaforma + ground segment + spettro + operazioni. Per scala "EU sovereign" 100+ HAPS, capital intensity onesta è probabilmente **€10-30B**, non €500M-2B.
+
+**Implicazione strategica**: il path verso "EU sovereign stratospheric layer" è **finanziariamente possibile solo con programma equivalente IRIS²** (€10B+ Commission-funded), **non** con sole risorse private. La visione 10 anni richiede co-investimento sovrano EU come **precondizione**, non come "bonus".
+
+**Falsifying observation:** se entro Y4-Y5 non esiste programma EU specifico per HAPS sovereign con budget multi-miliardario, la Fase 5 (consorzio EU) è strutturalmente non finanziabile e va ridimensionata a "scala italiana standalone".
+
+**Posizione strategica utente (boundary condition B2):** l'obiettivo "alternativa europea Starlink" è mantenuto come **vettore strategico**, indipendentemente dalla magnitudine effettiva del finanziamento richiesto. Il rigore epistemico è applicato a *come arrivarci*, non se è l'obiettivo giusto.
 
 ## 5. Vincoli e rischi strutturali
 
@@ -203,13 +220,12 @@ Punti di posizionamento pubblico:
 - **USARE il linguaggio**: "Stratospheric layer complementing the EU sovereign multi-orbit infrastructure (Galileo, Copernicus, IRIS²)"
 - **POSITION PAPER**: "Italian leadership in EU stratospheric sovereignty"
 
-## 8. Cosa serve confermare ora
+## 8. Cosa è confermato dall'utente
 
-Per validare la visione 10 anni come baseline:
+1. ☑ Time horizon 10 anni (non 20)
+2. ☑ Modello service-only (no product sale) — **boundary condition B1**
+3. ☑ Posizionamento "alternativa europea Starlink" come obiettivo strategico — **boundary condition B2** (mantenuto a prescindere da analisi di feasibility)
+4. ☑ Mantenimento del modello cooperativo Legacoop come partner strategico — **boundary condition B1**
+5. ☐ Capital intensity: la cifra €500M-2B è preliminare. Per scala "alternativa Starlink EU" realisticamente €10-30B (vedi caveat sopra). Da elaborare in capital strategy paper dedicato.
 
-1. ☐ Conferma utente sul time horizon 10 anni (vs 20)
-2. ☐ Conferma utente sul modello service-only (no product sale)
-3. ☐ Conferma utente sul vettore sovranità EU (vs altre opzioni: NATO-aligned, dual-use military, M&A path)
-4. ☐ Conferma utente sul piano capital intensity €500M-2B (deve essere realistico per gli investitori target)
-
-**Aggiornamento:** ☑ tutto confermato dall'utente in conversazione del [data], salvo il numero di anni: 10 invece di 20.
+**Boundary conditions B1 e B2** sono scelte di posizionamento strategico-politiche del fondatore: non soggette a falsificazione epistemica, ma input dell'esercizio progettuale. Il rigore si applica a **come** le si supporta e **come** ci si arriva, non al **se** sono gli obiettivi giusti.

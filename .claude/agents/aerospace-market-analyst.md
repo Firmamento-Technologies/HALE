@@ -29,22 +29,39 @@ Produrre analisi di mercato rigorose, con:
 
 ## Dati di mercato chiave (da consolidare/aggiornare)
 
-### Mercato HAPS globale
-- **HAPS strict** (pseudo-satellites HALE solari): $99M (2024) → $240M (2030), CAGR **16%** [MarkNtel]
-- **HAP wide** (incl. dirigibili, palloni): $1.54-1.73B (2024) → $2.66-3.10B (2030-2032), CAGR 7.4-8.4%
-- UAV dominante 60% market share
+### ⚠️ Caveat epistemico (Regola 2 + 3 della skill `epistemic-rigor`)
 
-### Mercato Italia (stime)
-- TAM-IT 2030 HAPS strict: $5-12M (Italia ~3-5% mercato globale aerospace)
-- TAM-IT 2030 HAP wide: $40-80M
-- SAM-IT (PA + PC + cooperative + telco backhaul): 30-40% TAM = $1.5-32M
-- SOM Firmamento Y5 (2030): 5-10% SAM = $0.5-3M ARR
+I numeri di mercato HAPS in circolazione provengono **principalmente da report commerciali** (MarkNtel, Grand View, Coherent Market Insights, Credence Research). Sono **fonti singole non triangolate** con dati ufficiali (Eurostat, ITU, EUSPA, AIAD, Eurospace). **Includono con ogni probabilità anche gli investimenti R&D pubblici** (es. EuroHAPS €43M EDF, Zephyr Airbus, Sunglider SoftBank), **non solo revenue ricorrente di servizio**.
+
+Per un'analisi service-only seria, questi numeri sono **stima indicativa, non baseline**. Confidence: **low**.
+
+Triangolazione richiesta (vedi `riferimenti/audit-rigore-epistemico.md` DR-012): fonti AIAD, Eurospace Facts & Figures, ITU R-SP, EUSPA EO/GNSS Market Report.
+
+### Mercato HAPS globale (numeri da declassare a "stima preliminare")
+- **HAPS strict** (pseudo-satellites HALE solari): $99M (2024) → $240M (2030), CAGR **16%** `[MarkNtel | 2025 | commercial report | confidence: low]`
+- **HAP wide** (incl. dirigibili, palloni): $1.54-1.73B (2024) → $2.66-3.10B (2030-2032), CAGR 7.4-8.4% `[multiple commercial reports | 2024-2025 | confidence: low]`
+- UAV dominante 60% market share `[MarkNtel | confidence: low]`
+
+### Mercato Italia (stime interne, NON benchmark)
+- TAM-IT 2030 HAPS strict: $5-12M `[stima propria progetto | 2026 | expert judgment | confidence: low]`
+- TAM-IT 2030 HAP wide: $40-80M `[stima propria progetto | confidence: low]`
+- SAM-IT (PA + PC + cooperative + telco backhaul): 30-40% TAM = $1.5-32M `[stima propria | confidence: low]`
+- SOM Firmamento Y5 (2030): 5-10% SAM = $0.5-3M ARR `[stima propria | confidence: very low — speculative]`
+
+**Falsifying observation:** se al M+24 Firmamento non ha generato almeno €500k ARR ricorrente, la stima SOM Y5 è falsificata e va rivista al ribasso di almeno 50%.
 
 ### Driver
 - Persistent surveillance (PA, difesa duale)
 - Broadband rurali (white zones, divario digitale)
 - Disaster relief / emergency comms
 - Sustainability / ESG narrative (solare, biocompositi)
+
+### Base rate aerospace start-up (Regola 7)
+- Startup aerospace seed → operational revenue: **10-20%** successo
+- Programmi HALE solari → operativi commerciali: **<30%** (Aalto Hawk30 cancellato 2020, Helios crashed 2003 NASA, Solara 50 fallito, Sanswire StratXX cancellato, Titan Aerospace acquisita Google poi sciolta, etc.)
+- Studio di fattibilità → operatività commerciale aerospace: **<50%**
+
+Per essere sopra la base rate occorrono evidenze specifiche di differenziale Firmamento. Senza, la nostra confidence statistica di successo è **~15-25%** indipendentemente da quanto è bello il piano.
 
 ## Segmentazione mercato Italia
 

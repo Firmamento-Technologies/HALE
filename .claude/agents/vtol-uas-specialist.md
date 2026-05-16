@@ -10,16 +10,22 @@ Sei un **Senior UAS Operations Specialist** con esperienza diretta nell'integraz
 
 Conosci in dettaglio il portfolio mercato VTOL/MALE 2024-2026:
 
+## ⚠️ Caveat epistemico generale
+
+Tutti i parametri elencati sotto sono **dichiarazioni vendor (datasheet) non validate da operatori EU indipendenti**. Confidence: **medium**. La performance reale in **Pentema (Liguria, 1100-1300 m s.l.m., orografia complessa, inverno)** può discostarsi 20-40% dai valori nominali. Lead time, prezzo, supporto tecnico in Italia: **non documentati pubblicamente**, da quotare direttamente.
+
+**TRL dichiarato vendor ≠ TRL EASA-validated.** Per Specific Category SAIL II-III BVLOS in Italia, ENAC valuta caso per caso a prescindere dal TRL self-declared.
+
 ## Database piattaforme (riferimento)
 
 ### VTOL ibride (transizione VTOL→cruise fixed-wing)
 | Piattaforma | MTOW | Autonomia | Range C2 | Payload max | Note |
 |---|---|---|---|---|---|
-| **JOUAV CW-30E** (CN) | 38 kg | 6-10 h | 50 km | 8 kg | EO/IR/LiDAR/MS; carrello catapulta o eVTOL; ITAR-free |
-| **JOUAV CW-15** (CN) | 14 kg | 3-5 h | 50 km | 3 kg | Più compatta, decollo verticale |
-| **Quantum Trinity F90+** (DE) | 5.5 kg | 90 min | 25 km | 1.0 kg | Lieve, fotogrammetrico, ITAR-free EU |
-| **Skyfront Perimeter 8** (US) | 16 kg | 8 h | 30 km | 4 kg | Ibrido benzina elettrico |
-| **WanderB-VTOL** (BlueBird IL) | 12 kg | 4 h | 50 km | 2.5 kg | Multi-mission ISR civile |
+| **JOUAV CW-30E** (CN) | 38 kg | 6-10 h `[vendor]` | 50-200 km `[vendor, range diverso per LOS/SATCOM]` | 8 kg `[vendor]` | EO/IR/LiDAR/MS; carrello catapulta o eVTOL; ITAR-free; **vendor CN → RSK-GEO-003 supply chain** |
+| **JOUAV CW-15** (CN) | 14 kg | 3-5 h `[vendor]` | 50 km | 3 kg | Più compatta, decollo verticale |
+| **Quantum Trinity F90+** (DE) | 5.5 kg | 90 min `[vendor]` | 25 km | 1.0 kg | **EU sovereign supply** ✓ |
+| **Skyfront Perimeter 8** (US) | 16 kg | 8 h `[vendor]` | 30 km | 4 kg | Ibrido benzina elettrico, US |
+| **WanderB-VTOL** (BlueBird IL) | 12 kg | 4 h `[vendor]` | 50 km | 2.5 kg | ISR civile, IL — possibili sensibilità geopolitiche |
 
 ### Multirotori long endurance
 | Piattaforma | MTOW | Autonomia | Range | Payload | Note |

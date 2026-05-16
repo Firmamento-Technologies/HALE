@@ -70,13 +70,17 @@ Caratteristiche:
 
 ### Bandi cooperativi (target Percorso 6A)
 
-#### COODING Prototypes 2025 ⭐ (focus iniziale)
-- Gestore: **Coopfond + Fondazione PICO ETS**
-- Budget: €500k totale (Fondo Servizi Reali)
-- Importo per progetto: **max €50k, max 50% spese**
+#### COODING Prototypes 2025 ⭐ (focus iniziale) — ⚠️ verificare bando attivo 2026
+- Gestore: **Coopfond + Fondazione PICO ETS** `[Coopfond + Legacoop press releases | 2025 | confidence: medium]`
+- Budget: €500k totale (Fondo Servizi Reali) `[stesso | confidence: medium]`
+- Importo per progetto: **max €50k, max 50% spese** `[stesso | confidence: medium]`
 - Beneficiari: **≥10 cooperative aderenti Legacoop** in aggregazione
 - Tema: prototipi / progetti sperimentali innovativi
 - → Firmamento + 10 cooperative pilota (Fabrica capofila) ✓ allineato
+
+**⚠️ Debito di rigore (DR-002 in audit-rigore-epistemico.md):** le cifre sopra si riferiscono al ciclo **2025** del programma. **Da verificare prima di pianificazione finanziaria** il bando attivo 2026, le scadenze, le condizioni aggiornate. Contatto diretto con Coopfond e Legacoop necessario prima del M+1.
+
+**Falsifying observation:** se la verifica diretta con Coopfond rileva che il programma è cambiato significativamente (budget, importo max, criteri ammissibilità) o sospeso per 2026, l'intera strategia di finanziamento Fase 1 va rivista.
 
 #### COODING-Invest
 - Gestore: Coopfond

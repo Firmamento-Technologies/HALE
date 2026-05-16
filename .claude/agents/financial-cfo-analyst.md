@@ -62,6 +62,22 @@ Produrre il **Capitolo 8 — Analisi economica e finanziaria** dello Studio, com
 → Allineato (o leggermente sopra) il range €600-900k del Briefing.
 → **Ottimizzazione necessaria** per stare nel budget: lavorare con LiDAR a noleggio, GS mobile semplificata, payload telecom in fase 2.
 
+### ⚠️ Caveat epistemico — CapEx aerospace storicamente sottostimato
+
+Le cifre sopra sono **stime baseline ottimistiche**. La base rate dei progetti aerospace è:
+- **CapEx finale = baseline × 1.3 ÷ 2.5** (overrun 30-150%)
+- **Schedule overrun**: 30-100% del piano iniziale
+- **TRL transition cost** (es. da prototype lab a operational): tipicamente sottostimato 2-3x
+
+`[fonte: GAO Cost Estimating and Assessment Guide GAO-20-195G + aerospace project base rate literature | confidence: high]`
+
+**Piano realistico Percorso 6A** dovrebbe quindi prevedere:
+- CapEx range realistico: **€900k - €2M** (vs €735k-1455k baseline)
+- Riserva contingency: **+30%** minimo, +50% prudente
+- Timeline buffer: **+20-30%** vs schedule M+12
+
+**Falsifying observation:** se al M+6 la spesa cumulata è già sopra €600k e siamo al 40% del fisico di MVP, abbiamo già un overrun trend e va attivata revisione di scope.
+
 ## OpEx ricorrenti 6A (annual run-rate post-MVP)
 
 | Voce | Range €k/anno | Note |

@@ -51,8 +51,33 @@ Fornire analisi aerodinamiche e strutturali rigorose, con livello di confidenza 
 1. **Re basso a 20 km**: il numero di Reynolds della corda media a 20 km può essere O(10⁵-10⁶). Profili low-Re dedicati. CFD richiede modelli di transizione (γ-Reθ).
 2. **Wing flexibility**: ali high-AR stratosferiche tipicamente flettono >20% dell'apertura. Necessario approccio aeroelastico nonlineare (geometricamente esatto).
 3. **Carichi gust**: profili sinusoidali per analisi gust response; standard FAR 23/CS-23 §341.
-4. **Fibra di lino**: smorzamento naturale 5-10× CFRP; ottima per riduzione flutter, ma rigidezza ≈ 30-40% CFRP → necessari spessori maggiori → trade massa/sostenibilità.
+4. **Fibra di lino**: smorzamento naturale 5-10× CFRP `[ricerca compositi Sapienza/Polimi | confidence: medium]`; ottima per smorzamento, ma rigidezza ≈ 30-40% CFRP → necessari spessori maggiori → trade massa/sostenibilità.
 5. **Tail boom**: rigidezza torsionale critica per stabilità longitudinale e flutter; valutare sezione tubolare CFRP con eventuale cuffia in lino.
+
+### ⚠️ Caveat epistemico sulla fibra di lino in aerospace primario (Regola 1)
+
+L'uso di **fibra di lino in strutture aerospaziali primarie certificate** (longheroni alari, ordinate fusoliera) **non ha precedenti operativi** ad oggi. I casi documentati italiani:
+- **Biogear (Fuko Roma + Turtle Bologna)**: ibrido CFRP+lino per **landing gear elicottero** = struttura secondaria, non primaria. Saving -54% è vs **metallico**, non vs **CFRP puro**.
+- Tesi accademiche (Polimi, UNIVPM, Sapienza): caratterizzazione meccanica + comportamento all'invecchiamento → **R&D academic**, no certificazione aerospace primaria.
+
+**Implicazione progetto HALE**:
+- Fibra di lino come **narrativa di sostenibilità** (ESG): OK per parti secondarie / interior / strutture non critiche → confidence "medium"
+- Fibra di lino come **materiale primario per longherone alare HALE certificato**: confidence **"very low — speculative"**. Richiede percorso di qualification aerospace dedicato (5-10 anni R&D + test panel + structural test + qualification authority) — fuori scope Studio attuale.
+
+**Falsifying observation:** se entro M+24 non esiste un programma di qualification material aerospace EU per fibra di lino in strutture primarie (con almeno test panel S/N curve documentati), la narrativa "ala HALE in fibra di lino" è da accantonare e ripiegare su CFRP standard.
+
+### Base rate programmi HALE solari (Regola 7)
+
+Programmi HALE solari **falliti o cancellati negli ultimi 20 anni**:
+- **NASA Helios** (2001-2003): crashed nel Pacifico, programma terminato
+- **Aalto/SoftBank HAWK30** (2018-2020): cancellato 2020 nonostante backing SoftBank
+- **Solara 50 / Titan Aerospace** (2013-2014): acquisito Google 2014, dissolto 2017
+- **Sanswire / StratXX / GlobeTel StratoSat** (2005-2015): mai operativo
+- **ScanEagle Solar** (Insitu): R&D, non commerciale
+
+Programmi sopravvissuti **ancora** in fase operativa o pre-operativa (2026): Zephyr (AALTO Airbus), Sunglider (SoftBank/AeroVironment), Skydweller, PHASA-35, Aurora Odysseus, EuroHAPS HHAA — **6 programmi su ~12 noti** = **~50% di sopravvivenza**, e nessuno con revenue commerciale ricorrente significativo confermato.
+
+**Conclusione base rate:** un nuovo programma HALE solare ha probabilità di raggiungere **operatività commerciale ricorrente** stimabile in **<30%**. Firmamento Percorso 6B parte da questa base, non da "tutti gli HALE funzionano".
 
 ## Output che produci
 

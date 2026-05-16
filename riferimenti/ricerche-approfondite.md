@@ -4,6 +4,31 @@
 **Scopo:** dataset di riferimenti tecnici, regolatori, di mercato e di filiera per alimentare lo Studio di Fattibilità.
 **Limite tecnico noto:** la network policy del runtime cloud blocca il download diretto delle fonti italiane (`x-deny-reason: host_not_allowed`). Le sintesi che seguono provengono da **ricerche web mirate** (WebSearch) e dalla conoscenza pubblica. Le URL sono lasciate per consultazione/download manuale dell'utente.
 
+## ⚠️ Caveat epistemico generale (skill `epistemic-rigor`)
+
+Questo documento contiene sintesi prodotte da **WebSearch su poche query** (non triangolazione completa) + **conoscenza pubblica**. Per ogni claim cruciale di mercato/finanziario:
+- **Confidence prevalente: low-medium**
+- Spesso **fonte singola** (commerciale o press)
+- Non triangolato con dati ufficiali (Eurostat, ITU, EUSPA, AIAD, ENAC, AGCOM annual reports)
+
+I numeri qui sono **utilizzabili come baseline esplorativa**, **NON come baseline di decisione finanziaria o gate review**. Per uso "investment-grade" è necessario il lavoro descritto in `riferimenti/audit-rigore-epistemico.md` (debito di rigore residuo DR-001 → DR-015).
+
+**Base rate aerospace da tenere presente** (Regola 7):
+- Startup aerospace → revenue operativo: 10-20%
+- Programmi HALE solari → operativi commerciali: <30% (vedi lista falliti sotto)
+- Studi di fattibilità → progetto realizzato: <50% aerospace
+- Type Certification UAS innovativa <5 anni: ~10%
+
+Lista programmi HALE solari falliti / cancellati / mai operativi:
+- NASA Helios (crashed 2003)
+- Aalto/SoftBank HAWK30 (cancellato 2020)
+- Solara 50 / Titan Aerospace (acquisito Google 2014, dissolto 2017)
+- Sanswire / StratXX / GlobeTel StratoSat (mai operativo, 2005-2015)
+- ScanEagle Solar (R&D only)
+- BlueBird PathFinder (cancellato)
+
+→ Citare Zephyr/Sunglider/Skydweller come benchmark è **survivor bias** se non si menzionano anche i fallimenti.
+
 ---
 
 ## INDICE
@@ -213,10 +238,20 @@ Fonti:
 - **Sardegna (Italia)** — pianificato 2024
 - **Fuerteventura (Canarie)** — pianificato 2024
 
-### Implicazioni per Firmamento
-- **CIRA è il partner italiano EuroHAPS sui dimostratori stratosferici**. Una partnership R&D con CIRA è il candidato naturale per il Percorso 6B HALE.
-- Possibili sinergie con **GATB Grottaglie** (test bed UAS BVLOS) per il Percorso 6A.
-- Future call EDF / Horizon possono finanziare sviluppi correlati.
+### Implicazioni per Firmamento — ⚠️ correzioni epistemiche
+
+**Errore di framing originario corretto:**
+- EuroHAPS è **EDF (difesa)**, non programma civile.
+- CIRA sviluppa **HHAA — Hybrid High Altitude Airship** (dirigibile ibrido con superficie alare) brevettato, **non** UAV solare HALE come Firmamento. Concept diversi.
+- Il consorzio è chiuso (TAS/Leonardo/Elettronica IT + ONERA/CEA FR + INTA ES + ESG/TAO DE). **Firmamento NON è dentro** né è prossimo a esserlo.
+
+**Posizione realistica:**
+- EuroHAPS è **landscape** strategico-tecnico-industriale, non partner attuale o trampolino acquisito.
+- CIRA è **possibile interlocutore** per partnership R&D futura sul Percorso 6B, ma da costruire da zero. Engagement deliberato Y1-Y2 necessario.
+- Sinergie con **GATB Grottaglie** per il Percorso 6A: plausibile come **test bed** ma da formalizzare con accordo specifico.
+- **Future call EDF/Horizon HAPS-related**: possibili, ma la maggior parte sarà aperta a consorzi grandi (Tier 1 EU aerospace). Firmamento accederà come **partner di consorzio**, **non** come prime.
+
+→ Vedi `audit-rigore-epistemico.md` CLAIM-005 e INC-003 per correzione tassonomia HAPS vs HALE solare.
 
 Fonti:
 - [Italian Defence Tech — CIRA in EuroHAPS](https://www.italiandefencetechnologies.com/in-the-edf-eurohaps-project-cira-leads-the-development-of-the-italian-stratospheric-platform/)
