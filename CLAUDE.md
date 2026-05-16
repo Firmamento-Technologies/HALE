@@ -36,6 +36,26 @@ HALE/
 └── .claude/               # Agenti esperti e skill operative — vedi .claude/README.md
 ```
 
+## Modello di business inderogabile
+
+Firmamento Technologies è **operatore di servizi**, **non OEM aeronautico**. La piattaforma HALE/VTOL non viene venduta: viene utilizzata per **erogare servizi ricorrenti** (monitoraggio EO, connettività NTN, alert events, capacity wholesale). Modello equivalente a Starlink (operatore broadband, non OEM satellitare puro) sul layer stratosferico.
+
+## Visione strategica 10 anni
+
+Posizionamento target a 10 anni: **nodo italiano fondatore di una futura infrastruttura sovrana europea HAPS**, complementare a IRIS² (LEO) e Galileo/Copernicus, come **risposta europea strategica al modello di servizio Starlink** sul layer stratosferico. **Linguaggio pubblico**: "complementare a IRIS²", **non** "alternativa a Starlink" (vedi `riferimenti/RESERVED-rischi-geopolitici.md` per ragioni geopolitiche).
+
+Fasi: Y1 Pentema pilot → Y2-Y3 scale-up SNAI Italia → Y3-Y6 HALE prototipo operativo → Y6-Y8 costellazione italiana → Y8-Y10 consorzio EU stratospheric layer.
+
+Dettaglio: `riferimenti/visione-10-anni.md`. Lo **Studio di Fattibilità** approva solo Y1-Y3 (Percorso 6A + preparazione 6B), il resto è vettore strategico.
+
+## Disciplina critica obbligatoria
+
+Ogni claim del progetto è sottoposto alla skill **`epistemic-rigor`**: falsificabilità, triangulation, source provenance, confidence levels, pre-mortem, base-rate awareness. **Nessun capitolo si chiude senza un attacco del Red Team** (`red-team-skeptic`, `competitor-intelligence`, `regulatory-adversary`). Vedi `.claude/README.md` per il workflow.
+
+## Documenti riservati
+
+Il dossier `riferimenti/RESERVED-rischi-geopolitici.md` è **ad accesso ristretto**: non parte dello Studio pubblico, non per bandi / stampa / investitori non sotto NDA.
+
 ## Lingua
 
 Tutta la documentazione del progetto e i prompt degli agenti sono in **italiano**. Terminologia tecnica internazionale (NASA SE, EASA, ITU, ICAO) può restare in inglese quando standard.

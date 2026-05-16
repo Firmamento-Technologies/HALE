@@ -53,6 +53,22 @@ Subagent specializzati. Da invocare con il Task tool quando serve un parere/outp
 |---|---|
 | `snai-funding-territorial-expert` | SNAI/PSNAI, aree interne Liguria, Pentema, bandi Cooding/PNRR/Horizon Europe/EDF, governance Legacoop |
 
+### Strategia sovrana EU
+
+| Agente | Quando invocarlo |
+|---|---|
+| `sovereign-infrastructure-strategist` | Allineamento con IRIS² / Galileo / Copernicus, posizionamento sovranità EU, supply chain non-EU substitution, engagement Commissione/ESA/MIMIT, vettore "alternativa europea Starlink" |
+
+### Avversari strutturali (Red Team)
+
+**Sono obbligatori al chiusura di ogni capitolo, trade study, gate review.** Il loro compito è dimostrare che il progetto è sbagliato.
+
+| Agente | Quando invocarlo |
+|---|---|
+| `red-team-skeptic` | Sempre prima di chiudere capitoli, gate review, decisioni critiche. Pre-mortem, falsificazione, base-rate check. |
+| `competitor-intelligence` | Quando si valutano posizionamento di mercato, capacità competitive, risposte di AALTO/Skydweller/TAS/IRIS²/Starlink |
+| `regulatory-adversary` | Quando si pianifica engagement ENAC/EASA/AGCOM/Garante, per stress-test del path regolatorio |
+
 ## Skill (`skills/`)
 
 Procedure ripetibili invocabili via Skill tool. Tutte calibrate sul progetto HALE.
@@ -65,6 +81,21 @@ Procedure ripetibili invocabili via Skill tool. Tutte calibrate sul progetto HAL
 | `risk-register-builder` | Compila risk register con FMEA, P×I matrix, owner, trigger, mitigazione, residuo |
 | `link-budget-calculator` | Calcola link budget per payload telecom HAPS (uplink/downlink, fade margin, EIRP, G/T) |
 | `gate-review-checklist` | Checklist Go/No-Go per i gate decisionali (Gate M+3, M+6, M+10, ecc.) |
+| `epistemic-rigor` | **OBBLIGATORIA prima di ogni chiusura di capitolo/trade study/gate.** Falsificabilità, triangulation, source provenance, confidence levels, pre-mortem, base-rate check |
+
+## Disciplina epistemica obbligatoria
+
+**Tutti gli agenti — esperti, strategici, avversariali — applicano la skill `epistemic-rigor`.** In sintesi:
+
+1. **Falsificabilità**: ogni claim positivo dichiara la "falsifying observation" che lo renderebbe falso
+2. **Triangolazione**: ogni cifra ha ≥ 2 fonti indipendenti, divergenze esplicitate
+3. **Source provenance**: ogni cifra annotata `[fonte | anno | tipo | confidence]`
+4. **Confidence levels**: high / medium / low / speculative dichiarati esplicitamente
+5. **Pre-mortem** obbligatorio prima della chiusura di capitoli/gate (invocare `red-team-skeptic`)
+6. **Steel-manning**: caso forte per la posizione opposta sempre formulato
+7. **Base-rate awareness**: confronto con base rate di successo aerospace category
+
+Nessun capitolo si chiude senza che un agente del Red Team abbia eseguito un attacco.
 
 ## Skill ufficiali Anthropic (installazione separata)
 
