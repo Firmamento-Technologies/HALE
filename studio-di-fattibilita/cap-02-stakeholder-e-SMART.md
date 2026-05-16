@@ -739,7 +739,7 @@ Riassunti dal Cap. 5 (`cap-05-quadro-normativo.md`):
 ### 2.5.2 Vincoli finanziari
 
 Dalla strategia duale (CLAUDE.md) e dai SyR Cost (Cap. 3.5.7):
-- **Percorso 6A**: CapEx Y1 **€600-1200k** (includendo contingency 30%); OpEx run-rate Y2 ≤ **€450k/anno**.
+- **Percorso 6A**: CapEx Y1 **€700-1200k** baseline ingegneristico (vedi Cap. 8 §8.3.1 per Quadro Economico completo con IVA + contingency: €975k-€1.96M, scenario base €1.4M); OpEx run-rate Y2 **€260-480k/anno** (Cap. 8 §8.5.1).
 - **Percorso 6B (R&D Phase B)**: investimento **€5,5-13,5M** (preparatorio R&D, non manufacturing); funding plan multi-source obbligatorio (PNRR + Horizon + EDF + equity).
 - **Studio di Fattibilità (presente)**: budget bando Coopfond **€80-150k** (M+0 → M+11), eseguito in conformità Cooding Prototypes.
 - **Capital intensity totale visione 10 anni**: €500M-€2B (small fleet) → €10-30B (EU sovereign scale); vedi `visione-10-anni.md` §4.

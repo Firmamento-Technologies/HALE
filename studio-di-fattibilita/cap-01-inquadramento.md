@@ -309,7 +309,7 @@ Il cuore del Quadro Esigenziale è la **strategia duale risk-informed**, articol
 - **Caratteristiche operative**: quota 18-22 km, autonomia settimane/mesi, payload 5-15 kg, apertura alare 20-30 m.
 - **Categoria EASA**: **Certified, Special Condition HAPS** in negoziazione (vedi Cap. 5 §5.4.2).
 - **Orizzonte temporale**: R&D Phase B M+12 → M+48; Phase C operativo M+48-72.
-- **Budget stimato R&D Phase B**: **€5.5M – 11M** (Phase B + Phase C indicativi non in scope dello Studio attuale).
+- **Budget stimato R&D Phase B**: **€5.5-13.5M** (range realistico Cap. 8 §8.3.3); Phase C operativa post-Studio non in scope attuale.
 - **Rischio complessivo**: **Alto**, con verdetto **Hold / Go Condizionato Estremo** in attesa di chiusura showstopper.
 - **Showstopper noti** (vedi Cap. 5 §5.10 + Cap. 6 §6.4):
   - RSK-TEC-001 — bilancio energetico invernale 44°N non validato;
