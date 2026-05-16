@@ -1,1 +1,4 @@
 .DS_Store
+
+# Download script log (riferimenti/fonti/download.sh output)
+riferimenti/fonti/download.log
