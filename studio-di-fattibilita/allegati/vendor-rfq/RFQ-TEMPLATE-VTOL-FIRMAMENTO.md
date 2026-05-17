@@ -1,8 +1,8 @@
-# RFQ — Request for Quotation
-## Sistema UAV VTOL per Missioni di Servizi Territoriali — Aree Interne Italia
+# RFQ, Request for Quotation
+## Sistema UAV VTOL per Missioni di Servizi Territoriali, Aree Interne Italia
 
 > **Firmamento Technologies S.r.l.**
-> Progetto HALE — Percorso 6A — Pilota Comune di Pentema (Torriglia, GE)
+> Progetto HALE, Percorso 6A, Pilota Comune di Pentema (Torriglia, GE)
 > Bando di riferimento: Cooding Prototypes (Coopfond / Legacoop)
 >
 > **Documento:** RFQ-FIRMAMENTO-VTOL-001
@@ -11,23 +11,23 @@
 > **Riferimento DR:** DR-003 (TRL JOUAV CW-30E EASA-equivalent + quotation vendor + lead time)
 > **Allegato a:** Studio di Fattibilità Vol. 1 Cap. 6 §6.3.1 (TS-PLATFORM-6A)
 >
-> **Bilingua IT/EN:** sezioni 3-6 in inglese per uso vendor internazionali
+> **Bilingua IT/EN:** sezioni 3-6 in inglese per uso vendor internazionali.
 
 ---
 
 ## NOTA DI USO (NON PARTE DEL DOCUMENTO INVIATO)
 
-Questo è un **template formale** da personalizzare prima dell'invio. Compilare i campi `[BRACKETS]` con i dati specifici della tornata RFQ (vendor target, deadline, contatti). Modalità di invio raccomandata: email PEC + courier tracked (raccomandata A/R), con cover letter (vedi `RFQ-cover-letter-template.md`).
+Questo è un **template formale** da personalizzare prima dell'invio. Compilare i campi `[BRACKETS]` con i dati specifici della tornata RFQ (vendor target, deadline, contatti). La modalità di invio raccomandata è email PEC più courier tracked (raccomandata A/R), con cover letter (vedi `RFQ-cover-letter-template.md`).
 
 **Lista invio raccomandata (M+3):**
-1. JOUAV (CN, Plan A) — via reseller EU (es. MARIDS Spagna, SUMEC) o direttamente sales@jouav.com
-2. Tekever (PT, Plan B) — direttamente info@tekever.com
-3. (opzionale) Quantum Systems (DE) — Trinity F90+ come fallback ulteriore
+1. JOUAV (CN, Plan A), via reseller EU (es. MARIDS Spagna, SUMEC) o direttamente sales@jouav.com
+2. Tekever (PT, Plan B), direttamente info@tekever.com
+3. (opzionale) Quantum Systems (DE), Trinity F90+ come fallback ulteriore
 4. (opzionale) UAVOS / Skyfront come riserva tecnica
 
 ---
 
-## Sezione 1 — Soggetto richiedente
+## Sezione 1, Soggetto richiedente
 
 ### 1.1 Dati anagrafici Firmamento Technologies
 
@@ -40,30 +40,30 @@ Questo è un **template formale** da personalizzare prima dell'invio. Compilare 
 | REA | [Registro Imprese] |
 | PEC | [pec@firmamentotech.legalmail.it] |
 | Rappresentante legale | [Nome Cognome] |
-| Procurement contact | [Nome Cognome] — [email] — [+39 …] |
-| Technical contact | [Nome Cognome — Systems Engineer] — [email] |
+| Procurement contact | [Nome Cognome], [email], [+39 …] |
+| Technical contact | [Nome Cognome, Systems Engineer], [email] |
 
 ### 1.2 Profilo dell'azienda
 
-Firmamento Technologies S.r.l. è una **PMI innovativa italiana** operativa nel settore aerospaziale, con focus sullo sviluppo di una **piattaforma aerea senza pilota** per il **monitoraggio EO** (Earth Observation), **NTN connectivity** (Non-Terrestrial Network 3GPP), **alert events** (antincendio, frane, alluvioni) per le **Aree Interne italiane** (SNAI — Strategia Nazionale Aree Interne).
+Firmamento Technologies S.r.l. è una **PMI innovativa italiana** operativa nel settore aerospaziale, con focus sullo sviluppo di una **piattaforma aerea senza pilota** per il **monitoraggio EO** (Earth Observation), **NTN connectivity** (Non-Terrestrial Network 3GPP) e **alert events** (antincendio, frane, alluvioni) destinati alle **Aree Interne italiane** (SNAI, Strategia Nazionale Aree Interne).
 
-**Modello di business: service-only.** Firmamento NON è un OEM aeronautico e **NON rivende velivoli**. L'acquisizione del sistema UAV oggetto della presente RFQ è finalizzata **all'erogazione di servizi ricorrenti** verso PA (Protezione Civile, Vigili del Fuoco, Comuni, Regioni), cooperative agricole (rete Legacoop), utility (TLC, energetiche).
+**Modello di business: service-only.** Firmamento non è un OEM aeronautico e **non rivende velivoli**. L'acquisizione del sistema UAV oggetto della presente RFQ è finalizzata **all'erogazione di servizi ricorrenti** verso PA (Protezione Civile, Vigili del Fuoco, Comuni, Regioni), cooperative agricole (rete Legacoop) e utility (TLC, energetiche).
 
 **Stakeholder istituzionali del progetto:**
 - Regione Liguria
 - ENAC (Ente Nazionale Aviazione Civile)
 - AGCOM (Autorità per le Garanzie nelle Comunicazioni)
-- Protezione Civile (livello nazionale + regionale)
+- Protezione Civile (livello nazionale più regionale)
 - Cooperative aderenti a Legacoop (10 cooperative, capofila Fabrica)
 
 ### 1.3 Bilingua / Bilingual notice
 
-> **EN — About the requester**
+> **EN, About the requester**
 > Firmamento Technologies S.r.l. is an Italian innovative SME developing an unmanned aerial platform for Earth Observation, NTN connectivity and alert services for Italy's Inner Areas. Firmamento operates a **service-only business model** and **does NOT resell aircraft**. The UAV system requested in this RFQ will be used internally to deliver recurring services to Italian public administration, cooperatives and utilities.
 
 ---
 
-## Sezione 2 — Scopo della RFQ
+## Sezione 2, Scopo della RFQ
 
 ### 2.1 Oggetto
 
@@ -73,15 +73,11 @@ La presente RFQ richiede una **quotation strutturata** per la fornitura di:
 - **Set di payload modulari** (EO RGB + IR LWIR + opzionale telecom LTE eNodeB)
 - **N. 2 Ground Station** (1 fissa + 1 mobile)
 - **Pacchetto software** (mission planning, autopilota, downlink, processing)
-- **Training piloti + operatori** (5 persone, livelli base + advanced)
-- **Supporto tecnico + manutenzione** orizzonte 5 anni (Y1-Y5)
-- **Spare parts inventory** 3 anni + emergency restock policy
+- **Training piloti più operatori** (5 persone, livelli base più advanced)
+- **Supporto tecnico più manutenzione** orizzonte 5 anni (Y1-Y5)
+- **Spare parts inventory** 3 anni più emergency restock policy
 
-Configurazione operativa target:
-- **Sito principale:** Pentema, Comune di Torriglia, Città Metropolitana di Genova (1100-1300 m AMSL)
-- **Tipologia missione:** BVLOS (Beyond Visual Line of Sight) in **Specific Category** EASA Reg. UE 2019/947 — **SAIL II-III**
-- **Profili missione:** mapping, sorveglianza, antincendio precoce, monitoraggio frane, supporto telecom emergenza
-- **Operatività:** **Y1 ~150-300 ore-volo**, scale-up Y2-Y3 a **flotta 3-5 piattaforme multi-regione**
+Configurazione operativa target: sito principale Pentema, Comune di Torriglia, Città Metropolitana di Genova (1100-1300 m AMSL). Tipologia missione BVLOS (Beyond Visual Line of Sight) in **Specific Category** EASA Reg. UE 2019/947, **SAIL II-III**. Profili missione: mapping, sorveglianza, antincendio precoce, monitoraggio frane, supporto telecom emergenza. Operatività Y1 circa 150-300 ore-volo, con scale-up Y2-Y3 a **flotta 3-5 piattaforme multi-regione**.
 
 ### 2.2 Scope quotation richiesta
 
@@ -94,22 +90,19 @@ Configurazione operativa target:
 | **Lotto 5** | Supporto tecnico + manutenzione 5 anni | – | – |
 | **Lotto 6** | Spare parts inventory 3 anni + emergency | – | restock |
 
-**Quotation richiesta come:**
-1. **Prezzo unitario** per ogni lotto (€ EXW Italia + opzione DDP Pentema)
-2. **Bundle price** (sconto su acquisto integrato lotti 1-5)
-3. **Opzione TCO 5 anni** (manutenzione + spare + supporto)
+La quotation è richiesta come prezzo unitario per ogni lotto (€ EXW Italia più opzione DDP Pentema), bundle price (sconto su acquisto integrato lotti 1-5) e opzione TCO 5 anni (manutenzione più spare più supporto).
 
 ### 2.3 Bilingual scope statement
 
-> **EN — Scope of RFQ**
+> **EN, Scope of RFQ**
 > Firmamento Technologies requests a structured quotation for the supply of: (1) one VTOL hybrid fixed-wing UAV platform, (2) modular payload package (EO RGB + IR LWIR + optional telecom LTE eNodeB), (3) two ground stations (1 fixed + 1 mobile), (4) software package, (5) pilot training (5 persons), (6) 5-year technical support and maintenance, (7) 3-year spare parts inventory.
 > The platform shall be operated in Specific Category BVLOS SAIL II-III under EASA Reg. UE 2019/947, in mountainous terrain (1100-1300 m AMSL) in Liguria, Italy.
 
 ---
 
-## Sezione 3 — Specifiche tecniche richieste / Technical Requirements
+## Sezione 3, Specifiche tecniche richieste / Technical Requirements
 
-> **Nota:** ogni requisito è classificato **MUST** (obbligatorio, non negoziabile), **SHOULD** (preferenziale, deroghe motivate accettate), **OPTIONAL** (su richiesta).
+> **Nota:** ogni requisito è classificato **MUST** (obbligatorio, non negoziabile), **SHOULD** (preferenziale, deroghe motivate accettate) o **OPTIONAL** (su richiesta).
 > Vendor request: please answer with `Comply / Comply with deviation / Non comply` for each requirement, with detailed evidence.
 
 ### 3.1 Piattaforma UAV / UAV Platform
@@ -147,7 +140,7 @@ Configurazione operativa target:
 | RFQ-PL-005 | Gimbal stabilizzato 3-assi per RGB+IR, IBIS o EIS | MUST | |
 | RFQ-PL-006 | Payload **LiDAR** (YellowScan Voyager o eq., precisione ≤ 5 cm) | OPTIONAL Y2 | |
 | RFQ-PL-007 | Payload **multispettrale** (MicaSense Altum-PT o eq., 4 bande VIS-NIR + termico calibrato) | OPTIONAL Y2 | |
-| RFQ-PL-008 | Payload **telecom LTE eNodeB tattico** (Athonet, Druid, IP.access o eq.) — capability 20+ utenti simultanei, raggio cella ~3-5 km | OPTIONAL Y1 | |
+| RFQ-PL-008 | Payload **telecom LTE eNodeB tattico** (Athonet, Druid, IP.access o eq.), capability 20+ utenti simultanei, raggio cella circa 3-5 km | OPTIONAL Y1 | |
 | RFQ-PL-009 | Onboard storage payload data ≥ 512 GB redondante (RAID-style o dual SSD) | MUST | |
 | RFQ-PL-010 | Encryption dati onboard (AES-256 at rest) | MUST | |
 
@@ -190,7 +183,7 @@ Configurazione operativa target:
 | RFQ-TR-006 | Sede training: presso vendor (incluso travel/lodging?) o on-site Italia | MUST (specificare) | |
 | RFQ-TR-007 | Training capacity totale: 5 persone (2 piloti + 2 op. payload + 1 tech) | MUST | |
 
-### 3.6 Supporto tecnico + manutenzione 5 anni
+### 3.6 Supporto tecnico più manutenzione 5 anni
 
 | Req-ID | Requisito | Classe | Risposta vendor |
 |---|---|---|---|
@@ -207,15 +200,15 @@ Configurazione operativa target:
 
 ---
 
-## Sezione 4 — Compliance regolatoria richiesta / Regulatory Compliance
+## Sezione 4, Compliance regolatoria richiesta / Regulatory Compliance
 
-> **CRITICAL:** la non-compliance regolatoria EASA/ENAC è **show-stopper** per l'aggiudicazione. Vendor è tenuto a fornire **evidenze documentali** (test reports, dichiarazioni di conformità, technical files).
+> **CRITICAL:** la non-compliance regolatoria EASA/ENAC è **show-stopper** per l'aggiudicazione. Il vendor è tenuto a fornire **evidenze documentali** (test reports, dichiarazioni di conformità, technical files).
 
-### 4.1 EASA Reg. UE 2019/947 + 2019/945 (Specific Category)
+### 4.1 EASA Reg. UE 2019/947 più 2019/945 (Specific Category)
 
 | Req-ID | Requisito | Classe | Evidenza richiesta |
 |---|---|---|---|
-| RFQ-REG-001 | Conformità Reg. UE 2019/947 — Specific Category SAIL II-III | MUST | Compliance matrix con riferimenti articoli + AMC |
+| RFQ-REG-001 | Conformità Reg. UE 2019/947, Specific Category SAIL II-III | MUST | Compliance matrix con riferimenti articoli + AMC |
 | RFQ-REG-002 | Dichiarazione classe Reg. UE 2019/945 (C0-C6, oppure no-class per Specific) | MUST | Statement vendor + numero notifica |
 | RFQ-REG-003 | Conformità AMC2 OSO #1, #2, #3, #4 (technical design + production) | MUST | Technical file UAS + production QC |
 | RFQ-REG-004 | Conformità OSO #5, #6 (vendor-controlled procedures, maintenance) | MUST | Maintenance manual + procedure |
@@ -223,7 +216,7 @@ Configurazione operativa target:
 | RFQ-REG-006 | Conformità OSO #9, #10 (UAS Lost-Link, ground control protection) | MUST | Test reports + design docs FCS Lost-Link |
 | RFQ-REG-007 | Conformità OSO #11 (Fly-Away protection, geofencing) | MUST | Geofence implementation + test |
 | RFQ-REG-008 | Conformità OSO #12, #13 (UAS Containment) | MUST | Containment design + parachute system spec |
-| RFQ-REG-009 | Conformità OSO #14 (UAS Multiple Operations) — se applicabile | SHOULD | |
+| RFQ-REG-009 | Conformità OSO #14 (UAS Multiple Operations), se applicabile | SHOULD | |
 | RFQ-REG-010 | Supporto vendor per SORA application (technical documentation contributo) | MUST | LoI / impegno scritto |
 
 ### 4.2 ENAC compliance Italia
@@ -237,7 +230,7 @@ Configurazione operativa target:
 | RFQ-REG-015 | Manualistica in italiano disponibile (POH, MM, Flight Manual) | SHOULD | |
 | RFQ-REG-016 | Pre-application engagement ENAC / EASA: vendor disponibilità a partecipare a meeting | SHOULD | |
 
-### 4.3 CE Marking + Direttiva Macchine 2006/42/CE
+### 4.3 CE Marking più Direttiva Macchine 2006/42/CE
 
 | Req-ID | Requisito | Classe | Evidenza richiesta |
 |---|---|---|---|
@@ -246,20 +239,20 @@ Configurazione operativa target:
 | RFQ-REG-019 | RED Directive 2014/53/EU compliance (radio link) | MUST | RED test report (ETSI EN 300/301) |
 | RFQ-REG-020 | LVD Directive 2014/35/EU compliance (componenti elettrici) | MUST | LVD declaration |
 
-### 4.4 RoHS + REACH
+### 4.4 RoHS più REACH
 
 | Req-ID | Requisito | Classe | Evidenza richiesta |
 |---|---|---|---|
 | RFQ-REG-021 | RoHS 3 Directive 2011/65/EU compliance (componenti elettronici) | MUST | RoHS declaration |
-| RFQ-REG-022 | REACH Regulation 1907/2006 (chemical substances) — SVHC list ≤ 0.1% w/w | MUST | REACH declaration |
+| RFQ-REG-022 | REACH Regulation 1907/2006 (chemical substances), SVHC list ≤ 0.1% w/w | MUST | REACH declaration |
 | RFQ-REG-023 | WEEE Directive 2012/19/EU (end-of-life disposal) | MUST | Take-back commitment |
 | RFQ-REG-024 | Battery Regulation 2023/1542 (batterie UAV) | MUST | Battery passport |
 
-### 4.5 Cybersecurity (NIS2 + DO-326A)
+### 4.5 Cybersecurity (NIS2 più DO-326A)
 
 | Req-ID | Requisito | Classe | Evidenza richiesta |
 |---|---|---|---|
-| RFQ-REG-025 | NIS2 Directive 2022/2555 — vendor assessment cybersecurity | MUST | NIS2 self-assessment |
+| RFQ-REG-025 | NIS2 Directive 2022/2555, vendor assessment cybersecurity | MUST | NIS2 self-assessment |
 | RFQ-REG-026 | DO-326A / ED-202A airworthiness security awareness | SHOULD | DO-326A statement |
 | RFQ-REG-027 | Penetration test report (PT esterno indipendente, ≤ 12 mesi) | MUST | Test report (executive summary OK, dettaglio sotto NDA) |
 | RFQ-REG-028 | Encryption C2 link (AES-256 minimo, autenticazione mutua) | MUST | Crypto design statement |
@@ -276,39 +269,35 @@ Configurazione operativa target:
 
 ---
 
-## Sezione 5 — Termini commerciali / Commercial Terms
+## Sezione 5, Termini commerciali / Commercial Terms
 
-### 5.1 Prezzo unitario per piattaforma + opzioni
+### 5.1 Prezzo unitario per piattaforma più opzioni
 
-Vendor è richiesto di fornire **breakdown dettagliato** per:
+Il vendor fornisce **breakdown dettagliato** per:
 
 | Lotto | Voce | Quantità | Prezzo unitario (€) | Sconto bundle | Totale (€) |
 |---|---|---|---|---|---|
-| **Lotto 1 — Piattaforma** | UAV VTOL configurazione base | 1 | | | |
+| **Lotto 1, Piattaforma** | UAV VTOL configurazione base | 1 | | | |
 | | UAV VTOL options (es. heavy oil engine, payload bay extension, etc.) | – | | | |
-| **Lotto 2 — Payload** | Gimbal RGB high-res (es. iXM 100 eq.) | 1 | | | |
+| **Lotto 2, Payload** | Gimbal RGB high-res (es. iXM 100 eq.) | 1 | | | |
 | | Sensore IR LWIR (WIRIS Pro eq.) | 1 | | | |
 | | Telecom LTE eNodeB (opzionale Y1) | 1 | | | |
 | | LiDAR (opzionale Y2) | 1 | | | |
-| **Lotto 3 — Ground Segment** | GS fissa container + antenna + console | 1 | | | |
+| **Lotto 3, Ground Segment** | GS fissa container + antenna + console | 1 | | | |
 | | GS mobile veicolo + console | 1 | | | |
-| **Lotto 4 — Training** | Pacchetto training 5 persone | – | | | |
-| **Lotto 5 — Supporto + manutenzione 5 anni** | Pacchetto annuo Y1-Y5 | 5 anni | | | |
-| **Lotto 6 — Spare parts** | Inventory 3 anni preacquistato + emergency restock policy | – | | | |
+| **Lotto 4, Training** | Pacchetto training 5 persone | – | | | |
+| **Lotto 5, Supporto + manutenzione 5 anni** | Pacchetto annuo Y1-Y5 | 5 anni | | | |
+| **Lotto 6, Spare parts** | Inventory 3 anni preacquistato + emergency restock policy | – | | | |
 | | **TOTALE EXW Vendor** | | | | **€ ________** |
 | | **TOTALE DDP Pentema (IT)** | | | | **€ ________** |
 
-**Currency:** quotation in **EUR**. Se base prezzo è altra valuta (USD, GBP, CNY), indicare cambio applicato e validità.
+**Currency:** quotation in **EUR**. Se la base prezzo è altra valuta (USD, GBP, CNY), indicare cambio applicato e validità.
 
-**Incoterms 2020:** EXW (vendor) e DDP (Pentema, IT) entrambe richieste. Indicare costi shipping + customs + insurance per opzione DDP.
+**Incoterms 2020:** EXW (vendor) e DDP (Pentema, IT) entrambe richieste. Indicare costi shipping più customs più insurance per opzione DDP.
 
-### 5.2 Spare parts inventory (3 anni + emergency)
+### 5.2 Spare parts inventory (3 anni più emergency)
 
-Vendor fornisca:
-- **Lista completa spare parts** (LRU + consumable + structural critical) con part number + prezzo unitario
-- **Recommended stock level** per 3 anni operativi (assunzione 200-400 ore-volo/anno)
-- **Emergency restock SLA**: tempo di consegna per AOG (Aircraft On Ground) condizione
-- **Pricing escalation clause**: come variano i prezzi spare nei 3 anni (es. CPI-indexed)
+Il vendor fornisce la lista completa spare parts (LRU più consumable più structural critical) con part number e prezzo unitario, il recommended stock level per 3 anni operativi (assunzione 200-400 ore-volo/anno), l'SLA di emergency restock per AOG (Aircraft On Ground) e la pricing escalation clause sui prezzi spare nei 3 anni (es. CPI-indexed).
 
 ### 5.3 Lead time consegna
 
@@ -322,12 +311,9 @@ Vendor fornisca:
 | Training (sede e calendario) | __ settimane / mesi | |
 | **Full system operational** (post commissioning + training) | __ mesi totali | |
 
-**Vincoli logistici:** vendor è tenuto a dichiarare:
-- Customs clearance pre-tested (esperienza export to Italia)
-- Eventuali permessi export richiesti (es. licenze dual-use)
-- Tempi tipici dogana Italia (settimane)
+**Vincoli logistici:** il vendor dichiara la customs clearance pre-tested (esperienza export in Italia), gli eventuali permessi export richiesti (es. licenze dual-use) e i tempi tipici dogana Italia (settimane).
 
-### 5.4 Warranty (anni + condizioni)
+### 5.4 Warranty (anni più condizioni)
 
 | Componente | Warranty base | Extended warranty (opz) | Coverage |
 |---|---|---|---|
@@ -338,9 +324,9 @@ Vendor fornisca:
 | Ground Station hardware | __ mesi | __ anni @ €__ | |
 | Software (bug fix + security) | __ mesi (gratuito) | __ anni @ €__ | |
 
-**Esclusioni:** specificare condizioni che invalidano la warranty (crash, abuso, alterazioni, ambient out-of-spec, etc.).
+**Esclusioni:** specificare condizioni che invalidano la warranty (crash, abuso, alterazioni, ambient out-of-spec, ecc.).
 
-**Procedura claim:** descrivere process di warranty claim (notifica, RMA, turn-around time).
+**Procedura claim:** descrivere il process di warranty claim (notifica, RMA, turn-around time).
 
 ### 5.5 Termini di pagamento (milestones)
 
@@ -348,37 +334,30 @@ Vendor fornisca:
 
 | Milestone | % pagamento | Note |
 |---|---|---|
-| M1 — Firma contratto | 20-30% | Anticipo |
-| M2 — Inizio produzione / FAT (Factory Acceptance Test) | 30-40% | Su verifica produzione |
-| M3 — Consegna DDP Pentema + SAT (Site Acceptance Test) | 20-30% | Su accettazione sito |
-| M4 — Training completato + commissioning | 10-15% | Su validazione operatività |
-| M5 — Hold-back warranty (12 mesi post-consegna) | 5-10% | A liberazione warranty period |
+| M1, Firma contratto | 20-30% | Anticipo |
+| M2, Inizio produzione / FAT (Factory Acceptance Test) | 30-40% | Su verifica produzione |
+| M3, Consegna DDP Pentema + SAT (Site Acceptance Test) | 20-30% | Su accettazione sito |
+| M4, Training completato + commissioning | 10-15% | Su validazione operatività |
+| M5, Hold-back warranty (12 mesi post-consegna) | 5-10% | A liberazione warranty period |
 | **Totale** | **100%** | |
 
-Vendor può proporre milestones alternative motivate. Eventuali deroghe sui termini saranno oggetto di negoziazione.
+Il vendor può proporre milestones alternative motivate. Eventuali deroghe sui termini saranno oggetto di negoziazione.
 
 **Strumenti di pagamento ammessi:** bonifico SEPA (preferito) o SWIFT internazionale.
 
-### 5.6 Penalty per ritardo / non-conformità
+### 5.6 Penalty per ritardo o non-conformità
 
-**Penalty consegna ritardata:**
-- 0.5% del valore contratto per settimana di ritardo (max 10% valore contratto)
-- Ritardo > 6 mesi rispetto a data contrattuale: diritto di recesso unilaterale Firmamento + restituzione anticipi versati
+Penalty consegna ritardata: 0.5% del valore contratto per settimana di ritardo (max 10% valore contratto). Un ritardo superiore a 6 mesi rispetto alla data contrattuale dà a Firmamento diritto di recesso unilaterale più restituzione anticipi versati.
 
-**Penalty non-conformità tecnica:**
-- Mancata compliance MUST requirements: rifiuto consegna + restituzione anticipi
-- Mancata compliance SHOULD requirements: riduzione prezzo da negoziare (5-15% del valore lotto interessato)
-- Mancato superamento SAT (Site Acceptance Test) ≥ 2 volte: penalty 5% valore contratto + rework a carico vendor
+Penalty non-conformità tecnica: la mancata compliance MUST requirements comporta rifiuto consegna più restituzione anticipi; la mancata compliance SHOULD requirements comporta riduzione prezzo da negoziare (5-15% del valore lotto interessato); il mancato superamento SAT (Site Acceptance Test) per due o più volte comporta penalty 5% valore contratto più rework a carico vendor.
 
-**Penalty SLA manutenzione:**
-- Mancato rispetto SLA manutenzione correttiva on-site (≥ 7 gg lavorativi): penale €500/giorno
-- Mancato rispetto AOG spare delivery (≥ 5 gg lavorativi): penale €1.000/giorno
+Penalty SLA manutenzione: il mancato rispetto SLA manutenzione correttiva on-site (≥ 7 gg lavorativi) comporta penale €500/giorno; il mancato rispetto AOG spare delivery (≥ 5 gg lavorativi) comporta penale €1.000/giorno.
 
-**Force majeure:** eccezioni standard (guerra, pandemia, sanzioni internazionali) per cause non imputabili a vendor.
+**Force majeure:** eccezioni standard (guerra, pandemia, sanzioni internazionali) per cause non imputabili al vendor.
 
 ---
 
-## Sezione 6 — Vincoli geopolitici e legali / Geopolitical and Legal Constraints
+## Sezione 6, Vincoli geopolitici e legali / Geopolitical and Legal Constraints
 
 > **CRITICAL:** Firmamento Technologies opera in **ambito sovrano italiano/UE** con stakeholder istituzionali (ENAC, Regione Liguria, Protezione Civile). Il vendor deve garantire **continuità di fornitura** anche in scenari di tensione geopolitica internazionale.
 > **CRITICAL EN:** Firmamento operates in sovereign IT/EU context with institutional stakeholders. Vendor must guarantee supply continuity also in international geopolitical tension scenarios.
@@ -403,7 +382,7 @@ Vendor può proporre milestones alternative motivate. Eventuali deroghe sui term
 | RFQ-GEO-009 | Tracciabilità supply chain componenti critici (cell origine, FPGA, sensori) | SHOULD | |
 | RFQ-GEO-010 | Compliance commitment vs nuove sanzioni durante esecuzione contratto | MUST | |
 
-### 6.3 Golden Power notifica (D.L. 21/2012, modif. D.L. 23/2020 + D.L. 50/2022)
+### 6.3 Golden Power notifica (D.L. 21/2012, modif. D.L. 23/2020 più D.L. 50/2022)
 
 | Req-ID | Requisito | Classe | Risposta vendor |
 |---|---|---|---|
@@ -415,18 +394,18 @@ Vendor può proporre milestones alternative motivate. Eventuali deroghe sui term
 
 | Req-ID | Requisito | Classe | Risposta vendor |
 |---|---|---|---|
-| RFQ-GEO-014 | Tutti i **dati operativi** (telemetria, payload data, logs) devono essere memorizzati e processati **solo su cloud IT o EU** (es. Aruba, OVH, Outscale, etc.) | MUST | |
+| RFQ-GEO-014 | Tutti i **dati operativi** (telemetria, payload data, logs) devono essere memorizzati e processati **solo su cloud IT o EU** (es. Aruba, OVH, Outscale, ecc.) | MUST | |
 | RFQ-GEO-015 | Telemetria UAV NON deve essere trasmessa a server vendor extra-EU (es. server cinesi, server US privati vendor) senza autorizzazione esplicita Firmamento | MUST | |
-| RFQ-GEO-016 | Componenti software vendor (mission planning, telemetry, etc.) deployable **on-premise** senza chiamate esterne obbligatorie | MUST | Architecture diagram + network flows |
+| RFQ-GEO-016 | Componenti software vendor (mission planning, telemetry, ecc.) deployable **on-premise** senza chiamate esterne obbligatorie | MUST | Architecture diagram + network flows |
 | RFQ-GEO-017 | Vendor accetta clausola contrattuale **data sovereignty IT/EU** + audit Firmamento dei flussi dati | MUST | |
 | RFQ-GEO-018 | Conformità GDPR Reg. UE 2016/679 + Codice Privacy italiano (D.Lgs. 196/2003) per eventuali dati personali captati | MUST | DPIA support documentation |
 | RFQ-GEO-019 | NIS2 Directive 2022/2555 compliance (vendor come fornitore essenziale digitale ICT) | MUST | NIS2 self-assessment |
 
 ---
 
-## Sezione 7 — Criteri di valutazione vendor / Vendor Evaluation Criteria
+## Sezione 7, Criteri di valutazione vendor / Vendor Evaluation Criteria
 
-Le offerte saranno valutate secondo i seguenti criteri pesati (skill `trade-study-analysis` Firmamento):
+Le offerte sono valutate secondo i seguenti criteri pesati (skill `trade-study-analysis` Firmamento):
 
 | Criterio | Peso | Sotto-criteri / Metriche |
 |---|---|---|
@@ -439,21 +418,13 @@ Le offerte saranno valutate secondo i seguenti criteri pesati (skill `trade-stud
 | **Lead time** | 5% | Tempo consegna full system (vedi §5.3) |
 | **Supporto IT/EU** | 5% | Presenza service center + lingua + canali |
 
-**Soglia di esclusione automatica:**
-- Compliance MUST < 95% → esclusione
-- Mancanza di dichiarazione ITAR-free / EAR classification → esclusione
-- Vendor in sanctions list → esclusione
+**Soglia di esclusione automatica:** compliance MUST inferiore al 95%, mancanza di dichiarazione ITAR-free o EAR classification, vendor in sanctions list.
 
-**Processo decisionale:**
-1. Screening compliance (MUST requirements) — M+0
-2. Valutazione tecnica vs criteri pesati — M+1 (clarification round se necessario)
-3. Negoziazione commerciale finalisti — M+2
-4. Decision Review Board Firmamento — M+3
-5. Notifica vendor + contract drafting — M+3-4
+**Processo decisionale:** screening compliance (MUST requirements) a M+0; valutazione tecnica vs criteri pesati a M+1 (clarification round se necessario); negoziazione commerciale finalisti a M+2; Decision Review Board Firmamento a M+3; notifica vendor più contract drafting a M+3-4.
 
 ---
 
-## Sezione 8 — Timing e modalità di risposta
+## Sezione 8, Timing e modalità di risposta
 
 ### 8.1 Calendario RFQ
 
@@ -470,36 +441,28 @@ Le offerte saranno valutate secondo i seguenti criteri pesati (skill `trade-stud
 
 ### 8.2 Modalità di submission
 
-**Submission richiesta in formato:**
-- Documento PDF firmato (signed) + Excel/CSV per breakdown prezzi (sez. 5.1)
-- Lingua: **italiano** o **inglese** (entrambe accettate)
-- Encryption: PDF protected with password (separate channel) per documenti sensibili
+Submission richiesta in formato documento PDF firmato (signed) più Excel/CSV per breakdown prezzi (sez. 5.1). Lingua: italiano o inglese (entrambe accettate). Encryption: PDF protected with password (separate channel) per documenti sensibili.
 
 **Canale di submission:**
-- Email PEC: [pec@firmamentotech.legalmail.it] + email tecnica: [procurement@firmamentotech.it]
-- Subject: `RFQ-FIRMAMENTO-VTOL-001 — Quotation Vendor [VENDOR NAME]`
-- Allegati: massimo 50 MB per email; per file più grandi usare WeTransfer/SFTP separato
+- Email PEC: [pec@firmamentotech.legalmail.it] più email tecnica [procurement@firmamentotech.it]
+- Subject: `RFQ-FIRMAMENTO-VTOL-001, Quotation Vendor [VENDOR NAME]`
+- Allegati: massimo 50 MB per email; per file più grandi usare WeTransfer o SFTP separato
 
 **Contatti per chiarimenti:**
-- Procurement Manager: [Nome] — [email] — [telefono]
-- Lead Systems Engineer (technical clarifications): [Nome] — [email]
+- Procurement Manager: [Nome], [email], [telefono]
+- Lead Systems Engineer (technical clarifications): [Nome], [email]
 
 ---
 
-## Sezione 9 — NDA + confidentiality / Non-Disclosure Agreement
+## Sezione 9, NDA più confidentiality / Non-Disclosure Agreement
 
 ### 9.1 NDA bidirezionale
 
 L'invio della presente RFQ è subordinato alla firma di **NDA bidirezionale** tra Firmamento Technologies S.r.l. e il vendor.
 
-Il template NDA di Firmamento è allegato (vedi Allegato A `NDA-FIRMAMENTO-VENDOR-template.pdf`). Vendor può proporre modifiche o usare proprio template equivalente.
+Il template NDA di Firmamento è allegato (vedi Allegato A `NDA-FIRMAMENTO-VENDOR-template.pdf`). Il vendor può proporre modifiche o usare proprio template equivalente.
 
-**Coverage NDA:**
-- Tutte le specifiche tecniche e operative scambiate
-- Prezzi, termini commerciali, struttura business model Firmamento
-- Identità degli stakeholder istituzionali e cooperative coinvolte
-- Roadmap strategica Firmamento (10 anni vision)
-- Risk register tecnico/regolatorio
+**Coverage NDA:** specifiche tecniche e operative scambiate; prezzi, termini commerciali, struttura business model Firmamento; identità degli stakeholder istituzionali e cooperative coinvolte; roadmap strategica Firmamento (10 anni vision); Risk Register tecnico-regolatorio.
 
 **Durata NDA:** 5 anni dalla data di firma, salvo proroga per asset strategici.
 
@@ -507,15 +470,11 @@ Il template NDA di Firmamento è allegato (vedi Allegato A `NDA-FIRMAMENTO-VENDO
 
 ### 9.2 Confidentiality vendor obligations
 
-Il vendor si impegna a:
-1. Non divulgare l'esistenza della presente RFQ a competitori Firmamento (es. altri operatori di servizi VTOL Italia)
-2. Non utilizzare informazioni Firmamento per offrire servizi competitivi a terzi senza consenso scritto
-3. Limitare accesso documenti RFQ a personale strettamente necessario (need-to-know basis)
-4. Distruggere/restituire documenti RFQ a conclusione del processo (entro 90 gg da notifica esito)
+Il vendor si impegna a non divulgare l'esistenza della presente RFQ a competitori Firmamento (es. altri operatori di servizi VTOL Italia), a non utilizzare informazioni Firmamento per offrire servizi competitivi a terzi senza consenso scritto, a limitare l'accesso ai documenti RFQ al personale strettamente necessario (need-to-know basis) e a distruggere o restituire i documenti RFQ a conclusione del processo (entro 90 gg da notifica esito).
 
 ---
 
-## Sezione 10 — Allegati richiesti dal vendor / Vendor Submission Annexes
+## Sezione 10, Allegati richiesti dal vendor / Vendor Submission Annexes
 
 Insieme alla quotation, il vendor deve fornire i seguenti allegati obbligatori:
 
@@ -529,31 +488,21 @@ Insieme alla quotation, il vendor deve fornire i seguenti allegati obbligatori:
 | **A.6** | Sample contract template (vendor standard contract) | PDF Word | IT o EN |
 | **A.7** | Corporate structure + beneficial owners disclosure (per Golden Power / NIS2) | PDF | IT o EN |
 | **A.8** | Quality management certification (es. ISO 9001, AS/EN 9100) | PDF | IT o EN |
-| **A.9** | Manualistica POH (Pilot Operating Handbook) + MM (Maintenance Manual) — campione | PDF | IT preferibile, EN accettato |
+| **A.9** | Manualistica POH (Pilot Operating Handbook) + MM (Maintenance Manual), campione | PDF | IT preferibile, EN accettato |
 | **A.10** | Lista spare parts completa con part number + prezzi + lead time | Excel | IT o EN |
 | **A.11** | NDA firmato (template Firmamento o equivalente) | PDF firmato | IT (italiano) o EN bilingual |
 | **A.12** | Training syllabus dettagliato (modules + ore + valutazione) | PDF | IT preferibile |
 
-**Allegati opzionali (premiati in valutazione):**
-- Flight test reports certificati (es. EASA SC-Light UAS, ENAC, FAA Part 107 / Part 137)
-- LCA / Carbon footprint statement (per supporto narrativa ESG)
-- Reference papers / publications tecniche
-- Award / certificazioni industria (Aerospace Excellence, NATO eligible vendor list)
+**Allegati opzionali (premiati in valutazione):** flight test reports certificati (es. EASA SC-Light UAS, ENAC, FAA Part 107 / Part 137); LCA / Carbon footprint statement (per supporto narrativa ESG); reference papers e publications tecniche; award e certificazioni industria (Aerospace Excellence, NATO eligible vendor list).
 
 ---
 
 ## Disclaimer Firmamento
 
 > La presente RFQ **non costituisce impegno contrattuale** da parte di Firmamento Technologies S.r.l. La quotation richiesta è valutativa.
-> Firmamento si riserva il diritto di:
-> - Non procedere all'aggiudicazione, in qualsiasi fase del processo, senza alcun onere
-> - Richiedere chiarimenti integrativi al vendor
-> - Modificare il scope della fornitura sulla base delle risposte ricevute
-> - Aggiudicare a vendor che non ha la quotation di costo più bassa, se la valutazione complessiva (vedi §7) è superiore
-> - Aggiudicare per lotti separati a vendor diversi
-> - Estendere o ridurre il timing del processo
+> Firmamento si riserva il diritto di: non procedere all'aggiudicazione in qualsiasi fase del processo senza alcun onere; richiedere chiarimenti integrativi al vendor; modificare lo scope della fornitura sulla base delle risposte ricevute; aggiudicare a vendor che non ha la quotation di costo più bassa qualora la valutazione complessiva (vedi §7) sia superiore; aggiudicare per lotti separati a vendor diversi; estendere o ridurre il timing del processo.
 >
-> **EN — Disclaimer:** This RFQ does not constitute a contractual commitment from Firmamento Technologies S.r.l. Firmamento reserves the right to not proceed, request clarifications, modify scope, award to non-lowest bidder based on weighted evaluation, award separate lots, or extend timing.
+> **EN, Disclaimer:** This RFQ does not constitute a contractual commitment from Firmamento Technologies S.r.l. Firmamento reserves the right to not proceed, request clarifications, modify scope, award to non-lowest bidder based on weighted evaluation, award separate lots, or extend timing.
 
 ---
 
@@ -571,6 +520,6 @@ Insieme alla quotation, il vendor deve fornire i seguenti allegati obbligatori:
 
 **FINE DOCUMENTO RFQ-FIRMAMENTO-VTOL-001**
 
-Documento bilingua IT/EN. Versione 1.0. Confidence: high (template strutturato, validato vs requirements Cap. 6 §6.3.1 + Cap. 8 §8.4.1 dello Studio di Fattibilità Firmamento).
+Documento bilingua IT/EN. Versione 1.0. Confidence: high (template strutturato, validato vs requirements Cap. 6 §6.3.1 e Cap. 8 §8.4.1 dello Studio di Fattibilità Firmamento).
 
-Per chiarimenti sul template: vedi `RFQ-cover-letter-template.md` per la cover letter di accompagnamento.
+Per chiarimenti sul template vedi `RFQ-cover-letter-template.md` (cover letter di accompagnamento).

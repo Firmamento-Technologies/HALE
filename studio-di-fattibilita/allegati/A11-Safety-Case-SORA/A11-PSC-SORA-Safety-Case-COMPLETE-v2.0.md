@@ -1,24 +1,24 @@
-# Allegato A.11 — SORA Safety Case COMPLETE v2.0
+# Allegato A.11 : SORA Safety Case COMPLETE v2.0
 
-> **Volume 2 — Allegato A.11 (versione estesa)**
+> **Volume 2 : Allegato A.11 (versione estesa)**
 > **SORA Safety Case Preliminary-Grade** per supporto **Pre-Application Meeting ENAC**
 > Conformità: **EASA SORA 2.5 (ED Decision 2025/018/R, 15 settembre 2025)** + **Reg. (UE) 2019/947** + **ENAC Regolamento APR Ed.3 (2019) + Em.1 (2020)**
-> **Versione**: 2.0 — Maggio 2026 (M+3 baseline)
+> **Versione**: 2.0, Maggio 2026 (M+3 baseline)
 > **Operatore proponente**: Firmamento Technologies S.r.l. (in registrazione UAS Operator ENAC)
 > **Author**: `aviation-regulatory-counsel` (HALE Studio di Fattibilità)
-> **Stato**: PRELIMINARY — per istruttoria pre-application; **NON sostituisce** la SORA application formale ex art. 11 Reg. (UE) 2019/947.
+> **Stato**: PRELIMINARY, per istruttoria pre-application; **NON sostituisce** la SORA application formale ex art. 11 Reg. (UE) 2019/947.
 
 ---
 
 ## CAVEAT METODOLOGICO E SCOPO DEL DOCUMENTO
 
-Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting con ENAC** (Direzione Regolamentazione UAS) per il Percorso 6A — VTOL pilota Pentema. Esso costituisce **iterazione preliminary-grade** del SORA, conforme alla struttura europea SORA 2.5 codificata dall'**EASA Amendment 3 a Issue 1 AMC/GM Reg. (UE) 2019/947** (ED Decision 2025/018/R del 15 settembre 2025), ma **non possiede** lo status di:
+Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting con ENAC** (Direzione Regolamentazione UAS) per il Percorso 6A, VTOL pilota Pentema. Esso costituisce **iterazione preliminary-grade** del SORA, conforme alla struttura europea SORA 2.5 codificata dall'**EASA Amendment 3 a Issue 1 AMC/GM Reg. (UE) 2019/947** (ED Decision 2025/018/R del 15 settembre 2025). Il documento **non possiede** lo status di:
 
 1. **SORA Application formale** ex art. 11 Reg. (UE) 2019/947 (richiede Operations Manual completo, evidenze design assurance vendor, training records, Maintenance Manual approved)
 2. **Investment-grade Safety Case** (per finanziamenti aviation insurance >€5M o due diligence istituzionale, richiede external Designated Verifier Body audit)
 3. **Operational Authorization** (rilasciata da ENAC ex art. 12 Reg. 947, post-istruttoria)
 
-**Confidence aggregato del documento**: **medium** — basato su (i) dati ISTAT/IGM Pentema confermati, (ii) SORA 2.5 europea fresca (8 mesi dalla pubblicazione, dottrina ENAC in formazione), (iii) caratteristiche piattaforma JOUAV CW-30E baseline (decisione vendor finale M+6, cfr. Trade Study A.3.04). I valori GRC/ARC/SAIL qui calcolati **devono essere riconfermati** durante il pre-application meeting ENAC.
+**Confidence aggregato del documento**: **medium**, basato su (i) dati ISTAT/IGM Pentema confermati, (ii) SORA 2.5 europea fresca (8 mesi dalla pubblicazione, dottrina ENAC in formazione), (iii) caratteristiche piattaforma JOUAV CW-30E baseline (decisione vendor finale M+6, cfr. Trade Study A.3.04). I valori GRC/ARC/SAIL qui calcolati **devono essere riconfermati** durante il pre-application meeting ENAC.
 
 **Falsifying observation associata** (cfr. **FO-10A-03** in Cap. 10 §10.5): se al M+9 ENAC determina SAIL effettivo ≥ IV (vs. target III), l'ipotesi C2 di gate è falsificata e si attiva contingency VLOS-only Y1 + re-application Y2 per BVLOS (cfr. Cap. 9 §9.12 sliding timeline).
 
@@ -26,19 +26,19 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 
 ## A.11.0 INDICE STRUTTURATO
 
-- **§A.11.1** — Sintesi esecutiva e quick-look findings
-- **§A.11.2** — STEP 1: ConOps narrative completa (pre-flight / flight / post-flight) per UC-001 frane, UC-002 antincendio, UC-004 mapping
-- **§A.11.3** — STEP 2: UAS Class determination (CW-30E come Class III ai sensi Reg. (UE) 2019/945)
-- **§A.11.4** — STEP 3: Ground Risk Class — iGRC + GRC final con M1/M2/M3/ERP
-- **§A.11.5** — STEP 4: Air Risk Class — iARC + ARC final con TMA Genova, R-71 Brugneto, R-32, parapendio
-- **§A.11.6** — STEP 5: SAIL determination + alternativi
-- **§A.11.7** — STEP 6: OSO matrix (24 OSO con assegnazione Robust/Medium/Low/Optional + evidence-status)
-- **§A.11.8** — STEP 7: Adjacent Area Considerations (Torriglia, ferrovia Genova-Casella, Diga del Brugneto)
-- **§A.11.9** — STEP 8: Containment Requirements + Safety Portfolio integrato
-- **§A.11.10** — Pre-Application Package ENAC: lista documenti, tempistiche, Q&A anticipato top-10
-- **§A.11.11** — Linkage Risk Register, RTM, Cap. 5, Cap. 9, Cap. 10
-- **§A.11.12** — Confidence aggregata, gap residui, raccomandazioni
-- **§A.11.13** — Riferimenti normativi e tecnici
+- **§A.11.1** : Sintesi esecutiva e quick-look findings
+- **§A.11.2** : STEP 1: ConOps narrative completa (pre-flight / flight / post-flight) per UC-001 frane, UC-002 antincendio, UC-004 mapping
+- **§A.11.3** : STEP 2: UAS Class determination (CW-30E come Class III ai sensi Reg. (UE) 2019/945)
+- **§A.11.4** : STEP 3: Ground Risk Class, iGRC + GRC final con M1/M2/M3/ERP
+- **§A.11.5** : STEP 4: Air Risk Class, iARC + ARC final con TMA Genova, R-71 Brugneto, R-32, parapendio
+- **§A.11.6** : STEP 5: SAIL determination + alternativi
+- **§A.11.7** : STEP 6: OSO matrix (24 OSO con assegnazione Robust/Medium/Low/Optional + evidence-status)
+- **§A.11.8** : STEP 7: Adjacent Area Considerations (Torriglia, ferrovia Genova-Casella, Diga del Brugneto)
+- **§A.11.9** : STEP 8: Containment Requirements + Safety Portfolio integrato
+- **§A.11.10** : Pre-Application Package ENAC: lista documenti, tempistiche, Q&A anticipato top-10
+- **§A.11.11** : Linkage Risk Register, RTM, Cap. 5, Cap. 9, Cap. 10
+- **§A.11.12** : Confidence aggregata, gap residui, raccomandazioni
+- **§A.11.13** : Riferimenti normativi e tecnici
 
 ---
 
@@ -53,7 +53,7 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 | **GRC final** (post M1+M2+M3 ERP) | **3** | medium | M |
 | **iARC** (initial Air Risk Class) | **Class B** (rural mountainous, VLL, low GA traffic, occasional parapendio + glider) | medium | L-M (TMA Genova lateralmente, sorvolo R-71 Brugneto da evitare) |
 | **ARC final** (post strategic mitigation) | **B** (confermato, TMPR Standard) | medium | L |
-| **SAIL determination** | **SAIL III** (preliminary) — possibile SAIL II in scenari ristretti | medium | H — driver primario del rischio regolatorio (RSK-REG-002) |
+| **SAIL determination** | **SAIL III** (preliminary), possibile SAIL II in scenari ristretti | medium | H, driver primario del rischio regolatorio (RSK-REG-002) |
 | **OSO applicabili SAIL III** | **18 OSO** (Robust su tecnici critici; Medium su procedure; Low su environmental) | medium | M |
 | **Containment threshold** | < 1×10⁻⁴ per flight hour (perdita controllo) per SAIL III | high | L |
 | **Tempistica ENAC nominale** | Pre-app M+3 → SORA submission M+9 → Authorization M+9÷15 | medium | M (sliding scenario M+15÷24, cfr. Cap. 9 §9.12) |
@@ -61,22 +61,22 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 ### A.11.1.2 Top-5 messaggi chiave per pre-application meeting ENAC
 
 1. **Pentema è "sparsely populated" non "isolated"**: 14 abitanti residenti ISTAT, ma frazione attraversata da SS45 (strada provinciale, ~50–150 veicoli/giorno) e ferrovia Genova-Casella a ~3.5 km. La classificazione tabellare GRC SORA 2.5 (Annex E) lo colloca in **fascia 5** (sparse populated env., UAS 1m < L ≤ 3m).
-2. **Mitigazione M1 critica**: geofence aree residenziali (200 m hard-buffer da abitazioni di Pentema) + window operativo timed (no overflight 8:00–10:00 / 17:00–19:00 quando attività comunitaria > media). Documentato in Operations Manual draft Cap. 4.
-3. **Recovery system (parachute)**: M2 robust → BRS (Ballistic Recovery System) certificato CE PED + impact velocity validata < 7 m/s (cfr. JOUAV CW-30E spec). Test in volo Pentema previsto Phase B (post-authorization).
-4. **ARC b confermato ma TMPR Standard necessario**: presenza R-71 Diga del Brugneto (sorvolo proibito) e prossimità TMA Genova (15 km W) richiedono **NOTAM coordinato ENAV** ogni missione + segmentazione cellulare verticale.
-5. **Insurance gap**: copertura RC BVLOS minimo 750.000 DSP (Reg. (CE) 785/2004 + DM Trasporti 25/02/2022) — broker aviation specialist (Marsh/Aon/Willis) required, premio stimato €25–80k/anno SAIL III — Risk Register RSK-REG-026.
+2. **Mitigazione M1 critica**: geofence aree residenziali (200 m hard-buffer da abitazioni di Pentema) e window operativo timed (no overflight 8:00–10:00 / 17:00–19:00 quando attività comunitaria > media). La regola è documentata in Operations Manual draft Cap. 4.
+3. **Recovery system (parachute)**: M2 robust con BRS (Ballistic Recovery System) certificato CE PED e impact velocity validata < 7 m/s (cfr. JOUAV CW-30E spec). Test in volo Pentema previsto Phase B (post-authorization).
+4. **ARC b confermato ma TMPR Standard necessario**: la presenza di R-71 Diga del Brugneto (sorvolo proibito) e la prossimità della TMA Genova (15 km W) richiedono **NOTAM coordinato ENAV** ogni missione e segmentazione cellulare verticale.
+5. **Insurance gap**: copertura RC BVLOS minimo 750.000 DSP (Reg. (CE) 785/2004 + DM Trasporti 25/02/2022); richiede broker aviation specialist (Marsh/Aon/Willis), premio stimato €25–80k/anno SAIL III. Si rimanda al Risk Register RSK-REG-026.
 
 ### A.11.1.3 Gap residui pre-application (da chiudere M+3÷6)
 
 - **OQ-SORA-01**: validazione "sparse populated" vs. "moderate" da parte di ENAC (driver primario SAIL)
 - **OQ-SORA-02**: accettazione M2 parachute come tactical robust (vs. dual M2 richiesto in alcuni casi SAIL ≥ IV)
 - **OQ-SORA-03**: conferma TMPR Standard sufficiente vs. enhanced (presenza R-71)
-- **OQ-SORA-04**: Operations Manual cap. obbligatori (vendor o operator-built — preferenza ENAC)
-- **OQ-SORA-05**: Maintenance program — equivalenza Part-66 / Part-145 o standalone Operator Maintenance Manual
+- **OQ-SORA-04**: Operations Manual cap. obbligatori (vendor o operator-built, preferenza ENAC)
+- **OQ-SORA-05**: Maintenance program, equivalenza Part-66 / Part-145 o standalone Operator Maintenance Manual
 
 ---
 
-## A.11.2 STEP 1 — ConOps NARRATIVE COMPLETA
+## A.11.2 STEP 1 : ConOps NARRATIVE COMPLETA
 
 ### A.11.2.1 Area operativa e identificazione geografica
 
@@ -91,7 +91,7 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 | Densità Comune Torriglia | ~14 ab/km² (popolazione 1980, sup. 60 km²) | ISTAT 2024 |
 | Distanza centro abitato Torriglia (~1500 ab) | 3.27 km in linea d'aria | IGM |
 | Strada principale | **SS45 Trebbia** (provinciale, ex-strada statale) | OpenStreetMap + ANAS |
-| Ferrovia | Genova-Casella (FS) — passaggio Crocefieschi ~3.5 km E | RFI carta linee |
+| Ferrovia | Genova-Casella (FS), passaggio Crocefieschi ~3.5 km E | RFI carta linee |
 | Diga d'invaso | **Diga del Brugneto** (capacità 25 Mm³, ~6.5 km NE di Pentema) | Regione Liguria DGR 1147/2018 |
 | Zone NATURA 2000 | ZSC IT1331402 "Parco Naturale dell'Antola" (limitrofo) | Min. Ambiente |
 | Aerodromo più vicino | LIMG Genova-Sestri (~38 km SW) | ENAV AIP IT |
@@ -99,11 +99,11 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 **Volume operativo BVLOS proposto**:
 - **Latitudine**: 44.46–44.55°N
 - **Longitudine**: 9.10–9.30°E
-- **Altitudine**: superficie terreno → **500 m AGL** (limite imposto, NON FL150)
+- **Altitudine**: superficie terreno fino a **500 m AGL** (limite imposto, NON FL150)
 - **Estensione**: ~120 km² (Valli Trebbia, Brugneto, alta valle Scrivia)
 - **Buffer di contingenza** (vol. residuo): +30% laterale (geofence outer)
 
-### A.11.2.2 Profilo missioni operative — Use Cases
+### A.11.2.2 Profilo missioni operative : Use Cases
 
 #### UC-001 Monitoraggio frane settimanale (mapping fotogrammetrico RGB + multispettrale)
 
@@ -128,7 +128,7 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 
 #### UC-002 Antincendio boschivo (IR thermal + alert real-time)
 
-**Frequenza**: stagionale — periodo **15 giugno ÷ 15 settembre**, attivazione on-demand su allerta Centro Funzionale ARPAL Liguria + Vigili del Fuoco.
+**Frequenza**: stagionale, periodo **15 giugno ÷ 15 settembre**, attivazione on-demand su allerta Centro Funzionale ARPAL Liguria e Vigili del Fuoco.
 
 **Profilo volo tipico**:
 - Activation < 30 min dalla call (mission-ready posture)
@@ -141,11 +141,11 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 
 **Crew**: 1 PIC + 1 Mission Observer (in contatto radio VVF) + Mission Commander backstage.
 
-**Special considerations**: operazioni notturne possibili in Phase B (post-authorization extra) ma **NON in Phase A** (BVLOS notturno richiede SAIL IV+).
+**Special considerations**: le operazioni notturne sono ammesse in Phase B (post-authorization extra) ma **NON in Phase A** (BVLOS notturno richiede SAIL IV+).
 
 #### UC-003 Connettività emergenza (LTE backup on-demand)
 
-**Frequenza**: on-demand emergency activation (target SLA < 60 min) + esercitazioni 2/anno con Protezione Civile.
+**Frequenza**: on-demand emergency activation (target SLA < 60 min), con esercitazioni 2/anno congiunte con Protezione Civile.
 
 **Profilo volo tipico**:
 - Decollo on-demand, salita stabilizzata a 300–500 m AGL
@@ -156,7 +156,7 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 
 **Crew**: 2 PIC alternati + 1 Mission Commander + 1 NetOps connection mgmt.
 
-#### UC-004 Mapping infrastrutture (RGB + LiDAR) — Phase Y2+
+#### UC-004 Mapping infrastrutture (RGB + LiDAR), Phase Y2+
 
 **Frequenza**: trimestrale Y2 (4 missioni/anno).
 
@@ -176,15 +176,13 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 
 ### A.11.2.4 Flight procedures (in-flight)
 
-- Continuous monitoring datalink C2 (RF 2.4 GHz + LTE backup + SATCOM Iridium per long range)
-- Ground Station 2-screen layout: (i) mappa traffico, geofence, weather; (ii) FCS + payload feed
-- Position reporting via ADS-B OUT (NO ADS-B IN obbligatorio per ARC b, ma installato come strategic mitigation)
-- Crew rotation max ogni 90 min flight time per fatica
-- **Stop conditions**:
-  - Wind > 12 m/s (limite CW-30E)
-  - Visibility < 1.5 km (degradation cameras IR)
-  - Datalink lost > 30s (auto-RTB)
-  - Battery state critical (< 15%)
+Durante la missione l'equipaggio mantiene monitoraggio continuo del datalink C2 (RF 2.4 GHz, LTE backup, SATCOM Iridium per long range). La Ground Station opera su layout a due schermi: (i) mappa traffico, geofence, weather; (ii) FCS più payload feed. Il position reporting avviene via ADS-B OUT; l'ADS-B IN non è obbligatorio per ARC b ma viene installato come strategic mitigation. La crew rotation segue cicli di 90 min massimi di flight time, per la gestione fatica.
+
+**Stop conditions**:
+- Wind > 12 m/s (limite CW-30E)
+- Visibility < 1.5 km (degradation cameras IR)
+- Datalink lost > 30s (auto-RTB)
+- Battery state critical (< 15%)
 
 ### A.11.2.5 Post-flight procedures
 
@@ -200,11 +198,11 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 
 ---
 
-## A.11.3 STEP 2 — UAS CLASS DETERMINATION
+## A.11.3 STEP 2 : UAS CLASS DETERMINATION
 
 ### A.11.3.1 Riferimento normativo
 
-**Reg. (UE) 2019/945 — Annex (Part 1 – Part 16)** definisce le classi di UAS commercializzabili:
+Il **Reg. (UE) 2019/945, Annex (Part 1 – Part 16)** definisce le classi di UAS commercializzabili:
 - **C0**: < 250 g, MAX 19 m/s, ceiling 120m AGL (Open Subcat A1)
 - **C1**: < 900 g, MAX 19 m/s impact (Open A1)
 - **C2**: < 4 kg, slow mode (Open A2)
@@ -224,9 +222,9 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 
 **Posizionamento ufficiale**: poiché la **Specific Category** non richiede né classificazione C0-C6 né certificazione CE secondo Reg. 2019/945 (cfr. art. 5 par. 3 Reg. 2019/947), l'inquadramento procede via **caratterizzazione SORA 2.5 Annex E**:
 
-- **UAS Class (SORA cinematica)**: **maximum characteristic dimension ≤ 3 m** è soglia critica per iGRC. CW-30E apertura alare 3.5 m → **fascia "3 m < L ≤ 8 m"** (worst case) **OPPURE** se ENAC considera "characteristic dimension" come fusoliera (≈ 1.6 m) → **fascia "1 m < L ≤ 3 m"**.
+- **UAS Class (SORA cinematica)**: la **maximum characteristic dimension ≤ 3 m** è soglia critica per iGRC. Il CW-30E ha apertura alare 3.5 m, quindi rientra nella **fascia "3 m < L ≤ 8 m"** (worst case) **OPPURE**, se ENAC considera "characteristic dimension" come fusoliera (≈ 1.6 m), nella **fascia "1 m < L ≤ 3 m"**.
 - **Cinetic energy at impact** (post-parachute): (0.5 × 18 × 7²) = 441 J < 34 kJ (soglia Annex F SORA 2.5 per Class III).
-- **Cinetic energy at impact** (non-recovery): (0.5 × 18 × 30²) = 8100 J (con velocity ~30 m/s spiral dive) — comunque < 34 kJ.
+- **Cinetic energy at impact** (non-recovery): (0.5 × 18 × 30²) = 8100 J (con velocity ~30 m/s spiral dive), comunque < 34 kJ.
 
 **Open Question OQ-SORA-06**: confermare con ENAC quale "characteristic dimension" applicare (fusoliera vs. apertura alare). Impatto: fascia GRC.
 
@@ -244,7 +242,7 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 
 ---
 
-## A.11.4 STEP 3 — GROUND RISK CLASS (iGRC + FINAL)
+## A.11.4 STEP 3 : GROUND RISK CLASS (iGRC + FINAL)
 
 ### A.11.4.1 iGRC determination
 
@@ -264,9 +262,9 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 | 1 m < L ≤ 3 m, **BVLOS** | 2 | **5** | 6 | 8 |
 | 3 m < L ≤ 8 m, BVLOS | 3 | 6 | 7 | 8 |
 
-→ **iGRC = 5** (BVLOS sparse populated, dim 1-3 m). Worst case se ENAC opta per "3 m < L ≤ 8 m" → iGRC 6.
+Si ottiene quindi **iGRC = 5** (BVLOS sparse populated, dim 1-3 m). Il worst case (ENAC opta per "3 m < L ≤ 8 m") condurrebbe a iGRC 6.
 
-### A.11.4.2 Population density underflown — Pentema operational area
+### A.11.4.2 Population density underflown : Pentema operational area
 
 **Statistical analysis** del volume operativo (~120 km²):
 
@@ -281,44 +279,44 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 | Bosco Antola (ZSC) | 50 | 0 | 0 | controlled (no humans) |
 | Linea ferroviaria Genova-Casella | corridor 0.5 | ~3 utenti contemporanei avg | 6 | sparse but mobile pop. |
 
-**Conclusione**: la dominanza statistica della **rotta tipica missione UC-001/UC-002** è **sparse populated** (~75% del flight path) con segmenti minori **isolated** (sopra ZSC Antola, ~20%) e segmenti **non-overflight** (Torriglia, R-71 Brugneto, 5%).
+**Conclusione**: la dominanza statistica della **rotta tipica missione UC-001/UC-002** ricade nella categoria **sparse populated** (~75% del flight path), con segmenti minori **isolated** (sopra ZSC Antola, ~20%) e segmenti **non-overflight** (Torriglia, R-71 Brugneto, 5%).
 
-**iGRC consolidato**: **5** (worst case) — con confidence medium.
+**iGRC consolidato**: **5** (worst case), confidence medium.
 
-**Open Question OQ-SORA-07**: accettazione di iGRC mediato su rotta vs. worst-case segment. Linee guida JARUS suggeriscono worst-case; ENAC ha accettato approccio segmentato in casi pregressi (es. Volocopter Roma 2024).
+**Open Question OQ-SORA-07**: accettazione di iGRC mediato su rotta vs. worst-case segment. Le linee guida JARUS suggeriscono il worst-case; ENAC ha accettato approccio segmentato in casi pregressi (es. Volocopter Roma 2024).
 
 ### A.11.4.3 Mitigations M1 + M2 + M3
 
-#### M1 — Strategic Mitigations (Application Level)
+#### M1 : Strategic Mitigations (Application Level)
 
 **Definizione SORA 2.5**: riduzione del numero atteso di persone sotto la rotta tramite restrizioni operative (geofence, timing, area selection, weather criteria).
 
 | Mitigation M1 sub-elementi | Applicazione | Riduzione GRC | Evidence |
 |---|---|---|---|
-| **M1.1 Geofence aree popolate** — 200 m hard buffer + 500 m soft buffer da Pentema, Torriglia, Casanova | ✓ Robust | Fattore × 0.3 popolazione sotto-rotta | Geofence config file (Operations Manual cap. 5) |
-| **M1.2 Geofence aree no-fly** — R-71 Brugneto, R-32 Aviano area, ZSC Antola (Natura 2000 sorvolo limitato) | ✓ Robust | n/a (compliance) | Geofence config |
-| **M1.3 Timed operation windows** — exclusion 08:00–10:00 + 17:00–19:00 (pop. activity peak) | ✓ Medium | Fattore × 0.7 | SOPs |
-| **M1.4 Weather minima** — VIS > 1.5 km, wind < 12 m/s, no precipitazioni intense | ✓ Robust | n/a (operational) | OM cap. 4 |
-| **M1.5 Vertical separation** — altitudine min 200 m AGL above sparse populated | ✓ Medium | Fattore × 0.8 | Flight envelope SOP |
+| **M1.1 Geofence aree popolate**, 200 m hard buffer + 500 m soft buffer da Pentema, Torriglia, Casanova | ✓ Robust | Fattore × 0.3 popolazione sotto-rotta | Geofence config file (Operations Manual cap. 5) |
+| **M1.2 Geofence aree no-fly**, R-71 Brugneto, R-32 Aviano area, ZSC Antola (Natura 2000 sorvolo limitato) | ✓ Robust | n/a (compliance) | Geofence config |
+| **M1.3 Timed operation windows**, exclusion 08:00–10:00 + 17:00–19:00 (pop. activity peak) | ✓ Medium | Fattore × 0.7 | SOPs |
+| **M1.4 Weather minima**, VIS > 1.5 km, wind < 12 m/s, no precipitazioni intense | ✓ Robust | n/a (operational) | OM cap. 4 |
+| **M1.5 Vertical separation**, altitudine min 200 m AGL above sparse populated | ✓ Medium | Fattore × 0.8 | Flight envelope SOP |
 | **M1.6 Pre-flight site survey + NOTAM coordination** | ✓ Robust | Reduce uncertainty | Mission planning protocol |
 
 **Impatto cumulato M1**: in regime SORA 2.5, M1 riduce iGRC di **1 step** se applicato Robust ([cfr. AMC1 Article 11 § "M1 Application Level Reduction"]).
 
-#### M2 — Tactical Mitigations (Containment + Termination)
+#### M2 : Tactical Mitigations (Containment + Termination)
 
 **Definizione SORA 2.5**: riduzione del livello di harm in caso di failure (recovery system, flight termination, redundancy).
 
 | Mitigation M2 sub-elementi | Applicazione | Riduzione GRC | Evidence |
 |---|---|---|---|
-| **M2.1 Parachute Recovery System (BRS)** — JOUAV CW-30E factory option, deployment manuale + automatico, impact velocity validata < 7 m/s | ✓ Robust | -1 step | Vendor data sheet + test report (richiedere a JOUAV) |
-| **M2.2 Auto-RTB on Lost Link** — return to Home dopo 30s lost C2, plus pre-designated emergency landing zones (3 EZL identificate in volume operativo) | ✓ Robust | rinforza M2.1 | OM cap. 6 |
-| **M2.3 Flight Termination System (FTS)** — independent kill switch, motor cut + parachute deploy, redundant transmitter (LTE + UHF) | ✓ Medium | n/a (M2.1 covers) | Hardware spec |
-| **M2.4 Fail-operational FCS** — redundant IMU + GPS + altitude sensor; engineless glide capability for fixed-wing phase | ✓ Medium | resilience | FCS architecture doc |
-| **M2.5 Battery thermal management** — BMS + thermal cutoff, no LiPo fire risk in flight | ✓ Robust | n/a (safety) | Battery cert |
+| **M2.1 Parachute Recovery System (BRS)**, JOUAV CW-30E factory option, deployment manuale + automatico, impact velocity validata < 7 m/s | ✓ Robust | -1 step | Vendor data sheet + test report (richiedere a JOUAV) |
+| **M2.2 Auto-RTB on Lost Link**, return to Home dopo 30s lost C2, plus pre-designated emergency landing zones (3 EZL identificate in volume operativo) | ✓ Robust | rinforza M2.1 | OM cap. 6 |
+| **M2.3 Flight Termination System (FTS)**, independent kill switch, motor cut + parachute deploy, redundant transmitter (LTE + UHF) | ✓ Medium | n/a (M2.1 covers) | Hardware spec |
+| **M2.4 Fail-operational FCS**, redundant IMU + GPS + altitude sensor; engineless glide capability for fixed-wing phase | ✓ Medium | resilience | FCS architecture doc |
+| **M2.5 Battery thermal management**, BMS + thermal cutoff, no LiPo fire risk in flight | ✓ Robust | n/a (safety) | Battery cert |
 
 **Impatto cumulato M2**: M2 Robust riduce GRC di **1 step** (parachute + RTB combinati).
 
-#### M3 — Emergency Response Plan (ERP)
+#### M3 : Emergency Response Plan (ERP)
 
 **Definizione SORA 2.5**: piano di risposta all'incidente per limitare conseguenze post-evento.
 
@@ -328,9 +326,9 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 | **M3.2 Insurance** RC + casco + cyber con copertura ≥ 750.000 DSP (Reg. (CE) 785/2004) | ✓ Robust | Polizza broker aviation |
 | **M3.3 Crew training** ERP simulation drill semestrale | ✓ Medium | Training records |
 | **M3.4 Communication channel** con comunità Pentema (canale Whatsapp + bacheca + email Comune) | ✓ Medium | Workshop OQ-009 M+3 |
-| **M3.5 First responder coordination** — accordi pre-scritti con VVF Liguria + CC Forestali + 118 | ✓ Medium | MoU (M+3) |
+| **M3.5 First responder coordination**, accordi pre-scritti con VVF Liguria + CC Forestali + 118 | ✓ Medium | MoU (M+3) |
 
-**Impatto cumulato M3**: M3 Robust riduce GRC di **0.5 step** (in SORA 2.5 europea, ERP application è "low" o "medium" — robust è raro). Conservativo: arrotondamento **0**.
+**Impatto cumulato M3**: M3 Robust riduce GRC di **0.5 step** (in SORA 2.5 europea, ERP application è classificata "low" o "medium"; il livello robust è raro). In ottica conservativa, si applica arrotondamento a **0**.
 
 ### A.11.4.4 GRC Final calculation
 
@@ -342,19 +340,19 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 | - M3 (Medium-Robust) | 0 | ERP scritto (no full reduction in SORA 2.5) |
 | **Final GRC** | **3** | (5 - 1 - 1 = 3) |
 
-**Confidence Step 3**: **medium** — la riduzione M1+M2 di 2 step combinati è dottrinalmente accettabile (cfr. AMC1 SORA 2.5 §3.4.3), ma ENAC potrebbe richiedere evidenza più estesa per M1 (es. mapping density temporale) o non riconoscere M2 robust senza test in volo del BRS.
+**Confidence Step 3**: **medium**. La riduzione M1+M2 di 2 step combinati è dottrinalmente accettabile (cfr. AMC1 SORA 2.5 §3.4.3), ma ENAC potrebbe richiedere evidenza più estesa per M1 (es. mapping density temporale) o non riconoscere M2 robust senza test in volo del BRS.
 
-**Sensitivity**: se ENAC accetta solo "M1 Medium + M2 Medium" → GRC = 4 (vs. 3). Se ENAC contestasse iGRC partenza (es. iGRC = 6 perché dimensione 3m < L ≤ 8m) → final GRC = 4 nel best case.
+**Sensitivity**: se ENAC accetta solo "M1 Medium + M2 Medium", il GRC sale a 4 (vs. 3). Se ENAC contestasse iGRC partenza (es. iGRC = 6 perché dimensione 3m < L ≤ 8m), il final GRC nel best case sarebbe 4.
 
-**Showstopper check**: GRC final ≤ 5 è compatibile con SAIL ≤ IV. Solo GRC ≥ 6 farebbe scattare SAIL V+ con costi proibitivi.
+**Showstopper check**: GRC final ≤ 5 resta compatibile con SAIL ≤ IV. Solo GRC ≥ 6 farebbe scattare SAIL V+ con costi proibitivi.
 
 ---
 
-## A.11.5 STEP 4 — AIR RISK CLASS (iARC + ARC FINAL)
+## A.11.5 STEP 4 : AIR RISK CLASS (iARC + ARC FINAL)
 
 ### A.11.5.1 Spazio aereo dell'area operativa
 
-**Volume di interesse**: lat 44.46–44.55°N, lon 9.10–9.30°E, SFC → 500 m AGL (~1640 m AMSL al picco terreno).
+**Volume di interesse**: lat 44.46–44.55°N, lon 9.10–9.30°E, SFC fino a 500 m AGL (~1640 m AMSL al picco terreno).
 
 **Classificazione AIP IT (ENAV)**:
 
@@ -367,9 +365,9 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 
 **Area di rilievo limitrofa**:
 - **TMA Genova** (Class D/E) lateralmente, ~15 km W (estensione SW del CTR Genova-Sestri)
-- **R-71 Brugneto** — area regolamentata sorvolo proibito (motivi: diga + invaso) — sup. ~25 km², SFC → FL45
-- **R-32 Aviano-Bardonecchia** — area militare addestramento, attiva H24 NOTAM-dependent (~80 km E, ma traffico militare jet può transitare)
-- **Sentieri parapendio**: aree decollo Pian del Lago, Monte Antola — operazioni VFR weekend
+- **R-71 Brugneto**, area regolamentata sorvolo proibito (motivi: diga + invaso), sup. ~25 km², SFC → FL45
+- **R-32 Aviano-Bardonecchia**, area militare addestramento, attiva H24 NOTAM-dependent (~80 km E, ma traffico militare jet può transitare)
+- **Sentieri parapendio**: aree decollo Pian del Lago, Monte Antola, operazioni VFR weekend
 - **Aviazione generale**: corridoio VFR Genova → Piacenza (lateralmente al volume operativo)
 - **Elisoccorso 118**: base elicotteri Genova San Martino (lat. distance ~40 km)
 - **Antincendio Canadair**: stagionalmente, base AIB Genova → operazioni a 100–500 ft AGL
@@ -385,24 +383,24 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 | Class G rural VLL con GA occasionale | medium-low | **b** |
 | Class G remote isolated | low | a |
 
-**Volume operativo Pentema**: dominanza Class G con **GA occasionale** (4–6 movimenti VFR/giorno medi nei mesi caldi, da statistica ENAV Genova FIS log 2024) + **parapendio weekend** (5–10 lanci/giorno fine settimana stagione mite) + **elisoccorso 118** (eventi sporadici, max 1–2/settimana area Trebbia).
+Il volume operativo Pentema presenta dominanza Class G con **GA occasionale** (4–6 movimenti VFR/giorno medi nei mesi caldi, da statistica ENAV Genova FIS log 2024), **parapendio weekend** (5–10 lanci/giorno fine settimana stagione mite) ed **elisoccorso 118** (eventi sporadici, max 1–2/settimana area Trebbia).
 
-**iARC determination preliminare**: **Class B** (b) — rural mountainous VLL non-controlled, low-medium traffic.
+**iARC determination preliminare**: **Class B** (b), rural mountainous VLL non-controlled, low-medium traffic.
 
-**Open Question OQ-SORA-08**: la presenza di parapendio nei weekend solleva la densità traffico transitoriamente — verificare con ENAV se richiesta TMPR Enhanced (vs. Standard) per missioni weekend, o se M1 timing (no weekend o no daylight 11:00–16:00) è sufficiente.
+**Open Question OQ-SORA-08**: la presenza di parapendio nei weekend solleva la densità traffico transitoriamente. Va verificato con ENAV se è richiesta TMPR Enhanced (vs. Standard) per missioni weekend, oppure se M1 timing (no weekend o no daylight 11:00–16:00) risulta sufficiente.
 
 ### A.11.5.3 Strategic mitigation ARC
 
 | Mitigation Air | Applicazione | Riduzione ARC |
 |---|---|---|
 | **NOTAM coordination** ENAV ogni missione (NOTAM pre-emessa H-24 o ricorrente settimanale) | ✓ Robust | n/a (compliance baseline) |
-| **ATC liaison** — call to Genova FIS pre-launch (frequency 124.025) | ✓ Medium | rinforza separation |
-| **ADS-B IN/OUT** installato — detect surrounding traffic in 20 NM | ✓ Robust | -0.5 step (qualitative) |
-| **Operational restrictions** — no weekend operations Apr-Oct (parapendio peak) salvo coordinamento federazione parapendio Liguria | ✓ Medium | -0 (qualitative) |
-| **Visual observers airborne** — opzionale, non sistematic | ✗ Non applicato | - |
-| **Conflict resolution procedures** — escape maneuver predefiniti (climb 100m + 90° heading) | ✓ Medium | resilience |
+| **ATC liaison**, call to Genova FIS pre-launch (frequency 124.025) | ✓ Medium | rinforza separation |
+| **ADS-B IN/OUT** installato, detect surrounding traffic in 20 NM | ✓ Robust | -0.5 step (qualitative) |
+| **Operational restrictions**, no weekend operations Apr-Oct (parapendio peak) salvo coordinamento federazione parapendio Liguria | ✓ Medium | -0 (qualitative) |
+| **Visual observers airborne**, opzionale, non sistematic | ✗ Non applicato | - |
+| **Conflict resolution procedures**, escape maneuver predefiniti (climb 100m + 90° heading) | ✓ Medium | resilience |
 
-**ARC Final**: **B (b)** — confermato. Nessun upgrade verso a (low traffic) per presenza R-71/parapendio/eliambulanza.
+**ARC Final**: **B (b)**, confermato. Non è prevista alcuna upgrade verso a (low traffic) per via della presenza di R-71, parapendio ed eliambulanza.
 
 ### A.11.5.4 TMPR (Tactical Mitigation Performance Requirement)
 
@@ -413,17 +411,17 @@ Per ARC b, SORA 2.5 richiede **TMPR Standard** (vs. Low per ARC a, Enhanced per 
 - DAA non-cooperative: NON obbligatorio per Class B (suggested ma opzionale)
 - Conflict alerting system: ground-based via ADS-B + LTE → ✓
 - Time-to-alarm: < 30s
-- Maneuver capability: pull-up 100m + turn 90° in 15s — verificare CW-30E performance
+- Maneuver capability: pull-up 100m + turn 90° in 15s, da verificare CW-30E performance
 
-**Open Question OQ-SORA-09**: ENAC sta valutando inclusione progressive di DAA non-cooperative (radar/EO) per SAIL III BVLOS — chiarire se è requisito formale o GM aspirational.
+**Open Question OQ-SORA-09**: ENAC sta valutando inclusione progressive di DAA non-cooperative (radar/EO) per SAIL III BVLOS. Resta da chiarire se si tratta di requisito formale o GM aspirational.
 
 ### A.11.5.5 ARC final per Step 5 SAIL determination
 
-**Confidence Step 4**: **medium** — incertezza primaria sui weekend parapendio. Mitigazione operativa (no weekend) accettabile, ma riduce drasticamente missioni UC-002 antincendio (peak fire season summer weekend).
+**Confidence Step 4**: **medium**. L'incertezza primaria riguarda i weekend parapendio. La mitigazione operativa (no weekend) è accettabile sul piano regolatorio, ma riduce drasticamente le missioni UC-002 antincendio (peak fire season summer weekend).
 
 ---
 
-## A.11.6 STEP 5 — SAIL DETERMINATION
+## A.11.6 STEP 5 : SAIL DETERMINATION
 
 ### A.11.6.1 Matrice SAIL (SORA 2.5 Annex C)
 
@@ -439,7 +437,7 @@ Per ARC b, SORA 2.5 richiede **TMPR Standard** (vs. Low per ARC a, Enhanced per 
 
 ### A.11.6.2 Determinazione SAIL Pentema
 
-**Input**: GRC final = 3 + ARC final = b → **SAIL III**.
+**Input**: GRC final = 3 + ARC final = b conduce a **SAIL III**.
 
 **Confidence: medium**. Sensitivity:
 
@@ -453,7 +451,7 @@ Per ARC b, SORA 2.5 richiede **TMPR Standard** (vs. Low per ARC a, Enhanced per 
 
 ### A.11.6.3 SAIL III implications
 
-**OSO applicabili**: ~18 OSO (vs. ~12 per SAIL II, ~22 per SAIL IV) — vedi §A.11.7.
+**OSO applicabili**: ~18 OSO (vs. ~12 per SAIL II, ~22 per SAIL IV). Si veda §A.11.7.
 
 **Robust/Medium/Low distribution typical SAIL III**:
 - Robust: ~5 OSO (tecnici critici: design, software, DAA, C2)
@@ -466,7 +464,7 @@ Per ARC b, SORA 2.5 richiede **TMPR Standard** (vs. Low per ARC a, Enhanced per 
 
 ---
 
-## A.11.7 STEP 6 — OPERATIONAL SAFETY OBJECTIVES (OSO) MATRIX
+## A.11.7 STEP 6 : OPERATIONAL SAFETY OBJECTIVES (OSO) MATRIX
 
 ### A.11.7.1 Lista OSO SORA 2.5 (24 totali)
 
@@ -522,20 +520,20 @@ La SORA 2.5 europea (Amendment 3) ha **riarticolato** la lista OSO mantenendo nu
 | #08 Operations Manual | Draft completo + validation tests | M+9 | aviation-regulatory + operations |
 | #09 Training program | Syllabus + competency matrix + first recurrency | M+9 | training-officer (new hire) |
 | #17 ERP drill | Prima simulation drill semestrale | M+6 | mission-commander |
-| #22 Adverse env qualification | Cold weather mountain (snow/ice) — outside vendor spec? | M+9 | vendor + ops |
+| #22 Adverse env qualification | Cold weather mountain (snow/ice), outside vendor spec? | M+9 | vendor + ops |
 
 ### A.11.7.4 Confidence aggregato OSO
 
-- **Robust-ready** (high confidence di compliance): #06, #10, #18, #19, #20 → 5 OSO
-- **Medium-ready** (medium confidence): #07, #15, #16, #23 + most operational → 6 OSO
-- **In progress** (low-medium confidence): #03, #04, #08, #09, #17, #22 → 6 OSO
+- **Robust-ready** (high confidence di compliance): #06, #10, #18, #19, #20 = 5 OSO
+- **Medium-ready** (medium confidence): #07, #15, #16, #23 + most operational = 6 OSO
+- **In progress** (low-medium confidence): #03, #04, #08, #09, #17, #22 = 6 OSO
 - **Risk OSO** (richiede vendor cooperation forte): #02, #04, #22 (vendor data acquisition)
 
 **Confidence aggregato Step 6**: **medium**.
 
 ---
 
-## A.11.8 STEP 7 — ADJACENT AREA CONSIDERATIONS
+## A.11.8 STEP 7 : ADJACENT AREA CONSIDERATIONS
 
 ### A.11.8.1 Definizione SORA 2.5
 
@@ -554,7 +552,7 @@ L'**Adjacent Area** è il volume di spazio aereo adiacente all'**Operational Vol
 
 | Area | Distanza dal centro op. vol. | Pop./asset | Severity se loss of containment |
 |---|---|---|---|
-| **Torriglia centro** | 3.5 km E | 1500 ab | Alta (populated) — non sorvolare anche in contingenza |
+| **Torriglia centro** | 3.5 km E | 1500 ab | Alta (populated), non sorvolare anche in contingenza |
 | **Crocefieschi** | 5 km N | ~600 ab | Media-alta |
 | **Frazione Casanova** | 6 km W | ~30 ab | Media |
 | **Casanova di Rovegno** | 5 km SE | ~50 ab | Media |
@@ -575,9 +573,9 @@ L'**Adjacent Area** è il volume di spazio aereo adiacente all'**Operational Vol
 - **Auto-RTB + Auto-Land** in case lost link > 30s o GPS lost > 60s
 - **Parachute deployment** in caso oltrepassamento geofence + perdita comando manuale
 - **Independence demonstration**: FCS principale + FTS secondario con kill switch indipendente (separate IMU + transmitter)
-- **Test in volo**: Phase B (post-authorization) — drop test parachute + lost link simulation + geofence trigger test
+- **Test in volo**: Phase B (post-authorization), drop test parachute + lost link simulation + geofence trigger test
 
-### A.11.8.4 Population density Adjacent — sensitivity
+### A.11.8.4 Population density Adjacent : sensitivity
 
 | Adjacent area sub-zone | Pop. (residente + transito) | Densità eq. | Classificazione SORA |
 |---|---|---|---|
@@ -587,21 +585,21 @@ L'**Adjacent Area** è il volume di spazio aereo adiacente all'**Operational Vol
 
 **Conclusione**: la popolazione nell'Adjacent **include Torriglia** che è populated. Questo eleva il requisito containment di un livello (vs. solo sparse adjacent).
 
-**Open Question OQ-SORA-10**: chiarire con ENAC se containment requirement per Adjacent populated impone testing più stretto (drop test multipli, validation 100h pre-operational) o se documentazione vendor + analisi è sufficiente per SAIL III.
+**Open Question OQ-SORA-10**: chiarire con ENAC se il containment requirement per Adjacent populated impone testing più stretto (drop test multipli, validation 100h pre-operational), oppure se documentazione vendor e analisi è sufficiente per SAIL III.
 
 ### A.11.8.5 Confidence Step 7
 
-**Confidence**: **medium-low** — è una delle aree dove SORA 2.5 europea ha innovato rispetto a 2.0 e dove la dottrina ENAC è ancora in formazione. Stretching scenario.
+**Confidence**: **medium-low**. L'Adjacent è una delle aree dove SORA 2.5 europea ha innovato rispetto alla 2.0 e dove la dottrina ENAC è ancora in formazione. Resta uno stretching scenario.
 
 ---
 
-## A.11.9 STEP 8 — CONTAINMENT REQUIREMENTS + SAFETY PORTFOLIO
+## A.11.9 STEP 8 : CONTAINMENT REQUIREMENTS + SAFETY PORTFOLIO
 
 ### A.11.9.1 Containment definition
 
 **Operational Volume Pentema**: vol. dichiarato in §A.11.2.1.
 **Contingency Volume**: +30% laterale + +50% verticale (buffer di "recovery" se UAS esce da Operational ma resta in Contingency, no containment failure ma anomaly).
-**Adjacent Volume**: >Contingency, è dove non deve mai arrivare (containment failure = entry in adjacent).
+**Adjacent Volume**: oltre Contingency, è la zona dove non deve mai arrivare (containment failure = entry in adjacent).
 
 ### A.11.9.2 Containment performance
 
@@ -669,7 +667,7 @@ Il **Safety Portfolio** integra tutti gli elementi dello Step 1–8 in una rappr
 
 ### A.11.10.1 Lista documenti richiesti per il Pre-Application Meeting
 
-Secondo prassi consolidata ENAC Direzione Regolamentazione UAS (Capo div. UAS — riferimento contatto via PEC `protocollo@pec.enac.gov.it` o portale UAS dedicato), per un pre-application meeting su SAIL III BVLOS si richiedono i seguenti documenti **anticipati H-15gg**:
+Secondo prassi consolidata ENAC Direzione Regolamentazione UAS (Capo div. UAS, riferimento contatto via PEC `protocollo@pec.enac.gov.it` o portale UAS dedicato), per un pre-application meeting su SAIL III BVLOS si richiedono i seguenti documenti **anticipati H-15gg**:
 
 | # | Documento | Stato M+3 | Owner |
 |---|---|---|---|
@@ -687,7 +685,7 @@ Secondo prassi consolidata ENAC Direzione Regolamentazione UAS (Capo div. UAS �
 
 ### A.11.10.2 Tempistiche tipiche ENAC LRA per SAIL III
 
-Da analisi LRA ENAC pubblicate (Linee Guida 2022-2025) + esperienze casi pubblici BVLOS Italia:
+Da analisi LRA ENAC pubblicate (Linee Guida 2022-2025) e da esperienze su casi pubblici BVLOS Italia:
 
 | Fase | Durata nominale | Sliding worst-case |
 |---|---|---|
@@ -704,9 +702,9 @@ Da analisi LRA ENAC pubblicate (Linee Guida 2022-2025) + esperienze casi pubblic
 
 **Risk Register linkage**: cfr. **RSK-REG-002** (SORA SAIL Pentema > III). Sliding timeline cfr. Cap. 9 §9.12.
 
-### A.11.10.3 Q&A anticipato — Top 10 domande ENAC attese
+### A.11.10.3 Q&A anticipato : Top 10 domande ENAC attese
 
-Sulla base di prassi consolidata (cfr. ENAC report autorizzazioni 2023-2024 + workshop EASA-ENAC 2025), si anticipano le **domande probabili** del referente ENAC durante il Pre-Application Meeting + risposta preparata:
+Sulla base di prassi consolidata (cfr. ENAC report autorizzazioni 2023-2024 e workshop EASA-ENAC 2025), si anticipano le **domande probabili** del referente ENAC durante il Pre-Application Meeting, con la relativa risposta preparata.
 
 **Q1. "Perché classificate Pentema sparse populated e non moderate?"**
 > **R**: ISTAT 2021 censisce 14 abitanti residenti in frazione Pentema; densità < 30 ab/km² nel buffer 1 km centro abitato. La SORA 2.5 Annex E indica sparse populated per densità tipica < 250 ab/km² in ambiente rurale-isolato. Pentema soddisfa il criterio: il pattern operativo evita Torriglia centro (populated, geofence hard). Source: ISTAT Censimento 2021 + GIS IGM (Allegato A.13 documentazione fotografica). **Confidence: medium-high**.
@@ -721,22 +719,22 @@ Sulla base di prassi consolidata (cfr. ENAC report autorizzazioni 2023-2024 + wo
 > **R**: TMA Genova lateralmente a 15 km W, nessuna interferenza prevista (alt. operativa max 500m AGL ≈ 1640m AMSL, sotto FL150). R-71 Brugneto inserita in geofence hard (no overflight). NOTAM coordination ENAV per ogni missione (frequency 124.025 Genova FIS) + call pre-launch. **Confidence: high**.
 
 **Q5. "Operations Manual è basato su modello vendor o operator-built?"**
-> **R**: **Operator-built** (Firmamento custom OM) con cap. 1-15 secondo struttura JAR-OPS/Part-OPS adattata UAS. Vendor docs (JOUAV CW-30E) integrati come Annex tecnici. **Rationale**: operatore deve essere autonomo nelle procedure operative, vendor docs supportano ma non sostituiscono. **Confidence: high**.
+> **R**: **Operator-built** (Firmamento custom OM) con cap. 1-15 secondo struttura JAR-OPS/Part-OPS adattata UAS. Vendor docs (JOUAV CW-30E) integrati come Annex tecnici. **Rationale**: l'operatore deve essere autonomo nelle procedure operative; vendor docs supportano ma non sostituiscono. **Confidence: high**.
 
 **Q6. "Maintenance organization: in-house o Part-145 partnership?"**
-> **R**: **Decisione M+6** subordinata a trade study A.3.07 (Maintenance Strategy). Baseline preferito: **hybrid** — preventive maintenance in-house (parte 1° livello) + corrective + heavy maintenance presso partner certificato (es. Logos Group Italia o Skytellier). Operator Maintenance Manual unico, con vendor docs integrati. **Confidence: medium**.
+> **R**: **Decisione M+6** subordinata a trade study A.3.07 (Maintenance Strategy). Baseline preferito: **hybrid**, preventive maintenance in-house (parte 1° livello) e corrective + heavy maintenance presso partner certificato (es. Logos Group Italia o Skytellier). Operator Maintenance Manual unico, con vendor docs integrati. **Confidence: medium**.
 
 **Q7. "Come gestite gli incidenti? ANSV reporting?"**
 > **R**: ERP scritto (ERP-001 v1.0) con flow di reporting: (i) immediate 112 + Comune Torriglia + ENAC ANSV +39 06 8207 8200; (ii) entro 24h ANSV form occurrence; (iii) entro 72h ENAC report incidente; (iv) entro 30gg insurance claim. Reporting eventi monthly aggregato ENAC art. 29 Regolamento APR Ed.3. **Confidence: high**.
 
-**Q8. "Sistema cyber security — Reg. (UE) 2023/203 Part-IS?"**
-> **R**: ⚠️ **Gap riconosciuto** — Part-IS (Information Security regulation) **applicabile da febbraio 2026** per operatori Specific Category con SAIL ≥ III. Firmamento sta finalizzando ISMS basato su ISO/IEC 27001 + cap. Part-IS dedicato. **CISO** in fase di hiring (M+6). Risk Register **RSK-REG-019** open. Audit Part-IS preventivo previsto M+9 con consulente accreditato. **Confidence: low-medium** — gap aperto.
+**Q8. "Sistema cyber security : Reg. (UE) 2023/203 Part-IS?"**
+> **R**: ⚠️ **Gap riconosciuto**. Part-IS (Information Security regulation) è **applicabile da febbraio 2026** per operatori Specific Category con SAIL ≥ III. Firmamento sta finalizzando ISMS basato su ISO/IEC 27001 + cap. Part-IS dedicato. Il **CISO** è in fase di hiring (M+6). Risk Register **RSK-REG-019** open. Audit Part-IS preventivo previsto M+9 con consulente accreditato. **Confidence: low-medium**, gap aperto.
 
-**Q9. "Privacy + GDPR — payload EO sopra abitato?"**
+**Q9. "Privacy + GDPR : payload EO sopra abitato?"**
 > **R**: Le missioni UC-001 frane / UC-004 mapping evitano centri abitati (geofence). Eventuali riprese accidentali (es. SS45 traffic) sono mascherate (blur algorithm post-processing) o cancellate. DPIA (Data Protection Impact Assessment) prevista entro M+6. Garante Privacy notifica trattamento se >5000 soggetti coinvolti (improbabile). **Confidence: medium-high**.
 
 **Q10. "Quale piano di evoluzione futura BVLOS notturno o operazioni multi-UAS?"**
-> **R**: Phase A 6A pilota 2026-2027 = BVLOS daytime singolo UAS, SAIL III. Phase B 2028+ = potenziale BVLOS notturno (richiede SAIL IV upgrade + osservatore notturno + IR enhanced) e multi-UAS coordinated (richiede U-Space CIS + RIS Liguria, dipendente da ENAC Regolamento U-Space Ed.1 in consultazione). **Confidence: medium** — dipendente da maturazione U-Space.
+> **R**: Phase A 6A pilota 2026-2027 = BVLOS daytime singolo UAS, SAIL III. Phase B 2028+ = potenziale BVLOS notturno (richiede SAIL IV upgrade + osservatore notturno + IR enhanced) e multi-UAS coordinated (richiede U-Space CIS + RIS Liguria, dipendente da ENAC Regolamento U-Space Ed.1 in consultazione). **Confidence: medium**, dipendente da maturazione U-Space.
 
 ### A.11.10.4 Pre-application meeting agenda proposta
 
@@ -758,16 +756,16 @@ Sulla base di prassi consolidata (cfr. ENAC report autorizzazioni 2023-2024 + wo
 
 | Risk ID | Descrizione | Connessione con questo Safety Case | Mitigation linkage |
 |---|---|---|---|
-| **RSK-REG-002** | SORA SAIL Pentema > III | Core risk — questo documento è la mitigazione documentale | M+3 pre-app + M+6 SORA prep + M+9 submission |
+| **RSK-REG-002** | SORA SAIL Pentema > III | Core risk, questo documento è la mitigazione documentale | M+3 pre-app + M+6 SORA prep + M+9 submission |
 | **RSK-REG-019** | Part-IS EASA Reg. (UE) 2023/203 ISMS obbligatorio feb 2026, CISO assente | OSO #06 C2 link + cyber section gap | CISO hire M+6 + ISMS gap analysis M+6+ |
 | **RSK-REG-026** | Insurance BVLOS premio > €100k/anno o broker rifiuta | OSO #20 (this SORA quality) + ERP M3 | Tender broker aviation specialist M+3+ |
-| **RSK-REG-027** | NIS2 D.Lgs. 138/2024 — registrazione ACN omessa | OSO #11 external services + cyber | ACN registration M+0+ urgent |
+| **RSK-REG-027** | NIS2 D.Lgs. 138/2024, registrazione ACN omessa | OSO #11 external services + cyber | ACN registration M+0+ urgent |
 
 ### A.11.11.2 Falsifying Observations linkage
 
 | FO ID | Trigger | Connessione |
 |---|---|---|
-| **FO-10A-03** | C2 SORA ENAC SAIL II-III BVLOS operativa entro M+9 — falsificata se ENAC al M+9 non rilascia o classifica SAIL ≥ IV | Sliding timeline §A.11.10.2 + Q&A Q1, Q2 preparation |
+| **FO-10A-03** | C2 SORA ENAC SAIL II-III BVLOS operativa entro M+9, falsificata se ENAC al M+9 non rilascia o classifica SAIL ≥ IV | Sliding timeline §A.11.10.2 + Q&A Q1, Q2 preparation |
 
 ### A.11.11.3 Cap. 5 quadro normativo cross-reference
 
@@ -782,11 +780,11 @@ Sulla base di prassi consolidata (cfr. ENAC report autorizzazioni 2023-2024 + wo
 ### A.11.11.4 RTM linkage
 
 Requisiti di sistema (Allegato A.1 RTM) collegati a SORA:
-- **SyR-Reg-001**: SORA SAIL III determination — linked to §A.11.6
-- **SyR-Reg-002**: ENAC authorization BVLOS Specific — linked to §A.11.10
-- **SyR-C-010**: Insurance BVLOS 750.000 DSP — linked to M3 §A.11.4.3 + §A.11.10.1 D-08
-- **SyR-Cost-009**: Insurance OpEx Y1 ≤ €50k/anno — linked to RSK-REG-026
-- **SyR-OSO-001 ÷ 024**: OSO compliance — linked to §A.11.7
+- **SyR-Reg-001**: SORA SAIL III determination, linked to §A.11.6
+- **SyR-Reg-002**: ENAC authorization BVLOS Specific, linked to §A.11.10
+- **SyR-C-010**: Insurance BVLOS 750.000 DSP, linked to M3 §A.11.4.3 + §A.11.10.1 D-08
+- **SyR-Cost-009**: Insurance OpEx Y1 ≤ €50k/anno, linked to RSK-REG-026
+- **SyR-OSO-001 ÷ 024**: OSO compliance, linked to §A.11.7
 
 ---
 
@@ -827,19 +825,19 @@ Requisiti di sistema (Allegato A.1 RTM) collegati a SORA:
 
 ### A.11.12.3 Raccomandazioni finali
 
-1. **Procedere immediatamente** con Pre-Application Meeting ENAC entro M+3, presentando questo Safety Case + ConOps preliminare. Confidence sufficiente per istruttoria iniziale; gap chiusi successivamente.
+1. **Procedere immediatamente** con Pre-Application Meeting ENAC entro M+3, presentando questo Safety Case e il ConOps preliminare. La confidence è sufficiente per l'istruttoria iniziale; i gap si chiudono successivamente.
 
-2. **Anticipare RFI vendor JOUAV** (Reliability data, parachute test reports, STANAG 4671 declaration, FCS envelope protection details) entro M+3 per supportare OSO #02, #04, #18 con evidence robust.
+2. **Anticipare RFI vendor JOUAV** (Reliability data, parachute test reports, STANAG 4671 declaration, FCS envelope protection details) entro M+3, per supportare OSO #02, #04 e #18 con evidence robust.
 
-3. **CISO hire urgente** (M+6 max) per chiudere RSK-REG-019 + RSK-REG-027 + supportare OSO #06/#11 cyber dimension. Senza CISO, SORA application Q8 vulnerabile.
+3. **CISO hire urgente** (M+6 max) per chiudere RSK-REG-019 e RSK-REG-027, e per supportare la cyber dimension di OSO #06/#11. Senza CISO, la SORA application Q8 resta vulnerabile.
 
-4. **PIC hire entro M+6** con esperienza BVLOS Italian commerciale (5+ anni preferred). In contingency: partnership operatore certificato esistente.
+4. **PIC hire entro M+6** con esperienza BVLOS Italian commerciale (5+ anni preferred). Come contingency, partnership con operatore certificato esistente.
 
-5. **Tender broker aviation specialist** (Marsh, Aon, Willis) per insurance BVLOS quotation entro M+3 — pre-application richiede pre-quotation documentale (D-08).
+5. **Tender broker aviation specialist** (Marsh, Aon, Willis) per insurance BVLOS quotation entro M+3. Il pre-application richiede pre-quotation documentale (D-08).
 
-6. **Sliding timeline alert**: se al M+6 pre-application non ha avuto luogo, attivare contingency planning (VLOS-only Y1 + re-application Y2). Cfr. Cap. 9 §9.12 e Cap. 10 §10.5 FO-10A-03.
+6. **Sliding timeline alert**: se al M+6 il pre-application non ha avuto luogo, occorre attivare contingency planning (VLOS-only Y1 + re-application Y2). Cfr. Cap. 9 §9.12 e Cap. 10 §10.5 FO-10A-03.
 
-7. **Aggiornamento Safety Case v3.0** post pre-application ENAC (entro M+5) con feedback verbale recepito + revisione SAIL determination.
+7. **Aggiornamento Safety Case v3.0** post pre-application ENAC (entro M+5) con feedback verbale recepito e revisione SAIL determination.
 
 ---
 
@@ -847,47 +845,47 @@ Requisiti di sistema (Allegato A.1 RTM) collegati a SORA:
 
 ### A.11.13.1 Riferimenti normativi primari
 
-- **[N-01]** Reg. (UE) 2018/1139 del 4 luglio 2018 — Basic Aviation Regulation
-- **[N-02]** Reg. (UE) 2019/947 del 24 maggio 2019 — Rules and procedures for the operation of UAS
-- **[N-03]** Reg. (UE) 2019/945 del 12 marzo 2019 — UAS and on third-country operators
-- **[N-04]** **EASA ED Decision 2025/018/R del 15 settembre 2025** — Amendment 3 a Issue 1 AMC/GM Reg. 2019/947 (versione europea SORA 2.5)
+- **[N-01]** Reg. (UE) 2018/1139 del 4 luglio 2018, Basic Aviation Regulation
+- **[N-02]** Reg. (UE) 2019/947 del 24 maggio 2019, Rules and procedures for the operation of UAS
+- **[N-03]** Reg. (UE) 2019/945 del 12 marzo 2019, UAS and on third-country operators
+- **[N-04]** **EASA ED Decision 2025/018/R del 15 settembre 2025**, Amendment 3 a Issue 1 AMC/GM Reg. 2019/947 (versione europea SORA 2.5)
 - **[N-05]** EASA AMC1 to Article 11 Reg. 2019/947 (SORA 2.5)
 - **[N-06]** EASA GM1 to Article 11 Reg. 2019/947 (SORA 2.5 Guidance Material, cybersecurity)
 - **[N-07]** ENAC Regolamento "Mezzi Aerei a Pilotaggio Remoto" Edizione 3 del 11 novembre 2019 + Emendamento 1 del 14 luglio 2020 (art. 11, 26, 29)
-- **[N-08]** Reg. (CE) 785/2004 + DM Trasporti 25/02/2022 — Assicurazione operatori aerei (BVLOS minimo 750.000 DSP)
-- **[N-09]** Reg. (UE) 2023/203 del 27 ottobre 2022 — Part-IS (Information Security, applicabile 22 feb 2026 SAIL ≥ III)
-- **[N-10]** D.Lgs. 138/2024 — Recepimento NIS2 (registrazione ACN)
-- **[N-11]** Reg. (UE) 2021/664, 665, 666 — U-Space framework
-- **[N-12]** ENAC LG-2023/006 — Linee Guida U-Space Ed.1 del 19 dicembre 2023
-- **[N-13]** Codice Aeronautico (R.D. 327/1942 + ss.mm.ii.) — disciplina spazio aereo italiano
+- **[N-08]** Reg. (CE) 785/2004 + DM Trasporti 25/02/2022, Assicurazione operatori aerei (BVLOS minimo 750.000 DSP)
+- **[N-09]** Reg. (UE) 2023/203 del 27 ottobre 2022, Part-IS (Information Security, applicabile 22 feb 2026 SAIL ≥ III)
+- **[N-10]** D.Lgs. 138/2024, Recepimento NIS2 (registrazione ACN)
+- **[N-11]** Reg. (UE) 2021/664, 665, 666, U-Space framework
+- **[N-12]** ENAC LG-2023/006, Linee Guida U-Space Ed.1 del 19 dicembre 2023
+- **[N-13]** Codice Aeronautico (R.D. 327/1942 + ss.mm.ii.), disciplina spazio aereo italiano
 - **[N-14]** Reg. (UE) 2016/679 GDPR + D.Lgs. 196/2003 + ss.mm.ii.
 
 ### A.11.13.2 Riferimenti tecnici
 
 - **[T-01]** JARUS SORA 2.5 official document (ottobre 2024)
 - **[T-02]** EASA Easy Access Rules for UAS (2025 edition)
-- **[T-03]** STANAG 4671 — UAV system airworthiness requirements (NATO, ed. 4)
-- **[T-04]** RTCA DO-178C / EUROCAE ED-12C — Software considerations
-- **[T-05]** RTCA DO-254 / EUROCAE ED-80 — Hardware considerations
-- **[T-06]** ARP4754A — Civil aircraft system development
-- **[T-07]** ARP4761A — Safety assessment process (ed. 2023)
-- **[T-08]** DO-326A / ED-202A — Airworthiness Security
-- **[T-09]** AS/EN 9100:2018 — Quality Management Aerospace
-- **[T-10]** ISO/IEC 27001:2022 — ISMS
+- **[T-03]** STANAG 4671, UAV system airworthiness requirements (NATO, ed. 4)
+- **[T-04]** RTCA DO-178C / EUROCAE ED-12C, Software considerations
+- **[T-05]** RTCA DO-254 / EUROCAE ED-80, Hardware considerations
+- **[T-06]** ARP4754A, Civil aircraft system development
+- **[T-07]** ARP4761A, Safety assessment process (ed. 2023)
+- **[T-08]** DO-326A / ED-202A, Airworthiness Security
+- **[T-09]** AS/EN 9100:2018, Quality Management Aerospace
+- **[T-10]** ISO/IEC 27001:2022, ISMS
 - **[T-11]** JOUAV CW-30E Vendor Data Sheet (in acquisizione M+3÷6)
-- **[T-12]** ENAV AIP Italia — Aeronautical Information Publication (current edition)
+- **[T-12]** ENAV AIP Italia, Aeronautical Information Publication (current edition)
 - **[T-13]** ITU Radio Regulations (Edition 2024)
 
 ### A.11.13.3 Riferimenti interni progetto HALE
 
-- **[I-01]** Studio di Fattibilità, Cap. 4 §4.4 ICD — ConOps detailed
-- **[I-02]** Studio di Fattibilità, Cap. 5 §5.1-5.4 — Quadro normativo
-- **[I-03]** Studio di Fattibilità, Cap. 6 §6.4 — FMECA + FTA
-- **[I-04]** Studio di Fattibilità, Cap. 9 §9.5 + §9.12 — Cronoprogramma + sliding timeline
-- **[I-05]** Studio di Fattibilità, Cap. 10 §10.5 — Falsifying Observations gate (FO-10A-03)
-- **[I-06]** Allegato A.1 RTM — Requirements Traceability Matrix
-- **[I-07]** Allegato A.2 Risk Register — RSK-REG-002, 019, 026, 027
-- **[I-08]** Allegato A.3.04 Trade Study Vendor Selection — JOUAV vs. Tekever
+- **[I-01]** Studio di Fattibilità, Cap. 4 §4.4 ICD, ConOps detailed
+- **[I-02]** Studio di Fattibilità, Cap. 5 §5.1-5.4, Quadro normativo
+- **[I-03]** Studio di Fattibilità, Cap. 6 §6.4, FMECA + FTA
+- **[I-04]** Studio di Fattibilità, Cap. 9 §9.5 + §9.12, Cronoprogramma + sliding timeline
+- **[I-05]** Studio di Fattibilità, Cap. 10 §10.5, Falsifying Observations gate (FO-10A-03)
+- **[I-06]** Allegato A.1 RTM, Requirements Traceability Matrix
+- **[I-07]** Allegato A.2 Risk Register, RSK-REG-002, 019, 026, 027
+- **[I-08]** Allegato A.3.04 Trade Study Vendor Selection, JOUAV vs. Tekever
 - **[I-09]** Allegato A.5 V&V Plan
 - **[I-10]** Allegato A.7 Link Budget (C2 + payload)
 - **[I-11]** Allegato A.8 Bilanci di Massa
@@ -895,7 +893,7 @@ Requisiti di sistema (Allegato A.1 RTM) collegati a SORA:
 
 ---
 
-## ANNEX A — Sintesi tabellare SAIL III OSO Pentema (compact view)
+## ANNEX A : Sintesi tabellare SAIL III OSO Pentema (compact view)
 
 | OSO# | Title (short) | Level | Status |
 |---|---|---|---|
@@ -928,7 +926,7 @@ Legenda: 🟢 = ready / achievable; 🟡 = in progress with closure target M+3÷
 
 ---
 
-## ANNEX B — Glossario
+## ANNEX B : Glossario
 
 - **AGL**: Above Ground Level
 - **AMC**: Acceptable Means of Compliance (EASA)
@@ -940,7 +938,7 @@ Legenda: 🟢 = ready / achievable; 🟡 = in progress with closure target M+3÷
 - **CISO**: Chief Information Security Officer
 - **ConOps**: Concept of Operations
 - **DAA**: Detect-and-Avoid
-- **DSP**: Diritti Speciali di Prelievo (SDR — Special Drawing Rights, IMF unit)
+- **DSP**: Diritti Speciali di Prelievo (SDR, Special Drawing Rights, IMF unit)
 - **EASA**: European Union Aviation Safety Agency
 - **ENAC**: Ente Nazionale per l'Aviazione Civile
 - **ENAV**: Ente Nazionale Assistenza al Volo
@@ -966,4 +964,4 @@ Legenda: 🟢 = ready / achievable; 🟡 = in progress with closure target M+3÷
 
 ---
 
-> **End of document A.11 v2.0** — preparato da `aviation-regulatory-counsel` HALE Studio di Fattibilità Firmamento Technologies. Per istruttoria pre-application ENAC. NON sostituisce SORA application formale ex art. 11 Reg. (UE) 2019/947.
+> **End of document A.11 v2.0**, preparato da `aviation-regulatory-counsel` HALE Studio di Fattibilità Firmamento Technologies. Per istruttoria pre-application ENAC. NON sostituisce SORA application formale ex art. 11 Reg. (UE) 2019/947.

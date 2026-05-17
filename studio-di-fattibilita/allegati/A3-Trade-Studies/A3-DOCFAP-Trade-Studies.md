@@ -1,4 +1,4 @@
-# Allegato A.3 — DOCFAP — Documento di Fattibilità delle Alternative Progettuali
+# Allegato A.3 ‑ DOCFAP, Documento di Fattibilità delle Alternative Progettuali
 
 > Volume 2, Allegato A.3
 > Equivalente DOCFAP ex art. 41 D.Lgs. 36/2023 (Documento di Fattibilità delle Alternative Progettuali)
@@ -30,15 +30,15 @@ Ogni trade study segue lo schema:
 | **TS-PAYLOAD-EO** | Payload EO modulare Percorso 6A | Cap. 6.3.5 | Confermato: RGB + IR LWIR baseline |
 | **TS-COMMS** | Architettura C2 + downlink dati | Cap. 6.3.6 | Confermato: RF primary + SATCOM Iridium secondary |
 
-## A.3.2 TS-PLATFORM-6A — Update M+3 (POST vendor RFQ analysis)
+## A.3.2 TS-PLATFORM-6A, update M+3 (post analisi vendor RFQ)
 
-**Decisione**: scelta piattaforma VTOL commerciale baseline per Percorso 6A.
+**Decisione**: scelta della piattaforma VTOL commerciale baseline per il Percorso 6A.
 
 **Alternative finali**:
-- A1: JOUAV CW-30E (CN) — payload 8 kg, autonomia 8h, vendor cinese
-- A2: Tekever AR3 (PT) — payload 2.5 kg, autonomia 16h, EU sovereign
-- A3: Quantum Trinity F90+ (DE) — payload 1 kg, autonomia 90 min
-- A4: FlyingBasket FB3 (IT) — payload 100 kg, autonomia 1h, made in IT
+- A1: JOUAV CW-30E (CN), payload 8 kg, autonomia 8h, vendor cinese
+- A2: Tekever AR3 (PT), payload 2.5 kg, autonomia 16h, EU sovereign
+- A3: Quantum Trinity F90+ (DE), payload 1 kg, autonomia 90 min
+- A4: FlyingBasket FB3 (IT), payload 100 kg, autonomia 1h, made in IT
 
 **Scoring rivisto post-audit vendor RFQ**:
 
@@ -54,29 +54,29 @@ Ogni trade study segue lo schema:
 | Reference customers EU | 5% | 3 | 8 | 7 | 6 |
 | **Σ ponderato** | 100% | **6.25** | **7.05** | **6.85** | **6.50** |
 
-**Shift vs Cap. 6.3.1 originale**: parità A1/A2 (7.30/7.05) → vantaggio chiaro A2 Tekever.
+**Shift vs Cap. 6.3.1 originale**: la parità A1/A2 (7.30/7.05) lascia ora spazio a un vantaggio chiaro per A2 Tekever.
 
-**Raccomandazione aggiornata M+3**: **doppia RFQ formale parallela JOUAV + Tekever**, decisione M+6 su quotation reali. Tekever è current preferred baseline.
+**Raccomandazione aggiornata M+3**: avviare una **doppia RFQ formale parallela JOUAV + Tekever**, con decisione a M+6 sulle quotation reali. Tekever è il current preferred baseline.
 
-**Falsifying observation**: se quotation reale JOUAV restituisce CapEx 50% sotto stima + 6 reference EU verificati, riequilibrio possibile.
+**Falsifying observation**: se la quotation reale JOUAV restituisce CapEx 50% sotto stima e 6 reference EU verificati, il riequilibrio resta possibile.
 
-## A.3.3 TS-MATERIAL — Materiali strutturali HALE (confermato)
+## A.3.3 TS-MATERIAL, materiali strutturali HALE (confermato)
 
-**Decisione**: composizione materiali per struttura HALE.
+**Decisione**: composizione dei materiali per la struttura HALE.
 
-**Verdetto M+3**: **M2 Ibrido CFRP + lino per strutture secondarie**, longherone primario in CFRP.
+**Verdetto M+3**: si sceglie **M2 Ibrido CFRP + lino per strutture secondarie**, con longherone primario in CFRP.
 
 **Razionale**:
-- Lino in **secondary structures** (skin, fairings) → narrativa ESG + saving 5-10% peso vs CFRP puro
-- CFRP standard per **longherone primario** (certificabile)
-- Saving vs full CFRP: marginale ma narrativa unica
-- Saving vs metallico: NA (HALE non metallico)
+- Lino in **secondary structures** (skin, fairings), narrativa ESG e saving del 5-10% di peso rispetto a CFRP puro.
+- CFRP standard per il **longherone primario** (certificabile).
+- Saving vs full CFRP marginale ma con narrativa unica.
+- Saving vs metallico non applicabile (HALE non metallico).
 
-**Caveat DR-011 (chiuso)**: fibra di lino in strutture primarie certificate aerospace richiede **qualification path 7-11 anni** + €30-80M (vedi Springer 2024 [A-12]). Fuori scope Studio attuale. Confidence high su secondary, **very low** su primary.
+**Caveat DR-011 (chiuso)**: l'impiego di fibra di lino in strutture primarie certificate aerospace richiede un **qualification path di 7-11 anni** e €30-80M (vedi Springer 2024 [A-12]). Fuori scope dello Studio attuale. Confidence high sulle secondarie, **very low** sulle primarie.
 
-## A.3.4 TS-PROP-6B — Architettura energetica HALE (POST energy balance simulation)
+## A.3.4 TS-PROP-6B, architettura energetica HALE (post simulazione energy balance)
 
-**Decisione**: combinazione propulsione + storage per Percorso 6B HALE.
+**Decisione**: combinazione propulsione + storage per il Percorso 6B HALE.
 
 **Alternative**:
 - E1: Solare + Li-ion (250-300 Wh/kg pack)
@@ -89,25 +89,25 @@ Ogni trade study segue lo schema:
 
 | Architettura | Margine inverno 21/12 | Verdetto |
 |---|---|---|
-| E1 Solar+Li-ion | -75% (impossibile) | ❌ no perennial |
-| E2 Solar+LiS | **-50.1%** (deficit) | ❌ no perennial (vs hand-calc "0-15%") |
-| E3 Solar+SS Li | -42% (deficit) | ❌ no perennial |
-| E4 Solar+PEM+LH2 | -35% (peggio del previsto) | ❌ no perennial loop (round-trip 0.50) |
-| **E5 Seasonal-only (marzo-ottobre)** | **+31.4% equinozio marzo** | ✅ **ONLY VIABLE PLAN A** |
+| E1 Solar+Li-ion | -75% (impossibile) | no perennial |
+| E2 Solar+LiS | **-50.1%** (deficit) | no perennial (vs hand-calc "0-15%") |
+| E3 Solar+SS Li | -42% (deficit) | no perennial |
+| E4 Solar+PEM+LH2 | -35% (peggio del previsto) | no perennial loop (round-trip 0.50) |
+| **E5 Seasonal-only (marzo-ottobre)** | **+31.4% equinozio marzo** | **ONLY VIABLE PLAN A** |
 
-**Raccomandazione aggiornata M+3**: **E5 Seasonal-only** è **mandatory plan A** per Phase B 6B. Perennial 44°N non fattibile con tech baseline 2026-2028.
+**Raccomandazione aggiornata M+3**: **E5 Seasonal-only** è **mandatory plan A** per la Phase B 6B. La perennial a 44°N non è fattibile con la tecnologia baseline 2026-2028.
 
-**Plan B Y6+**: re-evaluation con SS Li 450+ Wh/kg + ultra-low-Re profiles + alleggerimento drastico.
+**Plan B Y6+**: ri-valutazione con SS Li 450+ Wh/kg, profili ultra-low-Re e alleggerimento drastico.
 
 **Falsifying observation**: confermata in Cap. 6 §6.2.2.3 e §6.3.3.
 
-## A.3.5 TS-AVI-6A — Autopilota Percorso 6A (confermato)
+## A.3.5 TS-AVI-6A, autopilota Percorso 6A (confermato)
 
-**Raccomandazione**: **AV1 JOUAV FCS proprietario** (integrato in CW-30E) — score 8.05/10.
+**Raccomandazione**: **AV1 JOUAV FCS proprietario** (integrato in CW-30E), score 8.05/10.
 
-**Plan B se shift a Tekever**: Tekever FCS proprietario (Score stimato ~7.5/10).
+**Plan B se shift a Tekever**: Tekever FCS proprietario (score stimato ~7.5/10).
 
-## A.3.6 TS-PAYLOAD-EO — Payload EO modulare (confermato)
+## A.3.6 TS-PAYLOAD-EO, payload EO modulare (confermato)
 
 **Baseline**:
 - RGB high-res: Phase One iXM 100 (100 MP, GSD 8 cm @ 500 m AGL)
@@ -115,9 +115,9 @@ Ogni trade study segue lo schema:
 - **Y2+**: + multispettrale MicaSense Altum-PT (cooperative agricole)
 - **Y3+**: + LiDAR YellowScan Voyager (infrastrutture lineari)
 
-**Modularità**: swap < 60 min (rivisto da 30 min ottimistico) con team trained.
+**Modularità**: swap in meno di 60 min (rivisto rispetto ai 30 min ottimistici iniziali) con team trained.
 
-## A.3.7 TS-COMMS — Architettura C2 + downlink (confermato)
+## A.3.7 TS-COMMS, architettura C2 + downlink (confermato)
 
 **Percorso 6A**:
 - **Primary**: RF 2.4 GHz ISM
@@ -139,18 +139,18 @@ Ogni trade study segue lo schema:
 ## A.3.9 Conformità DOCFAP art. 41 D.Lgs. 36/2023
 
 Il presente allegato soddisfa i requisiti del **DOCFAP** ex art. 41 + Allegato I.7:
-- ✅ Identificazione delle alternative
-- ✅ Criteri di valutazione comparativa
-- ✅ Confronto strutturato
-- ✅ Motivazione delle scelte
-- ✅ Verifica di fattibilità tecnica + economica
-- ✅ Considerazione vincoli regolatori + ambientali
+- Identificazione delle alternative
+- Criteri di valutazione comparativa
+- Confronto strutturato
+- Motivazione delle scelte
+- Verifica di fattibilità tecnica + economica
+- Considerazione vincoli regolatori + ambientali
 
 ## A.3.10 Versioning
 
 - v1.0 M+3 (presente)
-- v1.5 M+6 — Update post vendor quotation + workshop cooperative
-- v2.0 M+10 — Definitivo per gate G3
+- v1.5 M+6, update post vendor quotation + workshop cooperative
+- v2.0 M+10, definitivo per gate G3
 
 ## A.3.11 Riferimenti
 

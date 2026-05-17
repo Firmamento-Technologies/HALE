@@ -1,8 +1,8 @@
-# Allegato A.7 — Modello Link Budget v1.0
+# Allegato A.7 ‑ Modello Link Budget v1.0
 
-> **Studio di Fattibilità — Piattaforma Aerea HALE / VTOL per Aree Interne**
-> Firmamento Technologies — bando Cooding Prototypes
-> Volume 2 — Allegato A.7
+> **Studio di Fattibilità ‑ Piattaforma Aerea HALE / VTOL per Aree Interne**
+> Firmamento Technologies, bando Cooding Prototypes
+> Volume 2, Allegato A.7
 >
 > **Versione:** v1.0 (M+3)
 > **Conformità:** ITU-R P.618-14 (rain), ITU-R P.676-13 (gaseous), ITU-R P.840-9 (clouds), ITU-R P.838-3 (specific rain), 3GPP TR 38.811 v15 (NTN channel models), 3GPP TR 38.821 v16 (NR-NTN solutions)
@@ -18,18 +18,18 @@ Il presente allegato fornisce il **modello quantitativo di link budget RF** per 
 
 | Link | Banda | Distance / range | Verdetto preliminare |
 |---|---|---|---|
-| **6A — C2 (Command & Control)** | 2.4 / 5.8 GHz ISM + Iridium L-band | 20-50 km LOS + LEO 781 km | **OK** (3/4 scenari) — 5.8 GHz **MARGINAL** |
-| **6A — Payload data downlink** | 5 GHz UHF licensed (5030-5091 MHz) | 20-50 km LOS | **OK** (2/3 scenari) — 16QAM @ 20 km **MARGINAL** |
-| **6B — HAPS service link** | S-band 2.1 GHz NR-NTN + 700 MHz 5G NR | 25-100 km slant da HAPS @ 20 km | **OK** (4/4 scenari) |
-| **6B — HAPS feeder link** | Ka-band 31 GHz dedicated + 28 GHz alternative | 25 km slant @ elev 53° | **OK** (3/3 scenari, larga margine) |
+| **6A C2 (Command & Control)** | 2.4 / 5.8 GHz ISM + Iridium L-band | 20-50 km LOS + LEO 781 km | **OK** (3/4 scenari); 5.8 GHz **MARGINAL** |
+| **6A Payload data downlink** | 5 GHz UHF licensed (5030-5091 MHz) | 20-50 km LOS | **OK** (2/3 scenari); 16QAM @ 20 km **MARGINAL** |
+| **6B HAPS service link** | S-band 2.1 GHz NR-NTN + 700 MHz 5G NR | 25-100 km slant da HAPS @ 20 km | **OK** (4/4 scenari) |
+| **6B HAPS feeder link** | Ka-band 31 GHz dedicated + 28 GHz alternative | 25 km slant @ elev 53° | **OK** (3/3 scenari, larga margine) |
 
-**Verdetto complessivo**: il design RF degli scenari analizzati è **tecnicamente fattibile** in tutte le configurazioni nominali. Le 3 configurazioni marginal/scenari estremi richiedono attenzione: vedi §A.7.10 raccomandazioni.
+**Verdetto complessivo**: il design RF degli scenari analizzati risulta **tecnicamente fattibile** in tutte le configurazioni nominali. Le 3 configurazioni marginal/scenari estremi richiedono attenzione (vedi §A.7.10 raccomandazioni).
 
 ### A.7.0.1 Boundary conditions
 
 In coerenza con `cap-03 §3.0bis`, `cap-06 §6.0bis`:
-- **B1**: I link budget riflettono **utilizzo per servizi** (no vendita prodotti); le configurazioni stimate sono quelle operative per Firmamento operator.
-- **B2**: Il modello copre Percorso 6A operativo + Percorso 6B Phase B preparatoria. La capacità sistema costellazione 6B è materia di gate post-M+48 (out-of-scope studio attuale).
+- **B1**: i link budget riflettono **utilizzo per servizi** (no vendita di prodotti); le configurazioni stimate sono quelle operative per Firmamento operator.
+- **B2**: il modello copre il Percorso 6A operativo e il Percorso 6B Phase B preparatoria. La capacità di sistema della costellazione 6B resta materia di gate post-M+48 (out-of-scope dello studio attuale).
 
 ---
 
@@ -72,7 +72,7 @@ Link margin   = SNR_available - SNR_required(modulation)
 
 ### A.7.1.3 Zona climatica Liguria
 
-Per **Pentema (Liguria, 44°N)**, ITU-R P.837-7 classifica la zona come **K** (R_0.01 = 42 mm/h). Per coerenza con letteratura aerospace italiana più conservativa, il modello usa:
+Per **Pentema (Liguria, 44°N)**, ITU-R P.837-7 classifica la zona come **K** (R_0.01 = 42 mm/h). Per coerenza con la letteratura aerospace italiana più conservativa, il modello usa:
 - **Nominal**: R_0.01 = **32 mm/h** (mediano cataloghi meteo italiani)
 - **Worst-case**: R_0.01 = **42 mm/h** (ITU-R P.837 zona K extreme)
 
@@ -94,7 +94,7 @@ Tabella SNR required per PER 1e-3 (canale AWGN, soft-decision FEC), da 3GPP TR 3
 
 ---
 
-## A.7.2 Percorso 6A — C2 Link
+## A.7.2 Percorso 6A, C2 Link
 
 ### A.7.2.1 Configurazione
 
@@ -116,25 +116,27 @@ Fade margin target: **≥12 dB** (SyR-P-007, SsR-COMMS-001), conforme a EASA SC-
 
 ### A.7.2.3 Interpretazione
 
-- **2.4 GHz ISM è la baseline raccomandata**: margine ampio (>18 dB) in entrambi gli scenari 20 km e 50 km. ETSI EN 300 328 compliance permette uso senza licenza AGCOM individuale (limite EIRP 100 mW = 20 dBm; EIRP 6.5-13.5 dBW supera questo limite — **AGCOM coordination richiesta** per uso aeronautico esteso, vedi §A.7.8).
-- **5.8 GHz è MARGINAL**: solo 7.9 dB di margine vs target 12 dB. Path loss extra +7.6 dB rispetto a 2.4 GHz, compensato parzialmente da antenna higher gain ma non sufficiente. **Non raccomandata come primary**.
-- **Iridium L-band SATCOM**: margine elevato (23.7 dB), throughput limitato (Iridium Certus ~700 kbps), latency ~250-300 ms RTT (compatibile EASA SC-Light-UAS 250 ms one-way). **Idonea come secondary in shadow zones Pentema**.
+La banda **2.4 GHz ISM è la baseline raccomandata**, con margine ampio (>18 dB) in entrambi gli scenari 20 km e 50 km. La compliance ETSI EN 300 328 permette uso senza licenza AGCOM individuale (limite EIRP 100 mW = 20 dBm). L'EIRP 6.5-13.5 dBW supera questo limite, quindi è richiesta una **AGCOM coordination** per l'uso aeronautico esteso (vedi §A.7.8).
 
-> **Falsifying observation A.7.2**: se in test sito Pentema il RSSI tipico misurato a 20 km LOS < −85 dBm, il modello A.7 è ottimista; switch SATCOM Iridium primary o re-design antenna ground.
+Il **5.8 GHz è MARGINAL**: solo 7.9 dB di margine vs target 12 dB. Il path loss extra di +7.6 dB rispetto a 2.4 GHz risulta compensato parzialmente da una antenna higher gain, ma non in misura sufficiente. **Non raccomandata come primary**.
+
+La banda **Iridium L-band SATCOM** presenta margine elevato (23.7 dB), throughput limitato (Iridium Certus ~700 kbps) e latency ~250-300 ms RTT (compatibile EASA SC-Light-UAS 250 ms one-way). **Idonea come secondary in shadow zones Pentema**.
+
+> **Falsifying observation A.7.2**: se in test sito Pentema il RSSI tipico misurato a 20 km LOS scende sotto −85 dBm, il modello A.7 è ottimista; switch SATCOM Iridium primary o re-design dell'antenna ground.
 
 ### A.7.2.4 Plot
 
-![C2 Link Budget — C/N0 vs Distance per banda](./link_budget_C2_6A.png)
+![C2 Link Budget, C/N0 vs Distance per banda](./link_budget_C2_6A.png)
 
-*Fig. A.7.1 — C/N0 vs distance per le 4 configurazioni C2 Percorso 6A. Linea rossa: C/N0 minimo richiesto per QPSK 1/2 + 12 dB margin.*
+*Fig. A.7.1, C/N0 vs distance per le 4 configurazioni C2 Percorso 6A. Linea rossa: C/N0 minimo richiesto per QPSK 1/2 + 12 dB margin.*
 
 ---
 
-## A.7.3 Percorso 6A — Payload Data Downlink
+## A.7.3 Percorso 6A, Payload Data Downlink
 
 ### A.7.3.1 Configurazione
 
-Banda 5 GHz UHF licensed (range 5030-5091 MHz) — allocazione ITU-R per UAS C2 link aeronautico (AMS(R)). Uso secondario per payload data tollerato in regime AGCOM 18/14/CONS con licenza individuale + parere MIMIT.
+Banda 5 GHz UHF licensed (range 5030-5091 MHz), allocazione ITU-R per UAS C2 link aeronautico (AMS(R)). L'uso secondario per payload data è tollerato in regime AGCOM 18/14/CONS con licenza individuale più parere MIMIT.
 
 Modulazioni testate:
 - 16QAM 3/4 (target 30 Mbps live data)
@@ -150,15 +152,17 @@ Modulazioni testate:
 
 ### A.7.3.3 Interpretazione
 
-- **16QAM 3/4 @ 20 km è MARGINAL**: solo 3.5 dB di margine. Recovery: aumentare ground antenna gain (1.5 m → 3 m, +6 dB), oppure derate a 16QAM 1/2 (SNR_req 8 dB invece di 10.5 dB).
-- **64QAM 3/4 @ 20 km è OK**: 90 Mbps achievable con higher Tx power (5 W vs 2 W) + ground antenna grande (22 dBi). Configurazione per EO mosaicing/high-resolution data.
-- **16QAM 1/2 @ 50 km è OK**: BW ridotta a 10 MHz (vs 20 MHz nominale) per recovering SNR. Throughput 20 Mbps sufficiente per real-time streaming + thumbnail.
+Lo scenario **16QAM 3/4 @ 20 km è MARGINAL**: solo 3.5 dB di margine. Recovery possibili sono due: aumentare il ground antenna gain (1.5 m → 3 m, +6 dB), oppure derate a 16QAM 1/2 (SNR_req 8 dB invece di 10.5 dB).
 
-> **Falsifying observation A.7.3**: se il payload downlink 5 GHz UHF non riceve licenza individuale AGCOM entro M+10 (Gate G3), fallback a banda 2.4/5.8 GHz ISM (con riduzione BW e quindi throughput). Trigger per Plan B in `cap-09 §9.12` sliding timeline scenario.
+Lo scenario **64QAM 3/4 @ 20 km è OK**: 90 Mbps achievable con higher Tx power (5 W vs 2 W) e ground antenna grande (22 dBi). Configurazione per EO mosaicing/high-resolution data.
+
+Lo scenario **16QAM 1/2 @ 50 km è OK** con BW ridotta a 10 MHz (vs 20 MHz nominale) per recovering SNR. Il throughput di 20 Mbps risulta sufficiente per real-time streaming + thumbnail.
+
+> **Falsifying observation A.7.3**: se il payload downlink 5 GHz UHF non riceve licenza individuale AGCOM entro M+10 (Gate G3), il fallback è verso la banda 2.4/5.8 GHz ISM (con riduzione BW e quindi throughput). Trigger per Plan B in `cap-09 §9.12` sliding timeline scenario.
 
 ---
 
-## A.7.4 Percorso 6B — HAPS Service Link (HAPS → UE)
+## A.7.4 Percorso 6B, HAPS Service Link (HAPS → UE)
 
 ### A.7.4.1 Configurazione
 
@@ -166,7 +170,7 @@ Riferimento `agents/telecom-ntn-payload-expert.md` + 3GPP TR 38.811/38.821:
 - **S-band 2.1 GHz** (3GPP n255/n256 NR-NTN downlink/uplink)
 - **700 MHz 5G NR n28** (rural coverage, sub-leasing operator IT)
 
-HAPS @ 20 km AMSL, slant range 25 km (nadir + 10° offset) fino a 100 km (basso elevation 12°).
+HAPS a 20 km AMSL, slant range 25 km (nadir + 10° offset) fino a 100 km (basso elevation 12°).
 
 ### A.7.4.2 Risultati
 
@@ -179,22 +183,25 @@ HAPS @ 20 km AMSL, slant range 25 km (nadir + 10° offset) fino a 100 km (basso 
 
 ### A.7.4.3 Interpretazione
 
-- **S-band 2.1 GHz @ 25 km nadir (16QAM 3/4)**: margine 18 dB (vs target 6 dB). Throughput 60 Mbps/beam, in linea con HAPS commercial expectations 3GPP NR-NTN.
-- **S-band @ 100 km low-elevation (12°)**: margine 15 dB con modulation derating a QPSK 3/4 + BW riduce a 10 MHz. 15 Mbps di throughput sufficiente per edge cells.
-- **700 MHz**: margine elevato (30 dB) per superiore link budget — ma dipende da accordo MOCN/RAN-sharing con TIM/Vod/W3 (banda allocata a operatori IT, vedi §A.7.8).
-- **Uplink UE→HAPS**: con UE potenza 200 mW (23 dBm) + HAPS antenna grande (30 dBi) + HAPS cold LNA, l'uplink ha margine 31 dB nel scenario nominale. **Non è il bottleneck**, contrariamente al caso satellitare GEO/LEO.
+Lo scenario **S-band 2.1 GHz @ 25 km nadir (16QAM 3/4)** offre margine 18 dB (vs target 6 dB). Throughput 60 Mbps/beam, in linea con HAPS commercial expectations 3GPP NR-NTN.
 
-> **Falsifying observation A.7.4**: se test fly-and-measure HAPS subscale (Phase B 6B) rivela margine S-band < 6 dB a slant 100 km, il modello è ottimista; restringere copertura cella a 50-75 km diametro vs 100 km.
+Lo scenario **S-band @ 100 km low-elevation (12°)** mantiene un margine di 15 dB con modulation derating a QPSK 3/4 e BW ridotta a 10 MHz. I 15 Mbps di throughput sono sufficienti per edge cells.
+
+La banda **700 MHz** presenta margine elevato (30 dB) per il superiore link budget; il punto critico resta l'accordo MOCN/RAN-sharing con TIM/Vod/W3, dato che la banda è allocata a operatori IT (vedi §A.7.8).
+
+L'uplink **UE→HAPS** con UE potenza 200 mW (23 dBm), HAPS antenna grande (30 dBi) e HAPS cold LNA presenta margine di 31 dB nello scenario nominale. **Non costituisce il bottleneck**, a differenza del caso satellitare GEO/LEO.
+
+> **Falsifying observation A.7.4**: se il test fly-and-measure HAPS subscale (Phase B 6B) rivela un margine S-band sotto i 6 dB a slant 100 km, il modello è ottimista; restringere la copertura cella a 50-75 km di diametro anziché 100 km.
 
 ### A.7.4.4 Plot
 
-![Service Link 6B — Throughput vs SNR per Modulation](./link_budget_service_link_6B.png)
+![Service Link 6B, Throughput vs SNR per Modulation](./link_budget_service_link_6B.png)
 
-*Fig. A.7.2 — Throughput vs SNR per le modulazioni 3GPP NR-NTN + Shannon ceiling (BW 20 MHz). Marker red star: operating points dei 4 scenari Service Link 6B.*
+*Fig. A.7.2, Throughput vs SNR per le modulazioni 3GPP NR-NTN + Shannon ceiling (BW 20 MHz). Marker red star: operating points dei 4 scenari Service Link 6B.*
 
 ---
 
-## A.7.5 Percorso 6B — HAPS Feeder Link (HAPS → Gateway)
+## A.7.5 Percorso 6B, HAPS Feeder Link (HAPS → Gateway)
 
 ### A.7.5.1 Configurazione
 
@@ -202,8 +209,8 @@ Banda Ka-band HAPS-dedicata post-WRC-19 (ITU-R RR Articolo 1.66A):
 - **31-31.3 GHz** (HAPS gateway downlink dedicated, raccomandata)
 - **27.9-28.2 GHz** (HAPS gateway uplink alternative)
 
-Antenna HAPS: parabolic 0.5 m → ~40 dBi @ 31 GHz.
-Gateway: parabolic 2 m → ~50 dBi @ 31 GHz.
+Antenna HAPS: parabolic 0.5 m, ~40 dBi @ 31 GHz.
+Gateway: parabolic 2 m, ~50 dBi @ 31 GHz.
 
 ### A.7.5.2 Risultati
 
@@ -215,18 +222,21 @@ Gateway: parabolic 2 m → ~50 dBi @ 31 GHz.
 
 ### A.7.5.3 Interpretazione
 
-- **Margini elevati (46-49 dB)** indicano design **conservatively over-margined** — è coerente per un feeder Ka HAPS dove il rain fade può escalare rapidamente in eventi meteo estremi. Lo headroom permette: (a) availability upgrade a 99.99% in scenari operativi, (b) capacity sharing tra HAPS-station se costellazione futura.
-- **Rain fade Ka 31 GHz @ 99.9%** ≈ 11.5 dB (zone K worst-case 42 mm/h) — assorbito dal margine. Solo a 99.95-99.99% il rain fade diventa significativo (>15 dB).
-- **Site diversity** raccomandata per Phase B 6B (gateway secondary 10+ km dal primary) per garantire 99.99% availability anche in eventi meteo Bayesian-correlated.
-- **28 GHz alternative**: prestazioni leggermente migliori (rain fade 0.5 dB inferiore) ma allocation ITU come **uplink** gateway (ovvero feeder return), non downlink. Configurazione completa richiede pair 28 GHz UL + 31 GHz DL.
+I **margini elevati (46-49 dB)** indicano un design **conservatively over-margined**, coerente per un feeder Ka HAPS dove il rain fade può escalare rapidamente in eventi meteo estremi. Lo headroom consente: (a) availability upgrade a 99.99% in scenari operativi, (b) capacity sharing tra HAPS-station se costellazione futura.
 
-> **Falsifying observation A.7.5**: in caso di eventi meteo estremi (>50 mm/h per 30 min, percentile p99.99), il rain fade @ 31 GHz può raggiungere 20-30 dB. Margine 46 dB → 16-26 dB → ancora sufficiente per fallback QPSK 1/2. Site diversity diventa **non opzionale** se availability target 99.99%.
+Il **rain fade Ka 31 GHz @ 99.9%** è di circa 11.5 dB (zone K worst-case 42 mm/h), assorbito dal margine. Solo a 99.95-99.99% il rain fade diventa significativo (>15 dB).
+
+La **site diversity** è raccomandata per la Phase B 6B (gateway secondary 10+ km dal primary) per garantire il 99.99% di availability anche in eventi meteo Bayesian-correlated.
+
+L'alternativa **28 GHz** offre prestazioni leggermente migliori (rain fade 0.5 dB inferiore) ma allocation ITU come **uplink** gateway (ovvero feeder return), non downlink. La configurazione completa richiede pair 28 GHz UL + 31 GHz DL.
+
+> **Falsifying observation A.7.5**: in caso di eventi meteo estremi (>50 mm/h per 30 min, percentile p99.99), il rain fade @ 31 GHz può raggiungere 20-30 dB. Margine 46 dB → 16-26 dB, ancora sufficiente per fallback QPSK 1/2. La site diversity diventa **non opzionale** se la availability target è 99.99%.
 
 ### A.7.5.4 Plot
 
 ![Rain Fade ITU-R P.618-14](./rain_fade_ITU.png)
 
-*Fig. A.7.3 — Rain fade vs availability ITU-R P.618-14 per zona K Italia (44°N, h_s 0.5 km, elev 53°). 6 bande analizzate: 2.1, 5.06, 14, 28, 31, 47 GHz. Linee tratteggiate: scenario worst-case R_0.01 = 42 mm/h per le bande Ka.*
+*Fig. A.7.3, Rain fade vs availability ITU-R P.618-14 per zona K Italia (44°N, h_s 0.5 km, elev 53°). 6 bande analizzate: 2.1, 5.06, 14, 28, 31, 47 GHz. Linee tratteggiate: scenario worst-case R_0.01 = 42 mm/h per le bande Ka.*
 
 ---
 
@@ -248,7 +258,7 @@ Configurazione base: HAPS 20 km, EIRP 37 dBW, UE G/T −25.6 dB/K, BW 20 MHz, ra
 
 Dati estratti dal sheet `Sensitivity_Freq_Dist` del file Excel.
 
-**Interpretazione**: Per service link **sub-6 GHz è dominante** (margine sufficiente fino a 100+ km). Ka-band (28-31 GHz) è feasible **solo a slant ≤ 25-50 km** (= cella nadir HAPS). Q/V band (47 GHz) crolla rapidamente — adatta solo per feeder link con site diversity.
+**Interpretazione**: per il service link **sub-6 GHz è dominante** (margine sufficiente fino a 100+ km). La Ka-band (28-31 GHz) è feasible **solo a slant ≤ 25-50 km** (corrispondente alla cella nadir HAPS). La Q/V band (47 GHz) crolla rapidamente, idonea solo per feeder link con site diversity.
 
 ### A.7.6.2 Rain fade vs Frequency × Availability (zona K Italia)
 
@@ -263,21 +273,15 @@ Dati estratti dal sheet `Sensitivity_Freq_Dist` del file Excel.
 
 Dati estratti dal sheet `Sensitivity_Rain` del file Excel.
 
-**Interpretazione**:
-- **S-band 2.1 GHz**: rain fade trascurabile (<0.05 dB anche a 99.99%) → service link **immune al rain**.
-- **Ka 28-31 GHz**: rain fade 99.5% ≈ 3-4 dB (assorbibile da margine 5 dB), 99.9% ≈ 8-10 dB (richiede 12+ dB margine), 99.99% ≈ 22-27 dB (richiede site diversity).
-- **Q/V 47 GHz**: rain fade 99.9% ≈ 18 dB → praticamente **non operabile in Italia a 99.9% senza adaptive coding + site diversity**.
+**Interpretazione**: in **S-band 2.1 GHz** il rain fade è trascurabile (<0.05 dB anche a 99.99%), quindi il service link è **immune al rain**. In **Ka 28-31 GHz** il rain fade 99.5% si attesta a 3-4 dB (assorbibile da margine 5 dB), 99.9% a 8-10 dB (richiede 12+ dB di margine), 99.99% a 22-27 dB (richiede site diversity). In **Q/V 47 GHz** il rain fade 99.9% raggiunge 18 dB; praticamente **non operabile in Italia a 99.9% senza adaptive coding e site diversity**.
 
 ### A.7.6.3 Coverage radius vs HAPS antenna gain
 
 ![Coverage Map](./coverage_vs_gain.png)
 
-*Fig. A.7.4 — Cell ground radius vs HAPS antenna gain (analitico). HAPS 20 km, SNR_req 11 dB, BW 20 MHz (S-band, 700 MHz) / 250 MHz (Ka). Linea orange: target cella 50 km HAPS service area.*
+*Fig. A.7.4, Cell ground radius vs HAPS antenna gain (analitico). HAPS 20 km, SNR_req 11 dB, BW 20 MHz (S-band, 700 MHz) / 250 MHz (Ka). Linea orange: target cella 50 km HAPS service area.*
 
-**Interpretazione**:
-- Per **S-band 2.1 GHz**: target 50 km richiede HAPS gain ≥ 14-16 dBi → fattibile con AESA digitale 16-32 beam (typical 24 dBi per beam).
-- Per **700 MHz**: target 50 km richiede HAPS gain ≥ 10 dBi → fattibile anche con antenna semplice.
-- Per **Ka 31 GHz**: target 50 km richiede HAPS gain ≥ 35 dBi → solo con parabolic dedicata, non con AESA — confermando che **Ka è feeder-only**, non service.
+**Interpretazione**: per **S-band 2.1 GHz** il target 50 km richiede HAPS gain ≥ 14-16 dBi, fattibile con AESA digitale 16-32 beam (typical 24 dBi per beam). Per **700 MHz** il target 50 km richiede HAPS gain ≥ 10 dBi, fattibile anche con antenna semplice. Per **Ka 31 GHz** il target 50 km richiede HAPS gain ≥ 35 dBi, ottenibile solo con parabolic dedicata e non con AESA, a conferma che **Ka è feeder-only**, non service.
 
 ---
 
@@ -299,9 +303,9 @@ Sintesi (dettaglio completo nel sheet `Compliance_AGCOM` del file Excel):
 ### A.7.7.1 Action items regolatori
 
 1. **AGCOM consultation entry M+6-10** (allineato con cap-09 §9.1 schedule item "AGCOM spectrum consultation") per:
-   - C2 6A 2.4 GHz: chiarire estensione EIRP oltre 100 mW per uso aeronautico
+   - C2 6A 2.4 GHz: chiarire l'estensione EIRP oltre i 100 mW per uso aeronautico
    - Payload 6A 5 GHz UHF: ottenere parere positivo MIMIT
-2. **Engagement AGCOM HAPS Working Group**: aprire dialogo su disciplina spettro post-WRC-19 per HAPS, in preparazione operations Phase B 6B (M+24+)
+2. **Engagement AGCOM HAPS Working Group**: aprire dialogo sulla disciplina spettro post-WRC-19 per HAPS, in preparazione delle operations Phase B 6B (M+24+)
 3. **Coordinamento internazionale ITU**: per Ka 28/31 GHz feeder, attivare site coordination con stati confinanti (Francia, Svizzera, Slovenia per cross-border HAPS visibility)
 
 ---
@@ -311,9 +315,9 @@ Sintesi (dettaglio completo nel sheet `Compliance_AGCOM` del file Excel):
 | Link | Verdetto Phase A (M+10) | Note implementazione |
 |---|---|---|
 | **6A C2 (2.4 GHz baseline)** | **GO** | Baseline raccomandata; AGCOM coordination per EIRP extra |
-| **6A C2 (5.8 GHz)** | **HOLD** | Margine insufficiente — non raccomandata come primary |
+| **6A C2 (5.8 GHz)** | **HOLD** | Margine insufficiente, non raccomandata come primary |
 | **6A C2 (Iridium SATCOM)** | **GO** (secondary) | Idonea per shadow zones, throughput limitato OK per C2 |
-| **6A Payload 5 GHz UHF 16QAM** | **GO Conditional** | Marginal a 20 km — recovery con ground antenna larger |
+| **6A Payload 5 GHz UHF 16QAM** | **GO Conditional** | Marginal a 20 km, recovery con ground antenna larger |
 | **6A Payload 5 GHz UHF 64QAM** | **GO** | Operativo per high-throughput EO mosaicing |
 | **6B HAPS Service S-band** | **GO** | Analytical proof feasible; conferma con fly-and-measure Phase B |
 | **6B HAPS Service 700 MHz** | **GO conditional** | Subject to accordo MOCN/RAN-sharing operator IT |
@@ -341,7 +345,7 @@ Sintesi (dettaglio completo nel sheet `Compliance_AGCOM` del file Excel):
 
 ### A.7.10.1 Phase A (M+0-12)
 
-1. **Validare modello link budget A.7** con field measurements pilota: aggiungere logging RSSI a missioni Y1 6A
+1. **Validare modello link budget A.7** con field measurements pilota: aggiungere logging RSSI alle missioni Y1 6A
 2. **Engagement AGCOM** per spettro C2 + payload 5 GHz UHF (OQ-LB-01, OQ-LB-02)
 3. **Iridium Certus RFQ** per stimare costo subscription operativo (OQ-LB-06)
 
@@ -367,8 +371,8 @@ Il presente Allegato A.7 fornisce il **modello quantitativo di link budget RF** 
 2. **Analizza 14 configurazioni** tra i 4 link principali (6A C2 + 6A Payload + 6B Service + 6B Feeder)
 3. **Risulta**: 12/14 scenari OK, 2 marginal (5.8 GHz C2 + 16QAM 20 km payload), 0 fail
 4. **Identifica 8 falsifying observations** e 7 Open Questions per i gate successivi
-5. **Quantifica** sensitivity su frequenza, distanza, availability, antenna gain, rain rate
-6. **Mappa compliance** AGCOM/ITU per tutti i link analizzati
+5. **Quantifica** la sensitivity su frequenza, distanza, availability, antenna gain, rain rate
+6. **Mappa la compliance** AGCOM/ITU per tutti i link analizzati
 
 ### A.7.11.1 Update plan
 
@@ -391,11 +395,11 @@ Il presente Allegato A.7 fornisce il **modello quantitativo di link budget RF** 
 ### A.7.11.3 Coerenza epistemica
 
 In coerenza con `epistemic-rigor`:
-- Ogni link budget ha **assunzioni dichiarate** (sheet `LB_*` colonna "Notes")
-- Ogni assumzione di antenna gain, P_tx, T_sys ha **confidence level** (commento Python)
+- Ogni link budget dichiara **assunzioni esplicite** (sheet `LB_*` colonna "Notes")
+- Ogni assunzione di antenna gain, P_tx, T_sys ha **confidence level** (commento Python)
 - 8 falsifying observations dichiarate per i claim critici (margini, AGCOM, rain fade extreme)
-- 7 Open Questions tracciate con owner + deadline
-- Sensitivity sweep su frequenza, distanza, availability fornisce **uncertainty bounds** dei risultati
+- 7 Open Questions tracciate con owner e deadline
+- La sensitivity sweep su frequenza, distanza, availability fornisce **uncertainty bounds** dei risultati
 
 ---
 
@@ -421,15 +425,15 @@ In coerenza con `epistemic-rigor`:
 
 [^10]: Pinato P. (2023). *Link Budget for High Altitude Platform Station based communication system.* Universidade de Vigo. Source: `fonti/Link_budget_uvigo.md`. Reference per HAPS link budget methodology. Confidence: medium-high.
 
-[^11]: ITU-R Radio Regulations Article 1.66A — Definition of HAPS (High Altitude Platform Station). Confidence: high.
+[^11]: ITU-R Radio Regulations Article 1.66A, Definition of HAPS (High Altitude Platform Station). Confidence: high.
 
-[^12]: ITU WRC-19 Final Acts — HAPS spectrum allocation in 6.4-6.7, 27.9-28.2, 31-31.3, 38-39.5, 47.2-47.5/47.9-48.2 GHz. Confidence: high.
+[^12]: ITU WRC-19 Final Acts, HAPS spectrum allocation in 6.4-6.7, 27.9-28.2, 31-31.3, 38-39.5, 47.2-47.5/47.9-48.2 GHz. Confidence: high.
 
-[^13]: DVB-S2X — ETSI EN 302 307-2 v1.1.1 (2014-10). *Digital Video Broadcasting (DVB); Second generation framing structure, channel coding and modulation systems for Broadcasting, Interactive Services, News Gathering and other broadband satellite applications; Part 2.* Reference per modulation table. Confidence: high.
+[^13]: DVB-S2X, ETSI EN 302 307-2 v1.1.1 (2014-10). *Digital Video Broadcasting (DVB); Second generation framing structure, channel coding and modulation systems for Broadcasting, Interactive Services, News Gathering and other broadband satellite applications; Part 2.* Reference per modulation table. Confidence: high.
 
-[^14]: AGCOM Delibera 93/26/CONS — Piano Nazionale di Ripartizione delle Frequenze (PNRF). Source: `fonti/Delibera 93-26-CONS.md`. Confidence: high.
+[^14]: AGCOM Delibera 93/26/CONS, Piano Nazionale di Ripartizione delle Frequenze (PNRF). Source: `fonti/Delibera 93-26-CONS.md`. Confidence: high.
 
-[^15]: AGCOM 18/14/CONS — Disciplina spettro radio per UAS. Reference per banda 5 GHz UHF aeronautical. Confidence: medium-high.
+[^15]: AGCOM 18/14/CONS, Disciplina spettro radio per UAS. Reference per banda 5 GHz UHF aeronautical. Confidence: medium-high.
 
 [^16]: ETSI EN 300 328 v2.2.2 (2019-07). *Wideband transmission systems; Data transmission equipment operating in the 2.4 GHz band; Harmonised Standard for access to radio spectrum.* Reference per ISM 2.4 GHz compliance. Confidence: high.
 
@@ -445,4 +449,4 @@ In coerenza con `epistemic-rigor`:
 
 **FINE Allegato A.7 v1.0**
 
-*Generato 2026-05-17 — Firmamento Technologies — Studio di Fattibilità HALE/VTOL — Volume 2 Allegato A.7*
+*Generato 2026-05-17, Firmamento Technologies, Studio di Fattibilità HALE/VTOL, Volume 2 Allegato A.7*

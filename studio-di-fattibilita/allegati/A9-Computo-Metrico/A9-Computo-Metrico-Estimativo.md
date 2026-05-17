@@ -1,4 +1,4 @@
-# Allegato A.9 — Computo Metrico Estimativo
+# Allegato A.9. Computo Metrico Estimativo
 
 > Volume 2, Allegato A.9
 > Computo Metrico Estimativo Ground Segment + Infrastrutture
@@ -6,15 +6,11 @@
 
 ## A.9.0 Premessa
 
-Il Computo Metrico Estimativo (CME) ex art. 41 fornisce il dettaglio quantitativo-economico delle opere infrastrutturali del progetto. Per HALE/VTOL Firmamento, il CME copre:
-- Ground Station fissa Pentema (container + allestimento)
-- Ground Station mobile (veicolo + console)
-- Hangar protetto Pentema
-- Allestimenti operativi
+Il Computo Metrico Estimativo (CME) ex art. 41 fornisce il dettaglio quantitativo-economico delle opere infrastrutturali del progetto. Per HALE/VTOL Firmamento, il CME copre la Ground Station fissa Pentema (container e allestimento), la Ground Station mobile (veicolo e console), l'Hangar protetto Pentema e gli allestimenti operativi.
 
-**Confidence**: medium-low (CME preliminare basato su prezziari Regione Liguria 2024 + benchmark vendor; CME definitivo per Phase A richiede capitolato dettagliato + sopralluogo).
+**Confidence**: medium-low. Il CME è preliminare e si basa su prezziari Regione Liguria 2024 e benchmark vendor; la versione definitiva per Phase A richiede capitolato dettagliato e sopralluogo.
 
-## A.9.1 Tabella CME — Ground Station Fissa Pentema
+## A.9.1 Tabella CME. Ground Station Fissa Pentema
 
 | Voce | Quantità | Unità | Prezzo unitario (€) | Totale (€) | Riferimento prezzo |
 |---|---|---|---|---|---|
@@ -57,9 +53,9 @@ Il Computo Metrico Estimativo (CME) ex art. 41 fornisce il dettaglio quantitativ
 | **IVA 22%** | | | | **16.808** | |
 | **TOTALE GS FISSA PENTEMA (con IVA)** | | | | **93.206** | |
 
-> Range realistico GS fissa Pentema: **€55-104k** baseline (allineato con stima Cap. 6 §6.5.1).
+> Range realistico GS fissa Pentema: **€55-104k** baseline, allineato con stima Cap. 6 §6.5.1.
 
-## A.9.2 Tabella CME — Ground Station Mobile
+## A.9.2 Tabella CME. Ground Station Mobile
 
 | Voce | Quantità | Unità | Prezzo unitario (€) | Totale (€) |
 |---|---|---|---|---|
@@ -76,11 +72,11 @@ Il Computo Metrico Estimativo (CME) ex art. 41 fornisce il dettaglio quantitativ
 | **IVA 22%** | | | | **14.080** |
 | **TOTALE GS MOBILE (con IVA)** | | | | **78.080** |
 
-> Range realistico GS mobile: **€30-70k** baseline + allestimento (allineato Cap. 6 §6.5.1).
+> Range realistico GS mobile: **€30-70k** baseline + allestimento, allineato Cap. 6 §6.5.1.
 
-## A.9.3 Tabella CME — Hangar Pentema (opzione affitto)
+## A.9.3 Tabella CME. Hangar Pentema (opzione affitto)
 
-### Opzione A — Affitto immobile esistente
+### Opzione A. Affitto immobile esistente
 
 | Voce | Quantità | Unità | Prezzo unitario (€) | Totale (€/anno) |
 |---|---|---|---|---|
@@ -90,7 +86,7 @@ Il Computo Metrico Estimativo (CME) ex art. 41 fornisce il dettaglio quantitativ
 | **TOTALE Y1 affitto** | | | | **27.000-32.000** |
 | **TOTALE Y2+ run-rate** | | | | **10.000-15.000 / anno** |
 
-### Opzione B — Light build (struttura prefabbricata)
+### Opzione B. Light build (struttura prefabbricata)
 
 | Voce | Quantità | Unità | Prezzo unitario (€) | Totale (€) |
 |---|---|---|---|---|
@@ -104,11 +100,11 @@ Il Computo Metrico Estimativo (CME) ex art. 41 fornisce il dettaglio quantitativ
 | **IVA 22%** | | | | **11.770** |
 | **TOTALE light build (con IVA)** | | | | **65.270** |
 
-> Range realistico Hangar: **€40-100k** baseline (allineato Cap. 6 §6.5.1).
+> Range realistico Hangar: **€40-100k** baseline, allineato Cap. 6 §6.5.1.
 
-**Raccomandazione M+3**: opzione A affitto per Y1 (flessibilità + scope ridotto); valutare opzione B per Y2-Y3 dopo MVP success + scale-up.
+**Raccomandazione M+3**: opzione A affitto per Y1 (flessibilità e scope ridotto); valutazione opzione B per Y2-Y3 dopo MVP success e scale-up.
 
-## A.9.4 Tabella CME — Strumenti diagnostica + spare parts
+## A.9.4 Tabella CME. Strumenti diagnostica + spare parts
 
 | Voce | Quantità | Unità | Prezzo unitario (€) | Totale (€) |
 |---|---|---|---|---|
@@ -123,7 +119,7 @@ Il Computo Metrico Estimativo (CME) ex art. 41 fornisce il dettaglio quantitativ
 | **IVA 22%** | | | | **5.214** |
 | **TOTALE (con IVA)** | | | | **28.914** |
 
-> Range realistico: **€15-30k** strumenti + €30-60k spare iniziali (allineato Cap. 8 §8.4.1).
+> Range realistico: **€15-30k** strumenti + €30-60k spare iniziali, allineato Cap. 8 §8.4.1.
 
 ## A.9.5 Riepilogo Computo Metrico Estimativo (CapEx infrastrutture Y1)
 
@@ -143,24 +139,22 @@ Il Computo Metrico Estimativo (CME) ex art. 41 fornisce il dettaglio quantitativ
 ## A.9.6 Note sul prezziario di riferimento
 
 **Riferimenti prezzo utilizzati**:
-- Prezziario Opere Pubbliche Regione Liguria 2024 (per voci edili)
-- Listini vendor commerciali 2024 (per attrezzature)
+- Prezziario Opere Pubbliche Regione Liguria 2024 (voci edili)
+- Listini vendor commerciali 2024 (attrezzature)
 - Benchmark mercato aerospace UAS service IT (e-GEOS, Planetek)
-- Quotation indicative (NON binding) da contatti informali
+- Quotation indicative non vincolanti da contatti informali
 
-**Confidence prezzi**: medium (medi mercato 2024-2025; CapEx reali al M+6 con offerte vincolanti).
+**Confidence prezzi**: medium. I valori riflettono medi mercato 2024-2025; i CapEx reali al M+6 si determinano con offerte vincolanti.
 
 ## A.9.7 Falsifying observations
 
-- Se al M+6 offerte vendor per GS fissa restituiscono > €130k (over range), revisione scope (es. console singola invece di doppia)
-- Se al M+6 affitto immobile Pentema non disponibile a < €15k/anno, attivare opzione B light build
-- Se VVF / ASL classificano hangar batterie LiPo come ATEX zona 1, +€20-40k aggiuntivi per protezioni (RSK-REG-022)
+Tre soglie attivano revisione di scope. Se al M+6 le offerte vendor per la GS fissa superano €130k (over range), si rivede lo scope ad esempio con console singola al posto di doppia. Se al M+6 l'affitto immobile Pentema non risulta disponibile sotto €15k/anno, si attiva l'opzione B light build. Se VVF o ASL classificano l'hangar batterie LiPo come ATEX zona 1, si aggiungono €20-40k per protezioni (RSK-REG-022).
 
 ## A.9.8 Versioning
 
 - v1.0 M+3 (presente)
-- v1.5 M+6 — Update con offerte vendor reali
-- v2.0 M+10 — CME definitivo per gate G3
+- v1.5 M+6: update con offerte vendor reali
+- v2.0 M+10: CME definitivo per gate G3
 
 ## A.9.9 Riferimenti
 

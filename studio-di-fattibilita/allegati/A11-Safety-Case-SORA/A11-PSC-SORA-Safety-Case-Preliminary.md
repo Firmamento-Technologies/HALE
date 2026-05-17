@@ -1,4 +1,4 @@
-# Allegato A.11 — PSC Operativo / SORA Safety Case Preliminare
+# Allegato A.11 : PSC Operativo / SORA Safety Case Preliminare
 
 > Volume 2, Allegato A.11
 > Piano di Sicurezza e Coordinamento operativo (PSC) + SORA Safety Case preliminare
@@ -6,15 +6,13 @@
 
 ## A.11.0 Premessa metodologica
 
-Il presente allegato consolida:
-1. **PSC** ex art. 41 D.Lgs. 36/2023 — Piano di Sicurezza e Coordinamento operativo per le attività di volo
-2. **SORA Safety Case** preliminare secondo **JARUS SORA 2.5 / EASA ED Decision 2025/018/R**
+Il presente allegato consolida due documenti distinti in un'unica istruttoria. Il primo è il **PSC** ex art. 41 D.Lgs. 36/2023, Piano di Sicurezza e Coordinamento operativo per le attività di volo. Il secondo è il **SORA Safety Case** preliminare, redatto secondo **JARUS SORA 2.5 / EASA ED Decision 2025/018/R**.
 
-**Scope coperto**: Percorso 6A — VTOL pilota Pentema BVLOS in Categoria Specific.
+Lo scope coperto è il Percorso 6A, ovvero il VTOL pilota Pentema BVLOS in Categoria Specific.
 
-**Phase B 6B HALE**: Safety Case Certified Category (out-of-scope; sviluppato in fase R&D Phase B M+24+).
+Il Safety Case Certified Category della Phase B 6B HALE resta out-of-scope: sarà sviluppato in fase R&D Phase B M+24+.
 
-## A.11.1 Concept of Operations (ConOps) — Sintesi
+## A.11.1 Concept of Operations (ConOps) : Sintesi
 
 **Operatore**: Firmamento Technologies S.r.l. (in registrazione presso ENAC come UAS Operator)
 **Piattaforma**: VTOL ibrido fixed-wing (JOUAV CW-30E o Tekever AR3, decisione M+6)
@@ -29,11 +27,11 @@ Il presente allegato consolida:
 
 ## A.11.2 SORA 2.5 Analysis Preliminare
 
-### Step 1 — ConOps Description (Concept of Operations)
+### Step 1 : ConOps Description (Concept of Operations)
 
-Già descritto in §A.11.1. Documento ConOps completo: vedi Cap. 4 §4.4 (ICD) + Cap. 6 §6.1.
+Si veda §A.11.1 per la sintesi. Il documento ConOps completo è in Cap. 4 §4.4 (ICD) e Cap. 6 §6.1.
 
-### Step 2 — iGRC (intrinsic Ground Risk Class)
+### Step 2 : iGRC (intrinsic Ground Risk Class)
 
 **Parametri**:
 - Maximum characteristic dimension (UAS): ~2-3 m
@@ -43,17 +41,17 @@ Già descritto in §A.11.1. Documento ConOps completo: vedi Cap. 4 §4.4 (ICD) +
 
 **iGRC stimato preliminare**: **4-5** (su tabella SORA 2.5 Annex E per scenari sparse populated + dimensione media UAS)
 
-### Step 3 — Final GRC after mitigations (M1, M2, M3)
+### Step 3 : Final GRC after mitigations (M1, M2, M3)
 
 | Mitigation | Application | Impact GRC |
 |---|---|---|
-| **M1 Strategic mitigation** — Geofence aree residenziali + restricted area NOTAM-coordinated | ✓ Application | -1 |
-| **M2 Tactical mitigation** — Parachute recovery + auto-return-to-base + ground risk reduction | ✓ Robust application | -1 |
-| **M3 ERP** — Emergency Response Plan + crew training + comms with local authorities | ✓ Application | -0.5 |
+| **M1 Strategic mitigation**: Geofence aree residenziali + restricted area NOTAM-coordinated | ✓ Application | -1 |
+| **M2 Tactical mitigation**: Parachute recovery + auto-return-to-base + ground risk reduction | ✓ Robust application | -1 |
+| **M3 ERP**: Emergency Response Plan + crew training + comms with local authorities | ✓ Application | -0.5 |
 
 **Final GRC stimato**: **2-3** (post M1+M2+M3)
 
-### Step 4 — iARC (initial Air Risk Class)
+### Step 4 : iARC (initial Air Risk Class)
 
 **Air risk parameters**:
 - Operating altitude: ≤ 500 m AGL (entirely below FL150)
@@ -63,26 +61,26 @@ Già descritto in §A.11.1. Documento ConOps completo: vedi Cap. 4 §4.4 (ICD) +
 
 **iARC stimato**: **b** (low traffic VLL non-controlled)
 
-### Step 5 — Final ARC after strategic mitigation
+### Step 5 : Final ARC after strategic mitigation
 
 | Mitigation Air | Application | Impact ARC |
 |---|---|---|
-| TMPR (Tactical Mitigation Performance Requirement) — coordinamento ENAV + NOTAM | ✓ | -0 (già b) |
+| TMPR (Tactical Mitigation Performance Requirement): coordinamento ENAV + NOTAM | ✓ | -0 (già b) |
 | ATC service NOT applicable (Classe G) | n/a | n/a |
 
 **Final ARC**: **b** confermato
 
-### Step 6 — SAIL Determination
+### Step 6 : SAIL Determination
 
-Da matrice SORA 2.5: Final GRC 2-3 × Final ARC b → **SAIL II** (preliminary)
+Dalla matrice SORA 2.5: Final GRC 2-3 × Final ARC b conduce a **SAIL II** (preliminary).
 
-Per scenari più aggressivi (es. avvicinamento abitato Pentema): potrebbe diventare **SAIL III**.
+Per scenari più aggressivi, ad esempio l'avvicinamento all'abitato di Pentema, la determinazione potrebbe salire a **SAIL III**.
 
-**Stima preliminare**: **SAIL II-III** (vedi DR-004 — pre-application meeting ENAC necessario per validation).
+**Stima preliminare**: **SAIL II-III** (vedi DR-004, pre-application meeting ENAC necessario per validation).
 
-### Step 7 — Identify Applicable OSO (Operational Safety Objectives)
+### Step 7 : Identify Applicable OSO (Operational Safety Objectives)
 
-Per SAIL II: ~10-12 OSO applicabili. Per SAIL III: ~16-18 OSO.
+Per SAIL II si applicano ~10-12 OSO. Per SAIL III il numero sale a ~16-18 OSO.
 
 Lista OSO chiave (SAIL III):
 - **OSO #02**: UAS manufactured by competent and/or proven entity (vendor verification)
@@ -102,29 +100,25 @@ Lista OSO chiave (SAIL III):
 - **OSO #23**: Environmental conditions for safe operations defined, measurable and adhered to (weather minima)
 - **OSO #24**: UAS designed and qualified for adverse environmental conditions
 
-### Step 8 — Containment Requirements
+### Step 8 : Containment Requirements
 
 - **Containment area**: definita pre-volo, raggio 30 km dalla GS, geofenced
 - **Termination mechanism**: parachute recovery + auto-land in area designata
 - **Loss of containment threshold**: probabilità < 10^-4/h (SAIL III)
 
-### Step 9 — Operations Manual + Maintenance Manual + Procedures
+### Step 9 : Operations Manual + Maintenance Manual + Procedures
 
-Operations Manual draft entro M+6, completo M+9 (per SORA submission).
+L'Operations Manual è previsto in draft entro M+6 e in versione completa al M+9, per consentire la SORA submission.
 
-## A.11.3 Piano di Sicurezza e Coordinamento (PSC) — Operativo
+## A.11.3 Piano di Sicurezza e Coordinamento (PSC) : Operativo
 
 ### A.11.3.1 Sicurezza del personale
 
-- DPI (Dispositivi Protezione Individuale): elmetto, occhiali, scarpe antinfortunistica per ground crew
-- Training mandatory:
-  - Pilota UAS BVLOS: attestato ENAC + UAS specific
-  - Ground crew: formazione sicurezza generale + ATEX hangar batterie
-  - Mission commander: emergency response training
-- Insurance RC: ≥ €5M per BVLOS aviation
+Il personale di terra opera con DPI dedicati (elmetto, occhiali, scarpe antinfortunistica). La formazione obbligatoria copre tre figure distinte: il pilota UAS BVLOS, in possesso di attestato ENAC e di abilitazione UAS specific; il ground crew, formato sulla sicurezza generale e sulla gestione ATEX dell'hangar batterie; il mission commander, qualificato in emergency response training. La polizza RC aviation deve garantire copertura BVLOS pari ad almeno €5M.
 
 ### A.11.3.2 Sicurezza popolazione e terzi
 
+Le misure operative previste sono le seguenti:
 - Geofence aree residenziali Pentema (raggio 200 m da abitazioni)
 - NOTAM coordination ENAV ogni missione
 - Avviso comunità Pentema (1 settimana prima, via Comune Torriglia)
@@ -143,11 +137,7 @@ Operations Manual draft entro M+6, completo M+9 (per SORA submission).
 
 ### A.11.3.4 Coordinamento con autorità locali
 
-- **Comune di Torriglia**: comunicazione preventiva + accordi operativi
-- **Carabinieri Forestali**: coordinamento per attività SAR + antincendio
-- **Vigili del Fuoco Liguria**: protocollo emergenza
-- **ARPA Liguria**: collaborazione monitoraggio ambientale
-- **Protezione Civile Liguria**: convenzione operativa servizio backup
+Il coordinamento istituzionale prevede comunicazione preventiva e accordi operativi con il Comune di Torriglia, l'attivazione di un canale dedicato con i Carabinieri Forestali per le attività SAR e antincendio, un protocollo emergenza con i Vigili del Fuoco Liguria, una collaborazione con ARPA Liguria sul monitoraggio ambientale e una convenzione operativa con la Protezione Civile Liguria per il servizio backup.
 
 ### A.11.3.5 Documentazione operativa obbligatoria
 
@@ -164,7 +154,7 @@ Operations Manual draft entro M+6, completo M+9 (per SORA submission).
 
 | Risk level | Action |
 |---|---|
-| **Catastrophic** (Fatal accident) | NOT ACCEPTABLE — operazione vietata |
+| **Catastrophic** (Fatal accident) | NOT ACCEPTABLE: operazione vietata |
 | **Hazardous** (Serious injury or major damage) | Mitigation obbligatoria + insurance coverage |
 | **Major** (Operational disruption) | Mitigation raccomandata + procedure |
 | **Minor** (Minor inconvenience) | Procedures + monitoring |
@@ -182,10 +172,7 @@ Operations Manual draft entro M+6, completo M+9 (per SORA submission).
 
 ## A.11.6 Sliding timeline rischio regolatorio
 
-In linea con Cap. 9 §9.12 sliding timeline + audit `regulatory-adversary`:
-
-- **Nominale**: pre-app M+3 → SORA M+9 → Authorization M+9 → Operations M+10
-- **Sliding realistico**: pre-app M+6-9 → SORA M+10-12 → Authorization M+15-24 → Operations M+16-26
+In linea con Cap. 9 §9.12 sliding timeline e con l'audit `regulatory-adversary`, si distinguono due scenari di percorrenza. Lo scenario nominale prevede pre-app M+3, SORA M+9, Authorization M+9 e Operations M+10. Lo scenario sliding realistico, viceversa, sposta pre-app a M+6-9, SORA a M+10-12, Authorization a M+15-24 e Operations a M+16-26.
 
 **Falsifying observation**: se al M+12 ENAC pre-application restituisce GRC > 5 (SAIL ≥ IV), il modello operativo va rivisto a VLOS-only Y1 con re-design ConOps per Y2.
 
@@ -201,8 +188,8 @@ In linea con Cap. 9 §9.12 sliding timeline + audit `regulatory-adversary`:
 ## A.11.8 Riferimenti
 
 - Cap. 5 §5.1.5 (Metodologia SORA 2.5) + §5.4.1 (Strategia 6A Specific Category)
-- Cap. 6 §6.4 (FMECA + FTA — input safety case)
+- Cap. 6 §6.4 (FMECA + FTA, input safety case)
 - Vol. 3 R.1 [N-05] Reg. UE 2019/947 + [N-07] EASA ED Decision 2025/018/R
 - Vol. 3 R.1 [N-15] ENAC Reg. APR Ed. 3 art. 11 + 26
 - Vol. 3 R.2 [T-31] JARUS SORA 2.5
-- DR-004 (audit-rigore-epistemico.md) — pre-application ENAC ancora aperto
+- DR-004 (audit-rigore-epistemico.md), pre-application ENAC ancora aperto

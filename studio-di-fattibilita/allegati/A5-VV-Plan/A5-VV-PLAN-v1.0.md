@@ -1,12 +1,12 @@
-# Allegato A.5 — Verification & Validation Plan v1.0
+# Allegato A.5 ‑ Verification & Validation Plan v1.0
 
-> **Studio di Fattibilità — Piattaforma Aerea HALE / VTOL per Aree Interne**
-> Firmamento Technologies — bando Cooding Prototypes
-> Volume 2 — Allegato A.5
+> **Studio di Fattibilità ‑ Piattaforma Aerea HALE / VTOL per Aree Interne**
+> Firmamento Technologies, bando Cooding Prototypes
+> Volume 2, Allegato A.5
 >
 > **Versione:** v1.0 (M+3)
 > **Conformità:** NASA Systems Engineering Handbook Rev 2 (NASA/SP-2016-6105 Rev 2), §5.3 Verification + §5.4 Validation
-> **Allineamento:** cap-03-requisiti-e-RTM §3.7 V&V Plan preliminare + cap-06-analisi-tecnica §6.6 V&V tecnica + cap-09-cronoprogramma-e-gate (Gate G2/G3/G4/G5/G6)
+> **Allineamento:** cap-03-requisiti-e-RTM §3.7 V&V Plan preliminare, cap-06-analisi-tecnica §6.6 V&V tecnica, cap-09-cronoprogramma-e-gate (Gate G2/G3/G4/G5/G6)
 > **Disciplina epistemica:** applicate Regole 1-7 della skill `epistemic-rigor`
 > **Output Excel companion:** `VV-Plan-v1.0.xlsx` (7 sheet)
 
@@ -16,7 +16,7 @@
 
 ### A.5.0.1 Cornice metodologica
 
-Il V&V Plan adotta la metodologia NASA SE Handbook Rev 2 §5.3-5.4 [^1], allineata anche con INCOSE SE Handbook v5 §4.7-4.8 e ECSS-E-ST-10C Rev 1 §5.4. La distinzione **Verification ≠ Validation**:
+Il V&V Plan adotta la metodologia NASA SE Handbook Rev 2 §5.3-5.4 [^1], allineata anche con INCOSE SE Handbook v5 §4.7-4.8 e ECSS-E-ST-10C Rev 1 §5.4. La distinzione **Verification ≠ Validation** è la seguente:
 
 | Aspetto | **Verification** (§5.3) | **Validation** (§5.4) |
 |---|---|---|
@@ -29,8 +29,8 @@ Il V&V Plan adotta la metodologia NASA SE Handbook Rev 2 §5.3-5.4 [^1], allinea
 
 In coerenza con `cap-03 §3.0bis`, `cap-06 §6.0bis`, `cap-09 §9.0bis`:
 
-- **B1**: Il modello cooperativo Legacoop è scelta strutturale (Firmamento è operatore di servizi, NON OEM aeronautico). La V&V copre **erogazione di servizi**, non vendita prodotti.
-- **B2**: Il presente V&V Plan copre il Percorso 6A (Phase A→B→C operativa) e il Percorso 6B (Phase B R&D), NON il deployment HALE full-scale (out-of-scope studio, materia di gate post-M+48).
+- **B1**: il modello cooperativo Legacoop è scelta strutturale (Firmamento è operatore di servizi, NON OEM aeronautico). La V&V copre **erogazione di servizi**, non vendita di prodotti.
+- **B2**: il presente V&V Plan copre il Percorso 6A (Phase A→B→C operativa) e il Percorso 6B (Phase B R&D), NON il deployment HALE full-scale (out-of-scope dello studio, materia di gate post-M+48).
 
 ### A.5.0.3 Coerenza con altri allegati
 
@@ -46,9 +46,9 @@ In coerenza con `cap-03 §3.0bis`, `cap-06 §6.0bis`, `cap-09 §9.0bis`:
 
 ---
 
-## A.5.1 Approccio V&V — 4 metodi standard (I/A/D/T)
+## A.5.1 Approccio V&V, i 4 metodi standard (I/A/D/T)
 
-In linea con NASA SE Handbook §5.3.2 (Verification methods) [^1] e INCOSE GtWR Rule R1, ogni requisito è verificato con uno dei 4 metodi standard, eventualmente combinati:
+Allineato a NASA SE Handbook §5.3.2 (Verification methods) [^1] e a INCOSE GtWR Rule R1, ogni requisito è verificato con uno dei 4 metodi standard, eventualmente combinati:
 
 | Codice | Metodo | Definizione | Esempio progetto HALE/VTOL |
 |---|---|---|---|
@@ -59,12 +59,12 @@ In linea con NASA SE Handbook §5.3.2 (Verification methods) [^1] e INCOSE GtWR 
 
 **Regola di selezione del metodo** (riferimento NASA SE §5.3.2.2):
 
-1. Se il requisito è documentale / contrattuale → **I**
+1. Se il requisito è documentale o contrattuale → **I**
 2. Se il requisito è una prestazione calcolabile da modello validato → **A**
 3. Se il requisito è funzionale operativo senza margini quantificati → **D**
 4. Se il requisito richiede misura quantitativa con margine → **T**
 
-Combinazioni tipiche per requisiti di alto rischio: **A+T** (analisi pre-test + test di conferma), **D+T** (demo + misura su funzione critica), **I+T** (audit + test).
+Combinazioni tipiche per requisiti di alto rischio: **A+T** (analisi pre-test seguita da test di conferma), **D+T** (demo più misura su funzione critica), **I+T** (audit più test).
 
 ### A.5.1.1 Distribuzione metodi V&V
 
@@ -77,13 +77,13 @@ Sui 71 requisiti SyR+SsR+IR tracciati in `VV-Plan-v1.0.xlsx` sheet `VV_Matrix_Sy
 | **D** (Demonstration) | 19 | 27% | Concentrato in Phase B test bed |
 | **T** (Test) | 30 | 42% | Concentrato in Phase B/C |
 
-> **Falsifying observation A.5.1**: se in Phase A il numero di SyR con metodo "Test" pianificato è > 60% del totale, il piano è sovra-dimensionato in costi test e va rivisto verso più Analysis/Demonstration.
+> **Falsifying observation A.5.1**: se in Phase A il numero di SyR con metodo "Test" pianificato supera il 60% del totale, il piano è sovra-dimensionato in costi test e va rivisto verso più Analysis/Demonstration.
 
 ---
 
 ## A.5.2 V&V Matrix per SyR
 
-La matrice completa è nel file Excel sheet `VV_Matrix_SyR` con 71 righe (SyR + SsR + IR + VR). Estratto rappresentativo (10 righe top-priority):
+La matrice completa risiede nel file Excel sheet `VV_Matrix_SyR` con 71 righe (SyR + SsR + IR + VR). Estratto rappresentativo (10 righe top-priority):
 
 | Req-ID | Description | Method | Phase | Owner | Risk link |
 |---|---|---|---|---|---|
@@ -103,13 +103,13 @@ La matrice completa è nel file Excel sheet `VV_Matrix_SyR` con 71 righe (SyR + 
 - **Planned** (bianco): metodo definito, esecuzione in corso o pianificata
 - **Open** (rosso): requisito da chiudere prima del gate target
 
-> **Falsifying observation A.5.2**: se al M+10 (gate G3) il numero di SyR con status "Open" > 10% del totale, il V&V coverage non è investment-grade.
+> **Falsifying observation A.5.2**: se al M+10 (gate G3) il numero di SyR con status "Open" supera il 10% del totale, il V&V coverage non è investment-grade.
 
 ---
 
 ## A.5.3 V&V Plan Percorso 6A (Phase A → Phase B → Phase C)
 
-### A.5.3.1 Pre-Phase A (M+0-3) — Inspection compliance documentale
+### A.5.3.1 Pre-Phase A (M+0-3), inspection compliance documentale
 
 Obiettivo: chiudere tutti i requisiti di compliance documentale prima dell'avvio Engineering.
 
@@ -119,7 +119,7 @@ Obiettivo: chiudere tutti i requisiti di compliance documentale prima dell'avvio
 | Stakeholder workshop + StNeeds collection | snai-funding-territorial-expert | StNeeds-001..017 + provenance log | In progress |
 | Vendor selection preliminary VTOL (datasheet review) | vtol-uas-specialist | Vendor short-list + DoC review | Done (3 candidati: JOUAV, Tekever, Quantum) |
 
-### A.5.3.2 Phase A (M+3-12) — Analysis
+### A.5.3.2 Phase A (M+3-12), analysis
 
 | Attività | Tipo | Allegato output | Deadline | Owner |
 |---|---|---|---|---|
@@ -132,11 +132,11 @@ Obiettivo: chiudere tutti i requisiti di compliance documentale prima dell'avvio
 | **AGCOM spectrum consultation + plan** | I + A | A.5.x Spectrum plan | M+10 | telecom-payload |
 | **DPIA preliminary + Garante engagement** | I | A.5.x DPIA prelim | M+9 | data-privacy-counsel |
 
-Per ogni Analysis: l'output include la lista delle **assunzioni dichiarate** + **uncertainty quantification** (sensitivity sweep). Vedi convenzione `cap-03 §3.1.4` (epistemic discipline).
+Per ogni Analysis l'output include la lista delle **assunzioni dichiarate** e l'**uncertainty quantification** (sensitivity sweep). Vedi convenzione `cap-03 §3.1.4` (epistemic discipline).
 
-### A.5.3.3 Phase B (M+12-24) — Demonstration test bed + Test subscale
+### A.5.3.3 Phase B (M+12-24), demonstration test bed e Test subscale
 
-Phase B 6A corrisponde alla messa in opera del **pilota Pentema** e include test bed integrato e prime missioni reali.
+La Phase B 6A corrisponde alla messa in opera del **pilota Pentema** e comprende test bed integrato e prime missioni reali.
 
 | Test | Tipo | Facility | Periodo | Owner |
 |---|---|---|---|---|
@@ -149,9 +149,9 @@ Phase B 6A corrisponde alla messa in opera del **pilota Pentema** e include test
 | GNSS spoofing detection test | T | GNSS simulator (Spirent/Skydel) | M+14-16 | avionics-gnc-engineer |
 | Battery thermal runaway (UN 38.3) | T | CNR-ITAE / accredited | M+13-15 | propulsion-energy-engineer |
 
-### A.5.3.4 Phase C (M+9-24) — Test full-scale + operational validation
+### A.5.3.4 Phase C (M+9-24), test full-scale e operational validation
 
-Phase C 6A inizia con **autorizzazione ENAC** (M+9) e prime missioni operative reali, sovrapponendosi con Phase B.
+La Phase C 6A inizia con l'**autorizzazione ENAC** (M+9) e con le prime missioni operative reali, sovrapponendosi alla Phase B.
 
 | Attività | Tipo | Facility | Periodo | Owner |
 |---|---|---|---|---|
@@ -171,11 +171,11 @@ Phase C 6A inizia con **autorizzazione ENAC** (M+9) e prime missioni operative r
 
 ## A.5.4 V&V Plan Percorso 6B (R&D Phase B)
 
-Il Percorso 6B è in regime **R&D Phase A/B**: il V&V copre solo lab + subscale ground + (auspicabilmente) primo subscale stratospheric flight. La Phase C/D HALE full-scale è **out-of-scope** dello Studio attuale.
+Il Percorso 6B opera in regime **R&D Phase A/B**: la V&V copre soltanto lab, subscale ground e (auspicabilmente) il primo subscale stratospheric flight. La Phase C/D HALE full-scale resta **out-of-scope** dello Studio attuale.
 
-### A.5.4.1 M+24-30 — Lab test subsystem
+### A.5.4.1 M+24-30, lab test subsystem
 
-Pre-requisito: gate **G5** (M+24) ha approvato Phase B 6B.
+Pre-requisito: il gate **G5** (M+24) ha approvato la Phase B 6B.
 
 | Test | Allegato output | Facility | Owner |
 |---|---|---|---|
@@ -184,7 +184,7 @@ Pre-requisito: gate **G5** (M+24) ha approvato Phase B 6B.
 | UV degradation accelerated (ASTM G154/G155) | UV test report | UV chamber lab | propulsion-energy-engineer |
 | Composite layup test panel (CFRP/lino skin) | Material qual report | UniGE DICCA / POLITO DIMEAS | aero-structures-engineer |
 
-### A.5.4.2 M+30-36 — Subscale prototype 1:3 ground tests
+### A.5.4.2 M+30-36, subscale prototype 1:3 ground tests
 
 Pre-requisito: lab tests M+24-30 passati.
 
@@ -202,9 +202,9 @@ Pre-requisito: lab tests M+24-30 passati.
 > - GVT report + flutter margin verificato
 > - Wind tunnel + subscale propulsion test passati
 
-### A.5.4.3 M+36-48 — Subscale flight test stratosferico
+### A.5.4.3 M+36-48, subscale flight test stratosferico
 
-Per Continue Phase B post-G6:
+Per il Continue Phase B post-G6:
 
 | Test | Allegato output | Facility | Owner |
 |---|---|---|---|
@@ -217,7 +217,7 @@ Per Continue Phase B post-G6:
 
 ## A.5.5 V&V per tipologia subsistema
 
-Allineato con `cap-06 §6.6` table:
+Allineato con la tabella di `cap-06 §6.6`:
 
 ### A.5.5.1 AERO/Struct
 
@@ -313,7 +313,7 @@ Output deliverables: GS test bed report, end-to-end latency report, operations d
 
 ## A.5.6 V&V Test Facilities required
 
-Catalogo completo: file Excel sheet `Test_Facilities` (16 facility). Sintesi per categoria:
+Catalogo completo nel file Excel sheet `Test_Facilities` (16 facility). Sintesi per categoria:
 
 | Categoria | N. facility | Owner principale | CapEx tot [k€] | OpEx/anno [k€] |
 |---|---|---|---|---|
@@ -335,64 +335,64 @@ Catalogo completo: file Excel sheet `Test_Facilities` (16 facility). Sintesi per
 
 1. **Wind tunnel POLITO/CIRA** (Phase B 6B): booking 12 mesi anticipo. Engagement formale entro M+12.
 2. **GVT POLITO DIMEAS** (Phase B 6B): booking 6 mesi anticipo. Engagement entro M+24.
-3. **Stratospheric test site** (Sardegna o ESRANGE Kiruna): partnership + permissions 12-18 mesi. Engagement entro M+24-30.
+3. **Stratospheric test site** (Sardegna o ESRANGE Kiruna): partnership e permissions a 12-18 mesi. Engagement entro M+24-30.
 4. **EMC chamber IMQ/ICIM** (Phase B 6A): booking 3-6 mesi anticipo. Engagement entro M+12.
 
 ---
 
-## A.5.7 Test schedule alignment with Gate G2 + G3 + G4 + G5 + G6
+## A.5.7 Test schedule alignment con Gate G2 + G3 + G4 + G5 + G6
 
-Gantt completo: file Excel sheet `Test_Schedule` (21 attività). Sintesi per gate:
+Gantt completo nel file Excel sheet `Test_Schedule` (21 attività). Sintesi per gate:
 
-### A.5.7.1 Gate G2 (M+6) — Architecture Baselined
+### A.5.7.1 Gate G2 (M+6), Architecture Baselined
 
 V&V entry criteria:
-- ✓ Stakeholder workshop completed + StNeeds raccolti (Pre-A)
-- ✓ Vendor short-list VTOL via datasheet inspection (Pre-A)
-- ✓ Link budget preliminare 4 link analizzati (A.7 v0.5)
-- ✓ FMECA preliminary in corso (A.2 v0.5)
-- ✓ Trade Study reports preliminari (A.3 v0.5)
+- Stakeholder workshop completed + StNeeds raccolti (Pre-A)
+- Vendor short-list VTOL via datasheet inspection (Pre-A)
+- Link budget preliminare 4 link analizzati (A.7 v0.5)
+- FMECA preliminary in corso (A.2 v0.5)
+- Trade Study reports preliminari (A.3 v0.5)
 
-### A.5.7.2 Gate G3 (M+10/M+11) ⭐ — FEASIBILITY GATE PRIMARIO
+### A.5.7.2 Gate G3 (M+10/M+11), FEASIBILITY GATE PRIMARIO
 
 V&V entry criteria (esaustivi):
-- ✓ Link budget v1.0 (A.7) — 14 scenari analizzati, 12 OK / 2 marginal
-- ✓ Energy balance v1.0 (A.6) — annual + sensitivity, decisione perennial vs seasonal
-- ✓ FMECA completo (A.2 v1.0) — top 10 risk con mitigation
-- ✓ FTA "Loss of Vehicle BVLOS" (A.2 v1.0) — target 10⁻⁵/h verificato
-- ✓ Trade Study reports completi (A.3 DOCFAP) — 6 trade study chiusi
-- ✓ ENAC pre-application feedback ricevuto (SyR-C-002 status: Open → In progress)
-- ✓ AGCOM spectrum consultation iniziata (SyR-C-003)
-- ✓ DPIA preliminary completa + Garante engagement (SyR-C-004)
-- ✓ Independent verification (RINA o equivalent) iniziata o completata
-- ✓ V&V plan v1.0 (presente documento) consolidato
+- Link budget v1.0 (A.7): 14 scenari analizzati, 12 OK / 2 marginal
+- Energy balance v1.0 (A.6): annual + sensitivity, decisione perennial vs seasonal
+- FMECA completo (A.2 v1.0): top 10 risk con mitigation
+- FTA "Loss of Vehicle BVLOS" (A.2 v1.0): target 10⁻⁵/h verificato
+- Trade Study reports completi (A.3 DOCFAP): 6 trade study chiusi
+- ENAC pre-application feedback ricevuto (SyR-C-002 status: Open → In progress)
+- AGCOM spectrum consultation iniziata (SyR-C-003)
+- DPIA preliminary completa + Garante engagement (SyR-C-004)
+- Independent verification (RINA o equivalent) iniziata o completata
+- V&V plan v1.0 (presente documento) consolidato
 
-### A.5.7.3 Gate G4 (M+12) — Fine Pilota VTOL 6A
+### A.5.7.3 Gate G4 (M+12), fine Pilota VTOL 6A
 
 V&V entry criteria:
-- ✓ ENAC operational autorizzazione ricevuta (M+9)
-- ✓ Flight test BVLOS Pentema completed (M+9-12)
-- ✓ ≥50 missioni operative completate
-- ✓ HIL test report disponibile (SsR-AVI-002, SsR-AVI-003)
-- ✓ EMC cert + climatic test cert
-- ✓ Insurance polizza BVLOS attiva (SyR-C-005)
+- ENAC operational autorizzazione ricevuta (M+9)
+- Flight test BVLOS Pentema completed (M+9-12)
+- ≥50 missioni operative completate
+- HIL test report disponibile (SsR-AVI-002, SsR-AVI-003)
+- EMC cert + climatic test cert
+- Insurance polizza BVLOS attiva (SyR-C-005)
 
-### A.5.7.4 Gate G5 (M+24) — Evaluation HALE Phase B
+### A.5.7.4 Gate G5 (M+24), evaluation HALE Phase B
 
 V&V entry criteria 6B:
-- ✓ Energy balance HALE inverno chiarito (A.6 v2.0 con scenario worst-case meteo)
-- ✓ Roadmap V&V Phase B 6B aggiornata (lab + subscale ground + flight)
-- ✓ Funding readiness Phase B ≥50% commitment (proxy: budget V&V Phase B 6B €730k coperto)
-- ✓ Engagement EuroHAPS / CIRA / partner academic formalizzato
+- Energy balance HALE inverno chiarito (A.6 v2.0 con scenario worst-case meteo)
+- Roadmap V&V Phase B 6B aggiornata (lab + subscale ground + flight)
+- Funding readiness Phase B ≥50% commitment (proxy: budget V&V Phase B 6B €730k coperto)
+- Engagement EuroHAPS / CIRA / partner academic formalizzato
 
-### A.5.7.5 Gate G6 (M+36) — HALE Phase B Midterm
+### A.5.7.5 Gate G6 (M+36), HALE Phase B Midterm
 
 V&V entry criteria:
-- ✓ Solar panel cert IEC 60904 (SsR-PROP-002)
-- ✓ Battery cycle test cert (SsR-PROP-003)
-- ✓ Wind tunnel subscale 1:3 report (SsR-AERO-001 Phase B 6B)
-- ✓ GVT report + flutter margin (SsR-AERO-003, SsR-HALE-004)
-- ✓ Subscale prototype TRL 5 (SsR-HALE-001)
+- Solar panel cert IEC 60904 (SsR-PROP-002)
+- Battery cycle test cert (SsR-PROP-003)
+- Wind tunnel subscale 1:3 report (SsR-AERO-001 Phase B 6B)
+- GVT report + flutter margin (SsR-AERO-003, SsR-HALE-004)
+- Subscale prototype TRL 5 (SsR-HALE-001)
 
 ---
 
@@ -451,14 +451,11 @@ Output: file Excel `Qualification-Matrix-v1.0.xlsx` (da preparare per G3, M+10-1
 
 ### A.5.9.1 Filosofia
 
-Lo Studio di Fattibilità HALE/VTOL non è giudicato sufficiente con il solo self-assessment Firmamento Technologies. L'**independent verification** da parte di ente terzo riconosciuto è raccomandata per:
-1. Aumentare confidence presso finanziatori (Coopfond, PNRR, EDF, Horizon Europe)
-2. Aprire la strada a future certificazioni AS/EN 9100 + ISO 9001
-3. Validare metodologia V&V con peer review esterna
+Lo Studio di Fattibilità HALE/VTOL non si reputa sufficiente con il solo self-assessment Firmamento Technologies. L'**independent verification** da parte di un ente terzo riconosciuto risulta raccomandata per tre ragioni: aumentare la confidence presso i finanziatori (Coopfond, PNRR, EDF, Horizon Europe), aprire la strada a future certificazioni AS/EN 9100 + ISO 9001, validare la metodologia V&V con peer review esterna.
 
 ### A.5.9.2 Indep. Verification Plan
 
-Catalogo completo: file Excel sheet `Independent_Verification` (9 review). Sintesi:
+Catalogo completo nel file Excel sheet `Independent_Verification` (9 review). Sintesi:
 
 | Scope | Body | Phase | Mandatory | Cost [k€] |
 |---|---|---|---|---|
@@ -475,10 +472,10 @@ Catalogo completo: file Excel sheet `Independent_Verification` (9 review). Sinte
 
 ### A.5.9.3 Decisione "RINA o equivalente per G3"
 
-**Domanda Open Question** (cf. cap-09 §9.10.3 OQ-S03): disponibilità RINA o equivalente entro M+9 per audit feasibility study Vol. 1+2+3?
+**Domanda Open Question** (cf. cap-09 §9.10.3 OQ-S03): RINA o equivalente entro M+9 per l'audit del feasibility study Vol. 1+2+3 è disponibile?
 
-- **Pros**: RINA è notification body riconosciuto IT/EU, ha esperienza aerospace/marine, audit credibile per finanziatori
-- **Cons**: costo €35k (1.5% del CapEx Y1), tempo response 4-6 settimane
+- **Pros**: RINA è notification body riconosciuto IT/EU, ha esperienza aerospace/marine, l'audit risulta credibile per i finanziatori.
+- **Cons**: costo €35k (1.5% del CapEx Y1), response time 4-6 settimane.
 
 **Raccomandazione V&V manager**: procedere con RINA feasibility audit pre-G3 come investment-grade upgrade. Il costo €35k è marginale rispetto al rischio reputazionale di consegnare uno Studio non validato esternamente.
 
@@ -495,21 +492,21 @@ Le V&V open questions tracciate per i gate successivi:
 | OQ-VV-03 | Quale battery cycler lab (in-house build vs CNR-ICMATE partnership)? | Decisione CapEx vs OpEx | propulsion-energy-engineer | M+15 |
 | OQ-VV-04 | HIL simulator: build in-house vs partner DiPSIM? | Trade-off costo + tempo | avionics-gnc-engineer | M+12 |
 | OQ-VV-05 | Quale partner stratospheric test site (Sardegna ASI vs ESRANGE Kiruna)? | Engagement formale + funding Phase B | aero-structures-engineer | M+24 |
-| OQ-VV-06 | Engagement INRIM Torino per IR cal blackbody — formal contract? | LoI + Q4 booking | EO-expert | M+12 |
-| OQ-VV-07 | Indep. verification cybersecurity NIS2 — quale audit firm (Deloitte, PwC, in-house ACN partner)? | RFP + valutazione | aerospace-SE | M+15 |
+| OQ-VV-06 | Engagement INRIM Torino per IR cal blackbody: formal contract? | LoI + Q4 booking | EO-expert | M+12 |
+| OQ-VV-07 | Indep. verification cybersecurity NIS2: quale audit firm (Deloitte, PwC, in-house ACN partner)? | RFP + valutazione | aerospace-SE | M+15 |
 | OQ-VV-08 | Tasso copertura V&V matrix al Gate G3: target 95% requirement con method+phase definito; valore baseline M+3 = 89% (63/71). Gap da chiudere = 8 requisiti (per lo più SsR-HALE Phase B/C HALE) | Update RTM | aerospace-SE | M+10 |
 
 ### A.5.10.1 Falsifying observations
 
-> **A.5.10.1** Se al M+10 (gate G3) il numero di SyR con status V&V "Open" > 10% del totale, il V&V coverage non è investment-grade. Trigger automatico per HOLD verdict gate G3 (non No-Go).
+> **A.5.10.1** Se al M+10 (gate G3) il numero di SyR con status V&V "Open" supera il 10% del totale, il V&V coverage non è investment-grade. Trigger automatico per HOLD verdict gate G3 (non No-Go).
 
-> **A.5.10.2** Se al M+18 ≥ 2 partner accademici (POLITO, CIRA, ENEA, EURAC) non hanno confermato disponibilità delle proprie facility, la timeline Phase B 6A/6B slitta di 3-6 mesi.
+> **A.5.10.2** Se al M+18 almeno 2 partner accademici (POLITO, CIRA, ENEA, EURAC) non hanno confermato la disponibilità delle proprie facility, la timeline Phase B 6A/6B slitta di 3-6 mesi.
 
-> **A.5.10.3** Se al M+12 il flight test BVLOS Pentema rivela margine link budget RF < 6 dB (vs A.7 analysis prediction ≥12 dB), il modello A.7 va re-baseline con dati di campo (model V&V failure).
+> **A.5.10.3** Se al M+12 il flight test BVLOS Pentema rivela un margine link budget RF < 6 dB (vs A.7 analysis prediction ≥12 dB), il modello A.7 va re-baseline con dati di campo (model V&V failure).
 
-> **A.5.10.4** Se al M+15 l'EMC test fail per emissioni radiate > soglia DO-160G §20, è richiesto re-design schermatura payload + re-test, con impact slip 2-3 mesi su gate G4.
+> **A.5.10.4** Se al M+15 l'EMC test fallisce per emissioni radiate sopra la soglia DO-160G §20, sarà richiesto un re-design della schermatura payload più re-test, con impatto di 2-3 mesi sullo slip del gate G4.
 
-> **A.5.10.5** Se al M+30 la wind tunnel subscale 1:3 mostra divergence speed margin < 10% rispetto VD (target ≥20%), il design HALE Phase B 6B va re-engineered con engagement aeroelastic specialist esterno.
+> **A.5.10.5** Se al M+30 la wind tunnel subscale 1:3 mostra un divergence speed margin inferiore al 10% rispetto a VD (target ≥20%), il design HALE Phase B 6B va re-engineered con engagement di aeroelastic specialist esterno.
 
 ---
 
@@ -531,13 +528,13 @@ Rischi specifici della V&V che possono compromettere il piano:
 
 ## A.5.12 Note di chiusura
 
-Il presente V&V Plan v1.0 è il **deliverable baseline** richiesto per il **Gate G3 (M+10/M+11) FEASIBILITY GATE PRIMARIO**. Esso:
+Il presente V&V Plan v1.0 costituisce il **deliverable baseline** richiesto per il **Gate G3 (M+10/M+11) FEASIBILITY GATE PRIMARIO**. Esso:
 
 1. **Traccia 71 requisiti** SyR + SsR + IR (sopra il target minimo 60-70 dichiarato in `cap-03 §3.7`)
 2. **Allinea ogni requisito** con metodo V&V (I/A/D/T), fase NASA SE (Pre-A/A/B/C), owner agent, test facility, document evidence, risk link, trade study link
 3. **Fornisce gantt schedule** allineato con i 5 gate (G2/G3/G4/G5/G6)
 4. **Quantifica i costi** test (CapEx €210k + OpEx €630k Y1+Y2 + Phase B 6B €730k)
-5. **Definisce strategia independent verification** con RINA preferred per G3 audit
+5. **Definisce strategia independent verification** con RINA preferred per il G3 audit
 
 ### A.5.12.1 Update plan
 
@@ -552,17 +549,17 @@ Il presente V&V Plan v1.0 è il **deliverable baseline** richiesto per il **Gate
 ### A.5.12.2 Coerenza epistemica
 
 In coerenza con `epistemic-rigor`:
-- Ogni V&V method dichiarato è **falsificabile**: se il test fallisce, il requisito è violato
-- Ogni Analysis ha **assunzioni esplicite** e sensitivity sweep
-- Ogni cost figure ha **source/vendor** dichiarato (cf. sheet `Test_Costs`)
-- Le 8 Open Questions sono **tracciate** con owner + deadline
-- I 7 V&V risks sono **integrati** nel Risk Register principale (A.2)
+- Ogni V&V method dichiarato risulta **falsificabile**: se il test fallisce, il requisito è violato.
+- Ogni Analysis include **assunzioni esplicite** e sensitivity sweep.
+- Ogni cost figure dichiara la propria **source/vendor** (cf. sheet `Test_Costs`).
+- Le 8 Open Questions sono **tracciate** con owner e deadline.
+- I 7 V&V risks sono **integrati** nel Risk Register principale (A.2).
 
 ### A.5.12.3 Statement di limiti
 
 1. **Numerosità requisiti**: 71 SyR+SsR+IR è baseline minima. La V&V matrix completa per Type Certification HALE (Phase C+ 6B) richiede tipicamente 500-1500 requisiti. Out-of-scope studio attuale.
-2. **TRL targets**: il piano assume TRL 8-9 commerciali per 6A (vendor delivery) e TRL 5 subsystem per 6B (M+36). Se vendor 6A consegna TRL inferiore (es. 7), il V&V plan va esteso con qualification testing aggiuntivo.
-3. **Indep. verification**: solo RINA feasibility audit è budgetato per G3. La V&V indipendente completa (notification body per Type Cert) è materia di Phase C HALE, out-of-scope.
+2. **TRL targets**: il piano assume TRL 8-9 commerciali per 6A (vendor delivery) e TRL 5 subsystem per 6B (M+36). Se il vendor 6A consegna un TRL inferiore (es. 7), il V&V plan va esteso con qualification testing aggiuntivo.
+3. **Indep. verification**: solo RINA feasibility audit è budgetato per G3. La V&V indipendente completa (notification body per Type Cert) rimane materia di Phase C HALE, out-of-scope.
 
 ---
 
@@ -572,19 +569,19 @@ In coerenza con `epistemic-rigor`:
 
 [^2]: INCOSE Systems Engineering Handbook v5 (2023). §4.7 Verification + §4.8 Validation. Confidence: high.
 
-[^3]: ECSS-E-ST-10-02C Rev 1 — Space engineering — Verification (ESA). Reference per V&V planning aerospace. Confidence: high.
+[^3]: ECSS-E-ST-10-02C Rev 1, Space engineering, Verification (ESA). Reference per V&V planning aerospace. Confidence: high.
 
-[^4]: RTCA DO-178C — Software Considerations in Airborne Systems and Equipment Certification. Reference per DAL allocation autopilota (SsR-AVI-001). Confidence: high.
+[^4]: RTCA DO-178C, Software Considerations in Airborne Systems and Equipment Certification. Reference per DAL allocation autopilota (SsR-AVI-001). Confidence: high.
 
-[^5]: RTCA DO-160G — Environmental Conditions and Test Procedures for Airborne Equipment. Reference per environmental test (SyR-E-001, SyR-E-005). Confidence: high.
+[^5]: RTCA DO-160G, Environmental Conditions and Test Procedures for Airborne Equipment. Reference per environmental test (SyR-E-001, SyR-E-005). Confidence: high.
 
-[^6]: SAE ARP4761 — Guidelines and Methods for Conducting the Safety Assessment Process on Civil Airborne Systems and Equipment. Reference per FMECA + FTA (SyR-S-001, SyR-S-002). Confidence: high.
+[^6]: SAE ARP4761, Guidelines and Methods for Conducting the Safety Assessment Process on Civil Airborne Systems and Equipment. Reference per FMECA + FTA (SyR-S-001, SyR-S-002). Confidence: high.
 
-[^7]: IEC 60904 — Photovoltaic devices — Measurement methods. Reference per solar panel test (SsR-PROP-002). Confidence: high.
+[^7]: IEC 60904, Photovoltaic devices, Measurement methods. Reference per solar panel test (SsR-PROP-002). Confidence: high.
 
-[^8]: UN Manual of Tests and Criteria, Section 38.3 — Lithium batteries. Reference per battery transport + flight clearance (SyR-S-005). Confidence: high.
+[^8]: UN Manual of Tests and Criteria, Section 38.3, Lithium batteries. Reference per battery transport + flight clearance (SyR-S-005). Confidence: high.
 
-[^9]: EN 55032 / CISPR 32 — Electromagnetic compatibility of multimedia equipment. Reference per EMC compliance (SyR-E-005). Confidence: high.
+[^9]: EN 55032 / CISPR 32, Electromagnetic compatibility of multimedia equipment. Reference per EMC compliance (SyR-E-005). Confidence: high.
 
 [^10]: D.Lgs. 36/2023 art. 41 + Allegato I.7 (PFTE Progetto di Fattibilità Tecnico-Economica). Reference per allineamento V&V Plan con framework italiano. Confidence: high.
 
@@ -592,7 +589,7 @@ In coerenza con `epistemic-rigor`:
 
 [^12]: ENAC Linee Guida U-Space LG-2023/006. Reference per integrazione U-Space (SyR-O-006). Confidence: high.
 
-[^13]: AGCOM Delibera 93/26/CONS — Piano Nazionale di Ripartizione delle Frequenze. Reference per spettro radio (SyR-C-003). Confidence: high.
+[^13]: AGCOM Delibera 93/26/CONS, Piano Nazionale di Ripartizione delle Frequenze. Reference per spettro radio (SyR-C-003). Confidence: high.
 
 [^14]: NIS2 Directive (EU) 2022/2555 + ACN Italia transposition. Reference per cybersecurity audit (SyR-C-006). Confidence: high.
 
@@ -602,4 +599,4 @@ In coerenza con `epistemic-rigor`:
 
 **FINE Allegato A.5 v1.0**
 
-*Generato 2026-05-17 — Firmamento Technologies — Studio di Fattibilità HALE/VTOL — Volume 2 Allegato A.5*
+*Generato 2026-05-17, Firmamento Technologies, Studio di Fattibilità HALE/VTOL, Volume 2 Allegato A.5*
