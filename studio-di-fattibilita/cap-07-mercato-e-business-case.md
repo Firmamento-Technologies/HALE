@@ -757,6 +757,21 @@ Critica condotta dagli agenti `competitor-intelligence` + `business-model-strate
 **Razionale critica**: nessuna Regione italiana ha contrattato prima un servizio EO da operatore privato a queste cifre. Riferimenti di mercato (es. Copernicus business uplift) sono molto più bassi.
 **Risposta**: il pricing è preliminare e confidence low. **Aggiornamento M+3 post-audit Cluster D (§7.4.4 + §7.4.5)**: la critica è stata **confermata e quantificata** dall'audit competitor: i benchmark Cluster D pubblici (Planetek Rheticus Puglia, e-GEOS PC Lazio, NHazca monitoraggio frane) indicano pricing servizio EO PA tipicamente €30-80k/anno per area (3-5× sotto baseline §7.8.2). **Azione obbligatoria pre-gate M+10**: ridimensionare pricing baseline §7.8.2 a €60-90k/anno base + €30-60k/anno premium per persistence/sovranità. Revenue Y1 baseline ricalibrato: €220-300k (vs €355-405k originale).
 
+### 7.13.7 Action Item Tracking (anti Red Team theater)
+
+> **Compliance audit M+3**: ogni critica §7.13.1-6 ha un action item esplicito con owner, deadline e verifica chiusura.
+
+| Critica | Action item | Owner | Deadline | Stato M+3 | Verifica chiusura |
+|---|---|---|---|---|---|
+| C1 (Starlink consumer satura connettività rurale) | Differenziare value prop: latenza ISR + persistence EO + sovranità dati + crisis backup (non connettività consumer) | aerospace-market-analyst + business-model-strategist | M+6 | ✅ closed (BMC §7.6 + value prop §7.5 ridisegnate; connettività UC secondario, EO+sovranità dominant); FO-ADD-04 + FO-ADD-09 linkate | done |
+| C2 (cooperative come limitazione) | Strutturazione giuridica vincolante consorzio + preferred provider Coopfond + access privilegiato Cooding | business-model-strategist + snai-funding-territorial-expert | M+12 | 🟡 in progress (workshop M+6 + MoU formalizzazione); FO-ADD-01 + FO-ADD-07 linkate | Gate G3 + M+12 |
+| C3 (TAM-IT €100-200M ottimistico) | Validazione willingness-to-pay via contratti firmati: M+6 LoI Regione + 2 coop + 1 PC | aerospace-market-analyst + CEO | M+6 | ⏳ open (engagement Regione in corso, LoI pending) | Gate G2 + Gate G3 |
+| C4 (Aalto/Skydweller entry Italia 12 mesi) | Speed (Y1 MVP) + lock-in cooperative + boundary B2 sovereign EU argomento difensivo; Early Warning Indicator attivato (vedi `RESERVED-rischi-geopolitici.md`) | competitor-intelligence + sovereign-infrastructure-strategist | M+9 | ⏳ in progress (EWI mappa attivata; engagement Aalto/Airbus per intelligence) | Gate G3 |
+| C5 (MVP Y1 ambizioso 5 contratti + 80 missioni) | Soglia minima dichiarata §7.9.2: 3 contratti + 50 missioni; revenue Y1 minimo SyR-Cost-003 €200k hard floor | aerospace-market-analyst + business-model-strategist | M+3 | ✅ closed (soglia minima dichiarata + sliding timeline §9.12 per scenario worst); FO-ADD-09 + FO-10A-04 linkate | done |
+| C6 (pricing €150k/anno EO Regione inventato) | **CONFIRMED FALSIFIED post-Cluster D audit**: ricalibrazione pricing a €60-90k base + €25-40k premium; revenue Y1 baseline RECALIBRATED €260k centrale (range €220-300k); legacy €355-405k mantenuto solo come traccia falsifying observation; FO-ADD-04 linkata | aerospace-market-analyst + business-model-strategist | M+3 | ✅ **closed M+3** — Cap. 7 §7.8.2 RECALIBRATED + Cap. 0 + Cap. 8 + Cap. 11 propagati (P2 Fix 1 commit) | done |
+
+> **Stato Red Team check Cap. 7 al M+3**: **3 critiche closed (C1 value prop, C5 MVP threshold, C6 pricing recalibration)** + **2 in progress (C2 governance cooperative, C4 Tier 1 EWI)** + **1 open (C3 willingness-to-pay validation)**. Nessuna critica residual "Red Team theater". **Nota su C6**: critica più grave del capitolo, ha causato recalibration M+3 cross-volume.
+
 ---
 
 **Verdetto Red Team (aggiornato M+3 post-audit Cluster D)**: il capitolo è **strutturalmente solido** ma con **confidence bassa sulle cifre concrete** (TAM, SAM, SOM, pricing) e **gravemente sottoddimensionato** sul rischio competitivo Cluster D (e-GEOS, Planetek, FlyingBasket) — ora riconfigurato in §7.4.4-7.4.7. Le 8 azioni richieste prima del gate M+10:

@@ -676,6 +676,21 @@ Critica condotta da `red-team-skeptic` + `aerospace-systems-engineer`.
 **Razionale**: la tabella §6.1.3 elenca asset riusabili, ma non quantifica il valore economico riusato. Affermazione "riuso 60%" è qualitativa.
 **Risposta**: corretto. Aggiungere Cap. 8 (Economico-finanziario) con quantificazione: ground segment ~€80-150k riusati, software pipeline ~€50-100k, brand+rete ~€100-300k stimati (intangible). Riuso quantitativo ~€250-550k su CapEx 6A €700-1200k → ~30-40% in valore monetario.
 
+### 6.8.7 Action Item Tracking (anti Red Team theater)
+
+> **Compliance audit M+3**: ogni critica §6.8.1-6 ha un action item esplicito con owner, deadline e verifica chiusura. Stato consolidato post simulazione completa energy balance M+3:
+
+| Critica | Action item | Owner | Deadline | Stato M+3 | Verifica chiusura |
+|---|---|---|---|---|---|
+| C1 (energy balance inverno marginale 0-15%) | Simulazione ad alta fedeltà clear sky variability + monthly profile | propulsion-energy-engineer | M+10 | ✅ **closed M+3** — simulazione completa allegato A.7 ha **superato** la stima hand-calc: margine **-50.1% DEFICIT** confermato → RSK-TEC-001 score **25** (vs 20 originale) + E5 Seasonal-only mandatory plan A. Trade study TS-PROP-6B riconfermato | done; FO-ADD-08 linkata |
+| C2 (fibra di lino come asset ESG = marketing) | LCA quantitativo comparativo HALE vs satellite + diesel | aerodynamics-structures-engineer + Sustainability consultant | M+12 | ⏳ open (LCA esterno da ingaggiare) | Gate G3 |
+| C3 (JOUAV CW-30E rischi geopolitici) | Contratto JOUAV con clausole continuità + stock spare 12 mesi + quotation Tekever parallelo | vtol-uas-specialist + financial-cfo-analyst | M+6 | ⏳ in progress (DR-008 chiusura geopolitica via engagement DG DEFIS; quotation pending) | Gate G2 |
+| C4 (integrazione payload modulare 30 min ottimistica) | Validazione test bed reale (target realistic 60-90 min) | avionics-gnc-engineer + vtol-uas-specialist | M+6-M+8 | ⏳ open (test bed da allestire) | Gate G2 |
+| C5 (link budget 22 dB margin nominal, rain fade reale?) | Update link budget con scenario "stormy day worst-case 1% time" | telecom-ntn-payload-expert | M+6 | ✅ **closed M+3** — link budget aggiornato in Allegato A.7: margine worst-case 12-15 dB, **sufficiente** (vedi `A7-Link-Budget/A7-LINK-BUDGET-REPORT.md`) | done |
+| C6 (riuso 60% asset 6A→6B qualitativo) | Quantificazione monetaria asset reuse in Cap. 8 | aerospace-systems-engineer + financial-cfo-analyst | M+5 | ✅ **closed M+3** — quantificazione €250-550k (~30-40% CapEx 6A) integrata Cap. 6 §6.1.3 + Cap. 10 §10.3.1; FO-ADD-03 linkata per verifica M+24 gate G5 | done |
+
+> **Stato Red Team check Cap. 6 al M+3**: **3 critiche closed (C1 energy, C5 link, C6 reuse)** + **2 in progress (C3 geopolitical, C4 payload swap)** + **1 open (C2 LCA)**. Nessuna critica residual "Red Team theater". **Nota su C1**: il caso è risolto in senso pessimistico — il margine reale è -50.1% vs stima 0-15%, ma il fallback E5 Seasonal-only è esplicitamente nel design come plan A; il pivot 6B "operatore su prime contractor" (Cap. 0 §0.3) recepisce questa realtà.
+
 ---
 
 ## 6.9 Riferimenti

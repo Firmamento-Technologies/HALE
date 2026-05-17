@@ -492,6 +492,21 @@ Critica condotta da `red-team-skeptic` + `financial-cfo-analyst` + `business-mod
 **Razionale**: il mix dipende da bandi che potrebbero non aprirsi nei tempi previsti.
 **Risposta**: confermato (DR-002 audit-rigore-epistemico.md). Action item: contatto diretto Coopfond + Regione Liguria entro M+1 per verifica calendario bandi.
 
+### 8.10.7 Action Item Tracking (anti Red Team theater)
+
+> **Compliance audit M+3**: ogni critica §8.10.1-6 ha un action item esplicito con owner, deadline e verifica chiusura.
+
+| Critica | Action item | Owner | Deadline | Stato M+3 | Verifica chiusura |
+|---|---|---|---|---|---|
+| C1 (CapEx €1.4M ottimismo aerospace +30-150%) | Range €975k-1.96M con contingency 15%; falsifying observation §8.3.1 attiva review scope se cumulato > €2M al M+6 | financial-cfo-analyst | M+6 | ✅ closed (range esteso, falsifying observation §8.3.1 dichiarata; vendor quotation JOUAV/Tekever pending per refinement) | Gate G2 |
+| C2 (Revenue Y1 €380k ottimistico + Cluster D falsificazione pricing) | RECALIBRATED €260k centrale (range €220-300k, min €200k SyR-Cost-003) con pricing €60-90k/anno PA + €25-40k premium; legacy €355-405k FALSIFICATO | financial-cfo-analyst + aerospace-market-analyst | M+3 | ✅ **closed M+3** — propagated Cap. 0 + Cap. 7 §7.8.2 RECALIBRATED + Cap. 8 §8.0.1 + §8.6.2 + §8.10.5 + Cap. 11 (P2 Fix 1); FO-ADD-04 + FO-10A-07 linkate | done |
+| C3 (WACC 12% blended basso) | Sensitivity §8.6.3 mostra impatto se mix shifts a meno grant (WACC sale 18-22%); modello finanziario Excel completo includerà Monte Carlo (DR-008) | financial-cfo-analyst | M+10 | 🟡 in progress (Excel modello M3 esistente in Vol. 2 Allegato A.7; Monte Carlo da aggiungere) | Gate G3 |
+| C4 (Phase B €5.5-13.5M senza TC) | Phase B subordinato a (a) funding ≥50% pubblico committed, (b) gate G5 M+24 TRL 5 dimostrato, (c) parallel engagement EASA Special Condition; **pivot M+3: HOLD CON CRITERI USCITA STRINGENTI + pivot operatore su prime contractor** (Cap. 0 §0.3) | financial-cfo-analyst + sovereign-infrastructure-strategist + CEO | M+24 | ✅ **closed M+3** — pivot strutturale 6B documentato Cap. 0 §0.3 + Cap. 10 §10.4 + Cap. 11 §11.6bis; FO-ADD-05 + FO-10B-01 + FO-10B-02 linkate | done |
+| C5 (capital intensity €10-30B oltre capacità PMI) | Capital intensity full scale richiede programma EU equivalente IRIS² come precondizione esterna; Firmamento principal Italian node di consorzio EU, NON finanziatore solitario; B2-relaxed scenario small fleet €500M-1.5B documentato | financial-cfo-analyst + sovereign-infrastructure-strategist | M+3 | ✅ **closed M+3** — Cap. 11 §11.6bis scenario B2-relaxed standalone IT small fleet P 30-50%; capital intensity onesta §11.6.4; FO-ADD-10 linkata | done |
+| C6 (mix funding 2026 bandi non aperti DR-002) | Contatto diretto Coopfond + Regione Liguria + MIMIT per verifica calendario bandi; FO-ADD-09 monitoring 60% committed M+10 | financial-cfo-analyst + snai-funding-territorial-expert | M+1-M+3 | ⏳ open (engagement Coopfond + Regione in corso; DR-002 chiusura via contatto diretto pending); FO-ADD-09 + FO-10A-04 linkate | Gate G2 + M+10 |
+
+> **Stato Red Team check Cap. 8 al M+3**: **4 critiche closed (C1 CapEx range, C2 revenue recalibration, C4 6B pivot, C5 capital intensity B2-relaxed)** + **1 in progress (C3 Monte Carlo)** + **1 open (C6 bandi 2026 calendar)**. Nessuna critica residual "Red Team theater". **Nota su C2 + C4**: le 2 critiche più gravi del capitolo, entrambe hanno causato pivot strutturali M+3 cross-volume.
+
 ---
 
 ## 8.11 Open Questions Finanziarie

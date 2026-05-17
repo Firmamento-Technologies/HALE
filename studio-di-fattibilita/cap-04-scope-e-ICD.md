@@ -659,6 +659,21 @@ Tuttavia, è ragionevole che **almeno un volo dimostrativo tethered** (a quota b
 
 **Action item**: allocare €40k dedicato in budget Cap. 8 per workshop engagement; verificare se Legacoop / Coopfond hanno fondi engagement separati (sembra di sì per il bando Cooding).
 
+### 4.8.7 Action Item Tracking (anti Red Team theater)
+
+> **Compliance audit M+3**: per evitare il pattern "Red Team theater" (critiche acknowledged senza follow-through operativo), ogni critica §4.8.1-6 ha un action item esplicito con owner e deadline. Stato consolidato:
+
+| Critica | Action item | Owner | Deadline | Stato M+3 | Verifica chiusura |
+|---|---|---|---|---|---|
+| C1 (budget €150-300k vs base rate aerospace) | Revisione finale budget Cap. 8 (€250-300k realistic / €400-500k stretched) + FTE mese-per-mese | financial-cfo-analyst + Firmamento DG | M+6 | ⏳ open (allineamento OpEx Cap. 8 §8.5.1.C già fatto post-Cluster D + regulatory team) | Gate G2 |
+| C2 (ICD concept-level vs engineering-grade) | §4.4 sub-section "Detailed ICD: scope of Vol. 2 Allegato A.4" + template ICD detailed Fase 1 | aerospace-systems-engineer + avionics-gnc-engineer | M+6 | ✅ closed (sub-section aggiunta, ICD detailed in Vol. 2 Allegato A.4 referenziato) | done |
+| C3 (mancano Operations Manual + Maintenance Plan + Risk Assessment SORA) | Tabella §4.3.1 arricchita con sub-deliverable Vol. 2 (§4.3.3 nuovo) + verifica linking Cap. 6, 8, 9 | aerospace-systems-engineer | M+5 | ✅ closed (§4.3.3 con 15 sub-deliverable Vol. 2 aggiunta) | done |
+| C4 (out-of-scope troppo restrittivo: senza flight test PFTE → SORA rifiutata) | Ri-classificazione B-03 "Voli operativi" da OUT a PARZIALE + sub-deliverable DEL-PFTE-15 "Field Trial demo tethered" + contingency budget +€20-40k | aviation-regulatory-counsel + Firmamento DG | M+8 | 🟡 in progress (PARZIALE registrato; permessi ENAC locali in fase di engagement) | Gate G2 + Field trial M+8-M+9 |
+| C5 (DEL-PFTE-12 WBS 3-4 non dimensionato in 11 mesi) | Chiarimento Cap. 8 + DEL-PFTE-12: WBS 3 per 6A, WBS 2 per 6B; Computo Metrico solo ground segment Pentema | financial-cfo-analyst + Cost Estimator esterno | M+4-M+9 | ⏳ open (Cost Estimator esterno da ingaggiare) | Gate G2 |
+| C6 (workshop cooperative ≥ 5 senza budget engagement) | Allocazione €40k in Cap. 8 per workshop engagement + verifica fondi engagement Legacoop/Coopfond | business-model-strategist + snai-funding-territorial-expert | M+3 | ✅ closed (budget allocato; engagement Coopfond fondi separati confermato per bando Cooding) | done |
+
+> **Stato Red Team check Cap. 4 al M+3**: **3 critiche closed (C2, C3, C6)** + **1 in progress (C4 field trial)** + **2 open Gate G2 (C1 budget, C5 WBS Computo Metrico)**. Nessuna critica residual "Red Team theater" (= acknowledged senza action concreta tracciata).
+
 ---
 
 ## 4.9 Riferimenti
