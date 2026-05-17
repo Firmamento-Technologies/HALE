@@ -1,4 +1,4 @@
-# Allegato A.6 — Schemi/Disegni CAD del Concept
+# Allegato A.6: Schemi/Disegni CAD del Concept
 
 > Volume 2, Allegato A.6
 > Documentazione CAD del concept HALE/VTOL
@@ -41,7 +41,7 @@ prevede le seguenti unità geometriche modellate:
 
 ## Roadmap CAD development
 
-### Phase Pre-A (M+0-3) — completato
+### Phase Pre-A (M+0-3), completato
 - Concept CAD high-level
 - Three Lifting Surface alternative XFLR5 analysis
 
@@ -98,9 +98,9 @@ I file CAD seguiranno gli standard:
 Status M+3: il presente file è **placeholder**. I CAD effettivi sono nella cartella `cad/` alla root del repo (file binari non convertibili in markdown).
 
 **Roadmap completamento Allegato A.6**:
-- v1.5 M+6 — esportazione PNG/PDF di viste 2D dei modelli CAD principali
-- v2.0 M+10 — CAD package completo per gate G3 (concept + Phase A iniziale)
-- v3.0 M+24 — subscale CAD per Phase B 6B
+- v1.5 M+6: esportazione PNG/PDF di viste 2D dei modelli CAD principali
+- v2.0 M+10: CAD package completo per gate G3 (concept + Phase A iniziale)
+- v3.0 M+24: subscale CAD per Phase B 6B
 
 ## Falsifying observation
 

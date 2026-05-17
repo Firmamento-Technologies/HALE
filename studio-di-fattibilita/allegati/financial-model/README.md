@@ -2,19 +2,19 @@
 
 **Versione:** M+3 bozza (post Audit + DR research closure)
 **Data:** 17 maggio 2026
-**Conformità:** D.Lgs. 36/2023 art. 41 + Allegato I.7 (PFTE — Piano Economico-Finanziario)
+**Conformità:** D.Lgs. 36/2023 art. 41 + Allegato I.7 (PFTE: Piano Economico-Finanziario)
 
 ## File
 
-- `HALE-Financial-Model-M3.xlsx` (22.7 KB, 10 sheet) — modello finanziario completo
-- `build_financial_model.py` (42 KB) — script Python riproducibile (openpyxl)
+- `HALE-Financial-Model-M3.xlsx` (22.7 KB, 10 sheet): modello finanziario completo
+- `build_financial_model.py` (42 KB): script Python riproducibile (openpyxl)
 
 ## Sheet del workbook
 
 | # | Sheet | Contenuto |
 |---|---|---|
 | 0 | Cover | Disclaimer epistemici + struttura |
-| 1 | CapEx_Y1 | Quadro Economico Y1 (A + B + IVA) — formato art. 41 |
+| 1 | CapEx_Y1 | Quadro Economico Y1 (A + B + IVA), formato art. 41 |
 | 2 | OpEx_Y2+ | OpEx run-rate Y2-Y5 con evoluzione scale-up |
 | 3 | Revenue | Revenue Y1-Y5 RECALIBRATED post Cluster D |
 | 4 | Cash_Flow | Cash flow Y1-Y5 + cumulato (conditional formatting) |
@@ -59,7 +59,7 @@ Output: `HALE-Financial-Model-M3.xlsx`
 
 1. **Aprire il file** in Excel / LibreOffice / Google Sheets (formule supportate)
 2. **Modificare gli input baseline** nello script Python (sezione `ASSUMPTIONS`) per re-run scenari
-3. **Validare con benchmark esterni** (RFQ vendor quotation, LoI Regione, contratti reali) — sezione confidence
+3. **Validare con benchmark esterni** (RFQ vendor quotation, LoI Regione, contratti reali) nella sezione confidence
 4. **Update post-validation**: re-genera workbook con nuovi numeri reali
 
 ## Cross-reference

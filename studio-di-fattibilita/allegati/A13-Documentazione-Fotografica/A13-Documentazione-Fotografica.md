@@ -1,4 +1,4 @@
-# Allegato A.13 — Documentazione Fotografica del Contesto
+# Allegato A.13: Documentazione Fotografica del Contesto
 
 > Volume 2, Allegato A.13
 > Conformità D.Lgs. 36/2023 art. 41 + Allegato I.7 (Documentazione fotografica obbligatoria PFTE)
@@ -99,7 +99,7 @@ Per garantire **uso professionale** in documenti formali, le fotografie devono r
 - Team: founder + ingegnere + fotografo (eventuale)
 - Equipaggiamento: DSLR 24 MP + drone amatoriale per panoramiche aeree (no BVLOS)
 - Permessi: comunicazione preventiva Comune Torriglia
-- Stagionalità: preferito sopralluogo in 2 stagioni (estate + autunno/inverno) per documentare condizioni operative reali
+- Stagionalità: preferito sopralluogo in 2 stagioni (estate, autunno/inverno) per documentare condizioni operative reali
 
 ### Workshop documentazione (M+6+)
 - Foto in workshop con consenso esplicito partecipanti (GDPR)
@@ -144,5 +144,5 @@ A13-Documentazione-Fotografica/
 - Cap. 5 §5.6 (Privacy + GDPR consenso)
 - Vol. 3 R.4 (Documenti territoriali Liguria + SNAI)
 - Allegato A.6 (CAD del concept HALE)
-- Allegato A.11 (PSC + SORA — engagement comunità OQ-009)
-- Allegato A.9 (CME — sito hangar Pentema)
+- Allegato A.11 (PSC + SORA, engagement comunità OQ-009)
+- Allegato A.9 (CME, sito hangar Pentema)

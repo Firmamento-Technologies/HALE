@@ -1,4 +1,4 @@
-# Allegato A.8 — Bilanci di Massa Preliminari
+# Allegato A.8: Bilanci di Massa Preliminari
 
 > Volume 2, Allegato A.8
 > Mass budgets preliminari Percorso 6A (VTOL) + Percorso 6B (HALE)
@@ -10,7 +10,7 @@ I bilanci di massa sono stimati secondo metodologia **NASA SE Handbook §6.4** +
 - **Margin** (% riserva per design evolution Phase A → C)
 - **Confidence** (high/medium/low)
 
-## A.8.1 Mass Budget Percorso 6A — JOUAV CW-30E (vendor baseline)
+## A.8.1 Mass Budget Percorso 6A: JOUAV CW-30E (vendor baseline)
 
 ### Riferimento vendor: JOUAV datasheet CW-30E (Confidence: medium)
 
@@ -41,7 +41,7 @@ I bilanci di massa sono stimati secondo metodologia **NASA SE Handbook §6.4** +
 
 > Trade-off: telecom backup eslcude LiDAR contemporaneo. Mission planning dedicato per configurazione swap (60-90 min ground).
 
-## A.8.2 Mass Budget Percorso 6A — Tekever AR3 (vendor benchmark Plan B)
+## A.8.2 Mass Budget Percorso 6A: Tekever AR3 (vendor benchmark Plan B)
 
 ### Riferimento vendor: Tekever AR3 datasheet (Confidence: medium-high)
 
@@ -59,7 +59,7 @@ I bilanci di massa sono stimati secondo metodologia **NASA SE Handbook §6.4** +
 
 > Tekever AR3 ha MTOW dichiarato 25 kg. Margin più stretto di JOUAV (più piccolo). Payload 2.5 kg = limita configurazioni (RGB + IR baseline OK; aggiunte limitate).
 
-## A.8.3 Mass Budget Percorso 6B — HALE solare (stima preliminare)
+## A.8.3 Mass Budget Percorso 6B: HALE solare (stima preliminare)
 
 ### Riferimento: concept Polito HELIPLAT + Zephyr 8/S benchmark (Confidence: low-medium)
 
@@ -89,7 +89,7 @@ Bilanciamento longitudinale richiede:
 ### Wing loading (W/S)
 
 - MTOW baseline 100 kg, S = 25 m² → W/S = (100 × 9.81) / 25 = **39.2 N/m²**
-- Target HALE: 30-50 N/m² (tipico — vs aviazione manned 500+ N/m²)
+- Target HALE: 30-50 N/m² (tipico, vs aviazione manned 500+ N/m²)
 - Conferma profilo low-Re + bassa velocità (TAS 30-50 km/h)
 
 ## A.8.4 Mass evolution Phase A → Phase B (HALE 6B)

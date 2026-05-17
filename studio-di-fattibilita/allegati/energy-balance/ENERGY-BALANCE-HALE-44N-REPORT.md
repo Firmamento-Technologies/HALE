@@ -1,6 +1,6 @@
-# ENERGY BALANCE HALE — 44°N (Liguria), 20 km AMSL
+# ENERGY BALANCE HALE a 44°N (Liguria), 20 km AMSL
 
-**Documento**: Allegato tecnico Vol. 2 — Cap. 6 §6.2.2.2
+**Documento**: Allegato tecnico Vol. 2, Cap. 6 §6.2.2.2
 **Soggetto proponente**: Firmamento Technologies
 **Caso studio**: Pentema (Torriglia GE), latitudine 44°N
 **Data**: 2026-05-17
@@ -19,7 +19,7 @@ Questo report chiude il debito di rigore tecnico aperto al gate M+10 sul **shows
 4. Comparison architetture: la sola configurazione con margine **OK** in inverno è quella ipotetica E4 (PEM FC + LH2) che richiede però TRL 4 (HALE-grade) non disponibile prima di **Y6+**.
 5. **Raccomandazione operativa**: **PERENNIAL flight a 44°N NON è raccomandato come baseline operativo Y3-Y5**; attivare **fallback E5 Seasonal-only (marzo-ottobre)** come piano A commercialmente vendibile, mantenendo R&D su E2 LiS / E3 SS Li per upgrade Y5-Y7 perennial robusto.
 
-> **Verdetto gate M+10**: **HOLD** Percorso 6B perennial — **GO Condizionato** su 6B Seasonal (E5) come piano commerciale realistico.
+> **Verdetto gate M+10**: **HOLD** Percorso 6B perennial, **GO Condizionato** su 6B Seasonal (E5) come piano commerciale realistico.
 
 ---
 
@@ -96,8 +96,8 @@ Verdetto: > 30 % = OK; 0-30 % = MARGINAL (operatività rischiosa); < 0 % = DEFIC
 
 ### 2.2 Worst case e best case
 
-- **Worst case**: giorno **354** (≈ Dec solstizio inverno) — margine **-50.1 %**, E_solar 21.18 kWh vs E_cons 38.21 kWh.
-- **Best case**: giorno **171** (≈ giugno) — margine **+107.4 %**, E_solar 80.45 kWh vs E_cons 38.21 kWh.
+- **Worst case**: giorno **354** (≈ Dec solstizio inverno), margine **-50.1 %**, E_solar 21.18 kWh vs E_cons 38.21 kWh.
+- **Best case**: giorno **171** (≈ giugno), margine **+107.4 %**, E_solar 80.45 kWh vs E_cons 38.21 kWh.
 
 ### 2.3 Distribuzione annuale dei verdetti
 
@@ -237,7 +237,7 @@ Tutti questi fattori andranno verificati al gate M+18 con flight-test subscale (
 
 ---
 
-## 7. Conclusioni — chiusura debito RSK-TEC-001
+## 7. Conclusioni: chiusura debito RSK-TEC-001
 
 **Debito chiuso** sul piano deterministico: simulazione completa 365 d × 5 architetture × sensitivity tornado prodotta.
 
@@ -291,4 +291,4 @@ Tutti questi fattori andranno verificati al gate M+18 con flight-test subscale (
 
 ---
 
-*Generato da `energy_balance_simulation.py` — Firmamento Technologies / Studio di Fattibilità HALE 2026-05-17.*
+*Generato da `energy_balance_simulation.py`, Firmamento Technologies / Studio di Fattibilità HALE 2026-05-17.*
