@@ -1,7 +1,7 @@
 # Audit Completezza vs Art. 41 D.Lgs. 36/2023 + Allegato I.7
 
-> **Studio di Fattibilità — Piattaforma Aerea HALE / VTOL per Aree Interne**
-> Firmamento Technologies — bando Cooding Prototypes (Coopfond / Legacoop)
+> **Studio di Fattibilità. Piattaforma Aerea HALE / VTOL per Aree Interne**
+> Firmamento Technologies, bando Cooding Prototypes (Coopfond / Legacoop)
 >
 > **Versione audit:** v1.0
 > **Data emissione:** 2026-05-17 (M+3)
@@ -31,9 +31,9 @@
 | **P.1** | **Quadro Esigenziale (QE)** ex All. I.7 Sez. I art. 1 | Vol. 1 Cap. 1 (`cap-01-inquadramento.md`) | ✅ **CONFORME** | §1.6 contiene mappatura esplicita art. 1 c. 1.a-b (obiettivi + KPI + fabbisogni); 8 criticità Aree Interne (§1.2.4); 6 obiettivi OB-01→OB-06 con KPI di gate; QE redatto direttamente da Firmamento come committente (legittimo per iniziativa privata, vedi §1.6); cross-ref PSNAI 2025 + SNAI |
 | **P.2** | **DOCFAP (Doc Fattibilità Alt. Progettuali)** ex All. I.7 Sez. II art. 2 | Vol. 2 Allegato A.3 (`A3-DOCFAP-Trade-Studies.md`) | ✅ **CONFORME** | 6 trade study formali (TS-PLATFORM-6A, TS-MATERIAL, TS-PROP-6B, TS-AVI-6A, TS-PAYLOAD-EO, TS-COMMS); ogni trade ha alternative valutate (incluso "do nothing" implicito), criteri + pesi, scoring matrix 1-10, sensitivity, raccomandazione, falsifying observation; §A.3.9 dichiara compliance esplicita ai 6 punti DOCFAP. **Caveat:** TS-PLATFORM-6A in fase di shift JOUAV→Tekever post audit; verdetto formale M+6 post quotation reali (DR-003) |
 | **P.3** | **DIP (Doc Indirizzo Progettazione)** ex All. I.7 Sez. II art. 3 | NON in scope (M+12+) | ✅ **ESCLUSIONE ESPLICITA** | Cap. 5 §5.9.1 dichiara DIP "Post-Studio (M+12+)"; Cap. 1 §1.6 nota che DIP è atto del committente per la fase esecutiva, fuori scope PFTE; coerente con prassi italiana (DIP è output operativo del RUP a valle del PFTE) |
-| **P.4** | **PE — Progetto Esecutivo** ex All. I.7 Sez. V | NON applicabile a PFTE | ✅ **ESCLUSIONE ESPLICITA** | Cap. 4 §4.1.5 dichiara out-of-scope esplicitamente (procurement esecutivo, lavori civili permanenti, contratti vincolanti deferred post-M+12) |
+| **P.4** | **PE (Progetto Esecutivo)** ex All. I.7 Sez. V | NON applicabile a PFTE | ✅ **ESCLUSIONE ESPLICITA** | Cap. 4 §4.1.5 dichiara out-of-scope esplicitamente (procurement esecutivo, lavori civili permanenti, contratti vincolanti deferred post-M+12) |
 
-### 1.2 Elaborati minimi PFTE — Allegato I.7 Sez. IV (1-14)
+### 1.2 Elaborati minimi PFTE, Allegato I.7 Sez. IV (1-14)
 
 | # | Elaborato PFTE | Posizione nello Studio | Coverage | Stato |
 |---|---|---|---|---|
@@ -86,7 +86,7 @@
 
 #### B. 65 SyR → ≥1 SsR figlio?
 
-> ◐ **COVERAGE 72% (sotto soglia G2 80%, sotto soglia G3 95%)**. A.1 §3 esplicita: dei 43 SyR delle famiglie decomponibili (F/P/O/S/E), 31 hanno SsR figlio diretto (72.1%). Le famiglie C (Compliance) e Cost (Cost & Business) non sono decomponibili a livello sottosistema (verifica per Inspection documentale / Analysis Quadro Economico — metodologicamente corretto NASA SE §4.3). Includendo tutte le 65 SyR il valore nominale è 55.4%.
+> ◐ **COVERAGE 72% (sotto soglia G2 80%, sotto soglia G3 95%)**. A.1 §3 esplicita: dei 43 SyR delle famiglie decomponibili (F/P/O/S/E), 31 hanno SsR figlio diretto (72.1%). Le famiglie C (Compliance) e Cost (Cost & Business) non sono decomponibili a livello sottosistema (verifica per Inspection documentale / Analysis Quadro Economico, metodologicamente corretto NASA SE §4.3). Includendo tutte le 65 SyR il valore nominale è 55.4%.
 >
 > **Action plan dichiarato in A.1 §5.4 + A.1 §3 Note**: 12 SyR da decomporre entro M+5-6 (8-12 ore engineer):
 > - SyR-F-006 (SAR notturno), SyR-F-009 (Enti Parco EO multi-stagionale), SyR-F-010 (NTN gNB)
@@ -126,16 +126,16 @@
 |---|---|---|---|
 | SyR-F-006 | F | PAY (IR notturno) + COMMS (telemedicina) | aerospace-SE |
 | SyR-F-009 | F | PAY (EO multi-stagionale) | aerospace-SE |
-| SyR-F-010 | F | PAY (gNB 5G NR-NTN, già SsR-PAY-004) — formalizzare link | telecom-ntn-payload-expert |
+| SyR-F-010 | F | PAY (gNB 5G NR-NTN, già SsR-PAY-004): formalizzare link | telecom-ntn-payload-expert |
 | SyR-P-002 | P | AERO (cruise + powertrain) | vtol-uas-specialist |
-| SyR-P-011 | P | AERO (MTOW 6A, già SsR-AERO-007) — formalizzare link | vtol-uas-specialist |
-| SyR-P-010 | P | COMMS (già SsR-COMMS-001/002) — formalizzare link | telecom-ntn-payload-expert |
+| SyR-P-011 | P | AERO (MTOW 6A, già SsR-AERO-007): formalizzare link | vtol-uas-specialist |
+| SyR-P-010 | P | COMMS (già SsR-COMMS-001/002): formalizzare link | telecom-ntn-payload-expert |
 | SyR-O-007 | O | AVI (ConOps + ENAV LoA) | avionics-gnc-engineer |
 | SyR-O-008 | O | AERO + PROP (maintenance program) | vtol-uas-specialist |
 | SyR-S-005 | S | AVI (failure rate FTA + FCS DAL-C) | avionics-gnc-engineer |
-| SyR-S-008 | S | GS (hangar ATEX) + PROP (BMS) — già SsR-GS-011/SsR-PROP-008 — formalizzare link | esg-sustainability-officer |
-| SyR-E-004 | E | (cross-cutting LCA, NASA SE §4.3 accetta no SsR) — accettato | esg-sustainability-officer |
-| SyR-E-005 | E | (cross-cutting EOL plan) — accettato | esg-sustainability-officer |
+| SyR-S-008 | S | GS (hangar ATEX) + PROP (BMS), già SsR-GS-011/SsR-PROP-008: formalizzare link | esg-sustainability-officer |
+| SyR-E-004 | E | (cross-cutting LCA, NASA SE §4.3 accetta no SsR): accettato | esg-sustainability-officer |
+| SyR-E-005 | E | (cross-cutting EOL plan): accettato | esg-sustainability-officer |
 
 Action effective: 9 SyR da decomporre + 3 da formalizzare link a SsR esistenti = effort 8-12 ore.
 
@@ -287,7 +287,7 @@ Il documento dichiara conformità a 7 famiglie normative principali. Verifica ev
 
 > ✅ **6/7 dichiarazioni hardcore (PFTE normative) hanno evidence chain documentata in repo (`fonti/`)**.
 >
-> ◐ **5/11 dichiarazioni in azione**: AS/EN 9100, GDPR DPIA, NIS2 ACN, Part-IS ISMS, AI Act conformity assessment richiedono azioni operative (assunzioni FTE, certificazioni, registrazioni) — coerente con stato M+3 PFTE bozza, gap esplicitato come urgente per gate G3.
+> ◐ **5/11 dichiarazioni in azione**: AS/EN 9100, GDPR DPIA, NIS2 ACN, Part-IS ISMS, AI Act conformity assessment richiedono azioni operative (assunzioni FTE, certificazioni, registrazioni), coerente con stato M+3 PFTE bozza, gap esplicitato come urgente per gate G3.
 >
 > ❌ **0 dichiarazioni senza evidence o bluff**: il documento NON dichiara compliance a cose che non ha.
 
@@ -343,41 +343,41 @@ Nessuno è showstopper strutturale; tutti sono **eseguibili entro il pre-G3** (M
 
 In ordine di priorità (urgenza × dipendenze gate G3):
 
-### 7.1 Priorità P0 (M+0-M+3 — già in ritardo se non in corso)
+### 7.1 Priorità P0 (M+0-M+3, già in ritardo se non in corso)
 
-1. **AC-01** — **Registrazione ACN preventiva NIS2** (RSK-REG-027) — Owner: CISO (da assumere) / CEO interim — Deadline: M+1
-2. **AC-02** — **Contatto diretto Coopfond per verifica bando Cooding 2026** (DR-002 / GAP-IG-2) — Owner: snai-funding — Deadline: M+1
-3. **AC-03** — **RFQ doppia parallela JOUAV + Tekever** (GAP-IG-4 / DR-003) — Owner: vtol-uas-specialist + procurement — Deadline: M+3
+1. **AC-01**, **Registrazione ACN preventiva NIS2** (RSK-REG-027). Owner: CISO (da assumere) / CEO interim. Deadline: M+1
+2. **AC-02**, **Contatto diretto Coopfond per verifica bando Cooding 2026** (DR-002 / GAP-IG-2). Owner: snai-funding. Deadline: M+1
+3. **AC-03**, **RFQ doppia parallela JOUAV + Tekever** (GAP-IG-4 / DR-003). Owner: vtol-uas-specialist + procurement. Deadline: M+3
 
-### 7.2 Priorità P1 (M+3-M+6 — completamento bozza M+6 = gate G2)
+### 7.2 Priorità P1 (M+3-M+6, completamento bozza M+6 al gate G2)
 
-4. **AC-04** — **Pre-application meeting ENAC** (GAP-IG-3 / DR-004) — Owner: aviation-regulatory — Deadline: M+3-6
-5. **AC-05** — **Assunzione 3 FTE senior**: CISO + DPO + Head of Regulatory Affairs (RSK-HR-002) — Owner: HR + CFO — Deadline: M+6
-6. **AC-06** — **Decomposizione 9 SyR + formalizzazione 3 link** per coverage SyR→SsR 80% G2 (GAP-IG-12) — Owner: aerospace-SE — Deadline: M+5-6 (effort 8-12 ore)
-7. **AC-07** — **Engagement DGR Regione Liguria + LoI preliminare** (GAP-IG-1) — Owner: snai-funding + CEO — Deadline: M+6
-8. **AC-08** — **Sopralluogo Pentema + documentazione fotografica** (GAP-IG-10) — Owner: program-manager — Deadline: M+5-6
-9. **AC-09** — **CAD planimetrie GS+hangar export PNG/PDF** (GAP-IG-8) — Owner: CAD designer — Deadline: M+6
-10. **AC-10** — **CME hangar opzione B + scale-up Y2-Y3** (GAP-IG-9) — Owner: snai-funding + procurement — Deadline: M+6
-11. **AC-11** — **Workshop pubblico comunità Pentema** (OQ-009 / preludio DPIA) — Owner: data-privacy + community manager — Deadline: M+3-6
-12. **AC-12** — **Workshop strutturato 10 cooperative Legacoop** — Owner: snai-funding + Fabrica capofila — Deadline: M+3-6
+4. **AC-04**, **Pre-application meeting ENAC** (GAP-IG-3 / DR-004). Owner: aviation-regulatory. Deadline: M+3-6
+5. **AC-05**, **Assunzione 3 FTE senior**: CISO + DPO + Head of Regulatory Affairs (RSK-HR-002). Owner: HR + CFO. Deadline: M+6
+6. **AC-06**, **Decomposizione 9 SyR + formalizzazione 3 link** per coverage SyR→SsR 80% G2 (GAP-IG-12). Owner: aerospace-SE. Deadline: M+5-6 (effort 8-12 ore)
+7. **AC-07**, **Engagement DGR Regione Liguria + LoI preliminare** (GAP-IG-1). Owner: snai-funding + CEO. Deadline: M+6
+8. **AC-08**, **Sopralluogo Pentema + documentazione fotografica** (GAP-IG-10). Owner: program-manager. Deadline: M+5-6
+9. **AC-09**, **CAD planimetrie GS+hangar export PNG/PDF** (GAP-IG-8). Owner: CAD designer. Deadline: M+6
+10. **AC-10**, **CME hangar opzione B + scale-up Y2-Y3** (GAP-IG-9). Owner: snai-funding + procurement. Deadline: M+6
+11. **AC-11**, **Workshop pubblico comunità Pentema** (OQ-009 / preludio DPIA). Owner: data-privacy + community manager. Deadline: M+3-6
+12. **AC-12**, **Workshop strutturato 10 cooperative Legacoop**. Owner: snai-funding + Fabrica capofila. Deadline: M+3-6
 
-### 7.3 Priorità P2 (M+6-M+9 — pre-gate G3)
+### 7.3 Priorità P2 (M+6-M+9, pre-gate G3)
 
-13. **AC-13** — **DPIA v1.0 + consultazione Garante preliminare** (GAP-IG-5 / DR-006) — Owner: data-privacy + DPO — Deadline: M+6-9
-14. **AC-14** — **ISMS Part-IS implementazione + pre-audit ENAC** (RSK-REG-019) — Owner: CISO + aviation-regulatory — Deadline: M+9
-15. **AC-15** — **AgID/PSN qualification cloud provider** (RSK-REG-021) — Owner: data-privacy + IT + DPO — Deadline: M+9
-16. **AC-16** — **Engagement RINA o equivalente per feasibility audit pre-G3** (GAP-IG-7 / OQ-VV-01) — Owner: program-manager — Deadline: M+9
-17. **AC-17** — **Dichiarazioni di conformità formali firmate** (AS/EN 9100, ISO 9001, ISO/IEC 27001) (GAP-IG-6) — Owner: quality manager + CEO — Deadline: M+9
-18. **AC-18** — **Screening geologico/sismico Pentema GS** (GAP-IG-11) — Owner: technical advisor + Comune Torriglia — Deadline: M+9
-19. **AC-19** — **Esclusione formale archeologia in Cap. 5** (GAP-IG-14) — Owner: aviation-regulatory + legal — Deadline: M+6
-20. **AC-20** — **Sliding timeline scenario quantificato Cap. 8** (GAP-IG-13) — Owner: financial-cfo — Deadline: M+6
+13. **AC-13**, **DPIA v1.0 + consultazione Garante preliminare** (GAP-IG-5 / DR-006). Owner: data-privacy + DPO. Deadline: M+6-9
+14. **AC-14**, **ISMS Part-IS implementazione + pre-audit ENAC** (RSK-REG-019). Owner: CISO + aviation-regulatory. Deadline: M+9
+15. **AC-15**, **AgID/PSN qualification cloud provider** (RSK-REG-021). Owner: data-privacy + IT + DPO. Deadline: M+9
+16. **AC-16**, **Engagement RINA o equivalente per feasibility audit pre-G3** (GAP-IG-7 / OQ-VV-01). Owner: program-manager. Deadline: M+9
+17. **AC-17**, **Dichiarazioni di conformità formali firmate** (AS/EN 9100, ISO 9001, ISO/IEC 27001) (GAP-IG-6). Owner: quality manager + CEO. Deadline: M+9
+18. **AC-18**, **Screening geologico/sismico Pentema GS** (GAP-IG-11). Owner: technical advisor + Comune Torriglia. Deadline: M+9
+19. **AC-19**, **Esclusione formale archeologia in Cap. 5** (GAP-IG-14). Owner: aviation-regulatory + legal. Deadline: M+6
+20. **AC-20**, **Sliding timeline scenario quantificato Cap. 8** (GAP-IG-13). Owner: financial-cfo. Deadline: M+6
 
-### 7.4 Priorità P3 (M+9-M+11 — chiusura gate G3)
+### 7.4 Priorità P3 (M+9-M+11, chiusura gate G3)
 
-21. **AC-21** — **5 hard conditions C1-C5 status review** (Cap. 10 §10.3.2) — Owner: CEO + program-manager — Deadline: M+10
-22. **AC-22** — **Studio v2.0 definitivo per gate G3** (RTM + Risk Reg + DPIA + V&V + Quadro Economico + Strategia finanziamenti) — Owner: full team — Deadline: M+10-11
-23. **AC-23** — **Audit semestrale 15 NegR Active** (pre-G3) — Owner: aerospace-SE — Deadline: M+9
-24. **AC-24** — **Presentazione formale CdA + Coopfond + Regione Liguria** — Owner: CEO — Deadline: M+11
+21. **AC-21**, **5 hard conditions C1-C5 status review** (Cap. 10 §10.3.2). Owner: CEO + program-manager. Deadline: M+10
+22. **AC-22**, **Studio v2.0 definitivo per gate G3** (RTM + Risk Reg + DPIA + V&V + Quadro Economico + Strategia finanziamenti). Owner: full team. Deadline: M+10-11
+23. **AC-23**, **Audit semestrale 15 NegR Active** (pre-G3). Owner: aerospace-SE. Deadline: M+9
+24. **AC-24**, **Presentazione formale CdA + Coopfond + Regione Liguria**. Owner: CEO. Deadline: M+11
 
 ---
 
@@ -385,9 +385,9 @@ In ordine di priorità (urgenza × dipendenze gate G3):
 
 ### 8.1 PFTE-compliant per gate G3?
 
-> **SÌ — PFTE-compliant a livello metodologico/strutturale per gate G3 interno (M+10/M+11)**.
+> **SÌ, PFTE-compliant a livello metodologico/strutturale per gate G3 interno (M+10/M+11)**.
 >
-> **NO — non investment-grade per presentazione esterna bandi pubblici (Cooding/PNRR/FESR) senza chiusura dei 14 action items (AC-01..AC-20)**.
+> **NO, non investment-grade per presentazione esterna bandi pubblici (Cooding/PNRR/FESR) senza chiusura dei 14 action items (AC-01..AC-20)**.
 
 ### 8.2 Evidenze a supporto del PFTE-compliant
 
@@ -432,16 +432,16 @@ Riprendendo i disclaimer già presenti nello Studio:
 
 ## 9. Riferimenti audit
 
-- `fonti/2023_0036.md` — D.Lgs. 36/2023 testo integrale + Allegati (Allegato I.7)
-- `riferimenti/analisi-fac-simili-IT.md` — mappatura PFTE art. 41 + ENAC AAM + DTA Puglia Grottaglie
-- `riferimenti/audit-rigore-epistemico.md` — 15 DR-research-closure (4 chiusi + 6 parziali + 4 aperti)
-- `riferimenti/DR-research-closure-M3.md` — desk research M+3 (DR-008/009/011/013 chiusi)
-- `studio-di-fattibilita/AUDIT-QUALITY-VOLUME-1.md` — Quality audit + scenario probabilities
-- `studio-di-fattibilita/AUDIT-REDTEAM-VOLUME-1.md` + `AUDIT-COMPETITOR-VOLUME-1.md` + `AUDIT-REGULATORY-VOLUME-1.md` — Red Team / Competitor Intelligence / Regulatory Adversary M+3
-- `studio-di-fattibilita/README.md` (Vol. 1) + `studio-di-fattibilita/allegati/README.md` (Vol. 2) — stato documentale aggregato
+- `fonti/2023_0036.md`: D.Lgs. 36/2023 testo integrale + Allegati (Allegato I.7)
+- `riferimenti/analisi-fac-simili-IT.md`: mappatura PFTE art. 41 + ENAC AAM + DTA Puglia Grottaglie
+- `riferimenti/audit-rigore-epistemico.md`: 15 DR-research-closure (4 chiusi + 6 parziali + 4 aperti)
+- `riferimenti/DR-research-closure-M3.md`: desk research M+3 (DR-008/009/011/013 chiusi)
+- `studio-di-fattibilita/AUDIT-QUALITY-VOLUME-1.md`: Quality audit + scenario probabilities
+- `studio-di-fattibilita/AUDIT-REDTEAM-VOLUME-1.md` + `AUDIT-COMPETITOR-VOLUME-1.md` + `AUDIT-REGULATORY-VOLUME-1.md`: Red Team / Competitor Intelligence / Regulatory Adversary M+3
+- `studio-di-fattibilita/README.md` (Vol. 1) + `studio-di-fattibilita/allegati/README.md` (Vol. 2): stato documentale aggregato
 - Tutti i capitoli `cap-00..11-*.md` (Vol. 1, 14.871 righe totali)
 - Tutti gli allegati `A1..A13/*.md` + `energy-balance/`, `financial-model/`, `vendor-rfq/`
 
 ---
 
-*Fine documento — Audit Completezza vs Art. 41 D.Lgs. 36/2023 + Allegato I.7 — v1.0 — 2026-05-17 — Firmamento Technologies*
+*Fine documento. Audit Completezza vs Art. 41 D.Lgs. 36/2023 + Allegato I.7. v1.0. 2026-05-17. Firmamento Technologies*

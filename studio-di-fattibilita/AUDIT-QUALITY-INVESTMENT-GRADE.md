@@ -1,8 +1,8 @@
-# Audit Quality Investment-Grade — M+3 Final Review
+# Audit Quality Investment-Grade. M+3 Final Review
 
 > **Data:** 17 maggio 2026 (M+3, proiezione M+11)
 > **Scope:** Volume 1 (Cap. 0-11) + Volume 2 Allegati (A1-A13 + Energy + Financial + Vendor RFQ) + Volume 3 Riferimenti (R1-R5) + 4 audit precedenti (RedTeam + Competitor + Regulatory + Quality).
-> **Mandato:** verifica investment-grade per 5 target audience — Coopfond/Legacoop, Regione Liguria/Protezione Civile, PNRR Aerospazio/MIMIT, EDF/Horizon/EU, Investor seed/Series A.
+> **Mandato:** verifica investment-grade per 5 target audience: Coopfond/Legacoop, Regione Liguria/Protezione Civile, PNRR Aerospazio/MIMIT, EDF/Horizon/EU, Investor seed/Series A.
 > **Boundary conditions non attaccabili:** B1 (service-only + cooperative Legacoop) + B2 (EU sovereign / "complementare IRIS²"). I 3 audit avversariali precedenti attaccano *come ci si arriva*, non gli obiettivi strategici.
 > **Stile:** brutalmente fattuale, no whitewashing.
 
@@ -13,13 +13,13 @@
 > **QUASI-INVESTMENT-GRADE per audience PA/cooperativa con 11 FIX VINCOLANTI; NON investment-grade per VC top-tier né per EDF/Horizon nello stato attuale M+3.**
 
 Detail:
-- **Coopfond / Legacoop**: **READY** (con caveat) — il documento è formalmente più rigoroso del 90% degli SDF aerospace italiani early-stage.
+- **Coopfond / Legacoop**: **READY** (con caveat), il documento è formalmente più rigoroso del 90% degli SDF aerospace italiani early-stage.
 - **Regione Liguria + PC**: **READY** sui contenuti (Pentema motivato, KPI quantitativi, ROI sociale), **NOT READY** sull'evidenza esterna (LoI mancante, pre-app ENAC mancante, DPIA non depositata).
 - **PNRR Aerospazio / MIMIT**: **PARTIALLY READY** (Cap. 5 NIS2/Part-IS coperto, Cap. 8 Quadro Economico art.41 OK), **non investment-grade** senza Cap. 5 §5.16 riscritto come pillar, non come addendum.
 - **EDF / Horizon Europe**: **NOT READY**. Il documento dichiara onestamente confidence low su TAM commerciale single-source (MarkNtel) + EuroHAPS Phase 2 non calendarizzata + CIRA partnership non firmata + framework EASA HAPS non aperto. La forma è impeccabile, le evidenze sono insufficienti.
 - **Investor VC / seed**: **NOT READY** in scenario "Series A presentation". Il modello finanziario è executable (161 formule, 10 sheet) ma il pricing Cluster D recalibrato post-audit (€60-90k vs €150k baseline) ha **declassificato** automaticamente il revenue Y1 da €355-405k a €220-260k, e P(Go pieno) = 5-15% scenario realistico (dichiarato). Un VC top-tier rigetta su questa base.
 
-**Forza unica del documento**: l'**onestà metodologica** (4 audit avversariali integrati con response e action items, scenario B2-relaxed esplicitato, base rate 0% HALE solari operativi dichiarata, sliding timeline §9.12, caveat post-DR-014 capital intensity). Questa è leva di credibilità verso audience sofisticate (DG DEFIS, RINA review, EIB DCF specialist) — ma può essere debolezza verso audience "pitch deck classico" (founder-mode VC) che si aspettano un documento puramente bullish.
+**Forza unica del documento**: l'**onestà metodologica** (4 audit avversariali integrati con response e action items, scenario B2-relaxed esplicitato, base rate 0% HALE solari operativi dichiarata, sliding timeline §9.12, caveat post-DR-014 capital intensity). Questa è leva di credibilità verso audience sofisticate (DG DEFIS, RINA review, EIB DCF specialist), ma può essere debolezza verso audience "pitch deck classico" (founder-mode VC) che si aspettano un documento puramente bullish.
 
 ---
 
@@ -67,7 +67,7 @@ Detail:
 
 ### 1.3 Verdetto Confidence Levels
 
-**ONESTÀ METODOLOGICA: 8.5/10**. La disciplina è applicata in modo eccezionale in Cap. 1, 3, 7, 11. È **lacunosa** in Cap. 0, 8, 9, 10 — proprio i capitoli più letti da audience investment-grade. **FIX OBBLIGATORIO**: applicare la stessa disciplina al Cap. 0 (sintesi esecutiva) + Cap. 10 (verdetto) + tabelle finanziarie Cap. 8.
+**ONESTÀ METODOLOGICA: 8.5/10**. La disciplina è applicata in modo eccezionale in Cap. 1, 3, 7, 11. È **lacunosa** in Cap. 0, 8, 9, 10, proprio i capitoli più letti da audience investment-grade. **FIX OBBLIGATORIO**: applicare la stessa disciplina al Cap. 0 (sintesi esecutiva) + Cap. 10 (verdetto) + tabelle finanziarie Cap. 8.
 
 ---
 
@@ -89,19 +89,19 @@ Detail:
 | Cap. 9 | 3 | 4-7 | ⚠️ **SOTTO TARGET** (3 < 4) |
 | Cap. 10 | 0 | 4-7 | ⚠️ **GAP CRITICO** (0 FO nel verdetto!) |
 | Cap. 11 | 22 | 4-7 | ✓✓ over-target |
-| **+ Addendum M+3** | **+10 FO-ADD** | — | ✓ chiude la lacuna |
+| **+ Addendum M+3** | **+10 FO-ADD** | n/a | ✓ chiude la lacuna |
 
 **Totale Volume 1**: ~135 FO dichiarate (+ 10 ADD = ~145). Eccede ampiamente il "target ~40" dichiarato in Cap. 0.11.
 
 ### 2.2 Qualità delle FO (operative, osservabili, datate)
 
 Sample analizzato:
-- **FO-NegR-Mkt-001** (Cap. 3): "linguaggio 'alternativa Starlink' appare in sito web / press release / pitch deck / social" — **operativo, osservabile, ma non datato** (manca threshold temporale). ⚠️ Minor.
-- **FO-ADD-04 pricing PA**: "se entro M+9 nessun contratto Regione Liguria firmato a pricing ≥ €100k/anno" — **operativo + osservabile + datato** ✓
-- **FO-ADD-10 Visione 10 anni**: 4 milestone Y4/Y6/Y8/Y9 con soglie ARR/funding — **operativo + datato** ✓
-- **§9.12.6 sliding timeline**: "slippage cumulato > 30% al M+12" — **operativo + osservabile + datato** ✓
-- **§8.6.2**: "FCF cumulato Y2 < -€2.5M attiva strategic review" — **operativo + osservabile + datato** ✓
-- **Cap. 10**: **0 FO esplicite nel verdetto** — il verdetto contiene scenari A-D con probabilità ma non FO di attivazione. ⚠️ **GAP CRITICO**.
+- **FO-NegR-Mkt-001** (Cap. 3): "linguaggio 'alternativa Starlink' appare in sito web / press release / pitch deck / social": **operativo, osservabile, ma non datato** (manca threshold temporale). ⚠️ Minor.
+- **FO-ADD-04 pricing PA**: "se entro M+9 nessun contratto Regione Liguria firmato a pricing ≥ €100k/anno": **operativo + osservabile + datato** ✓
+- **FO-ADD-10 Visione 10 anni**: 4 milestone Y4/Y6/Y8/Y9 con soglie ARR/funding: **operativo + datato** ✓
+- **§9.12.6 sliding timeline**: "slippage cumulato > 30% al M+12": **operativo + osservabile + datato** ✓
+- **§8.6.2**: "FCF cumulato Y2 < -€2.5M attiva strategic review": **operativo + osservabile + datato** ✓
+- **Cap. 10**: **0 FO esplicite nel verdetto**, il verdetto contiene scenari A-D con probabilità ma non FO di attivazione. ⚠️ **GAP CRITICO**.
 
 ### 2.3 Top-50 FO complessive identificabili
 
@@ -109,7 +109,7 @@ Sample analizzato:
 
 ### 2.4 Verdetto FO
 
-**RIGORE: 9/10**. La distribuzione è eccezionale per Cap. 1-3-5-7-8-11. **3 capitoli SOTTO TARGET** (Cap. 0, 4, 9). **Cap. 10 ha 0 FO esplicite** — questo è il **gap più visibile** per investment-grade. **FIX OBBLIGATORIO pre-G3**.
+**RIGORE: 9/10**. La distribuzione è eccezionale per Cap. 1-3-5-7-8-11. **3 capitoli SOTTO TARGET** (Cap. 0, 4, 9). **Cap. 10 ha 0 FO esplicite**: questo è il **gap più visibile** per investment-grade. **FIX OBBLIGATORIO pre-G3**.
 
 ---
 
@@ -128,13 +128,13 @@ Sample analizzato:
 **Risultato**: **18 occorrenze "complementare IRIS²" in Volume 1**. **20 occorrenze "alternativa Starlink"** ma **17/20 sono in formulazione NEGATIVA** ("NON usare", "mai", "linguaggio scartato", clausola NegR-Mkt-001).
 
 Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
-1. **Cap. 8 §0.0.3 row "Scenario EU sovereign full scale"**: "(100+ HAPS, **alternativa Starlink EU**)" — è dichiarato come scenario teorico capital intensity €10-30B con precondizione esterna IRIS²-equivalent. Tecnicamente in contesto interno tecnico, ma usato in tabella visibile. ⚠️ **MINOR: rimuovere parentetica "alternativa Starlink EU"** dato che è inutile e contraddice NegR-Mkt-001.
-2. **Cap. 7 §7.5.2** (riga 494): "Alternativa europea a Starlink" — appare in lista di **linguaggio da NON usare**. ✓ OK contesto.
-3. **Cap. 7 §7.12.2.667** caveat capital intensity: "Per scala 'alternativa Starlink EU' servono **€10-30B**" — usa virgolette per marcare distanza ma ancora ambiguo. ⚠️ **MINOR: riscrivere come "Per scala EU sovereign full scale"**.
+1. **Cap. 8 §0.0.3 row "Scenario EU sovereign full scale"**: "(100+ HAPS, **alternativa Starlink EU**)", è dichiarato come scenario teorico capital intensity €10-30B con precondizione esterna IRIS²-equivalent. Tecnicamente in contesto interno tecnico, ma usato in tabella visibile. ⚠️ **MINOR: rimuovere parentetica "alternativa Starlink EU"** dato che è inutile e contraddice NegR-Mkt-001.
+2. **Cap. 7 §7.5.2** (riga 494): "Alternativa europea a Starlink": appare in lista di **linguaggio da NON usare**. ✓ OK contesto.
+3. **Cap. 7 §7.12.2.667** caveat capital intensity: "Per scala 'alternativa Starlink EU' servono **€10-30B**": usa virgolette per marcare distanza ma ancora ambiguo. ⚠️ **MINOR: riscrivere come "Per scala EU sovereign full scale"**.
 
 ### 3.2 Pattern "operatore di servizi" vs "OEM aeronautico"
 
-- **"Operatore di servizi"**: 30+ occorrenze in Cap. 1, 2, 7, 11 — uso disciplinato ✓
+- **"Operatore di servizi"**: 30+ occorrenze in Cap. 1, 2, 7, 11, uso disciplinato ✓
 - **"OEM aeronautico" usato come termine di contrasto NEGATIVO**: 5 occorrenze (Cap. 1 r.21, Cap. 2 r.33, Cap. 4 r.35, Cap. 7 r.22, Cap. 3 r.510) ✓
 - **"Vendita di velivoli" / "no vendita asset"**: 13 occorrenze, sempre in contesto NEGATIVO ✓
 - **NegR-B-001** (Cap. 3.5.8): formalmente dichiarato come vincolo "Critical" con audit semestrale contratti ✓
@@ -153,7 +153,7 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 ## 4. Boundary conditions B1 + B2
 
-### 4.1 B1 (service-only + cooperative Legacoop) — Preservazione
+### 4.1 B1 (service-only + cooperative Legacoop). Preservazione
 
 | Cap. | B1 dichiarata in §0bis? | Coerenza interna? | Note |
 |---|:---:|---|---|
@@ -169,9 +169,9 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 | Cap. 10 | ✓ §10.7 "cosa non facciamo" | ✓ "Non vendiamo velivoli" #1 in lista | NegR-B-001 binding |
 | Cap. 11 | ✓ §11.0bis | ✓ B1 preservata fino Y10 | Anche scenario B2-relaxed mantiene B1 integralmente |
 
-**VERDETTO B1**: **preservazione perfetta in 11/11 capitoli**. La cooperatività è trattata come given strategico, **non** come "vantaggio competitivo". L'unica critica residua: Cap. 7 §7.5.1 "modello cooperativo come pilastro vantaggio competitivo" (rivisitato post-audit Cluster D §7.4.4-7) — il pilastro #2 è dichiarato non difendibile vs Cluster D. **FO-ADD-01** del FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md formalizza questo.
+**VERDETTO B1**: **preservazione perfetta in 11/11 capitoli**. La cooperatività è trattata come given strategico, **non** come "vantaggio competitivo". L'unica critica residua: Cap. 7 §7.5.1 "modello cooperativo come pilastro vantaggio competitivo" (rivisitato post-audit Cluster D §7.4.4-7), il pilastro #2 è dichiarato non difendibile vs Cluster D. **FO-ADD-01** del FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md formalizza questo.
 
-### 4.2 B2 (EU sovereign / complementare IRIS²) — Preservazione
+### 4.2 B2 (EU sovereign / complementare IRIS²). Preservazione
 
 | Cap. | B2 dichiarata in §0bis? | Linguaggio pubblico OK? | Confidence appropriato? |
 |---|:---:|:---:|---|
@@ -206,16 +206,16 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 ### 5.2 Gap critici identificati
 
-1. **R1 (Falsifiability) — Cap. 10 ha 0 FO esplicite**. ⚠️ FIX obbligatorio.
-2. **R4 (Confidence) — Cap. 0, 8, 9, 10 sotto-applicato**. ⚠️ FIX obbligatorio.
-3. **R5 (Pre-mortem) — Cap. 0 non ha pre-mortem aggregato**. Pre-mortem aggregato esiste in AUDIT-QUALITY-VOLUME-1.md §7 ma **non trasferito in Cap. 0**. ⚠️ FIX raccomandato.
-4. **R6 (Distinzione concetti) — Critica G-05 Red Team identifica confusione "feasibile / fattibile / operativo"** in Cap. 0, 6, 10. **Risposta nei capitoli: non implementata** — il documento sa che è un problema, lo dichiara, non lo corregge. ⚠️ FIX raccomandato Cap. 0 + Cap. 10.
-5. **R7 (Base rates) — Cap. 8 cita "base rate aerospace cost overrun 30-150%" (GAO-20-195G ref) ma applica contingency solo 15%**. Inconsistenza: l'output del scenario base CapEx Y1 €1.4M è 30% sotto la base rate aerospace. ⚠️ FIX raccomandato.
+1. **R1 (Falsifiability): Cap. 10 ha 0 FO esplicite**. ⚠️ FIX obbligatorio.
+2. **R4 (Confidence): Cap. 0, 8, 9, 10 sotto-applicato**. ⚠️ FIX obbligatorio.
+3. **R5 (Pre-mortem): Cap. 0 non ha pre-mortem aggregato**. Pre-mortem aggregato esiste in AUDIT-QUALITY-VOLUME-1.md §7 ma **non trasferito in Cap. 0**. ⚠️ FIX raccomandato.
+4. **R6 (Distinzione concetti): Critica G-05 Red Team identifica confusione "feasibile / fattibile / operativo"** in Cap. 0, 6, 10. **Risposta nei capitoli: non implementata**, il documento sa che è un problema, lo dichiara, non lo corregge. ⚠️ FIX raccomandato Cap. 0 + Cap. 10.
+5. **R7 (Base rates): Cap. 8 cita "base rate aerospace cost overrun 30-150%" (GAO-20-195G ref) ma applica contingency solo 15%**. Inconsistenza: l'output del scenario base CapEx Y1 €1.4M è 30% sotto la base rate aerospace. ⚠️ FIX raccomandato.
 
 ### 5.3 Steel-manning della posizione contraria
 
 - **Cap. 1 Red Team (5 critiche)**: ✓ steel-manning R1-R5 con risposte dettagliate
-- **Cap. 7 Red Team (6 critiche post-Cluster D)**: ✓ steel-manning su Starlink, modello cooperativo, TAM ottimismo, AALTO entry, MVP ambizioso, pricing inventato — tutti con **risposta + action item**
+- **Cap. 7 Red Team (6 critiche post-Cluster D)**: ✓ steel-manning su Starlink, modello cooperativo, TAM ottimismo, AALTO entry, MVP ambizioso, pricing inventato, tutti con **risposta + action item**
 - **Cap. 10 Red Team (6 critiche)**: ✓ steel-manning ma **Red Team critica G-08** dell'AUDIT-REDTEAM: "Tutte le risposte concludono in difesa del verdetto. Nessuna critica ha provocato modifica del verdetto. Pattern 'red team theater'". Questa critica è valida: post-audit M+3 il Cap. 10 ha aggiunto §10.0bis con HOLD CON PIANO RAFFORZATO come scenario base, **risolvendo la critica G-08** ✓ POST-FIX
 - **Cap. 8 Red Team (6 critiche)**: ✓ steel-manning su CapEx, Revenue, WACC, Phase B, Capital Intensity, Mix funding
 
@@ -317,9 +317,9 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 | Asset | Disponibilità | Executable? | Investment-grade? |
 |---|---|---|---|
-| **Modello finanziario Excel** | HALE-Financial-Model-M3.xlsx (22.7 KB, 10 sheet, 161 formule) | ✓ sì (formule attive su CapEx, OpEx, Revenue, Cash Flow, NPV/IRR, Quadro Economico) | ⚠️ Sensitivity + Scenarios + Cover sono **statici (0 formule)** — per VC top-tier non basta |
+| **Modello finanziario Excel** | HALE-Financial-Model-M3.xlsx (22.7 KB, 10 sheet, 161 formule) | ✓ sì (formule attive su CapEx, OpEx, Revenue, Cash Flow, NPV/IRR, Quadro Economico) | ⚠️ Sensitivity + Scenarios + Cover sono **statici (0 formule)**, per VC top-tier non basta |
 | **Build script Python** | build_financial_model.py (42 KB) | ✓ riproducibile | ✓ raro/positivo per audit |
-| **RTM** | RTM-v1.0.xlsx (67 KB, 14 sheet) | ✓ 28 StNeed + 65 SyR + 81 SsR + 22 IR + 15 NegR + 68 VR — coverage 100% | ✓ NASA SE compliant |
+| **RTM** | RTM-v1.0.xlsx (67 KB, 14 sheet) | ✓ 28 StNeed + 65 SyR + 81 SsR + 22 IR + 15 NegR + 68 VR, coverage 100% | ✓ NASA SE compliant |
 | **Risk Register** | RISK-REGISTER-v1.0.xlsx (98 KB, 116 rischi, top-25 narrato) | ✓ owner + deadline + mitigation + EWI + falsifying observation | ✓ ISO 31000 compliant |
 | **Computo Metrico** | A9-Computo-Metrico-Estimativo.md | ⚠️ md only, no xlsx | ✓ contenuto OK, format placeholder |
 | **PSC SORA preliminare** | A11-PSC-SORA-Safety-Case-Preliminary.md | ⚠️ md only, no compilato formale ENAC | ⚠️ format placeholder |
@@ -350,7 +350,7 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 | Capitolo | Pivot 6B propagato? | Citation DR-014? |
 |---|:---:|:---:|
-| Cap. 0 Sintesi Esecutiva | ⚠️ **NON propagato** — la sintesi parla ancora di "Phase B €5.5-11M R&D" senza menzionare il pivot prime contractor | ⚠️ no |
+| Cap. 0 Sintesi Esecutiva | ⚠️ **NON propagato**: la sintesi parla ancora di "Phase B €5.5-11M R&D" senza menzionare il pivot prime contractor | ⚠️ no |
 | Cap. 6 §6.0.1 | ✓ "valido solo se modello R&D include partnership prime contractor o consortium EU bid come elemento strutturale" | ✓ |
 | Cap. 8 §8.3.3 | ✓ caveat CRITICO post-DR-014 dettagliato (€50M-1B benchmark) | ✓ |
 | Cap. 8 §0.0.3 | ⚠️ tabella scenario "EU sovereign full scale" non riflette pivot | ⚠️ no |
@@ -362,7 +362,7 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 ### 8.2 B2-relaxed scenario presente in Cap. 11?
 
-**§11.6bis "Standalone IT Operator Small Fleet"** — ✓ ECCEZIONALMENTE INTEGRATO:
+**§11.6bis "Standalone IT Operator Small Fleet"**: ✓ ECCEZIONALMENTE INTEGRATO:
 - Trigger §11.6bis.2: 6 TRG-B2R-01..06 (3 Critical + 3 High)
 - Caratteristiche operative §11.6bis.3: ARR €30-80M, flotta 10-20 VTOL/MALE + 3-5 HAPS seasonal
 - KPI Y10 §11.6bis.4: 6 KPI quantitativi
@@ -374,7 +374,7 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 ### 8.3 HOLD CON PIANO RAFFORZATO come scenario base in Cap. 10?
 
-**§10.0bis "Revisione Verdetto post-Audit M+3"** — ✓ INTEGRATO COME SCENARIO BASE:
+**§10.0bis "Revisione Verdetto post-Audit M+3"**: ✓ INTEGRATO COME SCENARIO BASE:
 - Tabella §10.0bis.1: 4 scenari A/B/C/D con probabilità (5-15% / 45-60% / 20-30% / 5-10%)
 - **Scenario base = HOLD CON PIANO REGOLATORIO RAFFORZATO** (Scenario B, 45-60%)
 - Caveat probabilistico esplicito §10.3.2: "P(Go pieno) 15-35% non 60-80%"
@@ -392,9 +392,9 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 Lista numerata per portare il documento da "quasi-investment-grade" a "investment-grade":
 
-### Priorità 1 — Bloccanti per audience institutional (Coopfond + Regione + PNRR)
+### Priorità 1. Bloccanti per audience institutional (Coopfond + Regione + PNRR)
 
-1. **Riscrittura Cap. 0 (Sintesi Esecutiva)** — 4-6 ore
+1. **Riscrittura Cap. 0 (Sintesi Esecutiva)**: 4-6 ore
    - Aggiungere confidence per ogni numero in §0.11 (NPV, IRR, ARR, capital intensity)
    - Aggiungere §0.13 "Red Team check executive" con 3-5 critiche aggregate dei 4 audit
    - Aggiungere §0.14 "Pre-mortem aggregato top 5+1 driver di fallimento"
@@ -402,54 +402,54 @@ Lista numerata per portare il documento da "quasi-investment-grade" a "investmen
    - Richiamare sliding timeline §9.12 in §0.10 cronoprogramma
    - Aggiungere disclaimer epistemico finale (come Cap. 11.13 closing)
 
-2. **Cap. 10 — Top-5 Falsifying Observations del verdetto** — 1-2 ore
+2. **Cap. 10, Top-5 Falsifying Observations del verdetto**: 1-2 ore
    - Attualmente 0 FO esplicite (gap critico R1)
    - Aggiungere §10.10bis "FO del verdetto Cap. 10": almeno 5 FO operative + datate
    - Es. "Se al M+6 mix funding committed < 25%, attivazione Hold automatico"
    - Es. "Se al M+9 nessun contratto Regione firmato, Scenario D PIVOT STRATEGICO attivato"
 
-3. **Cap. 5 §5.16 — promozione da addendum a pillar** — 2-3 ore
+3. **Cap. 5 §5.16, promozione da addendum a pillar**: 2-3 ore
    - 15 showstopper regolatori aggiuntivi sono in §5.16 ma non integrati nel discorso generale del capitolo
    - Per investment-grade PNRR/EDF serve riscrittura Cap. 5 con i 15 showstopper come **categoria 4° del framework** (oltre a EASA/ENAC/AGCOM/Garante)
 
-### Priorità 2 — Bloccanti per VC / EDF / Horizon
+### Priorità 2. Bloccanti per VC / EDF / Horizon
 
-4. **Modello finanziario Excel — completamento Sensitivity + Scenarios + Monte Carlo** — 8-12 ore
-   - Sensitivity sheet attualmente statico (0 formule) — necessario tabulato data-table
-   - Scenarios sheet statico — formule che leggono da Assumptions
+4. **Modello finanziario Excel, completamento Sensitivity + Scenarios + Monte Carlo**: 8-12 ore
+   - Sensitivity sheet attualmente statico (0 formule), necessario tabulato data-table
+   - Scenarios sheet statico, formule che leggono da Assumptions
    - Monte Carlo: aggiungere foglio dedicato (5000 iterazioni) su 7 driver primari
    - DCF estesa Y6-Y10 (attualmente solo Y1-Y5 tabulato + estrapolazione testuale Y6-Y10)
 
-5. **Cap. 7 + Cap. 8 — recepimento Cluster D recalibrazione pricing** — 3-4 ore
+5. **Cap. 7 + Cap. 8, recepimento Cluster D recalibrazione pricing**: 3-4 ore
    - Cap. 7 §7.8.2 originale (€150k base) **non riscritto** post-audit Cluster D; il valore è declassato solo nel financial model README + nel Red Team risposta §7.13.6
    - Cap. 8 §8.6.1 cash flow Y1 €380k revenue non recalibrato a €220-260k post-Cluster D
    - **INCONSISTENZA NUMERICA** tra Cap. 7 / Cap. 8 / financial model README
 
-6. **Position paper "Italian Stratospheric Sovereignty"** — 6-8 ore (esterno allo Studio)
+6. **Position paper "Italian Stratospheric Sovereignty"**: 6-8 ore (esterno allo Studio)
    - Pre-condizione per credibilità DG DEFIS / DG CNECT
    - Cap. 11 §11.10.1 azione 2 obbligatoria entro M+12
    - Senza, narrazione "complementare IRIS²" è auto-narrativa (Critica 2.0.6 Red Team)
 
-### Priorità 3 — Raccomandate (non bloccanti ma alta utilità)
+### Priorità 3. Raccomandate (non bloccanti ma alta utilità)
 
-7. **TOP-50 FO consolidate in singolo documento** — 2-3 ore
+7. **TOP-50 FO consolidate in singolo documento**: 2-3 ore
    - Distribuire 145 FO nel Volume 1 + 10 FO ADD = ~155 FO totali
    - Per investment-grade serve **Master FO Table** consolidato per gate review
    - Format: FO-ID | Capitolo | Claim | Trigger | Milestone | Confidence | Action | Owner
 
-8. **Cap. 8 — base rate aerospace cost overrun applicata** — 1-2 ore
+8. **Cap. 8, base rate aerospace cost overrun applicata**: 1-2 ore
    - Contingency 15% sotto base rate 30-150%; aggiornare CapEx scenario realistico Y1 €1.3-3.0M (vs €0.97-1.96M nominale)
    - Aggiungere riga "Scenario realistico aerospace base rate" nelle tabelle §8.3.1 + §8.6.2
 
-9. **Cap. 11 §11.6bis.7 — Cap. 7 + Cap. 8 aggiornati a B2-relaxed come caso base Y6-Y10** — 4-6 ore
+9. **Cap. 11 §11.6bis.7, Cap. 7 + Cap. 8 aggiornati a B2-relaxed come caso base Y6-Y10**: 4-6 ore
    - Cap. 8 modello finanziario M+9 deve avere scenario B2-relaxed (ARR €30-80M Y8) come caso base operativo
    - Cap. 7 pricing target PA €100-200k/anno regione coerente con scala B2-relaxed (non scala B2 full)
 
-10. **Cap. 0 + Cap. 10 — kill criteria escalation matrix** — 1-2 ore
+10. **Cap. 0 + Cap. 10, kill criteria escalation matrix**: 1-2 ore
     - "Quanti Hold consecutivi prima del No-Go automatico" non dichiarato
     - Es. "3 Hold consecutivi su LoI Regione (M+13 / M+16 / M+20) = No-Go scale-up Liguria + pivot Piemonte"
 
-11. **Rimozione 2 minor "alternativa Starlink"** non-negative (Cap. 7 + Cap. 8) — 15 min
+11. **Rimozione 2 minor "alternativa Starlink"** non-negative (Cap. 7 + Cap. 8): 15 min
     - Cap. 8 §0.0.3: parentetica "(alternativa Starlink EU)" → rimuovere o sostituire con "EU sovereign full scale"
     - Cap. 7 §7.12.2.667: "Per scala 'alternativa Starlink EU'" → "Per scala EU sovereign full scale"
 
@@ -464,8 +464,8 @@ Lista numerata per portare il documento da "quasi-investment-grade" a "investmen
 | Audience | Verdetto oggi | Condizioni per migliorare |
 |---|:---:|---|
 | **Coopfond / Legacoop** | ✅ **GO** con caveat onesti | Workshop 10 coop M+6 + LoI Coopfond Cooding 2026 |
-| **Regione Liguria — istruttoria tecnica** | ✅ **GO** con caveat | Pre-app ENAC + LoI bilaterale + DPIA preliminare M+6 |
-| **Regione Liguria — DGR politica** | ⚠️ **NOT YET** | Necessaria evidenza esterna (LoI ENAC + 5 coop firmate + workshop Pentema) |
+| **Regione Liguria, istruttoria tecnica** | ✅ **GO** con caveat | Pre-app ENAC + LoI bilaterale + DPIA preliminare M+6 |
+| **Regione Liguria, DGR politica** | ⚠️ **NOT YET** | Necessaria evidenza esterna (LoI ENAC + 5 coop firmate + workshop Pentema) |
 | **Protezione Civile / ARPA Liguria** | ✅ **GO** con caveat | Convenzione operativa M+6 |
 | **Comunità Pentema (14 abitanti)** | ⚠️ **NOT YET** | Workshop pubblico + DPIA pubblica + delibera comunale |
 | **PNRR Aerospazio / MIMIT** | ⚠️ **PARTIALLY READY** | Cap. 5 riscritto + position paper sovranità + Cap. 8 PNRR target tracking |
@@ -502,7 +502,7 @@ Ma:
 - Per **audience VC top-tier "pitch deck classico"** il pattern di onestà brutale è **debolezza percepita**: P(Go pieno) 5-15% dichiarato apertamente non vende.
 - Per **audience EDF / DG DEFIS** mancano evidenze esterne (CIRA LoI, position paper, EuroHAPS Phase 2 calendarizzato).
 - Per **audience PNRR / MIMIT** Cap. 5 §5.16 in addendum invece che pillar è gap visibile.
-- Per **Comunità Pentema** (14 abitanti) il documento è strumento di lavoro tecnico, non di accettabilità sociale — manca workshop pubblico + DPIA pubblica.
+- Per **Comunità Pentema** (14 abitanti) il documento è strumento di lavoro tecnico, non di accettabilità sociale: manca workshop pubblico + DPIA pubblica.
 
 **Conclusione operativa per il management Firmamento**:
 - **Presentare oggi a**: Coopfond, Regione Liguria istruttoria tecnica, Protezione Civile, MIMIT in regime di engagement (non di formal application)
@@ -532,15 +532,15 @@ Ma:
 
 ## 12. Riferimenti audit
 
-- `AUDIT-REDTEAM-VOLUME-1.md` (417 righe) — red-team-skeptic
-- `AUDIT-COMPETITOR-VOLUME-1.md` (474 righe) — competitor-intelligence
-- `AUDIT-REGULATORY-VOLUME-1.md` (445 righe) — regulatory-adversary
-- `AUDIT-QUALITY-VOLUME-1.md` (295 righe) — quality consolidation M+3
-- `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` (226 righe) — 10 FO ADD
-- `riferimenti/DR-research-closure-M3.md` — 9/15 DR chiusi M+3
-- `riferimenti/audit-rigore-epistemico.md` — debito di rigore baseline
-- Presente file `AUDIT-QUALITY-INVESTMENT-GRADE.md` — **audit investment-grade M+3 consolidato**
+- `AUDIT-REDTEAM-VOLUME-1.md` (417 righe): red-team-skeptic
+- `AUDIT-COMPETITOR-VOLUME-1.md` (474 righe): competitor-intelligence
+- `AUDIT-REGULATORY-VOLUME-1.md` (445 righe): regulatory-adversary
+- `AUDIT-QUALITY-VOLUME-1.md` (295 righe): quality consolidation M+3
+- `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` (226 righe): 10 FO ADD
+- `riferimenti/DR-research-closure-M3.md`: 9/15 DR chiusi M+3
+- `riferimenti/audit-rigore-epistemico.md`: debito di rigore baseline
+- Presente file `AUDIT-QUALITY-INVESTMENT-GRADE.md`: **audit investment-grade M+3 consolidato**
 
 ---
 
-*Audit Quality Investment-Grade — Firmamento Technologies — Studio di Fattibilità HALE/VTOL — M+3 — 17 maggio 2026*
+*Audit Quality Investment-Grade. Firmamento Technologies. Studio di Fattibilità HALE/VTOL. M+3. 17 maggio 2026*
