@@ -181,7 +181,7 @@ Sintesi (dettaglio in Cap. 8 — Piano Economico-Finanziario):
 | Componente | Y1 (M+0 → M+12) | Y2 (M+12 → M+24) | Note |
 |---|---|---|---|
 | CapEx (asset, hangar, GS) | €700-1200k | €300-500k | Y2: GS mobile + payload aggiuntivi |
-| OpEx run-rate | €260-480k | €400-700k | Y2: +1 pilot + 1 sales + 1 data analyst |
+| OpEx run-rate RECONCILED post Cap. 5 §5.17 | **€1.05-1.30M (centro €1.18M)** Y1+ | €1.4-1.8M Y2 (+1 pilot + 1 sales + 1 data analyst + regulatory team mantenuto) | Y2: scale-up con regulatory team consolidato; legacy €260-480k/€400-700k NON sufficiente operativamente |
 | R&D Percorso 6B preliminare | €100-300k | €200-500k | Engineering + subscale design |
 | Engagement EASA / partnership R&D | €30-80k | €50-150k | CIRA MOU + EASA pre-engagement |
 | **Totale Fase 1** | **€1.1-2.1M** | **€1.0-1.9M** | Funding mix: vedi Cap. 8 |

@@ -512,7 +512,7 @@ Per ragioni geopolitiche dichiarate in `RESERVED-rischi-geopolitici.md` (RSK-GEO
 | **Key Resources** | Tangible: 1 VTOL JOUAV CW-30E (o eq), payload EO+IR, GS fissa+mobile, hangar Pentema, software pipeline. Intangible: autorizzazioni ENAC SORA, brand, rete cooperative, IP concept HALE |
 | **Key Activities** | Operazioni di volo BVLOS; pipeline acquisizione → processing → delivery; engagement istituzionale; sviluppo R&D Percorso 6B parallelo; gestione partnership cooperative |
 | **Key Partners** | Coopfond (finanziatore + sponsor istituzionale); Regione Liguria (anchor customer + sponsor); 10 cooperative pilota; D-Flight (USSP futuro); ENAV; CIRA (R&D partner per 6B); POLITO DIMEAS (accademico) |
-| **Cost Structure** | CapEx Y1: €700-1200k (vedi Cap. 8 dettaglio). OpEx Y2 run-rate: €260-480k/anno. Costo capitale fisso (asset + cert + privacy + training). Costo variabile per ora-volo: €200-500/ora |
+| **Cost Structure** | CapEx Y1: €700-1200k (vedi Cap. 8 dettaglio). **OpEx Y2 run-rate RECONCILED post Cap. 5 §5.17: €1.18M/anno centrale (range €1.05-1.30M)** — include OpEx tecnico €260-480k + Regulatory team mandatory €400-590k (CISO + DPO + Head Regulatory) + overhead €115-230k. Costo capitale fisso (asset + cert + privacy + training). Costo variabile per ora-volo: €200-500/ora |
 
 ### 7.6.2 BMC Percorso 6B — HALE R&D Phase B Y3-Y5
 

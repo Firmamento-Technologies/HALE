@@ -247,7 +247,11 @@ TOTALE Phase B baseline                       100%    ← €5.5-13.5M
 
 ## 8.5 OpEx Recurrente
 
-### 8.5.1 OpEx Percorso 6A run-rate Y2+ (post-MVP)
+### 8.5.1 OpEx Percorso 6A run-rate Y2+ (post-MVP) — RECONCILIATION baseline + regulatory team mandatory
+
+> **⚠️ Caveat reconciliation OpEx Y2 (M+3 post Cap. 5 §5.17 + Quality audit)**: la versione originale "**€260-480k/anno baseline**" **NON include** il costo del regulatory team obbligatorio identificato post-Cap. 5 §5.17 (5+1 critical regolatori aggiuntivi: Part-IS EASA Information Security, AgID/PSN, art. 50 Codice Contratti, NIS2, ENAV FL400+, EUROCONTROL HAPS). Il regulatory team **mandatory** richiede **+3 FTE** (CISO + DPO + Head Regulatory) per €0.6-0.7M/anno. **OpEx Y2 reconciled = €1.18M centrale (range €1.05-1.30M)**. Il baseline €260-480k è qui mantenuto in **legacy** solo come traccia "operazioni tecniche pure", NON come run-rate operativo dichiarato per scenario base.
+
+#### 8.5.1.A OpEx tecnico baseline (operazioni pure, legacy pre-regulatory team)
 
 | Voce | €k/anno | % | Note |
 |---|---|---|---|
@@ -259,16 +263,40 @@ TOTALE Phase B baseline                       100%    ← €5.5-13.5M
 | Connettività dati (SATCOM + cloud) | 5-15 | 2-3% | |
 | Costi sede / utility Pentema | 15-30 | 5-6% | Hangar + GS fissa |
 | Marketing + comm + partnership | 20-50 | 7-10% | Tradeshows + outreach + sales |
-| Spese legali / regolatorie / privacy | 10-25 | 3-5% | DPIA update + ENAC + AGCOM |
-| **TOTALE OpEx run-rate Y2** | **€260-480k/anno** | 100% | |
+| Spese legali / regolatorie / privacy (legacy, pre-Cap.5 §5.17) | 10-25 | 3-5% | DPIA update + ENAC + AGCOM base |
+| **Subtotale OpEx tecnico baseline (legacy)** | **€260-480k/anno** | — | NON sufficiente operativamente Y1+ |
 
-### 8.5.2 Evoluzione OpEx Y3-Y5 (scale-up)
+#### 8.5.1.B Regulatory team mandatory (post Cap. 5 §5.17, +3 FTE)
 
-| Anno | OpEx target | Driver scaling | Note |
+| Voce | €k/anno | Razionale Cap. 5 §5.17 |
+|---|---|---|
+| **CISO** (Chief Information Security Officer, 1.0 FTE) | 90-120 | Part-IS EASA + NIS2 registrazione + AgID/PSN hosting (RSK-REG-016, RSK-REG-018, RSK-REG-019) |
+| **DPO** (Data Protection Officer, 0.6-1.0 FTE outsource possibile) | 50-80 | GDPR + DPIA EO + condivisione cooperative + Garante Privacy (RSK-PRI-001 + DR-007) |
+| **Head Regulatory & Compliance** (1.0 FTE senior aerospace) | 110-140 | Coordination ENAC + EASA + AGCOM + ENAV + EUROCONTROL + Codice Contratti art. 50 + ATEX + RoHS + REACH (RSK-REG-017, -020, -021, -022, -023, -024, -025) |
+| Consulenze legali + audit certificatori (Bureau Veritas / RINA / DNV) | 80-120 | AS/EN 9100 + ISO 27001 + ISO 9001 + Part-IS audit recurring |
+| Software compliance (GRC tool, SAST/DAST, vulnerability mgmt) | 30-50 | Continuous monitoring NIS2 + Part-IS |
+| Spettro AGCOM canoni (se uplink/downlink licenze proprietarie) | 20-40 | Spectrum fee + ITU coordination (RSK-REG-026) |
+| Engagement EASA Innovation Network + RMT HAPS contributions | 20-40 | Special Condition HAPS dialogue ongoing (DR-005) |
+| **Subtotale Regulatory team mandatory** | **€400-590k/anno** | Centro €490k |
+
+#### 8.5.1.C OpEx Y2 RECONCILED (run-rate dichiarato per scenario base)
+
+| Componente | Worst (P10) | Base (P50) | Best (P90) |
 |---|---|---|---|
-| Y2 (Liguria consolidato) | €260-480k | Run-rate baseline | |
-| Y3 (multi-regione, flotta 3-5) | €600k-1.2M | +2-3 FTE + 2 GS mobile + +30% manutenzione | Scale-up regione |
-| Y4-Y5 (+ HALE subscale ops) | €1.2-2.5M | +Phase B R&D run-rate ~50% del CapEx Phase B annuale | OpEx aumentato per R&D HALE |
+| OpEx tecnico baseline (8.5.1.A) | €480k | €370k | €280k |
+| Regulatory team mandatory (8.5.1.B) | €590k | €490k | €400k |
+| Buffer overhead amministrativo + ISO audit | €230k | €170k | €115k (cumulativo, scala con FTE) |
+| **OpEx Y2 RECONCILED dichiarato** | **€1.30M** | **€1.18M** | **€1.05M** |
+
+### 8.5.2 Evoluzione OpEx Y3-Y5 (scale-up) — RECONCILED
+
+| Anno | OpEx target RECONCILED | Driver scaling | Note |
+|---|---|---|---|
+| Y2 (Liguria consolidato, regulatory team full) | **€1.05-1.30M** (centro €1.18M) | Baseline tecnico €260-480k + Regulatory team €400-590k + overhead €115-230k | Run-rate operativo Y2+ |
+| Y3 (multi-regione, flotta 3-5) | €1.5-2.2M | +2-3 FTE ops + 2 GS mobile + +30% manutenzione + regulatory team scale | Scale-up regione, regulatory team non scala 1:1 |
+| Y4-Y5 (+ HALE subscale ops) | €2.5-4.0M | +Phase B R&D run-rate ~50% del CapEx Phase B annuale + ulteriori regulatory (EASA HALE) | OpEx aumentato per R&D HALE + Part-IS HALE |
+
+> **Riconciliazione con financial-model README (Volume 2 Allegato A.7)**: il README dichiara "**OpEx Y2 €1.18M**". Questo numero è coerente con §8.5.1.C base scenario qui sopra. Il legacy €260-480k è stato superato a M+3 post Cap. 5 §5.17 audit.
 
 ---
 
