@@ -1134,18 +1134,20 @@ def coverage_radius_from_gain(
     bw_hz         : float = 20e6,
     snr_required_db : float = 11.0,
     ue_gt_db_per_k  : float = -25.6,
+    l_other_fixed_db : float = 10.0,
+    l_rain_db     : float = 0.0,
 ) -> float:
     """Estimate max cell radius [km] where SNR_required is met.
        Uses simple closed-form: solve C/N0 = SNR_req + 10log10(BW).
-       Other losses lumped: 10 dB."""
+       Other losses lumped (incl. rain fade for the band)."""
     eirp_dbw = eirp_other_dbw_const + g_tx_dbi
     bw_dbhz = 10.0 * math.log10(bw_hz)
     c_n0_req = snr_required_db + bw_dbhz
     # rearrange: L_total = EIRP + G/T + 228.6 - C/N0_req
     l_total_allow = eirp_dbw + ue_gt_db_per_k - BOLTZ_K_DBW - c_n0_req
-    # other lumped losses
-    l_other_fixed = 10.0
-    l_fs_allow = l_total_allow - l_other_fixed
+    l_fs_allow = l_total_allow - l_other_fixed_db - l_rain_db
+    if l_fs_allow <= 0:
+        return 0.0
     # solve L_fs = 20 log10(4 pi d f / c)
     lam = C_LIGHT / freq_hz
     d_m = lam * 10.0 ** (l_fs_allow / 20.0) / (4 * math.pi)
@@ -1263,30 +1265,36 @@ def plot_rain_fade_ITU() -> None:
 
 def plot_coverage_vs_gain() -> None:
     """Cell radius vs HAPS antenna gain (analytic coverage)."""
-    g_grid = np.linspace(5, 35, 50)
+    g_grid = np.linspace(5, 50, 60)
     fig, ax = plt.subplots(figsize=(10, 6))
 
+    # (label, freq, BW, rain_fade_db, ue_gt, color)
     configs = [
-        ("S-band 2.1 GHz",  2.1e9, 20e6),
-        ("700 MHz",         0.706e9, 10e6),
-        ("Ka-band 31 GHz",  31e9, 250e6),
+        ("S-band 2.1 GHz (UE handheld G/T=-25.6 dB/K)", 2.1e9, 20e6, 0.0, -25.6, "tab:blue"),
+        ("700 MHz 5G NR (UE G/T=-25.6 dB/K)",           0.706e9, 10e6, 0.0, -25.6, "tab:orange"),
+        ("Ka-band 31 GHz (Gateway G/T=+24 dB/K)",       31e9, 250e6, 4.0, 24.0, "tab:green"),
     ]
 
-    for label, f, bw in configs:
+    for label, f, bw, rain, gt, color in configs:
         radii = [coverage_radius_from_gain(20.0, g, freq_hz=f, bw_hz=bw,
-                                           snr_required_db=11.0)
+                                           snr_required_db=11.0,
+                                           ue_gt_db_per_k=gt,
+                                           l_rain_db=rain)
                  for g in g_grid]
-        ax.plot(g_grid, radii, linewidth=1.5, label=label)
+        ax.plot(g_grid, radii, linewidth=1.8, label=label, color=color)
 
-    ax.axhline(50, ls="--", color="orange", alpha=0.5,
+    ax.axhline(50, ls="--", color="red", alpha=0.6,
                label="Target copertura cella 50 km (HAPS service area)")
+    ax.axhline(25, ls=":",  color="purple", alpha=0.6,
+               label="Target spot beam 25 km (cella nadir)")
 
     ax.set_xlabel("HAPS antenna gain (per beam)  [dBi]")
     ax.set_ylabel("Cell ground radius  [km]")
-    ax.set_title("Copertura cella vs HAPS antenna gain (analitica)")
-    ax.legend(loc="upper left", fontsize=9)
+    ax.set_title("Copertura cella vs HAPS antenna gain (analitica)\n"
+                 "HAPS 20 km, BW vario, P_tx 25 W, SNR_req 11 dB")
+    ax.legend(loc="upper left", fontsize=8)
     ax.grid(True, alpha=0.3)
-    ax.set_ylim(0, 200)
+    ax.set_ylim(0, 250)
     fig.tight_layout()
     fig.savefig(PNG_COVERAGE, dpi=140)
     plt.close(fig)
@@ -1621,18 +1629,22 @@ def add_coverage_sheet(wb: Workbook) -> None:
     ws["A1"] = "Coverage analitica -- Raggio cella vs HAPS Antenna Gain"
     ws["A1"].font = Font(bold=True, size=14, color="1F4E78")
     ws["A2"] = ("Formula: closed-form solve da L_fs(d) tale che SNR_required = 11 dB. "
-                "HAPS alt 20 km, P_tx 25 W, BW 20 MHz / 250 MHz, UE G/T -25.6 dB/K.")
+                "HAPS alt 20 km, P_tx 25 W. S-band BW 20 MHz, 700 MHz BW 10 MHz, Ka BW 250 MHz.")
     ws["A2"].font = Font(italic=True, size=9)
-    ws["A4"] = "Antenna gain [dBi]"
-    ws["B4"] = "Cell radius S-band 2.1 GHz [km]"
-    ws["C4"] = "Cell radius 700 MHz [km]"
-    ws["D4"] = "Cell radius Ka 31 GHz [km]"
-    style_header(ws, 4, 4)
-    g_list = list(range(5, 41, 2))
-    for i, g in enumerate(g_list, start=5):
-        r_s = coverage_radius_from_gain(20.0, g, freq_hz=2.1e9, bw_hz=20e6)
-        r_700 = coverage_radius_from_gain(20.0, g, freq_hz=0.706e9, bw_hz=10e6)
-        r_ka = coverage_radius_from_gain(20.0, g, freq_hz=31e9, bw_hz=250e6)
+    ws["A3"] = ("S-band e 700 MHz: receiver = UE handheld (G/T=-25.6 dB/K). "
+                "Ka 31 GHz: receiver = Gateway (G/T=+24 dB/K, rain fade 4 dB).")
+    ws["A3"].font = Font(italic=True, size=9)
+    ws["A5"] = "Antenna gain [dBi]"
+    ws["B5"] = "Cell radius S-band 2.1 GHz [km]"
+    ws["C5"] = "Cell radius 700 MHz [km]"
+    ws["D5"] = "Cell radius Ka 31 GHz (Gateway) [km]"
+    style_header(ws, 5, 4)
+    g_list = list(range(5, 51, 2))
+    for i, g in enumerate(g_list, start=6):
+        r_s = coverage_radius_from_gain(20.0, g, freq_hz=2.1e9, bw_hz=20e6, ue_gt_db_per_k=-25.6)
+        r_700 = coverage_radius_from_gain(20.0, g, freq_hz=0.706e9, bw_hz=10e6, ue_gt_db_per_k=-25.6)
+        r_ka = coverage_radius_from_gain(20.0, g, freq_hz=31e9, bw_hz=250e6,
+                                         ue_gt_db_per_k=24.0, l_rain_db=4.0)
         ws.cell(row=i, column=1, value=g)
         ws.cell(row=i, column=2, value=round(r_s, 1))
         ws.cell(row=i, column=3, value=round(r_700, 1))

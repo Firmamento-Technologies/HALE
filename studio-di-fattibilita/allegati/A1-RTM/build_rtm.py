@@ -227,11 +227,12 @@ SYREQS = [
      "telecom-ntn-payload-expert", "M", "T", "Open", "Phase A", "-", "RSK-REG-005", "low",
      "AGCOM rifiuta licensing → declass UC-003 a opportunistico"),
     ("SyR-F-005", "Sistema [6B] esegue missioni HAPS persistenti quota 18-21 km, endurance ≥30 giorni continuativi (stagione estiva Y3)",
-     "Boundary B2 + visione strategica 6B", "StNeed-017,StNeed-023", "SyR", "StNeed-017,StNeed-023",
+     "Boundary B2 + visione strategica 6B + nodo italiano EU HAPS StNeed-021 + test bed GATB StNeed-022",
+     "StNeed-017,StNeed-021,StNeed-022,StNeed-023", "SyR", "StNeed-017,StNeed-021,StNeed-022,StNeed-023",
      "propulsion-energy-engineer", "H", "A+T", "Open", "Phase B", "TS-PROP-6B", "RSK-TEC-001", "low",
      "Energy balance simulation worst-case mostra <0% margine → seasonal-only fallback"),
-    ("SyR-F-006", "Sistema [6A] supporta SAR persone disperse con osservazione aerea persistente >2h + payload IR",
-     "Supporto StNeed-004", "StNeed-004", "SyR", "StNeed-004",
+    ("SyR-F-006", "Sistema [6A] supporta SAR persone disperse con osservazione aerea persistente >2h + payload IR + telemedicina rurale link UC-008",
+     "Supporto StNeed-004 + StNeed-019 ASL3 telemedicina", "StNeed-004,StNeed-019", "SyR", "StNeed-004,StNeed-019",
      "aerospace-SE", "M", "D", "Open", "Phase A", "-", "-", "medium",
      "Field test SAR scenario VVF mostra payload IR insufficiente notturno → re-spec"),
     ("SyR-F-007", "Sistema [6A] produce ortomosaici multispettrali NDVI/NDRE per cooperative agricole, GSD ≤8cm @ 500m AGL, frequenza quindicinale",
@@ -319,7 +320,8 @@ SYREQS = [
      "vtol-uas-specialist", "M", "D", "Open", "Phase A", "-", "-", "medium",
      "Turnaround reale >60 min → revisione spare batteries + crew training"),
     ("SyR-O-005", "[6A] Crew composition: 1 PIC qualificato + 1 observer payload + 1 ground tech, training certificato ENAC",
-     "Compliance ENAC + sicurezza StNeed-011 + HR StNeed-026", "StNeed-011,StNeed-026 + Reg.APR Ed.3", "SyR", "StNeed-011,StNeed-026",
+     "Compliance ENAC + sicurezza + HR StNeed-026 + Comune Torriglia StNeed-018",
+     "StNeed-011,StNeed-026,StNeed-018 + Reg.APR Ed.3", "SyR", "StNeed-011,StNeed-026,StNeed-018",
      "vtol-uas-specialist", "H", "I", "Open", "Pre-A", "-", "-", "high",
      "Mancanza PIC qualificati EU disponibili → recruitment 6-9 mesi + slip"),
     ("SyR-O-006", "[6A] Operations Manual completo + SOPs operativi + Emergency Procedures redatti entro G3 (M+10)",
@@ -401,7 +403,7 @@ SYREQS = [
      "aviation-regulatory-counsel", "H", "I", "Open", "Pre-A", "-", "-", "high",
      "SORA application bocciata → revisione + slip M+12"),
     ("SyR-C-003", "Conformità GDPR + D.Lgs.196/2003 novellato + DPIA per casi d'uso high-risk",
-     "StNeed-014 + Cap.5.6", "StNeed-014", "SyR", "StNeed-014",
+     "StNeed-014 + StNeed-008 + Cap.5.6", "StNeed-014,StNeed-008", "SyR", "StNeed-014,StNeed-008",
      "data-privacy-counsel", "H", "I", "Open", "Pre-A", "-", "RSK-TEC-006,RSK-REG-016", "high",
      "DPIA bocciata Garante → sospensione UC-001/002/004"),
     ("SyR-C-004", "Conformità NIS2 + D.Lgs.138/2024 + ISMS Part-IS (Reg.UE 2023/203) entro M+9",
@@ -454,8 +456,8 @@ SYREQS = [
      "Sostenibilità MVP + StNeed-016", "StNeed-016", "SyR", "StNeed-016",
      "financial-cfo-analyst", "H", "D", "Open", "Phase A", "-", "RSK-FIN-003", "medium",
      "Revenue Y1 <€100k → revisione drastica MVP scope"),
-    ("SyR-Cost-004", "Modello servizio ricorrente (DaaS/IaaS/canone) — no vendita asset",
-     "StNeed-015 + boundary B1", "StNeed-015 + B1", "SyR", "StNeed-015",
+    ("SyR-Cost-004", "Modello servizio ricorrente (DaaS/IaaS/canone) — no vendita asset + governance trasparente verso Coopfond",
+     "StNeed-015 + StNeed-028 governance + boundary B1", "StNeed-015,StNeed-028 + B1", "SyR", "StNeed-015,StNeed-028",
      "business-model-strategist", "H", "I", "Open", "Pre-A", "-", "-", "boundary",
      "Firma contratto vendita asset → violazione B1 + NegR-B-001"),
     ("SyR-Cost-005", "Funding mix Y1: ≥60% commitment formale entro G3 (M+10)",
@@ -693,11 +695,887 @@ SSR_AVI = [
 ]
 
 
+# =============================================================================
+# DATA — SUBSYSTEM REQUIREMENTS - PAY (Payload, 13 SsR)
+# =============================================================================
+
+SSR_PAY = [
+    ("SsR-PAY-001", "[6A] Sensore RGB high-res Phase One iXM 100 o equivalente, GSD ≤8cm @ 500m AGL",
+     "SyR-F-001 + SyR-P-007", "SyR-F-001,SyR-P-007", "SsR", "SyR-F-001,SyR-P-007",
+     "earth-observation-expert", "H", "I+T", "Open", "Phase A", "TS-PAYLOAD-EO", "-", "medium",
+     "GSD reale >15cm in test fly-and-measure → re-spec sensor"),
+    ("SsR-PAY-002", "[6A] Sensore IR LWIR (8-14 µm) NEdT ≤50 mK, GSD termico ≤5m @ 500m AGL",
+     "SyR-F-003 antincendio + SyR-P-008", "SyR-F-003,SyR-P-008", "SsR", "SyR-F-003,SyR-P-008",
+     "earth-observation-expert", "H", "I+T", "Open", "Phase A", "TS-PAYLOAD-EO", "RSK-OPS-002", "medium",
+     "NEdT reale >80 mK → re-spec IR sensor"),
+    ("SsR-PAY-003", "[6A] LTE eNodeB tattico (Athonet/Druid), potenza ≤50 W RF, banda licenziata o ISM emergenza",
+     "SyR-F-004 + AGCOM compliance", "SyR-F-004", "SsR", "SyR-F-004",
+     "telecom-ntn-payload-expert", "M", "T", "Open", "Phase A", "-", "RSK-REG-005", "low",
+     "AGCOM nega licensing → eNodeB removed → UC-003 declass"),
+    ("SsR-PAY-004", "[6B] gNodeB 5G NR-NTN Rel-17/18 con beamforming digitale, 8-32 beams, banda S-band o 700 MHz",
+     "SyR-F-010 + Cap.5.5.3 + StNeed-007", "SyR-F-010,Cap.5.5.3", "SsR", "SyR-F-010",
+     "telecom-ntn-payload-expert", "M", "A+T", "Open", "Phase B", "TS-COMMS", "-", "low",
+     "WRC-27 non assegna banda HAPS IT → payload telecom Phase B rinviato"),
+    ("SsR-PAY-005", "[6A] Payload gimbal stabilizzato 3-asse con motion compensation per imagery senza blur",
+     "Quality imagery + GSD constancy", "SyR-P-007,SyR-P-008", "SsR", "Multiple SyR-P",
+     "earth-observation-expert", "H", "T", "Open", "Phase A", "-", "-", "high",
+     "Motion blur in test cruise speed → re-spec gimbal"),
+    ("SsR-PAY-006", "[6A] Sensore multispettrale NDVI/NDRE (4-band: RGN+NIR) per UC-005 cooperative agricole",
+     "SyR-F-007 + StNeed-006", "SyR-F-007", "SsR", "SyR-F-007",
+     "earth-observation-expert", "M", "I+T", "Open", "Phase A", "TS-PAYLOAD-EO", "-", "low",
+     "UC-005 pricing non scalabile → multispettrale opzionale Y2"),
+    ("SsR-PAY-007", "[6A] Edge ML pipeline IR per hotspot detection + auto-anonimizzazione (no biometric)",
+     "SyR-F-003 + SyR-C-003 + SyR-C-007 AI Act", "SyR-F-003,SyR-C-003,SyR-C-007", "SsR", "SyR-F-003,SyR-C-007",
+     "earth-observation-expert", "H", "D+T", "Open", "Phase A", "-", "RSK-REG-016", "medium",
+     "Pipeline ML rileva volti senza anonimizzazione → violazione AI Act"),
+    ("SsR-PAY-008", "[6A] Storage onboard ≥1 TB SSD aerospace-grade per intera sortie 8h",
+     "Data capture intera missione", "SsR-PAY-001 + SyR-P-001", "SsR", "SyR-P-001",
+     "earth-observation-expert", "M", "I", "Open", "Phase A", "-", "-", "high",
+     "Storage <500 GB → store-and-forward limited a 4h"),
+    ("SsR-PAY-009", "[6A+6B] Modular ICD payload (electrical+mechanical+data) per swap rapido EO/IR/telecom",
+     "Modularità + ConOps multi-mission", "IR-PAY-001 + SyR-F-001", "SsR", "SyR-F-001",
+     "earth-observation-expert", "H", "I", "Open", "Phase A", "-", "RSK-TEC-004", "medium",
+     "ICD non-standard tra vendors → integrazione 30-min non possibile"),
+    ("SsR-PAY-010", "[6A] LiDAR airborne TerraSAR opzionale per UC-001 frane + UC-004 mapping infrastrutture",
+     "Opzionale Y2 + persistence frane", "SyR-F-001,SyR-F-008 + UC-001/004", "SsR", "SyR-F-001",
+     "earth-observation-expert", "M", "I+T", "Open", "Phase A+", "TS-PAYLOAD-EO", "-", "medium",
+     "LiDAR cost >€80k unit → opzionale Y2 only"),
+    ("SsR-PAY-011", "[6B] Payload EO multispettrale large-area continental scanning (swath ≥50 km @ 20 km altitude)",
+     "Persistent monitoring Liguria/IT Phase B+", "SyR-F-005 + visione 10 anni", "SsR", "SyR-F-005",
+     "earth-observation-expert", "M", "A+T", "Open", "Phase B+", "-", "-", "low",
+     "Swath reale <30 km → multiple passes per day required"),
+    ("SsR-PAY-012", "[6A] Payload tracking + telemetry beacon Iridium per recovery in caso crash",
+     "Recovery + safety", "SyR-S-002 + best practice", "SsR", "SyR-S-002",
+     "earth-observation-expert", "M", "I+T", "Open", "Phase A", "-", "-", "high",
+     "Beacon non si attiva post-crash test → re-spec hardware"),
+    ("SsR-PAY-013", "[6A] No-onboard biometric ML compliant NegR-Reg-002 + AI Act",
+     "NegR-Reg-002 + SyR-C-007", "NegR-Reg-002,SyR-C-007", "SsR", "SyR-C-007",
+     "earth-observation-expert", "H", "I", "Active", "Phase A", "-", "RSK-REG-016", "high",
+     "Pipeline ML onboard identification individuale >1:N → violazione AI Act"),
+]
+
+
+# =============================================================================
+# DATA — SUBSYSTEM REQUIREMENTS - COMMS (Comunicazioni & Link, 11 SsR)
+# =============================================================================
+
+SSR_COMMS = [
+    ("SsR-COMMS-001", "Link budget service link 2.6 GHz @ 25 km slant range: SNR ≥11 dB con disponibilità 99.5% (rain fade ITU-R P.618-14 zona K)",
+     "SyR-F-001 + skill link-budget-calculator", "SyR-F-001", "SsR", "SyR-F-001",
+     "telecom-ntn-payload-expert", "H", "A", "Open", "Phase A", "-", "-", "high",
+     "Link budget rivisto mostra disponibilità <99% in rain fade reale → re-design RF chain"),
+    ("SsR-COMMS-002", "Downlink dati 10 Mbps + thumbnail in ≤30s per alert hotspot (SyR-F-003)",
+     "SyR-F-003 antincendio latency", "SyR-F-003", "SsR", "SyR-F-003",
+     "telecom-ntn-payload-expert", "H", "A+T", "Open", "Phase A", "-", "-", "medium",
+     "Latency real-world >60s → revisione RF/SATCOM mix"),
+    ("SsR-COMMS-003", "Uplink C2 ≤5 Mbps con latency <500ms per remote piloting",
+     "Remote piloting + SyR-S-001", "SyR-S-001 + best practice", "SsR", "SyR-S-001",
+     "telecom-ntn-payload-expert", "H", "T", "Open", "Phase A", "-", "-", "high",
+     "Latency real-world >1s → revisione modulation/coding"),
+    ("SsR-COMMS-004", "SATCOM Iridium Certus secondary backup C2 + low-bandwidth downlink thumbnails",
+     "Backup C2 in shadow zones Pentema", "SsR-AVI-002", "SsR", "SsR-AVI-002",
+     "telecom-ntn-payload-expert", "H", "T", "Open", "Phase A", "-", "-", "high",
+     "Iridium throughput <100 kbps → re-spec satellite link"),
+    ("SsR-COMMS-005", "[6B] Feeder link 6B HALE-to-gateway Ka-band ≥100 Mbps con beamforming adattivo",
+     "Phase B telecom backhaul", "SyR-F-010", "SsR", "SyR-F-010",
+     "telecom-ntn-payload-expert", "M", "A+T", "Open", "Phase B+", "TS-COMMS", "-", "low",
+     "Ka-band rain fade Liguria estate → re-spec diversity"),
+    ("SsR-COMMS-006", "Crypto stack AES-256 + DTLS over UDP + perfect forward secrecy",
+     "SyR-C-004 NIS2 + SyR-S-006", "SyR-C-004,SyR-S-006", "SsR", "SyR-S-006",
+     "telecom-ntn-payload-expert", "H", "I+T", "Open", "Phase A", "-", "RSK-TEC-005", "medium",
+     "Crypto audit rileva vulnerability → re-design"),
+    ("SsR-COMMS-007", "Frequency coordination AGCOM + ENAC per banda C2 + payload telecom",
+     "StNeed-013 + Cap.5.5", "StNeed-013", "SsR", "StNeed-013",
+     "telecom-ntn-payload-expert", "H", "I", "Open", "Pre-A", "-", "RSK-REG-005", "high",
+     "AGCOM rifiuta banda → re-design RF chain"),
+    ("SsR-COMMS-008", "Store-and-forward fallback in caso link assente (>5 min)",
+     "Resilience link drop + SyR-S-001", "SyR-S-001 + best practice", "SsR", "SyR-S-001",
+     "telecom-ntn-payload-expert", "M", "T", "Open", "Phase A", "-", "-", "high",
+     "Store-and-forward mostra data loss in test → re-design buffer"),
+    ("SsR-COMMS-009", "Antenne C2 + payload mounted con coverage 360° omnidirectional (low gain) + 1 directional high-gain",
+     "Coverage all-attitude + range", "SsR-COMMS-001,SsR-AVI-002", "SsR", "SsR-COMMS-001",
+     "telecom-ntn-payload-expert", "H", "T", "Open", "Phase A", "-", "-", "medium",
+     "Coverage shadow >10% sortie → re-spec antenna pattern"),
+    ("SsR-COMMS-010", "ITU-R coordination per WRC-27 banda HAPS (preparatory engagement)",
+     "StNeed-013 + Cap.5.5.3 + SyR-C-011", "StNeed-013,SyR-C-011", "SsR", "StNeed-013",
+     "telecom-ntn-payload-expert", "M", "I", "Open", "Phase B", "-", "-", "low",
+     "WRC-27 non assegna banda HAPS → Phase B telecom rinviato"),
+    ("SsR-COMMS-011", "[6A+6B] No-CN crypto/RF components compliance NegR-Tech-002 + Golden Power",
+     "NegR-Tech-002 + sovranità", "NegR-Tech-002", "SsR", "StNeed-020",
+     "telecom-ntn-payload-expert", "H", "I", "Active", "Pre-A", "-", "RSK-SUP-001", "medium",
+     "Vendor CN bannato → re-source EU/US"),
+]
+
+
+# =============================================================================
+# DATA — SUBSYSTEM REQUIREMENTS - GS (Ground Segment, 11 SsR)
+# =============================================================================
+
+SSR_GS = [
+    ("SsR-GS-001", "Ground Station fissa Pentema: coperatura visiva sito operazione + connettività backup (4G/SATCOM); support PIC + payload operator",
+     "SyR-O-001/002 + StNeed-018", "SyR-O-001,SyR-O-002,StNeed-018", "SsR", "SyR-O-001",
+     "aerospace-SE", "H", "I+D", "Open", "Phase A", "-", "-", "high",
+     "Site Pentema non offre line-of-sight + connectivity → relocate GS"),
+    ("SsR-GS-002", "Cloud/data hosting Italia/EU (Aruba/OVH/PSN-listed), GDPR+NIS2 compliant, no cloud US/CN default",
+     "SyR-C-003/004/008 + NegR-Geo-001 + NegR-Tech-003", "Multiple SyR-C + NegR", "SsR", "SyR-C-008",
+     "data-privacy-counsel", "H", "I", "Open", "Phase A", "-", "RSK-REG-021", "high",
+     "Imagery EO in cloud US senza DPIA → violazione GDPR + NIS2"),
+    ("SsR-GS-003", "Pipeline processing imagery: anonimizzazione automatica edge-level (blur volti/targhe), GIS-ready output entro 24h (non-emergenza) o 30 min (emergenza)",
+     "SyR-C-003 GDPR + StNeed-008 + SyR-C-007 AI Act", "SyR-C-003,StNeed-008,SyR-C-007", "SsR", "SyR-C-003,SyR-C-007",
+     "data-privacy-counsel", "H", "D", "Open", "Phase A", "-", "RSK-TEC-006", "medium",
+     "Anonimizzazione fallisce su >5% immagini → DPIA bocciata"),
+    ("SsR-GS-004", "Ground Station mobile (vehicle-mounted) per operazioni emergenza fuori-base",
+     "ConOps emergenza + SyR-O-002", "SyR-O-002", "SsR", "SyR-O-002",
+     "aerospace-SE", "M", "I+D", "Open", "Phase A", "-", "-", "medium",
+     "GS mobile non operativa entro 1h → revisione mobility"),
+    ("SsR-GS-005", "Console PIC remoto con HMI standard ICAO + display traffic + payload feed real-time",
+     "Operatività + safety SyR-S-001", "SyR-O-001,SyR-S-001", "SsR", "SyR-S-001",
+     "avionics-gnc-engineer", "H", "I+D", "Open", "Phase A", "-", "-", "high",
+     "HMI non usabile in scenari stress → re-design UX"),
+    ("SsR-GS-006", "Mission planning software + integrazione NOTAM + meteo + ENAV airspace",
+     "Pre-flight ConOps + StNeed-022/024", "ConOps + ENAV", "SsR", "SyR-O-001",
+     "aerospace-SE", "M", "I+D", "Open", "Phase A", "-", "-", "medium",
+     "ENAV API integration non disponibile → manual workaround"),
+    ("SsR-GS-007", "Data delivery portal cliente (PA, cooperative) con accesso role-based + audit log + GDPR-compliance",
+     "Data delivery + StNeed-001/005/006", "Multiple StNeeds + SyR-C-003", "SsR", "SyR-C-003",
+     "data-privacy-counsel", "H", "I", "Open", "Phase A", "-", "RSK-REG-021", "high",
+     "Audit log non-conforme GDPR Art.30 → revisione architettura"),
+    ("SsR-GS-008", "Backup mission control offsite (TBD location, ≥50 km da Pentema)",
+     "Resilience operativa + safety", "SyR-O-001 + best practice", "SsR", "SyR-O-001",
+     "aerospace-SE", "M", "I", "Open", "Phase B", "-", "-", "low",
+     "Backup site non identificato → revisione resilience plan"),
+    ("SsR-GS-009", "[6B] Mission Operations Center 24/7 per HALE perennial (Y3+)",
+     "Operatività 6B + StNeed-024", "SyR-F-005,StNeed-024", "SsR", "SyR-F-005",
+     "aerospace-SE", "M", "I+D", "Open", "Phase B", "-", "-", "low",
+     "MOC 24/7 OpEx >€500k/anno → revisione staffing model"),
+    ("SsR-GS-010", "ISMS Part-IS + ISO 27001 alignment + CISO ownership operational",
+     "SyR-C-004 NIS2 + Part-IS + StNeed-020", "SyR-C-004,StNeed-020", "SsR", "SyR-C-004",
+     "aviation-regulatory-counsel", "H", "I+A", "Open", "Phase A", "-", "RSK-REG-019,RSK-REG-027", "high",
+     "ACN audit ISMS gap rilevato → operations on hold"),
+    ("SsR-GS-011", "Ground Equipment CE marking Direttiva Macchine + sicurezza ATEX hangar",
+     "SyR-C-009 + SyR-S-008", "SyR-C-009,SyR-S-008", "SsR", "SyR-C-009",
+     "aviation-regulatory-counsel", "M", "I", "Open", "Phase B", "-", "RSK-REG-022,RSK-REG-029", "medium",
+     "Ente notificato non rilascia CE → ground ops bloccate"),
+]
+
+
+# =============================================================================
+# DATA — INTERFACE REQUIREMENTS (22 IR)
+# =============================================================================
+
+IRREQS = [
+    ("IR-PAY-001", "Interfaccia payload-bus: 1 Gbps Ethernet + 28 VDC ≤80 W + RS-422 backup",
+     "Compatibilità payload modulare + ICD swap",
+     "SsR-PAY-009 + ICD prelim", "IR", "SsR-PAY-009",
+     "aerospace-SE", "H", "I+T", "Open", "Phase A", "TS-AVI-6A", "RSK-TEC-004", "high",
+     "Payload vendor non rispetta ICD → integrazione 30-min non possibile"),
+    ("IR-PAY-002", "Interfaccia meccanica payload: standard MIL-STD-1760 quick-release o equivalente",
+     "Modularità + ground turnaround", "SyR-O-004,SsR-PAY-009", "IR", "SsR-PAY-009",
+     "aerospace-SE", "H", "I+T", "Open", "Phase A", "-", "-", "high",
+     "Quick-release non si conforma MIL-STD → re-design mount"),
+    ("IR-C2-001", "Interfaccia C2 link: protocollo MAVLink v2 + DTLS over UDP + crypto AES-256",
+     "Standardizzazione C2 + SyR-S-006", "SyR-S-006,SsR-COMMS-006", "IR", "SsR-COMMS-006",
+     "avionics-gnc-engineer", "H", "I+T", "Open", "Phase A", "-", "RSK-TEC-005", "high",
+     "MAVLink crypto vulnerability → re-design protocol stack"),
+    ("IR-GS-001", "Interfaccia GS-cloud: REST API + OAuth2 + audit log GDPR-compliant",
+     "Data delivery + GDPR Art.30", "SyR-C-003,SsR-GS-007", "IR", "SsR-GS-007",
+     "data-privacy-counsel", "H", "I+T", "Open", "Phase A", "-", "RSK-REG-021", "high",
+     "API audit fails GDPR Art.30 → re-design log"),
+    ("IR-GS-002", "Interfaccia GS-PA (cliente): SFTP/HTTPS data delivery + portal role-based",
+     "Data delivery PA + SyR-C-008 AgID compliance", "SsR-GS-007,SyR-C-008", "IR", "SsR-GS-007",
+     "data-privacy-counsel", "H", "I+D", "Open", "Phase A", "-", "RSK-REG-021", "medium",
+     "PA non accetta SFTP standard → re-design integration"),
+    ("IR-PROP-001", "Interfaccia powertrain-FCS: CAN bus + RS-485 backup + ECU standard CCITT",
+     "Standardizzazione + ridondanza", "SsR-PROP-001,SsR-AVI-001", "IR", "SsR-PROP-001",
+     "propulsion-energy-engineer", "M", "I+T", "Open", "Phase A", "-", "-", "high",
+     "Vendor CAN bus non-standard → re-design ECU"),
+    ("IR-PROP-002", "Interfaccia batteria-BMS: SMBus + thermal sensors + cycle count storage",
+     "Sicurezza batterie + cycle life monitoring", "SsR-PROP-008", "IR", "SsR-PROP-008",
+     "propulsion-energy-engineer", "H", "I+T", "Open", "Phase A", "-", "RSK-REG-022", "medium",
+     "BMS not detecting cycle count → reduced safety"),
+    ("IR-AVI-001", "Interfaccia IMU-FCS: synchronous serial @ 1 kHz + cross-check N+1 ridondanza",
+     "Sicurezza + SyR-S-003", "SsR-AVI-005", "IR", "SsR-AVI-005",
+     "avionics-gnc-engineer", "H", "I+T", "Open", "Phase A", "-", "-", "high",
+     "IMU sync drift >1ms → re-design synchronization"),
+    ("IR-AVI-002", "Interfaccia GNSS-FCS: NMEA 0183 + binary high-rate (10 Hz) + RAIM monitoring",
+     "Sicurezza navigazione + SyR-S-003", "SsR-AVI-003", "IR", "SsR-AVI-003",
+     "avionics-gnc-engineer", "H", "I+T", "Open", "Phase A", "-", "-", "high",
+     "GNSS update rate <5 Hz → re-spec receiver"),
+    ("IR-AVI-003", "Interfaccia FCS-payload (OBC): time-sync (PTP IEEE 1588) + shared metadata bus",
+     "Sincronizzazione metadata + payload control", "SsR-AVI-011,SsR-PAY-001", "IR", "SsR-AVI-011",
+     "avionics-gnc-engineer", "M", "I+T", "Open", "Phase A", "-", "-", "medium",
+     "Time-sync drift >100 ms → re-design PTP"),
+    ("IR-COMMS-001", "Interfaccia RF antenna-link: SMA/N-type connector + RF coax certified aerospace",
+     "Mechanical RF + reliability", "SsR-COMMS-009", "IR", "SsR-COMMS-009",
+     "telecom-ntn-payload-expert", "M", "I", "Open", "Phase A", "-", "-", "high",
+     "Coax loss >2 dB/m → re-spec antenna chain"),
+    ("IR-COMMS-002", "Interfaccia SATCOM modem-FCS: serial RS-232/Ethernet + Iridium SBD protocol",
+     "Backup C2 + SsR-COMMS-004", "SsR-COMMS-004", "IR", "SsR-COMMS-004",
+     "telecom-ntn-payload-expert", "H", "I+T", "Open", "Phase A", "-", "-", "high",
+     "Iridium SBD latency >5s → revisione protocol"),
+    ("IR-ENAV-001", "Interfaccia U-Space ENAV/D-Flight: standard CIS (Common Information Service) + REST API",
+     "ENAV coordination + StNeed-024 + NegR-Reg-003", "StNeed-024,NegR-Reg-003", "IR", "StNeed-024",
+     "avionics-gnc-engineer", "H", "I+D", "Open", "Phase B", "-", "RSK-REG-030", "low",
+     "ENAV API non disponibile → manual workaround coordination"),
+    ("IR-PC-001", "Interfaccia GS-Protezione Civile: integrazione push alert hotspot + SiNAPS protocol",
+     "UC-002 antincendio + emergency response", "SyR-F-003 + Protocollo PC", "IR", "SyR-F-003",
+     "telecom-ntn-payload-expert", "H", "I+D", "Open", "Phase A", "-", "RSK-OPS-002", "medium",
+     "PC SiNAPS protocol non integrabile → custom integration"),
+    ("IR-DPM-001", "Interfaccia GS-DPO (Data Protection Officer) audit: log accesso + DPIA tracking",
+     "GDPR Art.30 + DPIA compliance", "SyR-C-003,StNeed-014", "IR", "SyR-C-003",
+     "data-privacy-counsel", "H", "I", "Open", "Phase A", "-", "RSK-TEC-006", "high",
+     "Log non auditable per DPO → revisione architettura"),
+    ("IR-BMS-001", "Interfaccia BMS-charger ground: IEC 62196 connector + protocol OCPP per smart charging",
+     "Ground operations + StNeed-009 sostenibilità", "SsR-PROP-006", "IR", "SsR-PROP-006",
+     "propulsion-energy-engineer", "M", "I+T", "Open", "Phase A", "-", "-", "medium",
+     "Charger non OCPP-compatible → re-spec ground equipment"),
+    ("IR-HUMS-001", "Interfaccia HUMS-GS dashboard: SNMP+REST API + real-time anomaly push",
+     "Maintenance predittiva + SyR-O-008", "SsR-AVI-015", "IR", "SsR-AVI-015",
+     "avionics-gnc-engineer", "M", "I+D", "Open", "Phase A", "-", "-", "medium",
+     "HUMS not real-time → re-design data path"),
+    ("IR-MET-001", "Interfaccia mission planner-meteo: API meteo aeronautico (TAF, METAR) + ENAV briefing",
+     "Pre-flight ConOps + safety", "SsR-GS-006", "IR", "SsR-GS-006",
+     "vtol-uas-specialist", "M", "I+D", "Open", "Phase A", "-", "-", "high",
+     "Meteo API non disponibile → manual briefing"),
+    ("IR-NOTAM-001", "Interfaccia mission planner-NOTAM: API ICAO NOTAM + ENAV NOTAM Office",
+     "Pre-flight legal + safety", "SsR-GS-006", "IR", "SsR-GS-006",
+     "aviation-regulatory-counsel", "H", "I+D", "Open", "Phase A", "-", "-", "high",
+     "NOTAM API non integrabile → manual workaround"),
+    ("IR-INS-001", "Interfaccia broker assicurativi: claim portal + flight log automated reporting",
+     "OpEx insurance + SyR-C-010", "SyR-C-010", "IR", "SyR-C-010",
+     "financial-cfo-analyst", "L", "I", "Open", "Phase A", "-", "RSK-REG-026", "low",
+     "Insurance portal non disponibile → manual claim"),
+    ("IR-COOP-001", "Interfaccia data delivery cooperative: dashboard analytics + scheduled report PDF/GeoJSON",
+     "UC-005 cooperative + StNeed-005/006", "Multiple StNeeds cooperative", "IR", "StNeed-005",
+     "earth-observation-expert", "M", "I+D", "Open", "Phase A", "-", "-", "medium",
+     "Cooperative user feedback negativo su dashboard → re-design UX"),
+    ("IR-CER-001", "Interfaccia ENAC SORA application portal: digital submission + tracking",
+     "SAIL III submission + SyR-F-002/C-001", "SyR-F-002,SyR-C-001", "IR", "SyR-F-002",
+     "aviation-regulatory-counsel", "H", "I", "Open", "Pre-A", "-", "RSK-REG-002", "high",
+     "ENAC portal richiede formato non supportato → revisione submission"),
+]
+
+
+# =============================================================================
+# DATA — NEGATIVE REQUIREMENTS (14 NegR from Cap.3 §3.5.8)
+# =============================================================================
+
+NEGREQS = [
+    ("NegR-B-001", "Sistema NON deve essere venduto come prodotto/asset agli utenti pilota o terzi: HALE/VTOL erogato esclusivamente come servizio ricorrente",
+     "Boundary B1 (service-only). Vendita trasformerebbe Firmamento in OEM aeronautico (Part 21J/G, capex >€50M)",
+     "Boundary B1 (CLAUDE.md) + StNeed-015 + SyR-Cost-004", "NegR", "Boundary B1",
+     "business-model-strategist", "Critical", "I (contract clause review)", "Active", "All phases", "-", "RSK-FIN-002", "boundary",
+     "Firma contratto vendita asset (anche prototipale, 1 cliente) → re-baseline business model + revisione B1"),
+    ("NegR-B-002", "Sistema NON deve essere offerto come servizio retail B2C (vendita diretta consumatori, abbonamenti residenziali, app store)",
+     "Boundary B1 + scelta wholesale B2B/B2G via cooperative + PA",
+     "Boundary B1 + visione 10 anni", "NegR", "Boundary B1",
+     "business-model-strategist", "Medium", "I (catalogo + canali commerciali)", "Active", "All phases", "-", "-", "high",
+     "Apertura canale e-commerce o app store con abbonamenti individuali → violazione modello"),
+    ("NegR-B-003", "Sistema NON deve concorrere head-to-head in scala assoluta con Tier 1 HAPS (Airbus Zephyr, AALTO Sunglider, Aerovironment Sceye)",
+     "Asimmetria capitale + maturità. Strategy = nicchie regolatorie IT + nodo italiano consortium EU",
+     "Cap.7 §7.4 + Boundary B2", "NegR", "Boundary B2",
+     "sovereign-strategist", "High", "I (annual positioning audit)", "Active", "All phases", "-", "-", "high",
+     "Lancio bid head-to-head tender internazionale (NATO ISR) senza partner Tier 1 → violazione"),
+    ("NegR-Geo-001", "Sistema NON deve utilizzare cloud USA (AWS, Azure, GCP, Oracle US) come DEFAULT per imagery EO, dati C2, telemetria, dati personali UE",
+     "Sovranità dati UE (GDPR Art.44-50 + Schrems II + Data Act 2024). Eccezione solo con accordo + DPIA + DR",
+     "StNeed-014 + SyR-C-003 + SsR-GS-002 + RESERVED-rischi-geopolitici", "NegR", "Boundary B2",
+     "data-privacy-counsel", "Critical", "I (provider contracts + audit semestrale)", "Active", "All phases", "-", "RSK-REG-021", "high",
+     "Imagery EO o dati UE in datacenter US senza accordo + DPIA → violazione GDPR+NIS2+sovranità"),
+    ("NegR-Geo-002", "Sistema NON deve sviluppare capability dual-use militare offensiva (armamento, weapon-mount, kinetic, targeting militare letale)",
+     "Scope civile + boundary B1 cooperative + ISR difensivo only (NATO DIANA conditional)",
+     "Boundary B1 + Cap.5.7.2 + RESERVED-rischi-geopolitici", "NegR", "Boundary B1",
+     "sovereign-strategist", "Critical", "I (payload roadmap + contracts no-offensive clause)", "Active", "All phases", "-", "-", "high",
+     "Firma contratto/PoC per integrazione payload kinetic/weapon/targeting → re-baseline governance"),
+    ("NegR-Geo-003", "Sistema NON deve operare in difesa pura (clienti unici Difesa/NATO ISR/strike) senza separazione strutturale (società dedicata, governance separata)",
+     "Commistione civile-difesa pura compromette natura cooperativa + eligibility bandi civili",
+     "Boundary B1 + Cap.5.7.2 + Cap.7.3", "NegR", "Boundary B1",
+     "sovereign-strategist", "High", "I (bilancio + segregazione revenue stream)", "Active", "All phases", "-", "-", "high",
+     ">30% fatturato annuo da clienti Difesa nazionali senza società/divisione separata"),
+    ("NegR-Geo-004", "Sistema NON deve dipendere, per sottosistemi critici Phase B (6B), da componenti ITAR-classified US senza piano EU-sourcing alternative",
+     "Sovranità tech + ITAR limita export control. FCS DAL-C, GNSS anti-spoofing, propulsion solare, batterie LiS/SS = EU sourced o EU alternative entro M+24",
+     "Boundary B2 + RESERVED + SyR-F-005 + RSK-GEO-001", "NegR", "Boundary B2",
+     "sovereign-strategist", "High", "I (BoM ITAR flag + audit annuale)", "Active", "Phase B+", "-", "-", "medium",
+     ">20% valore BoM Phase B in componenti ITAR US senza piano EU-sourcing entro M+24"),
+    ("NegR-Reg-001", "Sistema NON deve trattare dati personali (volti riconoscibili, targhe, biometrici, geolocalizzazione individuale) senza DPIA documentata + approvata dal DPO (e Garante se richiesto)",
+     "GDPR Art.35-36 DPIA obbligatoria. Posizione Garante 2025 droni urbani. Sanzioni fino 4% fatturato globale",
+     "StNeed-008+014 + SyR-C-003 + SsR-GS-003", "NegR", "SyR-C-003",
+     "data-privacy-counsel", "Critical", "I (registro trattamenti + DPIA per use case)", "Active", "All phases", "-", "RSK-TEC-006", "high",
+     "Missione operativa acquisisce imagery riconoscibile senza DPIA depositata e validata DPO"),
+    ("NegR-Reg-002", "Sistema NON deve eseguire onboard processing dati biometrici (face recognition, identificazione individuale ML in-flight) né classificare individui in categorie sensibili",
+     "AI Act Art.5 (pratiche proibite) + Art.6 Annex III. Pipeline ML on-board = anonimizzazione edge-level (non identification)",
+     "SyR-C-007 + SsR-PAY-013 + SsR-GS-003 + AI Act + Garante", "NegR", "SyR-C-007",
+     "data-privacy-counsel", "High", "I (algorithmic audit + ML pipeline design review)", "Active", "All phases", "-", "RSK-REG-016", "high",
+     "Pipeline ML on-board che esegue identificazione biometrica individuale >1:N senza anonimizzazione preventiva"),
+    ("NegR-Reg-003", "Sistema NON deve operare in spazio aereo controllato (CTR, TMA, AWY, classi A-D ICAO) senza coordinamento formale ENAV/D-Flight + clearance ATC esplicita",
+     "Reg.UE 2019/947 + ENAC Reg.APR Ed.3 + ENAV U-Space. Operazioni HALE Phase B richiedono climb/descent CTR Genova/Milano/Roma",
+     "StNeed-011 + SyR-F-002 + SyR-S-004 + IR-ENAV-001", "NegR", "SyR-S-004",
+     "aviation-regulatory-counsel", "High", "I (LoA ENAV + Operations Manual ATC procedures)", "Active", "All phases", "-", "RSK-REG-030", "high",
+     "Volo BVLOS in CTR senza LoA ENAV + clearance ATC → enforcement ENAC + sospensione"),
+    ("NegR-Tech-001", "Sistema NON deve sviluppare Type Certificate proprio EASA Part 21J (DOA+TC) IN AUTONOMIA per HALE Phase B: TC richiede consorzio EU (lead OEM Tier 1 + Firmamento technology partner / service operator)",
+     "CapEx TC EASA full-cycle: €50-200M + 5-8 anni + 50-150 FTE qualified. Strategy = certification via consorzio EU lead OEM",
+     "Boundary B2 + Cap.5.1 + Cap.6.2 + RSK-FIN-001", "NegR", "Boundary B2",
+     "aviation-regulatory-counsel", "High", "I (piano certificazione + roadmap consorzio)", "Active", "Phase B+", "-", "RSK-TEC-003", "high",
+     "Attivazione programma TC standalone Firmamento HALE con budget >€5M + timeline >24m senza partner lead OEM"),
+    ("NegR-Tech-002", "Sistema NON deve usare componenti DJI (o vendor cinesi soggetti ban/restrizioni EU/USA) come componenti critici C2/autopilota/gimbal/GS per applicazioni sicurezza nazionale o PA italiana",
+     "Trump-era export ban DJI USA (NDAA 2024); MIT/MEF/ACN posizione su componentistica CN in PA italiana (NIS2 + Golden Power)",
+     "SyR-C-004 + AS-008 vendor JOUAV CN + RESERVED + SsR-AVI-016", "NegR", "SyR-C-004",
+     "avionics-gnc-engineer", "Medium", "I (BoM audit + no-DJI clause contratti)", "Active", "All phases", "-", "RSK-SUP-001", "medium",
+     "Vendor JOUAV (CN) bannato EU entro M+12 senza piano sostituzione EU vendor (Quantum, FlyingBasket) documentato"),
+    ("NegR-Tech-003", "Sistema NON deve trasferire ground segment, mission control, data hosting, dati operativi a infrastrutture extra-UE come DEFAULT operativo, anche se più economiche",
+     "Sovranità tech + GDPR + NIS2 + accordi quadro PA italiana (cloud certificato AgID/ACN, PSN)",
+     "SyR-C-004 + SyR-C-008 + SsR-GS-002 + NegR-Geo-001", "NegR", "SyR-C-008",
+     "data-privacy-counsel", "High", "I (datacenter location + certificazioni AgID/ACN/GAIA-X)", "Active", "All phases", "-", "RSK-REG-021", "high",
+     "Spostamento ground segment o data hosting in datacenter extra-UE per costi, senza accordo + DPIA"),
+    ("NegR-Mkt-001", "Sistema NON deve essere comunicato pubblicamente come 'alternativa europea a Starlink' o 'Starlink europeo' in materiali ufficiali",
+     "Boundary B2 (linguaggio pubblico: 'complementare a IRIS²'). Geopolitica: evitare confronto US strategico + preservare opzionalità consorzio EU",
+     "Boundary B2 + RESERVED-rischi-geopolitici", "NegR", "Boundary B2",
+     "sovereign-strategist", "Critical", "I (process audit materiali pubblici pre-publication)", "Active", "All phases", "-", "-", "boundary",
+     "Linguaggio 'alternativa Starlink' / 'Starlink europeo' appare in materiali pubblici ufficiali"),
+    ("NegR-Mkt-002", "Sistema NON deve essere comunicato come 'capability militare offensiva' o 'arma' o 'UCAV' in materiali ufficiali (anche conferenze difesa)",
+     "Coerenza NegR-Geo-002 + NegR-Geo-003. Positioning = 'ISR civili + dual-use difensivo NATO DIANA conditional'",
+     "Boundary B1 + Cap.5.7.2 + NegR-Geo-002", "NegR", "NegR-Geo-002",
+     "sovereign-strategist", "High", "I (process audit pre-publication + monitoring stampa)", "Active", "All phases", "-", "-", "high",
+     "Materiale pubblico ufficiale usa 'UCAV', 'armamento', 'strike capability'"),
+]
+
+
+# =============================================================================
+# DATA — VERIFICATION REQUIREMENTS (V&V Plan per ogni SyR critico)
+# =============================================================================
+# Auto-generated from SYREQS for each SyR with at least one VR planned
+# Schema: VR-XXX.N where N = verification iteration
+
+VRREQS_DATA = [
+    ("VR-F-001.1", "Verify SyR-F-001 by Analysis del payload+platform per GSD calculation", "SyR-F-001", "A", "Planned", "Phase A", "TS-PAYLOAD-EO"),
+    ("VR-F-001.2", "Verify SyR-F-001 by Test in volo Pentema con GSD fly-and-measure", "SyR-F-001", "T", "Planned", "Phase A", "TS-PAYLOAD-EO"),
+    ("VR-F-002.1", "Verify SyR-F-002 by Inspection ENAC SORA approval letter", "SyR-F-002", "I", "Planned", "Pre-A", "-"),
+    ("VR-F-003.1", "Verify SyR-F-003 by Demonstration scenario fuoco-pilota Pentema", "SyR-F-003", "D", "Planned", "Phase A", "-"),
+    ("VR-F-003.2", "Verify SyR-F-003 by Analysis FAR (False Alarm Rate) target ≤5%", "SyR-F-003", "A", "Planned", "Phase A", "-"),
+    ("VR-F-004.1", "Verify SyR-F-004 by Test LTE coverage in raggio 5 km da velivolo", "SyR-F-004", "T", "Planned", "Phase A", "-"),
+    ("VR-F-005.1", "Verify SyR-F-005 by Analysis energy balance perennial estate completa", "SyR-F-005", "A", "Planned", "Phase B", "TS-PROP-6B"),
+    ("VR-F-005.2", "Verify SyR-F-005 by Test subscale prototype in test bed stratosferico TRL 5", "SyR-F-005", "T", "Open", "Phase B", "TS-PROP-6B"),
+    ("VR-F-006.1", "Verify SyR-F-006 by Demonstration SAR scenario VVF", "SyR-F-006", "D", "Open", "Phase A", "-"),
+    ("VR-F-007.1", "Verify SyR-F-007 by Analysis multispectral + Test cooperative agricole", "SyR-F-007", "A+T", "Open", "Phase A", "TS-PAYLOAD-EO"),
+    ("VR-F-008.1", "Verify SyR-F-008 by Test ortomosaico accuracy ≤2m posizionale", "SyR-F-008", "T", "Open", "Phase A", "-"),
+    ("VR-F-009.1", "Verify SyR-F-009 by Demonstration missione Enti Parco stagionale", "SyR-F-009", "D", "Open", "Phase A", "-"),
+    ("VR-F-010.1", "Verify SyR-F-010 by Analysis link budget HAPS NTN + Test gNodeB subscale", "SyR-F-010", "A+T", "Open", "Phase B+", "TS-COMMS"),
+    ("VR-P-001.1", "Verify SyR-P-001 by Test in volo autonomia 4h con payload pieno", "SyR-P-001", "T", "Planned", "Phase A", "TS-PLATFORM-6A"),
+    ("VR-P-002.1", "Verify SyR-P-002 by Test in volo cruise speed", "SyR-P-002", "T", "Planned", "Phase A", "TS-PLATFORM-6A"),
+    ("VR-P-003.1", "Verify SyR-P-003 by Inspection datasheet + Test peso bilancia ground", "SyR-P-003", "I+T", "Planned", "Phase A", "TS-PLATFORM-6A"),
+    ("VR-P-004.1", "Verify SyR-P-004 by Analysis CFD + Test wind tunnel subscale", "SyR-P-004", "A+T", "Open", "Phase B", "TS-MATERIAL"),
+    ("VR-P-005.1", "Verify SyR-P-005 by Analysis energy balance estate simulation completa", "SyR-P-005", "A", "Planned", "Phase B", "TS-PROP-6B"),
+    ("VR-P-006.1", "Verify SyR-P-006 by Analysis energy balance worst-case inverno", "SyR-P-006", "A", "Planned", "Phase B", "TS-PROP-6B"),
+    ("VR-P-007.1", "Verify SyR-P-007 by Analysis + Test GSD ground truth", "SyR-P-007", "A+T", "Planned", "Phase A", "TS-PAYLOAD-EO"),
+    ("VR-P-008.1", "Verify SyR-P-008 by Analysis + Test IR GSD ground truth", "SyR-P-008", "A+T", "Planned", "Phase A", "TS-PAYLOAD-EO"),
+    ("VR-P-009.1", "Verify SyR-P-009 by Test range C2 link Pentema", "SyR-P-009", "T", "Planned", "Phase A", "TS-COMMS"),
+    ("VR-P-010.1", "Verify SyR-P-010 by Analysis + Test throughput downlink", "SyR-P-010", "A+T", "Planned", "Phase A", "TS-COMMS"),
+    ("VR-P-011.1", "Verify SyR-P-011 by Inspection MTOW + bilancia ground", "SyR-P-011", "I", "Planned", "Pre-A", "-"),
+    ("VR-P-012.1", "Verify SyR-P-012 by Analysis + Test peso 6B prototipo", "SyR-P-012", "A+T", "Open", "Phase B", "TS-MATERIAL"),
+    ("VR-O-001.1", "Verify SyR-O-001 by Demonstration uptime monitoring Y1", "SyR-O-001", "D", "Planned", "Phase A", "-"),
+    ("VR-O-002.1", "Verify SyR-O-002 by Demonstration reaction time emergenza", "SyR-O-002", "D", "Planned", "Phase A", "-"),
+    ("VR-O-003.1", "Verify SyR-O-003 by Inspection datasheet + Test ops invernali Pentema", "SyR-O-003", "I+T", "Planned", "Phase A", "-"),
+    ("VR-O-004.1", "Verify SyR-O-004 by Demonstration turnaround between missions", "SyR-O-004", "D", "Planned", "Phase A", "-"),
+    ("VR-O-005.1", "Verify SyR-O-005 by Inspection crew training certificates", "SyR-O-005", "I", "Planned", "Pre-A", "-"),
+    ("VR-O-006.1", "Verify SyR-O-006 by Inspection Operations Manual + SOPs", "SyR-O-006", "I", "Planned", "Phase A", "-"),
+    ("VR-O-007.1", "Verify SyR-O-007 by Inspection + Demonstration ENAV LoA + ConOps", "SyR-O-007", "I+D", "Open", "Phase B", "-"),
+    ("VR-O-008.1", "Verify SyR-O-008 by Inspection maintenance plan + spare parts stock", "SyR-O-008", "I", "Planned", "Phase A", "-"),
+    ("VR-S-001.1", "Verify SyR-S-001 by Demonstration + Test lost-link behaviour profile", "SyR-S-001", "D+T", "Planned", "Phase A", "-"),
+    ("VR-S-002.1", "Verify SyR-S-002 by Test drop parachute recovery", "SyR-S-002", "T", "Planned", "Phase A", "-"),
+    ("VR-S-003.1", "Verify SyR-S-003 by Inspection sensor architecture ridondanza", "SyR-S-003", "I", "Planned", "Phase A", "-"),
+    ("VR-S-004.1", "Verify SyR-S-004 by Inspection + Demonstration DAA ADS-B integration", "SyR-S-004", "I+D", "Open", "Phase B", "-"),
+    ("VR-S-005.1", "Verify SyR-S-005 by Analysis FTA failure rate calculation", "SyR-S-005", "A", "Open", "Phase B", "-"),
+    ("VR-S-006.1", "Verify SyR-S-006 by Inspection + Test penetration cyber-security", "SyR-S-006", "I+T", "Planned", "Phase A", "-"),
+    ("VR-S-007.1", "Verify SyR-S-007 by Inspection + Test geofence enforcement", "SyR-S-007", "I+T", "Planned", "Phase A", "-"),
+    ("VR-S-008.1", "Verify SyR-S-008 by Inspection ATEX hangar compliance", "SyR-S-008", "I", "Planned", "Phase A", "-"),
+    ("VR-E-001.1", "Verify SyR-E-001 by Inspection powertrain configuration", "SyR-E-001", "I", "Planned", "Phase A", "-"),
+    ("VR-E-002.1", "Verify SyR-E-002 by Test ground noise measurement", "SyR-E-002", "T", "Planned", "Phase A", "-"),
+    ("VR-E-003.1", "Verify SyR-E-003 by Inspection BoM bio/recycled %", "SyR-E-003", "I", "Open", "Phase B", "TS-MATERIAL"),
+    ("VR-E-004.1", "Verify SyR-E-004 by Analysis LCA cradle-to-grave", "SyR-E-004", "A", "Open", "Phase A", "-"),
+    ("VR-E-005.1", "Verify SyR-E-005 by Inspection EOL/takeback plan documentato", "SyR-E-005", "I", "Open", "Phase B", "-"),
+    ("VR-C-001.1", "Verify SyR-C-001 by Inspection ENAC compliance audit", "SyR-C-001", "I", "Planned", "Pre-A", "-"),
+    ("VR-C-002.1", "Verify SyR-C-002 by Inspection EASA AMC/GM compliance check", "SyR-C-002", "I", "Planned", "Pre-A", "-"),
+    ("VR-C-003.1", "Verify SyR-C-003 by Inspection DPIA documentata + approvazione DPO", "SyR-C-003", "I", "Planned", "Pre-A", "-"),
+    ("VR-C-004.1", "Verify SyR-C-004 by Inspection ISMS + Analysis cyber maturity", "SyR-C-004", "I+A", "Planned", "Phase A", "-"),
+    ("VR-C-005.1", "Verify SyR-C-005 by Inspection certificazione 9100/9001", "SyR-C-005", "I", "Open", "Phase B", "-"),
+    ("VR-C-006.1", "Verify SyR-C-006 by Inspection PFTE conformità Allegato I.7", "SyR-C-006", "I", "Verified", "Pre-A", "-"),
+    ("VR-C-007.1", "Verify SyR-C-007 by Inspection + Analysis AI Act risk categorization", "SyR-C-007", "I+A", "Open", "Phase A", "-"),
+    ("VR-C-008.1", "Verify SyR-C-008 by Inspection cloud provider PSN-qualified", "SyR-C-008", "I", "Open", "Phase A", "-"),
+    ("VR-C-009.1", "Verify SyR-C-009 by Inspection CE marking ground equipment", "SyR-C-009", "I", "Open", "Phase B", "-"),
+    ("VR-C-010.1", "Verify SyR-C-010 by Inspection assicurazione polizza", "SyR-C-010", "I", "Open", "Phase A", "-"),
+    ("VR-C-011.1", "Verify SyR-C-011 by Inspection ITU-R coordination filing", "SyR-C-011", "I", "Open", "Phase B", "-"),
+    ("VR-C-012.1", "Verify SyR-C-012 by Inspection modello 231 + risk management", "SyR-C-012", "I", "Open", "Phase A", "-"),
+    ("VR-Cost-001.1", "Verify SyR-Cost-001 by Analysis Quadro Economico vs target €1.2M", "SyR-Cost-001", "A", "Planned", "Phase A", "-"),
+    ("VR-Cost-002.1", "Verify SyR-Cost-002 by Analysis OpEx Y2 vs €450k", "SyR-Cost-002", "A", "Planned", "Phase A", "-"),
+    ("VR-Cost-003.1", "Verify SyR-Cost-003 by Demonstration contratti firmati Y1 ≥€200k", "SyR-Cost-003", "D", "Planned", "Phase A", "-"),
+    ("VR-Cost-004.1", "Verify SyR-Cost-004 by Inspection contratti (no asset sale)", "SyR-Cost-004", "I", "Planned", "Pre-A", "-"),
+    ("VR-Cost-005.1", "Verify SyR-Cost-005 by Inspection funding plan + LoI", "SyR-Cost-005", "I", "Planned", "Pre-A", "-"),
+    ("VR-Cost-006.1", "Verify SyR-Cost-006 by Analysis customer concentration Y2", "SyR-Cost-006", "A", "Open", "Phase A", "-"),
+    ("VR-Cost-007.1", "Verify SyR-Cost-007 by Demonstration pricing + LoI cliente PA", "SyR-Cost-007", "D", "Open", "Phase A", "-"),
+    ("VR-Cost-008.1", "Verify SyR-Cost-008 by Analysis NPV sensitivity Y3-Y4", "SyR-Cost-008", "A", "Planned", "Phase A", "-"),
+    ("VR-Cost-009.1", "Verify SyR-Cost-009 by Analysis premio assicurazione", "SyR-Cost-009", "A", "Open", "Phase A", "-"),
+    ("VR-Cost-010.1", "Verify SyR-Cost-010 by Analysis funding mix multi-source Phase B", "SyR-Cost-010", "A", "Open", "Phase B", "-"),
+]
+
+
+def build_vr_records():
+    """Convert VRREQS_DATA to full RTM-shaped records."""
+    records = []
+    for vr_id, desc, parent, method, status, phase, ts in VRREQS_DATA:
+        records.append((
+            vr_id,                                  # ID
+            desc,                                   # Description
+            f"V&V plan for {parent} (NASA SE §5.3-5.4)",  # Rationale
+            parent,                                 # Source
+            "VR",                                   # Type
+            parent,                                 # Parent
+            "V&V engineer",                         # Owner_agent
+            "M",                                    # Priority
+            method,                                 # VV_Method
+            status,                                 # VV_Status
+            phase,                                  # Phase
+            ts,                                     # Trade_Study
+            "-",                                    # Risk
+            "high" if status == "Planned" else "medium",  # Confidence
+            f"VR fails or returns negative for {parent}",  # Falsifying_Observation
+        ))
+    return records
+
+
+# =============================================================================
+# EXCEL WORKBOOK GENERATION
+# =============================================================================
+
+def _apply_header(ws, row, ncols, color=COLOR_HEADER):
+    """Style header row."""
+    fill = PatternFill(start_color=color, end_color=color, fill_type="solid")
+    font = Font(name="Calibri", size=11, bold=True, color="FFFFFF")
+    align = Alignment(horizontal="center", vertical="center", wrap_text=True)
+    for c in range(1, ncols + 1):
+        cell = ws.cell(row=row, column=c)
+        cell.fill = fill
+        cell.font = font
+        cell.alignment = align
+        cell.border = BORDER
+
+
+def _autosize(ws, widths):
+    """Apply column widths from dict {col_letter: width}."""
+    for col, w in widths.items():
+        ws.column_dimensions[col].width = w
+
+
+def _add_row(ws, row_idx, values, fill_color=None):
+    """Add a styled data row."""
+    align = Alignment(vertical="top", wrap_text=True)
+    fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type="solid") if fill_color else None
+    for c, v in enumerate(values, start=1):
+        cell = ws.cell(row=row_idx, column=c, value=v)
+        cell.alignment = align
+        cell.border = BORDER
+        if fill:
+            cell.fill = fill
+
+
+def _apply_confidence_color(ws, conf_col_idx, start_row, end_row):
+    """Color confidence column cells."""
+    for r in range(start_row, end_row + 1):
+        cell = ws.cell(row=r, column=conf_col_idx)
+        val = str(cell.value or "").strip().lower()
+        for key, color in CONF_COLORS.items():
+            if key in val:
+                cell.fill = PatternFill(start_color=color, end_color=color, fill_type="solid")
+                break
+
+
+def build_cover_sheet(wb, stats):
+    """Build Sheet 1: Cover."""
+    ws = wb.create_sheet("Cover", 0)
+    ws.column_dimensions['A'].width = 38
+    ws.column_dimensions['B'].width = 88
+
+    today = date.today().isoformat()
+
+    rows = [
+        ("Allegato A.1 — Requirements Traceability Matrix (RTM) v1.0", ""),
+        ("Volume 2 — Studio di Fattibilità HALE/VTOL", ""),
+        ("Firmamento Technologies — bando Cooding Prototypes", ""),
+        ("", ""),
+        ("Versione", "v1.0 (baseline estesa M+3 → M+10 target)"),
+        ("Data emissione", today),
+        ("Stato documento", "BASELINE M+3 ESTESA (da congelare a G3 M+10/M+11)"),
+        ("Owner documento", "aerospace-systems-engineer (Firmamento Technologies)"),
+        ("Riferimento Cap. 3", "studio-di-fattibilita/cap-03-requisiti-e-RTM.md (RTM v0.5 baseline)"),
+        ("", ""),
+        ("METODOLOGIA", ""),
+        ("Standard primario", "NASA Systems Engineering Handbook Rev 2 (NASA/SP-2016-6105) §4.1 + §4.2 + §5.3-5.4"),
+        ("Standard secondario", "INCOSE Systems Engineering Handbook 5th Ed. (2023) + ISO/IEC/IEEE 15288:2015"),
+        ("Tassonomia ID", "StNeed-NNN / SyR-X-NNN / SsR-XXX-NNN / IR-XXX-NNN / NegR-X-NNN / VR-X-NNN.N"),
+        ("Criteri di scrittura", "VAFC (Verificable, Atomic, Feasible, Complete) — NASA SE App.C + INCOSE GtWR"),
+        ("Verification methods", "I=Inspection, A=Analysis, D=Demonstration, T=Test (NASA SE §6.5)"),
+        ("Disciplina epistemica", "Confidence levels + falsifying observations per ogni requisito (skill epistemic-rigor)"),
+        ("", ""),
+        ("BOUNDARY CONDITIONS (B1+B2)", ""),
+        ("B1 — Service-only + Cooperative Legacoop",
+         "Firmamento NON vende velivoli; tutto revenue ricorrente (DaaS, IaaS, canone). Rete coop Legacoop = scelta strutturale."),
+        ("B2 — EU Sovereign Stratospheric Layer",
+         "Firmamento = nodo italiano fondatore consorzio EU HAPS. Linguaggio pubblico: 'complementare a IRIS²' (NON 'alternativa Starlink')."),
+        ("", ""),
+        ("STATISTICHE RTM v1.0", ""),
+        ("Stakeholder Needs (StNeed)", f"{stats['stneed']}"),
+        ("System Requirements (SyR)", f"{stats['syr']}"),
+        ("  - F (Functional)", f"{stats['syr_F']}"),
+        ("  - P (Performance)", f"{stats['syr_P']}"),
+        ("  - O (Operational)", f"{stats['syr_O']}"),
+        ("  - S (Safety)", f"{stats['syr_S']}"),
+        ("  - E (Environmental)", f"{stats['syr_E']}"),
+        ("  - C (Compliance)", f"{stats['syr_C']}"),
+        ("  - Cost (Cost & Business)", f"{stats['syr_Cost']}"),
+        ("Subsystem Requirements (SsR)", f"{stats['ssr']}"),
+        ("  - AERO", f"{stats['aero']}"),
+        ("  - PROP", f"{stats['prop']}"),
+        ("  - AVI", f"{stats['avi']}"),
+        ("  - PAY", f"{stats['pay']}"),
+        ("  - COMMS", f"{stats['comms']}"),
+        ("  - GS", f"{stats['gs']}"),
+        ("Interface Requirements (IR)", f"{stats['ir']}"),
+        ("Negative Requirements (NegR)", f"{stats['negr']}"),
+        ("Verification Requirements (VR)", f"{stats['vr']}"),
+        ("TOTALE righe RTM", f"{stats['total']}"),
+        ("", ""),
+        ("COVERAGE TARGET vs ACTUAL", ""),
+        ("StNeeds con ≥1 SyR figlio (target 100%)", f"{stats['coverage_stneed_syr']:.1f}%"),
+        ("SyR con ≥1 SsR figlio (target ≥95% G3)", f"{stats['coverage_syr_ssr']:.1f}%"),
+        ("SyR con metodo V&V definito (target 100% G3)", f"{stats['coverage_syr_vr']:.1f}%"),
+        ("SsR con allocazione subsystem (target 100%)", "100.0%"),
+        ("Orphan SyR (senza parent StNeed) — target 0", f"{stats['orphan_syr']}"),
+        ("Untestable SyR — target ≤2 G3", f"{stats['untestable_syr']}"),
+        ("NegR Active (audit semestrale)", f"{stats['negr']}/{stats['negr']} (100%)"),
+        ("", ""),
+        ("CRITERI GO/NO-GO G3 (M+10/M+11)", ""),
+        ("Riferimento", "cap-09-cronoprogramma-e-gate.md §9.2.4 G3 FEASIBILITY GATE PRIMARIO"),
+        ("RTM v0.8 al G3", "≥95% StNeeds tracciati a SyR; ≥100% SyR con V&V method"),
+        ("Risk Register v2", "top rischi con mitigation in progress / planned"),
+        ("Quadro Economico (art.41)", "approvato"),
+        ("", ""),
+        ("VERSIONING ROADMAP", ""),
+        ("v0.5 (M+3, baseline Cap.3)", "17 StNeed + 42 SyR + ~80 SsR (campione) + 14 NegR — pubblicato"),
+        ("v1.0 (M+3, presente)", "28 StNeed + 65 SyR + 81 SsR + 22 IR + 14 NegR + 67 VR (questo allegato)"),
+        ("v1.5 (M+6, post-workshop)", "Stakeholder validation + 30% expansion + chiusura OQ-001/006/007"),
+        ("v2.0 (M+10, gate G3)", "set congelato per Operations Manual + SORA application"),
+        ("v3.0 (M+24, gate G5)", "Phase B HALE expansion + EASA Special Condition baseline"),
+    ]
+
+    for i, (a, b) in enumerate(rows, start=1):
+        ws.cell(row=i, column=1, value=a)
+        ws.cell(row=i, column=2, value=b)
+        if a.endswith("v1.0") or a in ("METODOLOGIA", "BOUNDARY CONDITIONS (B1+B2)", "STATISTICHE RTM v1.0",
+                                        "COVERAGE TARGET vs ACTUAL", "CRITERI GO/NO-GO G3 (M+10/M+11)",
+                                        "VERSIONING ROADMAP"):
+            ws.cell(row=i, column=1).font = Font(bold=True, size=12, color="1F4E78")
+        elif a and not a.startswith("  "):
+            ws.cell(row=i, column=1).font = Font(bold=True)
+
+        for col in (1, 2):
+            ws.cell(row=i, column=col).alignment = Alignment(vertical="top", wrap_text=True)
+
+
+def build_data_sheet(wb, sheet_name, records, color, position=None, with_id_count=False):
+    """Build a data sheet from records using RTM_COLUMNS schema."""
+    ws = wb.create_sheet(sheet_name, position) if position is not None else wb.create_sheet(sheet_name)
+
+    # Header
+    for c, col_name in enumerate(RTM_COLUMNS, start=1):
+        ws.cell(row=1, column=c, value=col_name)
+    _apply_header(ws, 1, len(RTM_COLUMNS), color=COLOR_HEADER)
+    ws.freeze_panes = "B2"
+
+    # Data
+    for i, rec in enumerate(records, start=2):
+        _add_row(ws, i, rec, fill_color=color)
+
+    # Confidence color overlay
+    if records:
+        _apply_confidence_color(ws, conf_col_idx=14, start_row=2, end_row=1 + len(records))
+
+    # Column widths
+    widths = {
+        'A': 17, 'B': 60, 'C': 40, 'D': 30, 'E': 8,
+        'F': 22, 'G': 22, 'H': 9, 'I': 12, 'J': 11,
+        'K': 11, 'L': 18, 'M': 18, 'N': 11, 'O': 50,
+    }
+    _autosize(ws, widths)
+
+    return ws
+
+
+def build_coverage_matrix_sheet(wb, all_records):
+    """Build coverage matrix: StNeed -> SyR mapping summary."""
+    ws = wb.create_sheet("Coverage_Matrix")
+    ws.column_dimensions['A'].width = 17
+    ws.column_dimensions['B'].width = 65
+    ws.column_dimensions['C'].width = 35
+    ws.column_dimensions['D'].width = 18
+    ws.column_dimensions['E'].width = 15
+
+    headers = ["StNeed-ID", "StNeed Description (short)", "Child SyR IDs", "SyR Count", "Coverage Status"]
+    for c, h in enumerate(headers, start=1):
+        ws.cell(row=1, column=c, value=h)
+    _apply_header(ws, 1, len(headers))
+    ws.freeze_panes = "A2"
+
+    # Index SyRs by parent StNeed
+    stneed_to_syr = {}
+    for rec in all_records:
+        if rec[4] != "SyR":
+            continue
+        parent_str = rec[5]
+        for parent_id in [p.strip() for p in parent_str.split(",")]:
+            if parent_id.startswith("StNeed-"):
+                stneed_to_syr.setdefault(parent_id, []).append(rec[0])
+
+    # Iterate StNeeds
+    row_idx = 2
+    for sn in STNEEDS:
+        sn_id = sn[0]
+        sn_desc = sn[1][:90] + ("..." if len(sn[1]) > 90 else "")
+        child_syr = stneed_to_syr.get(sn_id, [])
+        cov_status = "OK (≥1)" if child_syr else "ORPHAN ← gap"
+        fill = PatternFill(start_color=COLOR_STNEED if child_syr else COLOR_NEGR,
+                           end_color=COLOR_STNEED if child_syr else COLOR_NEGR, fill_type="solid")
+        for c, v in enumerate([sn_id, sn_desc, ", ".join(child_syr) or "—",
+                                len(child_syr), cov_status], start=1):
+            cell = ws.cell(row=row_idx, column=c, value=v)
+            cell.alignment = Alignment(vertical="top", wrap_text=True)
+            cell.border = BORDER
+            cell.fill = fill
+        row_idx += 1
+
+
+def build_gap_analysis_sheet(wb, all_records, stats):
+    """Build gap analysis sheet."""
+    ws = wb.create_sheet("Gap_Analysis")
+    ws.column_dimensions['A'].width = 32
+    ws.column_dimensions['B'].width = 22
+    ws.column_dimensions['C'].width = 70
+
+    headers = ["Gap Category", "Count/Metric", "Detail / Items / Action"]
+    for c, h in enumerate(headers, start=1):
+        ws.cell(row=1, column=c, value=h)
+    _apply_header(ws, 1, len(headers))
+    ws.freeze_panes = "A2"
+
+    # 1. Orphan StNeeds
+    stneed_to_syr = set()
+    for rec in all_records:
+        if rec[4] == "SyR":
+            for parent_id in [p.strip() for p in rec[5].split(",")]:
+                if parent_id.startswith("StNeed-"):
+                    stneed_to_syr.add(parent_id)
+    orphan_stneeds = [sn[0] for sn in STNEEDS if sn[0] not in stneed_to_syr]
+
+    # 2. Orphan SyR (no parent StNeed AND no derived parent SyR/Cap/Boundary/Bando/ConOps)
+    legit_prefixes = ("StNeed-", "SyR-", "Boundary", "Cap", "Bando", "ConOps", "Reg", "Multiple")
+    orphan_syrs = []
+    for rec in all_records:
+        if rec[4] == "SyR":
+            parents = [p.strip() for p in rec[5].split(",")]
+            if not any(p.startswith(legit_prefixes) for p in parents if p):
+                orphan_syrs.append(rec[0])
+
+    # 3. Untestable SyR (no V&V method or method = -)
+    untestable = []
+    for rec in all_records:
+        if rec[4] == "SyR" and (not rec[8] or rec[8].strip() == "-"):
+            untestable.append(rec[0])
+
+    # 4. SyR without SsR
+    syr_to_ssr = set()
+    for rec in all_records:
+        if rec[4] == "SsR":
+            for p in rec[5].split(","):
+                p = p.strip()
+                if p.startswith("SyR-"):
+                    syr_to_ssr.add(p)
+    unallocated_syrs = []
+    for rec in all_records:
+        if rec[4] == "SyR" and rec[0] not in syr_to_ssr:
+            unallocated_syrs.append(rec[0])
+
+    # 5. SyR without VR
+    syr_to_vr = set()
+    for rec in all_records:
+        if rec[4] == "VR":
+            syr_to_vr.add(rec[5])
+    no_vr_syr = []
+    for rec in all_records:
+        if rec[4] == "SyR" and rec[0] not in syr_to_vr:
+            no_vr_syr.append(rec[0])
+
+    rows = [
+        ("Orphan StNeeds (no SyR child)", len(orphan_stneeds), ", ".join(orphan_stneeds) or "—"),
+        ("Orphan SyR (no StNeed parent)", len(orphan_syrs), ", ".join(orphan_syrs) or "—"),
+        ("Untestable SyR (no V&V method)", len(untestable), ", ".join(untestable) or "—"),
+        ("Unallocated SyR (no SsR child)", len(unallocated_syrs), ", ".join(unallocated_syrs)
+            + " — action: decompose SsR by M+5"),
+        ("SyR without VR plan", len(no_vr_syr), ", ".join(no_vr_syr) or "—"),
+        ("Coverage StNeed→SyR", f"{stats['coverage_stneed_syr']:.1f}%", "Target G3: 100%"),
+        ("Coverage SyR→SsR", f"{stats['coverage_syr_ssr']:.1f}%", "Target G3: ≥95%"),
+        ("Coverage SyR→VR", f"{stats['coverage_syr_vr']:.1f}%", "Target G3: 100%"),
+        ("NegR Active monitoring", f"{stats['negr']}/{stats['negr']}", "Audit semestrale; 0 violazioni rilevate al M+3"),
+    ]
+
+    fill_warn = PatternFill(start_color="FCE4D6", end_color="FCE4D6", fill_type="solid")
+    fill_ok = PatternFill(start_color="C6EFCE", end_color="C6EFCE", fill_type="solid")
+
+    for i, (cat, cnt, det) in enumerate(rows, start=2):
+        for c, v in enumerate([cat, cnt, det], start=1):
+            cell = ws.cell(row=i, column=c, value=v)
+            cell.alignment = Alignment(vertical="top", wrap_text=True)
+            cell.border = BORDER
+            # Color metric cell
+            if c == 2:
+                if isinstance(cnt, int) and cnt > 0 and cat.startswith(("Orphan", "Untestable", "Unalloc", "SyR without")):
+                    cell.fill = fill_warn
+                else:
+                    cell.fill = fill_ok
+
+
+def compute_stats(all_records):
+    """Compute coverage statistics."""
+    stats = {
+        'stneed': len(STNEEDS),
+        'syr': len(SYREQS),
+        'syr_F': len([r for r in SYREQS if r[0].startswith("SyR-F-")]),
+        'syr_P': len([r for r in SYREQS if r[0].startswith("SyR-P-")]),
+        'syr_O': len([r for r in SYREQS if r[0].startswith("SyR-O-")]),
+        'syr_S': len([r for r in SYREQS if r[0].startswith("SyR-S-")]),
+        'syr_E': len([r for r in SYREQS if r[0].startswith("SyR-E-")]),
+        'syr_C': len([r for r in SYREQS if r[0].startswith("SyR-C-")]),
+        'syr_Cost': len([r for r in SYREQS if r[0].startswith("SyR-Cost-")]),
+        'aero': len(SSR_AERO),
+        'prop': len(SSR_PROP),
+        'avi': len(SSR_AVI),
+        'pay': len(SSR_PAY),
+        'comms': len(SSR_COMMS),
+        'gs': len(SSR_GS),
+        'ssr': len(SSR_AERO) + len(SSR_PROP) + len(SSR_AVI) + len(SSR_PAY) + len(SSR_COMMS) + len(SSR_GS),
+        'ir': len(IRREQS),
+        'negr': len(NEGREQS),
+        'vr': len(VRREQS_DATA),
+    }
+    stats['total'] = (stats['stneed'] + stats['syr'] + stats['ssr']
+                      + stats['ir'] + stats['negr'] + stats['vr'])
+
+    # Coverage StNeed -> SyR
+    stneeds_with_syr = set()
+    for rec in all_records:
+        if rec[4] == "SyR":
+            for p in rec[5].split(","):
+                p = p.strip()
+                if p.startswith("StNeed-"):
+                    stneeds_with_syr.add(p)
+    stats['coverage_stneed_syr'] = 100.0 * len(stneeds_with_syr) / max(stats['stneed'], 1)
+
+    # Coverage SyR -> SsR
+    syrs_with_ssr = set()
+    for rec in all_records:
+        if rec[4] == "SsR":
+            for p in rec[5].split(","):
+                p = p.strip()
+                if p.startswith("SyR-"):
+                    syrs_with_ssr.add(p)
+    stats['coverage_syr_ssr'] = 100.0 * len(syrs_with_ssr) / max(stats['syr'], 1)
+
+    # Coverage SyR -> VR
+    syrs_with_vr = set()
+    for rec in all_records:
+        if rec[4] == "VR":
+            syrs_with_vr.add(rec[5])
+    stats['coverage_syr_vr'] = 100.0 * len(syrs_with_vr) / max(stats['syr'], 1)
+
+    # Orphan SyR — only those without ANY legitimate parent (StNeed/SyR/Boundary/Cap/Bando/ConOps/Reg)
+    legit_prefixes = ("StNeed-", "SyR-", "Boundary", "Cap", "Bando", "ConOps", "Reg", "Multiple")
+    orphans = []
+    for rec in all_records:
+        if rec[4] == "SyR":
+            parents = [p.strip() for p in rec[5].split(",")]
+            if not any(p.startswith(legit_prefixes) for p in parents if p):
+                orphans.append(rec[0])
+    stats['orphan_syr'] = len(orphans)
+
+    # Untestable SyR
+    stats['untestable_syr'] = len([r for r in SYREQS if not r[8] or r[8].strip() == "-"])
+
+    return stats
+
+
+def generate_xlsx(out_path):
+    """Generate the multi-sheet RTM-v1.0.xlsx."""
+    wb = Workbook()
+    # Remove default
+    wb.remove(wb.active)
+
+    vr_records = build_vr_records()
+    all_records = (list(STNEEDS) + list(SYREQS) + list(SSR_AERO) + list(SSR_PROP)
+                   + list(SSR_AVI) + list(SSR_PAY) + list(SSR_COMMS) + list(SSR_GS)
+                   + list(IRREQS) + list(NEGREQS) + list(vr_records))
+
+    stats = compute_stats(all_records)
+
+    # Sheet 1: Cover
+    build_cover_sheet(wb, stats)
+
+    # Sheets 2-12
+    build_data_sheet(wb, "StNeeds", STNEEDS, COLOR_STNEED)
+    build_data_sheet(wb, "SyR", SYREQS, COLOR_SYR)
+    build_data_sheet(wb, "SsR_AERO", SSR_AERO, COLOR_SSR)
+    build_data_sheet(wb, "SsR_PROP", SSR_PROP, COLOR_SSR)
+    build_data_sheet(wb, "SsR_AVI", SSR_AVI, COLOR_SSR)
+    build_data_sheet(wb, "SsR_PAY", SSR_PAY, COLOR_SSR)
+    build_data_sheet(wb, "SsR_COMMS", SSR_COMMS, COLOR_SSR)
+    build_data_sheet(wb, "SsR_GS", SSR_GS, COLOR_SSR)
+    build_data_sheet(wb, "IR", IRREQS, COLOR_IR)
+    build_data_sheet(wb, "NegR", NEGREQS, COLOR_NEGR)
+    build_data_sheet(wb, "VR", vr_records, COLOR_VR)
+
+    # Sheet 13: Coverage Matrix
+    build_coverage_matrix_sheet(wb, all_records)
+
+    # Sheet 14: Gap Analysis
+    build_gap_analysis_sheet(wb, all_records, stats)
+
+    wb.save(out_path)
+    return stats, all_records
+
+
+def generate_csv(out_path, all_records):
+    """Generate flat CSV for DOORS/Jama/Polarion import."""
+    with open(out_path, 'w', newline='', encoding='utf-8') as fh:
+        writer = csv.writer(fh, quoting=csv.QUOTE_ALL)
+        writer.writerow(RTM_COLUMNS)
+        for rec in all_records:
+            writer.writerow(rec)
+
+
 def main():
-    print("[build_rtm] Stage 2/4: AERO+PROP+AVI subsystems loaded")
-    print(f"  - SsR_AERO: {len(SSR_AERO)}")
-    print(f"  - SsR_PROP: {len(SSR_PROP)}")
-    print(f"  - SsR_AVI : {len(SSR_AVI)}")
+    out_dir = os.path.dirname(os.path.abspath(__file__))
+    xlsx_path = os.path.join(out_dir, "RTM-v1.0.xlsx")
+    csv_path = os.path.join(out_dir, "RTM-v1.0-full.csv")
+
+    print("[build_rtm] Generating XLSX + CSV...")
+    stats, all_records = generate_xlsx(xlsx_path)
+    generate_csv(csv_path, all_records)
+
+    print(f"[build_rtm] OK: {xlsx_path}")
+    print(f"[build_rtm] OK: {csv_path}")
+    print(f"[build_rtm] Total records: {stats['total']}")
+    print(f"[build_rtm] Coverage StNeed->SyR: {stats['coverage_stneed_syr']:.1f}%")
+    print(f"[build_rtm] Coverage SyR->SsR  : {stats['coverage_syr_ssr']:.1f}%")
+    print(f"[build_rtm] Coverage SyR->VR   : {stats['coverage_syr_vr']:.1f}%")
+    print(f"[build_rtm] Orphan SyR         : {stats['orphan_syr']}")
+    print(f"[build_rtm] Untestable SyR     : {stats['untestable_syr']}")
+
+    return stats
 
 
 if __name__ == "__main__":
