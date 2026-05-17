@@ -831,6 +831,20 @@ L'agente `regulatory-adversary` ha condotto stress-test del presente capitolo. S
 
 ---
 
+## 5.16bis Update IRIS² Architecture (post DR-009 closure M+3)
+
+> **Finding DR-009 (`riferimenti/DR-research-closure-M3.md`)**: la verifica con fonti primarie (SpaceRISE concession contract press release, Commissione UE Reg. UE 2023/588) ha confermato che **IRIS² è architettura LEO + MEO puro, SENZA layer stratosferico**. Primo lancio target 2029, operatività piena 2031, governato da SpaceRISE (Airbus + Eutelsat + Thales-Telespazio + Hispasat + OHB + Deutsche Telekom + Orange).
+
+**Implicazione per il posizionamento "complementare a IRIS²"** (boundary B2 + Cap. 5.0bis + Cap. 7.0bis + Cap. 11):
+- Il posizionamento "stratospheric layer complementary to IRIS²" è **aspirazione strategica Y4-Y7**, non baseline acquisita
+- La complementarità è **opportunità di posizionamento gap-filler**, non integrazione tecnica predefinita
+- Lo slittamento IRIS² (lancio 2029, ops 2031) **dà tempo a Firmamento** per posizionarsi nella narrativa "EU sovereign multi-orbit + stratospheric"
+- **Action**: position paper "Italian Stratospheric Layer Complementary to IRIS² Multi-Orbit" (engagement DG CNECT + SpaceRISE) entro Y2 per validare il framing
+
+**Falsifying observation §5.16bis**: se entro Y3 la Commissione UE o SpaceRISE pubblicano documenti ufficiali che escludono esplicitamente layer stratosferici dall'architettura sovrana EU multi-orbit, il posizionamento "complementare IRIS²" è falsificato. Trigger scenario B2-relaxed (Cap. 11 §11.6bis).
+
+---
+
 ## 5.17 Aggiornamento Engagement Plan (post 15 showstopper)
 
 L'engagement plan §5.11.3 va esteso con:

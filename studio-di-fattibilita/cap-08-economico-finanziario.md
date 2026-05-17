@@ -194,6 +194,14 @@ TOTALE GENERALE Phase B (Y3-Y5)                       €  8.2-20.2M
 
 > **Stima realistica Phase B**: €8-15M (range più stretto considerando grant funding tipicamente esente IVA).
 
+> **⚠️ CAVEAT CRITICO POST DR-014 (M+3)**: il benchmark di programmi HALE solari internazionali (`riferimenti/DR-research-closure-M3.md` §DR-014) indica capital intensity per programma stimata **$50M - $1B** (Zephyr Airbus cumulato 15+ anni, Skydweller Series A $40M solo round iniziale, PHASA-35 BAE multiple round, Sunglider SoftBank investimento estimato $200M+). La stima Firmamento **€5.5-13.5M è sottostimata 10-50x** rispetto a questi benchmark per "operatività commerciale". Riposizionamento onesto:
+> - **€5.5-13.5M = Phase 0/Phase A Y1-Y3** (concept + subscale demo + early flight test), **NON** fino a operatività commerciale
+> - Phase B-C-D-E **a copertura operativa** richiede realisticamente **€50-200M+ cumulati** per HALE solare proprietario, OR partnership con prime contractor (Aalto/Sceye/Skydweller/CIRA) come **prime contractor** + Firmamento come operatore di servizi
+> - Il modello service-only (boundary B1) consente di **non sopportare il full capex** se Firmamento opera HAPS di un prime contractor (model "Airbus Air-as-a-Service / Aalto Defense+Civil mix" sotto licenza)
+> - Implicazione strategica: **Phase B 6B in autonomia full-scale è non finanziabile** per Firmamento standalone. Ricalibrato come **R&D collaborativo** con partner prime contractor o consortium EU EuroHAPS-successor.
+
+> **Falsifying observation Phase B 6B post-DR-014**: se al gate G5 (M+24) non c'è partnership prime contractor (Aalto/Skydweller/Sceye/CIRA/TAS) firmata o consortium EU bid-ready, Phase B 6B in standalone è **strutturalmente non finanziabile**. Attivare scenario B2-relaxed Cap. 11 §11.6bis.
+
 ---
 
 ## 8.4 CapEx Dettagliato

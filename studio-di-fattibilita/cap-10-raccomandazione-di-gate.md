@@ -36,12 +36,15 @@ Il capitolo è **sintesi delle evidenze** prodotte nei Cap. 1-9 e 11 dello Studi
 
 ### 10.0bis.2 Verdetto Percorso 6B in scenario realistico
 
-Il verdetto **HOLD / GO CONDIZIONATO ESTREMO 6B** della §10.4 sotto resta valido. Aggiornamenti post-audit:
+Il verdetto **HOLD / GO CONDIZIONATO ESTREMO 6B** della §10.4 sotto resta valido. Aggiornamenti post-audit M+3:
 
 - Il 6B non parte mai prima del gate G5 (M+24), e con le sliding timeline §9.12 realisticamente **M+30-48**
 - 15 showstopper regolatori aggiuntivi (vedi Cap. 5 §5.16) confermano severità path 6B
+- **DR-013 finding (`riferimenti/DR-research-closure-M3.md`)**: base rate consolidato **0% HALE solari commerciali operativi globalmente** in 22 anni di tentativi (12 programmi 2003-2025 analizzati: NASA Helios crashed 2003, Aalto HAWK30 cancellato 2020, Solara 50 dissolto, Sanswire StratXX mai operativo, AALTO Zephyr "commercial entry 2024" è in realtà operations militari, Skydweller solo dual-use Navy AMPA, PHASA-35 operativo 2026 ma dual-use, ecc.) → **HOLD 6B con criteri di uscita estremamente stringenti**
+- **DR-014 finding**: capital intensity per HALE solare ad operatività commerciale è $50M-1B → la stima Firmamento €5.5-13.5M Phase B è **R&D Phase 0/A**, NON percorso completo. Rivedere Cap. 8 §8.3.3
 - Probabilità operatività perennial Y10 standalone stimata realisticamente **6-15%** (vedi Cap. 11 §11.6bis scenario B2-relaxed)
-- **Hold del 6B è il default permanente** fino a evidenza chiara di apertura framework EASA RMT HAPS
+- **Hold del 6B è il default permanente** fino a evidenza chiara di (a) apertura framework EASA RMT HAPS + (b) partnership prime contractor o consortium EU bid
+- **Pivot raccomandato per 6B**: da "HALE proprietario Firmamento" a "Firmamento operatore di servizi su piattaforme prime contractor (Aalto/Sceye/Skydweller/CIRA-EuroHAPS-successor)" come modello primario; standalone HALE Firmamento resta come **fallback R&D only**
 
 ### 10.0bis.3 Comunicazione esterna del verdetto
 

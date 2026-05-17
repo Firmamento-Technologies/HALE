@@ -28,6 +28,10 @@ Il presente capitolo è il **cuore tecnico** dello Studio di Fattibilità, e cop
 | **6A VTOL pilota** | ✅ **GO** — tecnicamente fattibile con piattaforma commerciale TRL 8-9 + integrazione payload modulare. Rischi gestibili. | Nessuno bloccante; rischi operativi orografia/inverno → mitigazione operativa |
 | **6B HALE stratosferico** | ⚠️ **HOLD / Go Condizionato R&D** — fattibilità tecnica non dimostrata. 2 showstopper critici aperti. | **RSK-TEC-001 (energy balance inverno) + RSK-TEC-002 (aeroelasticità ala high-AR)** |
 
+> **⚠️ CAVEAT CRITICO POST DR-013 (M+3)** — base rate aggregato HALE solari commerciali (`riferimenti/DR-research-closure-M3.md` §DR-013): 12 programmi 2003-2025 analizzati, **0% raggiunti operatività commerciale civile ricorrente**. Sopravvissuti (Zephyr AALTO, Skydweller, PHASA-35) operano principalmente in scenari **military/dual-use** o "commercial early entry" con tempi reali di operatività estesi. Il Percorso 6B Firmamento standalone deve considerare questa base rate come baseline, NON come "tutti i progetti tech innovativi falliscono ma noi no".
+>
+> **Implicazione**: il "GO Condizionato R&D" del 6B è **valido solo se** il modello R&D include esplicitamente un **partnership prime contractor** o un **consortium EU bid** come elemento strutturale, non come opzione. Vedi Cap. 10 §10.0bis.2 + Cap. 8 §8.3.3 caveat post-DR-014.
+
 ### 6.0.2 Trade study chiave conclusi al M+3 (preliminari)
 
 | TS-ID | Decisione | Raccomandazione preliminare | Confidence |
