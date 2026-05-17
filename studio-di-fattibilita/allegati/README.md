@@ -11,13 +11,13 @@
 
 | Allegato | Path | Contenuto | Status |
 |---|---|---|---|
-| **A.1** | [`A1-RTM/`](A1-RTM/) | Requirements Traceability Matrix v1.0 completa | ⏳ subagent |
-| **A.2** | [`A2-Risk-Register/`](A2-Risk-Register/) | Risk Register consolidato v1.0 | ⏳ subagent |
+| **A.1** | [`A1-RTM/`](A1-RTM/) | Requirements Traceability Matrix v1.0 completa (279 record, 14 sheet) | ✅ |
+| **A.2** | [`A2-Risk-Register/`](A2-Risk-Register/) | Risk Register consolidato v1.0 (116 rischi, 22 sheet, 5+5 showstopper) | ✅ |
 | **A.3** | [`A3-Trade-Studies/`](A3-Trade-Studies/) | DOCFAP — Documento Fattibilità Alternative Progettuali | ✅ |
-| **A.4** | [`A4-ICD/`](A4-ICD/) | Interface Control Document preliminare v1.0 | ✅ |
-| **A.5** | [`A5-VV-Plan/`](A5-VV-Plan/) | Verification & Validation Plan v1.0 | ⏳ subagent |
+| **A.4** | [`A4-ICD/`](A4-ICD/) | Interface Control Document preliminare v1.0 (59 interfacce, 13 sheet) | ✅ |
+| **A.5** | [`A5-VV-Plan/`](A5-VV-Plan/) | Verification & Validation Plan v1.0 (71 SyR, 7 sheet, €1.57M test) | ✅ |
 | **A.6** | [`A6-CAD/`](A6-CAD/) | Schemi/disegni CAD del concept (placeholder; CAD binari in `/cad/`) | ✅ |
-| **A.7** | [`A7-Link-Budget/`](A7-Link-Budget/) + [`energy-balance/`](energy-balance/) + [`financial-model/`](financial-model/) | Modelli di calcolo (link budget telecom, energy balance HALE, modello finanziario Excel) | ✅ (energy + financial); ⏳ link budget subagent |
+| **A.7** | [`A7-Link-Budget/`](A7-Link-Budget/) + [`energy-balance/`](energy-balance/) + [`financial-model/`](financial-model/) | Modelli di calcolo (3 modelli: link budget 14 scenari ITU-R, energy balance HALE 365gg, finanziario 10 sheet) | ✅ |
 | **A.8** | [`A8-Bilanci-Massa/`](A8-Bilanci-Massa/) | Bilanci di massa preliminari (6A + 6B) | ✅ |
 | **A.9** | [`A9-Computo-Metrico/`](A9-Computo-Metrico/) | Computo Metrico Estimativo ground segment | ✅ |
 | **A.10** | [`A10-Piano-Manutenzione/`](A10-Piano-Manutenzione/) | Piano di Manutenzione preliminare | ✅ |
@@ -33,8 +33,19 @@
 
 ## Status complessivo M+3
 
-- ✅ **10/13 allegati Vol. 2** completati dalla main session
-- ⏳ **3 allegati** in lavoro via subagent (A.1 RTM, A.2 Risk Register, A.5 V&V + A.7 Link Budget)
+- ✅ **13/13 allegati Vol. 2** COMPLETATI (8 main session + 5 subagent)
+- ✅ **+ allegato extra vendor-rfq/** (RFQ template + analisi quotation JOUAV vs Tekever)
+- ✅ **Volume 3 riferimenti bibliografici** completo (R.1, R.2, R.3, R.4, R.5)
+
+### Dimensioni aggregate Volume 2
+- ~30 file .md + ~12 file .xlsx + ~15 file .py + ~10 PNG + 3 .csv
+- ~1.5-2 MB di documentazione tecnica indicizzabile
+
+### Subagent batch 1 completati
+1. A.1 RTM v1.0 — 279 record (28 StNeed + 65 SyR + 81 SsR + 22 IR + 15 NegR + 68 VR), coverage 100/72/100%
+2. A.2 Risk Register v1.0 — 116 rischi in 11 categorie, 5+5 showstopper, post-mitigation RED da 17→2 (88% reduction)
+3. A.4 ICD v1.0 — 59 interfacce in 8 categorie, 13 sheet Excel
+4. A.5 V&V + A.7 Link Budget — V&V Matrix 71 SyR + 14 scenari link budget ITU-R compliant (12/14 OK)
 
 ## Conformità art. 41 D.Lgs. 36/2023 + Allegato I.7
 
