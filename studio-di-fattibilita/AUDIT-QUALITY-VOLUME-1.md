@@ -1,4 +1,4 @@
-# Audit Quality Volume 1 — Consolidamento Finale
+# Audit Quality Volume 1. Consolidamento Finale
 
 > **Data:** maggio 2026 (post Quality Consolidation sprint M+3)
 > **Scope:** consolidamento di 3 audit avversariali paralleli + audit di coerenza interna del Volume 1 dello Studio di Fattibilità.
@@ -18,8 +18,8 @@
 | Fonte audit | Verdetto sintetico | Severità |
 |---|---|---|
 | **Audit interno coerenza** (main session) | Documento coerente; 3 incongruenze numeriche minori fixate; boundary B1+B2 preservate in 12/12 capitoli | 🟢 |
-| **Red Team Skeptic** (subagent) | "Regge con caveat strutturali pesanti — non investment-grade nello stato attuale M+11 proiezione" | 🟡 |
-| **Competitor Intelligence** (subagent) | "Firmamento NON sopravvive standalone a Y10 — probabilità <15%. Scenario più probabile: acquisizione difensiva da TAS-Leonardo Y3-Y5 (€30-200M valuation, P ~50-70%)" | 🔴 |
+| **Red Team Skeptic** (subagent) | "Regge con caveat strutturali pesanti, non investment-grade nello stato attuale M+11 proiezione" | 🟡 |
+| **Competitor Intelligence** (subagent) | "Firmamento NON sopravvive standalone a Y10, probabilità <15%. Scenario più probabile: acquisizione difensiva da TAS-Leonardo Y3-Y5 (€30-200M valuation, P ~50-70%)" | 🔴 |
 | **Regulatory Adversary** (subagent) | "Path regolatorio NON regge nella formulazione attuale. P(blocco operativo M+12-M+18 su 6A) ≈ 35-45%; P(stalling permanente 6B fino a 2030+) ≈ 75%" | 🔴 |
 
 ---
@@ -43,56 +43,56 @@ In ordine di **criticità per la sopravvivenza del progetto**:
 
 ---
 
-## 2. Sintesi per Capitolo — Critiche Chiave Aggregate
+## 2. Sintesi per Capitolo. Critiche Chiave Aggregate
 
-### Cap. 0 — Sintesi Esecutiva
+### Cap. 0. Sintesi Esecutiva
 - ⚠️ Verdetto in 1 riga troppo ottimista: "Go Condizionato 6A + Hold 6B" suona neutro ma maschera P(Go pieno effettivo) ~15-35%
 - ⚠️ Numeri €200k-400k revenue Y1 lasciano impressione di "anchor sicuro" che non c'è
 - ✅ Boundary B1+B2 dichiarate correttamente
 
-### Cap. 1 — Inquadramento
+### Cap. 1. Inquadramento
 - ⚠️ "Pentema poche centinaia abitanti" → **FIXED**: ora dichiarato 14 ISTAT
 - ⚠️ Razionale PSNAI 2025 forte ma non quantifica beneficio specifico per Pentema 14 abitanti
-- ⚠️ Manca cenno a regime cambio politico Regione (Bucci 2024 elected) — risk anchor customer
+- ⚠️ Manca cenno a regime cambio politico Regione (Bucci 2024 elected): risk anchor customer
 - ✅ Boundary preservate
 
-### Cap. 2 — Stakeholder + SMART
+### Cap. 2. Stakeholder + SMART
 - 🔴 28 SMART objectives ma Phase 5 (V10) sono "vision pillars" non SMART veri (sotto-riconosciuto)
 - ⚠️ Pentema population: era "150" → **FIXED** a 14
 - ⚠️ Top-5 stakeholder hanno engagement plan ma frequenze ottimistiche per PMI
 - ⚠️ Power/interest grid OK ma manca scenario "stakeholder cambio orientamento" (cambio governo, cambio sindaco)
 
-### Cap. 3 — Requisiti + RTM
+### Cap. 3. Requisiti + RTM
 - 🔴 17 StNeeds confidence medium-low senza workshop reali validati
 - 🔴 42 SyR ma molti hanno V&V method "open" senza chiusura piano
 - ⚠️ RTM v0.5 coverage 74% sotto target 80% gate M+6
 - ⚠️ Falsifying observations dichiarate (7) ma molte sono "trigger osservabili", non "verifica empirica"
 
-### Cap. 4 — Scope + ICD
+### Cap. 4. Scope + ICD
 - ⚠️ 17 deliverable PFTE mappati ad art. 41 ✓ ma alcuni (Computo Metrico, Piano Manutenzione) sono placeholder, non maturi
 - ⚠️ 20 interfacce ICD a livello concept, non engineering-grade (è OK per PFTE, ma ammettere)
 - ⚠️ Manca scenario "scope creep" (cosa fare se Regione chiede use case extra in pilota Y1)
 
-### Cap. 5 — Quadro Normativo ⚠️ **CRITICO**
+### Cap. 5. Quadro Normativo ⚠️ **CRITICO**
 - 🔴 **15 showstopper regolatori non considerati** (AI Act, EUSPA, EUROCONTROL, Codice Penale 432-bis, AgID/PSN, Part-IS EASA, ATEX, RoHS, Galileo PRS, D.Lgs. 81/2008, Direttiva Macchine, Codice Navigazione diritti sorvolo, vincoli affidamento PA, insurance BVLOS, NIS2 operativo)
 - 🔴 **SAIL Pentema** stimato 2-3 ma realtà ENAC probabile **6+** → SAIL IV-V → operatore senza track record non eleggibile
-- 🔴 **EASA Special Condition HAPS è "placebo strategico"** — base rate apertura RMT 5-10 anni; nessuna proposta formale al M+3
+- 🔴 **EASA Special Condition HAPS è "placebo strategico"**: base rate apertura RMT 5-10 anni; nessuna proposta formale al M+3
 - 🔴 **AGCOM stuck a WRC-27** per bande HAPS dedicate
 - 🔴 **Golden Power** rimosso al documento RESERVED ma reale rischio post-Series A (P 45-60% con cap table non-EU)
 - ⚠️ Tutti i tempi ENAC/EASA/AGCOM nel Cap. 9 sono ottimistici (slittamento atteso +50-100%)
 
 **Raccomandazione**: Cap. 5 va riscritto pre-gate G3 con i 15 showstopper aggiunti + sliding timeline realistica.
 
-### Cap. 6 — Analisi Tecnica
+### Cap. 6. Analisi Tecnica
 - 🔴 Energy balance inverno margine 0-15% dichiarato → realismo OK, ma il "fallback seasonal" è ammissione che perennial NON funziona a 44°N
 - 🔴 Asset reuse 6A→6B: 60% (count) vs 30-40% (valore monetario) → **FIXED** chiarendo le due metriche
 - ⚠️ TS-PLATFORM-6A: JOUAV vendor cinese, Plan B Tekever non quotato
-- ⚠️ Fibra di lino aerospace primaria = speculative (5-10 anni qualification) — già caveat ma narrativa marketing forte
+- ⚠️ Fibra di lino aerospace primaria = speculative (5-10 anni qualification): già caveat ma narrativa marketing forte
 - ⚠️ FMECA preliminare con RPN limite 40 ma molti item sopra (IR sensor calibrazione RPN 48)
 - ⚠️ FTA preliminare top event Loss of Vehicle ordine 10⁻⁵-10⁻⁶/h: target SAIL III è 10⁻⁵, margine zero
 
-### Cap. 7 — Mercato + Business Case 🔴 **CRITICO**
-- 🔴 **Cluster D competitor** (e-GEOS, Planetek, NHazca, FlyingBasket) **non considerato** — sono il vero competitor Y1 su B2G regionale
+### Cap. 7. Mercato + Business Case 🔴 **CRITICO**
+- 🔴 **Cluster D competitor** (e-GEOS, Planetek, NHazca, FlyingBasket) **non considerato**: sono il vero competitor Y1 su B2G regionale
 - 🔴 **Pricing €150k/anno servizio EO Regione** = inventato (incumbent IT lo fanno a €30-50k/anno)
 - 🔴 **TAM HAPS €99M→€240M MarkNtel** = fonte commerciale single, declassato confidence low (✓ già dichiarato ma usato come baseline)
 - 🔴 **4 pilastri vantaggio competitivo** dichiarati ma nessuno è genuinamente difendibile vs AALTO/Skydweller scale + Starlink prezzo + e-GEOS market share
@@ -100,31 +100,31 @@ In ordine di **criticità per la sopravvivenza del progetto**:
 - 🔴 **UC-003 connettività emergenza + UC-008 telemedicina NTN**: già mangiati da Starlink consumer €50/mese; non sono argomenti credibili Y1
 - ⚠️ MVP Y1 €355-405k revenue baseline da 5 contratti = ottimismo (cicli appalti PA 6-18 mesi, realismo €100-200k)
 
-### Cap. 8 — Economico-Finanziario
+### Cap. 8. Economico-Finanziario
 - 🔴 CapEx Y1 €975k-€1.96M dichiarato include contingency 15% ma **base rate aerospace overrun 30-150%** → CapEx reale Y1 €1.3-3.0M scenario realistico
 - ⚠️ WACC 12% blended assume 40-50% grant; se grant scendono, WACC sale a 18-22%
-- 🔴 Capital intensity €10-30B scenario "EU sovereign full scale" dichiarata onestamente, ma **coabita con CapEx 6A €0.7M nello stesso documento** — sembra disorientante per finanziatore early-stage
+- 🔴 Capital intensity €10-30B scenario "EU sovereign full scale" dichiarata onestamente, ma **coabita con CapEx 6A €0.7M nello stesso documento**: sembra disorientante per finanziatore early-stage
 - ⚠️ Revenue Y3 €1.5-3.5M baseline ottimistico; scenario worst €1.0M più realistico
 - ⚠️ Bandi 2026 Coopfond + FESR + PNRR non confermati al M+3 (DR-002 aperto)
 - ✅ Quadro Economico ex art. 41 ben strutturato
 
-### Cap. 9 — Cronoprogramma + Gate
+### Cap. 9. Cronoprogramma + Gate
 - 🔴 **11 mesi PFTE è aggressivo** vs base rate aerospace 18-30 mesi
 - 🔴 **Pre-application ENAC entro M+3** = praticamente impossibile (ENAC tipicamente 30-90 gg solo per pre-meeting)
 - 🔴 Engagement Garante Privacy: M+6 DPIA submit ottimistico (realistico M+12)
 - 🔴 0 FTE regulatory full-time + ENAC vuole 2-3 round integrazioni → SORA approval reale M+15-24 (non M+9)
-- ⚠️ 13 entry criteria al Gate G3 è "gate killer" — improbabile che tutti soddisfatti simultaneamente
+- ⚠️ 13 entry criteria al Gate G3 è "gate killer": improbabile che tutti soddisfatti simultaneamente
 
-### Cap. 10 — Raccomandazione di Gate 🔴 **CRITICO**
+### Cap. 10. Raccomandazione di Gate 🔴 **CRITICO**
 - 🔴 **P(AND 5 hard conditions C1-C5)** dichiarato 25-60% è ottimismo; realistico **3-7%** considerando AND di 5 probabilità marginali 50-80%
-- 🔴 **Verdetto "Go Condizionato" 6A** dovrebbe essere **"Hold con piano regolatorio rafforzato"** come default — **FIXED** aggiungendo caveat probabilistico esplicito
+- 🔴 **Verdetto "Go Condizionato" 6A** dovrebbe essere **"Hold con piano regolatorio rafforzato"** come default: **FIXED** aggiungendo caveat probabilistico esplicito
 - 🔴 **Hold 6B** è formalmente corretto ma Special Condition HAPS = placebo
 - 🔴 §10.7 "Cosa non facciamo" è positivo ma manca "no diretto B2C connettività" (Starlink fa già quello)
 - ⚠️ Sezione decisione formale CdA OK ma nessuna milestone per "go-fail-fast" se hard conditions non maturano
 
-### Cap. 11 — Roadmap post-fattibilità
-- 🔴 **Capital intensity €10-30B EU sovereign Y10** sembra utopica vs competitive landscape — Cap. 11 dichiara onestamente, ma manca "scenario B2-relaxed" (es. "operatore IT standalone €30-80M ARR Y10, no consorzio EU")
-- 🔴 **TAS-Leonardo "partnership co-lead"** è ingenuo — più probabile acquisitor
+### Cap. 11. Roadmap post-fattibilità
+- 🔴 **Capital intensity €10-30B EU sovereign Y10** sembra utopica vs competitive landscape: Cap. 11 dichiara onestamente, ma manca "scenario B2-relaxed" (es. "operatore IT standalone €30-80M ARR Y10, no consorzio EU")
+- 🔴 **TAS-Leonardo "partnership co-lead"** è ingenuo: più probabile acquisitor
 - ⚠️ Fase 5 (Y8-Y10) descritta con dettaglio simile a Fase 1, ma confidence dovrebbe essere "speculative", non "operational planning"
 - ⚠️ Gate G6 M+36 con TRL 5+ ma TRL 4→6 in 24 mesi è 2× più veloce vs base rate 3-5 anni
 
@@ -134,16 +134,16 @@ In ordine di **criticità per la sopravvivenza del progetto**:
 
 Claim importanti del Volume 1 che NON hanno falsifying observation dichiarata:
 
-1. **Modello cooperativo come vantaggio competitivo** — boundary B1 protegge dalla critica ma non c'è osservazione di falsificazione
-2. **Linguaggio "complementare IRIS²"** — non c'è osservazione che indichi quando questa positioning fallirebbe (es. IRIS² roadmap esclude HAPS)
-3. **Asset reuse 6A→6B 30-40%** — non c'è soglia minima sotto cui reuse fallisce (es. <15% → "ladder" rotto)
-4. **Pricing PA €150k/anno** — non c'è soglia minima (es. se incumbent IT offre <€50k, mercato chiuso)
-5. **EASA HAPS framework apertura entro 2030** — non c'è scenario "EASA non apre mai" + risposta
-6. **CIRA partnership willingness** — non c'è observation che CIRA potrebbe non collaborare
-7. **Cooperative 8/10 partecipano** — non c'è observation se ritiro post-workshop M+6
-8. **Tech batterie LiS 350 Wh/kg pack entro 2028** — base rate tech aerospace timeline non sempre rispettato
-9. **Mix funding Y1 ≥ 60% committed M+10** — non c'è soglia minima per pivot
-10. **Visione 10 anni operazionalizzata** — manca observation aggregata "anno X senza milestone Y → pivot"
+1. **Modello cooperativo come vantaggio competitivo**: boundary B1 protegge dalla critica ma non c'è osservazione di falsificazione
+2. **Linguaggio "complementare IRIS²"**: non c'è osservazione che indichi quando questa positioning fallirebbe (es. IRIS² roadmap esclude HAPS)
+3. **Asset reuse 6A→6B 30-40%**: non c'è soglia minima sotto cui reuse fallisce (es. <15%, "ladder" rotto)
+4. **Pricing PA €150k/anno**: non c'è soglia minima (es. se incumbent IT offre <€50k, mercato chiuso)
+5. **EASA HAPS framework apertura entro 2030**: non c'è scenario "EASA non apre mai" + risposta
+6. **CIRA partnership willingness**: non c'è observation che CIRA potrebbe non collaborare
+7. **Cooperative 8/10 partecipano**: non c'è observation se ritiro post-workshop M+6
+8. **Tech batterie LiS 350 Wh/kg pack entro 2028**: base rate tech aerospace timeline non sempre rispettato
+9. **Mix funding Y1 ≥ 60% committed M+10**: non c'è soglia minima per pivot
+10. **Visione 10 anni operazionalizzata**: manca observation aggregata "anno X senza milestone Y, pivot"
 
 **Azione**: aggiungere queste falsifying observations nei capitoli relativi pre-gate G3.
 
@@ -192,7 +192,7 @@ Da `audit-rigore-epistemico.md` DR-012 + Red Team audit:
 
 ---
 
-## 6. P(AND Hard Conditions Go 6A) — Calcolo Realistico
+## 6. P(AND Hard Conditions Go 6A). Calcolo Realistico
 
 Verdetto Cap. 10 "Go Condizionato 6A" è AND di 5 hard conditions. Probabilità marginali realistiche stimate dagli audit:
 
@@ -215,7 +215,7 @@ Lo scenario base atteso è quindi **HOLD con piano di mitigazione** (~60-80% dei
 
 ---
 
-## 7. Pre-Mortem Aggregato — "Il Progetto È Fallito Tra 5 Anni: Perché?"
+## 7. Pre-Mortem Aggregato. "Il Progetto È Fallito Tra 5 Anni: Perché?"
 
 Top 5+1 driver di fallimento più probabili (consolidato da 3 audit):
 
@@ -247,13 +247,13 @@ Fix immediati applicati in questa sessione:
 
 ## 9. Fix NON Applicati (Richiedono Sessione/Decisione Successiva)
 
-1. **Riscrittura Cap. 5** con 15 showstopper regolatori aggiuntivi (AI Act, EUSPA, EUROCONTROL, Part-IS, etc.) — lavoro 4-6 ore
-2. **Aggiunta scenario B2-relaxed in Cap. 11** ("standalone IT operator small fleet €30-80M Y10") — lavoro 1-2 ore
-3. **Riscrittura Cap. 7 §7.4 Competitor** con Cluster D (e-GEOS, Planetek, FlyingBasket) e benchmark pricing reale — lavoro 2-3 ore (richiede DR-012 chiusura)
-4. **Cap. 10 ristrutturazione** da "Go Condizionato" a "Hold con piano regolatorio rafforzato" come scenario base — lavoro 1-2 ore
-5. **10 falsifying observations mancanti** distribuite nei capitoli — lavoro 1-2 ore
-6. **Update Cap. 9 schedule** con sliding timeline realistica (SORA M+15-24 invece di M+9) — lavoro 1-2 ore
-7. **Aggiunta sezione "Negative Requirements"** in Cap. 3 (estensione RTM) — lavoro 1 ora
+1. **Riscrittura Cap. 5** con 15 showstopper regolatori aggiuntivi (AI Act, EUSPA, EUROCONTROL, Part-IS, etc.): lavoro 4-6 ore
+2. **Aggiunta scenario B2-relaxed in Cap. 11** ("standalone IT operator small fleet €30-80M Y10"): lavoro 1-2 ore
+3. **Riscrittura Cap. 7 §7.4 Competitor** con Cluster D (e-GEOS, Planetek, FlyingBasket) e benchmark pricing reale: lavoro 2-3 ore (richiede DR-012 chiusura)
+4. **Cap. 10 ristrutturazione** da "Go Condizionato" a "Hold con piano regolatorio rafforzato" come scenario base: lavoro 1-2 ore
+5. **10 falsifying observations mancanti** distribuite nei capitoli: lavoro 1-2 ore
+6. **Update Cap. 9 schedule** con sliding timeline realistica (SORA M+15-24 invece di M+9): lavoro 1-2 ore
+7. **Aggiunta sezione "Negative Requirements"** in Cap. 3 (estensione RTM): lavoro 1 ora
 
 **Totale lavoro residuo per portare Volume 1 a "investment-grade"**: 11-18 ore di scrittura focused.
 
@@ -287,9 +287,9 @@ Fix immediati applicati in questa sessione:
 
 ## 11. File audit referenziati
 
-- `AUDIT-REDTEAM-VOLUME-1.md` (297 righe, 38 KB) — Red Team Skeptic generale
-- `AUDIT-COMPETITOR-VOLUME-1.md` (474 righe, ~50 KB) — Competitor Intelligence
-- `AUDIT-REGULATORY-VOLUME-1.md` (445 righe, ~45 KB) — Regulatory Adversary
+- `AUDIT-REDTEAM-VOLUME-1.md` (297 righe, 38 KB): Red Team Skeptic generale
+- `AUDIT-COMPETITOR-VOLUME-1.md` (474 righe, ~50 KB): Competitor Intelligence
+- `AUDIT-REGULATORY-VOLUME-1.md` (445 righe, ~45 KB): Regulatory Adversary
 - Audit interno coerenza (questa sessione main)
 
 **Totale audit Volume 1**: ~155 KB + circa 1200 righe di analisi avversariale.

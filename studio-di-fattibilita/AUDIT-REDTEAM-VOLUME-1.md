@@ -273,44 +273,44 @@ Coopfond Cooding Prototypes 2025 €80-150k esauriti M+9-10. Cooding-Invest €1
 ### Driver 3. JOUAV CW-30E supply chain blocked + Plan B Tekever non ready (P: media-alta)
 JOUAV cinese: tariffe USA-CN 2025+ + EU restrictions su dual-use cinese in escalation. Lead time potrebbe passare da 60-120 giorni a 12-18 mesi. Tekever AR3 (Plan B) ha lead time anch'esso non immediato, e con specifiche differenti (no VTOL pure, payload diverso). Pivot piattaforma in Y1 = 6-9 mesi delay + CapEx re-baselining. **EWI:** se al M+3 quotation JOUAV ritarda > 30 giorni → red flag.
 
-### Driver 4 — Accettabilità sociale Pentema negata o controversa (P: media)
-Comunità Pentema 32 residenti reali (ISTAT) — non 150 come sostenuto. Workshop pubblico non ancora condotto al M+3. Probabilità "single opponent vocale" su 32 abitanti = alta. Privacy concern + percezione sorveglianza + estetica + rumore = vulnerabili a 1 evento mediatico locale. Pivot ad altra frazione SNAI Liguria possibile ma implica re-engagement Comune + 6-9 mesi delay. **EWI:** se al M+6 workshop pubblico genera ≥ 3 vocali opposing → red flag.
+### Driver 4. Accettabilità sociale Pentema negata o controversa (P: media)
+Comunità Pentema 32 residenti reali (ISTAT), non 150 come sostenuto. Workshop pubblico non ancora condotto al M+3. Probabilità "single opponent vocale" su 32 abitanti = alta. Privacy concern + percezione sorveglianza + estetica + rumore = vulnerabili a 1 evento mediatico locale. Pivot ad altra frazione SNAI Liguria possibile ma implica re-engagement Comune + 6-9 mesi delay. **EWI:** se al M+6 workshop pubblico genera ≥ 3 vocali opposing, red flag.
 
-### Driver 5 — Aalto HAPS apre operazioni Italia via JV Leonardo (P: media)
+### Driver 5. Aalto HAPS apre operazioni Italia via JV Leonardo (P: media)
 Aalto (Airbus subsidiary) + Leonardo (azionista Airbus 1.5%) hanno motivo strategico per chiudere "italian HAPS narrative" rapidamente. JV Aalto-Leonardo aprible in 6-12 mesi se Aalto vede mercato IT crescere. Aalto offre Zephyr 8/S a tariffe sotto i costi Firmamento (capital efficiency superior). Firmamento perde anchor narrative "sovranità italiana stratosferica". **EWI:** se al M+12 Aalto annuncia partnership IT (qualunque) → red flag.
 
-**Bonus driver 6 — EASA HAPS framework non si apre entro M+48 (P: alta)**
+**Bonus driver 6. EASA HAPS framework non si apre entro M+48 (P: alta)**
 Cap. 11 §11.9.1 lo dichiara. Base rate EASA novel framework apertura: 5-10 anni. Al M+48 (2030) nessuna probabilità ragionevole. Phase B 6B finisce essendo R&D senza commercial path. €5.5-13.5M Phase B = pre-burn pre-no-go. **EWI:** se al M+24 EuroHAPS-2 EDF call non include HAPS Special Condition framework workstream → red flag.
 
 ---
 
 ## 7. Scenari di morte del progetto (probabilità + trigger)
 
-### Scenario A — ENAC nega SAIL II-III per Pentema (P: media, ~30-40%)
+### Scenario A. ENAC nega SAIL II-III per Pentema (P: media, ~30-40%)
 **Trigger osservabile:** ENAC pre-application meeting M+3-6 valuta GRC ≥ 6 (densità popolazione "moderate" non "sparse"), SAIL salta a IV-V, costi compliance × 3-5, tempi raddoppiati.
 **Conseguenza:** Pilota Pentema inattuabile in budget Y1. Pivot ad altro sito SNAI Liguria (Beigua, Val di Vara, Fontanabuona) implica 6-12 mesi delay + perdita anchor narrative Pentema. Probabilità rilancio: 40-50%.
 
-### Scenario B — Aalto entra in Italia con JV Leonardo (P: media, ~25-35% entro Y2)
+### Scenario B. Aalto entra in Italia con JV Leonardo (P: media, ~25-35% entro Y2)
 **Trigger osservabile:** Aalto press release JV/partnership con Leonardo o TAS o servizio diretto Italia entro M+12-18.
 **Conseguenza:** Firmamento perde "sovereign IT" pillar + perde Tier-1 customer (Regione, PC). Differenziazione "geografia + cooperative + sostenibilità" non basta da sola contro Tier-1 brand + Zephyr operational track record. Probabilità sopravvivenza: 30-50% (riposizionamento niche service operator senza HALE ambition).
 
-### Scenario C — Coopfond Cooding 2026 non aperto + Regione FESR ritarda (P: alta, ~40-50%)
+### Scenario C. Coopfond Cooding 2026 non aperto + Regione FESR ritarda (P: alta, ~40-50%)
 **Trigger osservabile:** M+6 Coopfond CdA non delibera bando Cooding 2026 + Regione Liguria FESR Bando R&I 2026 non aperto + Cooding-Invest in deferral.
 **Conseguenza:** Cash gap M+10-M+18 = €200-400k missing. Bridge financing emergency: difficile per startup early-stage. Probabilità sopravvivenza: 30-50% (con drastico cost-cutting + Series Seed accelerato).
 
-### Scenario D — Comunità Pentema oppone operazioni (P: bassa-media, ~15-25%)
+### Scenario D. Comunità Pentema oppone operazioni (P: bassa-media, ~15-25%)
 **Trigger osservabile:** Workshop pubblico Pentema M+6-9 ha ≥ 3 voci pubbliche oppostie + stampa locale negativa + petition.
 **Conseguenza:** Comune Torriglia ritira disponibilità. Pivot sito M+9-12 con delay 6-9 mesi. Probabilità rilancio: 60-70%.
 
-### Scenario E — Energy balance HALE inverno conferma 0% margin + Li-S non disponibile entro 2028 (P: media-alta per 6B, ~40-50%)
+### Scenario E. Energy balance HALE inverno conferma 0% margin + Li-S non disponibile entro 2028 (P: media-alta per 6B, ~40-50%)
 **Trigger osservabile:** M+48 simulazioni completa energy balance inverno 44°N + nessun fornitore Li-S aerospace qualified ≥ 320 Wh/kg pack.
 **Conseguenza:** Percorso 6B condannato a "seasonal-only" (marzo-ottobre). Vettore B2 EU sovereign perennial non raggiungibile con tech disponibile. Phase B €5.5-13.5M = R&D senza prospect commercial perennial. Probabilità Hold permanente 6B: 60-80%.
 
-### Scenario F — Acquisizione difensiva TAS-Leonardo a "fair value" (P: media, ~20-30% entro Y4-Y6)
+### Scenario F. Acquisizione difensiva TAS-Leonardo a "fair value" (P: media, ~20-30% entro Y4-Y6)
 **Trigger osservabile:** Approccio informale TAS-Leonardo per equity stake ≥ 25% Firmamento entro M+24-36, con linguaggio "consortium leadership" / "Italian stratospheric coordination".
 **Conseguenza:** Founder team perde maggioranza + traiettoria indipendente. Boundary B2 "nodo italiano" preservato narrativamente ma controllato da incumbent. Probabilità Firmamento standalone vivente Y10: 20-30%.
 
-### Scenario G — Capital intensity Phase 4-5 non finanziabile (P: alta per Fase 4-5, ~70-80%)
+### Scenario G. Capital intensity Phase 4-5 non finanziabile (P: alta per Fase 4-5, ~70-80%)
 **Trigger osservabile:** Roadmap CE 2030+ pubblicata senza programma HAPS sovereign multi-miliardario; Series B €10-30M non raised; EDF HAPS call < €100M.
 **Conseguenza:** Roadmap ridimensionata a "small fleet" o "consolidamento standalone Italia". Boundary B2 "EU sovereign full scale" abbandonato (lo Studio già lo dichiara come precondizione esterna). Probabilità sopravvivenza company: 60-80% in modalità ridotta.
 
@@ -320,77 +320,77 @@ Cap. 11 §11.9.1 lo dichiara. Base rate EASA novel framework apertura: 5-10 anni
 
 In ordine di priorità decrescente. Owner agent suggerito tra parentesi.
 
-### Priorità 1 — Reality checks rapidi (M+3 → M+6)
+### Priorità 1. Reality checks rapidi (M+3 a M+6)
 
-1. **Verifica dato Pentema population** (snai-funding-expert + business-model-strategist) — **M+4**
+1. **Verifica dato Pentema population** (snai-funding-expert + business-model-strategist), **M+4**
    Risolvere inconsistenza interna Cap. 1 ("poche centinaia") vs Cap. 2 ("~150") vs ISTAT (32 residenti). Conseguenze su accettabilità sociale + scale narrativo.
 
-2. **Verifica bando Coopfond Cooding 2026** (snai-funding-expert) — **M+4**
+2. **Verifica bando Coopfond Cooding 2026** (snai-funding-expert), **M+4**
    Chiusura DR-002 (audit-rigore-epistemico.md). Se bando 2026 non aperto, mix funding Y1 va ricostruito + bridge financing strategy attivata.
 
-3. **Verifica DGR e Giunta Regione Liguria post-Bucci 2024** (snai-funding-expert + sovereign-strategist) — **M+4**
+3. **Verifica DGR e Giunta Regione Liguria post-Bucci 2024** (snai-funding-expert + sovereign-strategist), **M+4**
    Mapping Assessorati attuali (Innovazione, Aree Interne, Protezione Civile, Trasporti). Identificare champion politici credibili. Senza, AS-001 wishful thinking.
 
-4. **Triangolazione TAM-IT con AIAD + Eurospace + EUSPA** (business-model-strategist) — **M+5**
+4. **Triangolazione TAM-IT con AIAD + Eurospace + EUSPA** (business-model-strategist), **M+5**
    Chiusura DR-007 + DR-012. Se TAM-IT realisticamente €30-60M (non €100-200M), SAM/SOM/ARR/NPV vanno re-baselinati.
 
-5. **Benchmark pricing PA italiana e-GEOS / Planetek / NHazca via CONSIP/MEPA** (business-model-strategist + financial-cfo) — **M+5**
+5. **Benchmark pricing PA italiana e-GEOS / Planetek / NHazca via CONSIP/MEPA** (business-model-strategist + financial-cfo), **M+5**
    Validare pricing baseline Y1. Se contratti reali sono €30-80k/anno (non €100-300k), MVP revenue Y1 €355-405k diventa €120-180k. SyR-Cost-003 (≥ €200k) potenzialmente fallisce.
 
-### Priorità 2 — Decisioni stratoegiche (M+6 → M+8)
+### Priorità 2. Decisioni stratoegiche (M+6 a M+8)
 
-6. **Quotation contratti JOUAV + Tekever** (vtol-uas-specialist) — **M+6**
+6. **Quotation contratti JOUAV + Tekever** (vtol-uas-specialist), **M+6**
    Chiusura OQ-F03. Pre-finalize TS-PLATFORM-6A con cifre verificate, non datasheet.
 
-7. **Pre-application meeting ENAC condotto + feedback documentato** (aviation-regulatory-counsel) — **M+6**
+7. **Pre-application meeting ENAC condotto + feedback documentato** (aviation-regulatory-counsel), **M+6**
    Chiusura DR-004. Verifica realistica SAIL II-III vs IV-V. Senza, il verdetto Cap. 10 è speculation.
 
-8. **Workshop pubblico Pentema condotto** (data-privacy-counsel + business-model-strategist) — **M+6**
+8. **Workshop pubblico Pentema condotto** (data-privacy-counsel + business-model-strategist), **M+6**
    Validare AS-009 (accettabilità sociale). Senza, pilota a Pentema è speculation.
 
-9. **LoI Regione Liguria firmata** (snai-funding-expert + sovereign-strategist) — **M+6**
+9. **LoI Regione Liguria firmata** (snai-funding-expert + sovereign-strategist), **M+6**
    Chiusura OQ-010. Senza, anchor B2G regionale è ipotesi.
 
-10. **MoU 8/10 cooperative pilota** (business-model-strategist) — **M+6**
+10. **MoU 8/10 cooperative pilota** (business-model-strategist), **M+6**
     Chiusura OQ-011 (parziale). Validare formalmente la rete. Lista nominale, non più "dato sensibile".
 
-### Priorità 3 — Riallineamento documentale (M+8 → M+10)
+### Priorità 3. Riallineamento documentale (M+8 a M+10)
 
-11. **Riformulare Cap. 0 e Cap. 10 con le 6 categorie distinte (feasibile/tecnicamente/operativamente fattibile, regolatoriamente autorizzabile, economicamente sostenibile, operativo)** (aerospace-SE + business-model-strategist) — **M+8**
+11. **Riformulare Cap. 0 e Cap. 10 con le 6 categorie distinte (feasibile/tecnicamente/operativamente fattibile, regolatoriamente autorizzabile, economicamente sostenibile, operativo)** (aerospace-SE + business-model-strategist), **M+8**
     Chiudere Critica G-05.
 
-12. **Spostare capital intensity Y8-Y10 (€500M-€2B / €10-30B) dal Volume 1 a Volume 2 Allegato "Vettore strategico"** (sovereign-strategist + communications-lead) — **M+8**
+12. **Spostare capital intensity Y8-Y10 (€500M-€2B / €10-30B) dal Volume 1 a Volume 2 Allegato "Vettore strategico"** (sovereign-strategist + communications-lead), **M+8**
     Chiudere Critica G-07. Decoppiare narrativamente decisione Y1-Y3 da vettore Y4-Y10.
 
-13. **Aggiungere a Cap. 10 opzione "Defer 6A 12 mesi" come do-nothing benchmark** (red-team-skeptic + business-model-strategist) — **M+9**
+13. **Aggiungere a Cap. 10 opzione "Defer 6A 12 mesi" come do-nothing benchmark** (red-team-skeptic + business-model-strategist), **M+9**
     Chiudere Critica G-08. Conforme art. 41 D.Lgs. 36/2023 + Allegato I.7 (ipotesi di non realizzazione).
 
-14. **Aggiungere a Cap. 9 escalation matrix Hold→No-Go con kill criteria quantitativi** (gate-review-checklist skill + aerospace-SE) — **M+9**
+14. **Aggiungere a Cap. 9 escalation matrix Hold a No-Go con kill criteria quantitativi** (gate-review-checklist skill + aerospace-SE), **M+9**
     Chiudere Critica G-04. Esempio: 3 Hold consecutivi su LoI Regione = No-Go scale-up Liguria.
 
-15. **Dichiarare timeline realistica EASA RMT HAPS con base rate 5-10 anni** (aviation-regulatory-counsel + sovereign-strategist) — **M+9**
+15. **Dichiarare timeline realistica EASA RMT HAPS con base rate 5-10 anni** (aviation-regulatory-counsel + sovereign-strategist), **M+9**
     Chiudere Critica G-10. Onestà sul fatto che Phase B 6B M+24-48 si chiude prima dell'apertura RMT.
 
-### Priorità 4 — Robustezza finanziaria (M+9 → M+10)
+### Priorità 4. Robustezza finanziaria (M+9 a M+10)
 
-16. **Modello DCF completo Excel con scenarios + Monte Carlo + sensitivity** (financial-cfo-analyst) — **M+9**
+16. **Modello DCF completo Excel con scenarios + Monte Carlo + sensitivity** (financial-cfo-analyst), **M+9**
     Chiusura OQ-F05, OQ-F06. Senza, NPV/IRR baseline è "suggestion", non analysis.
 
-17. **Bridge financing strategy quantificata** (financial-cfo-analyst) — **M+9**
+17. **Bridge financing strategy quantificata** (financial-cfo-analyst), **M+9**
     Chiusura OQ-F04. €100-300k buffer richiesto. Identificare strumento concreto (linea CCB, anticipazione bandi, factoring).
 
-18. **Sensitivity Y2 cum FCF + kill criterion** (financial-cfo-analyst) — **M+9**
+18. **Sensitivity Y2 cum FCF + kill criterion** (financial-cfo-analyst), **M+9**
     Cap. 8 §8.6.2 cita kill criterion Y2 < -€2.5M ma non lo aggancia a gate. Esplicitarlo come Hard No-Go trigger.
 
-### Priorità 5 — Posizionamento difensivo (M+10 → M+11)
+### Priorità 5. Posizionamento difensivo (M+10 a M+11)
 
-19. **Competitor monitoring Aalto/Skydweller/PHASA-35 con Early Warning Indicators trimestrali** (competitor-intelligence) — **M+10**
+19. **Competitor monitoring Aalto/Skydweller/PHASA-35 con Early Warning Indicators trimestrali** (competitor-intelligence), **M+10**
     Aggiungere a Cap. 2 §2.2 + Cap. 7 §7.4. Mappare 5-7 player globali HAPS con EWI per ciascuno.
 
-20. **Falsifying Observations Tracker formale** (epistemic-rigor skill + risk-register-builder) — **M+10**
+20. **Falsifying Observations Tracker formale** (epistemic-rigor skill + risk-register-builder), **M+10**
     Cap. 2.6 Critica 6 ha azione aperta. Implementare come allegato Vol. 2.
 
-21. **Position paper "Italian Stratospheric Sovereignty" draft** (sovereign-strategist + communications-lead) — **M+10**
+21. **Position paper "Italian Stratospheric Sovereignty" draft** (sovereign-strategist + communications-lead), **M+10**
     Cap. 11 §11.10.6 + §11.13. Prima esposizione pubblica della visione, controllata, prima di gate G3.
 
 ---
