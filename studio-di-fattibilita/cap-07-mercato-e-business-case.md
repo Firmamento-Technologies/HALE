@@ -749,18 +749,20 @@ Critica condotta dagli agenti `competitor-intelligence` + `business-model-strate
 
 ### Critica 6 — "Pricing €150k/anno per servizio EO Regione è inventato"
 **Razionale critica**: nessuna Regione italiana ha contrattato prima un servizio EO da operatore privato a queste cifre. Riferimenti di mercato (es. Copernicus business uplift) sono molto più bassi.
-**Risposta**: il pricing è preliminare e confidence low. Action item: benchmark contrattualistico con (a) operatori EO che già lavorano con Regioni IT (e-GEOS, Planetek, NHazca), (b) analoghi PA per servizio monitoraggio (es. SiCura Liguria, sistema allerta nazionale). Validazione tramite LoI prima del gate M+10.
+**Risposta**: il pricing è preliminare e confidence low. **Aggiornamento M+3 post-audit Cluster D (§7.4.4 + §7.4.5)**: la critica è stata **confermata e quantificata** dall'audit competitor: i benchmark Cluster D pubblici (Planetek Rheticus Puglia, e-GEOS PC Lazio, NHazca monitoraggio frane) indicano pricing servizio EO PA tipicamente €30-80k/anno per area (3-5× sotto baseline §7.8.2). **Azione obbligatoria pre-gate M+10**: ridimensionare pricing baseline §7.8.2 a €60-90k/anno base + €30-60k/anno premium per persistence/sovranità. Revenue Y1 baseline ricalibrato: €220-300k (vs €355-405k originale).
 
 ---
 
-**Verdetto Red Team**: il capitolo è **strutturalmente solido** ma con **confidence bassa sulle cifre concrete** (TAM, SAM, SOM, pricing). Le 6 azioni richieste prima del gate M+10:
+**Verdetto Red Team (aggiornato M+3 post-audit Cluster D)**: il capitolo è **strutturalmente solido** ma con **confidence bassa sulle cifre concrete** (TAM, SAM, SOM, pricing) e **gravemente sottoddimensionato** sul rischio competitivo Cluster D (e-GEOS, Planetek, FlyingBasket) — ora riconfigurato in §7.4.4-7.4.7. Le 8 azioni richieste prima del gate M+10:
 
 - ☐ LoI firmata da Regione Liguria entro M+6 (chiusura OQ-010)
 - ☐ Workshop validato 10 cooperative pilota entro M+6 (chiusura OQ-011)
-- ☐ Benchmark pricing PA italiana confrontato con e-GEOS/Planetek entro M+6
+- ☐ Benchmark pricing PA italiana confrontato con e-GEOS/Planetek **brutale** entro M+6 — visita diretta + accesso a contratti pubblici Consip/MEPA
+- ☐ **Apertura trattativa partnership Planetek + NHazca entro M+6** (§7.4.5.3 azione 3)
+- ☐ **Apertura trattativa partnership CIRA entro M+6 per Phase B 6B** (§7.4.5.3 azione 4)
 - ☐ Engagement Aalto/Airbus per intelligence + posizionamento difensivo entro M+9
-- ☐ Mappa Early Warning Indicator competitivi (vedi `RESERVED-rischi-geopolitici.md`) attivata
-- ☐ Pricing test su almeno 2 contratti reali entro M+9
+- ☐ Mappa Early Warning Indicator competitivi (vedi `RESERVED-rischi-geopolitici.md`) attivata — includendo FlyingBasket Leonardo investment monitoring
+- ☐ **Riconfigurazione pricing baseline §7.8.2 a €60-90k base + €30-60k premium** (§7.4.5.3 azione 6)
 
 ---
 
@@ -824,25 +826,30 @@ Critica condotta dagli agenti `competitor-intelligence` + `business-model-strate
 
 ## 7.15 Note di chiusura del capitolo
 
-Il Cap. 7 è **bozza M+3**, in linea con il framework italiano (ENAC AAM BP + MIMIT + Aeropolis) e con la metodologia NASA SE per il business case. Le **debolezze principali** dichiarate onestamente:
+Il Cap. 7 è **bozza M+3 (con fix Cluster D applicato)**, in linea con il framework italiano (ENAC AAM BP + MIMIT + Aeropolis) e con la metodologia NASA SE per il business case. Le **debolezze principali** dichiarate onestamente:
 
 1. **Confidence bassa** sulle stime quantitative (TAM, SAM, SOM, pricing) — DR-012 audit-rigore-epistemico.md aperto
-2. **Validazione esterna mancante** sui pricing PA — Action item M+6 (benchmark)
+2. **Validazione esterna mancante** sui pricing PA — Action item M+6 (benchmark Cluster D §7.4.4.2)
 3. **MVP ambizioso** ma con soglia minima dichiarata realistica (3 contratti, 50 missioni)
 4. **Boundary conditions B1+B2 esplicitate** — il modello service-only e l'obiettivo EU sovereign non sono in discussione, ma sono **vincoli** che richiedono coerenza di tutti i Cap. 6-7-8
+5. **Cluster D Service Incumbent IT** (§7.4.4-7.4.7): identificato come vero competitor Y1 in audit avversariale maggio 2026; **3 dei 4 pilastri vantaggio competitivo** (§7.5.1) sono **non difendibili vs Cluster D**; pricing baseline §7.8.2 da ridimensionare a benchmark Cluster D entro M+6 prima del gate G3
 
-**Prossimi step richiesti** (in ordine di criticità):
+**Prossimi step richiesti** (in ordine di criticità, aggiornati post-audit Cluster D):
 
 1. **LoI Regione Liguria** entro M+6 (chiude OQ-010, valida anchor customer)
 2. **Workshop strutturato cooperative pilota** entro M+6 (valida 10 coop come utenti-pilota)
-3. **Benchmark pricing PA italiana** (e-GEOS, Planetek, ARPA) entro M+6
-4. **Coopfond verifica bando 2026** entro M+1 (chiude DR-002)
-5. **Update Cap. 7** post-validazione esterna → versione M+9 per gate M+10
+3. **Benchmark pricing PA italiana brutale Cluster D** (e-GEOS, Planetek, NHazca via accesso a contratti Consip/MEPA + interviste dirette) entro M+6 — falsifica/valida §7.4.4.2
+4. **Apertura trattativa partnership Planetek (D2) + CIRA (D8)** entro M+6 — §7.4.5.3 azioni 3-4
+5. **Riconfigurazione pricing baseline §7.8.2** a benchmark Cluster D entro M+6 (€60-90k base + €30-60k premium)
+6. **Strutturazione giuridica modello cooperativo** entro M+12 — convertire pilastro #2 §7.5.1 da soft switching cost a moat legalmente vincolante
+7. **Coopfond verifica bando 2026** entro M+1 (chiude DR-002)
+8. **Update Cap. 7** post-validazione esterna → versione M+9 per gate M+10
 
 **Versionamento Cap. 7**:
-- v0.5 (M+3, presente capitolo): baseline ipotetica con confidence low-medium
-- v0.7 (M+6): post-LoI + workshop, confidence medium
-- v0.9 (M+9): post-benchmark + 3 contratti reali, confidence medium-high
+- v0.5 (M+3, capitolo originale): baseline ipotetica con confidence low-medium; Cluster D non considerato
+- **v0.6 (M+3 fix Cluster D, presente versione): aggiunta §7.4.4-7.4.7 Cluster D + riconfigurazione §7.5.1 pilastri + caveat §7.0**
+- v0.7 (M+6): post-LoI + workshop + benchmark Cluster D + apertura trattative D2/D8, confidence medium
+- v0.9 (M+9): post-pricing riconfigurato + 3 contratti reali firmati, confidence medium-high
 - v1.0 (M+10): congelato per gate review
 
-Il capitolo è chiuso al M+3 con verdetto Red Team **OK con 6 action items**.
+Il capitolo è chiuso al M+3 (versione fix Cluster D) con verdetto Red Team **OK con 8 action items**.
