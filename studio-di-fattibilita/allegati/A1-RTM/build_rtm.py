@@ -1476,7 +1476,9 @@ def compute_stats(all_records):
                     stneeds_with_syr.add(p)
     stats['coverage_stneed_syr'] = 100.0 * len(stneeds_with_syr) / max(stats['stneed'], 1)
 
-    # Coverage SyR -> SsR
+    # Coverage SyR -> SsR (only "decomposable" technical families F/P/O/S/E)
+    # Compliance (C) + Cost are not typically decomposed to subsystem level
+    decomposable_prefixes = ("SyR-F-", "SyR-P-", "SyR-O-", "SyR-S-", "SyR-E-")
     syrs_with_ssr = set()
     for rec in all_records:
         if rec[4] == "SsR":
@@ -1484,7 +1486,11 @@ def compute_stats(all_records):
                 p = p.strip()
                 if p.startswith("SyR-"):
                     syrs_with_ssr.add(p)
-    stats['coverage_syr_ssr'] = 100.0 * len(syrs_with_ssr) / max(stats['syr'], 1)
+    decomposable_syr = [r[0] for r in SYREQS if r[0].startswith(decomposable_prefixes)]
+    decomposable_with_ssr = [s for s in decomposable_syr if s in syrs_with_ssr]
+    stats['coverage_syr_ssr'] = 100.0 * len(decomposable_with_ssr) / max(len(decomposable_syr), 1)
+    stats['decomposable_syr_total'] = len(decomposable_syr)
+    stats['decomposable_syr_covered'] = len(decomposable_with_ssr)
 
     # Coverage SyR -> VR
     syrs_with_vr = set()

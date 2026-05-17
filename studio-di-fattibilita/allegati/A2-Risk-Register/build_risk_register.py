@@ -2012,3 +2012,770 @@ CHANGE_LOG = [
     ("v0.4", "2026-05-10", "Aggiunta 15 RSK-REG-016..030 da Cap. 5 §5.16 audit Regulatory Adversary", "regulatory-adversary audit", "Showstopper regolatori non coperti pre-audit"),
     ("v1.0", "2026-05-17", "Consolidamento Allegato A.2 + FMECA + FTA + EWI + Mitigation Plan", "senior risk manager + safety engineer", "Risk Register completo v1.0 per gate M+3"),
 ]
+
+# ---------------------------------------------------------------------------
+# WRITERS — 22 fogli Excel
+# ---------------------------------------------------------------------------
+RISK_COLS = [
+    "ID", "Categoria", "Descrizione", "Trigger", "P (1-5)", "I (1-5)",
+    "Score (PxI)", "Color", "Status", "Owner", "Response",
+    "Mitigation actions", "Residual P", "Residual I", "Residual Score",
+    "Fase critica", "Confidence", "Last review", "EWI",
+]
+RISK_WIDTHS = [13, 14, 50, 38, 8, 8, 9, 9, 16, 28, 14, 55, 9, 9, 11, 18, 12, 13, 38]
+
+
+def color_label(score: int) -> str:
+    if score >= 15:
+        return "RED"
+    if score >= 8:
+        return "YELLOW"
+    return "GREEN"
+
+
+def risk_row_values(r: dict) -> list:
+    return [
+        r["id"], r["cat"], r["desc"], r["trigger"], r["P"], r["I"],
+        r["score"], color_label(r["score"]), r["status"], r["owner"],
+        r["response"], r["mitigation"], r["rP"], r["rI"], r["rscore"],
+        r["phase"], r["confidence"], TODAY, r["ewi"],
+    ]
+
+
+def sheet_cover(wb):
+    ws = wb.create_sheet("Cover", 0)
+    ws.column_dimensions["A"].width = 30
+    ws.column_dimensions["B"].width = 90
+
+    def block(row, title):
+        c = ws.cell(row=row, column=1, value=title)
+        c.fill = FILL_HEADER
+        c.font = FONT_HEADER
+        ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=2)
+
+    def kv(row, k, v):
+        a = ws.cell(row=row, column=1, value=k)
+        b = ws.cell(row=row, column=2, value=v)
+        a.font = FONT_BODY_BOLD
+        b.font = FONT_BODY
+        a.alignment = WRAP
+        b.alignment = WRAP
+
+    block(1, "Allegato A.2 - Risk Register v1.0 - Firmamento Technologies HALE/VTOL")
+    kv(2, "Documento", "Allegato A.2 - Risk Register completo v1.0")
+    kv(3, "Volume", "Volume 2 - Allegati tecnici dello Studio di Fattibilita")
+    kv(4, "Studio di riferimento", "Studio di Fattibilita Piattaforma Aerea HALE/VTOL per Aree Interne")
+    kv(5, "Bando", "Cooding Prototypes - Coopfond/Legacoop")
+    kv(6, "Soggetto proponente", "Firmamento Technologies srl coop")
+    kv(7, "Versione", VERSION)
+    kv(8, "Data", TODAY)
+    kv(9, "Stato", "Bozza M+3 consolidata")
+
+    block(11, "Metodologia")
+    kv(12, "Framework primario", "NASA NPR 8000.4A - Continuous Risk Management (CRM)")
+    kv(13, "Failure analysis", "FMECA - MIL-STD-1629A / IEC 60812")
+    kv(14, "Safety assessment", "ARP4761 - Aerospace Recommended Practice")
+    kv(15, "Fault Tree Analysis", "ARP4761 + NUREG-0492 + IEC 61025")
+    kv(16, "ISO standard", "ISO 31000:2018 - Risk Management Principles and Guidelines")
+    kv(17, "Conformita italiana", "D.Lgs. 36/2023 art. 41 (analisi di rischio ingegneristico)")
+    kv(18, "Conformita aviation", "EASA SORA 2.5 (ED Decision 2025/018/R) + Part-IS (Reg.UE 2023/203)")
+    kv(19, "Conformita cyber", "NIS2 (D.Lgs. 138/2024) + ISO/IEC 27001 + Part-IS")
+
+    block(21, "Sistema di scoring")
+    kv(22, "Probabilita P (1-5)", "1=VeryLow (<5%) | 2=Low (5-20%) | 3=Medium (20-50%) | 4=High (50-80%) | 5=VeryHigh (>80%)")
+    kv(23, "Impatto I (1-5)", "1=Negligible | 2=Minor | 3=Moderate | 4=Major | 5=Severe (showstopper/catastrofe)")
+    kv(24, "Risk Score", "P x I (range 1-25)")
+    kv(25, "Color coding", "GREEN 1-7 (accettabile, monitor) | YELLOW 8-14 (mitigation richiesta) | RED 15-25 (showstopper, response immediata)")
+    kv(26, "Response options", "Avoid | Mitigate | Transfer | Accept (NASA + ISO 31000)")
+    kv(27, "Residual risk", "P x I post-mitigation; richiesto <= GREEN o YELLOW per closure")
+
+    block(29, "Struttura del Risk Register")
+    kv(30, "Totale rischi tracciati", str(len(RISKS)))
+    kv(31, "Categorie", "TEC (tecnici) | REG (regolatori) | FIN (finanziari) | MKT (mercato) | OPS (operativi) | SUP (supply chain) | PRV (privacy/legale) | SEC (cybersecurity) | HR (risorse umane) | REP (reputazionali) | GEO (geopolitici - RESERVED)")
+    kv(32, "Fogli del workbook", "22 sheet (Cover, Top-25, 11 categorie, 3 FMECA, 2 FTA, Mitigation Plan, Residual Matrix, EWI, Audit Trail)")
+    kv(33, "Boundary conditions", "B1: service-only + cooperative Legacoop | B2: EU sovereign stratospheric layer / complementare IRIS2")
+
+    block(35, "Documenti correlati (cross-reference)")
+    kv(36, "Cap. 6.4", "Top-10 rischi tecnici + FMECA Payload + FTA preliminare")
+    kv(37, "Cap. 5.16", "15 showstopper regolatori RSK-REG-016..030")
+    kv(38, "Cap. 10.2", "Risk residuo aggregato + 5 showstopper formali")
+    kv(39, "RESERVED-rischi-geopolitici.md", "5 RSK-GEO-001..005 (accesso ristretto - NO contenuto sensibile in questo file pubblico)")
+    kv(40, "Skill .claude/skills/risk-register-builder/SKILL.md", "Metodologia operativa")
+    kv(41, "AUDIT-REDTEAM-VOLUME-1.md", "Audit Red Team M+3 + falsifying observations")
+    kv(42, "AUDIT-REGULATORY-VOLUME-1.md", "Audit Regulatory Adversary M+3 (15 showstopper REG)")
+    kv(43, "AUDIT-COMPETITOR-VOLUME-1.md", "Audit Competitor Intelligence M+3")
+
+    block(45, "Disciplina epistemica")
+    kv(46, "Confidence levels", "high / medium-high / medium / medium-low / low per ogni claim P e I")
+    kv(47, "Falsifying observations", "Documentate per top-10 rischi - condizioni che falsificherebbero stima rischio")
+    kv(48, "Source provenance", "Tutti i rischi tracciati a Cap. 5/6/10 dello Studio o audit M+3 dedicati")
+    kv(49, "Re-assessment", "Trimestrale + dopo ogni gate review + trigger eventi esterni")
+
+    block(51, "Owner principale")
+    kv(52, "Risk Manager", "TBD (CISO + Head of Regulatory Affairs joint fino assunzione)")
+    kv(53, "Approval gate review", "Steering Committee Firmamento + Coopfond observer + Legacoop")
+    kv(54, "Esterno (gate G4 M+12)", "Auditor esterno terzo + advisory aerospace senior")
+
+
+def sheet_top_25(wb):
+    ws = wb.create_sheet("Top-25 Risks")
+    write_header(ws, RISK_COLS, widths=RISK_WIDTHS)
+    sorted_risks = sorted(RISKS, key=lambda r: (-r["score"], -r["rscore"], r["id"]))
+    top25 = sorted_risks[:25]
+    for i, r in enumerate(top25, 2):
+        write_row(ws, i, risk_row_values(r), score_col=7)
+        ws.cell(row=i, column=15).fill = color_for_score(r["rscore"])
+        ws.cell(row=i, column=15).font = font_for_score(r["rscore"])
+        ws.cell(row=i, column=9).font = Font(name="Calibri", size=10, bold=True, color=status_color(r["status"]))
+
+
+def sheet_category(wb, name, cat_filter):
+    ws = wb.create_sheet(name)
+    write_header(ws, RISK_COLS, widths=RISK_WIDTHS)
+    risks_cat = [r for r in RISKS if cat_filter(r)]
+    risks_cat.sort(key=lambda r: (-r["score"], r["id"]))
+    for i, r in enumerate(risks_cat, 2):
+        write_row(ws, i, risk_row_values(r), score_col=7)
+        ws.cell(row=i, column=15).fill = color_for_score(r["rscore"])
+        ws.cell(row=i, column=15).font = font_for_score(r["rscore"])
+
+
+def sheet_fmeca(wb, name, data, subsystem_title):
+    ws = wb.create_sheet(name)
+    headers = ["Item", "Failure Mode", "Cause", "Local Effect", "System Effect",
+               "Severity (1-5)", "Frequency (1-5)", "Detection (1-5)", "RPN (SxFxD)", "Mitigation"]
+    widths = [32, 26, 30, 26, 30, 9, 9, 9, 9, 50]
+    # Title row
+    ws.cell(row=1, column=1, value=f"FMECA - {subsystem_title}").font = Font(name="Calibri", size=13, bold=True, color="1F3864")
+    ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=len(headers))
+    ws.cell(row=2, column=1, value="Metodologia: MIL-STD-1629A + IEC 60812 + ARP4761").font = FONT_SUB
+    ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=len(headers))
+    write_header(ws, headers, row=3, widths=widths)
+    for i, row in enumerate(data, 4):
+        s, f, d = row[5], row[6], row[7]
+        rpn = s * f * d
+        vals = list(row[:8]) + [rpn, row[8]]
+        for c, v in enumerate(vals, 1):
+            cell = ws.cell(row=i, column=c, value=v)
+            cell.alignment = WRAP
+            cell.font = FONT_BODY
+            cell.border = BORDER
+        # color RPN
+        rpn_cell = ws.cell(row=i, column=9)
+        if rpn >= 40:
+            rpn_cell.fill = FILL_RED
+            rpn_cell.font = FONT_WHITE_BOLD
+        elif rpn >= 20:
+            rpn_cell.fill = FILL_YELLOW
+        elif rpn >= 10:
+            rpn_cell.fill = PatternFill("solid", fgColor="FFF2CC")
+        else:
+            rpn_cell.fill = FILL_GREEN
+        rpn_cell.alignment = CENTER
+    # legend
+    leg_row = len(data) + 5
+    ws.cell(row=leg_row, column=1, value="Legenda RPN").font = FONT_SUB
+    ws.cell(row=leg_row + 1, column=1, value="RPN >= 40: mitigation obbligatoria (RED)")
+    ws.cell(row=leg_row + 2, column=1, value="RPN 20-39: mitigation raccomandata (YELLOW)")
+    ws.cell(row=leg_row + 3, column=1, value="RPN < 20: monitor (GREEN)")
+
+
+def sheet_fta(wb, name, content, title):
+    ws = wb.create_sheet(name)
+    ws.column_dimensions["A"].width = 110
+    ws.cell(row=1, column=1, value=title).font = Font(name="Calibri", size=13, bold=True, color="1F3864")
+    ws.cell(row=2, column=1, value="Metodologia: ARP4761 + NUREG-0492 + IEC 61025").font = FONT_SUB
+    ws.cell(row=3, column=1, value="Notazione: AND-gate richiede tutti gli eventi; OR-gate richiede almeno uno; cut set = combinazione minima eventi che causa top event").font = FONT_BODY
+    ws.cell(row=3, column=1).alignment = WRAP
+    ws.row_dimensions[3].height = 40
+    for i, line in enumerate(content.strip().split("\n"), 5):
+        c = ws.cell(row=i, column=1, value=line)
+        c.font = Font(name="Consolas", size=10) if line.startswith("|") or line.startswith("+--") else FONT_BODY
+        c.alignment = Alignment(wrap_text=False, vertical="top", horizontal="left")
+
+
+def sheet_mitigation_plan(wb):
+    ws = wb.create_sheet("Mitigation_Plan")
+    headers = ["ID", "Status", "Score current", "Score residual", "Owner",
+               "Action ID", "Action description", "Deadline", "Phase", "Acceptance criterion"]
+    widths = [13, 16, 12, 12, 28, 11, 60, 16, 18, 50]
+    write_header(ws, headers, widths=widths)
+    row = 2
+    # Per top-25 risks: una azione composta (estratta dal campo mitigation)
+    sorted_risks = sorted(RISKS, key=lambda r: (-r["score"], r["id"]))
+    for r in sorted_risks:
+        actions = [a.strip() for a in r["mitigation"].replace(";", "|").split("|") if a.strip()]
+        for j, a in enumerate(actions, 1):
+            action_id = f"{r['id']}-A{j:02d}"
+            deadline = {
+                "Y0+": "M+0-3",
+                "Y0+ immediato": "M+0-1",
+                "Y0+ urgente": "M+0-3",
+                "Y1": "M+3-12",
+                "Y1+": "M+0-12 + ongoing",
+                "Y1+ continuous": "ongoing",
+                "Y1+ (M+0 → M+9)": "M+0-9",
+                "Y1+ (M+0 → M+12) urgente": "M+0-12",
+            }.get(r["phase"], "TBD per phase")
+            criterion = "Mitigation deployed + verified by gate review next"
+            vals = [r["id"], r["status"], r["score"], r["rscore"], r["owner"],
+                    action_id, a, deadline, r["phase"], criterion]
+            for c, v in enumerate(vals, 1):
+                cell = ws.cell(row=row, column=c, value=v)
+                cell.alignment = WRAP
+                cell.font = FONT_BODY
+                cell.border = BORDER
+            ws.cell(row=row, column=3).fill = color_for_score(r["score"])
+            ws.cell(row=row, column=4).fill = color_for_score(r["rscore"])
+            ws.cell(row=row, column=3).alignment = CENTER
+            ws.cell(row=row, column=4).alignment = CENTER
+            row += 1
+
+
+def sheet_residual_matrix(wb):
+    ws = wb.create_sheet("Residual_Risk_Matrix")
+    ws.cell(row=1, column=1, value="P x I Residual Risk Matrix (post-mitigation)").font = Font(name="Calibri", size=13, bold=True, color="1F3864")
+    ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=7)
+    ws.cell(row=2, column=1, value="Rows = Impact (5 top - 1 bottom)  |  Cols = Probability (1 left - 5 right)").font = FONT_SUB
+    ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=7)
+
+    # Matrix 5x5
+    header_row = 4
+    ws.cell(row=header_row, column=1, value="I \\ P").fill = FILL_HEADER
+    ws.cell(row=header_row, column=1).font = FONT_HEADER
+    ws.cell(row=header_row, column=1).alignment = CENTER
+    for p in range(1, 6):
+        c = ws.cell(row=header_row, column=1 + p, value=f"P={p}")
+        c.fill = FILL_HEADER
+        c.font = FONT_HEADER
+        c.alignment = CENTER
+
+    # build matrix counts (residual)
+    matrix = {(p, i): [] for p in range(1, 6) for i in range(1, 6)}
+    for r in RISKS:
+        matrix[(r["rP"], r["rI"])].append(r["id"])
+
+    for i in range(5, 0, -1):
+        row = header_row + (6 - i)
+        c = ws.cell(row=row, column=1, value=f"I={i}")
+        c.fill = FILL_HEADER
+        c.font = FONT_HEADER
+        c.alignment = CENTER
+        for p in range(1, 6):
+            score = p * i
+            ids = matrix[(p, i)]
+            val = f"{len(ids)}\n" + ("\n".join(ids[:6]) if ids else "-")
+            cell = ws.cell(row=row, column=1 + p, value=val)
+            cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="center")
+            cell.font = FONT_BODY
+            cell.border = BORDER
+            cell.fill = color_for_score(score)
+            if score >= 15:
+                cell.font = FONT_WHITE_BOLD
+
+    for col in range(1, 8):
+        ws.column_dimensions[get_column_letter(col)].width = 22
+    for r in range(header_row + 1, header_row + 6):
+        ws.row_dimensions[r].height = 90
+
+    # Summary block
+    sumrow = header_row + 8
+    ws.cell(row=sumrow, column=1, value="Statistiche residual risk").font = FONT_SUB
+    red = sum(1 for r in RISKS if r["rscore"] >= 15)
+    yellow = sum(1 for r in RISKS if 8 <= r["rscore"] < 15)
+    green = sum(1 for r in RISKS if r["rscore"] < 8)
+    ws.cell(row=sumrow + 1, column=1, value=f"RED (>=15) residual: {red}")
+    ws.cell(row=sumrow + 2, column=1, value=f"YELLOW (8-14) residual: {yellow}")
+    ws.cell(row=sumrow + 3, column=1, value=f"GREEN (<8) residual: {green}")
+    ws.cell(row=sumrow + 4, column=1, value=f"Totale: {len(RISKS)}")
+    # baseline pre
+    red0 = sum(1 for r in RISKS if r["score"] >= 15)
+    yellow0 = sum(1 for r in RISKS if 8 <= r["score"] < 15)
+    green0 = sum(1 for r in RISKS if r["score"] < 8)
+    ws.cell(row=sumrow + 6, column=1, value="Statistiche pre-mitigation (baseline)").font = FONT_SUB
+    ws.cell(row=sumrow + 7, column=1, value=f"RED (>=15) baseline: {red0}")
+    ws.cell(row=sumrow + 8, column=1, value=f"YELLOW (8-14) baseline: {yellow0}")
+    ws.cell(row=sumrow + 9, column=1, value=f"GREEN (<8) baseline: {green0}")
+    ws.cell(row=sumrow + 11, column=1, value=f"Reduzione RED: {red0} -> {red} ({(red0-red)/max(red0,1)*100:.0f}% reduction)")
+    ws.cell(row=sumrow + 12, column=1, value=f"Mitigation effectiveness: {((red0-red)+(yellow0-yellow))/max(red0+yellow0,1)*100:.0f}% of RED+YELLOW reduced")
+
+
+def sheet_ewi(wb):
+    ws = wb.create_sheet("EWI")
+    headers = ["RSK-ID", "EWI Indicatore", "Frequenza monitoring", "Threshold trigger", "Owner"]
+    widths = [13, 50, 24, 50, 30]
+    ws.cell(row=1, column=1, value="Early Warning Indicators - Top-25 Risks").font = Font(name="Calibri", size=13, bold=True, color="1F3864")
+    ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=5)
+    ws.cell(row=2, column=1, value="Monitoraggio quarterly (default); rischi RED monthly. Owner = funzione responsabile.").font = FONT_SUB
+    ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=5)
+    write_header(ws, headers, row=4, widths=widths)
+    for i, (rid, ind, freq, thr, own) in enumerate(EWI_DATA, 5):
+        vals = [rid, ind, freq, thr, own]
+        for c, v in enumerate(vals, 1):
+            cell = ws.cell(row=i, column=c, value=v)
+            cell.alignment = WRAP
+            cell.font = FONT_BODY
+            cell.border = BORDER
+
+
+def sheet_audit_trail(wb):
+    ws = wb.create_sheet("Audit_Trail")
+    headers = ["Versione", "Data", "Modifica", "Autore", "Note"]
+    widths = [12, 14, 55, 35, 55]
+    ws.cell(row=1, column=1, value="Audit Trail - Risk Register versioning").font = Font(name="Calibri", size=13, bold=True, color="1F3864")
+    ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=5)
+    write_header(ws, headers, row=3, widths=widths)
+    for i, (ver, date_, mod, auth, note) in enumerate(CHANGE_LOG, 4):
+        vals = [ver, date_, mod, auth, note]
+        for c, v in enumerate(vals, 1):
+            cell = ws.cell(row=i, column=c, value=v)
+            cell.alignment = WRAP
+            cell.font = FONT_BODY
+            cell.border = BORDER
+    # next review
+    last_row = 4 + len(CHANGE_LOG) + 2
+    ws.cell(row=last_row, column=1, value="Prossimo aggiornamento previsto").font = FONT_SUB
+    ws.cell(row=last_row + 1, column=1, value="v1.1")
+    ws.cell(row=last_row + 1, column=2, value="2026-08-17 (M+6)")
+    ws.cell(row=last_row + 1, column=3, value="Post gate G3 (M+10) review + chiusura RSK-FIN-001/REG-001 update")
+    ws.cell(row=last_row + 1, column=4, value="risk-register-builder + steering")
+    ws.cell(row=last_row + 1, column=5, value="Trigger: gate G3 outcomes + EWI quarterly review")
+
+
+def sheet_geo(wb):
+    """Foglio RSK-GEO con reference RESERVED (nessun contenuto sensibile)."""
+    ws = wb.create_sheet("RSK-GEO")
+    ws.column_dimensions["A"].width = 35
+    ws.column_dimensions["B"].width = 80
+    c = ws.cell(row=1, column=1, value="RSK-GEO - Rischi Geopolitici (RESERVED - reference only)")
+    c.font = Font(name="Calibri", size=13, bold=True, color="C00000")
+    ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=2)
+
+    ws.cell(row=3, column=1, value="ATTENZIONE").font = FONT_HEADER
+    ws.cell(row=3, column=1).fill = FILL_RED
+    ws.cell(row=3, column=2, value="Questo foglio riassume i 5 RSK-GEO solo come reference. Il dettaglio operativo, mitigation e trigger osservabili sono CLASSIFICATI in riferimenti/RESERVED-rischi-geopolitici.md - accesso ristretto founder team + consulenti NDA + stakeholder istituzionali IT su richiesta motivata.")
+    ws.cell(row=3, column=2).alignment = WRAP
+    ws.cell(row=3, column=2).font = FONT_BODY
+    ws.row_dimensions[3].height = 70
+
+    headers = ["RSK-ID", "Categoria sintetica", "P (cond.)", "I (cond.)", "Score (cond.)", "Fase critica", "Owner"]
+    widths = [13, 50, 12, 12, 14, 16, 35]
+    write_header(ws, headers, row=5, widths=widths)
+    rows = [
+        ("RSK-GEO-001", "Frizione internazionale - posizione narrativa stratosferica", 3, 4, 12, "Y4+", "sovereign-strategist + CEO"),
+        ("RSK-GEO-002", "Classificazione strategica nazionale - governance obblighi", 2, 4, 8, "Y3+", "sovereign-strategist + legal + CEO"),
+        ("RSK-GEO-003", "Dipendenza supply chain non-EU", 3, 4, 12, "Y2+", "sovereign-strategist + supply-chain"),
+        ("RSK-GEO-004", "Misalignment con architettura sovrana EU multi-orbita", 3, 4, 12, "Y2-Y4", "sovereign-strategist + CEO"),
+        ("RSK-GEO-005", "Acquisizione difensiva da incumbent settore", 3, 4, 12, "Y3-Y4", "CEO + Board"),
+    ]
+    for i, row in enumerate(rows, 6):
+        for c, v in enumerate(row, 1):
+            cell = ws.cell(row=i, column=c, value=v)
+            cell.alignment = WRAP
+            cell.font = FONT_BODY
+            cell.border = BORDER
+        ws.cell(row=i, column=5).fill = color_for_score(row[4])
+        ws.cell(row=i, column=5).alignment = CENTER
+
+    ws.cell(row=12, column=1, value="Documento dettaglio").font = FONT_SUB
+    ws.cell(row=12, column=2, value="/home/user/HALE/riferimenti/RESERVED-rischi-geopolitici.md (NON pubblicabile)")
+    ws.cell(row=13, column=1, value="Mitigation strategy").font = FONT_SUB
+    ws.cell(row=13, column=2, value="Vedi documento RESERVED + Engagement Plan strategico §5 + tavoli istituzionali presidiati (MIMIT, DPE, ACN, ENAC, ESA/DG CNECT, DG DEFIS, NATO DIANA, ASD-Eurospace, ASI/CIRA)")
+    ws.cell(row=14, column=1, value="Re-assessment").font = FONT_SUB
+    ws.cell(row=14, column=2, value="Trimestrale - owner CEO + sovereign-infrastructure-strategist; review esterna annuale (advisor ex-MAE/MIMIT/Leonardo)")
+
+# ---------------------------------------------------------------------------
+# CSV writer (full register)
+# ---------------------------------------------------------------------------
+def write_csv():
+    fields = [
+        "id", "categoria", "descrizione", "trigger", "P", "I", "score", "color",
+        "status", "owner", "response", "mitigation", "residual_P", "residual_I",
+        "residual_score", "phase", "confidence", "last_review", "ewi",
+        "falsifying_observation", "top10_flag",
+    ]
+    with open(CSV_PATH, "w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields, quoting=csv.QUOTE_ALL)
+        w.writeheader()
+        for r in sorted(RISKS, key=lambda x: (-x["score"], x["id"])):
+            w.writerow({
+                "id": r["id"], "categoria": r["cat"], "descrizione": r["desc"],
+                "trigger": r["trigger"], "P": r["P"], "I": r["I"],
+                "score": r["score"], "color": color_label(r["score"]),
+                "status": r["status"], "owner": r["owner"], "response": r["response"],
+                "mitigation": r["mitigation"], "residual_P": r["rP"],
+                "residual_I": r["rI"], "residual_score": r["rscore"],
+                "phase": r["phase"], "confidence": r["confidence"],
+                "last_review": TODAY, "ewi": r["ewi"],
+                "falsifying_observation": r["fo"] or "",
+                "top10_flag": "Y" if r.get("top") else "N",
+            })
+
+
+# ---------------------------------------------------------------------------
+# Markdown report
+# ---------------------------------------------------------------------------
+def write_md_report():
+    by_cat: dict[str, list] = {}
+    for r in RISKS:
+        by_cat.setdefault(r["cat"], []).append(r)
+
+    red = [r for r in RISKS if r["score"] >= 15]
+    yellow = [r for r in RISKS if 8 <= r["score"] < 15]
+    green = [r for r in RISKS if r["score"] < 8]
+    showstoppers = [r for r in RISKS if r["status"] == "Showstopper"]
+    open_critical = [r for r in RISKS if r["status"] == "Open-Critical"]
+    open_high = [r for r in RISKS if r["status"] == "Open-High"]
+    monitor = [r for r in RISKS if r["status"] == "Monitor"]
+
+    red_r = sum(1 for r in RISKS if r["rscore"] >= 15)
+    yellow_r = sum(1 for r in RISKS if 8 <= r["rscore"] < 15)
+    green_r = sum(1 for r in RISKS if r["rscore"] < 8)
+
+    top25 = sorted(RISKS, key=lambda r: (-r["score"], -r["rscore"], r["id"]))[:25]
+
+    md = []
+    md.append(f"# Allegato A.2 - Risk Register Report v{VERSION[1:]}\n")
+    md.append(f"> **Volume 2 - Allegati tecnici - Studio di Fattibilita Piattaforma Aerea HALE/VTOL**  ")
+    md.append(f"> Firmamento Technologies srl coop - bando Cooding Prototypes (Coopfond / Legacoop)  ")
+    md.append(f"> Versione: **{VERSION}** - Data: **{TODAY}** - Stato: **Bozza M+3 consolidata**  ")
+    md.append(f"> Metodologia: NASA NPR 8000.4A + FMECA (MIL-STD-1629A) + FTA (ARP4761) + ISO 31000:2018  ")
+    md.append(f"> Conformita: D.Lgs. 36/2023 art. 41 + EASA SORA 2.5 + Part-IS + NIS2\n")
+    md.append("---\n")
+
+    md.append("## 1. Metodologia\n")
+    md.append("Il Risk Register Firmamento HALE/VTOL e' costruito secondo **NASA NPR 8000.4A - Continuous Risk Management (CRM)**, con integrazione di:\n")
+    md.append("- **FMECA** (MIL-STD-1629A / IEC 60812) per analisi guasto sottosistema a livello item (Payload EO, Avionica, Propulsione)")
+    md.append("- **FTA** (ARP4761 / NUREG-0492 / IEC 61025) per top events critici (Loss of Vehicle BVLOS, Loss of Mission EO)")
+    md.append("- **ISO 31000:2018** per principi di risk management end-to-end (identificazione, analisi, valutazione, trattamento, monitoring, communication)")
+    md.append("- Compliance specifica aviation: **EASA SORA 2.5** (ED Decision 2025/018/R) + **Part-IS** (Reg.UE 2023/203)")
+    md.append("- Compliance cyber: **NIS2** (D.Lgs. 138/2024) + ISO/IEC 27001 + Part-IS\n")
+
+    md.append("### 1.1 Sistema di scoring P x I\n")
+    md.append("| P (Probabilita) | Descrizione | Range qualitativo |")
+    md.append("|---|---|---|")
+    md.append("| 1 Very Low | Improbabile | < 5% |")
+    md.append("| 2 Low | Possibile ma raro | 5-20% |")
+    md.append("| 3 Medium | Possibile | 20-50% |")
+    md.append("| 4 High | Probabile | 50-80% |")
+    md.append("| 5 Very High | Quasi certo | > 80% |\n")
+    md.append("| I (Impatto) | Tecnico | Schedule | Costo | Safety | Reputational |")
+    md.append("|---|---|---|---|---|---|")
+    md.append("| 1 Negligible | Aggiornamento doc | < 1 sett. | < 5k EUR | Nessuno | Nessuno |")
+    md.append("| 2 Minor | Modifica subsystem | 1-4 sett. | 5-50k EUR | Incidente minore | Locale |")
+    md.append("| 3 Moderate | Re-design subsystem | 1-3 mesi | 50-200k EUR | Ferite leggere | Regionale |")
+    md.append("| 4 Major | Re-design system | 3-12 mesi | 200k EUR - 1M EUR | Ferite gravi | Nazionale |")
+    md.append("| 5 Severe | Showstopper / catastrofe | > 12 mesi | > 1M EUR | Decesso / danni terzi | Internazionale |\n")
+    md.append("**Color coding** (NASA + ISO 31000):")
+    md.append("- **GREEN (1-7)**: rischio accettabile, monitoring")
+    md.append("- **YELLOW (8-14)**: mitigation richiesta")
+    md.append("- **RED (15-25)**: showstopper, response immediata + Hold gate\n")
+
+    md.append("### 1.2 Response options\n")
+    md.append("| Response | Quando usarla |")
+    md.append("|---|---|")
+    md.append("| **Avoid** | Eliminare la causa (cambio architettura, eliminazione SPOF) |")
+    md.append("| **Mitigate** | Ridurre P e/o I (design margin, ridondanza, test) |")
+    md.append("| **Transfer** | Spostare il rischio (assicurazione, vendor contract, partnership) |")
+    md.append("| **Accept** | Tollerare con monitoring (costo mitigation > exposure) |\n")
+    md.append("---\n")
+
+    md.append("## 2. Statistiche aggregate\n")
+    md.append(f"**Totale rischi formalmente tracciati**: {len(RISKS)}\n")
+    md.append("### 2.1 Per categoria")
+    md.append("| Categoria | N rischi | Showstopper | RED | YELLOW | GREEN |")
+    md.append("|---|---:|---:|---:|---:|---:|")
+    for cat in sorted(by_cat.keys()):
+        rl = by_cat[cat]
+        n_ss = sum(1 for r in rl if r["status"] == "Showstopper")
+        n_r = sum(1 for r in rl if r["score"] >= 15)
+        n_y = sum(1 for r in rl if 8 <= r["score"] < 15)
+        n_g = sum(1 for r in rl if r["score"] < 8)
+        md.append(f"| {cat} | {len(rl)} | {n_ss} | {n_r} | {n_y} | {n_g} |")
+    md.append(f"| **TOTALE** | **{len(RISKS)}** | **{len(showstoppers)}** | **{len(red)}** | **{len(yellow)}** | **{len(green)}** |\n")
+
+    md.append("### 2.2 Per status\n")
+    md.append("| Status | N rischi |")
+    md.append("|---|---:|")
+    md.append(f"| Showstopper | {len(showstoppers)} |")
+    md.append(f"| Open-Critical | {len(open_critical)} |")
+    md.append(f"| Open-High | {len(open_high)} |")
+    md.append(f"| Monitor | {len(monitor)} |")
+    md.append(f"| Open-Medium | {sum(1 for r in RISKS if r['status'] == 'Open-Medium')} |")
+    md.append("")
+
+    md.append("### 2.3 P x I matrix (baseline pre-mitigation)\n")
+    matrix = {(p, i): 0 for p in range(1, 6) for i in range(1, 6)}
+    for r in RISKS:
+        matrix[(r["P"], r["I"])] += 1
+    md.append("| I \\ P | P=1 | P=2 | P=3 | P=4 | P=5 |")
+    md.append("|---|---|---|---|---|---|")
+    for i in range(5, 0, -1):
+        line = f"| I={i} |"
+        for p in range(1, 6):
+            score = p * i
+            tag = "RED" if score >= 15 else "YEL" if score >= 8 else "GRN"
+            line += f" {matrix[(p, i)]} ({tag}) |"
+        md.append(line)
+    md.append("")
+
+    md.append("### 2.4 Mitigation effectiveness\n")
+    md.append(f"- **Pre-mitigation**: RED={len(red)}, YELLOW={len(yellow)}, GREEN={len(green)}")
+    md.append(f"- **Post-mitigation (residual)**: RED={red_r}, YELLOW={yellow_r}, GREEN={green_r}")
+    md.append(f"- **RED reduction**: {len(red)} -> {red_r} ({(len(red)-red_r)/max(len(red),1)*100:.0f}%)")
+    md.append(f"- **YELLOW reduction**: {len(yellow)} -> {yellow_r} ({(len(yellow)-yellow_r)/max(len(yellow),1)*100:.0f}%)\n")
+    md.append("---\n")
+
+    md.append("## 3. Top-25 rischi narrati\n")
+    md.append("Ordinati per Score baseline (P x I) decrescente. Per ciascuno: descrizione, impatto sul progetto, mitigation status.\n")
+    for i, r in enumerate(top25, 1):
+        md.append(f"### {i}. {r['id']} - {r['cat']} - Score {r['score']} -> residual {r['rscore']} ({color_label(r['score'])})\n")
+        md.append(f"**Descrizione**: {r['desc']}  ")
+        md.append(f"**Trigger**: {r['trigger']}  ")
+        md.append(f"**Owner**: {r['owner']}  ")
+        md.append(f"**Status**: {r['status']}  ")
+        md.append(f"**Response**: {r['response']}  ")
+        md.append(f"**Mitigation**: {r['mitigation']}  ")
+        md.append(f"**Residual P x I**: {r['rP']} x {r['rI']} = {r['rscore']}  ")
+        md.append(f"**Fase critica**: {r['phase']}  ")
+        md.append(f"**Confidence**: {r['confidence']}  ")
+        md.append(f"**EWI**: {r['ewi']}  ")
+        if r["fo"]:
+            md.append(f"**Falsifying observation**: {r['fo']}  ")
+        md.append("")
+
+    md.append("---\n")
+    md.append("## 4. Showstopper formali (5+5)\n")
+    md.append("### 4.1 Showstopper originali Cap. 6.4 + Cap. 10.2 (5)\n")
+    md.append("| ID | Rischio | Score | Percorso | Mitigation status |")
+    md.append("|---|---|---:|---|---|")
+    original_ss = ["RSK-TEC-001", "RSK-TEC-002", "RSK-TEC-003", "RSK-REG-001", "RSK-FIN-001"]
+    for sid in original_ss:
+        r = next(x for x in RISKS if x["id"] == sid)
+        md.append(f"| **{r['id']}** | {r['desc'][:80]}... | {r['score']} | 6B | {r['response']}: {r['mitigation'][:80]}... |")
+    md.append("")
+
+    md.append("### 4.2 Showstopper critici aggiuntivi §5.16 (5)\n")
+    md.append("Identificati dall'audit `regulatory-adversary` M+3, formalizzati in Cap. 5 §5.16. Score 15-20.\n")
+    md.append("| ID | Rischio | Score | Owner | Deadline mitigation |")
+    md.append("|---|---|---:|---|---|")
+    additional_ss = ["RSK-REG-019", "RSK-REG-021", "RSK-REG-025", "RSK-REG-027", "RSK-REG-030", "RSK-REG-018"]
+    for sid in additional_ss:
+        r = next(x for x in RISKS if x["id"] == sid)
+        md.append(f"| **{r['id']}** | {r['desc'][:80]}... | {r['score']} | {r['owner']} | {r['phase']} |")
+    md.append("")
+
+    md.append("### 4.3 Implicazione per il verdetto Cap. 10\n")
+    md.append("Il verdetto Cap. 10 \"Go Condizionato 6A\" presuppone:")
+    md.append("- Tutti i 5 RSK-REG critical aggiuntivi mitigated entro M+9-12 (Part-IS, AgID, NIS2 sono **urgenti** M+0-3)")
+    md.append("- 3 FTE senior (CISO, DPO, Head of Regulatory Affairs) hired entro M+6-9 (RSK-HR-002)")
+    md.append("- OpEx Y1 aggiornato con +450-800k EUR (RSK-FIN-004)")
+    md.append("- RSK-FIN-001 (funding Phase B) tracciato come precondizione gate G5\n")
+    md.append("Scenario realistico (post Red Team M+3): 60-80% percorsi sono **Hold con piano** vs **Go pieno** al M+10/M+11.\n")
+    md.append("---\n")
+
+    md.append("## 5. FMECA results - sintesi\n")
+    md.append("Vedi fogli XLSX: `FMECA_Payload`, `FMECA_Avionica`, `FMECA_Propulsione`.\n")
+    md.append("### 5.1 Payload EO\n")
+    rpns_payload = sorted([(r[0], r[1], r[5] * r[6] * r[7], r[8]) for r in FMECA_PAYLOAD], key=lambda x: -x[2])
+    md.append("**Top item RPN**:")
+    for item, fm, rpn, mit in rpns_payload[:5]:
+        md.append(f"- {item} - {fm} - RPN **{rpn}** - mitigation: {mit}")
+    md.append("\n**Mitigation obbligatoria** (RPN >= 40): IR sensor calibrazione persa (RPN 48). NUC frequente + crosscheck con RGB + ground truth.\n")
+
+    md.append("### 5.2 Avionica\n")
+    rpns_avi = sorted([(r[0], r[1], r[5] * r[6] * r[7], r[8]) for r in FMECA_AVIONICA], key=lambda x: -x[2])
+    md.append("**Top item RPN**:")
+    for item, fm, rpn, mit in rpns_avi[:5]:
+        md.append(f"- {item} - {fm} - RPN **{rpn}** - mitigation: {mit}")
+    md.append("")
+
+    md.append("### 5.3 Propulsione\n")
+    rpns_prop = sorted([(r[0], r[1], r[5] * r[6] * r[7], r[8]) for r in FMECA_PROP], key=lambda x: -x[2])
+    md.append("**Top item RPN**:")
+    for item, fm, rpn, mit in rpns_prop[:5]:
+        md.append(f"- {item} - {fm} - RPN **{rpn}** - mitigation: {mit}")
+    md.append("")
+
+    md.append("---\n")
+    md.append("## 6. FTA results - sintesi\n")
+    md.append("### 6.1 Top event: Loss of Vehicle in BVLOS (Percorso 6A)\n")
+    md.append("**Target SAIL III SORA 2.5**: P < 1E-5 / flight hour  ")
+    md.append("**Stima Firmamento (preliminare)**: P ~ 2-3E-5 / flight hour (**MARGINALE**)\n")
+    md.append("**Cut sets dominanti**:")
+    md.append("1. Avaria FCS critica (~1E-5/h) - SPOF mitigato da 2oo3 voting + watchdog + ECC")
+    md.append("2. Avaria propulsione + landing fail (~1E-5/h) - mitigato da parachute dual + battery override")
+    md.append("3. Severe weather encounter (~1E-5/h) - mitigato da NOWCAST integration + abort criteria")
+    md.append("4. Cyber hijack (~1E-6/h) - mitigato da crypto + 2FA + air-gap FCS\n")
+    md.append("**Single Points of Failure** (SPOF identificati):")
+    md.append("- SPOF-1: autopilot DAL-C primary - **mitigato 2oo3 voting + formal verification**")
+    md.append("- SPOF-2: parachute singolo - **mitigato dual pyrotechnic + ballistic backup**")
+    md.append("- SPOF-3: SATCOM Iridium singolo - **mitigato Inmarsat dual-provider Phase B**\n")
+    md.append("**Action items per SAIL III compliance**:")
+    md.append("- Reduce FCS DAL-C failure rate (HW redundancy + formal verification)")
+    md.append("- Improve weather forecast integration (NOWCAST + abort)")
+    md.append("- Improve GNSS robustness (Galileo PRS opzionale Phase B)\n")
+
+    md.append("### 6.2 Top event: Loss of Mission EO (Percorso 6A pilota Pentema)\n")
+    md.append("**Target SLA cliente**: < 5% per missione  ")
+    md.append("**Stima Firmamento (preliminare)**: 15-20% / missione (**NON-CONFORME al target 5%**)\n")
+    md.append("**Cut sets dominanti**:")
+    md.append("1. Operational mission abort - meteo + Lost-Link + ATC (~7%) - **driver primario**")
+    md.append("2. Quality below SLA - cloud cover + blur (~6%)")
+    md.append("3. Payload EO failure (~3%) - mitigato da ridondanza")
+    md.append("4. Data downlink/storage failure (~2%) - mitigato da buffer + retry\n")
+    md.append("**Action items**:")
+    md.append("- SLA realistico con cliente PA = 80-85% mission success rate (revisione target a 10-15% abort)")
+    md.append("- Integrazione NOWCAST meteo + cloud cover prediction")
+    md.append("- Buffer mission re-scheduling automatico\n")
+
+    md.append("---\n")
+    md.append("## 7. Residual risk profile\n")
+    md.append("Post-mitigation, il profilo rischio aggregato e':\n")
+    md.append("| Profilo | RED | YELLOW | GREEN | Totale | Note |")
+    md.append("|---|---:|---:|---:|---:|---|")
+    md.append(f"| Baseline | {len(red)} | {len(yellow)} | {len(green)} | {len(RISKS)} | Pre-mitigation |")
+    md.append(f"| Residual | {red_r} | {yellow_r} | {green_r} | {len(RISKS)} | Post-mitigation |")
+    md.append("")
+    md.append("### 7.1 Profilo per percorso\n")
+    md.append("**Percorso 6A (VTOL pilota Pentema)**:")
+    md.append("- Showstopper: 0 nessuno bloccante (RSK-REG-001 e RSK-TEC-001/002/003 sono 6B-specific)")
+    md.append("- RED residuali: principalmente operativi/regolatori transizione (Part-IS, NIS2, AgID/PSN)")
+    md.append("- Profilo: **medio-basso** - compatibile con verdetto Go Condizionato\n")
+    md.append("**Percorso 6B (HALE stratosferico R&D)**:")
+    md.append("- Showstopper: 5 (RSK-TEC-001/002/003 + RSK-REG-001 + RSK-FIN-001)")
+    md.append("- Mitigation strategy esiste ma **non garantita**")
+    md.append("- Profilo: **alto** - compatibile con verdetto Hold / Go Condizionato Estremo\n")
+
+    md.append("### 7.2 Caveat epistemico\n")
+    md.append("Tutti i residual score sono **stime expert judgment** del risk-register-builder + safety engineer, con confidence dichiarato per ogni rischio. La probabilita di mitigation effettiva al M+9-12 dipende da:")
+    md.append("- Hiring 3 ruoli senior (RSK-HR-002)")
+    md.append("- Pre-application ENAC outcomes (RSK-REG-002)")
+    md.append("- Funding mix outcomes (RSK-FIN-001 + RSK-MKT-001)")
+    md.append("- Audit Part-IS + AgID outcomes (RSK-REG-019 + RSK-REG-021)\n")
+    md.append("Re-assessment quarterly con re-scoring trimestrale.\n")
+
+    md.append("---\n")
+    md.append("## 8. EWI quarterly monitoring plan\n")
+    md.append(f"Top-{len(EWI_DATA)} rischi monitorati con Early Warning Indicators dedicati. Frequenza minimum quarterly; rischi RED monthly. Vedi foglio XLSX `EWI` per dettaglio.\n")
+    md.append("### 8.1 EWI ad alta frequenza (settimanale/mensile)\n")
+    weekly_monthly = [e for e in EWI_DATA if "Settimanal" in e[2] or "Mensile" in e[2]]
+    md.append(f"**{len(weekly_monthly)} EWI** ad alta frequenza:")
+    for rid, ind, freq, thr, own in weekly_monthly[:10]:
+        md.append(f"- **{rid}** ({freq}): {ind} - trigger: {thr} - owner: {own}")
+    md.append("")
+    md.append("### 8.2 Quarterly review meeting\n")
+    md.append("**Cadence**: Q+1, Q+2, Q+3, Q+4 (ogni 3 mesi)  ")
+    md.append("**Partecipanti**: Risk Manager (=CISO joint Head of Regulatory Affairs fino assunzione), CEO, owner ogni RED risk, observer Coopfond/Legacoop  ")
+    md.append("**Output**: aggiornamento P/I/Score, residual update, new risks identification, escalation Steering Committee  ")
+    md.append("**Documenti generati**: Risk Register vN+1 (versioning) + EWI dashboard + escalation log\n")
+
+    md.append("---\n")
+    md.append("## 9. Versioning roadmap\n")
+    md.append("| Versione | Data target | Trigger | Owner | Note |")
+    md.append("|---|---|---|---|---|")
+    md.append("| v1.0 | 2026-05-17 | Consolidamento M+3 | senior risk manager | **Attuale** |")
+    md.append("| v1.1 | 2026-08-17 (M+6) | Gate G2 review + 3 FTE senior hired status | risk-register + steering | Post-CISO + DPO hire")
+    md.append("| v1.2 | 2026-11-17 (M+9) | Pre-gate G3 (M+10/M+11) | risk-register + steering | Hard conditions C1-C5 status update")
+    md.append("| v2.0 | 2027-02-17 (M+12) | Gate G3 outcome + Y1 close | risk-register + auditor esterno | Major re-baseline pre-Y2 operations")
+    md.append("| v2.1 | 2027-08-17 (M+18) | Mid-Y2 update | risk-register | Gate G4 preparation")
+    md.append("| v3.0 | 2028-02-17 (M+24) | Gate G5 outcome - Phase B decision | risk-register + senior advisor | Major re-baseline pre-Phase B")
+    md.append("")
+
+    md.append("### 9.1 Re-assessment triggers (oltre a versioning schedule)\n")
+    md.append("- Cambio scope o requisiti (RTM update)")
+    md.append("- Nuovo trade study completato")
+    md.append("- Gate review imminente (G2/G3/G4/G5)")
+    md.append("- Evento esterno (cambio regolatorio EASA/ENAC/AgID/AGCOM, market shock, geopolitical event)")
+    md.append("- Incidente o near-miss interno o settore")
+    md.append("- Hire 3 ruoli senior (CISO, DPO, Head Reg.Aff.) - re-balance owners")
+    md.append("- EWI threshold breach (anche singolo)\n")
+
+    md.append("---\n")
+    md.append("## 10. Riferimenti\n")
+    md.append("**Fonti normative e metodologiche**:")
+    md.append("- NASA NPR 8000.4A - Agency Risk Management Procedural Requirements (vedi `fonti/NASA04. SysEng Handbook (NASA_SP-2016-6105 Rev 2).md` Annex N)")
+    md.append("- MIL-STD-1629A - Procedures for Performing a Failure Mode, Effects and Criticality Analysis")
+    md.append("- IEC 60812:2018 - Analysis techniques for system reliability - FMECA")
+    md.append("- ARP4761 - Guidelines and Methods for Conducting the Safety Assessment Process on Civil Airborne Systems")
+    md.append("- NUREG-0492 - Fault Tree Handbook")
+    md.append("- IEC 61025:2006 - Fault tree analysis (FTA)")
+    md.append("- ISO 31000:2018 - Risk Management - Principles and Guidelines")
+    md.append("- D.Lgs. 36/2023 art. 41 (Codice dei Contratti - PFTE)")
+    md.append("- Reg.UE 2019/947 + EASA SORA 2.5 (ED Decision 2025/018/R)")
+    md.append("- Reg.UE 2023/203 - Part-IS Information Security")
+    md.append("- D.Lgs. 138/2024 - recepimento NIS2")
+    md.append("- Reg.UE 2024/1689 - AI Act")
+    md.append("- D.Lgs. 81/2008 - Sicurezza sul lavoro\n")
+    md.append("**Documenti di progetto** (cross-reference):")
+    md.append("- `studio-di-fattibilita/cap-05-quadro-normativo.md` §5.16 - 15 showstopper regolatori")
+    md.append("- `studio-di-fattibilita/cap-06-analisi-tecnica.md` §6.4 - Top-10 + FMECA Payload + FTA preliminari")
+    md.append("- `studio-di-fattibilita/cap-10-raccomandazione-di-gate.md` §10.2 - Risk residuo aggregato")
+    md.append("- `riferimenti/RESERVED-rischi-geopolitici.md` - 5 RSK-GEO (accesso ristretto)")
+    md.append("- `studio-di-fattibilita/AUDIT-REDTEAM-VOLUME-1.md` - Red Team M+3")
+    md.append("- `studio-di-fattibilita/AUDIT-COMPETITOR-VOLUME-1.md` - Competitor Intelligence M+3")
+    md.append("- `studio-di-fattibilita/AUDIT-REGULATORY-VOLUME-1.md` - Regulatory Adversary M+3")
+    md.append("- `.claude/skills/risk-register-builder/SKILL.md` - Metodologia operativa\n")
+
+    md.append("---\n")
+    md.append(f"*Fine documento - Allegato A.2 Risk Register Report v{VERSION[1:]} - {TODAY} - Firmamento Technologies*\n")
+
+    MD_PATH.write_text("\n".join(md), encoding="utf-8")
+
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+def main():
+    wb = Workbook()
+    # remove default sheet (we replace with Cover)
+    if "Sheet" in wb.sheetnames:
+        del wb["Sheet"]
+
+    # 1 Cover
+    sheet_cover(wb)
+    # 2 Top-25
+    sheet_top_25(wb)
+    # 3-13 Categories
+    sheet_category(wb, "RSK-TEC", lambda r: r["cat"] in ("Tecnico", "Tecnico/Regolatorio", "Tecnico/Privacy"))
+    sheet_category(wb, "RSK-REG", lambda r: r["cat"] == "Regolatorio")
+    sheet_category(wb, "RSK-FIN", lambda r: r["cat"] == "Finanziario")
+    sheet_category(wb, "RSK-MKT", lambda r: r["cat"] == "Mercato")
+    sheet_category(wb, "RSK-OPS", lambda r: r["cat"] == "Operativo")
+    sheet_category(wb, "RSK-SUP", lambda r: r["cat"] == "Supply Chain")
+    sheet_category(wb, "RSK-PRV", lambda r: r["cat"] == "Privacy/Legale")
+    sheet_category(wb, "RSK-SEC", lambda r: r["cat"] == "Cybersecurity")
+    sheet_category(wb, "RSK-HR", lambda r: r["cat"] == "Risorse Umane")
+    sheet_category(wb, "RSK-REP", lambda r: r["cat"] == "Reputazionale")
+    sheet_geo(wb)
+    # 14-16 FMECA
+    sheet_fmeca(wb, "FMECA_Payload", FMECA_PAYLOAD, "Sottosistema Payload EO (RGB + IR LWIR + storage + downlink)")
+    sheet_fmeca(wb, "FMECA_Avionica", FMECA_AVIONICA, "Sottosistema Avionica (FCS DAL-C + IMU triplex + GNSS + C2 + FTS)")
+    sheet_fmeca(wb, "FMECA_Propulsione", FMECA_PROP, "Sottosistema Propulsione/Energia (motori + batterie + solare + thermal)")
+    # 17-18 FTA
+    sheet_fta(wb, "FTA_LossOfVehicle", FTA_LOV, "FTA Top event: Loss of Vehicle in BVLOS")
+    sheet_fta(wb, "FTA_LossOfMission", FTA_LOM, "FTA Top event: Loss of Mission EO")
+    # 19 Mitigation plan
+    sheet_mitigation_plan(wb)
+    # 20 Residual matrix
+    sheet_residual_matrix(wb)
+    # 21 EWI
+    sheet_ewi(wb)
+    # 22 Audit trail
+    sheet_audit_trail(wb)
+
+    wb.save(XLSX_PATH)
+    write_csv()
+    write_md_report()
+
+    print(f"OK  XLSX:    {XLSX_PATH}  ({len(wb.sheetnames)} sheets)")
+    print(f"OK  CSV:     {CSV_PATH}  ({len(RISKS)} rischi)")
+    print(f"OK  REPORT:  {MD_PATH}")
+    print()
+    print(f"Riepilogo: RED={sum(1 for r in RISKS if r['score']>=15)}, "
+          f"YELLOW={sum(1 for r in RISKS if 8<=r['score']<15)}, "
+          f"GREEN={sum(1 for r in RISKS if r['score']<8)}")
+
+
+if __name__ == "__main__":
+    main()
