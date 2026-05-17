@@ -175,27 +175,29 @@ Il rigore si applica a *come supportiamo* queste posizioni e *come ci arriviamo*
 
 ## 4. Debito di rigore residuo (da affrontare in iterazioni future)
 
-> **Aggiornamento maggio 2026:** l'utente ha scaricato 13 fonti critiche in `/fonti/` (vedi `/fonti/INDEX.md`). Il debito sotto è stato rivalutato. **DR-004 e DR-009 sono ora parzialmente coperti.** Resto come prima.
+> **Aggiornamento maggio 2026:** l'utente ha scaricato 13 fonti critiche in `/fonti/` (vedi `/fonti/INDEX.md`). Il debito sotto è stato rivalutato. **DR-004 e DR-009 sono ora parzialmente coperti.**
+>
+> **Aggiornamento M+3 (17 maggio 2026)**: chiusura via desk research di 9 DR. Risultati dettagliati in `riferimenti/DR-research-closure-M3.md`. Sintesi: **4 chiusi (DR-008, DR-009, DR-011, DR-013), 4 parzialmente chiusi (DR-006, DR-012, DR-014, DR-015), 1 resta aperto (DR-007).**
 
 Items che richiedono **verifica esterna** (chiamate dirette, fonti ufficiali) prima di prossimi gate:
 
-| ID | Item | Azione richiesta | Owner | Deadline |
-|---|---|---|---|---|
-| DR-001 | Pentema-Torriglia anagrafica | Verifica con Comune | snai-funding | M+2 |
-| DR-002 | Coopfond Cooding bando attivo 2026 | Contatto diretto Coopfond | snai-funding | M+1 |
-| DR-003 | TRL JOUAV CW-30E EASA-equivalent | Quotation + reference EU operatori | vtol-specialist | M+3 |
-| DR-004 | ENAC SAIL stima per Pentema | Pre-application meeting ENAC | regulatory-counsel | M+2 | ◐ Parzialmente coperto: `/fonti/LG-2023_006-UAS-Linee-Guida-U-Space.md` |
-| DR-005 | AGCOM spettro HAPS Italia status | Consultazione AGCOM Direzione Reti | telecom-payload | M+3 |
-| DR-006 | Garante Privacy posizione su sorveglianza HAPS | Analisi precedenti + eventual workshop | data-privacy | M+4 |
-| DR-007 | Base rate aerospace startup IT | Ricerca su database StartupItalia / AIAD | financial-cfo | M+3 |
-| DR-008 | EuroHAPS estensione civile/futuri call EDF | Engagement DG DEFIS | sovereign-strategist | M+4 |
-| DR-009 | IRIS² timeline e architettura stratosferica | Engagement DG CNECT | sovereign-strategist | M+4 | ◐ Parzialmente coperto: contesto AAM italiano in `/fonti/01_Piano-Strategico-Nazionale-AAM_ENAC_web-1.md` |
-| DR-010 | CIRA willingness for civilian HALE partnership | Engagement diretto CIRA | sovereign-strategist + CTO | M+3 |
-| DR-011 | Fibra di lino: qualificazione aerospace primaria | Ricerca peer-reviewed + esperti settore | aero-structures | M+6 |
-| DR-012 | Mercato HAPS triangulation (fonti non commerciali) | Ricerca Eurospace/AIAD/ITU reports | market-analyst | M+4 |
-| DR-013 | Programmi HALE falliti — analisi cause | Studio post-mortem Aalto Hawk30, Solara 50, etc. | systems-engineer | M+6 |
-| DR-014 | Capital intensity HAPS perennial — stime indipendenti | Benchmark Airbus/SoftBank/Skydweller actual capex | financial-cfo | M+6 |
-| DR-015 | Posizione Leonardo/TAS verso Firmamento | Reading mercato, eventuale dialogo informale | CEO + sovereign-strategist | M+6 |
+| ID | Item | Azione richiesta | Owner | Deadline | Status M+3 |
+|---|---|---|---|---|---|
+| DR-001 | Pentema-Torriglia anagrafica | Verifica con Comune | snai-funding | M+2 | ✅ Chiuso (prev.) |
+| DR-002 | Coopfond Cooding bando attivo 2026 | Contatto diretto Coopfond | snai-funding | M+1 | ⏳ Aperto (engagement esterno) |
+| DR-003 | TRL JOUAV CW-30E EASA-equivalent | Quotation + reference EU operatori | vtol-specialist | M+3 | ⏳ Aperto (engagement esterno) |
+| DR-004 | ENAC SAIL stima per Pentema | Pre-application meeting ENAC | regulatory-counsel | M+2 | ◐ Parz. coperto: `/fonti/LG-2023_006-UAS-Linee-Guida-U-Space.md` |
+| DR-005 | AGCOM spettro HAPS Italia status | Consultazione AGCOM Direzione Reti | telecom-payload | M+3 | ⏳ Aperto (engagement esterno) |
+| DR-006 | Garante Privacy posizione su sorveglianza HAPS | Analisi precedenti + eventual workshop | data-privacy | M+12 | ◐ **Parz. chiuso M+3** (desk research, vedi `DR-research-closure-M3.md`); workshop Garante in M+12 raccomandato |
+| DR-007 | Base rate aerospace startup IT | Ricerca su database StartupItalia / AIAD | financial-cfo | M+6 | ⏳ **Resta aperto M+3** (desk research insufficiente; richiede DB Tracxn Pro / StartupItalia Pro) |
+| DR-008 | EuroHAPS estensione civile/futuri call EDF | Engagement DG DEFIS | sovereign-strategist | M+10 | ✅ **Chiuso M+3** (EDF WP 2026 verificato; EuroHAPS Phase 2 indicative ma non calendarizzata 2026); engagement DG DEFIS utile non urgente |
+| DR-009 | IRIS² timeline e architettura stratosferica | Engagement DG CNECT | sovereign-strategist | (chiuso) | ✅ **Chiuso M+3** (LEO+MEO, NO stratosferico, lanci 2029, ops 2031); engagement DG CNECT non più priority |
+| DR-010 | CIRA willingness for civilian HALE partnership | Engagement diretto CIRA | sovereign-strategist + CTO | M+3 | ⏳ Aperto (engagement esterno) |
+| DR-011 | Fibra di lino: qualificazione aerospace primaria | Ricerca peer-reviewed + esperti settore | aero-structures | (chiuso) | ✅ **Chiuso M+3** (no qualification primary; solo interior+secondary; 7-11 anni R&D path) |
+| DR-012 | Mercato HAPS triangulation (fonti non commerciali) | Ricerca Eurospace/AIAD/ITU reports | market-analyst | M+10 | ◐ **Parz. chiuso M+3** (fonti istituz. non segmentano HAPS; cifra MarkNtel non triangolabile); contatto Eurospace M+10 |
+| DR-013 | Programmi HALE falliti — analisi cause | Studio post-mortem Aalto Hawk30, Solara 50, etc. | systems-engineer | (chiuso) | ✅ **Chiuso M+3** (12 programmi 2003-2025 → 0% commerciali operativi; base rate definitivo) |
+| DR-014 | Capital intensity HAPS perennial — stime indipendenti | Benchmark Airbus/SoftBank/Skydweller actual capex | financial-cfo | M+6 | ◐ **Parz. chiuso M+3** ($50M-1B per programma; stima Firmamento €5,5-11M sottostimata 10-50x) |
+| DR-015 | Posizione Leonardo/TAS verso Firmamento | Reading mercato, eventuale dialogo informale | CEO + sovereign-strategist | M+6 | ◐ **Parz. chiuso M+3** (Leonardo: HAPS via TAS+venture, NO standalone IP 2026-2030; rischio acquisitivo declassato a low-medium) |
 
 ---
 
@@ -217,8 +219,15 @@ Le correzioni mantengono integralmente le **boundary conditions** B1 (cooperativ
 ## 6. Stato sintetico post-audit
 
 **Confidenza media del framework prima dell'audit:** ~medium (con bias ottimistico inavvertito)
-**Confidenza media post-audit:** ~medium-low onestamente dichiarato + roadmap di rigore residuo tracciata
+**Confidenza media post-audit (gennaio 2026):** ~medium-low onestamente dichiarato + roadmap di rigore residuo tracciata
+**Confidenza media post-chiusura M+3 (17 maggio 2026):** ~medium-low / **rafforzato sul lato Hold per Percorso 6B** (DR-013 evidenza base rate 0% HALE solari commerciali operativi globalmente; DR-014 capital intensity Firmamento sottostimata 10-50x); **stabile-positivo su DR-008/009/011** (allineato a evidenze pubbliche).
 
-**Sintesi onesta:** il framework attuale è una **baseline ragionevole** per impostare lo Studio di Fattibilità, **non** un documento da bandi/finanziatori. I 15 punti di debito residuo (DR-001 → DR-015) vanno chiusi per portare il documento a "investment-grade".
+**Sintesi onesta:** il framework attuale è una **baseline ragionevole** per impostare lo Studio di Fattibilità, **non** un documento da bandi/finanziatori. Dei 15 punti di debito residuo (DR-001 → DR-015): **5 chiusi (1 prev. + 4 M+3), 6 parzialmente chiusi, 4 ancora aperti** (richiedono engagement esterno: Coopfond, JOUAV/EU operators, ENAC, AGCOM, CIRA, Garante in M+12).
 
-**Vincoli onesti per il prossimo lavoro:** il runtime cloud non consente download di fonti italiane critiche. Per chiudere il debito serve **lavoro umano offline** (download fonti, interviste, audit Coopfond/ENAC/AGCOM/CIRA/Comune Torriglia).
+**Nuove implicazioni gate decisionale (post M+3):**
+- **Cap. 10 verdetto Percorso 6B**: l'evidenza base rate 0% HALE solari commerciali (DR-013) + capital gap 10-50x (DR-014) rafforza il **"Hold con criteri di uscita estremamente stringenti"**. Pivot raccomandato a **partnership con Aalto/Sceye/Skydweller/CIRA come prime contractor** invece di build in-house standalone.
+- **Cap. 5/Cap. 11 architettura EU**: IRIS² è LEO+MEO pure, lancio 2029, ops 2031 (NO stratospheric layer integrato); EuroHAPS Phase 2 non ancora calendarizzato. Firmamento "complementare a IRIS²" resta aspirazione strategica Y4-Y7, non baseline acquisita.
+- **Cap. 6.3.2 fibra di lino**: ridimensionata a **strutture secondarie + interior payload bay**, NON primary wing spar (qualification path 7-11 anni + €30-80M).
+- **Cap. 7.3 mercato HAPS**: cifra MarkNtel "$99M 2024" non triangolabile con fonti istituzionali; service revenue HAPS effettivo 2024 ≈ $0; mercato in fase R&D.
+
+**Vincoli onesti per il prossimo lavoro:** il runtime cloud non consente download di fonti italiane critiche né accesso a database paywalled (Tracxn Pro, CB Insights, Eurospace Full). Per chiudere il debito residuo serve **lavoro umano offline** (download fonti, interviste, audit Coopfond/ENAC/AGCOM/CIRA/Comune Torriglia + database access per base rate startup IT).
