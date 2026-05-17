@@ -1,0 +1,39 @@
+Criterio,Peso (%),JOUAV CW-30E Score (1-10),JOUAV Razionale,Tekever AR3 Score (1-10),Tekever Razionale,JOUAV Ponderato,Tekever Ponderato
+Costo iniziale (CapEx Y1),15,8,"CapEx stima EUR 580-820k (DDP IT no IVA) - sotto Briefing range 600-900k - vantaggio pricing CN reseller EU",5,"CapEx stima EUR 850-1250k (DDP IT no IVA) - margine superiore range Studio Cap.8 - premium EU sovereign 30-50%",1.20,0.75
+TCO 5 anni (CapEx + OpEx tecnico),15,8,"TCO stima EUR 745-1120k - supporto manutenzione spare integrati - assenza service center IT limita ma costi competitivi",6,"TCO stima EUR 1065-1640k - premium NATO-grade su manutenzione spare update - +30-50% vs JOUAV",1.20,0.90
+Capability tecnica (autonomia + payload + range),15,8,"Payload 8 kg (max categoria) - autonomia 8h - range C2 LOS 50km estendibile 200km - propulsione ibrida heavy oil",7,"Payload 4 kg (limitato per multi-payload simultaneo) - autonomia 16h (best in class) - range 100km - VTOL hot-swappable 2025",1.20,1.05
+Compliance regolatoria EASA/ENAC,15,5,"CW-30E NO EASA conformity dichiarata - CE marking TBD su CW-30E specifico (confermato su CW-15) - ENAC engagement nullo - SORA SAIL II richiede vendor support documentation NON garantito",8,"NATO eligible vendor - operatori EU autorizzati EMSA UK Home Office RAF - reference compliance proven - manualistica EN/PT standard - EASA awareness alta",0.75,1.20
+Risk geopolitico / supply chain,10,4,"Vendor CN - Section 301 US tariffs 25% + 122 10% (temp luglio 2026) - Golden Power notifica IT obbligatoria probable (D.L. 21/2012 settore aerospace) - CN export restrictions drone parts dicembre 2024 attive - reputational risk in scenario escalation",9,"EU sovereign PT intra-UE - NO customs NO export licensing NO Golden Power triggering - NATO eligible vendor - supply chain EU-prevalente - allineamento sovrano IT/EU narrative",0.40,0.90
+Reference customers EU,10,3,"Reference EU NON documentate per CW-30E specifico - alcuni operatori privati Spagna Portogallo Polonia anecdotali - manca proof in PA contexts EU",9,"UK Home Office £1B 3-year framework rinnovato 2025 - EMSA EUR 30M 4-year contract 2024 - Portuguese GNR - Spanish National Police - RAF StormShroud 2025 - Ukraine battle-proven",0.30,0.90
+Lead time consegna full system,10,7,"Best case 6-9 mesi (produzione 3-5 mesi + shipping 1-2 mesi + customs 2-4 settimane + training/SAT 1-2 mesi) - Worst case 9-14 mesi se delays customs sanctions",5,"Best case 8-12 mesi (produzione 4-7 mesi backlog NATO + intra-EU shipping 1-2 settimane + training/SAT 2-3 mesi NATO-grade) - Worst case 12-16 mesi backlog Ukraine RAF orders",0.70,0.50
+Supporto IT/EU service + manuali + lingua,10,4,"NO service center IT - supporto via reseller EU intermittente - manuali EN/CN traduzione IT richiesta - cybersecurity attestation TBD - data sovereignty pure cloud Firmamento IT/EU richiesta in contratto",8,"Service EU presente headquartered PT + UK Bristol - multilingual EN/PT - cybersecurity ISO 27001 + NIS2 compliance dichiarata - data sovereignty native EU - possibilità training on-site",0.40,0.80
+TOTALE PONDERATO,100,,,,,6.25,7.05
+,,,,,,,
+NOTA METODOLOGIA,,,,,,,
+Scala 1-10 dove 10 = best,,,,,,,
+Pesi allineati a Cap. 6 paragrafo 6.3.1 TS-PLATFORM-6A,,,,,,,
+Versione M+3 originale Cap. 6 era JOUAV 7.30 vs Tekever 7.30 (parità),,,,,,,
+Versione aggiornata con quotation analysis dettagliata: Tekever 7.05 vs JOUAV 6.25 (+0.80),,,,,,,
+Shift driver: capability JOUAV ridimensionata su EASA/ENAC compliance + reference customer EU non documentati,,,,,,,
+,,,,,,,
+DECISIONE RACCOMANDATA,,,,,,,
+Procedere con doppia RFQ formale parallela JOUAV + Tekever,,,,,,,
+Valutazione finale a M+6 sulla base di quotation reali ricevute,,,,,,,
+Mantenere Quantum Trinity F90+ (DE) come Plan C fallback ulteriore,,,,,,,
+,,,,,,,
+CONFIDENCE GLOBALE,,,,,,,
+Stime pricing: low-medium (range +/- 50%),,,,,,,
+Specifiche tecniche datasheet vendor: medium-high (Tekever validato via reference EU; JOUAV self-declared only),,,,,,,
+Analisi geopolitica: high (base rate + trend osservati 2024-2026),,,,,,,
+Reference customers count: high Tekever - low JOUAV (assenza dati pubblici),,,,,,,
+,,,,,,,
+FALSIFYING OBSERVATIONS,,,,,,,
+FO-1: Quotation JOUAV reale > EUR 1.2M CapEx Y1 -> re-baseline scope MVP o switch Tekever Plan A,,,,,,,
+FO-2: Quotation JOUAV reale < EUR 290k CapEx Y1 -> scope expansion LiDAR + multispettrale Y1,,,,,,,
+FO-3: Quotation Tekever > EUR 1.5M CapEx Y1 -> switch fallback Quantum F90+ (DE),,,,,,,
+FO-4: Lead time JOUAV reale > 12 mesi -> switch Plan B Tekever automatico,,,,,,,
+FO-5: Golden Power respinta o richiesta integrativa > 90 gg -> switch Plan B Tekever,,,,,,,
+FO-6: Sanzioni US-CN escalation post-luglio 2026 -> cost re-baseline JOUAV +10-20%,,,,,,,
+FO-7: Tekever backlog NATO genera lead time > 16 mesi -> fallback Plan C Quantum F90+,,,,,,,
+FO-8: Entrambi vendor non rispondono entro 45 gg -> estensione RFQ + apertura vendor terzi,,,,,,,
+FO-9: Bandi Coopfond/FESR Y1 non disponibili -> riduzione scope Y1 + mix funding equity + R&D credit
