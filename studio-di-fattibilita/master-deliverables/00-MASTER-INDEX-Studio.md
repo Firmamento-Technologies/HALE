@@ -1,11 +1,11 @@
-# Studio di Fattibilità HALE/VTOL — INDICE UNICO CROSS-VOLUME
+# Studio di Fattibilità HALE/VTOL, Indice Unico Cross-Volume
 
-> **Firmamento Technologies** — bando Cooding Prototypes (Coopfond / Legacoop)
+> **Firmamento Technologies**, bando Cooding Prototypes (Coopfond / Legacoop)
 > Studio di Fattibilità ex art. 41 D.Lgs. 36/2023 + Allegato I.7
 > Bozza M+3 (proiezione M+11 per gate G3 FEASIBILITY)
 >
-> **Caso pilota**: frazione di Pentema (Comune di Torriglia, GE) — area SNAI Valli Antola-Tigullio
-> **Strategia**: Duale — Percorso 6A VTOL pilota (M+0-12) + Percorso 6B HALE R&D Phase B (M+24-48)
+> **Caso pilota**: frazione di Pentema (Comune di Torriglia, GE), area SNAI Valli Antola-Tigullio
+> **Strategia**: duale, Percorso 6A VTOL pilota (M+0-12) e Percorso 6B HALE R&D Phase B (M+24-48)
 
 ---
 
@@ -17,54 +17,60 @@ HALE/
 │   ├── cap-00..11.md (Volume 1)
 │   ├── allegati/A1..A13 (Volume 2)
 │   └── volume-3-riferimenti/R1..R5 (Volume 3)
-├── fonti/ (30 file MD + 26 PDF/DOCX originali — fonti normative + dati)
-└── riferimenti/ (audit + visione + ricerche)
+├── fonti/ (30 file MD + 26 PDF/DOCX originali, fonti normative e dati)
+└── riferimenti/ (audit, visione, ricerche)
 ```
 
 ---
 
-## VOLUME 1 — STUDIO (testuale)
+## VOLUME 1, STUDIO (testuale)
+
+Il primo volume raccoglie gli undici capitoli che costituiscono il corpo testuale dello Studio, dalla Sintesi Esecutiva alla Roadmap post-fattibilità. La tabella seguente indica titolo, file e pagine A4 stimate per ciascun capitolo.
 
 | Cap. | Titolo | File | Pagine A4 stim. | Status |
 |---|---|---|---|---|
-| **0** | Sintesi Esecutiva | [`cap-00-sintesi-esecutiva.md`](../cap-00-sintesi-esecutiva.md) | 5-7 | ✅ |
-| **1** | Inquadramento + Quadro Esigenziale | [`cap-01-inquadramento.md`](../cap-01-inquadramento.md) | 30 | ✅ |
-| **2** | Stakeholder + SMART | [`cap-02-stakeholder-e-SMART.md`](../cap-02-stakeholder-e-SMART.md) | 35 | ✅ |
-| **3** | Requisiti + RTM | [`cap-03-requisiti-e-RTM.md`](../cap-03-requisiti-e-RTM.md) | 32 | ✅ |
-| **4** | Scope + ICD preliminare | [`cap-04-scope-e-ICD.md`](../cap-04-scope-e-ICD.md) | 38 | ✅ |
-| **5** | Quadro Normativo + 15 showstopper aggiuntivi | [`cap-05-quadro-normativo.md`](../cap-05-quadro-normativo.md) | 40 | ✅ |
-| **6** | Analisi Tecnica + energy balance updated | [`cap-06-analisi-tecnica.md`](../cap-06-analisi-tecnica.md) | 30 | ✅ |
-| **7** | Mercato + Business Case + Cluster D | [`cap-07-mercato-e-business-case.md`](../cap-07-mercato-e-business-case.md) | 35 | ✅ |
-| **8** | Economico-Finanziario | [`cap-08-economico-finanziario.md`](../cap-08-economico-finanziario.md) | 18 | ✅ |
-| **9** | Cronoprogramma + Gate + Sliding Timeline | [`cap-09-cronoprogramma-e-gate.md`](../cap-09-cronoprogramma-e-gate.md) | 25 | ✅ |
-| **10** | Raccomandazione di Gate + Hold default | [`cap-10-raccomandazione-di-gate.md`](../cap-10-raccomandazione-di-gate.md) | 18 | ✅ |
-| **11** | Roadmap post-fattibilità + B2-relaxed | [`cap-11-roadmap-post-fattibilita.md`](../cap-11-roadmap-post-fattibilita.md) | 30 | ✅ |
-| **Tot Vol. 1** | | | **~336 pp** | ✅ |
+| **0** | Sintesi Esecutiva | [`cap-00-sintesi-esecutiva.md`](../cap-00-sintesi-esecutiva.md) | 5-7 | OK |
+| **1** | Inquadramento + Quadro Esigenziale | [`cap-01-inquadramento.md`](../cap-01-inquadramento.md) | 30 | OK |
+| **2** | Stakeholder + SMART | [`cap-02-stakeholder-e-SMART.md`](../cap-02-stakeholder-e-SMART.md) | 35 | OK |
+| **3** | Requisiti + RTM | [`cap-03-requisiti-e-RTM.md`](../cap-03-requisiti-e-RTM.md) | 32 | OK |
+| **4** | Scope + ICD preliminare | [`cap-04-scope-e-ICD.md`](../cap-04-scope-e-ICD.md) | 38 | OK |
+| **5** | Quadro Normativo + 15 showstopper aggiuntivi | [`cap-05-quadro-normativo.md`](../cap-05-quadro-normativo.md) | 40 | OK |
+| **6** | Analisi Tecnica + energy balance updated | [`cap-06-analisi-tecnica.md`](../cap-06-analisi-tecnica.md) | 30 | OK |
+| **7** | Mercato + Business Case + Cluster D | [`cap-07-mercato-e-business-case.md`](../cap-07-mercato-e-business-case.md) | 35 | OK |
+| **8** | Economico-Finanziario | [`cap-08-economico-finanziario.md`](../cap-08-economico-finanziario.md) | 18 | OK |
+| **9** | Cronoprogramma + Gate + Sliding Timeline | [`cap-09-cronoprogramma-e-gate.md`](../cap-09-cronoprogramma-e-gate.md) | 25 | OK |
+| **10** | Raccomandazione di Gate + Hold default | [`cap-10-raccomandazione-di-gate.md`](../cap-10-raccomandazione-di-gate.md) | 18 | OK |
+| **11** | Roadmap post-fattibilità + B2-relaxed | [`cap-11-roadmap-post-fattibilita.md`](../cap-11-roadmap-post-fattibilita.md) | 30 | OK |
+| **Tot Vol. 1** | | | **~336 pp** | OK |
 
 ---
 
-## VOLUME 2 — ALLEGATI TECNICI
+## VOLUME 2, ALLEGATI TECNICI
+
+Tredici allegati tecnici accompagnano il Volume 1 con i dati operativi: RTM, Risk Register, ICD, V&V Plan, schemi CAD, modelli di calcolo, bilanci di massa, Computo Metrico Estimativo, Piano di Manutenzione, Safety Case SORA, VIA preliminare e documentazione fotografica.
 
 | All. | Titolo | Path | Output | Status |
 |---|---|---|---|---|
-| **A.1** | Requirements Traceability Matrix v1.0 | [`allegati/A1-RTM/`](../allegati/A1-RTM/) | 4 file (.md + .xlsx 14 sheet + .csv + .py); 279 record | ✅ |
-| **A.2** | Risk Register consolidato v1.0 | [`allegati/A2-Risk-Register/`](../allegati/A2-Risk-Register/) | 4 file (.md + .xlsx 22 sheet + .csv + .py); 116 rischi | ✅ |
-| **A.3** | DOCFAP — Trade Studies | [`allegati/A3-Trade-Studies/`](../allegati/A3-Trade-Studies/) | 1 .md | ✅ |
-| **A.4** | Interface Control Document v1.0 | [`allegati/A4-ICD/`](../allegati/A4-ICD/) | 3 file (.md + .xlsx 13 sheet + .py); 59 interfacce | ✅ |
-| **A.5** | Verification & Validation Plan v1.0 | [`allegati/A5-VV-Plan/`](../allegati/A5-VV-Plan/) | 3 file (.md + .xlsx 7 sheet + .py); 71 SyR | ✅ |
-| **A.6** | Schemi CAD del concept | [`allegati/A6-CAD/`](../allegati/A6-CAD/) | 1 README (placeholder; CAD binari in `/cad/`) | ✅ |
-| **A.7** | Modelli di calcolo (3 modelli) | [`allegati/A7-Link-Budget/`](../allegati/A7-Link-Budget/) + [`energy-balance/`](../allegati/energy-balance/) + [`financial-model/`](../allegati/financial-model/) | (a) Link Budget Python + xlsx 11 sheet + report + 4 PNG; (b) Energy Balance Python + xlsx + CSV 365gg + 4 PNG + report; (c) Financial Model xlsx 10 sheet + Python | ✅ |
-| **A.8** | Bilanci di Massa Preliminari | [`allegati/A8-Bilanci-Massa/`](../allegati/A8-Bilanci-Massa/) | 1 .md | ✅ |
-| **A.9** | Computo Metrico Estimativo | [`allegati/A9-Computo-Metrico/`](../allegati/A9-Computo-Metrico/) | 1 .md | ✅ |
-| **A.10** | Piano di Manutenzione Preliminare | [`allegati/A10-Piano-Manutenzione/`](../allegati/A10-Piano-Manutenzione/) | 1 .md | ✅ |
-| **A.11** | PSC + SORA Safety Case Preliminary | [`allegati/A11-Safety-Case-SORA/`](../allegati/A11-Safety-Case-SORA/) | 1 .md | ✅ |
-| **A.12** | Relazione VIA Preliminare | [`allegati/A12-VIA-preliminare/`](../allegati/A12-VIA-preliminare/) | 1 .md | ✅ |
-| **A.13** | Documentazione Fotografica | [`allegati/A13-Documentazione-Fotografica/`](../allegati/A13-Documentazione-Fotografica/) | 1 .md (indice; foto da acquisire) | ✅ |
-| **(extra)** | Vendor RFQ | [`allegati/vendor-rfq/`](../allegati/vendor-rfq/) | 4 file (.md template + cover letter + analysis + CSV) | ✅ |
+| **A.1** | Requirements Traceability Matrix v1.0 | [`allegati/A1-RTM/`](../allegati/A1-RTM/) | 4 file (.md + .xlsx 14 sheet + .csv + .py); 279 record | OK |
+| **A.2** | Risk Register consolidato v1.0 | [`allegati/A2-Risk-Register/`](../allegati/A2-Risk-Register/) | 4 file (.md + .xlsx 22 sheet + .csv + .py); 116 rischi | OK |
+| **A.3** | DOCFAP, Trade Studies | [`allegati/A3-Trade-Studies/`](../allegati/A3-Trade-Studies/) | 1 .md | OK |
+| **A.4** | Interface Control Document v1.0 | [`allegati/A4-ICD/`](../allegati/A4-ICD/) | 3 file (.md + .xlsx 13 sheet + .py); 59 interfacce | OK |
+| **A.5** | Verification & Validation Plan v1.0 | [`allegati/A5-VV-Plan/`](../allegati/A5-VV-Plan/) | 3 file (.md + .xlsx 7 sheet + .py); 71 SyR | OK |
+| **A.6** | Schemi CAD del concept | [`allegati/A6-CAD/`](../allegati/A6-CAD/) | 1 README (placeholder; CAD binari in `/cad/`) | OK |
+| **A.7** | Modelli di calcolo (3 modelli) | [`allegati/A7-Link-Budget/`](../allegati/A7-Link-Budget/) + [`energy-balance/`](../allegati/energy-balance/) + [`financial-model/`](../allegati/financial-model/) | (a) Link Budget Python + xlsx 11 sheet + report + 4 PNG; (b) Energy Balance Python + xlsx + CSV 365gg + 4 PNG + report; (c) Financial Model xlsx 10 sheet + Python | OK |
+| **A.8** | Bilanci di Massa Preliminari | [`allegati/A8-Bilanci-Massa/`](../allegati/A8-Bilanci-Massa/) | 1 .md | OK |
+| **A.9** | Computo Metrico Estimativo | [`allegati/A9-Computo-Metrico/`](../allegati/A9-Computo-Metrico/) | 1 .md | OK |
+| **A.10** | Piano di Manutenzione Preliminare | [`allegati/A10-Piano-Manutenzione/`](../allegati/A10-Piano-Manutenzione/) | 1 .md | OK |
+| **A.11** | PSC + SORA Safety Case Preliminary | [`allegati/A11-Safety-Case-SORA/`](../allegati/A11-Safety-Case-SORA/) | 1 .md | OK |
+| **A.12** | Relazione VIA Preliminare | [`allegati/A12-VIA-preliminare/`](../allegati/A12-VIA-preliminare/) | 1 .md | OK |
+| **A.13** | Documentazione Fotografica | [`allegati/A13-Documentazione-Fotografica/`](../allegati/A13-Documentazione-Fotografica/) | 1 .md (indice; foto da acquisire) | OK |
+| **(extra)** | Vendor RFQ | [`allegati/vendor-rfq/`](../allegati/vendor-rfq/) | 4 file (.md template + cover letter + analysis + CSV) | OK |
 
 ---
 
-## VOLUME 3 — RIFERIMENTI BIBLIOGRAFICI
+## VOLUME 3, RIFERIMENTI BIBLIOGRAFICI
+
+Il terzo volume documenta le fonti su cinque assi: normativo, tecnico, mercato-competitor, territoriale SNAI e accademico, per un totale di circa 320 riferimenti.
 
 | Sez. | Titolo | File | Riferimenti |
 |---|---|---|---|
@@ -79,6 +85,8 @@ HALE/
 
 ## DOCUMENTI DI AUDIT E DEBITO
 
+A corredo del corpo principale, lo Studio ospita gli atti dei quattro audit avversariali condotti (Red Team, Competitor, Regulatory, Quality consolidato), un addendum di Falsifying Observations, l'audit di rigore epistemico con i Debiti di Rigore, la visione decennale e il dossier riservato sui rischi geopolitici.
+
 | Doc | Path | Contenuto |
 |---|---|---|
 | Audit Red Team Volume 1 | [`AUDIT-REDTEAM-VOLUME-1.md`](../AUDIT-REDTEAM-VOLUME-1.md) | 70+ critiche per capitolo |
@@ -89,11 +97,13 @@ HALE/
 | Audit rigore epistemico | [`/riferimenti/audit-rigore-epistemico.md`](../../riferimenti/audit-rigore-epistemico.md) | 124 claim auditati + 15 DR |
 | DR research closure M+3 | [`/riferimenti/DR-research-closure-M3.md`](../../riferimenti/DR-research-closure-M3.md) | 9 DR processati |
 | Visione strategica 10 anni | [`/riferimenti/visione-10-anni.md`](../../riferimenti/visione-10-anni.md) | 5 fasi + capital intensity scenarios |
-| RESERVED rischi geopolitici | [`/riferimenti/RESERVED-rischi-geopolitici.md`](../../riferimenti/RESERVED-rischi-geopolitici.md) | 🔒 Accesso ristretto |
+| RESERVED rischi geopolitici | [`/riferimenti/RESERVED-rischi-geopolitici.md`](../../riferimenti/RESERVED-rischi-geopolitici.md) | Accesso ristretto |
 
 ---
 
 ## FRAMEWORK OPERATIVO (`.claude/`)
+
+Il framework operativo sostiene la stesura del documento attraverso 17 agenti di dominio e 7 skill operative, catalogati in `.claude/README.md` insieme ai workflow pattern di riferimento.
 
 | Componente | Path | Contenuto |
 |---|---|---|
@@ -105,11 +115,7 @@ HALE/
 
 ## FONTI ESTERNE SCARICATE
 
-Path: `/fonti/` (root del repo)
-
-- 26 documenti normativi/tecnici originali (PDF + DOCX)
-- 30 file .md convertiti (~80 MB indicizzabile)
-- Coverage: D.Lgs.36/2023, Reg.UE UAS, EASA SORA, ENAC, 3GPP NTN, ITU P.618, NASA SE Handbook, ENAC AAM BP, PSNAI, etc.
+Le fonti esterne risiedono in `/fonti/` (root del repo): 26 documenti originali (PDF + DOCX), 30 file `.md` convertiti per circa 80 MB indicizzabile. La copertura tematica comprende D.Lgs.36/2023, Reg.UE UAS, EASA SORA, ENAC, 3GPP NTN, ITU P.618, NASA SE Handbook, ENAC AAM BP e PSNAI.
 
 ---
 
@@ -121,7 +127,7 @@ Path: `/fonti/` (root del repo)
 | **Allegati Vol. 2** | 13/13 (100%) + extra |
 | **Sezioni Vol. 3** | 5/5 (100%) |
 | **Audit avversariali** | 4 (RedTeam + Competitor + Regulatory + Quality) |
-| **DR chiusi** | 9/15 (4 ✓ + 4 parz + 1 aperto + 6 esterni) |
+| **DR chiusi** | 9/15 (4 OK + 4 parz + 1 aperto + 6 esterni) |
 | **Falsifying observations** | ~50+ totali distribuite |
 | **Citazioni autoritative** | ~270 totali (Vol. 3) |
 | **Mercati di mercato/competitor profiled** | 27 (Tier 1+EU+sub+Cluster D+Vendor) |
@@ -139,55 +145,39 @@ Path: `/fonti/` (root del repo)
 
 ## VERDETTO CONSOLIDATO M+3
 
-> **Lo Studio di Fattibilità HALE/VTOL è formalmente completo (Vol. 1+2+3) per gate G3 FEASIBILITY** (M+10/M+11 proiezione).
->
-> **Verdetto operativo**:
-> - **Percorso 6A (VTOL pilota Pentema)**: HOLD CON PIANO REGOLATORIO RAFFORZATO (scenario base P 45-60%) → re-review M+13-16; GO pieno P 5-15%
-> - **Percorso 6B (HALE R&D Phase B)**: HOLD CON CRITERI DI USCITA ESTREMAMENTE STRINGENTI; base rate 0% HALE solari commerciali in 22 anni; pivot strutturale verso "operatore servizi su prime contractor"
->
-> **Confidence aggregato**: MEDIUM-LOW (richiede engagement esterno per chiusura DR-002, 003, 004, 005, 010 + LoI Regione + workshop cooperative).
+Lo Studio di Fattibilità HALE/VTOL risulta formalmente completo (Vol. 1+2+3) per il gate G3 FEASIBILITY, in proiezione M+10/M+11. Sul piano operativo, il verdetto si articola in due binari distinti.
+
+Per il Percorso 6A (VTOL pilota Pentema) lo scenario base è HOLD CON PIANO REGOLATORIO RAFFORZATO (P 45-60%), con re-review prevista in finestra M+13-16; un GO pieno resta possibile con probabilità 5-15%.
+
+Per il Percorso 6B (HALE R&D Phase B) prevale HOLD CON CRITERI DI USCITA ESTREMAMENTE STRINGENTI: il base rate degli HALE solari commerciali è pari a 0% negli ultimi 22 anni e impone un pivot strutturale verso il modello "operatore di servizi su prime contractor".
+
+Il confidence aggregato è MEDIUM-LOW: la chiusura richiede engagement esterno su DR-002, 003, 004, 005, 010 oltre alla LoI Regione e al workshop cooperative.
 
 ---
 
 ## VERSIONING
 
-- **v1.0 M+3** (presente) — Sprint completo (Vol. 1+2+3 + audit + modelli + RFQ)
-- **v1.5 M+6** — Update post pre-application ENAC + workshop cooperative + vendor quotation
-- **v2.0 M+10** — Definitivo per gate G3 FEASIBILITY
-- **v2.5 M+12** — Update post gate G3 + Y1 MVP launch
-- **v3.0 M+24** — Update per gate G5 Phase B 6B
+La traiettoria di versionamento prevede cinque tappe successive. La v1.0 M+3, attualmente in vigore, raccoglie lo sprint completo (Volume 1, 2 e 3, audit, modelli e RFQ). La v1.5 M+6 introdurrà gli aggiornamenti post pre-application ENAC, workshop cooperative e vendor quotation. La v2.0 M+10 sarà la versione definitiva per il gate G3 FEASIBILITY, seguita dalla v2.5 M+12 post gate G3 e Y1 MVP launch, e infine dalla v3.0 M+24 in vista del gate G5 Phase B 6B.
 
 ---
 
-## CONTACTS + LICENSE
+## CONTATTI E LICENZA
 
 **Soggetto proponente**: Firmamento Technologies S.r.l.
 **Documento**: Studio di Fattibilità HALE/VTOL per Aree Interne
 **Bando**: Cooding Prototypes (Coopfond / Legacoop)
 **Versione**: M+3 bozza
 **Data**: 17 maggio 2026
-**Confidentiality**: Documento di lavoro — distribuzione interna + stakeholder formali. Sezioni RESERVED ad accesso ristretto.
+**Confidenzialità**: Documento di lavoro, distribuzione interna e stakeholder formali. Sezioni RESERVED ad accesso ristretto.
 
 ---
 
 ## QUICK START NAVIGATION
 
-**Per uno stakeholder esterno che apre il documento per la prima volta**:
+Per uno stakeholder esterno che apre il documento per la prima volta, il percorso suggerito parte dalla Sintesi Esecutiva ([`cap-00-sintesi-esecutiva.md`](../cap-00-sintesi-esecutiva.md), circa 5 minuti di lettura), prosegue con la Raccomandazione di Gate ([`cap-10-raccomandazione-di-gate.md`](../cap-10-raccomandazione-di-gate.md) §10.0bis, verdetto realistico) e si chiude con il board summary in `master-deliverables/CdA-1pager.md`. Da qui, l'approfondimento sui capitoli di interesse specifico è demandato al lettore.
 
-1. Leggere [`cap-00-sintesi-esecutiva.md`](../cap-00-sintesi-esecutiva.md) (5 min)
-2. Leggere [`cap-10-raccomandazione-di-gate.md`](../cap-10-raccomandazione-di-gate.md) §10.0bis (verdetto realistico)
-3. Riferimento `master-deliverables/CdA-1pager.md` per board summary
-4. Approfondire capitoli su interesse specifico
+Per un finanziatore (Coopfond, FESR, PNRR) la sequenza prioritaria comprende Cap. 0, Cap. 7 (mercato), Cap. 8 (finanziario) e Cap. 10 (verdetto), affiancati da Vol. 2 A.7 financial-model (Excel) e Vol. 2 A.9 Computo Metrico.
 
-**Per un finanziatore** (Coopfond, FESR, PNRR):
-1. Cap. 0 + Cap. 7 (mercato) + Cap. 8 (finanziario) + Cap. 10 (verdetto)
-2. Vol. 2 A.7 financial-model (Excel)
-3. Vol. 2 A.9 Computo Metrico
+Per un regolatore (ENAC, EASA, AGCOM, Garante) la lettura mirata è Cap. 5 con Vol. 2 A.11 SORA e A.12 VIA, integrata da Vol. 3 R.1 (bibliografia normativa).
 
-**Per un regolatore** (ENAC, EASA, AGCOM, Garante):
-1. Cap. 5 + Vol. 2 A.11 SORA + A.12 VIA
-2. Vol. 3 R.1 (bibliografia normativa)
-
-**Per un partner tecnico** (CIRA, Polito, TAS):
-1. Cap. 6 + Vol. 2 A.1 RTM + A.4 ICD + A.7 modelli
-2. Vol. 3 R.2 (bibliografia tecnica) + R.5 (accademica)
+Per un partner tecnico (CIRA, Polito, TAS) il riferimento è Cap. 6 con Vol. 2 A.1 RTM, A.4 ICD e A.7 modelli, supportati da Vol. 3 R.2 (bibliografia tecnica) e R.5 (accademica).

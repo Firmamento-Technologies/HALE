@@ -1,19 +1,19 @@
-# Capitolo 9 — Cronoprogramma e Gate Decisionali
+# Capitolo 9. Cronoprogramma e Gate Decisionali
 
-> **Studio di Fattibilità — Piattaforma Aerea HALE / VTOL per Aree Interne**
-> Firmamento Technologies — bando Cooding Prototypes
+> **Studio di Fattibilità. Piattaforma Aerea HALE / VTOL per Aree Interne**
+> Firmamento Technologies, bando Cooding Prototypes
 > Volume 1, Capitolo 9
 >
 > **Versione:** bozza M+3
-> **Conformità:** D.Lgs. 36/2023 art. 41 (sezione "Cronoprogramma") + NASA SE Handbook §3.0 (Project Life Cycle Reviews) + skill `gate-review-checklist`
+> **Conformità:** D.Lgs. 36/2023 art. 41 (sezione "Cronoprogramma") con NASA SE Handbook §3.0 (Project Life Cycle Reviews) e skill `gate-review-checklist`
 > **Disciplina epistemica:** Regole 1-7 della skill `epistemic-rigor`
-> **Red Team review:** `aerospace-systems-engineer` + `red-team-skeptic` — vedi §9.8
+> **Red Team review:** `aerospace-systems-engineer` e `red-team-skeptic` (vedi §9.8)
 
 ---
 
 ## 9.0 Sintesi del capitolo
 
-Il presente capitolo definisce il **cronoprogramma** dello Studio di Fattibilità (M+0 → M+11) e dei due percorsi (6A operativo + 6B R&D Phase B), insieme ai **gate decisionali Go/No-Go** con criteri di entry/exit, in coerenza con NASA SE Handbook §3.0 e il framework italiano art. 41 D.Lgs. 36/2023.
+Il capitolo definisce il **cronoprogramma** dello Studio di Fattibilità (M+0 verso M+11) e dei due percorsi (6A operativo e 6B R&D Phase B), insieme ai **gate decisionali Go/No-Go** con criteri di entry/exit, coerenti con NASA SE Handbook §3.0 e con il framework italiano dell'art. 41 D.Lgs. 36/2023.
 
 ### 9.0.1 Cronoprogramma overall
 
@@ -47,28 +47,28 @@ M+0    M+3    M+6    M+10/11   M+12         M+24            M+36            M+48
 
 | Aspetto | Stato | Note |
 |---|---|---|
-| Tempistiche realistiche | ✅ allineate base rate aerospace | 11 mesi per fattibilità + 12 mesi pilota: aggressivi ma fattibili |
+| Tempistiche realistiche | ✅ allineate base rate aerospace | 11 mesi per fattibilità, 12 mesi pilota: aggressivi ma fattibili |
 | Gate decisionali strutturati | ✅ NASA SE compliant | 7 gate principali con entry/exit criteria |
-| Risk-informed | ✅ Risk Register agganciato | Ogni gate ha review showstopper |
+| Risk-informed | ✅ Risk Register agganciato | Ogni gate prevede review showstopper |
 | Verificabile | ✅ criteri quantitativi | KPI numerici per ogni gate |
-| Flessibilità | ✅ "Hold" e "Defer" disponibili | No-Go solo per showstopper insuperabili |
+| Flessibilità | ✅ "Hold" e "Defer" disponibili | No-Go riservato ai soli showstopper insuperabili |
 
 ---
 
 ## 9.0bis Boundary conditions
 
 In coerenza con Cap. 5.0bis, 3.0bis, 7.0bis:
-- **B1**: tutti i milestone operativi sono erogazione di servizi (non manufacturing/sale)
-- **B2**: la sequenza dei gate è coerente con la visione 10 anni (Cap. 11)
+- **B1**: ogni milestone operativo riguarda erogazione di servizi, non manufacturing o vendita.
+- **B2**: la sequenza dei gate resta coerente con la visione 10 anni (Cap. 11).
 
 ---
 
-## 9.1 Master Schedule dello Studio di Fattibilità (M+0 → M+11)
+## 9.1 Master Schedule dello Studio di Fattibilità (M+0 verso M+11)
 
-### 9.1.1 Work Breakdown Structure (WBS) — Studio di Fattibilità
+### 9.1.1 Work Breakdown Structure (WBS), Studio di Fattibilità
 
 ```
-Studio di Fattibilità HALE/VTOL — WBS
+Studio di Fattibilità HALE/VTOL - WBS
 ├── 1.0 Project Management
 │   ├── 1.1 Project planning + governance
 │   ├── 1.2 Risk management continuous (Risk Register update)
@@ -118,9 +118,9 @@ Studio di Fattibilità HALE/VTOL — WBS
 │   └── 6.5 Funding LoI/contracts (M+6-11)
 │
 ├── 7.0 Documentation
-│   ├── 7.1 Volume 1 — Studio (Cap. 1-11) (M+0-11)
-│   ├── 7.2 Volume 2 — Allegati tecnici (M+3-11)
-│   ├── 7.3 Volume 3 — Riferimenti (M+9-11)
+│   ├── 7.1 Volume 1 Studio (Cap. 1-11) (M+0-11)
+│   ├── 7.2 Volume 2 Allegati tecnici (M+3-11)
+│   ├── 7.3 Volume 3 Riferimenti (M+9-11)
 │   └── 7.4 Executive Summary (Cap. 0) (M+10-11)
 │
 └── 8.0 Gate Review
@@ -129,7 +129,7 @@ Studio di Fattibilità HALE/VTOL — WBS
     └── 8.3 G3 FEASIBILITY GATE prep (M+9-11)
 ```
 
-### 9.1.2 Gantt schematico dello Studio di Fattibilità (M+0 → M+11)
+### 9.1.2 Gantt schematico dello Studio di Fattibilità (M+0 verso M+11)
 
 ```
 M+0          M+3          M+6          M+10        M+11
@@ -176,11 +176,11 @@ M+0          M+3          M+6          M+10        M+11
 
 ---
 
-## 9.2 Gate Decisionali — Entry e Exit Criteria
+## 9.2 Gate Decisionali, Entry e Exit Criteria
 
-### 9.2.1 G0 — Kick-off (M+0)
+### 9.2.1 G0, Kick-off (M+0)
 
-**Tipologia**: avvio progetto, no formal Go/No-Go.
+**Tipologia**: avvio progetto, nessun formal Go/No-Go.
 
 **Entry criteria**:
 - Bando Cooding aggiudicato o Letter of Award firmata
@@ -188,11 +188,11 @@ M+0          M+3          M+6          M+10        M+11
 - Team Firmamento allocato
 - Briefing approvato dal CdA Firmamento
 
-**Output**: kick-off meeting + project charter + master schedule baseline.
+**Output**: kick-off meeting, project charter e master schedule baseline.
 
-### 9.2.2 G1 — Concept Frozen (M+3)
+### 9.2.2 G1, Concept Frozen (M+3)
 
-**Entry criteria** (da soddisfare per poter tenere il review):
+**Entry criteria** (da soddisfare per tenere il review):
 - ☐ Briefing iniziale rivisto e approvato
 - ☐ Stakeholder identificati e prima mappa engagement
 - ☐ StNeeds raccolti (≥ 17 needs documentati, conf. medium-high)
@@ -204,20 +204,20 @@ M+0          M+3          M+6          M+10        M+11
 **Exit criteria** (per passare a G2):
 - ✅ Concept architetture 6A + 6B approvato
 - ✅ StNeeds confidence ≥ medium su almeno 12 stakeholder principali
-- ✅ Top-10 rischi con preliminary owner + mitigation plan
+- ✅ Top-10 rischi con preliminary owner e mitigation plan
 - ✅ G1 review board sign-off
 
-**Verdetto possibili**:
-- **Go** → procedere a Phase A engineering
-- **Hold** → re-do entro 30-60 giorni
-- **Pivot** → ridefinire concept (rara, attiva re-baseline)
+**Verdetti possibili**:
+- **Go**: procedere a Phase A engineering.
+- **Hold**: re-do entro 30-60 giorni.
+- **Pivot**: ridefinire il concept (raro, attiva re-baseline).
 
-### 9.2.3 G2 — Architecture Baselined (M+6)
+### 9.2.3 G2, Architecture Baselined (M+6)
 
 **Entry criteria**:
 - ☐ Architettura concettuale 6A + 6B documentata (Cap. 6.1)
 - ☐ System Requirements baselined (SyR-XXX completi, ≥ 30 SyR)
-- ☐ RTM v0.5 (tracciabilità StNeeds → SyR)
+- ☐ RTM v0.5 (tracciabilità StNeeds verso SyR)
 - ☐ ICD preliminare (interfacce principali, ≥ 15)
 - ☐ Trade Study chiave conclusi (TS-PLATFORM-6A, TS-MATERIAL, TS-PROP-6B preliminary)
 - ☐ Risk Register v1 con scoring P×I
@@ -226,77 +226,77 @@ M+0          M+3          M+6          M+10        M+11
 **Exit criteria**:
 - ✅ Architecture sign-off da systems engineer + Red Team check OK
 - ✅ RTM coverage ≥ 70% StNeeds tracciati
-- ✅ Tutti i trade study chiave hanno una raccomandazione preliminare
+- ✅ Ogni trade study chiave porta una raccomandazione preliminare
 - ✅ Risk score top-5 con mitigation plan definito
 
-### 9.2.4 G3 — FEASIBILITY GATE PRIMARIO (M+10/M+11) ⭐
+### 9.2.4 G3, FEASIBILITY GATE PRIMARIO (M+10/M+11) ⭐
 
-Il gate principale dello Studio. Verdetto formale Go/No-Go per ogni percorso.
+Il G3 costituisce il gate principale dello Studio. Verdetto formale Go/No-Go per ciascun percorso.
 
 **Entry criteria** (lista esaustiva):
 - ☐ Studio di Fattibilità Vol.1 (Cap. 0-11) completo
 - ☐ Vol.2 Allegati tecnici completi
 - ☐ Vol.3 Riferimenti completi
-- ☐ Tutti i trade study chiusi e DOCFAP redatto
+- ☐ Trade study chiusi e DOCFAP redatto
 - ☐ RTM v0.8 (≥ 95% StNeeds tracciati a SyR; ≥ 100% SyR con V&V method)
-- ☐ Risk Register v2 (top rischi con mitigation in progress / planned)
+- ☐ Risk Register v2 (top rischi con mitigation in progress o planned)
 - ☐ Quadro Economico (art. 41) approvato
 - ☐ Piano economico-finanziario con sensitivity (Excel modello)
-- ☐ Strategia finanziamenti consolidata + LoI principali firmate
+- ☐ Strategia finanziamenti consolidata con LoI principali firmate
 - ☐ Engagement preliminare ENAC (pre-application docs ricevuti)
 - ☐ Engagement Regione Liguria (commitment formale: DGR o accordo)
 - ☐ Privacy/GDPR DPIA preliminare pubblica
-- ☐ Master schedule M+12 → M+48 per Fase 2-3
+- ☐ Master schedule M+12 verso M+48 per Fase 2-3
 
 **Exit criteria 6A** per **Go**:
 - ✅ ≥ 90% entry criteria soddisfatti
 - ✅ Verdetto Cap. 5 (Regulatory) = "GO"
-- ✅ Verdetto Cap. 6 (Tecnico) = "GO" + risk score top 3 < 16 (giallo)
-- ✅ Verdetto Cap. 7 (Mercato) = "GO" + LoI ≥ 3 firmate
-- ✅ Verdetto Cap. 8 (Finanziario) = "GO" + funding mix ≥ 60% commitment
+- ✅ Verdetto Cap. 6 (Tecnico) = "GO" con risk score top 3 < 16 (giallo)
+- ✅ Verdetto Cap. 7 (Mercato) = "GO" con LoI ≥ 3 firmate
+- ✅ Verdetto Cap. 8 (Finanziario) = "GO" con funding mix ≥ 60% commitment
 - ✅ Verdetto Cap. 10 (Raccomandazione) coerente
 
 **Exit criteria 6A** per **Go Condizionato**:
-- 80-90% entry criteria + condizioni esplicite scritte
+- 80-90% entry criteria con condizioni esplicite scritte
 - Risk top 3 score ≤ 16 con piano mitigation chiaro
 - Almeno 2 LoI firmate (no minimo 3)
-- Funding ≥ 40% commitment + plan per ulteriore 30-40% entro M+12
+- Funding ≥ 40% commitment, piano per ulteriore 30-40% entro M+12
 
 **Exit criteria 6B** per **Hold / Go Cond. Estremo**:
 - Verdetto Cap. 5 (Regulatory) = "HOLD" o "Go Cond. Estremo" (atteso)
 - Verdetto Cap. 6 (Tecnico) = HOLD con showstopper RSK-TEC-001/002 dichiarati
-- Roadmap Phase B definita con engagement EASA + funding multi-source
+- Roadmap Phase B definita con engagement EASA e funding multi-source
 
 **Verdetti possibili G3**:
 - **6A Go + 6B Hold/Defer** (scenario base atteso)
-- **6A Go Cond. + 6B Defer** (scenario realistico se LoI/funding non completi)
+- **6A Go Cond. + 6B Defer** (scenario realistico se LoI o funding non completi)
 - **6A Hold + 6B Hold** (scenario peggiore, attiva pivot strategico)
-- **6A No-Go + 6B No-Go** (scenario catastrofico, esclusione progetto — unlikely)
+- **6A No-Go + 6B No-Go** (scenario catastrofico, esclusione progetto: unlikely)
 
-> **Falsifying observation G3**: se al M+10/M+11 ≥ 30% degli entry criteria non sono soddisfatti, verdetto è **HOLD**, non No-Go. Il No-Go è riservato a showstopper insuperabili (es. ENAC nega esplicitamente path SAIL Pentema, Regione si tira indietro, funding zero).
+> **Falsifying observation G3**: se al M+10/M+11 oltre il 30% degli entry criteria resta insoddisfatto, il verdetto è **HOLD**, non No-Go. Il No-Go è riservato a showstopper insuperabili (ad esempio: ENAC nega esplicitamente il path SAIL Pentema, Regione si tira indietro, funding zero).
 
-### 9.2.5 G4 — Fine Pilota VTOL 6A (M+12)
+### 9.2.5 G4, Fine Pilota VTOL 6A (M+12)
 
 **Entry criteria**:
 - ☐ Operazioni Y1 completate
 - ☐ ≥ 50 missioni eseguite
-- ☐ Customer feedback Regione + PC + cooperative documentato
+- ☐ Customer feedback Regione, PC, cooperative documentato
 - ☐ Financial Y1 (utilization, revenue, OpEx) consolidato
 - ☐ Lessons learned report
 - ☐ Plan espansione SNAI multi-area redatto
 
 **Exit criteria** per **Go scale-up**:
-- ✅ ≥ 50 missioni completate senza FATAL/major
-- ✅ ≥ 3 contratti pluriennali firmati (Y1 + estensione Y2-Y3)
+- ✅ ≥ 50 missioni completate senza FATAL o major
+- ✅ ≥ 3 contratti pluriennali firmati (Y1 con estensione Y2-Y3)
 - ✅ Revenue Y1 cumulato ≥ €200k (SyR-Cost-003)
 - ✅ NPS PA/cooperative ≥ 40
 - ✅ Almeno 1 LoI per espansione 2nda regione SNAI
 
-### 9.2.6 G5 — Evaluation HALE Phase B (M+24)
+### 9.2.6 G5, Evaluation HALE Phase B (M+24)
 
 **Entry criteria** (per decidere Phase B 6B):
-- ☐ Risultati Pilota 6A (G4) + Y2 scale-up consolidati
-- ☐ Risultati EuroHAPS Phase A pubblicati / engagement CIRA formalizzato
+- ☐ Risultati Pilota 6A (G4) e Y2 scale-up consolidati
+- ☐ Risultati EuroHAPS Phase A pubblicati o engagement CIRA formalizzato
 - ☐ Framework EASA HAPS aperto formalmente o atteso entro 2030
 - ☐ Funding readiness commit ≥ 50% Phase B €5.5-13.5M (LoI EDF/Horizon/PNRR/Series)
 - ☐ Technology maturity 6B subsystems re-assessed (TRL targets per gate G6 a M+36)
@@ -308,10 +308,10 @@ Il gate principale dello Studio. Verdetto formale Go/No-Go per ogni percorso.
 - **Defer 6B** (rinvio a M+36)
 - **No-Go 6B** (cancellazione, focus solo 6A scale-up)
 
-### 9.2.7 G6 — HALE Phase B Midterm (M+36)
+### 9.2.7 G6, HALE Phase B Midterm (M+36)
 
 **Entry criteria**:
-- ☐ Phase B in corso da 12 mesi (M+24 → M+36)
+- ☐ Phase B in corso da 12 mesi (M+24 verso M+36)
 - ☐ Prototipo subscale 1:3 in test bed (TRL 5)
 - ☐ Energy balance simulazione completa con scenario inverno chiarito
 - ☐ FCS subsystem in test integrato (TRL 5)
@@ -321,15 +321,15 @@ Il gate principale dello Studio. Verdetto formale Go/No-Go per ogni percorso.
 - ✅ TRL subsystem critici ≥ 5
 - ✅ Energy balance inverno: margine ≥ 20% o fallback seasonal accettato
 - ✅ Mid-Phase B financial review OK
-- ✅ No showstopper aggiunto
+- ✅ Nessuno showstopper aggiunto
 
 ---
 
-## 9.3 Cronoprogramma Operativo Percorso 6A (M+12 → M+36)
+## 9.3 Cronoprogramma Operativo Percorso 6A (M+12 verso M+36)
 
-### 9.3.1 Fase 1 — Y1 MVP (M+0 → M+12)
+### 9.3.1 Fase 1, Y1 MVP (M+0 verso M+12)
 
-(Sovrapposto con lo Studio di Fattibilità nei primi 11 mesi)
+(Sovrapposto allo Studio di Fattibilità nei primi 11 mesi.)
 
 ```
 M+0     M+3      M+6        M+9         M+12
@@ -344,17 +344,17 @@ M+0     M+3      M+6        M+9         M+12
 | Milestone | Mese | Deliverable |
 |---|---|---|
 | M+1 | Acquisto piattaforma JOUAV CW-30E | Contratto vendor |
-| M+2 | Setup GS Pentema | Container + antenne + UPS |
-| M+3 | SORA pre-application meeting ENAC | Feedback ENAC + GRC/SAIL stima |
-| M+4-5 | Costruzione SORA application | ConOps + GRC computation + OSO compliance |
+| M+2 | Setup GS Pentema | Container, antenne, UPS |
+| M+3 | SORA pre-application meeting ENAC | Feedback ENAC e GRC/SAIL stima |
+| M+4-5 | Costruzione SORA application | ConOps, GRC computation, OSO compliance |
 | M+6 | Submission SORA application | Documenti consegnati a ENAC |
-| M+7-9 | Integrazione payload + test bench | Test piattaforma + payload + GS |
+| M+7-9 | Integrazione payload e test bench | Test piattaforma, payload, GS |
 | M+9 | Autorizzazione ENAC ricevuta | Auth Specific Category SAIL II-III |
 | M+10 | Prime missioni operative | Log operativi |
-| M+11 | Consolidamento + feedback | Customer survey |
-| M+12 | Gate G4 + financial Y1 close | Financial report Y1 |
+| M+11 | Consolidamento e feedback | Customer survey |
+| M+12 | Gate G4 e financial Y1 close | Financial report Y1 |
 
-### 9.3.2 Fase 2 — Y2 Espansione Liguria (M+12 → M+24)
+### 9.3.2 Fase 2, Y2 Espansione Liguria (M+12 verso M+24)
 
 ```
 M+12      M+15        M+18        M+21        M+24
@@ -373,7 +373,7 @@ M+12      M+15        M+18        M+21        M+24
 | M+21 | LoI 2nda regione SNAI (Piemonte / Calabria) | LoI signed |
 | M+24 | Gate G5 Phase B 6B evaluation | Phase B Go/No-Go |
 
-### 9.3.3 Fase 3 — Y3 Multi-regione SNAI (M+24 → M+36)
+### 9.3.3 Fase 3, Y3 Multi-regione SNAI (M+24 verso M+36)
 
 ```
 M+24       M+30         M+36
@@ -393,9 +393,9 @@ M+24       M+30         M+36
 
 ---
 
-## 9.4 Cronoprogramma Percorso 6B R&D Phase B (M+24 → M+48)
+## 9.4 Cronoprogramma Percorso 6B R&D Phase B (M+24 verso M+48)
 
-### 9.4.1 Phase B engineering (M+24 → M+36)
+### 9.4.1 Phase B engineering (M+24 verso M+36)
 
 | Mese | Task | Output |
 |---|---|---|
@@ -405,7 +405,7 @@ M+24       M+30         M+36
 | M+32-34 | Ground tests (GVT + structural) | Test reports |
 | M+34-36 | First flight test subscale | Flight data + TRL 5 dichiarato |
 
-### 9.4.2 Phase B integration (M+36 → M+48)
+### 9.4.2 Phase B integration (M+36 verso M+48)
 
 | Mese | Task | Output |
 |---|---|---|
@@ -413,13 +413,13 @@ M+24       M+30         M+36
 | M+40-44 | Payload integration subscale | Payload demo |
 | M+44-48 | Stratospheric flight test (target FL400+ subscale) | Stratospheric data |
 
-Phase C-D (Full-scale + Type Certification, M+48-72+): out-of-scope dello Studio attuale, descritto in Cap. 11 (Roadmap post-fattibilità).
+Le Phase C-D (Full-scale e Type Certification, M+48-72+) restano fuori scope rispetto allo Studio attuale e sono descritte in Cap. 11 (Roadmap post-fattibilità).
 
 ---
 
 ## 9.5 Cronoprogramma Engagement Istituzionale
 
-Sintesi (dettaglio in Cap. 5 §5.11.3 + Cap. 8 §8.7).
+Sintesi (dettaglio in Cap. 5 §5.11.3 e Cap. 8 §8.7).
 
 | Stakeholder | M+0-3 | M+3-6 | M+6-12 | M+12-24 | M+24+ |
 |---|---|---|---|---|---|
@@ -439,16 +439,16 @@ Sintesi (dettaglio in Cap. 5 §5.11.3 + Cap. 8 §8.7).
 
 ## 9.6 Risk-Informed Gate Approach
 
-Ogni gate review include una **review esplicita dei rischi**:
+Ogni gate review prevede una **review esplicita dei rischi**.
 
 | Gate | Rischi top da rivedere | Soglia per Go |
 |---|---|---|
-| G1 (M+3) | Risk Register v0 top-10 | Tutti i rischi hanno owner + preliminary plan |
-| G2 (M+6) | Risk Register v1, scoring P×I | Nessun rischio rosso (≥15) senza piano definito |
-| **G3 (M+10/M+11)** | **Risk Register v2 + showstopper** | **Top 3 risk score < 16 (giallo); RSK-TEC-001 e RSK-REG-001 con piano credibile** |
+| G1 (M+3) | Risk Register v0 top-10 | Ogni rischio ha owner e preliminary plan |
+| G2 (M+6) | Risk Register v1, scoring P×I | Nessun rischio rosso (≥15) privo di piano definito |
+| **G3 (M+10/M+11)** | **Risk Register v2 e showstopper** | **Top 3 risk score < 16 (giallo); RSK-TEC-001 e RSK-REG-001 con piano credibile** |
 | G4 (M+12) | Risk Register v3 post-Y1 ops | Nessun nuovo showstopper aggiunto |
 | G5 (M+24) | Risk Register 6B aggiornato | RSK-TEC-001 (energy balance inverno) con simulazione decisiva |
-| G6 (M+36) | Risk Register Phase B midterm | TRL subsystem ≥ 5 + no nuovo showstopper |
+| G6 (M+36) | Risk Register Phase B midterm | TRL subsystem ≥ 5 e assenza di nuovi showstopper |
 
 ### 9.6.1 Showstopper formali (richiamo dai capitoli)
 
@@ -474,43 +474,43 @@ Ogni gate review include una **review esplicita dei rischi**:
 
 ### 9.7.2 Board allargato per G3 (FEASIBILITY GATE)
 
-Standard board +:
+Standard board, integrato da:
 - Rappresentante Regione Liguria
 - Rappresentante Coopfond
 - Rappresentante cooperative (Fabrica capofila)
-- **Independent reviewer** (consultant aerospace senior o ente terzo, es. RINA — per validation indipendente)
+- **Independent reviewer** (consultant aerospace senior o ente terzo, ad esempio RINA, per validation indipendente)
 - Osservatore ENAC (su invito informale)
 
 ### 9.7.3 Board G5, G6 (Phase B HALE)
 
-Board allargato +:
-- Rappresentante CIRA (se partnership formalizzata)
+Board allargato, integrato da:
+- Rappresentante CIRA (se la partnership è formalizzata)
 - Rappresentante EDF / DG DEFIS (su invito)
 - Rappresentante TAS-Leonardo (su invito, condizionato)
 
 ---
 
-## 9.8 Red Team Check — Schedule Stress Test
+## 9.8 Red Team Check, Schedule Stress Test
 
-### Critica 1 — "11 mesi per Studio di Fattibilità completo è poco vs base rate aerospace"
-**Razionale**: Studi di fattibilità aerospace richiedono tipicamente 12-24 mesi. 11 mesi è aggressivo.
-**Risposta**: corretto, è aggressivo. Mitigazione: (a) scope limitato a 2 percorsi (non multi-architettura), (b) reuse di documenti esistenti (Briefing + Studio preliminare in `da revisionare/`), (c) team focused + consultants esterni. Se al G2 (M+6) il progress è < 60%, si può estendere G3 a M+13-14.
+### Critica 1: "11 mesi per Studio di Fattibilità completo è poco rispetto alla base rate aerospace"
+**Razionale**: gli studi di fattibilità aerospace richiedono tipicamente 12-24 mesi. Undici mesi è aggressivo.
+**Risposta**: corretto, è aggressivo. Mitigazione: (a) scope limitato a 2 percorsi (non multi-architettura), (b) reuse di documenti esistenti (Briefing e Studio preliminare in `da revisionare/`), (c) team focused e consultants esterni. Se al G2 (M+6) il progress è inferiore al 60%, si può estendere G3 a M+13-14.
 
-### Critica 2 — "Engagement ENAC pre-application in 3 mesi: aggressivo"
-**Razionale**: ENAC ha tempi di risposta normalmente 30-90 giorni, anche solo per pre-meeting. Pretendere SAIL stima entro M+3 è ottimistico.
-**Risposta**: confermato. Plan B: spostare SORA submission a M+9 se M+3-6 ENAC restituisce solo feedback preliminare senza commitment SAIL. Il gate G3 può accomodare questo slittamento.
+### Critica 2: "Engagement ENAC pre-application in 3 mesi è aggressivo"
+**Razionale**: ENAC risponde normalmente in 30-90 giorni anche solo per un pre-meeting. Pretendere una stima SAIL entro M+3 è ottimistico.
+**Risposta**: confermato. Plan B: spostare la SORA submission a M+9 se tra M+3 e M+6 ENAC restituisce solo feedback preliminare privo di commitment SAIL. Il gate G3 può assorbire questo slittamento.
 
-### Critica 3 — "FEASIBILITY GATE (G3) con 13 entry criteria: troppi per single review"
-**Razionale**: gate review tipico aerospace ha 5-8 entry criteria. 13 rende il gate "gate killer" — tutti i criteri devono essere allineati simultaneamente.
-**Risposta**: corretto. I 13 criteri sono il **set ideale**. Soglia pragmatica: ≥ 90% per Go pieno, 80-90% per Go Condizionato. < 80% = Hold con re-review entro 30-60 giorni.
+### Critica 3: "FEASIBILITY GATE (G3) con 13 entry criteria sono troppi per una single review"
+**Razionale**: un gate review tipico aerospace ha 5-8 entry criteria. Tredici criteri rendono il gate un "gate killer": tutti devono essere allineati simultaneamente.
+**Risposta**: corretto. I 13 criteri costituiscono il **set ideale**. Soglia pragmatica: ≥ 90% per Go pieno, 80-90% per Go Condizionato, sotto l'80% Hold con re-review entro 30-60 giorni.
 
-### Critica 4 — "Phase B HALE M+24-48 con TRL target 5 a M+36 e flight stratosferico a M+44-48 è speculativo"
-**Razionale**: TRL transition da 3-4 a 5-6 richiede tipicamente 2-3 anni per HALE solare. M+44-48 stratospheric flight è scenario best-case.
-**Risposta**: confermato. La timeline è target ottimistico. Il gate G6 (M+36) è decisivo: se TRL < 5, Phase B continua ma estesa a M+60+. Il Cap. 11 (Roadmap) include scenari realistici.
+### Critica 4: "Phase B HALE M+24-48 con TRL target 5 a M+36 e flight stratosferico a M+44-48 è speculativo"
+**Razionale**: la transizione da TRL 3-4 a 5-6 richiede tipicamente 2-3 anni per HALE solare. M+44-48 per il flight stratosferico è scenario best-case.
+**Risposta**: confermato. La timeline è target ottimistico. Il gate G6 (M+36) è decisivo: se TRL < 5, la Phase B prosegue ma viene estesa a M+60+. Il Cap. 11 (Roadmap) include scenari realistici.
 
-### Critica 5 — "Engagement Garante Privacy: M+6 DPIA submit è ottimismo. Garante può richiedere mesi di consultazione."
-**Razionale**: il Garante è notoriamente conservativo, richiede multiple round di richieste integrazioni.
-**Risposta**: corretto. Il M+6 DPIA submit è target; M+12 close DPIA è realistico. Mitigazione: DPIA preliminare M+3 + consultazione informale Garante M+3-6 per identificare gap precoci.
+### Critica 5: "Engagement Garante Privacy: M+6 DPIA submit è ottimistico. Il Garante può richiedere mesi di consultazione"
+**Razionale**: il Garante è notoriamente conservativo e richiede round multipli di integrazioni.
+**Risposta**: corretto. Il M+6 DPIA submit è target; M+12 close DPIA è realistico. Mitigazione: DPIA preliminare M+3 con consultazione informale del Garante tra M+3 e M+6 per identificare gap precoci.
 
 ---
 
@@ -522,7 +522,7 @@ Board allargato +:
 | OQ-S02 | Tempi reali AGCOM licensing per banda commerciale | telecom-payload | M+6 |
 | OQ-S03 | Disponibilità reviewer indipendente per G3 (RINA o equivalente) | PM | M+9 |
 | OQ-S04 | Calendar exact bandi 2026-2027 (Coopfond, FESR, PNRR, Horizon) | snai-funding | M+1 |
-| OQ-S05 | Eventual condivisione gate review con stakeholder (Coopfond + Regione) | PM | M+3 |
+| OQ-S05 | Eventual condivisione gate review con stakeholder (Coopfond, Regione) | PM | M+3 |
 | OQ-S06 | Buffer schedule per imprevisti (gate M+10 vs M+13) | PM + sponsor | M+6 |
 
 ---
@@ -531,25 +531,25 @@ Board allargato +:
 
 [^1]: NASA Systems Engineering Handbook Rev 2 (NASA/SP-2016-6105 Rev 2), §3.0 Project Life Cycle Reviews. Source: `fonti/NASA04. SysEng Handbook (NASA_SP-2016-6105 Rev 2).md`. Confidence: high.
 
-[^2]: D.Lgs. 36/2023 art. 41 + Allegato I.7 (Cronoprogramma). Source: `fonti/2023_0036.md`. Confidence: high.
+[^2]: D.Lgs. 36/2023 art. 41 e Allegato I.7 (Cronoprogramma). Source: `fonti/2023_0036.md`. Confidence: high.
 
 [^3]: Skill `gate-review-checklist` (`.claude/skills/gate-review-checklist/SKILL.md`). Workflow Go/No-Go applicato.
 
-[^4]: Skill `epistemic-rigor` + `red-team-skeptic` per stress test cronoprogramma.
+[^4]: Skill `epistemic-rigor` con `red-team-skeptic` per stress test del cronoprogramma.
 
-[^5]: ENAC AAM Roadmap 2021-2030 — reference per timing engagement istituzionale. Source: `fonti/02_AAM-Italian-Ecosystem-Roadmap_web-1.md`.
+[^5]: ENAC AAM Roadmap 2021-2030, reference per timing dell'engagement istituzionale. Source: `fonti/02_AAM-Italian-Ecosystem-Roadmap_web-1.md`.
 
-[^6]: EuroHAPS — riferimento per timing R&D HAPS subscale (Sardinia/Fuerteventura demonstration 2024). Source: `riferimenti/ricerche-approfondite.md` §6.
+[^6]: EuroHAPS, riferimento per timing R&D HAPS subscale (Sardinia/Fuerteventura demonstration 2024). Source: `riferimenti/ricerche-approfondite.md` §6.
 
-[^7]: GAO Cost Estimating Guide (GAO-20-195G) — base rate per schedule overrun aerospace 30-100%.
+[^7]: GAO Cost Estimating Guide (GAO-20-195G), base rate per schedule overrun aerospace 30-100%.
 
 ---
 
 ## 9.12 Sliding Timeline Realistica (post Audit Regulatory Adversary M+3)
 
-> **Inserimento post-audit M+3**: l'audit `regulatory-adversary` (vedi `AUDIT-REGULATORY-VOLUME-1.md` §2) e l'audit `red-team-skeptic` (vedi `AUDIT-REDTEAM-VOLUME-1.md`) hanno identificato che **il cronoprogramma del Cap. 9 è strutturalmente ottimistico** rispetto alla base rate aerospace italiana. Questa sezione presenta la **sliding timeline realistica** ("worst-case ma plausibile"), in alternativa al piano ottimistico del §9.1-9.5. Lo Studio di Fattibilità **deve mantenere entrambi**: il piano nominale come target di esecuzione + la sliding timeline come baseline di rischio finanziario e di pianificazione cash flow.
+> **Inserimento post-audit M+3**: l'audit `regulatory-adversary` (vedi `AUDIT-REGULATORY-VOLUME-1.md` §2) e l'audit `red-team-skeptic` (vedi `AUDIT-REDTEAM-VOLUME-1.md`) hanno rilevato che **il cronoprogramma del Cap. 9 risulta strutturalmente ottimistico** rispetto alla base rate aerospace italiana. Questa sezione introduce la **sliding timeline realistica** ("worst-case ma plausibile"), in alternativa al piano ottimistico del §9.1-9.5. Lo Studio di Fattibilità **mantiene entrambi**: il piano nominale come target di esecuzione e la sliding timeline come baseline di rischio finanziario e di pianificazione cash flow.
 
-### 9.12.1 Confronto piano nominale vs sliding timeline
+### 9.12.1 Confronto piano nominale e sliding timeline
 
 | Milestone | Piano nominale Cap.9 | Sliding timeline realistica | Slippage atteso |
 |---|---|---|---|
@@ -559,77 +559,77 @@ Board allargato +:
 | SORA submission completa | M+6 | **M+10-12** | +4-6 mesi |
 | SORA authorization issuance | M+9 | **M+15-24** | +6-15 mesi |
 | Prime missioni operative Pentema | M+10 | M+16-26 | +6-16 mesi |
-| Gate G3 (FEASIBILITY VERDICT) | M+10/M+11 | **M+11** (nominale tenuto) ma su evidenze parziali → Hold con piano | n/a (gate slittato a M+14-16 in scenario peggiore) |
-| LoI Regione Liguria firmata | M+9 | M+12-18 (cambio governo Bucci → renegoziazione) | +3-9 mesi |
+| Gate G3 (FEASIBILITY VERDICT) | M+10/M+11 | **M+11** (nominale tenuto) ma su evidenze parziali, esito Hold con piano | n/a (gate slittato a M+14-16 in scenario peggiore) |
+| LoI Regione Liguria firmata | M+9 | M+12-18 (cambio governo Bucci, rinegoziazione) | +3-9 mesi |
 | Coopfond bando 2026 confermato | M+1 | M+3-9 (calendario bando incerto) | +2-8 mesi |
 | Cooperative 8/10 confermate | M+6 | M+9-12 (workshop iterativi) | +3-6 mesi |
 | DPIA Garante chiusa | M+12 | M+18-24 (Garante round multipli) | +6-12 mesi |
 | AGCOM licensing spettro HAPS | M+18-24 (atteso) | **M+48-72** (post WRC-27) | +24-48 mesi |
 | EASA Special Condition HAPS | M+36+ (atteso aperto) | **M+60-120** (RMT non aperto, base rate 5-10 anni) | +24-84 mesi |
-| Phase B 6B start | M+24 | **M+30-48** (subordinato a EASA + funding) | +6-24 mesi |
+| Phase B 6B start | M+24 | **M+30-48** (subordinato a EASA e funding) | +6-24 mesi |
 | Phase B 6B HALE subscale TRL 5 | M+36 | **M+60-84** (TRL transition base rate 3-5 anni) | +24-48 mesi |
 | Phase B 6B end (TRL 6+) | M+48 | **M+72-108** | +24-60 mesi |
 
-### 9.12.2 Implicazioni finanziarie sliding timeline
+### 9.12.2 Implicazioni finanziarie della sliding timeline
 
-Slippage operativo Y1-Y2 = aumento OpEx run-rate non coperto da revenue:
+Lo slippage operativo Y1-Y2 si traduce in un aumento dell'OpEx run-rate non coperto da revenue:
 
-- **OpEx Y1 (12 mesi senza revenue significativo)**: €260-480k → **€350-650k** se schedule slitta a M+16-26 prime missioni
-- **Cash burn Y1-Y2 cumulato**: scenario nominale -€1.2M | scenario sliding -€2-3M
-- **Bridge financing necessario aggiuntivo**: €200-500k (oltre il €100-300k già stimato)
-- **Series A timing**: nominale M+18-24 | sliding M+24-36
+- **OpEx Y1 (12 mesi senza revenue significativo)**: €260-480k, fino a **€350-650k** se la schedule slitta a M+16-26 per le prime missioni
+- **Cash burn Y1-Y2 cumulato**: scenario nominale -€1.2M, scenario sliding -€2-3M
+- **Bridge financing necessario aggiuntivo**: €200-500k (oltre i €100-300k già stimati)
+- **Series A timing**: nominale M+18-24, sliding M+24-36
 
 ### 9.12.3 Gate G3 in scenario sliding timeline
 
-Al M+10-11 nominale, sliding timeline implica:
-- Pre-application ENAC fatta **M+6-9** con feedback ancora parziale
+Al M+10-11 nominale la sliding timeline comporta:
+- Pre-application ENAC eseguita tra **M+6 e M+9** con feedback ancora parziale
 - SORA application **non ancora submitted** (M+10-12)
-- LoI Regione **non firmata** (in negoziazione cambio governo)
-- Funding mix **40-50% committed** invece di 60% target
-- DPIA Garante **in consultazione**, no risposta definitiva
+- LoI Regione **non firmata** (in negoziazione per cambio governo)
+- Funding mix al **40-50% committed** invece del 60% target
+- DPIA Garante **in consultazione**, senza risposta definitiva
 
-**Verdetto Gate G3 in sliding timeline**: **HOLD con piano regolatorio rafforzato** → re-review **M+14-16** con condizioni recuperate.
+**Verdetto Gate G3 in sliding timeline**: **HOLD con piano regolatorio rafforzato**, re-review a **M+14-16** con condizioni recuperate.
 
-> Vedi Cap. 10 §10.3.2 caveat probabilistico aggiornato che riflette questo scenario base.
+> Vedi Cap. 10 §10.3.2 per il caveat probabilistico aggiornato che riflette questo scenario base.
 
 ### 9.12.4 Gate G5 (Phase B 6B start) in scenario sliding timeline
 
-Al M+24 nominale, sliding timeline implica:
-- EASA Special Condition HAPS **non aperto** (atteso M+60+)
-- Mix funding Phase B **<30% committed** (EDF call non aperta, Horizon in negoziazione)
+Al M+24 nominale la sliding timeline comporta:
+- EASA Special Condition HAPS **non aperto** (atteso a M+60+)
+- Mix funding Phase B **sotto il 30% committed** (EDF call non aperta, Horizon in negoziazione)
 - TRL subsystem critici **non re-assessed** in modo formale
 
 **Verdetto Gate G5 sliding timeline**: **DEFER Phase B a M+36** con re-review.
 
-### 9.12.5 Mitigazioni sliding timeline
+### 9.12.5 Mitigazioni della sliding timeline
 
-1. **Doppio binario di pianificazione**: tutti i piani operativi e finanziari hanno scenario nominale + scenario sliding; reporting al CdA mensile mostra entrambi
-2. **Bridge financing strutturato**: linea di credito €500k attivata pre-emptivamente per coprire gap timing
-3. **Engagement intensivo Y0-Y1**: assunzione Head Regulatory + CISO + DPO entro M+6 per accelerare engagement multi-autorità (vedi Cap. 5 §5.17)
-4. **Pivot scope MVP**: se SORA slitta oltre M+15, pivot a VLOS-only fino ad approvazione (riduzione scope ma operatività mantenuta)
-5. **Re-baseline Gate G3 a M+13-16** dichiarata sin dall'inizio come opzione legittima (non come fallimento)
+1. **Doppio binario di pianificazione**: ogni piano operativo e finanziario presenta scenario nominale e scenario sliding; il reporting al CdA mensile espone entrambi.
+2. **Bridge financing strutturato**: linea di credito €500k attivata pre-emptivamente per coprire il gap di timing.
+3. **Engagement intensivo Y0-Y1**: assunzione di Head Regulatory, CISO e DPO entro M+6 per accelerare l'engagement multi-autorità (vedi Cap. 5 §5.17).
+4. **Pivot scope MVP**: se SORA slitta oltre M+15, pivot a VLOS-only fino all'approvazione (riduzione scope con operatività mantenuta).
+5. **Re-baseline Gate G3 a M+13-16**, dichiarata sin dall'inizio come opzione legittima e non come fallimento.
 
 ### 9.12.6 Falsifying observation §9.12
 
-**Falsifying observation aggregata**: se al M+12 il cumulato slippage del piano nominale è > 30% (es. SORA non submitted, LoI Regione non firmata, < 5 cooperative confermate), il piano nominale è invalidato e la sliding timeline diventa **baseline operativa** con re-baseline formale al CdA + sponsor.
+**Falsifying observation aggregata**: se al M+12 il cumulato slippage del piano nominale supera il 30% (ad esempio SORA non submitted, LoI Regione non firmata, meno di 5 cooperative confermate), il piano nominale è invalidato e la sliding timeline diventa **baseline operativa** con re-baseline formale al CdA e allo sponsor.
 
 ---
 
 ## 9.11 Note di chiusura del capitolo
 
-Il Cap. 9 è **bozza M+3 + aggiornamento sliding timeline post-audit M+3** con verdetto Red Team **OK con caveat strutturali**: il piano nominale è ottimistico (in coerenza con cultura aerospace startup); la sliding timeline §9.12 è il **baseline realistico** che lo Studio raccomanda di adottare per la pianificazione finanziaria e l'aspettativa stakeholder. Entrambi i piani vanno mantenuti come strumenti complementari.
+Il Cap. 9 è **bozza M+3 con aggiornamento sliding timeline post-audit M+3** e verdetto Red Team **OK con caveat strutturali**: il piano nominale resta ottimistico (in coerenza con la cultura aerospace startup); la sliding timeline §9.12 costituisce il **baseline realistico** che lo Studio raccomanda di adottare per la pianificazione finanziaria e per l'aspettativa stakeholder. Entrambi i piani vanno mantenuti come strumenti complementari.
 
 **Verdetto cronoprogramma riepilogato**:
-- Studio di Fattibilità (M+0-11): **realizzabile** con team focused + consultants
-- Gate G3 (M+10-11): **gate primario realistico** con criteri di flessibilità (90% / 80% / < 80%)
-- Pilota 6A (M+12-36): **realistico** con margine
-- Phase B 6B (M+24-48): **aggressivo**, richiede gate G5 + G6 conferme TRL
+- Studio di Fattibilità (M+0-11): **realizzabile** con team focused e consultants.
+- Gate G3 (M+10-11): **gate primario realistico** con criteri di flessibilità (90%, 80%, sotto 80%).
+- Pilota 6A (M+12-36): **realistico** con margine.
+- Phase B 6B (M+24-48): **aggressivo**, richiede conferme TRL ai gate G5 e G6.
 
 **Action items entro M+3**:
-- Acquisto piattaforma VTOL (Plan A JOUAV / Plan B Tekever decisione)
-- Pre-application meeting ENAC
-- LoI Regione Liguria (in negoziazione)
-- Workshop comunità Pentema
-- Workshop cooperative
+- Acquisto piattaforma VTOL (decisione Plan A JOUAV vs Plan B Tekever).
+- Pre-application meeting ENAC.
+- LoI Regione Liguria (in negoziazione).
+- Workshop comunità Pentema.
+- Workshop cooperative.
 
-Il capitolo è chiuso al M+3 con verdetto Red Team **OK con 5 azioni**.
+Il capitolo si chiude al M+3 con verdetto Red Team **OK con 5 azioni**.
