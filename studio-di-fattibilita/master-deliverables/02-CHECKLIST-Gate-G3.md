@@ -1,23 +1,19 @@
-# Master Checklist — Gate G3 FEASIBILITY (M+10/M+11)
+# Master Checklist, Gate G3 FEASIBILITY (M+10/M+11)
 
 > Studio di Fattibilità HALE/VTOL Firmamento Technologies
-> Master Deliverable — Checklist completa per Gate Review G3
+> Master Deliverable, checklist completa per Gate Review G3
 
 ## Premessa
 
-Il **Gate G3 FEASIBILITY** è il gate decisionale primario dello Studio (M+10/M+11). Verdetto target: **Go / Go Condizionato / Hold / No-Go** per ciascun percorso.
+Il **Gate G3 FEASIBILITY** è il gate decisionale primario dello Studio (M+10/M+11). Il verdetto target si declina su quattro esiti possibili: Go, Go Condizionato, Hold, No-Go, applicati separatamente a ciascuno dei due percorsi. Questa checklist è lo strumento operativo del Board per verificare la prontezza al gate.
 
-Questa checklist è il **strumento operativo del Board** per verificare la prontezza al gate.
-
-**Verdetto base atteso post-audit M+3** (vedi Cap. 10 §10.0bis):
-- Percorso 6A: **HOLD CON PIANO REGOLATORIO RAFFORZATO** (P 45-60%) → re-review M+13-16
-- Percorso 6B: **HOLD CON CRITERI DI USCITA STRINGENTI** + pivot strutturale prime contractor
+Il verdetto base atteso post-audit M+3 (vedi Cap. 10 §10.0bis) prevede HOLD CON PIANO REGOLATORIO RAFFORZATO per il Percorso 6A (P 45-60%), con re-review M+13-16, e HOLD CON CRITERI DI USCITA STRINGENTI per il Percorso 6B, accompagnato da un pivot strutturale verso il modello prime contractor.
 
 ---
 
 ## A. Entry criteria documentali (PFTE conforme art. 41 + Allegato I.7)
 
-### Volume 1 — Studio
+### Volume 1, Studio
 
 - [x] Cap. 0 Sintesi Esecutiva
 - [x] Cap. 1 Inquadramento + Quadro Esigenziale
@@ -32,7 +28,7 @@ Questa checklist è il **strumento operativo del Board** per verificare la pront
 - [x] Cap. 10 Raccomandazione di Gate + Hold default
 - [x] Cap. 11 Roadmap post-fattibilità + B2-relaxed
 
-### Volume 2 — Allegati Tecnici (13)
+### Volume 2, Allegati Tecnici (13)
 
 - [x] A.1 RTM v1.0 (279 record)
 - [x] A.2 Risk Register v1.0 (116 rischi)
@@ -48,7 +44,7 @@ Questa checklist è il **strumento operativo del Board** per verificare la pront
 - [x] A.12 VIA Preliminare
 - [x] A.13 Documentazione Fotografica (indice; foto da acquisire)
 
-### Volume 3 — Riferimenti (5)
+### Volume 3, Riferimenti (5)
 
 - [x] R.1 Bibliografia Normativa (72 ref)
 - [x] R.2 Bibliografia Tecnica (80 ref)
@@ -62,11 +58,11 @@ Questa checklist è il **strumento operativo del Board** per verificare la pront
 
 | Criterio | Soglia GO 6A | Soglia GO 6B condizionato | Status M+3 |
 |---|---|---|---|
-| Concept architettura definita | ✓ Cap. 6.1 | ✓ Cap. 6.1 | ✅ |
-| Performance preliminare verificata | Autonomia ≥ 4h, payload ≥ 4 kg, copertura ≥ 30 km | Energy balance dicembre 21 a 44°N margine ≥ 30% | ✅ 6A; ❌ 6B (margine -50.1%, fallback E5 mandatory) |
-| FMECA + FTA preliminari | ✓ Vol. 2 A.2 | ✓ Vol. 2 A.2 | ✅ |
-| Risk Register top-10 con mitigation | Nessun rischio rosso senza piano | RSK-TEC-001/002 con piano R&D | ✅ (vedi mitigation A.2) |
-| TRL minimo subsistemi | ≥ 8 (commerciali) | ≥ 4 (subsystem critici) | ✅ 6A (TRL 8-9 JOUAV); ⚠️ 6B (TRL 3-4) |
+| Concept architettura definita | OK Cap. 6.1 | OK Cap. 6.1 | OK |
+| Performance preliminare verificata | Autonomia ≥ 4h, payload ≥ 4 kg, copertura ≥ 30 km | Energy balance dicembre 21 a 44°N margine ≥ 30% | OK 6A; NO 6B (margine -50.1%, fallback E5 mandatory) |
+| FMECA + FTA preliminari | OK Vol. 2 A.2 | OK Vol. 2 A.2 | OK |
+| Risk Register top-10 con mitigation | Nessun rischio rosso senza piano | RSK-TEC-001/002 con piano R&D | OK (vedi mitigation A.2) |
+| TRL minimo subsistemi | ≥ 8 (commerciali) | ≥ 4 (subsystem critici) | OK 6A (TRL 8-9 JOUAV); warning 6B (TRL 3-4) |
 
 ---
 
@@ -74,12 +70,12 @@ Questa checklist è il **strumento operativo del Board** per verificare la pront
 
 | Criterio | Soglia GO 6A | Soglia GO 6B | Status M+3 | DR-XXX |
 |---|---|---|---|---|
-| Pre-application meeting ENAC | ✓ entro M+9 | ✓ in dialogo informale | ⏳ DR-004 aperto | DR-004 |
-| Stima SAIL preliminare | ≤ III | n/a | ✅ SAIL II-III preliminare (Cap. 5.1.5) |  |
-| Engagement EASA HAPS framework | n/a | ✓ richiesta RMT formalizzata | ⏳ Y1+ | DR-008 |
-| Conformità Reg. UE 2019/947 + 945 | ✓ dichiarata | ✓ dichiarata | ✅ |  |
-| Privacy DPIA preliminare pubblica | ✓ M+6 | ✓ M+6 | ⏳ DR-006 parziale | DR-006 |
-| AGCOM licensing spettro | ✓ M+9 | n/a Y1 | ⏳ DR-005 | DR-005 |
+| Pre-application meeting ENAC | OK entro M+9 | OK in dialogo informale | pending DR-004 aperto | DR-004 |
+| Stima SAIL preliminare | ≤ III | n/a | OK SAIL II-III preliminare (Cap. 5.1.5) |  |
+| Engagement EASA HAPS framework | n/a | OK richiesta RMT formalizzata | pending Y1+ | DR-008 |
+| Conformità Reg. UE 2019/947 + 945 | OK dichiarata | OK dichiarata | OK |  |
+| Privacy DPIA preliminare pubblica | OK M+6 | OK M+6 | pending DR-006 parziale | DR-006 |
+| AGCOM licensing spettro | OK M+9 | n/a Y1 | pending DR-005 | DR-005 |
 
 ---
 
@@ -87,10 +83,10 @@ Questa checklist è il **strumento operativo del Board** per verificare la pront
 
 | Criterio | Soglia GO 6A | Soglia GO 6B | Status M+3 |
 |---|---|---|---|
-| Quadro Economico art. 41 redatto | ✓ | ✓ (preliminare) | ✅ Vol. 2 A.9 + A.7 financial |
-| Piano finanziario NPV/IRR/payback | NPV > 0 WACC 12%, payback < 6 anni | n/a (R&D phase) | ✅ NPV +€3.5M base, IRR 18-22%, payback 5y |
-| Funding plan committed | ≥ 60% Y1-Y2 LoI Regione + Coopfond | ≥ 40% Phase B mix EDF + Horizon + PNRR + equity | ⏳ pending DR-002 + LoI Regione |
-| Modello finanziario Excel | ✓ con sensitivity | n/a | ✅ Vol. 2 A.7 financial-model |
+| Quadro Economico art. 41 redatto | OK | OK (preliminare) | OK Vol. 2 A.9 + A.7 financial |
+| Piano finanziario NPV/IRR/payback | NPV > 0 WACC 12%, payback < 6 anni | n/a (R&D phase) | OK NPV +€3.5M base, IRR 18-22%, payback 5y |
+| Funding plan committed | ≥ 60% Y1-Y2 LoI Regione + Coopfond | ≥ 40% Phase B mix EDF + Horizon + PNRR + equity | pending DR-002 + LoI Regione |
+| Modello finanziario Excel | OK con sensitivity | n/a | OK Vol. 2 A.7 financial-model |
 
 ---
 
@@ -98,11 +94,11 @@ Questa checklist è il **strumento operativo del Board** per verificare la pront
 
 | Criterio | Soglia GO 6A | Soglia GO 6B | Status M+3 |
 |---|---|---|---|
-| BMC + VPC redatti | ✓ Cap. 7 | ✓ Cap. 7 | ✅ |
-| Anchor customer identificato | Regione Liguria con LoI | n/a | ⏳ pending LoI |
-| MVP definito | ✓ Cap. 7.9 | n/a | ✅ |
-| Pricing model validato | ✓ con almeno 1 cliente | n/a | ⚠️ RECALIBRATED post Cluster D, validation richiesta |
-| Cluster D analysis | ✓ riconosciuto vero competitor Y1 | n/a | ✅ Cap. 7 §7.4.4 |
+| BMC + VPC redatti | OK Cap. 7 | OK Cap. 7 | OK |
+| Anchor customer identificato | Regione Liguria con LoI | n/a | pending LoI |
+| MVP definito | OK Cap. 7.9 | n/a | OK |
+| Pricing model validato | OK con almeno 1 cliente | n/a | warning RECALIBRATED post Cluster D, validation richiesta |
+| Cluster D analysis | OK riconosciuto vero competitor Y1 | n/a | OK Cap. 7 §7.4.4 |
 
 ---
 
@@ -110,44 +106,44 @@ Questa checklist è il **strumento operativo del Board** per verificare la pront
 
 | Criterio | Soglia GO 6A | Status M+3 |
 |---|---|---|
-| Comune Torriglia disponibilità | ✓ delibera o LoI | ⏳ engagement attivo |
-| Cooperative pilota engagement | ≥ 8 su 10 cooperative aderenti | ⏳ workshop M+3-6 |
-| Comunità Pentema (14 abitanti) accettabilità sociale | ✓ workshop pubblico + DPIA pubblica | ⏳ workshop M+3-6 |
-| Pentema population verificato | 14 ISTAT confermato | ✅ DR-001 chiuso |
+| Comune Torriglia disponibilità | OK delibera o LoI | pending engagement attivo |
+| Cooperative pilota engagement | ≥ 8 su 10 cooperative aderenti | pending workshop M+3-6 |
+| Comunità Pentema (14 abitanti) accettabilità sociale | OK workshop pubblico + DPIA pubblica | pending workshop M+3-6 |
+| Pentema population verificato | 14 ISTAT confermato | OK DR-001 chiuso |
 
 ---
 
 ## G. Hard Conditions per Go pieno 6A (Cap. 10 §10.3.2)
 
-P(AND tutte) realistico **5-15%** scenario ottimistico → scenario base = HOLD CON PIANO RAFFORZATO
+P(AND tutte) realistico **5-15%** scenario ottimistico, da cui lo scenario base coincide con HOLD CON PIANO RAFFORZATO.
 
-- [ ] **C1**: LoI o accordo formale Regione Liguria firmato entro M+9 ⏳
-- [ ] **C2**: Autorizzazione SORA ENAC operativa entro M+9 ⏳
-- [ ] **C3**: Mix funding ≥ 60% committed entro M+10 ⏳
-- [ ] **C4**: ≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6 ⏳
-- [ ] **C5**: Pre-application meeting ENAC con feedback documentato entro M+3-6 ⏳
+- [ ] **C1**: LoI o accordo formale Regione Liguria firmato entro M+9 pending
+- [ ] **C2**: Autorizzazione SORA ENAC operativa entro M+9 pending
+- [ ] **C3**: Mix funding ≥ 60% committed entro M+10 pending
+- [ ] **C4**: ≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6 pending
+- [ ] **C5**: Pre-application meeting ENAC con feedback documentato entro M+3-6 pending
 
 ## H. Soft Conditions Go 6A (non-blocking)
 
-- [ ] **S1**: DPIA pubblica preliminare entro M+6 ⏳
-- [ ] **S2**: Vendor quotation confermato (JOUAV + Plan B Tekever) entro M+3 ⏳
-- [ ] **S3**: Workshop comunità Pentema con feedback positivo entro M+6 ⏳
-- [ ] **S4**: Partnership intent letter CIRA entro M+9 ⏳
-- [ ] **S5**: Almeno 1 LoI per espansione 2nda regione SNAI entro M+12 ⏳
+- [ ] **S1**: DPIA pubblica preliminare entro M+6 pending
+- [ ] **S2**: Vendor quotation confermato (JOUAV + Plan B Tekever) entro M+3 pending
+- [ ] **S3**: Workshop comunità Pentema con feedback positivo entro M+6 pending
+- [ ] **S4**: Partnership intent letter CIRA entro M+9 pending
+- [ ] **S5**: Almeno 1 LoI per espansione 2nda regione SNAI entro M+12 pending
 
 ## I. Hard Conditions Go Phase B 6B (Gate G5 M+24)
 
-- [ ] **C-6B-1**: Pilota 6A KPI gate G4 ≥ 3 contratti + €200k revenue + 0 FATAL ⏳ (Y1)
-- [ ] **C-6B-2**: Funding mix Phase B ≥ 50% committed entro M+24 ⏳
-- [ ] **C-6B-3**: Engagement EASA RMT HAPS aperto / Special Condition in dialogo ⏳ (M+12+)
-- [ ] **C-6B-4**: Energy balance simulazione completa con scenari decisi (E5 Seasonal vs perennial) ⏳
-- [ ] **C-6B-5**: Partnership formalizzata con almeno 1 prime contractor o partner R&D italiano ⏳ (DR-010)
+- [ ] **C-6B-1**: Pilota 6A KPI gate G4 ≥ 3 contratti + €200k revenue + 0 FATAL pending (Y1)
+- [ ] **C-6B-2**: Funding mix Phase B ≥ 50% committed entro M+24 pending
+- [ ] **C-6B-3**: Engagement EASA RMT HAPS aperto / Special Condition in dialogo pending (M+12+)
+- [ ] **C-6B-4**: Energy balance simulazione completa con scenari decisi (E5 Seasonal vs perennial) pending
+- [ ] **C-6B-5**: Partnership formalizzata con almeno 1 prime contractor o partner R&D italiano pending (DR-010)
 
 ---
 
 ## J. Decisione Formale CdA + Sponsor (Cap. 10 §10.8.1)
 
-Decisione formale richiesta al **CdA + Coopfond + Regione Liguria**:
+La decisione formale richiede l'approvazione del CdA, di Coopfond e della Regione Liguria su otto deliberazioni puntuali.
 
 - [ ] **D1**: Approvazione formale Studio di Fattibilità M+11
 - [ ] **D2**: Approvazione **GO CONDIZIONATO** Percorso 6A (con 5 hard conditions C1-C5)
@@ -188,7 +184,7 @@ Decisione formale richiesta al **CdA + Coopfond + Regione Liguria**:
 
 ## L. Composizione Board Gate G3 (Cap. 9 §9.7.2)
 
-**Board allargato per G3 (FEASIBILITY GATE)**:
+Il **Board allargato per G3 (FEASIBILITY GATE)** comprende la componente interna e quella esterna.
 
 Internal:
 - [ ] Project Manager (chair)
@@ -201,7 +197,7 @@ External:
 - [ ] Rappresentante Regione Liguria
 - [ ] Rappresentante Coopfond
 - [ ] Rappresentante cooperative (Fabrica capofila)
-- [ ] **Independent reviewer** (consultant aerospace senior o ente terzo, es. RINA — per validation indipendente)
+- [ ] **Independent reviewer** (consultant aerospace senior o ente terzo, es. RINA, per validation indipendente)
 - [ ] Osservatore ENAC (su invito informale)
 
 ---
@@ -223,7 +219,7 @@ Output formali da produrre al gate review:
 
 ## N. Falsifying Observations al Gate
 
-Trigger di scenarios alternativi al verdetto formale:
+Trigger di scenari alternativi al verdetto formale:
 
 | Trigger | Scenario attivato |
 |---|---|
@@ -240,9 +236,7 @@ Trigger di scenarios alternativi al verdetto formale:
 
 ## O. Versioning Checklist
 
-- v1.0 M+3 (presente) — Sprint completo M+3
-- v1.5 M+6 — Update post pre-application ENAC + workshop cooperative
-- v2.0 M+10 — Definitivo per gate G3 (target)
+La checklist segue un versionamento allineato ai gate. La v1.0 M+3, presente, copre lo sprint M+3. La v1.5 M+6 incorporerà gli esiti del pre-application ENAC e del workshop cooperative, mentre la v2.0 M+10 sarà la versione definitiva per il gate G3 (target).
 
 ---
 
