@@ -271,6 +271,41 @@ Riferimento metodologico: `agents/propulsion-energy-engineer.md` + ricerca POLIT
 > - Margine inverno < 10% → **abbandono Percorso 6B perennial**, ridimensionamento a seasonal commercial service
 > - Margine inverno > 30% con design avanzato (LiS 400+ Wh/kg, pannelli 30+ m², HALE alleggerito) → **GO Phase B con riserva**
 
+### 6.2.2.3 ⚠️ AGGIORNAMENTO CRITICO post simulazione completa M+3 (allegato A.7 energy balance)
+
+La **simulazione numerica completa** (script Python in `studio-di-fattibilita/allegati/energy-balance/` con 365 giorni × 15 parametri × 5 architetture + sensitivity) **falsifica al ribasso** la stima a mano del §6.2.2.2:
+
+| Metrica | Stima a mano §6.2.2.2 | Simulazione completa allegato A.7 | Δ |
+|---|---|---|---|
+| Margine solstizio estate | "ottimo, +370%" | **+107.4%** | molto inferiore ma OK |
+| Margine solstizio inverno | "0-15% (critico)" | **-50.1% (DEFICIT)** | molto peggio |
+| Giorni OK > 30%/anno | non calcolato | **184 (50.4%)** | ~6 mesi/anno |
+| Giorni MARGINALI | non calcolato | **44 (12.1%)** | shoulder season |
+| Giorni DEFICIT | non calcolato | **137 (37.5%)** | inverno + parte autunno |
+| Best architettura inverno | "E2 Solar+LiS marginale" | **E5 Seasonal-only** (unico positivo) | path obbligato |
+
+**Causa del peggioramento**: la stima a mano §6.2.2.2 calcolava `E_solar - E_day_consumption` senza includere:
+- Round-trip storage loss (η_storage 0.92 → real ~0.85 con thermal cycling stratosfera)
+- Motor + propeller chain efficiency (0.78 reale vs 1.0 implicito)
+- MPPT (Maximum Power Point Tracking) loss
+- P_thermal real (riscaldamento batterie inverno + raffreddamento payload)
+
+**Verdetto aggiornato post-simulazione**:
+
+> **Il perennial flight 44°N è NON fattibile** con baseline tecnologico 2026-2028 (LiS 350 Wh/kg pack, MTOW 100 kg, pannelli 25 m², L/D 28).
+>
+> **E5 "Seasonal-only" (marzo-ottobre, ~7 mesi)** è l'**unico Plan A operativo** per il Percorso 6B fino a Y6+ quando tecnologie più avanzate (SS Li 450 Wh/kg, alleggerimento strutturale, profili ultra-low-Re) potrebbero permettere perennial annuale.
+>
+> **E4 Solar+PEM+LH2** è peggio dell'atteso con round-trip 0.50 reale (vs 0.80 ottimistico): viable solo per missioni day-and-burn, non perennial loop.
+
+**Update Risk Register**:
+- RSK-TEC-001 probabilità: 4 → **5** (probabilità ↑); residual score 20 invariato ma fallback E5 ora **mandatory plan A**, non opzione
+- Nuovo rischio: **NTN payload winter unsustainable** anche in seasonal-only (margine -58.9% con P_payload 500 W); richiede pulse-mode o NTN solo seasonal
+
+**Falsifying observation §6.2.2.3 (consolidata)**: se al gate G5 (M+24) la simulazione dettagliata con dati operativi reali (no più assunzioni clear-sky stratosfera 0.95) conferma deficit annuale > 30% giorni anche in scenario E5 Seasonal, il Percorso 6B viene **terminato come operativo perennial** e ridimensionato a R&D-only fino disponibilità tech 2030+.
+
+Vedi `studio-di-fattibilita/allegati/energy-balance/ENERGY-BALANCE-HALE-44N-REPORT.md` per metodologia, sensitivity, falsifying observations dettagliate (5 condizioni esplicite documentate).
+
 **Sensitivity analysis chiave** (vedi `agents/propulsion-energy-engineer.md`):
 - Massa batterie + densità energetica → driver primario
 - Area pannelli → driver secondario (limite strutturale apertura ≤30 m)

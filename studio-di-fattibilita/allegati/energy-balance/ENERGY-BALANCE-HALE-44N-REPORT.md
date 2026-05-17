@@ -19,7 +19,7 @@ Questo report chiude il debito di rigore tecnico aperto al gate M+10 sul **shows
 4. Comparison architetture: la sola configurazione con margine **OK** in inverno è quella ipotetica E4 (PEM FC + LH2) che richiede però TRL 4 (HALE-grade) non disponibile prima di **Y6+**.
 5. **Raccomandazione operativa**: **PERENNIAL flight a 44°N NON è raccomandato come baseline operativo Y3-Y5**; attivare **fallback E5 Seasonal-only (marzo-ottobre)** come piano A commercialmente vendibile, mantenendo R&D su E2 LiS / E3 SS Li per upgrade Y5-Y7 perennial robusto.
 
-> **Verdetto gate M+10**: ⚠️ **HOLD** Percorso 6B perennial — ⚙️ **GO Condizionato** su 6B Seasonal (E5) come piano commerciale realistico.
+> **Verdetto gate M+10**: **HOLD** Percorso 6B perennial — **GO Condizionato** su 6B Seasonal (E5) come piano commerciale realistico.
 
 ---
 
@@ -167,9 +167,9 @@ Variazione univariata di MTOW (±20 %), area pannelli (±20 %), L/D (±10 %):
 
 **Lettura della tornado** (vedi `energy_balance_sensitivity.png`):
 
-1. **MTOW è il driver primario**: passare da 100 a 80 kg (−20 %) aumenta il margine di circa **++15.3 pp**. Passare a 120 kg lo abbassa di **-10.7 pp**. ⇒ ogni kg di MTOW costa ~0.5 % di margine invernale.
-2. **Area pannelli è driver secondario forte**: +20 % di pannelli (25→30 m²) aggiunge ~**++11.1 pp**. Limite strutturale: apertura b ≤ 30 m + integrazione skin lino.
-3. **L/D è driver terziario**: +10 % L/D (28→30.8) aggiunge solo ~**++4.1 pp**. Buon margine di miglioramento ma fisicamente limitato (oltre L/D 35 si esce dalla feasibility low-Re).
+1. **MTOW è il driver primario**: passare da 100 a 80 kg (−20 %) aumenta il margine di circa **+15.3 pp**. Passare a 120 kg lo abbassa di **-10.7 pp**. Ogni kg di MTOW costa ~0.5 % di margine invernale.
+2. **Area pannelli è driver secondario forte**: +20 % di pannelli (25→30 m²) aggiunge ~**+11.1 pp**. Limite strutturale: apertura b ≤ 30 m + integrazione skin lino.
+3. **L/D è driver terziario**: +10 % L/D (28→30.8) aggiunge solo ~**+4.1 pp**. Buon margine di miglioramento ma fisicamente limitato (oltre L/D 35 si esce dalla feasibility low-Re).
 
 **Combinazione ottimale**: MTOW 80 kg + pannelli 30 m² + L/D 30 → simulazione separata necessaria. Stima a primo ordine: somma sensibilità ≈ +15-20 pp sul margine inverno → **ancora marginal**, non OK.
 
@@ -239,13 +239,13 @@ Tutti questi fattori andranno verificati al gate M+18 con flight-test subscale (
 
 ## 7. Conclusioni — chiusura debito RSK-TEC-001
 
-✅ **Debito chiuso** sul piano deterministico: simulazione completa 365 d × 5 architetture × sensitivity tornado prodotta.
+**Debito chiuso** sul piano deterministico: simulazione completa 365 d × 5 architetture × sensitivity tornado prodotta.
 
-⚠️ **Risultato qualitativo conferma il rischio** identificato nel Briefing iniziale: il **perennial flight HALE a 44°N è marginalmente o non fattibile** con tecnologia baseline 2026-2028.
+**Risultato qualitativo conferma il rischio** identificato nel Briefing iniziale: il **perennial flight HALE a 44°N è marginalmente o non fattibile** con tecnologia baseline 2026-2028.
 
-🛡️ **Mitigazione robusta**: fallback E5 Seasonal-only è dimostrato fattibile e commercialmente vendibile.
+**Mitigazione robusta**: fallback E5 Seasonal-only è dimostrato fattibile e commercialmente vendibile.
 
-🔁 **Aggiornamento Risk Register**: RSK-TEC-001 va aggiornato come segue:
+**Aggiornamento Risk Register**: RSK-TEC-001 va aggiornato come segue:
 - Probabilità: 5 (era 4)
 - Impatto: 4 (era 5; mitigato dal fallback E5)
 - Rischio residuo: 20 → **20 (invariato, ma piano B chiaro)**
@@ -253,7 +253,7 @@ Tutti questi fattori andranno verificati al gate M+18 con flight-test subscale (
 - Trigger Hold/Go gate M+24: TRL pack batterie LiS o SS Li
 - Trigger fallback E5: ogni 6 mesi review margine simulato
 
-📋 **Action items prossimi passi**:
+**Action items prossimi passi**:
 1. (M+11) Validazione modello propulsivo con CFD low-Re + test elica galleria
 2. (M+12) Tender vendor pannelli GaAs MJ + batterie LiS per qualifica tech 2028
 3. (M+15) Replica simulazione con dati ECMWF reali (cirri, tau medio) → sostituisce clear-sky

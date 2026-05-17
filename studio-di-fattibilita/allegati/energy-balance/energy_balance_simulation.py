@@ -552,18 +552,31 @@ def plot_architecture_comparison(p: Platform, path: str) -> None:
 
 
 def plot_sensitivity(df_sens: pd.DataFrame, path: str) -> None:
-    """Sensitivity tornado chart for winter solstice margin."""
-    fig, ax = plt.subplots(figsize=(11, 6))
-    for i, param in enumerate(df_sens["parameter"].unique()):
+    """Sensitivity chart with subplot per parameter (different scales)."""
+    params = list(df_sens["parameter"].unique())
+    fig, axes = plt.subplots(1, len(params), figsize=(14, 5), sharey=True)
+    colors = ["#1f77b4", "#ff7f0e", "#2ca02c"]
+    for ax, param, c in zip(axes, params, colors):
         sub = df_sens[df_sens["parameter"] == param]
-        ax.plot(sub["value"], sub["margin_pct"], "-o", label=param, lw=2)
-    ax.axhline(30, color="green", ls="--", alpha=0.6, label="OK (>30%)")
-    ax.axhline(0,  color="red",   ls="--", alpha=0.6, label="Deficit (<0%)")
-    ax.set_xlabel("Parameter value")
-    ax.set_ylabel("Winter solstice margin [%]")
-    ax.set_title("HALE Energy Balance — Sensitivity Analysis (21-Dec, 44°N)")
-    ax.legend(loc="best")
-    ax.grid(True, alpha=0.3)
+        ax.plot(sub["value"], sub["margin_pct"], "-o",
+                 color=c, lw=2.2, markersize=8)
+        ax.axhline(30, color="green", ls="--", alpha=0.6,
+                    label="OK threshold (30%)")
+        ax.axhline(0,  color="red",   ls="--", alpha=0.6,
+                    label="Deficit threshold (0%)")
+        ax.set_title(param, fontweight="bold")
+        ax.set_xlabel(param)
+        ax.grid(True, alpha=0.3)
+        # annotate baseline value (center)
+        center = sub.iloc[len(sub)//2]
+        ax.annotate(f"baseline\n{center['margin_pct']:+.1f}%",
+                     xy=(center["value"], center["margin_pct"]),
+                     xytext=(10, 10), textcoords="offset points",
+                     fontsize=9, fontweight="bold")
+    axes[0].set_ylabel("Winter solstice margin [%]")
+    axes[-1].legend(loc="lower right", fontsize=8)
+    fig.suptitle("HALE Energy Balance — Sensitivity Analysis (21-Dec, 44°N)",
+                  fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, dpi=140)
     plt.close(fig)
@@ -924,13 +937,13 @@ Tutti questi fattori andranno verificati al gate M+18 con flight-test subscale (
 
 ## 7. Conclusioni — chiusura debito RSK-TEC-001
 
-✅ **Debito chiuso** sul piano deterministico: simulazione completa 365 d × 5 architetture × sensitivity tornado prodotta.
+**Debito chiuso** sul piano deterministico: simulazione completa 365 d × 5 architetture × sensitivity tornado prodotta.
 
-⚠️ **Risultato qualitativo conferma il rischio** identificato nel Briefing iniziale: il **perennial flight HALE a 44°N è marginalmente o non fattibile** con tecnologia baseline 2026-2028.
+**Risultato qualitativo conferma il rischio** identificato nel Briefing iniziale: il **perennial flight HALE a 44°N è marginalmente o non fattibile** con tecnologia baseline 2026-2028.
 
-🛡️ **Mitigazione robusta**: fallback E5 Seasonal-only è dimostrato fattibile e commercialmente vendibile.
+**Mitigazione robusta**: fallback E5 Seasonal-only è dimostrato fattibile e commercialmente vendibile.
 
-🔁 **Aggiornamento Risk Register**: RSK-TEC-001 va aggiornato come segue:
+**Aggiornamento Risk Register**: RSK-TEC-001 va aggiornato come segue:
 - Probabilità: 5 (era 4)
 - Impatto: 4 (era 5; mitigato dal fallback E5)
 - Rischio residuo: 20 → **20 (invariato, ma piano B chiaro)**
@@ -938,7 +951,7 @@ Tutti questi fattori andranno verificati al gate M+18 con flight-test subscale (
 - Trigger Hold/Go gate M+24: TRL pack batterie LiS o SS Li
 - Trigger fallback E5: ogni 6 mesi review margine simulato
 
-📋 **Action items prossimi passi**:
+**Action items prossimi passi**:
 1. (M+11) Validazione modello propulsivo con CFD low-Re + test elica galleria
 2. (M+12) Tender vendor pannelli GaAs MJ + batterie LiS per qualifica tech 2028
 3. (M+15) Replica simulazione con dati ECMWF reali (cirri, tau medio) → sostituisce clear-sky
