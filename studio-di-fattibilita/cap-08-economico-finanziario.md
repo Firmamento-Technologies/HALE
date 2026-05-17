@@ -7,8 +7,8 @@
 > **Versione:** bozza M+3
 > **Conformità:** D.Lgs. 36/2023 art. 41 + Allegato I.7 (Quadro Economico + Piano Economico-Finanziario)
 > **Standard contabili:** OIC (Italia), riferimenti IFRS dove rilevante
-> **Disciplina epistemica:** Regole 1-7 della skill `epistemic-rigor`
-> **Red Team review:** `financial-cfo-analyst` + `red-team-skeptic` + `business-model-strategist` (vedi §8.10)
+> **Disciplina metodologica:** rigore epistemico
+> **Review critica indipendente:** analisi finanziaria CFO + review critica + strategia business model (vedi §8.10)
 
 ---
 
@@ -78,7 +78,7 @@ Riferimento metodologico: Aeropolis Workshop 2014 [^2], approccio costing aerosp
 
 Confidence aggregato del capitolo: **medium-low** (le cifre finanziarie non hanno ancora validazione esterna e molte sono stime interne basate su benchmark e best practice). Falsifying observations dichiarate in §8.5 e §8.8.
 
-**Base rate aerospace cost overrun** (skill `epistemic-rigor` Regola 7): tipicamente **30-150%** sui piani iniziali aerospace (GAO Cost Estimating Guide 2020). Pertanto lo Studio pianifica contingency adeguata.
+**Base rate aerospace cost overrun** (regola 7 del rigore epistemico): tipicamente **30-150%** sui piani iniziali aerospace (GAO Cost Estimating Guide 2020). Pertanto lo Studio pianifica contingency adeguata.
 
 ---
 
@@ -110,33 +110,33 @@ QUADRO ECONOMICO, Percorso 6A MVP Pilota Pentema (M+0 -> M+12)
 ═══════════════════════════════════════════════════════════════
 
 A) IMPORTO INVESTIMENTI (asset + servizi tecnici)
-   A.1 Piattaforma VTOL (JOUAV CW-30E o eq.)        €  250-400k
-   A.2 Set ricambi 3 anni                           €   30-60k
-   A.3 Payload EO RGB high-res + gimbal             €   30-80k
-   A.4 Payload IR LWIR (WIRIS Pro o eq.)            €   20-50k
-   A.5 Payload telecom backup (LTE eNodeB)          €   80-150k  [opzionale Y1]
-   A.6 Ground Station fissa Pentema                 €   20-50k
-   A.7 Ground Station mobile (veicolo + console)    €   30-70k
-   A.8 Hangar protetto Pentema (affitto/light build)€   40-100k
-   A.9 Strumenti diagnostica + spare iniziali       €   15-30k
-   A.10 Setup SW (mission planning, GIS, pipeline)  €   30-80k
-   A.11 Certificazioni iniziali (SORA, ENAC)        €   20-50k
-   A.12 Privacy compliance (DPIA, registri)         €   10-25k
-   A.13 Formazione team (piloti, op., analyst)      €   30-60k
-   A.14 Studi preparatori e progettazione           €   50-100k
-                                       Totale A   € 655-1305k
+ A.1 Piattaforma VTOL (JOUAV CW-30E o eq.) € 250-400k
+ A.2 Set ricambi 3 anni € 30-60k
+ A.3 Payload EO RGB high-res + gimbal € 30-80k
+ A.4 Payload IR LWIR (WIRIS Pro o eq.) € 20-50k
+ A.5 Payload telecom backup (LTE eNodeB) € 80-150k [opzionale Y1]
+ A.6 Ground Station fissa Pentema € 20-50k
+ A.7 Ground Station mobile (veicolo + console) € 30-70k
+ A.8 Hangar protetto Pentema (affitto/light build)€ 40-100k
+ A.9 Strumenti diagnostica + spare iniziali € 15-30k
+ A.10 Setup SW (mission planning, GIS, pipeline) € 30-80k
+ A.11 Certificazioni iniziali (SORA, ENAC) € 20-50k
+ A.12 Privacy compliance (DPIA, registri) € 10-25k
+ A.13 Formazione team (piloti, op., analyst) € 30-60k
+ A.14 Studi preparatori e progettazione € 50-100k
+ Totale A € 655-1305k
 
 B) SOMME A DISPOSIZIONE (ex Codice Contratti)
-   B.1 Spese tecniche (progettazione, DL, RUP)      €   30-65k   (~4.5% A)
-   B.2 Imprevisti (contingency 15%)                 €   100-200k (~15% A)
-   B.3 Spese pubblicità bandi                       €    2-5k
-   B.4 IVA su A (22%)                               €  144-287k
-   B.5 IVA su B (22%)                               €   29-59k
-   B.6 Allacciamenti, autorizzazioni                €    5-15k
-   B.7 Spese collaudo / verifica                    €   10-25k
-                                       Totale B   €  320-656k
+ B.1 Spese tecniche (progettazione, DL, RUP) € 30-65k (~4.5% A)
+ B.2 Imprevisti (contingency 15%) € 100-200k (~15% A)
+ B.3 Spese pubblicità bandi € 2-5k
+ B.4 IVA su A (22%) € 144-287k
+ B.5 IVA su B (22%) € 29-59k
+ B.6 Allacciamenti, autorizzazioni € 5-15k
+ B.7 Spese collaudo / verifica € 10-25k
+ Totale B € 320-656k
 
-TOTALE GENERALE Y1 (A+B)                            €  975-1961k
+TOTALE GENERALE Y1 (A+B) € 975-1961k
 ─────────────────────────────────────────────────────────────────
 ```
 
@@ -162,23 +162,23 @@ QUADRO ECONOMICO, Percorso 6B Phase B R&D (M+24 -> M+48)
 ═══════════════════════════════════════════════════════════════
 
 A) IMPORTO INVESTIMENTI R&D
-   A.1 R&D engineering core (aero, struct, prop, avi)  € 1.5-3.5M
-   A.2 Prototipo subscale 1:3 (manifattura)            € 0.8-2.0M
-   A.3 Wind tunnel + ground test (outsourcing)         € 0.4-1.2M
-   A.4 Avionica + GNC + software DAL-C                 € 1.0-2.5M
-   A.5 Payload R&D (NTN gNodeB + EO HALE)              € 0.5-1.5M
-   A.6 Certificazione pre-application + engagement     € 0.3-0.8M
-   A.7 Personale aggiuntivo 8-15 FTE (24 mesi)         € 1.0-2.0M
-                                          Totale A    € 5.5-13.5M
+ A.1 R&D engineering core (aero, struct, prop, avi) € 1.5-3.5M
+ A.2 Prototipo subscale 1:3 (manifattura) € 0.8-2.0M
+ A.3 Wind tunnel + ground test (outsourcing) € 0.4-1.2M
+ A.4 Avionica + GNC + software DAL-C € 1.0-2.5M
+ A.5 Payload R&D (NTN gNodeB + EO HALE) € 0.5-1.5M
+ A.6 Certificazione pre-application + engagement € 0.3-0.8M
+ A.7 Personale aggiuntivo 8-15 FTE (24 mesi) € 1.0-2.0M
+ Totale A € 5.5-13.5M
 
 B) SOMME A DISPOSIZIONE
-   B.1 Spese tecniche + project management            €  0.3-0.8M
-   B.2 Imprevisti / contingency 20% R&D               €  1.1-2.7M
-   B.3 IVA su A (22%, eventual quota)                 €  1.2-3.0M*
-   B.4 Spese audit + reporting bandi                  €  0.05-0.2M
-                                          Totale B   €  2.7-6.7M
+ B.1 Spese tecniche + project management € 0.3-0.8M
+ B.2 Imprevisti / contingency 20% R&D € 1.1-2.7M
+ B.3 IVA su A (22%, eventual quota) € 1.2-3.0M*
+ B.4 Spese audit + reporting bandi € 0.05-0.2M
+ Totale B € 2.7-6.7M
 
-TOTALE GENERALE Phase B (Y3-Y5)                       €  8.2-20.2M
+TOTALE GENERALE Phase B (Y3-Y5) € 8.2-20.2M
 ─────────────────────────────────────────────────────────────────
 * IVA grant-funded R&D solitamente esente o rimborsabile
 ```
@@ -220,18 +220,18 @@ TOTALE GENERALE Phase B (Y3-Y5)                       €  8.2-20.2M
 
 ### 8.4.2 CapEx Percorso 6B, ripartizione R&D
 
-Ripartizione tipica aerospace R&D per HALE solare (vedi `agents/financial-cfo-analyst.md`):
+Ripartizione tipica aerospace R&D per HALE solare (vedi stime interne di modellazione finanziaria):
 
 ```
-Engineering (aero+struct+prop+avi+payload)    25-35%  <- €2-4M
-Prototyping (subscale + materials)            15-20%  <- €1-2M
-Test (wind tunnel + ground + flight subscale) 10-15%  <- €0.8-1.5M
-Software development (FCS, GNC, GS)           10-15%  <- €0.8-1.5M
-Personnel (8-15 FTE × 24 mesi)                20-30%  <- €2-4M
-Certification engagement                       5-10%   <- €0.4-1M
-Overhead + management                          5-10%   <- €0.4-1M
+Engineering (aero+struct+prop+avi+payload) 25-35% <- €2-4M
+Prototyping (subscale + materials) 15-20% <- €1-2M
+Test (wind tunnel + ground + flight subscale) 10-15% <- €0.8-1.5M
+Software development (FCS, GNC, GS) 10-15% <- €0.8-1.5M
+Personnel (8-15 FTE × 24 mesi) 20-30% <- €2-4M
+Certification engagement 5-10% <- €0.4-1M
+Overhead + management 5-10% <- €0.4-1M
 ─────────────────────────────────────────────────────────
-TOTALE Phase B baseline                       100%    <- €5.5-13.5M
+TOTALE Phase B baseline 100% <- €5.5-13.5M
 ```
 
 ---
@@ -372,7 +372,7 @@ In coerenza con ENAC AAM BP §4 [^1, §4 Benefici qualitativi], i benefici econo
 
 > **Confidence**: medium sulla base dell'esistenza dei programmi; low sulla concretezza di singole tranche fino a LoI/contratti firmati.
 
-> **🔬 Falsifying observation aggiuntiva linkata**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-09** (mix funding Y1 ≥ 60% committed entro M+10). Il trigger M+10 prevede Letter of Award + contratti firmati (non solo proposals/LoI). Se il committed funding scende sotto il 40% del CapEx Y1 target, la hard condition C3 risulta falsificata, con re-baseline Y1 a CapEx ridotto "MVP super-lean", bridge financing emergency e possibile slittamento operatività a Y2.
+> **🔬 Falsifying observation aggiuntiva linkata**: vedi addendum falsifying observations **FO-ADD-09** (mix funding Y1 ≥ 60% committed entro M+10). Il trigger M+10 prevede Letter of Award + contratti firmati (non solo proposals/LoI). Se il committed funding scende sotto il 40% del CapEx Y1 target, la hard condition C3 risulta falsificata, con re-baseline Y1 a CapEx ridotto "MVP super-lean", bridge financing emergency e possibile slittamento operatività a Y2.
 
 ### 8.7.2 Mix raccomandato Percorso 6B Phase B (€5.5-13.5M target su 24 mesi)
 
@@ -442,9 +442,9 @@ Riferimento dettagliato: Vol. 2 Allegato A.9.
 
 ---
 
-## 8.10 Red Team Check, Critical Financial Review
+## 8.10 Review critica, Critical Financial Review
 
-Critica condotta da `red-team-skeptic` + `financial-cfo-analyst` + `business-model-strategist`.
+Critica condotta da review critica + analisi finanziaria CFO + strategia business model.
 
 ### Critica 1, "CapEx €1.4M baseline è ottimismo: aerospace tipicamente +30-150%"
 **Razionale**: il range stimato non include adeguatamente i rischi tipici aerospace.
@@ -470,20 +470,20 @@ Critica condotta da `red-team-skeptic` + `financial-cfo-analyst` + `business-mod
 **Razionale**: il mix dipende da bandi che potrebbero non aprirsi nei tempi previsti.
 **Risposta**: confermato (DR-002 audit-rigore-epistemico.md). Action item: contatto diretto Coopfond + Regione Liguria entro M+1 per verifica calendario bandi.
 
-### 8.10.7 Action Item Tracking (anti Red Team theater)
+### 8.10.7 Action Item Tracking (anti review formale senza follow-through)
 
-> **Compliance audit M+3**: ogni critica §8.10.1-6 ha un action item esplicito con owner, deadline e verifica chiusura.
+> **Conformità review M+3**: ogni critica §8.10.1-6 ha un action item esplicito con owner, deadline e verifica chiusura.
 
 | Critica | Action item | Owner | Deadline | Stato M+3 | Verifica chiusura |
 |---|---|---|---|---|---|
-| C1 (CapEx €1.4M ottimismo aerospace +30-150%) | Range €975k-1.96M con contingency 15%; falsifying observation §8.3.1 attiva review scope se cumulato > €2M al M+6 | financial-cfo-analyst | M+6 | ✅ closed (range esteso, falsifying observation §8.3.1 dichiarata; vendor quotation JOUAV/Tekever pending per refinement) | Gate G2 |
-| C2 (Revenue Y1 €380k ottimistico + Cluster D falsificazione pricing) | RECALIBRATED €260k centrale (range €220-300k, min €200k SyR-Cost-003) con pricing €60-90k/anno PA + €25-40k premium; legacy €355-405k FALSIFICATO | financial-cfo-analyst + aerospace-market-analyst | M+3 | ✅ **closed M+3**, propagato Cap. 0 + Cap. 7 §7.8.2 RECALIBRATED + Cap. 8 §8.0.1 + §8.6.2 + §8.10.5 + Cap. 11 (P2 Fix 1); FO-ADD-04 + FO-10A-07 linkate | done |
-| C3 (WACC 12% blended basso) | Sensitivity §8.6.3 mostra impatto se mix shifts a meno grant (WACC sale 18-22%); il modello finanziario Excel completo includerà Monte Carlo (DR-008) | financial-cfo-analyst | M+10 | 🟡 in progress (Excel modello M3 esistente in Vol. 2 Allegato A.7; Monte Carlo da aggiungere) | Gate G3 |
-| C4 (Phase B €5.5-13.5M senza TC) | Phase B subordinato a (a) funding ≥50% pubblico committed, (b) gate G5 M+24 TRL 5 dimostrato, (c) parallel engagement EASA Special Condition; pivot M+3 HOLD CON CRITERI USCITA STRINGENTI + pivot operatore su prime contractor (Cap. 0 §0.3) | financial-cfo-analyst + sovereign-infrastructure-strategist + CEO | M+24 | ✅ **closed M+3**, pivot strutturale 6B documentato Cap. 0 §0.3 + Cap. 10 §10.4 + Cap. 11 §11.6bis; FO-ADD-05 + FO-10B-01 + FO-10B-02 linkate | done |
-| C5 (capital intensity €10-30B oltre capacità PMI) | Capital intensity full scale richiede programma EU equivalente IRIS² come precondizione esterna; Firmamento principal Italian node di consorzio EU, NON finanziatore solitario; B2-relaxed scenario small fleet €500M-1.5B documentato | financial-cfo-analyst + sovereign-infrastructure-strategist | M+3 | ✅ **closed M+3**, Cap. 11 §11.6bis scenario B2-relaxed standalone IT small fleet P 30-50%; capital intensity onesta §11.6.4; FO-ADD-10 linkata | done |
-| C6 (mix funding 2026 bandi non aperti DR-002) | Contatto diretto Coopfond + Regione Liguria + MIMIT per verifica calendario bandi; FO-ADD-09 monitoring 60% committed M+10 | financial-cfo-analyst + snai-funding-territorial-expert | M+1-M+3 | ⏳ open (engagement Coopfond + Regione in corso; DR-002 chiusura via contatto diretto pending); FO-ADD-09 + FO-10A-04 linkate | Gate G2 + M+10 |
+| C1 (CapEx €1.4M ottimismo aerospace +30-150%) | Range €975k-1.96M con contingency 15%; falsifying observation §8.3.1 attiva review scope se cumulato > €2M al M+6 | analisi finanziaria CFO | M+6 | ✅ closed (range esteso, falsifying observation §8.3.1 dichiarata; vendor quotation JOUAV/Tekever pending per refinement) | Gate G2 |
+| C2 (Revenue Y1 €380k ottimistico + Cluster D falsificazione pricing) | RECALIBRATED €260k centrale (range €220-300k, min €200k SyR-Cost-003) con pricing €60-90k/anno PA + €25-40k premium; legacy €355-405k FALSIFICATO | analisi finanziaria CFO + team analisi di mercato aerospace | M+3 | ✅ **closed M+3**, propagato Cap. 0 + Cap. 7 §7.8.2 RECALIBRATED + Cap. 8 §8.0.1 + §8.6.2 + §8.10.5 + Cap. 11 (P2 Fix 1); FO-ADD-04 + FO-10A-07 linkate | done |
+| C3 (WACC 12% blended basso) | Sensitivity §8.6.3 mostra impatto se mix shifts a meno grant (WACC sale 18-22%); il modello finanziario Excel completo includerà Monte Carlo (DR-008) | analisi finanziaria CFO | M+10 | 🟡 in progress (Excel modello M3 esistente in Vol. 2 Allegato A.7; Monte Carlo da aggiungere) | Gate G3 |
+| C4 (Phase B €5.5-13.5M senza TC) | Phase B subordinato a (a) funding ≥50% pubblico committed, (b) gate G5 M+24 TRL 5 dimostrato, (c) parallel engagement EASA Special Condition; pivot M+3 HOLD CON CRITERI USCITA STRINGENTI + pivot operatore su prime contractor (Cap. 0 §0.3) | analisi finanziaria CFO + strategia sovranita tecnologica + CEO | M+24 | ✅ **closed M+3**, pivot strutturale 6B documentato Cap. 0 §0.3 + Cap. 10 §10.4 + Cap. 11 §11.6bis; FO-ADD-05 + FO-10B-01 + FO-10B-02 linkate | done |
+| C5 (capital intensity €10-30B oltre capacità PMI) | Capital intensity full scale richiede programma EU equivalente IRIS² come precondizione esterna; Firmamento principal Italian node di consorzio EU, NON finanziatore solitario; B2-relaxed scenario small fleet €500M-1.5B documentato | analisi finanziaria CFO + team strategia sovranita tecnologica | M+3 | ✅ **closed M+3**, Cap. 11 §11.6bis scenario B2-relaxed standalone IT small fleet P 30-50%; capital intensity onesta §11.6.4; FO-ADD-10 linkata | done |
+| C6 (mix funding 2026 bandi non aperti DR-002) | Contatto diretto Coopfond + Regione Liguria + MIMIT per verifica calendario bandi; FO-ADD-09 monitoring 60% committed M+10 | analisi finanziaria CFO + team SNAI e funding territoriale | M+1-M+3 | ⏳ open (engagement Coopfond + Regione in corso; DR-002 chiusura via contatto diretto pending); FO-ADD-09 + FO-10A-04 linkate | Gate G2 + M+10 |
 
-> **Stato Red Team check Cap. 8 al M+3**: 4 critiche closed (C1 CapEx range, C2 revenue recalibration, C4 6B pivot, C5 capital intensity B2-relaxed), 1 in progress (C3 Monte Carlo), 1 open (C6 bandi 2026 calendar). Nessuna critica residua qualifica come "Red Team theater". Quanto a C2 + C4, restano le 2 critiche più gravi del capitolo: entrambe hanno causato pivot strutturali M+3 cross-volume.
+> **Stato Review critica Cap. 8 al M+3**: 4 critiche closed (C1 CapEx range, C2 revenue recalibration, C4 6B pivot, C5 capital intensity B2-relaxed), 1 in progress (C3 Monte Carlo), 1 open (C6 bandi 2026 calendar). Nessuna critica residua qualifica come "review formale senza follow-through". Quanto a C2 + C4, restano le 2 critiche più gravi del capitolo: entrambe hanno causato pivot strutturali M+3 cross-volume.
 
 ---
 
@@ -493,7 +493,7 @@ Critica condotta da `red-team-skeptic` + `financial-cfo-analyst` + `business-mod
 |---|---|---|---|
 | OQ-F01 | Validazione pricing PA con LoI Regione Liguria | financial-cfo + snai-funding | M+6 |
 | OQ-F02 | Verifica Cooding 2026 bando attivo + condizioni | snai-funding | M+1 |
-| OQ-F03 | Quotation contracts JOUAV vs Tekever per CapEx accurato | vtol-uas-specialist | M+3 |
+| OQ-F03 | Quotation contracts JOUAV vs Tekever per CapEx accurato | team VTOL UAS specialistico | M+3 |
 | OQ-F04 | Bridge financing per cash flow gap Y1 | financial-cfo | M+3 |
 | OQ-F05 | Modello DCF completo con scenarios Excel | financial-cfo | M+6 |
 | OQ-F06 | Sensitivity Excel + Monte Carlo per gate M+10 | financial-cfo | M+9 |
@@ -512,7 +512,7 @@ Critica condotta da `red-team-skeptic` + `financial-cfo-analyst` + `business-mod
 
 [^4]: GAO Cost Estimating and Assessment Guide (GAO-20-195G), 2020. Base rate aerospace cost overrun 30-150%.
 
-[^5]: Skill `financial-cfo-analyst`, `business-model-strategist`, `epistemic-rigor` (`.claude/`).
+[^5]: Metodologie interne di progetto (analisi finanziaria CFO, strategia business model, rigore epistemico).
 
 [^6]: Bandi pubblici Italia 2026 (riferimenti web verificati): Coopfond Cooding 2026 (TBC), Regione Liguria FESR 2021-2027, PNRR Aerospazio M4C2, Horizon Europe Cluster 4/5, EDF Work Programme.
 
@@ -531,4 +531,4 @@ Quanto ai punti deboli dichiarati, lo Studio segnala un CapEx Y1 ancora ampio (�
 
 Action items entro M+10: completamento modello finanziario Excel (DCF + sensitivity + Monte Carlo); chiusura LoI Regione Liguria (anchor customer); raccolta quotation JOUAV + Tekever per CapEx accurato; verifica bandi 2026 con contatti diretti; definizione bridge financing strategy.
 
-Il capitolo è chiuso al M+3 con verdetto Red Team **OK con 6 action items**.
+Il capitolo è chiuso al M+3 con verdetto della review critica **OK con 6 action items**.

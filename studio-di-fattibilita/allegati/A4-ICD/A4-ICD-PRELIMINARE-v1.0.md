@@ -8,10 +8,10 @@
 > **Numero interfacce:** 50+ (questa baseline: **59 interfacce** in 7 categorie)
 > **Metodologia:** ARP4754A (Guidelines for Development of Civil Aircraft and Systems) + ISO/IEC/IEEE 24765:2017 (Systems and Software Engineering Vocabulary) + NASA SE Handbook §6.3 (Interface Management)
 > **Conformità procedurale IT:** D.Lgs. 36/2023 art. 41 + Allegato I.7 (PFTE, Relazione Tecnica)
-> **Disciplina epistemica:** Skill `epistemic-rigor`, confidence levels + falsifying observations su interfacce critiche
+> **Disciplina metodologica:** Metodologia di rigore epistemico, confidence levels + falsifying observations su interfacce critiche
 > **Boundary conditions:** B1 (service-only cooperative) + B2 (visione 10 anni EU sovereign HAPS) preserve
 > **Riferimento padre:** Cap. 4 §4.4 (20 interfacce ICD preliminare); Cap. 6 (architettura sistema)
-> **Riferimento agenti:** `avionics-gnc-engineer`, `telecom-ntn-payload-expert`, `aerodynamics-structures-engineer`, `earth-observation-expert`
+> **Riferimento agenti:** ingegneria avionica e GNC, expertise telecom NTN, ingegneria aerodinamica e strutture, expertise EO Earth Observation
 
 ---
 
@@ -24,7 +24,7 @@ Il presente Allegato A.4 estende e dettaglia il **Quadro delle Interfacce** intr
 - Identificativo univoco strutturato (`INT-XX-YYY-NNN`)
 - Caratteristiche tecniche complete (range, banda, voltaggio, protocollo, formato, unità)
 - Standard di riferimento (ARP, MIL-STD, IEEE, 3GPP, ITU-R, GDPR, ENAC/EASA)
-- Owner agent + test method + status + confidence
+- Owner specialista + test method + status + confidence
 - Note operative e, per interfacce critiche, **falsifying observations**
 
 L'ICD v1.0 costituisce il **secondo livello di rigore** previsto dalla disciplina NASA SE Handbook §6.3 [^1]:
@@ -64,10 +64,10 @@ L'ICD v1.0 si conforma a tre famiglie normative complementari.
 
 ```
 INT - XX - YYY - NNN
- │    │    │     │
- │    │    │     └── Numero progressivo (001, 002, …)
- │    │    └──────── Categoria (PHY, DATA, C2, GS, REG, NTN, FEEDER, OPS)
- │    └───────────── Percorso (6A | 6B | X = trasversale)
+ │ │ │ │
+ │ │ │ └── Numero progressivo (001, 002, …)
+ │ │ └──────── Categoria (PHY, DATA, C2, GS, REG, NTN, FEEDER, OPS)
+ │ └───────────── Percorso (6A | 6B | X = trasversale)
  └────────────────── Prefisso interfaccia
 ```
 
@@ -184,7 +184,7 @@ Le interfacce fisiche del Percorso 6A coprono integrazione meccanica, elettrica 
 | **Direzione** | Bidirezionale (statica) |
 | **Caratteristiche tecniche** | Bay 250×180×120 mm; massa payload ≤ 3 kg + 0.5 kg buffer; CG shift ≤ 2% MAC; mount quick-release tipo Picatinny-like + vibration isolation MIL-STD-810H Cat 4 (5-2000 Hz, 7.7 grms) |
 | **Standard di riferimento** | MIL-STD-810H §514.8 (vibration); ISO 9022-2:2016 (mechanical mounting); vendor-specific dovetail mount |
-| **Owner agent** | Avionics Integration Lead (Firmamento) + JOUAV Liaison |
+| **Owner specialista** | Avionics Integration Lead (Firmamento) + JOUAV Liaison |
 | **Test method** | Inspection + analisi CG calc + shake table test |
 | **Status** | Preliminary |
 | **Confidence** | medium |
@@ -223,7 +223,7 @@ Le interfacce data del Percorso 6A includono il flusso dati end-to-end (Payload 
 | **Direzione** | Unidirezionale (Camera → MC) |
 | **Caratteristiche tecniche** | GigE Vision 2.1 protocol; image RAW IIQ 16-bit ≈ 100 MB/frame; trigger frequency 1-5 fps; geotagging via NTP time sync + GPS PPS pulse 1 PPS ±100 ns |
 | **Standard di riferimento** | GigE Vision 2.1 (AIA standard); GenICam 3.x; NTP v4 RFC 5905; PPS NMEA 0183 |
-| **Owner agent** | Payload SE + Avionics Lead |
+| **Owner specialista** | Payload SE + Avionics Lead |
 | **Test method** | Image capture test + geotag accuracy verification + throughput test |
 | **Status** | Preliminary |
 | **Confidence** | high |
@@ -257,7 +257,7 @@ Le interfacce C2 sono le **più critiche per safety** del Percorso 6A. Coprono i
 | **Direzione** | Unidirezionale (GS → UAV) per comandi |
 | **Caratteristiche tecniche** | Frequenza 2400-2483.5 MHz ISM; modulazione OFDM adaptive; bitrate 0.5-9 Mbps; EIRP ≤ 100 mW (20 dBm) per AGCOM ISM o ≤ 1 W con licenza individuale; latency one-way ≤ 100 ms; fade margin ≥ 12 dB |
 | **Standard di riferimento** | EN 300 328 (ISM 2.4 GHz harmonized EU); RED 2014/53/EU; AGCOM PNRF |
-| **Owner agent** | RF Systems Engineer + AGCOM Liaison |
+| **Owner specialista** | RF Systems Engineer + AGCOM Liaison |
 | **Test method** | Range test campo aperto + fade margin verification + spectrum analyzer |
 | **Status** | Preliminary |
 | **Confidence** | medium |
@@ -276,7 +276,7 @@ Le interfacce C2 sono le **più critiche per safety** del Percorso 6A. Coprono i
 | **Direzione** | Internal logic |
 | **Caratteristiche tecniche** | Trigger lost-link > 5 s consecutivi senza heartbeat MAVLink; primary action: RTH (Return-To-Home) verso ultimo home point GPS; secondary action se RTH fail: loiter + emergency land alla quota minima sicura; alert SMS PC + pilot |
 | **Standard di riferimento** | RTCA DO-377 (C2 link); JARUS SORA 2.5 Annex F (lost-link procedure); EUROCAE ED-269 |
-| **Owner agent** | Avionics Lead + Safety Engineer |
+| **Owner specialista** | Avionics Lead + Safety Engineer |
 | **Test method** | Simulation HIL + flight test (in autorizzazione condizionata) |
 | **Status** | Concept |
 | **Confidence** | medium |
@@ -317,7 +317,7 @@ Le interfacce Ground Segment coprono HMI workstation, GS mobile (Protezione Civi
 | **Direzione** | Bidirezionale (PC → Firmamento richiesta; Firmamento → PC stato) |
 | **Caratteristiche tecniche** | Trigger via (1) SMS gateway dedicato +39 numero unico, (2) email PEC priority, (3) webform dashboard. Acknowledge entro 5 min; launch decision entro 15 min TTR; ortofoto live entro 30 min (target nominale) |
 | **Standard di riferimento** | SOP standard tabletop tested M+6/M+7; D.Lgs. 1/2018 Codice Protezione Civile; convenzione operativa ex art. 15 L. 241/90 |
-| **Owner agent** | Operations Lead + PC Liaison Officer (Regione) |
+| **Owner specialista** | Operations Lead + PC Liaison Officer (Regione) |
 | **Test method** | Tabletop exercise + scenario simulation + response time measurement |
 | **Status** | Concept |
 | **Confidence** | medium |
@@ -352,7 +352,7 @@ Le interfacce regolatorie vengono **gestite tramite formalismi documentali** (le
 | **Direzione** | Bidirezionale (application + authorization) |
 | **Caratteristiche tecniche** | Application: Operations Manual + SORA worksheet + Operator Declaration + insurance certificate + DAA mitigation evidence; iter: pre-application meeting M+3/M+6, application formal M+15/M+18 (Fase 1), authorization expected M+18/M+22; categoria Specific SAIL III stimato per BVLOS Pentema |
 | **Standard di riferimento** | Reg. UE 2019/947 art. 12 + AMC/GM Amendment 3 (Sett 2025) SORA 2.5 EU; ENAC Reg. APR Ed. 3 |
-| **Owner agent** | Aviation Regulatory Counsel + ENAC Liaison |
+| **Owner specialista** | Aviation Regulatory Counsel + ENAC Liaison |
 | **Test method** | Documentation review + pre-application feedback |
 | **Status** | Concept |
 | **Confidence** | medium |
@@ -395,7 +395,7 @@ Il Percorso 6B (HALE solare stratosferico) si trova in stato **R&D Phase B prepa
 | **Direzione** | Statica (bonded) |
 | **Caratteristiche tecniche** | Area pannelli ≥ 25 m² (worst-case calc inverno 44°N); panel mass density 0.5-0.8 kg/m² (~0.6 kg/m² target); encapsulation Honeywell Aclar (UV resistant); bonding film 3M VHB structural; thermal CTE matching CFRP critical |
 | **Standard di riferimento** | ECSS-Q-ST-70-71 (Materials and Processes for spacecraft); ASTM E1980 (solar reflectance) |
-| **Owner agent** | Aerodynamics-Structures Engineer + Solar Cell Specialist |
+| **Owner specialista** | Aerodynamics-Structures Engineer + Solar Cell Specialist |
 | **Test method** | Bonding strength test (lap shear) + thermal cycling -65/+40°C + UV exposure 1000h |
 | **Status** | Concept |
 | **Confidence** | low |
@@ -433,7 +433,7 @@ Le interfacce service link NTN costituiscono **frontier R&D**: 3GPP Rel-17/18 NT
 | **Direzione** | Unidirezionale (DL) |
 | **Caratteristiche tecniche** | Frequency S-band 2010-2025 MHz (3GPP banda n255) o 1980-2010 MHz (n256); bandwidth 5-20 MHz per beam; modulation up to 256-QAM; coverage cell 30-50 km diameter @ 20 km altitude; capacity per beam 50-200 Mbps; 16-32 beam aggregato 1-3 Gbps per HAPS |
 | **Standard di riferimento** | 3GPP TS 38.211/.212/.213/.214 (NR L1); TS 38.811 (NTN study report); TS 38.821 (NTN solutions); ITU-R M.2150 |
-| **Owner agent** | Telecom-NTN Payload Expert |
+| **Owner specialista** | Telecom-NTN Payload Expert |
 | **Test method** | Link budget simulation + over-the-air test (vs UE simulator) + capacity test field |
 | **Status** | Concept |
 | **Confidence** | low |
@@ -504,7 +504,7 @@ Le interfacce trasversali sono **comuni ai Percorsi 6A + 6B** e coprono cloud so
 | **Direzione** | Contrattuale |
 | **Caratteristiche tecniche** | Provider GAIA-X Label Level 2+ (data sovereignty); region IT or EU; SLA uptime ≥ 99.9% (Tier 3 datacenter); RPO ≤ 4h; data residency garantita IT/EU; subprocessor list GDPR Art. 28; backup geo-redundant EU |
 | **Standard di riferimento** | GAIA-X Compliance Framework v22.10 (e successive); ISO/IEC 27001; SOC 2 Type II; CSA STAR Level 2 |
-| **Owner agent** | Cloud Architect + Procurement + DPO |
+| **Owner specialista** | Cloud Architect + Procurement + DPO |
 | **Test method** | Provider audit + GAIA-X attestation review + data residency test + DR drill |
 | **Status** | Concept |
 | **Confidence** | high |
@@ -650,7 +650,7 @@ L'ICD viene re-baselined al verificarsi di uno dei seguenti **trigger eventi**:
 1. **Change Control Board (CCB) decision** su modifica architettura (es. cambio vendor UAS post-Trade Study)
 2. **Falsifying observation confermata** (es. ENAC richiede SAIL IV, INT-6A-REG-001 cambia scope)
 3. **Nuovo standard normativo** (es. AGCOM aggiorna PNRF allocando nuova banda HAPS)
-4. **Major audit finding** (red team / regulatory adversary / RINA-DNV) che identifica gap critico
+4. **Major audit finding** (review critica indipendente / RINA-DNV) che identifica gap critico
 5. **First Flight lessons learned** (Fase 1 M+22/M+24)
 
 ---
@@ -691,9 +691,9 @@ L'ICD viene re-baselined al verificarsi di uno dei seguenti **trigger eventi**:
 
 [^17]: Cap. 6 dello Studio (`studio-di-fattibilita/cap-06-analisi-tecnica.md`), Architettura 6A + 6B + verdetto tecnico. Riferimento architetturale. Confidence: high.
 
-[^18]: Agenti `.claude/agents/avionics-gnc-engineer.md`, `telecom-ntn-payload-expert.md`, `aerodynamics-structures-engineer.md`, `earth-observation-expert.md`. Riferimenti specialistici. Confidence: high (interni progetto).
+[^18]: Team specialistici interni di progetto (avionica + GNC, telecom NTN, aerodinamica + strutture, Earth Observation). Confidence high (interni progetto).
 
-[^19]: Skill `epistemic-rigor`, disciplina falsifiability + triangulation + confidence levels applicata in tutto il documento. Confidence: high.
+[^19]: Metodologia di rigore epistemico, disciplina falsifiability + triangulation + confidence levels applicata in tutto il documento. Confidence: high.
 
 ---
 
@@ -703,80 +703,80 @@ L'ICD viene re-baselined al verificarsi di uno dei seguenti **trigger eventi**:
 
 ```
 +-----------------------------------------------------------------------------------+
-|                       PERCORSO 6A: SISTEMA COMPLETO VTOL                          |
+| PERCORSO 6A: SISTEMA COMPLETO VTOL |
 +-----------------------------------------------------------------------------------+
-|                                                                                   |
-|   +-------------------+                                                           |
-|   |  AIR SEGMENT      |                                                           |
-|   |  (VTOL JOUAV)     |                                                           |
-|   |                   |     INT-6A-C2-001 (Uplink RF 2.4 GHz, OFDM)              |
-|   |   +-----------+   |     INT-6A-C2-002 (Downlink Telemetry MAVLink)           |
-|   |   | FCS +     |   | <=========================================>+             |
-|   |   | Autopilot |   |     INT-6A-DATA-005 (Telemetry 10 Hz)      |             |
-|   |   +-----------+   |     INT-6A-DATA-006 (Video Preview H.265)  |             |
-|   |        ^          |                                            |             |
-|   |        | INT-09   |     INT-6A-C2-003 (SATCOM L-band fallback) |             |
-|   |        v          | <-------> Iridium NEXT LEO -----+          |             |
-|   |   +-----------+   |                                 |          |             |
-|   |   | Sensors:  |   |     INT-6A-C2-006 (ADS-B IN)    |          |             |
-|   |   | IMU 3x    |   | <----- Air Traffic ADS-B        |          |             |
-|   |   | GNSS 2-band   |     INT-6A-C2-008 (Geofence)    |          v             |
-|   |   | Baro/Compass  |                                  |   +-------------+      |
-|   |   +-----------+   |                                  +-->|  GROUND     |      |
-|   |        ^          |                                      |  SEGMENT    |      |
-|   |   +-----------+   |                                      |             |      |
-|   |   | Modular   |   |                                      | +---------+ |      |
-|   |   | Payload   |   |     INT-6A-DATA-001 (RGB GigE)      | | GS Fixed| |      |
-|   |   | Bay       |   | <-- INT-6A-DATA-002 (IR USB 3.0)    | | Pentema | |      |
-|   |   | EO/IR/    |   |     INT-6A-DATA-003 (NVMe storage)  | | (cont.) | |      |
-|   |   | telecom   |   |                                      | +---------+ |      |
-|   |   +-----------+   |     INT-6A-PHY-001 (Mech mount)     | +---------+ |      |
-|   |        ^          |     INT-6A-PHY-002 (28V power)      | | GS      | |      |
-|   |        | INT-6A-PHY-003 |                               | | Mobile  | |      |
-|   |        | (Ethernet GigE)|                               | | (vehicle)| |     |
-|   |        v          |                                      | +---------+ |      |
-|   |   +-----------+   |                                      |             |      |
-|   |   | Battery   |   |     INT-6A-PHY-006 (BMS, CAN)       | INT-6A-GS-001 HMI |
-|   |   | LiPo 6S   |   |                                      | INT-6A-GS-002 Mobile|
-|   |   | 22.2V     |   |                                      | INT-6A-GS-006 HMS |
-|   |   +-----------+   |                                      +-------------+      |
-|   +-------------------+                                            |              |
-|                                                                    | INT-6A-PHY-010 (Backhaul)
-|                                                                    | INT-6A-DATA-004 (S3 upload)
-|                                                                    v              |
-|                                                              +-------------+      |
-|                                                              |  CLOUD IT/EU|      |
-|                                                              | (Aruba/OVH) |      |
-|                                                              | GAIA-X      |      |
-|                                                              |             |      |
-|                                                              | INT-6A-DATA-007 (Pipeline)
-|                                                              | INT-6A-GS-007 (Anonymization)
-|                                                              | INT-6A-GS-008 (Backup DR)
-|                                                              | INT-X-LOGGING-001 (SIEM)
-|                                                              +-------------+      |
-|                                                                    |              |
-|                                                                    | INT-6A-GS-003 (HTTPS)
-|                                                                    v              |
-|                                +-------------------+        +-------------+       |
-|                                |  END USER:        |        | Cooperative |       |
-|                                |  Cooperative      |<======>| Dashboard   |       |
-|                                |  (Legacoop)       |  SPID  | (Web App)   |       |
-|                                +-------------------+  SAML  +-------------+       |
-|                                                                                   |
-|                                +-------------------+                              |
-|                                |  END USER:        |   INT-6A-GS-004              |
-|                                |  Protezione Civile|<=====================+       |
-|                                |  Sala Operativa   |   (SMS/PEC/Webform)         |
-|                                +-------------------+                              |
-|                                                                                   |
-|   REGULATORY INTERFACES (compliance overlay):                                     |
-|   - INT-6A-REG-001 (ENAC SORA SAIL III)    [Operatore <-> ENAC]                  |
-|   - INT-6A-REG-002 (AGCOM Spectrum 2.4+L)  [Operatore <-> AGCOM]                  |
-|   - INT-6A-REG-003 (ENAV / D-Flight U-Space)[GCS <-> USSP]                       |
-|   - INT-6A-REG-004 (Garante DPIA)          [Operatore <-> Garante]               |
-|   - INT-6A-REG-005 (Insurance EU 785/2004) [Operatore <-> Broker]                |
-|   - INT-6A-REG-006 (NIS2 ACN)              [Operatore <-> ACN]                   |
-|                                                                                   |
+| |
+| +-------------------+ |
+| | AIR SEGMENT | |
+| | (VTOL JOUAV) | |
+| | | INT-6A-C2-001 (Uplink RF 2.4 GHz, OFDM) |
+| | +-----------+ | INT-6A-C2-002 (Downlink Telemetry MAVLink) |
+| | | FCS + | | <=========================================>+ |
+| | | Autopilot | | INT-6A-DATA-005 (Telemetry 10 Hz) | |
+| | +-----------+ | INT-6A-DATA-006 (Video Preview H.265) | |
+| | ^ | | |
+| | | INT-09 | INT-6A-C2-003 (SATCOM L-band fallback) | |
+| | v | <-------> Iridium NEXT LEO -----+ | |
+| | +-----------+ | | | |
+| | | Sensors: | | INT-6A-C2-006 (ADS-B IN) | | |
+| | | IMU 3x | | <----- Air Traffic ADS-B | | |
+| | | GNSS 2-band | INT-6A-C2-008 (Geofence) | v |
+| | | Baro/Compass | | +-------------+ |
+| | +-----------+ | +-->| GROUND | |
+| | ^ | | SEGMENT | |
+| | +-----------+ | | | |
+| | | Modular | | | +---------+ | |
+| | | Payload | | INT-6A-DATA-001 (RGB GigE) | | GS Fixed| | |
+| | | Bay | | <-- INT-6A-DATA-002 (IR USB 3.0) | | Pentema | | |
+| | | EO/IR/ | | INT-6A-DATA-003 (NVMe storage) | | (cont.) | | |
+| | | telecom | | | +---------+ | |
+| | +-----------+ | INT-6A-PHY-001 (Mech mount) | +---------+ | |
+| | ^ | INT-6A-PHY-002 (28V power) | | GS | | |
+| | | INT-6A-PHY-003 | | | Mobile | | |
+| | | (Ethernet GigE)| | | (vehicle)| | |
+| | v | | +---------+ | |
+| | +-----------+ | | | |
+| | | Battery | | INT-6A-PHY-006 (BMS, CAN) | INT-6A-GS-001 HMI |
+| | | LiPo 6S | | | INT-6A-GS-002 Mobile|
+| | | 22.2V | | | INT-6A-GS-006 HMS |
+| | +-----------+ | +-------------+ |
+| +-------------------+ | |
+| | INT-6A-PHY-010 (Backhaul)
+| | INT-6A-DATA-004 (S3 upload)
+| v |
+| +-------------+ |
+| | CLOUD IT/EU| |
+| | (Aruba/OVH) | |
+| | GAIA-X | |
+| | | |
+| | INT-6A-DATA-007 (Pipeline)
+| | INT-6A-GS-007 (Anonymization)
+| | INT-6A-GS-008 (Backup DR)
+| | INT-X-LOGGING-001 (SIEM)
+| +-------------+ |
+| | |
+| | INT-6A-GS-003 (HTTPS)
+| v |
+| +-------------------+ +-------------+ |
+| | END USER: | | Cooperative | |
+| | Cooperative |<======>| Dashboard | |
+| | (Legacoop) | SPID | (Web App) | |
+| +-------------------+ SAML +-------------+ |
+| |
+| +-------------------+ |
+| | END USER: | INT-6A-GS-004 |
+| | Protezione Civile|<=====================+ |
+| | Sala Operativa | (SMS/PEC/Webform) |
+| +-------------------+ |
+| |
+| REGULATORY INTERFACES (compliance overlay): |
+| - INT-6A-REG-001 (ENAC SORA SAIL III) [Operatore <-> ENAC] |
+| - INT-6A-REG-002 (AGCOM Spectrum 2.4+L) [Operatore <-> AGCOM] |
+| - INT-6A-REG-003 (ENAV / D-Flight U-Space)[GCS <-> USSP] |
+| - INT-6A-REG-004 (Garante DPIA) [Operatore <-> Garante] |
+| - INT-6A-REG-005 (Insurance EU 785/2004) [Operatore <-> Broker] |
+| - INT-6A-REG-006 (NIS2 ACN) [Operatore <-> ACN] |
+| |
 +-----------------------------------------------------------------------------------+
 ```
 
@@ -784,321 +784,321 @@ L'ICD viene re-baselined al verificarsi di uno dei seguenti **trigger eventi**:
 
 ```
 +-----------------------------------------------------------------------------------+
-|                  PERCORSO 6B: SISTEMA COMPLETO HALE STRATOSFERICO                 |
-|                            (Quota 18-21 km, FL590-690)                            |
+| PERCORSO 6B: SISTEMA COMPLETO HALE STRATOSFERICO |
+| (Quota 18-21 km, FL590-690) |
 +-----------------------------------------------------------------------------------+
-|                                                                                   |
-|                                                                                   |
-|             +--------------------------------------------+                        |
-|             |  HALE SOLARE                               |                        |
-|             |  Wing 25-30 m, MTOW 80-150 kg              |                        |
-|             |                                            |                        |
-|             |  +------------+      INT-6B-PHY-001        |                        |
-|             |  | Solar Array|<===== (Mech+Thermal Bond)  |                        |
-|             |  | GaAs 25+ m2|                            |                        |
-|             |  +------------+                            |                        |
-|             |        v                                   |                        |
-|             |  +------------+      INT-6B-PHY-003        |                        |
-|             |  | LiS Battery|<===== (Thermal Mgmt)       |                        |
-|             |  | 100+ kWh   |       Heater 50W cont      |                        |
-|             |  +------------+                            |                        |
-|             |        v                                   |                        |
-|             |  +------------+      INT-6B-PHY-002        |                        |
-|             |  | Airframe   |<===== (Spar-Fuselage Joint)|                        |
-|             |  | CFRP/lino  |       Flutter margin >=20% |                        |
-|             |  | hi-AR >25  |                            |                        |
-|             |  +------------+                            |                        |
-|             |        v                                   |                        |
-|             |  +------------+      INT-6B-PHY-004        |                        |
-|             |  | AESA       |<===== (Ka-band aperture)   |                        |
-|             |  | Phased Arr |       256-element, 30x30cm |                        |
-|             |  | 31 GHz     |                            |                        |
-|             |  +------------+                            |                        |
-|             |        ^                                   |                        |
-|             |        | INT-6B-FEEDER-001 (DL 31-31.3 GHz)|                        |
-|             |        | INT-6B-FEEDER-002 (UL 27.9-28.2 GHz)                      |
-|             |        v                                   |                        |
-|             +--------------------------------------------+                        |
-|                            ^               ^                                      |
-|                            |               |                                      |
-|             +--------------|---------------|----------------------------+         |
-|             |              |               |                            |         |
-|             v              v               v                            v         |
-|         +-------+    +-----------+    +-------+              +------------------+ |
-|         | UE 1  |    | UE 2 IoT  |    | UE 3  |              | GATEWAY HAPS     | |
-|         | 5G    |    | NTN       |    | Vehic |              | Ground Station   | |
-|         | smart |    |           |    | 5G    |              | (Genova / La Spez)| |
-|         | phone |    |           |    |       |              |                  | |
-|         +-------+    +-----------+    +-------+              | Parabola 3-5 m   | |
-|             ^              ^               ^                  | RX Ka-band       | |
-|             |              |               |                  +------------------+ |
-|             +--------------+---------------+                          |            |
-|                            |                                          v            |
-|                  INT-6B-NTN-001 (DL S-band 2.0-2.025 GHz)    INT-6B-FEEDER-003   |
-|                  INT-6B-NTN-002 (UL S-band)                  (5G Core SBA, MPLS)  |
-|                  INT-6B-NTN-003 (Doppler ±50 Hz)                      |            |
-|                  INT-6B-NTN-004 (Inter-Beam HO)                       v            |
-|                                                              +------------------+ |
-|                                                              | 5G CORE NETWORK  | |
-|                                                              | (TIM / Vodafone) | |
-|                                                              | (or wholesale    | |
-|                                                              |  via Open Fiber) | |
-|                                                              +------------------+ |
-|                                                                                   |
-|   OPERATIONAL INTERFACES (HALE-specific):                                         |
-|   - INT-6B-OPS-001 (HALE ATC ENAV)         [Ops Center <-> ACC Milano]           |
-|   - INT-6B-OPS-002 (EUROCONTROL Cross-Border)[Ops Center <-> NM Brussels]        |
-|   - INT-6B-OPS-003 (Launch/Recovery Site)  [HALE <-> Sarzana-Luni or Albenga]    |
-|                                                                                   |
+| |
+| |
+| +--------------------------------------------+ |
+| | HALE SOLARE | |
+| | Wing 25-30 m, MTOW 80-150 kg | |
+| | | |
+| | +------------+ INT-6B-PHY-001 | |
+| | | Solar Array|<===== (Mech+Thermal Bond) | |
+| | | GaAs 25+ m2| | |
+| | +------------+ | |
+| | v | |
+| | +------------+ INT-6B-PHY-003 | |
+| | | LiS Battery|<===== (Thermal Mgmt) | |
+| | | 100+ kWh | Heater 50W cont | |
+| | +------------+ | |
+| | v | |
+| | +------------+ INT-6B-PHY-002 | |
+| | | Airframe |<===== (Spar-Fuselage Joint)| |
+| | | CFRP/lino | Flutter margin >=20% | |
+| | | hi-AR >25 | | |
+| | +------------+ | |
+| | v | |
+| | +------------+ INT-6B-PHY-004 | |
+| | | AESA |<===== (Ka-band aperture) | |
+| | | Phased Arr | 256-element, 30x30cm | |
+| | | 31 GHz | | |
+| | +------------+ | |
+| | ^ | |
+| | | INT-6B-FEEDER-001 (DL 31-31.3 GHz)| |
+| | | INT-6B-FEEDER-002 (UL 27.9-28.2 GHz) |
+| | v | |
+| +--------------------------------------------+ |
+| ^ ^ |
+| | | |
+| +--------------|---------------|----------------------------+ |
+| | | | | |
+| v v v v |
+| +-------+ +-----------+ +-------+ +------------------+ |
+| | UE 1 | | UE 2 IoT | | UE 3 | | GATEWAY HAPS | |
+| | 5G | | NTN | | Vehic | | Ground Station | |
+| | smart | | | | 5G | | (Genova / La Spez)| |
+| | phone | | | | | | | |
+| +-------+ +-----------+ +-------+ | Parabola 3-5 m | |
+| ^ ^ ^ | RX Ka-band | |
+| | | | +------------------+ |
+| +--------------+---------------+ | |
+| | v |
+| INT-6B-NTN-001 (DL S-band 2.0-2.025 GHz) INT-6B-FEEDER-003 |
+| INT-6B-NTN-002 (UL S-band) (5G Core SBA, MPLS) |
+| INT-6B-NTN-003 (Doppler ±50 Hz) | |
+| INT-6B-NTN-004 (Inter-Beam HO) v |
+| +------------------+ |
+| | 5G CORE NETWORK | |
+| | (TIM / Vodafone) | |
+| | (or wholesale | |
+| | via Open Fiber) | |
+| +------------------+ |
+| |
+| OPERATIONAL INTERFACES (HALE-specific): |
+| - INT-6B-OPS-001 (HALE ATC ENAV) [Ops Center <-> ACC Milano] |
+| - INT-6B-OPS-002 (EUROCONTROL Cross-Border)[Ops Center <-> NM Brussels] |
+| - INT-6B-OPS-003 (Launch/Recovery Site) [HALE <-> Sarzana-Luni or Albenga] |
+| |
 +-----------------------------------------------------------------------------------+
 ```
 
 ### A.4.10.3 Data flow 6A (UAV → GS → Cloud → User)
 
 ```
-+---------+      +---------+      +---------+      +---------+      +---------+
-| Sensor  |      | Mission |      | Ground  |      | Cloud   |      | End User|
++---------+ +---------+ +---------+ +---------+ +---------+
+| Sensor | | Mission | | Ground | | Cloud | | End User|
 | (RGB/IR)|----->| Computer|----->| Station |----->| (Aruba) |----->| (Coop/PA)|
-+---------+      +---------+      +---------+      +---------+      +---------+
-   |                  |                |                |                |
-   | INT-6A-DATA-001  |                |                |                |
-   | (GigE Vision)    |                |                |                |
-   | RGB 100MB/frame  |                |                |                |
-   |----------------> |                |                |                |
-   |                  |                |                |                |
-   | INT-6A-DATA-002  |                |                |                |
-   | (USB 3.0)        |                |                |                |
-   | IR 9 Hz LWIR     |                |                |                |
-   |----------------> |                |                |                |
-   |                  |                |                |                |
-   |       INT-6A-DATA-003             |                |                |
-   |       (NVMe SSD R/W 1.5 GB/s)     |                |                |
-   |       store onboard               |                |                |
-   |                  | ============>  |                |                |
-   |                  |                |                |                |
-   |                  |   INT-6A-DATA-005 (MAVLink 10 Hz)               |
-   |                  |   Telemetry real-time GS                         |
-   |                  |--------------> |                |                |
-   |                  |                |                |                |
-   |                  |   INT-6A-DATA-006 (RTSP H.265)                  |
-   |                  |   Video preview low-bitrate                      |
-   |                  |--------------> |                |                |
-   |                  |                |                                  |
-   |                  |    POST-MISSION INGEST (NVMe rimovibile o WiFi 6) |
-   |                  |                |                                  |
-   |                  |                | INT-6A-PHY-010 + INT-6A-DATA-004 |
-   |                  |                | (Fibra/FWA/Starlink + S3 API)    |
-   |                  |                |--------------->|                 |
-   |                  |                | 25-50 GB upload                  |
-   |                  |                |                |                 |
-   |                  |                |  INT-6A-DATA-007 (Pipeline)     |
-   |                  |                |  Photogrammetry SfM             |
-   |                  |                |  Pix4D/Agisoft                  |
-   |                  |                |  30-120 min processing          |
-   |                  |                |                | ============>  |
-   |                  |                |                |                |
-   |                  |                |  INT-6A-GS-007 (Anonymization) |
-   |                  |                |  Face/plate blur AI inference  |
-   |                  |                |  ≤ 5 min/ortofoto              |
-   |                  |                |                | ============>  |
-   |                  |                |                |                |
-   |                  |                |  INT-6A-GS-003 (Dashboard)     |
-   |                  |                |  HTTPS + SPID + RBAC polygon   |
-   |                  |                |                |--------------->|
-   |                  |                |                | GeoTIFF + PDF  |
-   |                  |                |                |                |
-   +------------------+----------------+----------------+----------------+
-                           AUDIT TRAIL & LOGGING
-                       INT-6A-DATA-008 + INT-X-LOGGING-001
-                          (Syslog over TLS, CEF, SIEM)
++---------+ +---------+ +---------+ +---------+ +---------+
+ | | | | |
+ | INT-6A-DATA-001 | | | |
+ | (GigE Vision) | | | |
+ | RGB 100MB/frame | | | |
+ |----------------> | | | |
+ | | | | |
+ | INT-6A-DATA-002 | | | |
+ | (USB 3.0) | | | |
+ | IR 9 Hz LWIR | | | |
+ |----------------> | | | |
+ | | | | |
+ | INT-6A-DATA-003 | | |
+ | (NVMe SSD R/W 1.5 GB/s) | | |
+ | store onboard | | |
+ | | ============> | | |
+ | | | | |
+ | | INT-6A-DATA-005 (MAVLink 10 Hz) |
+ | | Telemetry real-time GS |
+ | |--------------> | | |
+ | | | | |
+ | | INT-6A-DATA-006 (RTSP H.265) |
+ | | Video preview low-bitrate |
+ | |--------------> | | |
+ | | | |
+ | | POST-MISSION INGEST (NVMe rimovibile o WiFi 6) |
+ | | | |
+ | | | INT-6A-PHY-010 + INT-6A-DATA-004 |
+ | | | (Fibra/FWA/Starlink + S3 API) |
+ | | |--------------->| |
+ | | | 25-50 GB upload |
+ | | | | |
+ | | | INT-6A-DATA-007 (Pipeline) |
+ | | | Photogrammetry SfM |
+ | | | Pix4D/Agisoft |
+ | | | 30-120 min processing |
+ | | | | ============> |
+ | | | | |
+ | | | INT-6A-GS-007 (Anonymization) |
+ | | | Face/plate blur AI inference |
+ | | | ≤ 5 min/ortofoto |
+ | | | | ============> |
+ | | | | |
+ | | | INT-6A-GS-003 (Dashboard) |
+ | | | HTTPS + SPID + RBAC polygon |
+ | | | |--------------->|
+ | | | | GeoTIFF + PDF |
+ | | | | |
+ +------------------+----------------+----------------+----------------+
+ AUDIT TRAIL & LOGGING
+ INT-6A-DATA-008 + INT-X-LOGGING-001
+ (Syslog over TLS, CEF, SIEM)
 ```
 
 ### A.4.10.4 C2 link architecture (primary + secondary)
 
 ```
-                         GROUND STATION (Pentema)
-                                  |
-                                  v
-                    +---------------------------+
-                    | RF Transceiver Microhard  |
-                    | pMDDL2450 (2.4-2.485 GHz) |
-                    +---------------------------+
-                              ^      v
-                              |      | INT-6A-C2-001 (Uplink RF OFDM)
-                              |      | EIRP <= 100 mW or 1 W lic
-                              |      | latency <= 100 ms one-way
-                              |      | fade margin >= 12 dB
-                              |      |
-                INT-6A-C2-002 |      |
-                  (Downlink   |      |
-                Telemetry)    |      |
-                MAVLink v2.0  |      |
-                AES-256-GCM   |      v
-                              |      \
-                              |       \  RF LOS
-                              |        \   ~50 km nominale
-                              |         \    (Pentema effetto: ~20-30 km)
-                              |          \
-                              |           v
-                            +---------------------------+
-                            |  AIRBORNE                 |
-                            |  RF Transceiver           |
-                            |  Whip Antenna 5 dBi omni  |
-                            +---------------------------+
-                                  ^         ^
-                                  |         |
-                                  |         | INT-6A-C2-005
-                                  |         | (Mutual TLS + JWT)
-                                  |         |
-                                  v         v
-                            +---------------------------+
-                            |  FCS (Flight Computer)    |
-                            |                           |
-                            |  +---------------------+  |
-                            |  | INT-6A-C2-004       |  |
-                            |  | Lost-Link Procedure |  |
-                            |  | Trigger > 5s lost   |  |
-                            |  | RTH automatic       |  |
-                            |  +---------------------+  |
-                            |                           |
-                            |  +---------------------+  |
-                            |  | INT-6A-C2-006       |  |
-                            |  | ADS-B IN (DAA coop) |  |
-                            |  +---------------------+  |
-                            |                           |
-                            |  +---------------------+  |
-                            |  | INT-6A-C2-008       |  |
-                            |  | Geofence enforcer   |  |
-                            |  +---------------------+  |
-                            +---------------------------+
-                                       ^
-                                       |
-                                       | If RF link lost > 5s OR
-                                       | shadow zone detected
-                                       v
-                            +---------------------------+
-                            |  FALLBACK: Iridium Certus |
-                            |  L-band 1616-1626.5 MHz   |
-                            |  Patch antenna 70x70 mm   |
-                            |  conformal                |
-                            +---------------------------+
-                                       ^
-                                       | INT-6A-C2-003 (SATCOM)
-                                       | Throughput 22-700 kbps
-                                       | Latency one-way 200-400 ms
-                                       | Coverage globale (66 sat LEO)
-                                       v
-                              +---------------------+
-                              | Iridium NEXT LEO    |
-                              | Constellation       |
-                              +---------------------+
-                                       |
-                                       v
-                              +---------------------+
-                              | Iridium Gateway     |
-                              | (terrestrial hub)   |
-                              +---------------------+
-                                       |
-                                       v
-                              +---------------------+
-                              | GS Pentema          |
-                              | (via IP backhaul)   |
-                              +---------------------+
+ GROUND STATION (Pentema)
+ |
+ v
+ +---------------------------+
+ | RF Transceiver Microhard |
+ | pMDDL2450 (2.4-2.485 GHz) |
+ +---------------------------+
+ ^ v
+ | | INT-6A-C2-001 (Uplink RF OFDM)
+ | | EIRP <= 100 mW or 1 W lic
+ | | latency <= 100 ms one-way
+ | | fade margin >= 12 dB
+ | |
+ INT-6A-C2-002 | |
+ (Downlink | |
+ Telemetry) | |
+ MAVLink v2.0 | |
+ AES-256-GCM | v
+ | \
+ | \ RF LOS
+ | \ ~50 km nominale
+ | \ (Pentema effetto: ~20-30 km)
+ | \
+ | v
+ +---------------------------+
+ | AIRBORNE |
+ | RF Transceiver |
+ | Whip Antenna 5 dBi omni |
+ +---------------------------+
+ ^ ^
+ | |
+ | | INT-6A-C2-005
+ | | (Mutual TLS + JWT)
+ | |
+ v v
+ +---------------------------+
+ | FCS (Flight Computer) |
+ | |
+ | +---------------------+ |
+ | | INT-6A-C2-004 | |
+ | | Lost-Link Procedure | |
+ | | Trigger > 5s lost | |
+ | | RTH automatic | |
+ | +---------------------+ |
+ | |
+ | +---------------------+ |
+ | | INT-6A-C2-006 | |
+ | | ADS-B IN (DAA coop) | |
+ | +---------------------+ |
+ | |
+ | +---------------------+ |
+ | | INT-6A-C2-008 | |
+ | | Geofence enforcer | |
+ | +---------------------+ |
+ +---------------------------+
+ ^
+ |
+ | If RF link lost > 5s OR
+ | shadow zone detected
+ v
+ +---------------------------+
+ | FALLBACK: Iridium Certus |
+ | L-band 1616-1626.5 MHz |
+ | Patch antenna 70x70 mm |
+ | conformal |
+ +---------------------------+
+ ^
+ | INT-6A-C2-003 (SATCOM)
+ | Throughput 22-700 kbps
+ | Latency one-way 200-400 ms
+ | Coverage globale (66 sat LEO)
+ v
+ +---------------------+
+ | Iridium NEXT LEO |
+ | Constellation |
+ +---------------------+
+ |
+ v
+ +---------------------+
+ | Iridium Gateway |
+ | (terrestrial hub) |
+ +---------------------+
+ |
+ v
+ +---------------------+
+ | GS Pentema |
+ | (via IP backhaul) |
+ +---------------------+
 ```
 
 ### A.4.10.5 HAPS service link + feeder link (6B)
 
 ```
-                                            +-----------------+
-                                            |  HALE @ 20 km   |
-                                            |  station-keep   |
-                                            |  ±5 km nominal  |
-                                            +--+-----------+--+
-                                               |           |
-                                               |           |
-                                               |           |
-                       INT-6B-FEEDER-002       |           |    INT-6B-FEEDER-001
-                       Ka UL 27.9-28.2 GHz     |           |    Ka DL 31-31.3 GHz
-                       Gateway TX EIRP 70 dBW  |           |    HAPS TX EIRP 60 dBW
-                       UL capacity 100M-1Gbps  |           |    DL capacity 1-10 Gbps
-                       <-----------------------+           +----------------------->
-                                               |           |
-                                               |           |
-                       INT-6B-NTN-001          |           |    INT-6B-NTN-002
-                       DL S-band 2.0-2.025 GHz|           |    UL S-band paired
-                       Cell 30-50 km diam      |           |    UE EIRP max 23 dBm
-                       Per-beam 50-200 Mbps    |           |    UL bottleneck
-                       <-----------------------+           +----------------------->
-                                               |           |
-                                               |           |
-                                               v           v
-       +----------------+          +----------+ +----------+          +----------------+
-       | UE Smartphone  |          | UE IoT-NTN|| UE Vehicle           | Gateway HAPS   |
-       | 5G NTN capable |          | sensor   | | 5G       |          | Genova or      |
-       | 23 dBm EIRP    |          | low pwr  | | mobile   |          | La Spezia      |
-       +----------------+          +----------+ +----------+          | Parabola 3-5m  |
-                                                                       | Site diversity |
-                                                                       +----------------+
-                                                                              |
-                                                                              | INT-6B-FEEDER-003
-                                                                              | (5G Core SBA)
-                                                                              | N2/N3 over MPLS
-                                                                              v
-                                                                       +----------------+
-                                                                       | 5G CORE (TIM   |
-                                                                       | / Vodafone)    |
-                                                                       | AMF/SMF/UPF    |
-                                                                       +----------------+
-                                                                              |
-                                                                              v
-                                                                       +----------------+
-                                                                       | Internet PA    |
-                                                                       | Cooperative    |
-                                                                       | Wholesale      |
-                                                                       +----------------+
+ +-----------------+
+ | HALE @ 20 km |
+ | station-keep |
+ | ±5 km nominal |
+ +--+-----------+--+
+ | |
+ | |
+ | |
+ INT-6B-FEEDER-002 | | INT-6B-FEEDER-001
+ Ka UL 27.9-28.2 GHz | | Ka DL 31-31.3 GHz
+ Gateway TX EIRP 70 dBW | | HAPS TX EIRP 60 dBW
+ UL capacity 100M-1Gbps | | DL capacity 1-10 Gbps
+ <-----------------------+ +----------------------->
+ | |
+ | |
+ INT-6B-NTN-001 | | INT-6B-NTN-002
+ DL S-band 2.0-2.025 GHz| | UL S-band paired
+ Cell 30-50 km diam | | UE EIRP max 23 dBm
+ Per-beam 50-200 Mbps | | UL bottleneck
+ <-----------------------+ +----------------------->
+ | |
+ | |
+ v v
+ +----------------+ +----------+ +----------+ +----------------+
+ | UE Smartphone | | UE IoT-NTN|| UE Vehicle | Gateway HAPS |
+ | 5G NTN capable | | sensor | | 5G | | Genova or |
+ | 23 dBm EIRP | | low pwr | | mobile | | La Spezia |
+ +----------------+ +----------+ +----------+ | Parabola 3-5m |
+ | Site diversity |
+ +----------------+
+ |
+ | INT-6B-FEEDER-003
+ | (5G Core SBA)
+ | N2/N3 over MPLS
+ v
+ +----------------+
+ | 5G CORE (TIM |
+ | / Vodafone) |
+ | AMF/SMF/UPF |
+ +----------------+
+ |
+ v
+ +----------------+
+ | Internet PA |
+ | Cooperative |
+ | Wholesale |
+ +----------------+
 ```
 
 ### A.4.10.6 Regulatory interfaces overlay
 
 ```
 +-------------------------------------------------------------------+
-|              FIRMAMENTO TECHNOLOGIES (Operatore)                   |
+| FIRMAMENTO TECHNOLOGIES (Operatore) |
 +-------------------------------------------------------------------+
-       |                |                |                |
-       v                v                v                v
+ | | | |
+ v v v v
 +--------------+ +-------------+ +-------------+ +---------------+
-|  ENAC        | |  AGCOM      | |  Garante    | |  ACN          |
-|  Ufficio     | |  PNRF +     | |  Privacy    | |  (NIS2)       |
-|  RPAS        | |  Codice CCE | |             | |               |
-|              | |             | |             | |               |
+| ENAC | | AGCOM | | Garante | | ACN |
+| Ufficio | | PNRF + | | Privacy | | (NIS2) |
+| RPAS | | Codice CCE | | | | |
+| | | | | | | |
 | INT-6A-REG-001| INT-6A-REG-002| INT-6A-REG-004| INT-6A-REG-006 |
-| SORA SAIL III| | Spectrum    | | DPIA + DSAR | | Incident      |
-| BVLOS auth   | | 2.4 GHz +   | | Workshop    | | notification  |
-| Pre-app M+3-6| | L-band      | | pubblico    | | 24h initial    |
-| Final Fase 1 | | M+1-M+4     | | M+4-M+5     | | 72h detailed   |
+| SORA SAIL III| | Spectrum | | DPIA + DSAR | | Incident |
+| BVLOS auth | | 2.4 GHz + | | Workshop | | notification |
+| Pre-app M+3-6| | L-band | | pubblico | | 24h initial |
+| Final Fase 1 | | M+1-M+4 | | M+4-M+5 | | 72h detailed |
 +--------------+ +-------------+ +-------------+ +---------------+
 
 +--------------+ +---------------+ +---------------+
-|  ENAV /      | |  Insurance    | |  EUROCONTROL  |
-|  D-Flight    | |  Broker       | |  (HALE 6B)    |
-|  USSP        | |  (Lloyd/AON)  | |               |
-|              | |               | |               |
+| ENAV / | | Insurance | | EUROCONTROL |
+| D-Flight | | Broker | | (HALE 6B) |
+| USSP | | (Lloyd/AON) | | |
+| | | | | |
 | INT-6A-REG-003| INT-6A-REG-005 | | INT-6B-OPS-002|
-| U-Space      | | Reg.UE 785/04 | | IFPS flight   |
-| network ID + | | Massimale     | | plan          |
-| flight auth  | | 750k DSP min  | | Cross-border  |
-| Reg.UE 21/664| | (€870k)       | | coord         |
+| U-Space | | Reg.UE 785/04 | | IFPS flight |
+| network ID + | | Massimale | | plan |
+| flight auth | | 750k DSP min | | Cross-border |
+| Reg.UE 21/664| | (€870k) | | coord |
 +--------------+ +---------------+ +---------------+
 
 +--------------+ +---------------+
-|  GAIA-X      | |  ITU-R        |
-|  Compliance  | |  (long-term   |
-|  (Cloud)     | |   HAPS coord  |
-|              | |   6B)         |
+| GAIA-X | | ITU-R |
+| Compliance | | (long-term |
+| (Cloud) | | HAPS coord |
+| | | 6B) |
 | INT-X-CLOUD-001| INT-6B-FEEDER-* |
-| Provider     | | Coordination  |
-| Aruba/OVH    | | FSS Coexist   |
-| Label Lvl 2+ | | post-WRC-23   |
+| Provider | | Coordination |
+| Aruba/OVH | | FSS Coexist |
+| Label Lvl 2+ | | post-WRC-23 |
 +--------------+ +---------------+
 ```
 
@@ -1114,7 +1114,7 @@ L'**ICD preliminare v1.0** rappresenta il **secondo livello di rigore** sulle in
 
 ### A.4.11.1 Falsifying observations critiche identificate (≥ 5)
 
-L'ICD v1.0 identifica **8 falsifying observations critiche** (riferimento skill `epistemic-rigor` Regola 1):
+L'ICD v1.0 identifica **8 falsifying observations critiche** (riferimento regola 1 del rigore epistemico):
 
 1. **INT-6A-PHY-001**: se il vendor JOUAV (o eq.) non fornisce CAD interfacce, scatta re-engineering custom +€15-25k
 2. **INT-6A-C2-001**: shadow zones C2 Pentema, switch automatico SATCOM entro 5s richiesto
@@ -1165,4 +1165,4 @@ L'ICD si accoppia strettamente con:
 *Fine Allegato A.4: Interface Control Document (ICD) preliminare v1.0*
 
 *Documento di lavoro generato in coerenza con ARP4754A + ISO/IEC/IEEE 24765 + NASA SE Handbook §6.3*
-*Boundary conditions B1 + B2 preserve. Disciplina epistemica `epistemic-rigor` applicata.*
+*Boundary conditions B1 + B2 preserve. Disciplina epistemica rigore epistemico applicata.*

@@ -405,7 +405,7 @@ Penalty SLA manutenzione: il mancato rispetto SLA manutenzione correttiva on-sit
 
 ## Sezione 7, Criteri di valutazione vendor / Vendor Evaluation Criteria
 
-Le offerte sono valutate secondo i seguenti criteri pesati (skill `trade-study-analysis` Firmamento):
+Le offerte sono valutate secondo i seguenti criteri pesati (metodologia di trade study Firmamento):
 
 | Criterio | Peso | Sotto-criteri / Metriche |
 |---|---|---|

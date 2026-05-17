@@ -74,8 +74,8 @@ Le operazioni aeree non comportano consumo di suolo. L'hangar di Pentema occupa 
 
 Impatti potenziali:
 - **Avifauna**: rischio collisione con UAS (uccelli, rapaci, pipistrelli)
-  - Studi Sentinel e droni civili: < 0,1 incidenti/100 ore di volo
-  - Rapaci nidificanti Parco Antola: aquile, gufi, gheppi
+ - Studi Sentinel e droni civili: < 0,1 incidenti/100 ore di volo
+ - Rapaci nidificanti Parco Antola: aquile, gufi, gheppi
 - **Fauna terrestre**: disturbo da rumore (limitato per VTOL elettrico)
 - **Habitat**: nessun impatto fisico (operazioni aeree)
 

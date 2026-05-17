@@ -7,8 +7,8 @@
 > **Versione:** bozza M+3 (post-Allineamento Strategico Maggio 2026)
 > **Stato:** capitolo redatto con fonti normative e di programmazione aggiornate al maggio 2026 (PSNAI 30 luglio 2025; D.Lgs. 36/2023 + Allegato I.7; ENAC Piano AAM 2021-2030)
 > **Conformità formale:** art. 41 D.Lgs. 36/2023 + Allegato I.7, Sezione I (Quadro Esigenziale, QE)
-> **Disciplina epistemica:** applicate Regole 1-7 della skill `epistemic-rigor` (falsifiability, triangulation, source provenance, confidence levels, pre-mortem, steel-manning, base-rate)
-> **Red Team review:** stress-test condotto da `red-team-skeptic` con prospettiva Coopfond, Regione Liguria, Commissione UE (vedi §1.10)
+> **Disciplina metodologica:** applicate le regole di rigore epistemico (falsifiability, triangulation, source provenance, confidence levels, pre-mortem, steel-manning, base-rate)
+> **Review critica indipendente:** stress-test condotto da review critica con prospettiva Coopfond, Regione Liguria, Commissione UE (vedi §1.10)
 
 ---
 
@@ -260,7 +260,7 @@ Ai sensi dell'art. 1, comma 1.a dell'Allegato I.7 D.Lgs. 36/2023[^1], il Quadro 
 
 | Obiettivo | KPI di gate M+10 | Soglia GO |
 |---|---|---|
-| OB-01 | Studio di Fattibilità completo, 3 volumi | OK pubblicato + Red Team review |
+| OB-01 | Studio di Fattibilità completo, 3 volumi | OK pubblicato + Review critica indipendente |
 | OB-02 | StNeeds consolidati da 10 cooperative | ≥ 17 StNeeds tracciati in RTM |
 | OB-03 | Verdetto Percorso 6A | Go Condizionato motivato |
 | OB-04 | Verdetto Percorso 6B | Hold + piano R&D Phase B con gate M+24 |
@@ -275,7 +275,7 @@ Il cuore del Quadro Esigenziale è la strategia duale risk-informed, articolata 
 
 La tecnologia di riferimento è una piattaforma commerciale **VTOL ibrida TRL 8-9** (riferimento JOUAV CW-30E, Quantum Trinity F90+ o equivalente, in trade study Cap. 6). Le caratteristiche operative comprendono autonomia 6-10 ore, copertura locale 30-50 km, payload modulare 10-25 kg e MTOM ~38 kg. La categoria EASA prevista è **Specific Category, SAIL II-III** (vedi Cap. 5 §5.4.1). Il sito pilota resta Pentema (Torriglia, GE), con possibile estensione ad altre frazioni dell'Area SNAI Antola Tigullio. L'orizzonte temporale copre M+12 a M+24 di operatività Fase 1.
 
-Il budget stimato è di **€700-1200k** baseline ingegneristico (con IVA e contingency 15%: €975k-1.96M; sliding realistic post-audit M+3: €2.5-3.5M per acquisto piattaforma, integrazione, SORA, operatività Y1 e 3 FTE regulatory). Il rischio complessivo risulta Basso, con verdetto **Go Condizionato** (vedi Cap. 5 §5.12 e Cap. 10). Gli output operativi attesi: ≥ 50 missioni operative eseguite (M+12-24); ≥ 3 contratti pluriennali con anchor customers (Regione Liguria, PC, cooperative scaled); primo revenue ricorrente da servizi.
+Il budget stimato è di **€700-1200k** baseline ingegneristico (con IVA e contingency 15%: €975k-1.96M; sliding realistic alla milestone M+3: €2.5-3.5M per acquisto piattaforma, integrazione, SORA, operatività Y1 e 3 FTE regulatory). Il rischio complessivo risulta Basso, con verdetto **Go Condizionato** (vedi Cap. 5 §5.12 e Cap. 10). Gli output operativi attesi: ≥ 50 missioni operative eseguite (M+12-24); ≥ 3 contratti pluriennali con anchor customers (Regione Liguria, PC, cooperative scaled); primo revenue ricorrente da servizi.
 
 #### **Percorso 6B, HALE Stratosferico (24-48+ mesi, Hold / Go Condizionato Estremo)**
 
@@ -317,7 +317,7 @@ Lo Studio di Fattibilità si svolge sull'arco temporale **M+0 → M+11 (12 mesi)
 | Kickoff | M+0 | Avvio Studio, baseline metodologica |
 | **G-1, Architettura baselined** | M+6 | Concept architettura 6A + 6B baseline, pre-application ENAC fatto, StNeeds consolidati |
 | G-2, Mid-term review | M+8 | RTM v0.5, FMECA preliminare, ConOps validato cooperative |
-| **G-3, Studio completo** | M+10 | Studio di Fattibilità 3 volumi pronto, Red Team chiuso |
+| **G-3, Studio completo** | M+10 | Studio di Fattibilità 3 volumi pronto, review critica chiusa |
 | **G-4, Verdetto di Gate** | M+11 | Decisione formale Go Condizionato 6A / Hold 6B, condivisione con Coopfond + Regione Liguria |
 
 **Gate M+10/M+11, decisione strutturale**: è il gate dove lo Studio di Fattibilità si chiude con un verdetto formale di Go, Hold o No-Go per ciascuno dei due percorsi. Il Go Condizionato del Percorso 6A è la base per richiedere l'avvio della Fase 1 operativa (Pentema VTOL pilota M+12 → M+24), con i finanziamenti raccolti per quella fase.
@@ -396,7 +396,7 @@ Sebbene il presente progetto non si configuri formalmente come progetto di **Adv
 
 ### 1.9.1 Assumptions baseline del Cap. 1
 
-Coerentemente con la skill `epistemic-rigor`, le assunzioni del presente capitolo vengono dichiarate esplicitamente:
+Coerentemente con la metodologia di rigore epistemico, le assunzioni del presente capitolo vengono dichiarate esplicitamente:
 
 | ID | Assunzione | Confidence | Mitigazione se falsa |
 |---|---|---|---|
@@ -417,8 +417,8 @@ Le **Open Questions** sono questioni aperte che devono trovare chiusura prima de
 |---|---|---|---|---|
 | OQ-CAP1-01 | LoI Regione Liguria sul caso pilota Pentema (delibera o equivalente) | Firmamento + Regione Liguria | M+8 | Open |
 | OQ-CAP1-02 | NDA + LoI 10 cooperative Legacoop (capofila Fabrica) | Firmamento + Fabrica | M+4 | Open (in corso) |
-| OQ-CAP1-03 | Confidenza accettabilità sociale Pentema (workshop pubblico) | data-privacy-counsel + Firmamento | M+9 | Open |
-| OQ-CAP1-04 | Verifica formale che il committente del PFTE coincida con il proponente (vs richiesta committente pubblico) | aviation-regulatory-counsel | M+6 | Open |
+| OQ-CAP1-03 | Confidenza accettabilità sociale Pentema (workshop pubblico) | consulenza privacy e protezione dati + Firmamento | M+9 | Open |
+| OQ-CAP1-04 | Verifica formale che il committente del PFTE coincida con il proponente (vs richiesta committente pubblico) | consulenza legale-regolatoria aviazione | M+6 | Open |
 | OQ-CAP1-05 | Confidence intervalli budget Percorso 6A €700-1200k baseline (€975k-1.96M con IVA) post-trade study M+6 | systems-engineer + finance-counsel | M+8 | Open |
 | OQ-CAP1-06 | Mappa Aree SNAI 2026 aggiornata (vs istruttoria 2022) | territorial-planning | M+5 | Open |
 | OQ-CAP1-07 | Posizionamento Firmamento nel Piano ENAC AAM (formalizzato in position paper) | sovereign-strategist | M+12 | Open |
@@ -427,9 +427,9 @@ Le OQ qui dichiarate convergono con le OQ del Cap. 3 §3.10 e con il debito di r
 
 ---
 
-## 1.10 Red Team Check, Stress-Test del Capitolo
+## 1.10 Review critica, Stress-Test del Capitolo
 
-Il capitolo è stato sottoposto a stress-test dall'agente `red-team-skeptic`, con prospettiva simulata di tre potenziali finanziatori critici:
+Il capitolo è stato sottoposto a stress-test dall'revisione critica indipendente, con prospettiva simulata di tre potenziali finanziatori critici:
 
 - **R1, Coopfond / Fondazione PICO ETS** (finanziatore istituzionale cooperativo, focus su impatto sociale e replicabilità)
 - **R2, Regione Liguria** (anchor istituzionale, focus su valore aggiunto territoriale e accountability)
@@ -492,7 +492,7 @@ Il capitolo è stato sottoposto a stress-test dall'agente `red-team-skeptic`, co
 3. **Audit di rigore epistemico**: gli item residui sono trackati in `riferimenti/audit-rigore-epistemico.md` (DR-001..DR-007). Il documento è strumento di trasparenza verso finanziatori.
 4. **Validation esterna formale**: per la presentazione a bandi pubblici, lo Studio può essere sottoposto a review indipendente (RINA o DNV come ente terzo), come delineato in `riferimenti/analisi-fac-simili-IT.md` §5.
 
-### Verdetto Red Team
+### Verdetto della review critica
 
 Il capitolo risulta sostanzialmente solido dal punto di vista di inquadramento, con le seguenti azioni esplicite richieste prima del gate M+10:
 
@@ -502,7 +502,7 @@ Il capitolo risulta sostanzialmente solido dal punto di vista di inquadramento, 
 - Commitment direzionale 80/20 6A/6B esplicitato in governance interna (R4)
 - Pre-application ENAC documentata, workshop accettabilità Pentema, ≥8 NDA cooperative entro M+9 (R5)
 
-Il Red Team conferma che lo Studio non chiude senza il completamento di queste 5 azioni.
+La review critica conferma che lo Studio non chiude senza il completamento di queste 5 azioni.
 
 ---
 
@@ -530,7 +530,7 @@ Il capitolo non duplica contenuti che vengono trattati in maggior dettaglio in a
 - DR-CAP1-03, Verifica accettabilità sociale comunità Pentema (workshop + survey)
 - DR-CAP1-04, Mappa Aree SNAI Liguria 2026 aggiornata (cross-check istruttoria 2022 vs realtà 2026)
 - DR-CAP1-05, Position paper "Italian Stratospheric Layer" per posizionamento Firmamento nell'ecosistema EU
-- DR-CAP1-06, Modello formale di governance cooperativa (post-Critica R1 Red Team)
+- DR-CAP1-06, Modello formale di governance cooperativa (post critica R1 della review)
 
 Questi item risultano bloccanti per il gate M+10/M+11: senza la loro chiusura, il verdetto Go Condizionato 6A non è difendibile davanti a Coopfond, Regione Liguria e revisori UE.
 

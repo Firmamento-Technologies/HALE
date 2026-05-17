@@ -7,8 +7,8 @@
 > **Versione:** bozza M+3 (post-Allineamento Strategico Maggio 2026)
 > **Conformità:** D.Lgs. 36/2023 art. 41 + Allegato I.7 (sezione "Analisi di mercato e business case")
 > **Template di riferimento italiano:** ENAC AAM Business Plan 2021-2030 [^1], MIMIT Progetto Aeronautico Marocco [^2], Aeropolis Workshop "Analisi dei Costi e Business Plan" 2014 [^3]
-> **Disciplina epistemica:** applicate Regole 1-7 della skill `epistemic-rigor`
-> **Red Team review:** `competitor-intelligence` + `business-model-strategist` (vedi §7.13)
+> **Disciplina metodologica:** applicate le regole di rigore epistemico
+> **Review critica indipendente:** analisi competitor + strategia business model (vedi §7.13)
 
 ---
 
@@ -50,7 +50,7 @@ Il capitolo è costruito ibridando tre template italiani autoritativi.
 
 ### 7.1.2 Confidence aggregato e disciplina epistemica
 
-In conformità alla skill `epistemic-rigor`, dichiaro fin dall'apertura del capitolo il **confidence aggregato medio low-medium** (alcune stime di mercato derivano da fonti commerciali single-source, vedi §7.4) e lo **stato di triangulation parziale** (vedi `riferimenti/audit-rigore-epistemico.md` DR-007, DR-012). La **base rate aerospace** (Regola 7) di successo per startup aerospace service-based che raggiungono revenue operativo stabile è **10-20%**: Firmamento parte da questa base rate, non da "tutti i piani business funzionano". Per evitare survivor bias va inoltre tenuta presente la **lista programmi HALE solari falliti**: NASA Helios (crashed 2003), Aalto HAWK30 (cancellato 2020), Solara 50 / Titan Aerospace (dissolto 2017), Sanswire StratXX (mai operativo).
+In conformità alla metodologia di rigore epistemico, dichiaro fin dall'apertura del capitolo il **confidence aggregato medio low-medium** (alcune stime di mercato derivano da fonti commerciali single-source, vedi §7.4) e lo **stato di triangulation parziale** (vedi `riferimenti/audit-rigore-epistemico.md` DR-007, DR-012). La **base rate aerospace** (Regola 7) di successo per startup aerospace service-based che raggiungono revenue operativo stabile è **10-20%**: Firmamento parte da questa base rate, non da "tutti i piani business funzionano". Per evitare survivor bias va inoltre tenuta presente la **lista programmi HALE solari falliti**: NASA Helios (crashed 2003), Aalto HAWK30 (cancellato 2020), Solara 50 / Titan Aerospace (dissolto 2017), Sanswire StratXX (mai operativo).
 
 ### 7.1.3 Allineamento con i SyR Cost (Cap. 3)
 
@@ -110,7 +110,7 @@ Gli **use case prioritari per MVP Y1** sono UC-001, UC-002, UC-003, più 1-2 min
 
 ### 7.3.1 Mercato globale HAPS + UAV territoriali
 
-**Caveat epistemico** (Regola 2 più 3 della skill `epistemic-rigor`, vedi `riferimenti/audit-rigore-epistemico.md` CLAIM-001): i numeri di mercato HAPS in circolazione provengono **principalmente da report commerciali** (MarkNtel, Grand View, Coherent Market Insights). Si tratta di **fonti singole non triangolate** con dati ufficiali (Eurostat, ITU, EUSPA, AIAD, Eurospace). I numeri **includono con ogni probabilità anche investimenti R&D pubblici** (es. EuroHAPS €43M EDF, Zephyr Airbus capex), non solo revenue ricorrente di servizio. Per un'analisi service-only seria restano **stima indicativa, non baseline**. Confidence: **low**.
+**Caveat epistemico** (Regola 2 più 3 della metodologia di rigore epistemico, vedi `riferimenti/audit-rigore-epistemico.md` CLAIM-001): i numeri di mercato HAPS in circolazione provengono **principalmente da report commerciali** (MarkNtel, Grand View, Coherent Market Insights). Si tratta di **fonti singole non triangolate** con dati ufficiali (Eurostat, ITU, EUSPA, AIAD, Eurospace). I numeri **includono con ogni probabilità anche investimenti R&D pubblici** (es. EuroHAPS €43M EDF, Zephyr Airbus capex), non solo revenue ricorrente di servizio. Per un'analisi service-only seria restano **stima indicativa, non baseline**. Confidence: **low**.
 
 **Mercato HAPS strict (pseudo-satelliti HALE solari)** [^4]: 2024 circa $99M, 2030 circa $240M, CAGR 16%.
 
@@ -170,7 +170,7 @@ Per **calibrare** le stime contro un dato ufficiale italiano, citiamo i numeri d
 
 ## 7.4 Analisi della Concorrenza (Competitive Landscape)
 
-> **Approccio**: il paragrafo è frutto di analisi avversariale condotta dall'agente `competitor-intelligence` (vedi `agents/competitor-intelligence.md`). I posizionamenti dei concorrenti sono **cinici e realistici**, non amichevoli.
+> **Approccio**: il paragrafo è frutto di analisi critica indipendente condotta dall'analisi competitor indipendente. I posizionamenti dei concorrenti sono **cinici e realistici**, non amichevoli.
 
 ### 7.4.1 Concorrenti diretti HAPS, Tier 1 globale
 
@@ -182,7 +182,7 @@ Per **calibrare** le stime contro un dato ufficiale italiano, citiamo i numeri d
 | **Aurora Odysseus** (Boeing) [^9] | TRL 6-7, dev | 74.1 m / 25 kg payload / claim up to 1 year | Boeing | Minima | Media |
 | **PHASA-35** (BAE Systems / Prismatic) [^10] | Operational 2026 | 150 kg / 35 m / 15 kg payload / 12 mesi target | BAE Systems UK | Possibile via NATO/UK partnership | Media |
 
-> **Verdetto agente `competitor-intelligence`**: **Firmamento NON può competere head-to-head con questi player su scala HALE perennial globale**. Il mismatch dimensionale è 100-1000x. La differenziazione deve fondarsi su **geografia, modello operativo, sostenibilità**, non su prestazioni assolute.
+> **Verdetto analisi competitor indipendente**: **Firmamento NON può competere head-to-head con questi player su scala HALE perennial globale**. Il mismatch dimensionale è 100-1000x. La differenziazione deve fondarsi su **geografia, modello operativo, sostenibilità**, non su prestazioni assolute.
 
 ### 7.4.2 Concorrenti diretti EU/IT, Tier 1 consortium
 
@@ -203,7 +203,7 @@ Per **calibrare** le stime contro un dato ufficiale italiano, citiamo i numeri d
 | **Copernicus Sentinel** (ESA/EU) | Sentinel-1/2/3/5p/6 EO gratuiti | Sostituto EO con revisit 5-12 giorni più GSD 10 m |
 | **TIM, Vodafone, Iliad, WindTre, Open Fiber** | 5G FWA rurale via PNRR Banda Ultra Larga €6.7B | Sostituto connettività in aree marginali, gap geografico in chiusura 2025-2028 |
 
-> **Verdetto agente `competitor-intelligence`**: per molte cooperative pilota, **Starlink è già una soluzione completa a €50/mese**. Perché aspettare HALE? La risposta poggia su quattro punti:
+> **Verdetto analisi competitor indipendente**: per molte cooperative pilota, **Starlink è già una soluzione completa a €50/mese**. Perché aspettare HALE? La risposta poggia su quattro punti:
 > 1. Latenza bassa (HAPS 0.1-1 ms vs Starlink 25-50 ms, irrilevante per browsing ma **decisivo per controllo industriale e ISR**)
 > 2. Geographic persistence (HAPS sopra l'area target sempre; Starlink passi inerziali)
 > 3. **Sovranità dati italiana** (HAPS in mani italiane vs Starlink US-controlled), argomento per PA, decisivo
@@ -211,7 +211,7 @@ Per **calibrare** le stime contro un dato ufficiale italiano, citiamo i numeri d
 
 ### 7.4.4 Cluster D, Service Incumbent Italiani (vero competitor Y1 B2G)
 
-> **Premessa metodologica (post-audit avversariale)**: la versione M+0 del Cap. 7 elencava un singolo concorrente VTOL/UAS italiano in modalità superficiale. L'audit `competitor-intelligence` (vedi `AUDIT-COMPETITOR-VOLUME-1.md` §1 e Critica C7.9) ha dimostrato che **il vero competitor Y1 per il MVP Pentema e per lo scale-up SNAI Liguria non è AALTO né Skydweller** (rischi Y3-Y5), bensì il cluster degli operatori italiani di servizi EO più UAS che già presidia la PA, di seguito **Cluster D**. Questi soggetti hanno (a) contratti pluriennali in essere con Regioni / PC / ARPA, (b) pricing 3-5× inferiore rispetto al baseline Cap. 7 §7.8.2, (c) reti di rapporti istituzionali consolidate, (d) capability tecnica matura. La sezione li profila in dettaglio.
+> **Premessa metodologica (post-review critica indipendente)**: la versione M+0 del Cap. 7 elencava un singolo concorrente VTOL/UAS italiano in modalità superficiale. L'analisi competitor indipendente (vedi l'analisi competitor interna §1 e Critica C7.9) ha dimostrato che **il vero competitor Y1 per il MVP Pentema e per lo scale-up SNAI Liguria non è AALTO né Skydweller** (rischi Y3-Y5), bensì il cluster degli operatori italiani di servizi EO più UAS che già presidia la PA, di seguito **Cluster D**. Questi soggetti hanno (a) contratti pluriennali in essere con Regioni / PC / ARPA, (b) pricing 3-5× inferiore rispetto al baseline Cap. 7 §7.8.2, (c) reti di rapporti istituzionali consolidate, (d) capability tecnica matura. La sezione li profila in dettaglio.
 
 #### 7.4.4.1 Mappa Cluster D, operatori EO più UAS Italia
 
@@ -230,7 +230,7 @@ Per **calibrare** le stime contro un dato ufficiale italiano, citiamo i numeri d
 
 #### 7.4.4.2 Pricing benchmark Cluster D vs Firmamento baseline
 
-> **Caveat pricing (confidence: low-medium)**: i prezzi sotto riportati sono ricostruzioni dedotte da (a) press release pubbliche dei contratti vinti, (b) bilanci pubblici degli operatori (Telespazio €701M revenue 2023, e-GEOS €68.8M revenue 2023, Planetek Italia €18-22M revenue 2024 [^17]), (c) portali pubblici MEPA/Consip/InfoGareWeb [^24], (d) benchmark di settore IT/EU 2024-2026. Non sono prezzi di contratti specifici. Per pricing investment-grade serve accesso a (i) DGR Regionali con allegato economico, (ii) contratti Consip dettaglio, (iii) interviste dirette con buyer PA. Action item benchmark M+6 (riferimento AUDIT-QUALITY-VOLUME-1.md §1 azione #6).
+> **Caveat pricing (confidence: low-medium)**: i prezzi sotto riportati sono ricostruzioni dedotte da (a) press release pubbliche dei contratti vinti, (b) bilanci pubblici degli operatori (Telespazio €701M revenue 2023, e-GEOS €68.8M revenue 2023, Planetek Italia €18-22M revenue 2024 [^17]), (c) portali pubblici MEPA/Consip/InfoGareWeb [^24], (d) benchmark di settore IT/EU 2024-2026. Non sono prezzi di contratti specifici. Per pricing investment-grade serve accesso a (i) DGR Regionali con allegato economico, (ii) contratti Consip dettaglio, (iii) interviste dirette con buyer PA. Action item benchmark M+6 (riferimento audit qualita interno §1 azione #6).
 
 | Linea servizio | Operatore Cluster D di riferimento | Pricing tipico stimato | Note |
 |---|---|---|---|
@@ -271,7 +271,7 @@ Per **calibrare** le stime contro un dato ufficiale italiano, citiamo i numeri d
 | **D7 Telespazio** | Tutti gli UC EO più telecom | Spine dorsale downstream EO IT più accesso istituzionale Leonardo | Non concorrere; **rischio acquisizione difensiva** post-Series A (vedi RSK-GEO-005 più Cap. 11 Threat 1) |
 | **D8 CIRA** | UC HAPS R&D (Fase 6B) | Lineage HELIPLAT più EuroHAPS partner più Capua test facility | **Partner critico** Phase B 6B, già flaggato Cap. 6 e Cap. 7 §7.6.2; se rifiuta partnership, Firmamento Phase B 6B risulta severamente ridimensionata |
 
-> **Falsifying observation §7.4.4.3**: la presenza di **Leonardo investment in FlyingBasket (2024)** [^19] è segnale forte che il gruppo Leonardo/TAS sta consolidando il proprio presidio UAS service Italia. **Implicazione**: lo "spazio di mercato" che Firmamento mira a occupare (UAS service Aree Interne) è già in fase di rastrellamento da parte del Tier 1 italiano (TAS-Leonardo via FlyingBasket più Telespazio downstream). Lo scenario "acquisizione difensiva Firmamento entro Y3-Y5" (AUDIT-COMPETITOR-VOLUME-1.md §0, P ~50-70%) è coerente con questa traiettoria di consolidamento già in atto.
+> **Falsifying observation §7.4.4.3**: la presenza di **Leonardo investment in FlyingBasket (2024)** [^19] è segnale forte che il gruppo Leonardo/TAS sta consolidando il proprio presidio UAS service Italia. **Implicazione**: lo "spazio di mercato" che Firmamento mira a occupare (UAS service Aree Interne) è già in fase di rastrellamento da parte del Tier 1 italiano (TAS-Leonardo via FlyingBasket più Telespazio downstream). Lo scenario "acquisizione difensiva Firmamento entro Y3-Y5" (analisi competitor interna §0, P ~50-70%) è coerente con questa traiettoria di consolidamento già in atto.
 
 ---
 
@@ -356,9 +356,9 @@ Per evitare ridondanza, la sezione riporta solo le categorie che NON sono copert
 
 ---
 
-### 7.4.7 Verdetto agente `competitor-intelligence` consolidato (riconfigurato post-audit)
+### 7.4.7 Verdetto analisi competitor indipendente consolidato (riconfigurato post-audit)
 
-> **Nota di versione**: la versione M+0 del Cap. 7 §7.4 chiudeva con un verdetto sintetico focalizzato su Tier 1 globali (AALTO, Skydweller, EuroHAPS) e su Starlink come sostituto. L'audit avversariale di maggio 2026 ha imposto una **riconfigurazione completa** del verdetto, perché il rischio competitivo Y1 è strutturalmente diverso dal rischio Y3-Y5.
+> **Nota di versione**: la versione M+0 del Cap. 7 §7.4 chiudeva con un verdetto sintetico focalizzato su Tier 1 globali (AALTO, Skydweller, EuroHAPS) e su Starlink come sostituto. La review critica indipendente di maggio 2026 ha imposto una **riconfigurazione completa** del verdetto, perché il rischio competitivo Y1 è strutturalmente diverso dal rischio Y3-Y5.
 
 **Gerarchia dei rischi competitivi per orizzonte temporale**:
 
@@ -379,14 +379,14 @@ Per evitare ridondanza, la sezione riporta solo le categorie che NON sono copert
 3. **Firmamento NON può sostituire Starlink su connettività rurale consumer/PA**. UC-003 più UC-008 declassati a opportunistici (azione AUDIT-QUALITY §1 #5).
 
 4. **L'unica via strategica sostenibile per Y1-Y3 è**:
-   - **(a)** Specializzazione UC-001 frane in fase di crisi più UC-002 antincendio early-detection (asse persistence/latency dove il Cluster D satellite non vince)
-   - **(b)** Partnership downstream con Planetek (D2) più NHazca (D3) più CIRA (D8 per Phase B 6B)
-   - **(c)** Anchor cooperative Legacoop come moat di posizionamento (non di prezzo)
-   - **(d)** Capital structure resistente PRIMA del Series A per neutralizzare lo scenario acquisizione Y3-Y5
+ - **(a)** Specializzazione UC-001 frane in fase di crisi più UC-002 antincendio early-detection (asse persistence/latency dove il Cluster D satellite non vince)
+ - **(b)** Partnership downstream con Planetek (D2) più NHazca (D3) più CIRA (D8 per Phase B 6B)
+ - **(c)** Anchor cooperative Legacoop come moat di posizionamento (non di prezzo)
+ - **(d)** Capital structure resistente PRIMA del Series A per neutralizzare lo scenario acquisizione Y3-Y5
 
-5. **Probabilità di successo del piano competitivo Y1-Y3 con riconfigurazione completa**: 25-40% (in linea con AUDIT-QUALITY-VOLUME-1.md §6 P(AND hard conditions) = 5-15% scenario realistico, elevato a 25-40% se gli action items §3 vengono implementati integralmente).
+5. **Probabilità di successo del piano competitivo Y1-Y3 con riconfigurazione completa**: 25-40% (in linea con audit qualita interno §6 P(AND hard conditions) = 5-15% scenario realistico, elevato a 25-40% se gli action items §3 vengono implementati integralmente).
 
-6. **Probabilità di successo del piano competitivo Y1-Y3 SENZA riconfigurazione (status quo M+0)**: <15% (AUDIT-COMPETITOR-VOLUME-1.md §0 baseline).
+6. **Probabilità di successo del piano competitivo Y1-Y3 SENZA riconfigurazione (status quo M+0)**: <15% (analisi competitor interna §0 baseline).
 
 > **Falsifying observation §7.4.7**: se al gate G3 M+11 (i) Firmamento non ha riconfigurato pricing §7.8.2 in linea con benchmark Cluster D, AND (ii) non ha aperto trattativa formale di partnership con almeno UN operatore D2/D3/D8, AND (iii) non ha riconosciuto esplicitamente il Cluster D come competitor primario Y1 nel pitch verso finanziatori, allora **il verdetto Go Condizionato 6A va declassato a Hold rinforzato** indipendentemente dallo stato delle altre hard conditions C1-C5. Probabilità materializzazione di tutti e 3 i mancati al M+11: M (~30-40%). Impatto: H (verdetto gate compromesso).
 
@@ -396,7 +396,7 @@ Per evitare ridondanza, la sezione riporta solo le categorie che NON sono copert
 
 ### 7.5.1 4 pilastri del vantaggio competitivo (riconfigurati post-audit Cluster D)
 
-> **Premessa post-audit**: la versione M+0 di questa sezione presentava i 4 pilastri come "difendibili" senza qualificare il **tipo di competitor** verso cui sono difendibili. L'audit `competitor-intelligence` (Critica C7.6) ha dimostrato che dei 4 pilastri, **solo il modello cooperativo è genuinamente difendibile** vs il vero competitor Y1 (Cluster D). La sezione è stata riscritta per riflettere la realtà.
+> **Premessa post-audit**: la versione M+0 di questa sezione presentava i 4 pilastri come "difendibili" senza qualificare il **tipo di competitor** verso cui sono difendibili. L'analisi competitor indipendente (Critica C7.6) ha dimostrato che dei 4 pilastri, **solo il modello cooperativo è genuinamente difendibile** vs il vero competitor Y1 (Cluster D). La sezione è stata riscritta per riflettere la realtà.
 
 Il posizionamento di Firmamento poggia su 4 pilastri, ognuno con **difensibilità differenziata per tipologia di competitor**.
 
@@ -412,7 +412,7 @@ Il pilastro 2 fa leva su 10 cooperative pilota come utenti e co-progettisti, cos
 
 **Conclusione onesta**: questo è il vero pilastro difendibile del posizionamento Firmamento. Per essere un moat strutturale (non soft switching cost) richiede **strutturazione giuridicamente vincolante** (consorzio formale, contratto di rete con esclusive territoriali, regime "preferred provider" con Coopfond). Lavoro non ancora completato al M+3. Action item: governance giuridica cooperative entro M+12.
 
-**Falsifying observation aggiuntiva**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-01** (cooperative come vantaggio competitivo) e **FO-ADD-07** (8/10 cooperative confermate M+6). Se meno di 5 cooperative su 10 mostrano engagement attivo al M+12, il pilastro va declassato a "narrativa marketing" (action item: BMC redesign verso B2G dominante).
+**Falsifying observation aggiuntiva**: vedi addendum falsifying observations **FO-ADD-01** (cooperative come vantaggio competitivo) e **FO-ADD-07** (8/10 cooperative confermate M+6). Se meno di 5 cooperative su 10 mostrano engagement attivo al M+12, il pilastro va declassato a "narrativa marketing" (action item: BMC redesign verso B2G dominante).
 
 #### Pilastro 3, sostenibilità più narrativa ESG
 
@@ -449,7 +449,7 @@ Per ragioni geopolitiche dichiarate in `RESERVED-rischi-geopolitici.md` (RSK-GEO
 
 ## 7.6 Business Model Canvas (BMC), Percorso 6A
 
-> Riferimento metodologico: Osterwalder & Pigneur. Riferimento agente: `business-model-strategist`.
+> Riferimento metodologico: Osterwalder & Pigneur. Riferimento agente: strategia business model.
 
 ### 7.6.1 BMC Percorso 6A, MVP Pentema Y1
 
@@ -554,7 +554,7 @@ Lo Studio adotta i seguenti **pricing baseline RECALIBRATED** per il MVP Y1, all
 
 > **Falsifying observation §7.8.2 RECALIBRATED**: se entro M+9 non sono firmati ≥ 3 contratti pluriennali con valore aggregato ≥ €200k al pricing baseline €75-100k/anno PA più €8-12k DaaS, il SyR-Cost-003 (revenue Y1 ≥ €200k) passa in stato "Failed" e va attivata revisione del modello (es. pivot a more aggressive PA push, pure cooperative agricola, o pivot pricing dual-use con MOI/MAECI). **Probabilità: M, impatto: H**. Mitigazione: engagement intensivo Regione più PC entro M+0-6 più benchmark Cluster D pubblicizzato (DR-006 closure).
 
-> **Falsifying observation aggiuntiva linkata**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-04** (pricing PA €75k/anno ACV threshold per servizio EO baseline RECALIBRATED). Trigger: contratti firmati Q1-Q3 2026 più benchmark gare Consip / Mepa-Liguria. Azione se attivata: pivot pricing model outcome-based più canale B2B utility (Enel) premium pricing.
+> **Falsifying observation aggiuntiva linkata**: vedi addendum falsifying observations **FO-ADD-04** (pricing PA €75k/anno ACV threshold per servizio EO baseline RECALIBRATED). Trigger: contratti firmati Q1-Q3 2026 più benchmark gare Consip / Mepa-Liguria. Azione se attivata: pivot pricing model outcome-based più canale B2B utility (Enel) premium pricing.
 
 ### 7.8.3 Pricing post-MVP, scale-up Y2-Y5
 
@@ -573,16 +573,16 @@ Lo Studio adotta i seguenti **pricing baseline RECALIBRATED** per il MVP Y1, all
 
 ### 7.9.1 Scope del MVP
 
-Il **MVP** (Minimum Viable Product) del Percorso 6A è definito come segue (riferimento `agents/business-model-strategist.md`).
+Il **MVP** (Minimum Viable Product) del Percorso 6A è definito come segue (riferimento ).
 
 ```
 MVP scope (M+0 verso M+12):
-  • Piattaforma: 1 VTOL ibrido commerciale TRL 8-9 (es. JOUAV CW-30E)
-  • Ground segment: 1 GS fissa Pentema + 1 GS mobile (cooperativa)
-  • Payload modulare: EO RGB + IR termico + (eventuale) telecom backup
-  • Personale: 1 pilota UAS + 1 ingegnere + 1 analyst GIS + 1 PM (4 FTE)
-  • Autorizzazioni: SORA SAIL II-III, BVLOS area Pentema, AGCOM (per LTE tattico se applicato)
-  • Casi d'uso operativi: UC-001, UC-002, UC-003, UC-005, UC-007 (vedi §7.2.2)
+ • Piattaforma: 1 VTOL ibrido commerciale TRL 8-9 (es. JOUAV CW-30E)
+ • Ground segment: 1 GS fissa Pentema + 1 GS mobile (cooperativa)
+ • Payload modulare: EO RGB + IR termico + (eventuale) telecom backup
+ • Personale: 1 pilota UAS + 1 ingegnere + 1 analyst GIS + 1 PM (4 FTE)
+ • Autorizzazioni: SORA SAIL II-III, BVLOS area Pentema, AGCOM (per LTE tattico se applicato)
+ • Casi d'uso operativi: UC-001, UC-002, UC-003, UC-005, UC-007 (vedi §7.2.2)
 ```
 
 ### 7.9.2 KPI di successo MVP Y1
@@ -647,9 +647,9 @@ Il Cap. 8 fornisce il **Quadro Economico** (ex art. 41 D.Lgs. 36/2023), il **Pia
 | Indicatore | Valore baseline | Note |
 |---|---|---|
 | Revenue Y1 (RECALIBRATED post-Cluster D) | €260k centrale (range €220-300k) | Da SyR-Cost-003 più §7.8.2 RECALIBRATED; min €200k hard floor; legacy €355-405k FALSIFICATO |
-| OpEx Y1 baseline (pre-+3 FTE regulatory) | €260-480k | Da `agents/financial-cfo-analyst.md`, vedi §8.X per OpEx Y2 €1.18M con +3 FTE regulatory mandatory |
+| OpEx Y1 baseline (pre-+3 FTE regulatory) | €260-480k | Da stime interne di modellazione finanziaria, vedi §8.X per OpEx Y2 €1.18M con +3 FTE regulatory mandatory |
 | Margine operativo Y1 (baseline OpEx €260-480k) | **-€220k verso +€40k** | In funzione di OpEx mix più utilization; post-recalibration revenue, margine peggiora rispetto a originale |
-| CapEx Y1 | €700-1200k | Da `agents/financial-cfo-analyst.md` |
+| CapEx Y1 | €700-1200k | Da stime interne di modellazione finanziaria |
 | Break-even Y2-Y3 con scale-up | OK se ARR raggiunge €1.5M+ | Da modello finanziario Y2-Y3 |
 | Payback Y4-Y5 | OK se ARR raggiunge €3.5M+ | Da modello finanziario Y4-Y5 |
 
@@ -668,9 +668,9 @@ Il Cap. 8 fornisce il **Quadro Economico** (ex art. 41 D.Lgs. 36/2023), il **Pia
 
 ---
 
-## 7.13 Red Team Check, Adversarial Review
+## 7.13 Review critica, Adversarial Review
 
-Critica condotta dagli agenti `competitor-intelligence` più `business-model-strategist`. Sintesi.
+Critica condotta dagli agenti analisi competitor più strategia business model. Sintesi.
 
 ### Critica 1, "Starlink è già lì, perché aspettare HALE?"
 **Razionale critica**: per molte cooperative pilota, Starlink consumer (€50/mese) è una soluzione completa di connettività rurale. Il valore aggiunto di HALE NTN è marginale per il caso d'uso connettività.
@@ -696,24 +696,24 @@ Critica condotta dagli agenti `competitor-intelligence` più `business-model-str
 **Razionale critica**: nessuna Regione italiana ha contrattato prima un servizio EO da operatore privato a queste cifre. I riferimenti di mercato (es. Copernicus business uplift) sono molto più bassi.
 **Risposta**: il pricing è preliminare e confidence low. **Aggiornamento M+3 post-audit Cluster D (§7.4.4 più §7.4.5)**: la critica è stata **confermata e quantificata** dall'audit competitor. I benchmark Cluster D pubblici (Planetek Rheticus Puglia, e-GEOS PC Lazio, NHazca monitoraggio frane) indicano pricing servizio EO PA tipicamente €30-80k/anno per area (3-5× sotto baseline §7.8.2). Azione obbligatoria pre-gate M+10: ridimensionare pricing baseline §7.8.2 a €60-90k/anno base più €30-60k/anno premium per persistence/sovranità. Revenue Y1 baseline ricalibrato: €220-300k (vs €355-405k originale).
 
-### 7.13.7 Action Item Tracking (anti Red Team theater)
+### 7.13.7 Action Item Tracking (anti review formale senza follow-through)
 
-> **Compliance audit M+3**: ogni critica §7.13.1-6 ha un action item esplicito con owner, deadline e verifica chiusura.
+> **Conformità review M+3**: ogni critica §7.13.1-6 ha un action item esplicito con owner, deadline e verifica chiusura.
 
 | Critica | Action item | Owner | Deadline | Stato M+3 | Verifica chiusura |
 |---|---|---|---|---|---|
-| C1 (Starlink consumer satura connettività rurale) | Differenziare value prop: latenza ISR più persistence EO più sovranità dati più crisis backup (non connettività consumer) | aerospace-market-analyst più business-model-strategist | M+6 | closed (BMC §7.6 più value prop §7.5 ridisegnate; connettività UC secondario, EO più sovranità dominant); FO-ADD-04 più FO-ADD-09 linkate | done |
-| C2 (cooperative come limitazione) | Strutturazione giuridica vincolante consorzio più preferred provider Coopfond più access privilegiato Cooding | business-model-strategist più snai-funding-territorial-expert | M+12 | in progress (workshop M+6 più MoU formalizzazione); FO-ADD-01 più FO-ADD-07 linkate | Gate G3 più M+12 |
-| C3 (TAM-IT €100-200M ottimistico) | Validazione willingness-to-pay via contratti firmati: M+6 LoI Regione più 2 coop più 1 PC | aerospace-market-analyst più CEO | M+6 | open (engagement Regione in corso, LoI pending) | Gate G2 più Gate G3 |
-| C4 (Aalto/Skydweller entry Italia 12 mesi) | Speed (Y1 MVP) più lock-in cooperative più boundary B2 sovereign EU argomento difensivo; Early Warning Indicator attivato (vedi `RESERVED-rischi-geopolitici.md`) | competitor-intelligence più sovereign-infrastructure-strategist | M+9 | in progress (EWI mappa attivata; engagement Aalto/Airbus per intelligence) | Gate G3 |
-| C5 (MVP Y1 ambizioso 5 contratti più 80 missioni) | Soglia minima dichiarata §7.9.2: 3 contratti più 50 missioni; revenue Y1 minimo SyR-Cost-003 €200k hard floor | aerospace-market-analyst più business-model-strategist | M+3 | closed (soglia minima dichiarata più sliding timeline §9.12 per scenario worst); FO-ADD-09 più FO-10A-04 linkate | done |
-| C6 (pricing €150k/anno EO Regione inventato) | **CONFIRMED FALSIFIED post-Cluster D audit**: ricalibrazione pricing a €60-90k base più €25-40k premium; revenue Y1 baseline RECALIBRATED €260k centrale (range €220-300k); legacy €355-405k mantenuto solo come traccia falsifying observation; FO-ADD-04 linkata | aerospace-market-analyst più business-model-strategist | M+3 | **closed M+3**, Cap. 7 §7.8.2 RECALIBRATED più Cap. 0 più Cap. 8 più Cap. 11 propagati (P2 Fix 1 commit) | done |
+| C1 (Starlink consumer satura connettività rurale) | Differenziare value prop: latenza ISR più persistence EO più sovranità dati più crisis backup (non connettività consumer) | team analisi di mercato aerospace più team strategia business model | M+6 | closed (BMC §7.6 più value prop §7.5 ridisegnate; connettività UC secondario, EO più sovranità dominant); FO-ADD-04 più FO-ADD-09 linkate | done |
+| C2 (cooperative come limitazione) | Strutturazione giuridica vincolante consorzio più preferred provider Coopfond più access privilegiato Cooding | team strategia business model più team SNAI e funding territoriale | M+12 | in progress (workshop M+6 più MoU formalizzazione); FO-ADD-01 più FO-ADD-07 linkate | Gate G3 più M+12 |
+| C3 (TAM-IT €100-200M ottimistico) | Validazione willingness-to-pay via contratti firmati: M+6 LoI Regione più 2 coop più 1 PC | team analisi di mercato aerospace più CEO | M+6 | open (engagement Regione in corso, LoI pending) | Gate G2 più Gate G3 |
+| C4 (Aalto/Skydweller entry Italia 12 mesi) | Speed (Y1 MVP) più lock-in cooperative più boundary B2 sovereign EU argomento difensivo; Early Warning Indicator attivato (vedi `RESERVED-rischi-geopolitici.md`) | analisi competitor indipendente più team strategia sovranita tecnologica | M+9 | in progress (EWI mappa attivata; engagement Aalto/Airbus per intelligence) | Gate G3 |
+| C5 (MVP Y1 ambizioso 5 contratti più 80 missioni) | Soglia minima dichiarata §7.9.2: 3 contratti più 50 missioni; revenue Y1 minimo SyR-Cost-003 €200k hard floor | team analisi di mercato aerospace più team strategia business model | M+3 | closed (soglia minima dichiarata più sliding timeline §9.12 per scenario worst); FO-ADD-09 più FO-10A-04 linkate | done |
+| C6 (pricing €150k/anno EO Regione inventato) | **CONFIRMED FALSIFIED post-Cluster D audit**: ricalibrazione pricing a €60-90k base più €25-40k premium; revenue Y1 baseline RECALIBRATED €260k centrale (range €220-300k); legacy €355-405k mantenuto solo come traccia falsifying observation; FO-ADD-04 linkata | team analisi di mercato aerospace più team strategia business model | M+3 | **closed M+3**, Cap. 7 §7.8.2 RECALIBRATED più Cap. 0 più Cap. 8 più Cap. 11 propagati (P2 Fix 1 commit) | done |
 
-> **Stato Red Team check Cap. 7 al M+3**: **3 critiche closed (C1 value prop, C5 MVP threshold, C6 pricing recalibration)** più **2 in progress (C2 governance cooperative, C4 Tier 1 EWI)** più **1 open (C3 willingness-to-pay validation)**. Nessuna critica residual "Red Team theater". Sulla C6 va annotato che la critica più grave del capitolo ha causato la recalibration M+3 cross-volume.
+> **Stato Review critica Cap. 7 al M+3**: **3 critiche closed (C1 value prop, C5 MVP threshold, C6 pricing recalibration)** più **2 in progress (C2 governance cooperative, C4 Tier 1 EWI)** più **1 open (C3 willingness-to-pay validation)**. Nessuna critica residual "review formale senza follow-through". Sulla C6 va annotato che la critica più grave del capitolo ha causato la recalibration M+3 cross-volume.
 
 ---
 
-**Verdetto Red Team (aggiornato M+3 post-audit Cluster D)**: il capitolo è **strutturalmente solido** ma con **confidence bassa sulle cifre concrete** (TAM, SAM, SOM, pricing) e **gravemente sottoddimensionato** sul rischio competitivo Cluster D (e-GEOS, Planetek, FlyingBasket), ora riconfigurato in §7.4.4-7.4.7. Le 8 azioni richieste prima del gate M+10 sono le seguenti.
+**Verdetto della review critica (aggiornato M+3 post-audit Cluster D)**: il capitolo è **strutturalmente solido** ma con **confidence bassa sulle cifre concrete** (TAM, SAM, SOM, pricing) e **gravemente sottoddimensionato** sul rischio competitivo Cluster D (e-GEOS, Planetek, FlyingBasket), ora riconfigurato in §7.4.4-7.4.7. Le 8 azioni richieste prima del gate M+10 sono le seguenti.
 
 - LoI firmata da Regione Liguria entro M+6 (chiusura OQ-010)
 - Workshop validato 10 cooperative pilota entro M+6 (chiusura OQ-011)
@@ -756,7 +756,7 @@ Critica condotta dagli agenti `competitor-intelligence` più `business-model-str
 
 [^14]: NASA SE Handbook Rev 2 (NASA/SP-2016-6105 Rev 2). Source: `fonti/NASA04. SysEng Handbook (NASA_SP-2016-6105 Rev 2).md`. Riferimento metodologico §4.1.1.2.4 (ConOps più business case derivation).
 
-[^15]: Skill `business-model-strategist` (`/.claude/agents/business-model-strategist.md`); skill `aerospace-market-analyst` (`/.claude/agents/aerospace-market-analyst.md`); skill `epistemic-rigor` (`/.claude/skills/epistemic-rigor/SKILL.md`); skill `feasibility-study-framework` (`/.claude/skills/feasibility-study-framework/SKILL.md`).
+[^15]: Metodologie e team specialistici interni di progetto (strategia business model, analisi di mercato aerospace, rigore epistemico, framework feasibility study).
 
 [^16]: e-GEOS S.p.A. Sources: ASI sito ufficiale (https://www.asi.it/en/the-agency/holdings/affiliated-companies/e-geos-s-p-a/); Telespazio press release "e-GEOS to lead consortium for Copernicus Security Service" (https://www.telespazio.com/en/press-release-detail/-/detail/e-geos-satcen); e-GEOS sito corporate (https://www.e-geos.it/en/). **Confidence: high** sui dati corporate (fonti istituzionali), **medium** sui dettagli contrattuali regionali.
 
@@ -792,7 +792,7 @@ Il Cap. 7 si chiude come **bozza M+3 (con fix Cluster D applicato)**, in linea c
 2. **Validazione esterna mancante** sui pricing PA: action item M+6 (benchmark Cluster D §7.4.4.2).
 3. **MVP ambizioso** ma con soglia minima dichiarata realistica (3 contratti, 50 missioni).
 4. **Boundary conditions B1+B2 esplicitate**: il modello service-only e l'obiettivo EU sovereign non sono in discussione, sono **vincoli** che richiedono coerenza di tutti i Cap. 6-7-8.
-5. **Cluster D Service Incumbent IT** (§7.4.4-7.4.7): identificato come vero competitor Y1 in audit avversariale maggio 2026; **3 dei 4 pilastri vantaggio competitivo** (§7.5.1) sono **non difendibili vs Cluster D**; il pricing baseline §7.8.2 va ridimensionato a benchmark Cluster D entro M+6 prima del gate G3.
+5. **Cluster D Service Incumbent IT** (§7.4.4-7.4.7): identificato come vero competitor Y1 in review critica indipendente maggio 2026; **3 dei 4 pilastri vantaggio competitivo** (§7.5.1) sono **non difendibili vs Cluster D**; il pricing baseline §7.8.2 va ridimensionato a benchmark Cluster D entro M+6 prima del gate G3.
 
 **Prossimi step richiesti** (in ordine di criticità, aggiornati post-audit Cluster D).
 
@@ -812,4 +812,4 @@ Il Cap. 7 si chiude come **bozza M+3 (con fix Cluster D applicato)**, in linea c
 - v0.9 (M+9): post-pricing riconfigurato più 3 contratti reali firmati, confidence medium-high.
 - v1.0 (M+10): congelato per gate review.
 
-Il capitolo è chiuso al M+3 (versione fix Cluster D) con verdetto Red Team **OK con 8 action items**.
+Il capitolo è chiuso al M+3 (versione fix Cluster D) con verdetto della review critica **OK con 8 action items**.

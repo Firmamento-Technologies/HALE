@@ -172,7 +172,7 @@ Il coordinamento istituzionale prevede comunicazione preventiva e accordi operat
 
 ## A.11.6 Sliding timeline rischio regolatorio
 
-In linea con Cap. 9 §9.12 sliding timeline e con l'audit `regulatory-adversary`, si distinguono due scenari di percorrenza. Lo scenario nominale prevede pre-app M+3, SORA M+9, Authorization M+9 e Operations M+10. Lo scenario sliding realistico, viceversa, sposta pre-app a M+6-9, SORA a M+10-12, Authorization a M+15-24 e Operations a M+16-26.
+In linea con Cap. 9 §9.12 sliding timeline e con la review regolatoria indipendente, si distinguono due scenari di percorrenza. Lo scenario nominale prevede pre-app M+3, SORA M+9, Authorization M+9 e Operations M+10. Lo scenario sliding realistico, viceversa, sposta pre-app a M+6-9, SORA a M+10-12, Authorization a M+15-24 e Operations a M+16-26.
 
 **Falsifying observation**: se al M+12 ENAC pre-application restituisce GRC > 5 (SAIL ≥ IV), il modello operativo va rivisto a VLOS-only Y1 con re-design ConOps per Y2.
 

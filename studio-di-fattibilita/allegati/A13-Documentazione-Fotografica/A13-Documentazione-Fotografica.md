@@ -113,16 +113,16 @@ Per garantire **uso professionale** in documenti formali, le fotografie devono r
 
 ```
 A13-Documentazione-Fotografica/
-├── 01-Pentema/                   (F-PENT-001..010)
-│   ├── panoramiche/
-│   ├── borgo-storico/
-│   ├── aree-operative/
-│   └── condizioni-meteo/
-├── 02-Area-Operativa/            (F-AREA-001..006)
-├── 03-Piattaforme-Vendor/        (F-VEND-001..006)
-├── 04-Concept-HALE/              (F-HALE-001..004)
-├── 05-Casi-Uso/                  (F-UC-001..005)
-└── 06-Stakeholder-Workshop/      (F-STAKE-001..005)
+├── 01-Pentema/ (F-PENT-001..010)
+│ ├── panoramiche/
+│ ├── borgo-storico/
+│ ├── aree-operative/
+│ └── condizioni-meteo/
+├── 02-Area-Operativa/ (F-AREA-001..006)
+├── 03-Piattaforme-Vendor/ (F-VEND-001..006)
+├── 04-Concept-HALE/ (F-HALE-001..004)
+├── 05-Casi-Uso/ (F-UC-001..005)
+└── 06-Stakeholder-Workshop/ (F-STAKE-001..005)
 ```
 
 ## A.13.5 Status M+3 + roadmap

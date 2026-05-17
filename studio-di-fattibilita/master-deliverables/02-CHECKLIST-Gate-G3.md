@@ -7,7 +7,7 @@
 
 Il **Gate G3 FEASIBILITY** è il gate decisionale primario dello Studio (M+10/M+11). Il verdetto target si declina su quattro esiti possibili: Go, Go Condizionato, Hold, No-Go, applicati separatamente a ciascuno dei due percorsi. Questa checklist è lo strumento operativo del Board per verificare la prontezza al gate.
 
-Il verdetto base atteso post-audit M+3 (vedi Cap. 10 §10.0bis) prevede HOLD CON PIANO REGOLATORIO RAFFORZATO per il Percorso 6A (P 45-60%), con re-review M+13-16, e HOLD CON CRITERI DI USCITA STRINGENTI per il Percorso 6B, accompagnato da un pivot strutturale verso il modello prime contractor.
+Il verdetto base atteso alla milestone M+3 (vedi Cap. 10 §10.0bis) prevede HOLD CON PIANO REGOLATORIO RAFFORZATO per il Percorso 6A (P 45-60%), con re-review M+13-16, e HOLD CON CRITERI DI USCITA STRINGENTI per il Percorso 6B, accompagnato da un pivot strutturale verso il modello prime contractor.
 
 ---
 
@@ -71,9 +71,9 @@ Il verdetto base atteso post-audit M+3 (vedi Cap. 10 §10.0bis) prevede HOLD CON
 | Criterio | Soglia GO 6A | Soglia GO 6B | Status M+3 | DR-XXX |
 |---|---|---|---|---|
 | Pre-application meeting ENAC | OK entro M+9 | OK in dialogo informale | pending DR-004 aperto | DR-004 |
-| Stima SAIL preliminare | ≤ III | n/a | OK SAIL II-III preliminare (Cap. 5.1.5) |  |
+| Stima SAIL preliminare | ≤ III | n/a | OK SAIL II-III preliminare (Cap. 5.1.5) | |
 | Engagement EASA HAPS framework | n/a | OK richiesta RMT formalizzata | pending Y1+ | DR-008 |
-| Conformità Reg. UE 2019/947 + 945 | OK dichiarata | OK dichiarata | OK |  |
+| Conformità Reg. UE 2019/947 + 945 | OK dichiarata | OK dichiarata | OK | |
 | Privacy DPIA preliminare pubblica | OK M+6 | OK M+6 | pending DR-006 parziale | DR-006 |
 | AGCOM licensing spettro | OK M+9 | n/a Y1 | pending DR-005 | DR-005 |
 
@@ -247,4 +247,4 @@ La checklist segue un versionamento allineato ai gate. La v1.0 M+3, presente, co
 - Cap. 10 §10.0bis + §10.3.2 (Hard conditions + scenari)
 - Cap. 10 §10.8 (Decisione formale CdA)
 - Vol. 2 A.5 V&V Plan (gate review process)
-- Skill `gate-review-checklist` (.claude/skills/)
+- Metodologia interna di checklist gate review.

@@ -6,9 +6,9 @@
 >
 > **Versione:** v1.0 (M+3)
 > **Conformità:** ITU-R P.618-14 (rain), ITU-R P.676-13 (gaseous), ITU-R P.840-9 (clouds), ITU-R P.838-3 (specific rain), 3GPP TR 38.811 v15 (NTN channel models), 3GPP TR 38.821 v16 (NR-NTN solutions)
-> **Allineamento:** cap-06-analisi-tecnica §6.3.6 (TS-COMMS) + cap-03-requisiti §SyR-P-007 / SsR-COMMS-001..005 + skill `link-budget-calculator`
+> **Allineamento:** cap-06-analisi-tecnica §6.3.6 (TS-COMMS) + cap-03-requisiti §SyR-P-007 / SsR-COMMS-001..005 + metodologia di link budget
 > **Output companion:** `link_budget_calculator.py` (script) + `LINK-BUDGET-v1.0.xlsx` (multi-sheet) + 4 plot PNG
-> **Disciplina epistemica:** applicate Regole 1-7 della skill `epistemic-rigor`
+> **Disciplina metodologica:** applicate le regole di rigore epistemico
 
 ---
 
@@ -37,20 +37,20 @@ In coerenza con `cap-03 §3.0bis`, `cap-06 §6.0bis`:
 
 ### A.7.1.1 Formula base del link budget
 
-In coerenza con la skill `link-budget-calculator` (SKILL.md) e con `agents/telecom-ntn-payload-expert.md`:
+In coerenza con la metodologia interna di link budget e con :
 
 ```
 C/N0 [dB-Hz] = EIRP_tx - L_path - L_other + G/T_rx - k
 
 dove:
-  EIRP_tx [dBW]   = P_tx + G_tx - L_tx          (potenza isotropica irradiata equivalente)
-  L_path  [dB]    = 20·log10(4π·d/λ)            (free space path loss, Friis)
-  L_other [dB]    = L_atm + L_rain + L_cloud + L_pol + L_scint + L_body + L_point
-  G/T_rx  [dB/K]  = (G_rx - L_rx) - 10·log10(T_sys · 10^(NF/10))
-  k       [dBW/K/Hz] = -228.6                    (costante di Boltzmann)
+ EIRP_tx [dBW] = P_tx + G_tx - L_tx (potenza isotropica irradiata equivalente)
+ L_path [dB] = 20·log10(4π·d/λ) (free space path loss, Friis)
+ L_other [dB] = L_atm + L_rain + L_cloud + L_pol + L_scint + L_body + L_point
+ G/T_rx [dB/K] = (G_rx - L_rx) - 10·log10(T_sys · 10^(NF/10))
+ k [dBW/K/Hz] = -228.6 (costante di Boltzmann)
 
-SNR [dB]      = C/N0 - 10·log10(BW)
-Link margin   = SNR_available - SNR_required(modulation)
+SNR [dB] = C/N0 - 10·log10(BW)
+Link margin = SNR_available - SNR_required(modulation)
 ```
 
 ### A.7.1.2 Implementazione standard ITU-R
@@ -166,7 +166,7 @@ Lo scenario **16QAM 1/2 @ 50 km è OK** con BW ridotta a 10 MHz (vs 20 MHz nomin
 
 ### A.7.4.1 Configurazione
 
-Riferimento `agents/telecom-ntn-payload-expert.md` + 3GPP TR 38.811/38.821:
+Riferimento + 3GPP TR 38.811/38.821:
 - **S-band 2.1 GHz** (3GPP n255/n256 NR-NTN downlink/uplink)
 - **700 MHz 5G NR n28** (rural coverage, sub-leasing operator IT)
 
@@ -303,8 +303,8 @@ Sintesi (dettaglio completo nel sheet `Compliance_AGCOM` del file Excel):
 ### A.7.7.1 Action items regolatori
 
 1. **AGCOM consultation entry M+6-10** (allineato con cap-09 §9.1 schedule item "AGCOM spectrum consultation") per:
-   - C2 6A 2.4 GHz: chiarire l'estensione EIRP oltre i 100 mW per uso aeronautico
-   - Payload 6A 5 GHz UHF: ottenere parere positivo MIMIT
+ - C2 6A 2.4 GHz: chiarire l'estensione EIRP oltre i 100 mW per uso aeronautico
+ - Payload 6A 5 GHz UHF: ottenere parere positivo MIMIT
 2. **Engagement AGCOM HAPS Working Group**: aprire dialogo sulla disciplina spettro post-WRC-19 per HAPS, in preparazione delle operations Phase B 6B (M+24+)
 3. **Coordinamento internazionale ITU**: per Ka 28/31 GHz feeder, attivare site coordination con stati confinanti (Francia, Svizzera, Slovenia per cross-border HAPS visibility)
 
@@ -333,10 +333,10 @@ Sintesi (dettaglio completo nel sheet `Compliance_AGCOM` del file Excel):
 |---|---|---|---|---|
 | OQ-LB-01 | AGCOM concede uso esteso 2.4 GHz oltre EIRP 100 mW per C2 UAS? | AGCOM spectrum consultation | telecom-payload | M+10 |
 | OQ-LB-02 | AGCOM + MIMIT pareri positivi per 5 GHz UHF payload data? | Engagement formale | telecom-payload | M+10 |
-| OQ-LB-03 | Accordo MOCN/RAN-sharing 700 MHz con TIM/Vod/W3 fattibile entro Y3? | Engagement BizDev | business-model-strategist | M+24 |
+| OQ-LB-03 | Accordo MOCN/RAN-sharing 700 MHz con TIM/Vod/W3 fattibile entro Y3? | Engagement BizDev | team strategia business model | M+24 |
 | OQ-LB-04 | Disciplina AGCOM spettro HAPS post-WRC-19 disponibile entro M+24? | AGCOM HAPS WG engagement | telecom-payload | M+18 |
 | OQ-LB-05 | Antenna AESA digitale 24 dBi (8-32 beam) feasibile @ peso ≤ 25 kg per HAPS subscale? | Vendor RFQ Phase B 6B | telecom-payload | M+24 |
-| OQ-LB-06 | Iridium Certus subscription cost Y1 affordable per missioni emergenza? | Vendor quote | financial-cfo-analyst | M+6 |
+| OQ-LB-06 | Iridium Certus subscription cost Y1 affordable per missioni emergenza? | Vendor quote | analisi finanziaria CFO | M+6 |
 | OQ-LB-07 | Validazione modello rain fade ITU-R P.618 con dati ARPA Liguria rilevati? | Dati ARPA pluviometri Pentema | telecom-payload | M+12 |
 
 ---
@@ -367,7 +367,7 @@ Sintesi (dettaglio completo nel sheet `Compliance_AGCOM` del file Excel):
 
 Il presente Allegato A.7 fornisce il **modello quantitativo di link budget RF** richiesto per il **Gate G3 (M+10/M+11) FEASIBILITY GATE PRIMARIO**. Esso:
 
-1. **Implementa fedelmente** ITU-R P.618-14 (rain), P.676-13 (gaseous), P.840-9 (clouds), P.838-3 (specific rain), conforme con `link-budget-calculator/SKILL.md`
+1. **Implementa fedelmente** ITU-R P.618-14 (rain), P.676-13 (gaseous), P.840-9 (clouds), P.838-3 (specific rain), conforme con metodologia interna
 2. **Analizza 14 configurazioni** tra i 4 link principali (6A C2 + 6A Payload + 6B Service + 6B Feeder)
 3. **Risulta**: 12/14 scenari OK, 2 marginal (5.8 GHz C2 + 16QAM 20 km payload), 0 fail
 4. **Identifica 8 falsifying observations** e 7 Open Questions per i gate successivi
@@ -394,7 +394,7 @@ Il presente Allegato A.7 fornisce il **modello quantitativo di link budget RF** 
 
 ### A.7.11.3 Coerenza epistemica
 
-In coerenza con `epistemic-rigor`:
+In coerenza con rigore epistemico:
 - Ogni link budget dichiara **assunzioni esplicite** (sheet `LB_*` colonna "Notes")
 - Ogni assunzione di antenna gain, P_tx, T_sys ha **confidence level** (commento Python)
 - 8 falsifying observations dichiarate per i claim critici (margini, AGCOM, rain fade extreme)
@@ -443,7 +443,7 @@ In coerenza con `epistemic-rigor`:
 
 [^19]: D.Lgs. 36/2023 art. 41 + Allegato I.7 (PFTE). Reference per allineamento allegato modello tecnico-economico. Confidence: high.
 
-[^20]: Skill `link-budget-calculator` Firmamento Technologies. Source: `.claude/skills/link-budget-calculator/SKILL.md`. Confidence: high.
+[^20]: Metodologia link budget Firmamento Technologies. Confidence: high (metodologia interna).
 
 ---
 

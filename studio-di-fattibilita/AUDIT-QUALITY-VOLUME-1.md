@@ -18,9 +18,9 @@
 | Fonte audit | Verdetto sintetico | Severità |
 |---|---|---|
 | **Audit interno coerenza** (main session) | Documento coerente; 3 incongruenze numeriche minori fixate; boundary B1+B2 preservate in 12/12 capitoli | 🟢 |
-| **Red Team Skeptic** (subagent) | "Regge con caveat strutturali pesanti, non investment-grade nello stato attuale M+11 proiezione" | 🟡 |
-| **Competitor Intelligence** (subagent) | "Firmamento NON sopravvive standalone a Y10, probabilità <15%. Scenario più probabile: acquisizione difensiva da TAS-Leonardo Y3-Y5 (€30-200M valuation, P ~50-70%)" | 🔴 |
-| **Regulatory Adversary** (subagent) | "Path regolatorio NON regge nella formulazione attuale. P(blocco operativo M+12-M+18 su 6A) ≈ 35-45%; P(stalling permanente 6B fino a 2030+) ≈ 75%" | 🔴 |
+| **review critica Skeptic** (subagent) | "Regge con caveat strutturali pesanti, non investment-grade nello stato attuale M+11 proiezione" | 🟡 |
+| **analisi competitor** (subagent) | "Firmamento NON sopravvive standalone a Y10, probabilità <15%. Scenario più probabile: acquisizione difensiva da TAS-Leonardo Y3-Y5 (€30-200M valuation, P ~50-70%)" | 🔴 |
+| **review regolatoria** (subagent) | "Path regolatorio NON regge nella formulazione attuale. P(blocco operativo M+12-M+18 su 6A) ≈ 35-45%; P(stalling permanente 6B fino a 2030+) ≈ 75%" | 🔴 |
 
 ---
 
@@ -28,18 +28,18 @@
 
 In ordine di **criticità per la sopravvivenza del progetto**:
 
-| # | Action | Owner agent | Deadline | Fonte audit | Criticità |
+| # | Action | Owner specialista | Deadline | Fonte audit | Criticità |
 |---|---|---|---|---|---|
-| **1** | **Capital structure resistente** (founder ≥ 51% post-Series A; golden share; clausole anti-acquisition) | financial-cfo-analyst + business-model-strategist | M+6 | Competitor | 🔴🔴 |
-| **2** | **LoI Regione Liguria** firmata con DGR specifica + commitment pluriennale | snai-funding-territorial-expert + CEO | M+6 | Tutti | 🔴 |
-| **3** | **Pre-application meeting ENAC** + feedback documentato su SAIL Pentema | aviation-regulatory-counsel | M+3-6 | Regulatory + Red Team | 🔴 |
-| **4** | **Workshop pubblico comunità Pentema** (14 abitanti) + DPIA pubblica preliminare | data-privacy-counsel + snai-funding | M+3-6 | Tutti | 🔴 |
+| **1** | **Capital structure resistente** (founder ≥ 51% post-Series A; golden share; clausole anti-acquisition) | analisi finanziaria CFO + team strategia business model | M+6 | Competitor | 🔴🔴 |
+| **2** | **LoI Regione Liguria** firmata con DGR specifica + commitment pluriennale | team SNAI e funding territoriale + CEO | M+6 | Tutti | 🔴 |
+| **3** | **Pre-application meeting ENAC** + feedback documentato su SAIL Pentema | consulenza legale-regolatoria aviazione | M+3-6 | Regulatory + review critica | 🔴 |
+| **4** | **Workshop pubblico comunità Pentema** (14 abitanti) + DPIA pubblica preliminare | consulenza privacy e protezione dati + snai-funding | M+3-6 | Tutti | 🔴 |
 | **5** | **Assunzione Head of Regulatory + CISO + DPO** (oggi 0.5-1 FTE → necessari 3 FTE) | CEO | M+6-9 | Regulatory | 🔴 |
-| **6** | **Benchmark pricing PA reale** con e-GEOS / Planetek / NHazca (falsifica €150k/anno Cap. 7) | aerospace-market-analyst | M+6 | Competitor + Red Team | 🔴 |
-| **7** | **Quotation JOUAV + Tekever** parallele per CapEx accurate + Plan B geopolitico | vtol-uas-specialist | M+3 | Tutti | 🟡 |
-| **8** | **Engagement EASA Innovation Network** + RMT HAPS request (anche se base rate apertura 5-10 anni) | aviation-regulatory-counsel | M+9-12 | Regulatory | 🟡 |
-| **9** | **Modello finanziario Excel** completo con DCF + sensitivity + Monte Carlo | financial-cfo-analyst | M+6-9 | Red Team | 🟡 |
-| **10** | **Position paper "Italian Stratospheric Sovereignty"** + dialogo DG CNECT/DEFIS | sovereign-infrastructure-strategist | M+9-12 | Competitor | 🟡 |
+| **6** | **Benchmark pricing PA reale** con e-GEOS / Planetek / NHazca (falsifica €150k/anno Cap. 7) | team analisi di mercato aerospace | M+6 | Competitor + review critica | 🔴 |
+| **7** | **Quotation JOUAV + Tekever** parallele per CapEx accurate + Plan B geopolitico | team VTOL UAS specialistico | M+3 | Tutti | 🟡 |
+| **8** | **Engagement EASA Innovation Network** + RMT HAPS request (anche se base rate apertura 5-10 anni) | consulenza legale-regolatoria aviazione | M+9-12 | Regulatory | 🟡 |
+| **9** | **Modello finanziario Excel** completo con DCF + sensitivity + Monte Carlo | analisi finanziaria CFO | M+6-9 | review critica | 🟡 |
+| **10** | **Position paper "Italian Stratospheric Sovereignty"** + dialogo DG CNECT/DEFIS | team strategia sovranita tecnologica | M+9-12 | Competitor | 🟡 |
 
 ---
 
@@ -130,7 +130,7 @@ In ordine di **criticità per la sopravvivenza del progetto**:
 
 ---
 
-## 3. 10 Falsifying Observations MANCANTI (Red Team)
+## 3. 10 Falsifying Observations MANCANTI review critica + competitor + regolatoria + qualità)
 
 Claim importanti del Volume 1 che NON hanno falsifying observation dichiarata:
 
@@ -151,7 +151,7 @@ Claim importanti del Volume 1 che NON hanno falsifying observation dichiarata:
 
 ## 4. 15 Claim Numerici Single-Source Non Triangolati
 
-Da `audit-rigore-epistemico.md` DR-012 + Red Team audit:
+Da `audit-rigore-epistemico.md` DR-012 + audit review critica:
 
 1. TAM HAPS €99M→€240M (MarkNtel only)
 2. Pricing PA Regione €150k/anno (stima propria, no benchmark)
@@ -287,9 +287,9 @@ Fix immediati applicati in questa sessione:
 
 ## 11. File audit referenziati
 
-- `AUDIT-REDTEAM-VOLUME-1.md` (297 righe, 38 KB): Red Team Skeptic generale
-- `AUDIT-COMPETITOR-VOLUME-1.md` (474 righe, ~50 KB): Competitor Intelligence
-- `AUDIT-REGULATORY-VOLUME-1.md` (445 righe, ~45 KB): Regulatory Adversary
+- `AUDIT-REDTEAM-VOLUME-1.md` (297 righe, 38 KB): review critica Skeptic generale
+- `AUDIT-COMPETITOR-VOLUME-1.md` (474 righe, ~50 KB): analisi competitor
+- `AUDIT-REGULATORY-VOLUME-1.md` (445 righe, ~45 KB): review regolatoria
 - Audit interno coerenza (questa sessione main)
 
-**Totale audit Volume 1**: ~155 KB + circa 1200 righe di analisi avversariale.
+**Totale audit Volume 1**: ~155 KB + circa 1200 righe di analisi critica indipendente.

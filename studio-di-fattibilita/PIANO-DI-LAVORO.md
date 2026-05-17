@@ -7,7 +7,7 @@
 - **4 subagent in parallelo** (background): Cap. 1, 2, 4, 11 (capitoli stand-alone, struttura ben definita)
 - **5 capitoli in sequenza diretta**: Cap. 6 → 8 → 9 → 10 → 0 (tecnico-integrati, richiedono coerenza con capitoli vicini)
 - **Commit progressivo dopo ogni capitolo** per non perdere lavoro
-- **Quality bar costante**: stessa struttura dei Cap. 3, 5, 7 (NASA SE + art. 41 + epistemic rigor + Red Team check + boundary conditions B1, B2)
+- **Quality bar costante**: stessa struttura dei Cap. 3, 5, 7 (NASA SE + art. 41 + epistemic rigor + Review critica + boundary conditions B1, B2)
 
 ## Ordine e dipendenze
 
@@ -30,7 +30,7 @@
 - Confidence levels dichiarati (high/medium/low) per claim cruciali
 - Almeno 4-7 falsifying observations per capitolo (epistemic rigor Regola 1)
 - Boundary conditions B1 (cooperative+service-only) + B2 (EU sovereign) sempre preservate
-- Red Team check finale con agente avversariale appropriato
+- Review critica finale con agente avversariale appropriato
 - Output formato Markdown nel path `studio-di-fattibilita/cap-NN-nome.md`
 - Commit dopo ogni capitolo
 

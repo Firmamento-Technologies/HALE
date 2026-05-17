@@ -57,10 +57,10 @@ Il profilo di missione tipico prevede decollo VTOL dall'elipiazzola di Pentema (
 - **Target**: 80 missioni/anno (~1,5/settimana media)
 - **Minimo bandabile**: 50 missioni/anno (~1/settimana)
 - **Distribuzione stagionale**:
-  - Inverno (dic-feb): missioni dimostrative e monitoraggio neve/frane (~10-15 missioni)
-  - Primavera (mar-mag): **periodo critico di nidificazione avifauna**, ridotte +30% per buffer cautelativo (~10-15 missioni)
-  - Estate (giu-set): **peak antincendio AIB**, priorità protezione civile (~35-45 missioni)
-  - Autunno (ott-nov): monitoraggio frane post-pioggia e caccia (engagement Federcaccia) (~10-15 missioni)
+ - Inverno (dic-feb): missioni dimostrative e monitoraggio neve/frane (~10-15 missioni)
+ - Primavera (mar-mag): **periodo critico di nidificazione avifauna**, ridotte +30% per buffer cautelativo (~10-15 missioni)
+ - Estate (giu-set): **peak antincendio AIB**, priorità protezione civile (~35-45 missioni)
+ - Autunno (ott-nov): monitoraggio frane post-pioggia e caccia (engagement Federcaccia) (~10-15 missioni)
 - **Orario**: prevalentemente **diurno** (sunrise / sunset). Operazioni notturne (twilight e notte) **solo per emergenze Protezione Civile** (incendi, frane, ricerca persone) con buffer 500 m dai centri abitati.
 
 L'infrastruttura ground prevede un hangar di Pentema in affitto o comodato su edificio esistente (CME Allegato A.9 opzione A, confidence high di disponibilità ~70%, vedi rischio RSK-OPS-009), così da evitare il consumo di suolo. Il backup (opzione B) è un light build < 100 m² su terreno già edificabile (fuori area SIC e fuori area vincolata sotto profilo paesaggistico). La Ground Station è mobile (container 20' o veicolo dedicato, parcheggio piazzale comunale Pentema). Le antenne C2 e payload sono al massimo due, pole-mount con altezza < 6 m, senza opere fondali permanenti.
@@ -230,10 +230,10 @@ Le tipologie di disturbo rilevanti sono:
 2. **Disturbo visivo**: oggetto in movimento percepibile dai raptor territoriali come potenziale competitor o predatore.
 3. **Rischio collisione**: probabilità bassa per VTOL a quote 100-400 m AGL (sotto la maggior parte delle rotte migratorie principali; il corridoio Alpi Marittime / Stretto di Bonifacio è laterale). La letteratura indica meno di 0,1 incidenti / 100 ore di volo per piccoli UAS in aree montane (fonte: ricerche Sentinel e database bird-strike ENAC).
 4. **Disturbo nidificazione**: critico nel **periodo riproduttivo (marzo-luglio)** per le specie sensibili:
-   - **Aquila reale** (incubazione marzo-aprile, allevamento maggio-luglio), pari a 4-5 mesi di sensibilità acuta
-   - **Gufo reale** (incubazione gennaio-aprile)
-   - **Pellegrino** (incubazione marzo-maggio)
-   - **Biancone** (incubazione aprile-giugno)
+ - **Aquila reale** (incubazione marzo-aprile, allevamento maggio-luglio), pari a 4-5 mesi di sensibilità acuta
+ - **Gufo reale** (incubazione gennaio-aprile)
+ - **Pellegrino** (incubazione marzo-maggio)
+ - **Biancone** (incubazione aprile-giugno)
 
 Stima della magnitudine:
 - in assenza di mitigazioni il rischio è **MEDIO-ALTO** per il disturbo dell'aquila reale (specie iconica, con nidi noti potenzialmente in area corridoio volo);
@@ -588,10 +588,10 @@ Qualora la Regione Liguria richieda la VIA piena nonostante l'argomentazione di 
 2. **Costi**: SIA (Studio Impatto Ambientale) completo €40-80k, oltre a consulenze tecniche e rilievi field.
 3. **Impatto sul progetto**: slittamento Fase 1 operativa di 6-12 mesi, con effetto sul gate M+11.
 4. **Strategia di mitigazione**:
-   - engagement preventivo M+3/M+6 con la Regione per chiarire la fattispecie;
-   - pre-application meeting e parere informale ARPAL prima della submission formale;
-   - eventuale chiusura pre-emptive con percorso semplificato "Operazioni UAS sperimentali";
-   - riduzione dello scope Y1 (per esempio solo missioni di emergenza PC, senza missioni di routine) per abbassare il profilo di rischio.
+ - engagement preventivo M+3/M+6 con la Regione per chiarire la fattispecie;
+ - pre-application meeting e parere informale ARPAL prima della submission formale;
+ - eventuale chiusura pre-emptive con percorso semplificato "Operazioni UAS sperimentali";
+ - riduzione dello scope Y1 (per esempio solo missioni di emergenza PC, senza missioni di routine) per abbassare il profilo di rischio.
 
 ---
 
@@ -779,7 +779,7 @@ La presente Relazione VIA Preliminare v2.0 è documento *preliminary-grade* dest
 ---
 
 **Documento redatto da**: environmental-consultant (consulente ambientale Firmamento Technologies)
-**Revisione**: red-team-skeptic (epistemic-rigor check)
+**Revisione**: review critica indipendente (rigore epistemico check)
 **Data**: 17 maggio 2026
 **Versione**: 2.0 (sostituisce v1.0 desk del 17 maggio 2026)
 **Distribuzione interna**: project-manager, government-affairs, safety-engineer, flight-ops

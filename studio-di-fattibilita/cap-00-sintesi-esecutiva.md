@@ -10,20 +10,20 @@
 
 ---
 
-## 0.0 Confidence aggregato dello Studio (post audit M+3)
+## 0.0 Confidence aggregato dello Studio (alla milestone M+3)
 
-Per ogni claim numerico o strategico del presente capitolo riportiamo il livello di confidence, costruito secondo le sette regole della skill `epistemic-rigor` e i quattro audit avversariali condotti in fase M+3 (Red Team, Competitor Intelligence, Regulatory Adversary, Quality Consolidation).
+Per ogni claim numerico o strategico del presente capitolo riportiamo il livello di confidence, costruito secondo le sette regole del rigore epistemico e i quattro cicli di review critica indipendente condotti alla milestone M+3.
 
 | Claim | Confidence | Evidenze |
 |---|---|---|
 | CapEx Y1 €700k-2M | medium | Range che include contingency 15% e IVA. Le quotation vendor reali (JOUAV e Tekever) sono ancora pending nei DR-001/DR-003; il livello salirà a medium-high una volta acquisite. |
-| OpEx Y2 RECONCILED €1.18M | medium-high | La componente regulatory team mandatory (€400-590k per CISO, DPO, Head Regulatory) è derivata dal Cap. 5 §5.17 sulla base di evidenza normativa diretta (Part-IS EASA, NIS2, AgID/PSN, art. 50, ENAV). Il baseline tecnico €260-480k proviene dai modelli `agents/financial-cfo-analyst.md`. |
+| OpEx Y2 RECONCILED €1.18M | medium-high | La componente regulatory team mandatory (€400-590k per CISO, DPO, Head Regulatory) è derivata dal Cap. 5 §5.17 sulla base di evidenza normativa diretta (Part-IS EASA, NIS2, AgID/PSN, art. 50, ENAV). Il baseline tecnico €260-480k proviene dai modelli stime interne di modellazione finanziaria. |
 | Revenue Y1 €260k centrale (range €220-300k) RECALIBRATED | medium | Pricing post-audit Cluster D (benchmark Planetek Rheticus Puglia, e-GEOS PC Lazio, NHazca) con confidence high. La soglia €200k SyR-Cost-003 funge da hard floor. Il legacy €355-405k è stato falsificato e non rientra più nel modello operativo. |
 | NPV 10y base +€3.5M / IRR 12-18% | low | Periodo out-of-window per validazione diretta dal terzo anno in poi. La sensitivity in Cap. 8 §8.6.3 mostra un range ampio. L'analisi Monte Carlo non è ancora stata condotta (DR-008). |
 | Break-even Y5-Y6 | medium-low | Post-recalibration del revenue Y1; assume scale-up SNAI Y2-Y3 a una nuova regione l'anno mantenendo il pricing. |
-| P(Go pieno gate G3) 5-15% | medium-high | Calcolo derivato dall'AND delle 5 hard conditions (Cap. 10 §10.0bis), con P marginali stimate da red-team-skeptic. Coerente con il base rate startup deeptech (DR-013/DR-014). |
+| P(Go pieno gate G3) 5-15% | medium-high | Calcolo derivato dall'AND delle 5 hard conditions (Cap. 10 §10.0bis), con P marginali stimate da review critica indipendente. Coerente con il base rate startup deeptech (DR-013/DR-014). |
 | P(HOLD piano rafforzato G3) 45-60% | medium-high | Scenario realistico atteso. Il pivot a sliding timeline §9.12 non comporta perdita di valore strategico. |
-| 5 showstopper formali (Risk Register) | high | Identificati e quantificati dai quattro audit avversariali. RSK-TEC-001 ha score 25 dopo la simulazione completa di energy balance HALE a 44°N (allegato A.7). |
+| 5 showstopper formali (Risk Register) | high | Identificati e quantificati dai quattro review critiche indipendenti. RSK-TEC-001 ha score 25 dopo la simulazione completa di energy balance HALE a 44°N (allegato A.7). |
 | Visione 10 anni / B2 EU sovereign stratospheric layer | low-medium aspirazionale, non operativa | Boundary condition strategica, input progetto non falsificabile. B2 full con P 6-15%; B2-relaxed standalone IT small fleet con P 30-50%. Trigger in FO-ADD-10 e Cap. 11 §11.6bis. |
 | Posizionamento "complementare IRIS²" | medium | IRIS² baseline LEO+MEO puro confermato (DR-009 closure). La finestra di opportunità stratospheric gap-filler è aperta Y2-Y4 (2027-2030). Falsificabile via FO-ADD-02 (M+18, roadmap DG CNECT). |
 | 5 Pilastri vantaggio competitivo | mixed | Uno high (cooperative, se strutturazione giuridica), due medium (sostenibilità e service-only), due low (specializzazione geografica e approccio incrementale). Vedi Cap. 7 §7.5.1. |
@@ -75,7 +75,7 @@ Il Percorso 6A è tecnicamente, regolatoriamente, di mercato e finanziariamente 
 
 ### Percorso 6B: HOLD CON CRITERI DI USCITA ESTREMAMENTE STRINGENTI + pivot strutturale
 
-Il pivot strategico post audit M+3 (DR-013 e DR-014) si fonda su tre constatazioni: il base rate di HALE solari commerciali operativi è prossimo allo zero, con dodici programmi falliti analizzati negli ultimi 22 anni; la capital intensity di benchmark internazionale si colloca in $50M-1B per programma, sicché €5.5-13.5M corrispondono in realtà a R&D di Fase 0/A, non al percorso completo verso l'operatività; di conseguenza la raccomandazione è di pivotare da "HALE proprietario Firmamento" a "Firmamento operatore di servizi su piattaforme prime contractor" (Aalto, Sceye, Skydweller, CIRA-EuroHAPS-successor).
+Il pivot strategico alla milestone M+3 (DR-013 e DR-014) si fonda su tre constatazioni: il base rate di HALE solari commerciali operativi è prossimo allo zero, con dodici programmi falliti analizzati negli ultimi 22 anni; la capital intensity di benchmark internazionale si colloca in $50M-1B per programma, sicché €5.5-13.5M corrispondono in realtà a R&D di Fase 0/A, non al percorso completo verso l'operatività; di conseguenza la raccomandazione è di pivotare da "HALE proprietario Firmamento" a "Firmamento operatore di servizi su piattaforme prime contractor" (Aalto, Sceye, Skydweller, CIRA-EuroHAPS-successor).
 
 La fattibilità tecnologica resta plausibile, ma rimangono aperti cinque showstopper. RSK-TEC-001 riguarda l'energy balance HALE in inverno a 44°N, con margine reale a -50.1% deficit (la simulazione completa dell'allegato A.7 supera la stima hand-calc "0-15% critico"); l'architettura E5 Seasonal-only marzo-ottobre diventa il plan A mandatory, mentre l'operatività perennial a 44°N non è fattibile con la tecnologia baseline 2026-2028; il punteggio RSK è stato aggiornato a 25. RSK-TEC-002 concerne l'aeroelasticità dell'ala high-AR. RSK-REG-001 attiene all'assenza di framework regolatorio HAPS UE (la EASA Special Condition non è ancora aperta). RSK-FIN-001 è il funding Phase B €5.5-13.5M non commitato al M+11. RSK-TEC-003 riguarda i tempi di Type Certification HALE superiori a cinque anni.
 
@@ -149,12 +149,12 @@ Per la Phase B 6B, su target €5.5-15.5M nella finestra M+24-48, il mix prevede
 ## 0.10 Cronoprogramma e gate
 
 ```
-M+0   M+3   M+6   M+10/11   M+12         M+24            M+36            M+48
-│     │     │     │         │            │               │               │
-│ G0  │ G1  │ G2  │ G3       │ G4         │ G5            │ G6            │ Phase B end
-│     │     │     │ ★ FEAS   │            │               │               │
-│           │     │ VERDICT  │            │               │               │
-│  STUDIO DI FATTIBILITÀ    │  PILOTA 6A VTOL OP         │   R&D 6B HALE PHASE B           │
+M+0 M+3 M+6 M+10/11 M+12 M+24 M+36 M+48
+│ │ │ │ │ │ │ │
+│ G0 │ G1 │ G2 │ G3 │ G4 │ G5 │ G6 │ Phase B end
+│ │ │ │ ★ FEAS │ │ │ │
+│ │ │ VERDICT │ │ │ │
+│ STUDIO DI FATTIBILITÀ │ PILOTA 6A VTOL OP │ R&D 6B HALE PHASE B │
 ```
 
 I gate principali sono quattro. G3 (M+10-11) è il FEASIBILITY GATE PRIMARIO e produce il verdetto Go / Hold / No-Go per ciascun percorso (oggetto del presente Studio). G4 (M+12) chiude il pilota VTOL 6A e attiva la decisione di scale-up SNAI. G5 (M+24) decide la Phase B 6B in modalità Go o Defer. G6 (M+36) è la midterm review della Phase B HALE.

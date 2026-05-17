@@ -3,7 +3,7 @@
 > Volume 2, Allegato A.3
 > Equivalente DOCFAP ex art. 41 D.Lgs. 36/2023 (Documento di Fattibilità delle Alternative Progettuali)
 > Sintesi consolidata dei trade study chiave dello Studio di Fattibilità HALE/VTOL Firmamento Technologies
-> **Metodologia:** skill `trade-study-analysis` (NASA SE Handbook §6.8 + INCOSE)
+> **Metodologia:** metodologia di trade study (NASA SE Handbook §6.8 + INCOSE)
 
 ## A.3.0 Premessa metodologica
 
@@ -155,7 +155,7 @@ Il presente allegato soddisfa i requisiti del **DOCFAP** ex art. 41 + Allegato I
 ## A.3.11 Riferimenti
 
 - Cap. 6 (Analisi Tecnica)
-- Skill `trade-study-analysis` (`.claude/skills/`)
+- Metodologia trade study interna
 - Vol. 3 R.2 (NASA SE + INCOSE)
 - Vendor RFQ analysis (allegati/vendor-rfq/)
 - Energy balance simulation (allegati/energy-balance/)

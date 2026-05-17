@@ -38,7 +38,7 @@
 
 [A-16] **Politecnico di Torino, Tesi aerospaziale**, [polito.biblio.polito.it/14893](https://webthesis.biblio.polito.it/14893/1/tesi.pdf).
 
-[A-17] **Politecnico di Torino, Tesi APQP/PPAP UmbraGroup aeronautico**. Source: `fonti/tesi.md` (download del subagent). Quality + AS9100 management.
+[A-17] **Politecnico di Torino, Tesi APQP/PPAP UmbraGroup aeronautico**. Source: `fonti/tesi.md`. Quality + AS9100 management.
 
 ## R.5.3 NR-NTN / 3GPP HAPS-related
 
@@ -157,4 +157,4 @@ Coerente con `riferimenti/DR-research-closure-M3.md`:
 
 Il Volume 3 consolida tutti i riferimenti citati nel Volume 1, nel Volume 2 e nelle ricerche di audit. Versionamento: v1.0 M+3 (presente), v1.5 M+6 (post pre-application ENAC e workshop cooperative), v2.0 M+10 (completo per gate G3).
 
-I riferimenti sono **vincolanti** per la disciplina epistemica del progetto (skill `epistemic-rigor`). Ogni claim del Volume 1 e del Volume 2 che cita un riferimento qui consolidato deve essere ricontrollato se la fonte viene aggiornata.
+I riferimenti sono **vincolanti** per la disciplina epistemica del progetto (metodologia di rigore epistemico). Ogni claim del Volume 1 e del Volume 2 che cita un riferimento qui consolidato deve essere ricontrollato se la fonte viene aggiornata.

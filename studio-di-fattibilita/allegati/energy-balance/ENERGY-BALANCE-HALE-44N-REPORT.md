@@ -33,9 +33,9 @@ Il modello implementa la geometria solare standard (Spencer 1971 + Cooper 1969) 
 - **Elevazione max a mezzogiorno solare**: 90° − |φ − δ| (φ = 44°)
 - **Fotoperiodo**: H = (2/15) × arccos(−tan φ × tan δ)
 - **Irradianza istantanea**: I(h) = G₀ × F(d) × τ × sin(elev(h))
-  - G₀ = 1366 W/m² (costante solare ASTM E-490)
-  - F(d) = 1 + 0.033 × cos(2π d / 365) -- correzione distanza Sole-Terra
-  - τ = 0.95 -- trasmissione clear-sky stratosferica a 20 km (>99 % del vapore acqueo e degli aerosoli sono sotto)
+ - G₀ = 1366 W/m² (costante solare ASTM E-490)
+ - F(d) = 1 + 0.033 × cos(2π d / 365) -- correzione distanza Sole-Terra
+ - τ = 0.95 -- trasmissione clear-sky stratosferica a 20 km (>99 % del vapore acqueo e degli aerosoli sono sotto)
 - **Integrazione**: trapezi 200 punti da sunrise a sunset
 
 **Note conservative**:
@@ -55,7 +55,7 @@ Con ρ = 0.089 kg/m³ a 20 km (ISA), S = b²/AR = 30.25 m², L/D = 28:
 
 - P_cruise_mech = **945 W** (shaft)
 - P_cruise_elec = P_mech / η_motor·prop = **1212 W** (input motore)
-  (η_motor_prop = 0.78 -- coerente BLDC + elica low-Re)
+ (η_motor_prop = 0.78 -- coerente BLDC + elica low-Re)
 
 Totale carico 24h:
 - P_avionics = 100 W
@@ -70,12 +70,12 @@ Totale carico 24h:
 ### 1.3 Bilancio energetico giornaliero
 
 ```
-E_solar_day    = ∫₀²⁴ P_solar(t) dt  [kWh]
-E_consumo_24h  = P_total · 24        [kWh]
+E_solar_day = ∫₀²⁴ P_solar(t) dt [kWh]
+E_consumo_24h = P_total · 24 [kWh]
 E_consumo_giorno = P_total · fotoperiodo
-E_consumo_notte  = P_total · (24 − fotoperiodo)
-E_carica_richiesta = E_consumo_notte / η_storage  (0.92)
-E_perdita_storage  = E_carica_richiesta − E_consumo_notte
+E_consumo_notte = P_total · (24 − fotoperiodo)
+E_carica_richiesta = E_consumo_notte / η_storage (0.92)
+E_perdita_storage = E_carica_richiesta − E_consumo_notte
 Margine % = (E_solar_day − E_consumo_24h − E_perdita_storage) / E_consumo_24h · 100
 ```
 
@@ -188,10 +188,10 @@ Variazione univariata di MTOW (±20 %), area pannelli (±20 %), L/D (±10 %):
 **Conclusione**:
 1. **PERENNIAL flight 44°N NON RACCOMANDATO Y3-Y5** con baseline tecnologico 2026-2028. Margine zero o negativo è oltre soglia accettabile per operazioni commerciali con SLA contrattuali.
 2. **PERENNIAL flight 44°N CONDIZIONALMENTE POSSIBILE Y6+** se:
-   - SS Li o LiS raggiungono > 400 Wh/kg pack-level (gate M+24 TRL 5)
-   - HALE è alleggerito a MTOW ≤ 80 kg
-   - Pannelli scalati a 30 m² (apertura b = 30 m)
-   - PEM+LH2 maturazione TRL 5 HALE-grade (Y6-Y8 R&D)
+ - SS Li o LiS raggiungono > 400 Wh/kg pack-level (gate M+24 TRL 5)
+ - HALE è alleggerito a MTOW ≤ 80 kg
+ - Pannelli scalati a 30 m² (apertura b = 30 m)
+ - PEM+LH2 maturazione TRL 5 HALE-grade (Y6-Y8 R&D)
 3. **SEASONAL flight (marzo-ottobre) FATTIBILE Y3-Y4** con tecnologia LiS commerciale (TRL 5 2028) o anche Li-ion oggi (TRL 9). E5 ha **margine sicuro > 30 %** nei mesi operativi.
 
 ### 5.2 Strategia di prodotto raccomandata
@@ -249,7 +249,7 @@ Tutti questi fattori andranno verificati al gate M+18 con flight-test subscale (
 - Probabilità: 5 (era 4)
 - Impatto: 4 (era 5; mitigato dal fallback E5)
 - Rischio residuo: 20 → **20 (invariato, ma piano B chiaro)**
-- Owner: propulsion-energy-engineer
+- Owner: team propulsione e energia
 - Trigger Hold/Go gate M+24: TRL pack batterie LiS o SS Li
 - Trigger fallback E5: ogni 6 mesi review margine simulato
 

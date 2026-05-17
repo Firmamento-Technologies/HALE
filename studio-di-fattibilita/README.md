@@ -65,7 +65,7 @@
 | Falsifying observations dichiarate | ~40 |
 | Confidence levels esplicitati | high/medium/low/speculative dichiarati per ogni claim |
 | Boundary conditions | B1 + B2 esplicitate in tutti i capitoli |
-| Red Team checks | Almeno 4-6 critiche per capitolo, addressed con action items |
+| Review criticas | Almeno 4-6 critiche per capitolo, addressed con action items |
 
 ---
 
@@ -74,12 +74,12 @@
 - ✅ Italiano formale, tono autorevole, non commerciale
 - ✅ Citazioni numerate `[^N]` con source provenance esplicita (path file `fonti/...`)
 - ✅ Confidence levels dichiarati (high/medium/low/speculative) per ogni claim
-- ✅ Falsifying observations (Regola 1 della skill `epistemic-rigor`) su claim critici
+- ✅ Falsifying observations (prima regola del rigore epistemico (falsifiability)) su claim critici
 - ✅ Triangulation (Regola 2): cifre con ≥ 2 fonti dove possibile; fonti commerciali single-source declassate
 - ✅ Source provenance (Regola 3): annotazione `[fonte | anno | tipo | confidence]` per cifre cruciali
 - ✅ Steel-manning (Regola 6): caso forte per posizione contraria formulato
 - ✅ Base-rate awareness (Regola 7): base rate aerospace + survivor bias dichiarati
-- ✅ Red Team check finale: critica adversariale + action items concreti
+- ✅ Review critica finale: critica adversariale + action items concreti
 - ✅ Boundary conditions B1+B2 mai violate
 - ✅ Linguaggio pubblico "complementare a IRIS²" mantenuto
 
@@ -87,7 +87,7 @@
 
 ## Documenti di lavoro
 
-- [`PIANO-DI-LAVORO.md`](PIANO-DI-LAVORO.md): Strategia di completamento Volume 1 (4 subagent paralleli + 5 capitoli sequenziali)
+- [`PIANO-DI-LAVORO.md`](PIANO-DI-LAVORO.md): Strategia di completamento Volume 1 (4 team specialistico paralleli + 5 capitoli sequenziali)
 
 ---
 

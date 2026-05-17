@@ -6,8 +6,8 @@
 >
 > **Versione:** bozza M+3
 > **Conformità:** D.Lgs. 36/2023 art. 41 (sezione "Analisi tecnica di fattibilità") + NASA SE Handbook Rev 2 §6 (Technical Solution Definition)
-> **Disciplina epistemica:** applicate Regole 1-7 della skill `epistemic-rigor`
-> **Red Team review:** `red-team-skeptic` + `aerospace-systems-engineer` (vedi §6.13)
+> **Disciplina metodologica:** applicate le regole di rigore epistemico
+> **Review critica indipendente:** review critica + ingegneria di sistema (vedi §6.13)
 
 ---
 
@@ -55,24 +55,24 @@ In coerenza con Cap. 5.0bis, Cap. 3.0bis, Cap. 7.0bis, il capitolo opera entro d
 
 ```
 ┌────────────────────────────────────────────────────────────────┐
-│                 PERCORSO 6A. Sistema VTOL pilota               │
+│ PERCORSO 6A. Sistema VTOL pilota │
 ├────────────────────────────────────────────────────────────────┤
-│                                                                │
-│  ┌──────────────┐    RF 2.4 GHz / SATCOM L-band    ┌─────────┐ │
-│  │   VTOL UAV   │ ◄═══════════ C2 + Telemetria ════│ Ground  │ │
-│  │              │              dati EO downlink    │ Station │ │
-│  │  • JOUAV     │ ◄═══════════════════════════════►│ fissa + │ │
-│  │    CW-30E    │                                  │ mobile  │ │
-│  │              │                                  │         │ │
-│  │  ┌────────┐  │                                  │  ↓      │ │
-│  │  │Payload │  │                                  │ Cloud   │ │
-│  │  │Module  │  │                                  │ IT/EU   │ │
-│  │  │EO+IR+  │  │                                  │ Aruba/  │ │
-│  │  │telecom │  │                                  │ OVH     │ │
-│  │  └────────┘  │                                  │  ↓      │ │
-│  └──────────────┘                                  │ End User│ │
-│                                                    │ PA/Coop │ │
-│                                                    └─────────┘ │
+│ │
+│ ┌──────────────┐ RF 2.4 GHz / SATCOM L-band ┌─────────┐ │
+│ │ VTOL UAV │ ◄═══════════ C2 + Telemetria ════│ Ground │ │
+│ │ │ dati EO downlink │ Station │ │
+│ │ • JOUAV │ ◄═══════════════════════════════►│ fissa + │ │
+│ │ CW-30E │ │ mobile │ │
+│ │ │ │ │ │
+│ │ ┌────────┐ │ │ ↓ │ │
+│ │ │Payload │ │ │ Cloud │ │
+│ │ │Module │ │ │ IT/EU │ │
+│ │ │EO+IR+ │ │ │ Aruba/ │ │
+│ │ │telecom │ │ │ OVH │ │
+│ │ └────────┘ │ │ ↓ │ │
+│ └──────────────┘ │ End User│ │
+│ │ PA/Coop │ │
+│ └─────────┘ │
 └────────────────────────────────────────────────────────────────┘
 ```
 
@@ -96,40 +96,40 @@ In coerenza con Cap. 5.0bis, Cap. 3.0bis, Cap. 7.0bis, il capitolo opera entro d
 
 ```
 ┌────────────────────────────────────────────────────────────────┐
-│            PERCORSO 6B. Sistema HALE stratosferico             │
+│ PERCORSO 6B. Sistema HALE stratosferico │
 ├────────────────────────────────────────────────────────────────┤
-│                                                                │
-│                  ┌──────────────┐                              │
-│                  │  HALE solare │  Quota: 18-21 km (FL590-690) │
-│                  │  alta high-AR│                              │
-│                  │              │                              │
-│                  │  • Wing 25-30m│                              │
-│                  │  • MTOW 80-150kg                            │
-│                  │  • Solar cells multi-junction               │
-│                  │  • Batterie LiS pack 350 Wh/kg              │
-│                  │  • Payload 5-10 kg                          │
-│                  │  • Endurance 30+ giorni (estate)            │
-│                  │                                             │
-│                  │  ┌───────────┐                              │
-│                  │  │ Payload   │                              │
-│                  │  │ EO/NTN/IR │                              │
-│                  │  └───────────┘                              │
-│                  └──────┬───────┘                              │
-│                         │                                      │
-│             Feeder link Ka 31 GHz                              │
-│                         │                                      │
-│                         ▼                                      │
-│                  ┌──────────────┐                              │
-│                  │ HAPS Gateway │                              │
-│                  │  ground      │                              │
-│                  └──────┬───────┘                              │
-│                         │                                      │
-│                         ▼                                      │
-│            Service link S-band 2.0-2.2 GHz (NTN 3GPP Rel-17/18)│
-│                         │                                      │
-│                         ▼                                      │
-│                  End User 5G NTN-capable                       │
-│                                                                │
+│ │
+│ ┌──────────────┐ │
+│ │ HALE solare │ Quota: 18-21 km (FL590-690) │
+│ │ alta high-AR│ │
+│ │ │ │
+│ │ • Wing 25-30m│ │
+│ │ • MTOW 80-150kg │
+│ │ • Solar cells multi-junction │
+│ │ • Batterie LiS pack 350 Wh/kg │
+│ │ • Payload 5-10 kg │
+│ │ • Endurance 30+ giorni (estate) │
+│ │ │
+│ │ ┌───────────┐ │
+│ │ │ Payload │ │
+│ │ │ EO/NTN/IR │ │
+│ │ └───────────┘ │
+│ └──────┬───────┘ │
+│ │ │
+│ Feeder link Ka 31 GHz │
+│ │ │
+│ ▼ │
+│ ┌──────────────┐ │
+│ │ HAPS Gateway │ │
+│ │ ground │ │
+│ └──────┬───────┘ │
+│ │ │
+│ ▼ │
+│ Service link S-band 2.0-2.2 GHz (NTN 3GPP Rel-17/18)│
+│ │ │
+│ ▼ │
+│ End User 5G NTN-capable │
+│ │
 └────────────────────────────────────────────────────────────────┘
 ```
 
@@ -168,7 +168,7 @@ In linea con boundary B2 (asset riusabili dal Percorso 6A al 6B), le scelte arch
 
 Il riuso medio degli asset 6A → 6B si attesta su due metriche distinte: circa il 60% in conteggio di categorie riusabili (ground segment, cloud, data governance, autorizzazioni, brand, payload adattabile, contro piattaforma volante, avionica e propulsione 6A specifici) e circa il 30-40% in valore monetario riusato (€250-550k di asset Y1 riusabili su CapEx 6A €700k-€2M, vedi Cap. 10 §10.3.1). Le due metriche misurano cose diverse e sono entrambe corrette. Confidence: medium (qualitativo); la quantificazione monetaria precisa è in Vol. 2 Allegato A.7.
 
-> **🔬 Falsifying observation aggiuntiva linkata**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-03** (asset reuse 30-40% valore monetario). Trigger M+24 gate G5: assessment formale + valutazione tecnica indipendente. Se valore reuse < 15% del CapEx 6A, il "ladder tecnologico" si rompe e il razionale "approccio incrementale" del Cap. 1.4 perde validità: la Phase B 6B richiederebbe CapEx pieno senza scaffold.
+> **🔬 Falsifying observation aggiuntiva linkata**: vedi addendum falsifying observations **FO-ADD-03** (asset reuse 30-40% valore monetario). Trigger M+24 gate G5: assessment formale + valutazione tecnica indipendente. Se valore reuse < 15% del CapEx 6A, il "ladder tecnologico" si rompe e il razionale "approccio incrementale" del Cap. 1.4 perde validità: la Phase B 6B richiederebbe CapEx pieno senza scaffold.
 
 ---
 
@@ -190,7 +190,7 @@ Il riuso medio degli asset 6A → 6B si attesta su due metriche distinte: circa 
 | Vento sostenuto max | 13.9-17.1 m/s | Vendor | medium | Pentema raffiche locali possibili > soglia → giorni operativi limitati |
 | Pioggia max | ≤10 mm/24h | Vendor | medium | Eventi estremi alluvionali Liguria > soglia → operatività interrotta |
 
-> **Calcolo realistico autonomia Pentema** (vedi `agents/aerodynamics-structures-engineer.md` + `agents/propulsion-energy-engineer.md`):
+> **Calcolo realistico autonomia Pentema** (vedi + ):
 > - Quota terreno 1200 m AMSL: motore -10% prestazione vs sea level
 > - Vento canalizzato 5-10 m/s sustained: +15% consumo
 > - Temperatura inverno -5°C: -10% capacità batterie LiPo
@@ -201,7 +201,7 @@ La piattaforma resta conforme al SyR-P-001 (autonomia ≥ 4h in condizioni nomin
 
 ### 6.2.2 Prestazioni Percorso 6B (HALE stratosferico)
 
-**Riferimento metodologico**: aerodinamica low-Re + energy balance stratosferico (vedi `agents/aerodynamics-structures-engineer.md` + `agents/propulsion-energy-engineer.md`).
+**Riferimento metodologico**: aerodinamica low-Re + energy balance stratosferico (vedi + ).
 
 #### 6.2.2.1 Aerodinamica HALE preliminare
 
@@ -221,14 +221,14 @@ I profili low-Re raccomandati (riferimento accademico [^2]) includono SD7037, SD
 
 #### 6.2.2.2 Energy balance preliminare HALE 44°N
 
-Il riferimento metodologico è `agents/propulsion-energy-engineer.md` + ricerca POLITO DIMEAS HELIPLAT [^3]. Le condizioni operative considerate sono: latitudine 44°N (Liguria nord); quota 20 km (sopra strato Ozono, ~1366 W/m² irradianza extraterrestre); efficienza pannelli GaAs multi-junction 30-32% (Spectrolab XTJ Prime ≈ 30%); efficienza ciclo carica-scarica 90-93%; margine richiesto ≥30% sul caso peggiore (solstizio inverno).
+Il riferimento metodologico è + ricerca POLITO DIMEAS HELIPLAT [^3]. Le condizioni operative considerate sono: latitudine 44°N (Liguria nord); quota 20 km (sopra strato Ozono, ~1366 W/m² irradianza extraterrestre); efficienza pannelli GaAs multi-junction 30-32% (Spectrolab XTJ Prime ≈ 30%); efficienza ciclo carica-scarica 90-93%; margine richiesto ≥30% sul caso peggiore (solstizio inverno).
 
 **Caso estate (solstizio 21 giugno, 44°N)**. Elevazione solare massima 69.5°, fotoperiodo ~15.5h, energia solare giornaliera disponibile (sea level equivalent) ~12-14 kWh/m² × area pannelli, energia notturna richiesta ~8.5h × P_cruise.
 
 Calcolo preliminare estate con area pannelli stimata a 25 m²:
 - E_solar_day ≈ 25 m² × 12 kWh/m² × 0.30 = **90 kWh/giorno**
 - E_consumption_24h ≈ P_cruise × 24h (P_cruise stimato 0.5-1.0 kW)
-  - Se P_cruise = 800 W → E_24h = 19.2 kWh
+ - Se P_cruise = 800 W → E_24h = 19.2 kWh
 - **Margine estate: ~370%** ✅ ottimo, surplus utilizzabile per ricarica batteria + payload aggressivo
 
 **Caso inverno (solstizio 21 dicembre, 44°N)**. Elevazione solare massima 22.5° (basso), fotoperiodo ~8.5h, energia solare giornaliera (clear sky equivalente) ~3-4 kWh/m² × area, energia notturna richiesta ~15.5h × P_cruise.
@@ -274,7 +274,7 @@ La causa del peggioramento risiede nel fatto che la stima a mano §6.2.2.2 calco
 
 Vedi `studio-di-fattibilita/allegati/energy-balance/ENERGY-BALANCE-HALE-44N-REPORT.md` per metodologia, sensitivity, falsifying observations dettagliate (5 condizioni esplicite documentate).
 
-La sensitivity analysis chiave (vedi `agents/propulsion-energy-engineer.md`) individua tre driver: massa batterie + densità energetica (driver primario), area pannelli (driver secondario, con limite strutturale apertura ≤30 m) e L/D crociera (driver terziario, riduce P_cruise).
+La sensitivity analysis chiave individua tre driver: massa batterie + densità energetica (driver primario), area pannelli (driver secondario, con limite strutturale apertura ≤30 m) e L/D crociera (driver terziario, riduce P_cruise).
 
 ### 6.2.3 Bilancio di Massa Preliminare HALE
 
@@ -299,7 +299,7 @@ Il range MTOW 85-150 kg risulta coerente con la specifica 80-150 kg.
 
 ## 6.3 Trade Studies (DOCFAP. Documento di Fattibilità delle Alternative Progettuali ex art. 41)
 
-Per ciascuna decisione architetturale chiave, conduciamo trade study formali secondo la skill `trade-study-analysis`. Riportiamo qui i sei trade study principali, con dettaglio in Vol. 2 Allegato A.3.
+Per ciascuna decisione architetturale chiave, conduciamo trade study formali secondo la metodologia di trade study. Riportiamo qui i sei trade study principali, con dettaglio in Vol. 2 Allegato A.3.
 
 ### 6.3.1 TS-PLATFORM-6A. Selezione Piattaforma VTOL
 
@@ -312,7 +312,7 @@ Le alternative valutate sono cinque:
 - A4: Tekever AR3 (PT, fixed-wing catapulta + atterraggio reti, 2.5 kg payload)
 - A0: Status quo (no acquisizione, sub-contract a operatori esistenti)
 
-**Criteri pesati** (skill `trade-study-analysis`):
+**Criteri pesati** (metodologia di trade study):
 
 | Criterio | Peso | A1 JOUAV | A2 Quantum | A3 FB3 | A4 Tekever |
 |---|---|---|---|---|---|
@@ -376,7 +376,7 @@ Il razionale è duplice. Il longherone alare primario certificabile resta in CFR
 
 La decisione riguarda la combinazione propulsione + storage per il Percorso 6B HALE. Le alternative valutate sono cinque: E1 Solare + Li-ion (stato dell'arte 250-300 Wh/kg pack); E2 Solare + LiS (target 350-450 Wh/kg pack, TRL 4-5 nel 2026, 5-6 atteso 2028); E3 Solare + Solid-State Li (target 380 Wh/kg pack, TRL 3-4 oggi); E4 Solare + PEM Fuel Cell + LH2 (alta densità energetica, ma complessità criogenica); E5 Seasonal solar-only (no batteria notturna, operatività solo marzo-ottobre).
 
-**Trade-off** (vedi `agents/propulsion-energy-engineer.md` per dettaglio):
+**Trade-off** (vedi per dettaglio):
 
 | Architettura | Margine inverno | Maturità tech 2028 | Massa relativa | Complessità integrazione | Verdetto |
 |---|---|---|---|---|---|
@@ -390,7 +390,7 @@ La raccomandazione baseline Y3-Y5 individua **E2 Solar+LiS** con fallback **E5 S
 
 **Falsifying observation §6.3.3**: se al gate M+24 il TRL pack LiS è < 5 (target 2028), il Percorso 6B perennial è bloccato; scatta l'attivazione automatica di E5 Seasonal-only.
 
-> **🔬 Falsifying observation aggiuntiva linkata**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-08** (LiS pack 350 Wh/kg entro 2028). Trigger M+24: roadmap vendor (Sion, Lyten, OXIS Energy) + pubblicazioni SAE/IEEE. Se TRL pack-level < 5 OR Wh/kg pack < 280, l'architettura E2 non è implementabile: attivazione automatica E5 + ridimensionamento KPI endurance Y3-Y5.
+> **🔬 Falsifying observation aggiuntiva linkata**: vedi addendum falsifying observations **FO-ADD-08** (LiS pack 350 Wh/kg entro 2028). Trigger M+24: roadmap vendor (Sion, Lyten, OXIS Energy) + pubblicazioni SAE/IEEE. Se TRL pack-level < 5 OR Wh/kg pack < 280, l'architettura E2 non è implementabile: attivazione automatica E5 + ridimensionamento KPI endurance Y3-Y5.
 
 ### 6.3.4 TS-AVI-6A. Autopilota Percorso 6A
 
@@ -412,7 +412,7 @@ La decisione riguarda software e hardware FCS per il Percorso 6A. Le alternative
 
 ### 6.3.5 TS-PAYLOAD-EO. Payload EO modulare 6A
 
-Riferimento: `agents/earth-observation-expert.md`.
+Riferimento:.
 
 La configurazione baseline raccomandata per il Percorso 6A comprende un sensore RGB high-res Phase One iXM 100 (100 MP, 4.6 μm pixel) con lente 50-200 mm (GSD 8 cm @ 500 m AGL) e un sensore IR LWIR WIRIS Pro (NEdT < 30 mK, GSD termico 5 m @ 500 m). La configurazione opzionale Y2 prevede l'aggiunta del multispettrale MicaSense Altum-PT (4 bande VIS-NIR + termico calibrato) per uso agricolo cooperative. La configurazione opzionale Y3+ prevede un LiDAR (YellowScan Voyager) per mapping infrastrutture lineari ad alta precisione.
 
@@ -420,31 +420,31 @@ L'interfaccia payload standard (cf. ICD Cap. 4.4) garantisce la modularità: swa
 
 ### 6.3.6 TS-COMMS. Architettura C2 + downlink dati
 
-Riferimento: `agents/avionics-gnc-engineer.md` + `agents/telecom-ntn-payload-expert.md`.
+Riferimento: +.
 
 Sul Percorso 6A, il C2 link è strutturato su tre livelli. Il primary è RF 2.4 GHz (banda ISM, no AGCOM licensing necessario), LOS range 30-50 km, fade margin 12 dB. Il secondary è SATCOM Iridium Certus L-band per shadow zones Pentema (geopoliticamente accettabile, Iridium è US-EU joint). Il tertiary fallback è il cellulare 4G se disponibile (per operazioni di emergenza in area coperta da TIM/Vod).
 
-Sul Percorso 6B (service link + feeder link, vedi `agents/telecom-ntn-payload-expert.md`), il service link opera in S-band 2.0-2.2 GHz (NTN 3GPP Rel-17 n255/n256) oppure 700 MHz (5G NR rural); il feeder link in Ka-band 31-31.3 GHz (banda HAPS dedicata ITU); il C2 + telemetria in SATCOM L-band Inmarsat o Iridium.
+Sul Percorso 6B (service link + feeder link, vedi ), il service link opera in S-band 2.0-2.2 GHz (NTN 3GPP Rel-17 n255/n256) oppure 700 MHz (5G NR rural); il feeder link in Ka-band 31-31.3 GHz (banda HAPS dedicata ITU); il C2 + telemetria in SATCOM L-band Inmarsat o Iridium.
 
-**Link budget preliminare downlink HAPS service link** (skill `link-budget-calculator` applicata):
+**Link budget preliminare downlink HAPS service link** (metodologia di link budget applicata):
 
 ```
 Configurazione: HAPS @ 20 km, banda 2.6 GHz (n7 LTE), BW 20 MHz, 16QAM 5/6
 Slant range typical 25 km nadir + 10° offset
 
-EIRP HAPS (P_tx 25W + G_antenna 24 dBi - L_tx 1 dB)        37.0 dBW
-- Free space path loss @ 2.6 GHz, 25 km                    -128.7 dB
-- Atmospheric + cloud + rain (ITU-R P.618-14 zona K Italia)  -2.0 dB
-- Polarization + scintillation + body loss                   -3.8 dB
-+ G/T receiver UE                                           -25.6 dB/K
-+ k correction Boltzmann                                   +228.6 dB
-= C/N0                                                     106.0 dB-Hz
+EIRP HAPS (P_tx 25W + G_antenna 24 dBi - L_tx 1 dB) 37.0 dBW
+- Free space path loss @ 2.6 GHz, 25 km -128.7 dB
+- Atmospheric + cloud + rain (ITU-R P.618-14 zona K Italia) -2.0 dB
+- Polarization + scintillation + body loss -3.8 dB
++ G/T receiver UE -25.6 dB/K
++ k correction Boltzmann +228.6 dB
+= C/N0 106.0 dB-Hz
 
-- 10·log10(BW = 20 MHz = 73 dB-Hz)                          -73.0 dB
-= SNR                                                       33.0 dB
+- 10·log10(BW = 20 MHz = 73 dB-Hz) -73.0 dB
+= SNR 33.0 dB
 
-SNR required (16QAM 5/6)                                    11 dB
-LINK MARGIN                                                 22 dB ✓
+SNR required (16QAM 5/6) 11 dB
+LINK MARGIN 22 dB ✓
 ```
 
 **Verdetto link budget**: il margine è ampio e il design del payload telecom HAPS risulta tecnicamente fattibile. La capacità cella si stima intorno a ~88 Mbps per cella sotto FRC NR-NTN.
@@ -453,26 +453,26 @@ LINK MARGIN                                                 22 dB ✓
 
 ## 6.4 Analisi di Rischio Ingegneristico (FMECA + FTA preliminare)
 
-In coerenza con D.Lgs. 36/2023 art. 41 ("analisi di rischio ingegneristico") + skill `risk-register-builder` + ARP4761.
+In coerenza con D.Lgs. 36/2023 art. 41 ("analisi di rischio ingegneristico") + metodologia di risk register + ARP4761.
 
 ### 6.4.1 Top-10 rischi tecnici (estratto Risk Register, dettaglio Vol. 2 Allegato A.2)
 
 | ID | Rischio | P | I | Score | Tipo | Owner | Mitigation principale |
 |---|---|---|---|---|---|---|---|
-| **RSK-TEC-001** 🔴 | Energy balance HALE inverno 44°N | 4 | 5 | **20** | Tech | propulsion-energy-engineer | Design margin + fallback seasonal-only |
+| **RSK-TEC-001** 🔴 | Energy balance HALE inverno 44°N | 4 | 5 | **20** | Tech | team propulsione e energia | Design margin + fallback seasonal-only |
 | **RSK-TEC-002** 🔴 | Aeroelasticità ala high-AR (flutter, divergenza) | 3 | 5 | **15** | Tech | aero-structures-engineer | Aeroelastic analysis nonlineare + GVT + flight test subscale |
 | **RSK-TEC-003** 🔴 | Type Certification timeline HALE > 5 anni | 4 | 4 | 16 | Reg | aviation-regulatory | Parallel approach + Special Condition pathway |
 | RSK-TEC-004 🟡 | Integrazione payload modulare 6A (compatibilità elettrica/SW) | 3 | 3 | 9 | Tech | systems-engineer | Test bed pre-deploy + ICD rigoroso |
-| RSK-OPS-001 🟡 | Operazioni invernali Appennino (neve, ghiaccio, basse temp) | 3 | 3 | 9 | Ops | vtol-uas-specialist | Training pilota + finestre operative + de-icing |
+| RSK-OPS-001 🟡 | Operazioni invernali Appennino (neve, ghiaccio, basse temp) | 3 | 3 | 9 | Ops | team VTOL UAS specialistico | Training pilota + finestre operative + de-icing |
 | RSK-REG-002 🟡 | SORA SAIL Pentema BVLOS > III (richiede percorso Certified) | 3 | 3 | 9 | Reg | aviation-regulatory | Pre-application ENAC + M1/M2 mitigation |
-| RSK-SUP-001 🟡 | Lead time JOUAV / sanzioni USA-CN | 3 | 3 | 9 | Supply | vtol-uas-specialist | Plan B Tekever + stock 12 mesi |
-| RSK-TEC-005 🟡 | Cybersecurity link C2 (jamming, spoofing) | 2 | 4 | 8 | Tech | avionics-gnc-engineer | Frequency hopping + crypto authentication |
-| RSK-TEC-006 🟡 | Privacy by design fail (DPIA bocciata Garante) | 2 | 4 | 8 | Reg/Tech | data-privacy-counsel | Edge anonymization + geofence aree residenziali |
-| RSK-TEC-007 🟡 | Lost-Link behaviour mismatch SORA OSO #9 | 2 | 4 | 8 | Tech/Reg | avionics-gnc-engineer | Lost-Link Profile + Return-to-Base testato |
+| RSK-SUP-001 🟡 | Lead time JOUAV / sanzioni USA-CN | 3 | 3 | 9 | Supply | team VTOL UAS specialistico | Plan B Tekever + stock 12 mesi |
+| RSK-TEC-005 🟡 | Cybersecurity link C2 (jamming, spoofing) | 2 | 4 | 8 | Tech | team avionica e GNC | Frequency hopping + crypto authentication |
+| RSK-TEC-006 🟡 | Privacy by design fail (DPIA bocciata Garante) | 2 | 4 | 8 | Reg/Tech | consulenza privacy e protezione dati | Edge anonymization + geofence aree residenziali |
+| RSK-TEC-007 🟡 | Lost-Link behaviour mismatch SORA OSO #9 | 2 | 4 | 8 | Tech/Reg | team avionica e GNC | Lost-Link Profile + Return-to-Base testato |
 
 ### 6.4.2 FMECA preliminare. Sottosistema Payload EO
 
-Riferimento: skill `risk-register-builder` §FMECA.
+Riferimento: metodologia di risk register §FMECA.
 
 | Item | Failure Mode | Cause | Local Effect | System Effect | S | F | D | RPN | Mitigation |
 |---|---|---|---|---|---|---|---|---|---|
@@ -492,19 +492,19 @@ Per il Percorso 6A, l'albero AND/OR del top event "Loss of Vehicle" è costruito
 ```
 Loss of Vehicle in BVLOS [TOP]
 ├─ OR ─ Lost Link permanente E Return-to-Base fail
-│   ├─ Lost Link (P ~ 10⁻⁴/h, RF + SATCOM entrambi)
-│   └─ Return-to-Base procedure fail (P ~ 10⁻³ given Lost Link)
+│ ├─ Lost Link (P ~ 10⁻⁴/h, RF + SATCOM entrambi)
+│ └─ Return-to-Base procedure fail (P ~ 10⁻³ given Lost Link)
 ├─ OR ─ Avaria FCS critica
-│   ├─ Failure autopilota DAL-C primario
-│   ├─ AND ─ IMU 1 + IMU 2 fail simultaneo
-│   └─ GNSS spoofing / jamming sostenuto
+│ ├─ Failure autopilota DAL-C primario
+│ ├─ AND ─ IMU 1 + IMU 2 fail simultaneo
+│ └─ GNSS spoofing / jamming sostenuto
 ├─ OR ─ Avaria propulsione + atterraggio fail
-│   ├─ Engine failure
-│   ├─ Battery thermal runaway
-│   └─ Parachute deployment fail
+│ ├─ Engine failure
+│ ├─ Battery thermal runaway
+│ └─ Parachute deployment fail
 └─ OR ─ Cyber attack hijacking
-    ├─ Crypto key compromise
-    └─ Authentication bypass
+ ├─ Crypto key compromise
+ └─ Authentication bypass
 ```
 
 La probabilità del top event preliminare si attesta su ~10⁻⁵ - 10⁻⁶/h (ordine di grandezza). Il target per SAIL III (10⁻⁵/h) risulta conforme.
@@ -571,9 +571,9 @@ Le 18 Open Questions del Cap. 3.10 si applicano direttamente al Cap. 6. Quelle p
 
 ---
 
-## 6.8 Red Team Check. Adversarial Technical Review
+## 6.8 Review critica. Adversarial Technical Review
 
-La critica è stata condotta da `red-team-skeptic` + `aerospace-systems-engineer`.
+La critica è stata condotta da review critica + ingegneria di sistema.
 
 ### Critica 1. "Energy balance inverno è dichiarato marginale (margine 0-15%): è gente che si racconta che il progetto funziona quando i numeri dicono il contrario"
 **Razionale**: il calcolo §6.2.2.2 mostra margine inverno ~0-15% con baseline (MTOW 100 kg, pannelli 25 m², LiS 350 Wh/kg). Significa che operazione perennial a 44°N è marginale al limite del fattibile. Non è "Go", è "Pray".
@@ -602,20 +602,20 @@ La critica è stata condotta da `red-team-skeptic` + `aerospace-systems-engineer
 **Razionale**: la tabella §6.1.3 elenca asset riusabili, ma non quantifica il valore economico riusato. L'affermazione "riuso 60%" resta qualitativa.
 **Risposta**: corretto. Aggiungere Cap. 8 (Economico-finanziario) con quantificazione: ground segment ~€80-150k riusati, software pipeline ~€50-100k, brand+rete ~€100-300k stimati (intangible). Riuso quantitativo ~€250-550k su CapEx 6A €700-1200k, pari a ~30-40% in valore monetario.
 
-### 6.8.7 Action Item Tracking (anti Red Team theater)
+### 6.8.7 Action Item Tracking (anti review formale senza follow-through)
 
-> **Compliance audit M+3**: ogni critica §6.8.1-6 ha un action item esplicito con owner, deadline e verifica chiusura. Stato consolidato post simulazione completa energy balance M+3:
+> **Conformità review M+3**: ogni critica §6.8.1-6 ha un action item esplicito con owner, deadline e verifica chiusura. Stato consolidato post simulazione completa energy balance M+3:
 
 | Critica | Action item | Owner | Deadline | Stato M+3 | Verifica chiusura |
 |---|---|---|---|---|---|
-| C1 (energy balance inverno marginale 0-15%) | Simulazione ad alta fedeltà clear sky variability + monthly profile | propulsion-energy-engineer | M+10 | ✅ **closed M+3**. La simulazione completa allegato A.7 ha **superato** la stima hand-calc: margine **-50.1% DEFICIT** confermato → RSK-TEC-001 score **25** (vs 20 originale) + E5 Seasonal-only mandatory plan A. Trade study TS-PROP-6B riconfermato | done; FO-ADD-08 linkata |
-| C2 (fibra di lino come asset ESG = marketing) | LCA quantitativo comparativo HALE vs satellite + diesel | aerodynamics-structures-engineer + Sustainability consultant | M+12 | ⏳ open (LCA esterno da ingaggiare) | Gate G3 |
-| C3 (JOUAV CW-30E rischi geopolitici) | Contratto JOUAV con clausole continuità + stock spare 12 mesi + quotation Tekever parallelo | vtol-uas-specialist + financial-cfo-analyst | M+6 | ⏳ in progress (DR-008 chiusura geopolitica via engagement DG DEFIS; quotation pending) | Gate G2 |
-| C4 (integrazione payload modulare 30 min ottimistica) | Validazione test bed reale (target realistic 60-90 min) | avionics-gnc-engineer + vtol-uas-specialist | M+6-M+8 | ⏳ open (test bed da allestire) | Gate G2 |
-| C5 (link budget 22 dB margin nominal, rain fade reale?) | Update link budget con scenario "stormy day worst-case 1% time" | telecom-ntn-payload-expert | M+6 | ✅ **closed M+3**. Link budget aggiornato in Allegato A.7: margine worst-case 12-15 dB, sufficiente (vedi `A7-Link-Budget/A7-LINK-BUDGET-REPORT.md`) | done |
-| C6 (riuso 60% asset 6A→6B qualitativo) | Quantificazione monetaria asset reuse in Cap. 8 | aerospace-systems-engineer + financial-cfo-analyst | M+5 | ✅ **closed M+3**. Quantificazione €250-550k (~30-40% CapEx 6A) integrata Cap. 6 §6.1.3 + Cap. 10 §10.3.1; FO-ADD-03 linkata per verifica M+24 gate G5 | done |
+| C1 (energy balance inverno marginale 0-15%) | Simulazione ad alta fedeltà clear sky variability + monthly profile | team propulsione e energia | M+10 | ✅ **closed M+3**. La simulazione completa allegato A.7 ha **superato** la stima hand-calc: margine **-50.1% DEFICIT** confermato → RSK-TEC-001 score **25** (vs 20 originale) + E5 Seasonal-only mandatory plan A. Trade study TS-PROP-6B riconfermato | done; FO-ADD-08 linkata |
+| C2 (fibra di lino come asset ESG = marketing) | LCA quantitativo comparativo HALE vs satellite + diesel | team aerodinamica e strutture + Sustainability consultant | M+12 | ⏳ open (LCA esterno da ingaggiare) | Gate G3 |
+| C3 (JOUAV CW-30E rischi geopolitici) | Contratto JOUAV con clausole continuità + stock spare 12 mesi + quotation Tekever parallelo | team VTOL UAS specialistico + analisi finanziaria CFO | M+6 | ⏳ in progress (DR-008 chiusura geopolitica via engagement DG DEFIS; quotation pending) | Gate G2 |
+| C4 (integrazione payload modulare 30 min ottimistica) | Validazione test bed reale (target realistic 60-90 min) | team avionica e GNC + team VTOL UAS specialistico | M+6-M+8 | ⏳ open (test bed da allestire) | Gate G2 |
+| C5 (link budget 22 dB margin nominal, rain fade reale?) | Update link budget con scenario "stormy day worst-case 1% time" | team telecom NTN | M+6 | ✅ **closed M+3**. Link budget aggiornato in Allegato A.7: margine worst-case 12-15 dB, sufficiente (vedi `A7-Link-Budget/A7-LINK-BUDGET-REPORT.md`) | done |
+| C6 (riuso 60% asset 6A→6B qualitativo) | Quantificazione monetaria asset reuse in Cap. 8 | ingegneria di sistema + analisi finanziaria | M+5 | ✅ **closed M+3**. Quantificazione €250-550k (~30-40% CapEx 6A) integrata Cap. 6 §6.1.3 + Cap. 10 §10.3.1; FO-ADD-03 linkata per verifica M+24 gate G5 | done |
 
-> **Stato Red Team check Cap. 6 al M+3**: **3 critiche closed (C1 energy, C5 link, C6 reuse)** + **2 in progress (C3 geopolitical, C4 payload swap)** + **1 open (C2 LCA)**. Nessuna critica residua "Red Team theater". Nota su C1: il caso si risolve in senso pessimistico (il margine reale è -50.1% vs stima 0-15%), ma il fallback E5 Seasonal-only è esplicitamente nel design come plan A; il pivot 6B "operatore su prime contractor" (Cap. 0 §0.3) recepisce questa realtà.
+> **Stato Review critica Cap. 6 al M+3**: **3 critiche closed (C1 energy, C5 link, C6 reuse)** + **2 in progress (C3 geopolitical, C4 payload swap)** + **1 open (C2 LCA)**. Nessuna critica residua "review formale senza follow-through". Nota su C1: il caso si risolve in senso pessimistico (il margine reale è -50.1% vs stima 0-15%), ma il fallback E5 Seasonal-only è esplicitamente nel design come plan A; il pivot 6B "operatore su prime contractor" (Cap. 0 §0.3) recepisce questa realtà.
 
 ---
 
@@ -639,9 +639,9 @@ La critica è stata condotta da `red-team-skeptic` + `aerospace-systems-engineer
 
 [^9]: ITU-R P.618-14. Propagation data for Earth-space radiocommunications, Aug 2023. Source: `fonti/R-REC-P.618-14-202308-I.md`. **Confidence: high**.
 
-[^10]: Skill `aerodynamics-structures-engineer`, `propulsion-energy-engineer`, `avionics-gnc-engineer`, `telecom-ntn-payload-expert`, `earth-observation-expert`, `vtol-uas-specialist` (vari in `.claude/agents/`).
+[^10]: Team specialistici interni di progetto (aerodinamica + strutture, propulsione + energia, avionica + GNC, telecom NTN, Earth Observation, specialistica VTOL UAS).
 
-[^11]: Skill `trade-study-analysis`, `risk-register-builder`, `link-budget-calculator`, `epistemic-rigor` (in `.claude/skills/`).
+[^11]: Metodologie interne di progetto (trade study, risk register, link budget, rigore epistemico).
 
 ---
 
@@ -653,4 +653,4 @@ Il verdetto tecnico si può riepilogare in due righe: il Percorso 6A è **GO** t
 
 Sul piano operativo, gli action items chiave entro M+10 sono: simulazione completa energy balance inverno HALE, chiusura TS-PLATFORM-6A con quotation vendor + reference EU operatori, test integrato payload + GS + cloud pipeline, pre-application ENAC SORA (cf. Cap. 5), aeroelastic analysis preliminare ala high-AR.
 
-Il capitolo si chiude al M+3 con verdetto Red Team OK con 6 action items.
+Il capitolo si chiude al M+3 con verdetto della review critica OK con 6 action items.

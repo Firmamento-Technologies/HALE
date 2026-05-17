@@ -1,10 +1,10 @@
-# Audit Red Team. Volume 1 Studio di Fattibilità
+# review critica. Volume 1 Studio di Fattibilità
 
-> **Autore:** agente `red-team-skeptic`
+> **Autore:** agente `review critica indipendente`
 > **Data:** 16 maggio 2026 (M+3)
 > **Scope:** stress-test avversariale globale del Volume 1 (Cap. 0-11)
 > **Boundary conditions non attaccate:** B1 (cooperative + service-only), B2 (vettore EU sovereign)
-> **Disciplina applicata:** Regole 1-7 di `epistemic-rigor` + 4 tecniche di `red-team-skeptic` (pre-mortem, falsificazione popperiana, base-rate, steel-manning)
+> **Disciplina applicata:** Regole 1-7 di rigore epistemico + 4 tecniche di `review critica indipendente` (pre-mortem, falsificazione popperiana, base-rate, steel-manning)
 > **Stile:** brutale, fattuale, niente diplomazia
 
 ---
@@ -44,13 +44,13 @@ Il documento non è "non regge" perché ha un livello di onestà metodologica su
 **Risposta attesa:** "Hold significa re-review 30-60 giorni". OK, ma quante Hold prima di chiamare il No-Go?
 **Action item:** Aggiungere a Cap. 9 una **escalation matrix**: dopo X Hold consecutivi su criterio Y → No-Go automatico. Esempio: "3 Hold consecutivi su LoI Regione = No-Go scale-up Liguria, pivot Piemonte". Senza, il documento è troppo morbido.
 
-### Critica G-05. Confusione concettuale "feasibile / fattibile / operativo" (Errore 6 della skill epistemic-rigor)
+### Critica G-05. Confusione concettuale "feasibile / fattibile / operativo" (Errore 6 della skill rigore epistemico)
 **Razionale:** Cap. 10 §10.3.1 dice "tecnicamente, regolatoriamente, di mercato e finanziariamente fattibile". Cap. 5 §5.4.2 dice "operazioni civili continuative non esiste alternativa alla Certified Category". Cap. 6 §6.0.1 dice "GO tecnicamente". Il termine **"fattibile"** è usato per "il design lo permette" (Cap. 6), "il regolatore lo autorizzerà se gli chiediamo bene" (Cap. 5), "il NPV è positivo nel scenario base" (Cap. 8): tre cose diverse. Conseguenza: la conclusione "6A pienamente fattibile" maschera che è "feasibile + tecnicamente fattibile + non ancora regolatoriamente autorizzato + non ancora economicamente sostenibile".
 **Risposta attesa:** "Il documento dichiara le condizioni del Go Cond.". Sì, ma il linguaggio del verdetto sintetico è imprecise.
 **Action item:** Riformulare Cap. 0 e Cap. 10 con le 6 categorie distinte (feasibile, tecnicamente fattibile, operativamente fattibile, regolatoriamente autorizzabile, economicamente sostenibile, operativo). Esempio: "6A è tecnicamente e regolatoriamente plausibile, economicamente sostenibile in scenario base, ma operativamente fattibile solo se LoI Regione + SORA approvato; non operativo fino M+12".
 
 ### Critica G-06. Le boundary conditions B1+B2 sono usate come scudo contro la critica
-**Razionale:** Cap. 1.0bis, Cap. 2.0bis, ... Cap. 11.0bis: tutti ripetono "B1 e B2 non sono soggette a stress-test epistemico". Esatto, ma:
+**Razionale:** Cap. 1.0bis, Cap. 2.0bis,... Cap. 11.0bis: tutti ripetono "B1 e B2 non sono soggette a stress-test epistemico". Esatto, ma:
 1. Le critiche legittime su "come si argomenta B1+B2" sono confinate al `RESERVED-rischi-geopolitici.md`, fuori dello Studio pubblico.
 2. Cap. 7.13 Critica 2 sul "modello cooperativo come limitazione" viene affrontata con difese tautologiche ("è scelta strutturale del progetto, non in discussione"). Steel-manning vero? No.
 3. Il framing "complementare a IRIS²" è ripetuto compulsivamente (~25 occorrenze nel Vol. 1) come mantra. Mantra non sono argomenti.
@@ -106,7 +106,7 @@ Il documento non è "non regge" perché ha un livello di onestà metodologica su
 - **Critica 2.2.3:** Top-5 stakeholder (§2.2.3) include "ASL3 Genovese" come cliente telemedicina. Telemedicina UAV in Italia ha base rate di adozione **molto bassa** (zero contratti operativi paganti documentati 2025-2026). Sovrastima dell'interest.
 - **Critica 2.2.4:** Obiettivo 6A-04 "≥ 5 contratti pluriennali firmati M+24" con soglia minima 3. La storia delle aerospace startup italiane (Sky-Tech, AVIORS, etc.) mostra che ottenere 5 contratti pluriennali PA in Y1 è raro. Soglia minima 3 più realistica, ma anche 3 contratti pluriennali in 12 mesi è ambizioso. Confronto con base rate aerospace IT mancante.
 - **Critica 2.2.5:** §2.5.2 vincoli finanziari ripetono "€500M-€2B (small fleet) → €10-30B (EU sovereign)" anche nel capitolo stakeholder. Reiterazione non necessaria, amplifica il problema G-07.
-- **Critica 2.2.6:** §2.6 critica Red Team 4 ammette che AS-001 (Regione Liguria fino M+24) è wishful thinking. Risposta cita "elezioni regionali 2025 effettive". Liguria ha avuto elezioni regionali ottobre 2024 (Bucci presidente). La Giunta attuale ha priorità diverse da Bucci (centrodestra vs Toti centrosinistra ex). Il capitolo non aggancia mai esplicitamente "il nuovo Presidente Liguria conosce SNAI e PSNAI?". Lacuna fattuale.
+- **Critica 2.2.6:** §2.6 critica review critica 4 ammette che AS-001 (Regione Liguria fino M+24) è wishful thinking. Risposta cita "elezioni regionali 2025 effettive". Liguria ha avuto elezioni regionali ottobre 2024 (Bucci presidente). La Giunta attuale ha priorità diverse da Bucci (centrodestra vs Toti centrosinistra ex). Il capitolo non aggancia mai esplicitamente "il nuovo Presidente Liguria conosce SNAI e PSNAI?". Lacuna fattuale.
 
 ### Cap. 3. Requisiti e RTM
 
@@ -151,14 +151,14 @@ Il documento non è "non regge" perché ha un livello di onestà metodologica su
 - **Critica 2.7.5:** §7.4.1 competitor Tier 1 globale. La tabella è onesta ("Firmamento NON può competere head-to-head"). Ma poi §7.5 differenziazione "4 pilastri" include "sostenibilità + ESG narrativa" come pilastro. **ESG è igiene, non vantaggio**. Tutti i competitor (Airbus, Skydweller, BAE) hanno ESG narrative. Non è differenziatore.
 - **Critica 2.7.6:** §7.4.3 critica "Starlink a €50/mese è già lì". Risposta cita "sovranità dati italiana = argomento decisivo per PA". Ma **nessuna PA italiana ha mai pagato premium per "sovranità dati"** quando Starlink funziona. Argomento ipotetico, non validato.
 - **Critica 2.7.7:** §7.6.1 BMC Customer Segments include "ASL3 (telemedicina)" e "Enti Parco Antola/Aveto". Entrambi sono customer ipotetici con willingness-to-pay non validata. Realismo dei segments medio-basso.
-- **Critica 2.7.8:** §7.13 Red Team Check è onesto (6 critiche accettate). Ma le risposte sono tutte "action item M+6". Cosa succede se al M+6 le LoI non arrivano? Il documento non lo dice.
+- **Critica 2.7.8:** §7.13 Review critica è onesto (6 critiche accettate). Ma le risposte sono tutte "action item M+6". Cosa succede se al M+6 le LoI non arrivano? Il documento non lo dice.
 
 ### Cap. 8. Economico-Finanziario
 
 - **Critica 2.8.1:** §8.3.1 Quadro Economico Y1 range €975k-1.96M (incluse IVA + contingency 15%). Il Briefing originale citava €600-900k. Differenza 2×. Lo Studio onestamente lo ammette (§8.3.1 caveat). **Ma:** mai chiamato esplicitamente "Briefing iniziale sottostimava CapEx 2×". Esecuzione narrativa morbida.
 - **Critica 2.8.2:** §8.5.1 OpEx run-rate Y2 €260-480k. Personale: "3 FTE (pilota+ing+analyst) + 0.5 FTE PM". Costo onnicomprensivo €150-220k = €37-55k/FTE. Per profili aerospace IT con BVLOS skill, mercato 2026 = €60-100k/FTE annual loaded (lordo). Sottostima personale 30-50%.
 - **Critica 2.8.3:** §8.6.1 modello cash flow Y1 NetIncome -€190k, Y2 +€53k, Y3 +€912k, Y4 +€1.9M. **CAGR revenue Y1-Y3: 156%**. **CAGR Y3-Y5: 60%**. Base rate aerospace service startup CAGR Y1-Y3: tipicamente 30-50% (vedi e-GEOS, NHazca, Planetek). Sovrastima 2-3×.
-- **Critica 2.8.4:** §8.6.1 WACC 12% blended. Critica 3 Red Team lo solleva. Risposta cita "blended con 40-50% grant". Vero, ma se grant slittano (base rate aerospace: alta), WACC effettivo sale a 18-25%, NPV diventa negativo. Sensitivity §8.6.3 lo mostra ma non lo cita come risk.
+- **Critica 2.8.4:** §8.6.1 WACC 12% blended. Critica 3 review lo solleva. Risposta cita "blended con 40-50% grant". Vero, ma se grant slittano (base rate aerospace: alta), WACC effettivo sale a 18-25%, NPV diventa negativo. Sensitivity §8.6.3 lo mostra ma non lo cita come risk.
 - **Critica 2.8.5:** §8.6.2 scenario Worst Revenue Y3 €1.0M, Y5 €2.5M, NPV negativo. **Lo Studio non discute la probabilità del Worst scenario.** Senza probabilità, scenarios sono decorativi.
 - **Critica 2.8.6:** §8.7 mix finanziamenti raccomandato Y1 cita "Coopfond Cooding Prototypes 2026: €50k". Audit-rigore-epistemico.md DR-002 dice "verifica bando Cooding 2026 disponibilità, chiusura M+1". Al M+3 chiuso o no? Se no, il piano fund mix Y1 è basato su grant non confermato.
 - **Critica 2.8.7:** §8.6.4 ROI sociale "vite salvate da antincendio precoce: 1-3 vite/decennio per area servita". **Senza fonte**. Quante vite morte per incendi in zone SNAI Liguria? Senza dato base, l'attribuzione è ipotetica.
@@ -180,7 +180,7 @@ Il documento non è "non regge" perché ha un livello di onestà metodologica su
 - **Critica 2.10.5:** §10.4.1 argomento 1 a supporto Hold 6B: "Concept tecnicamente plausibile". "Plausibile" ≠ fattibile. Cap. 6 §6.0.2 confidence medium-low. Concept plausibile + showstopper aperti = non base per spend Phase B €5.5-13.5M.
 - **Critica 2.10.6:** §10.4.3 hard conditions Phase B M+24 include "C-6B-2: Funding mix Phase B ≥ 50% committed al M+24". Committed da chi? EDF call HAPS chiusa al M+24 e Firmamento è vincitrice? PNRR Aerospazio? Nessun calendar bandi specifici è citato.
 - **Critica 2.10.7:** §10.5 verdetto aggregato visione: lo Studio "preserva come vettore strategico" Fase 4 (M+72-96) e Fase 5 (M+96-120). Decisioni gate G6, G futuri "out of scope". **Lo Studio sta scrivendo un assegno in bianco con i propri verdetti futuri.**
-- **Critica 2.10.8:** §10.6 Red Team Combinato ha 6 critiche con risposte. **Tutte le risposte concludono in difesa del verdetto.** Nessuna critica ha provocato modifica del verdetto. Pattern "red team theater": il red team valida, non sfida.
+- **Critica 2.10.8:** §10.6 review critica Combinato ha 6 critiche con risposte. **Tutte le risposte concludono in difesa del verdetto.** Nessuna critica ha provocato modifica del verdetto. Pattern "red team theater": il red team valida, non sfida.
 - **Critica 2.10.9:** §10.7 "Cosa esplicitamente NON facciamo" è eccellente. Mantenere e rafforzare.
 - **Critica 2.10.10:** §10.9 livelli di successo: micro (M+12) €200k ARR, meso (M+36) €1.5-3.5M, macro (M+120) "principal Italian node consorzio EU". Salto micro→macro di **100-400×** in 10 anni. Base rate aerospace startup: ~10% raggiunge €10M ARR Y7. Lo Studio sta posizionando Firmamento nel top 1-2% di startup aerospace.
 
@@ -193,7 +193,7 @@ Il documento non è "non regge" perché ha un livello di onestà metodologica su
 - **Critica 2.11.5:** §11.6.3 consorzio EU target con TAS-Leonardo "Co-lead consortium". Cap. 11 stesso (§11.4.5, §11.5.5) avverte che TAS-Leonardo è rischio di acquisizione difensiva. Stesso entity è top-1 partner E top-1 rischio. Contraddizione strategica.
 - **Critica 2.11.6:** §11.7 gate decisionali post-Studio M+12 → M+120. Ogni gate ha criteri Go/Hold/No-Go. **Ma:** la probabilità composta di passare tutti 9 gate sequenziali = base rate aerospace startup ~5-15%. Lo Studio non lo dichiara.
 - **Critica 2.11.7:** §11.8 showstopper per fase: ottima sezione. **Ma:** gli showstopper Fase 3-5 includono RSK-GEO-001 (geopolitica EU-US) e RSK-GEO-005 (acquisizione difensiva). Questi sono fuori dal controllo Firmamento. Mitigation strategy esiste ma success rate ignoto.
-- **Critica 2.11.8:** §11.10 Red Team Check ha 6 critiche. Critica 3 (capital intensity €10-30B "catastrofico per narrativa VC") riceve risposta "stratificazione di tipi di capitale per fase". Non risolve il problema (vedi Critica G-07).
+- **Critica 2.11.8:** §11.10 Review critica ha 6 critiche. Critica 3 (capital intensity €10-30B "catastrofico per narrativa VC") riceve risposta "stratificazione di tipi di capitale per fase". Non risolve il problema (vedi Critica G-07).
 - **Critica 2.11.9:** §11.13 disclaimer epistemico finale: "La probabilità che il vettore venga eseguito esattamente come descritto è bassa (base rate aerospace startup: ~10% per Y8 ARR €10M+)". **Onestà eccellente.** Mantenere.
 
 ---
@@ -318,80 +318,80 @@ Cap. 11 §11.9.1 lo dichiara. Base rate EASA novel framework apertura: 5-10 anni
 
 ## 8. Action items prioritari da fissare prima di Gate G3 (M+10)
 
-In ordine di priorità decrescente. Owner agent suggerito tra parentesi.
+In ordine di priorità decrescente. Owner specialista suggerito tra parentesi.
 
 ### Priorità 1. Reality checks rapidi (M+3 a M+6)
 
-1. **Verifica dato Pentema population** (snai-funding-expert + business-model-strategist), **M+4**
-   Risolvere inconsistenza interna Cap. 1 ("poche centinaia") vs Cap. 2 ("~150") vs ISTAT (32 residenti). Conseguenze su accettabilità sociale + scale narrativo.
+1. **Verifica dato Pentema population** (snai-funding-expert + team strategia business model), **M+4**
+ Risolvere inconsistenza interna Cap. 1 ("poche centinaia") vs Cap. 2 ("~150") vs ISTAT (32 residenti). Conseguenze su accettabilità sociale + scale narrativo.
 
 2. **Verifica bando Coopfond Cooding 2026** (snai-funding-expert), **M+4**
-   Chiusura DR-002 (audit-rigore-epistemico.md). Se bando 2026 non aperto, mix funding Y1 va ricostruito + bridge financing strategy attivata.
+ Chiusura DR-002 (audit-rigore-epistemico.md). Se bando 2026 non aperto, mix funding Y1 va ricostruito + bridge financing strategy attivata.
 
 3. **Verifica DGR e Giunta Regione Liguria post-Bucci 2024** (snai-funding-expert + sovereign-strategist), **M+4**
-   Mapping Assessorati attuali (Innovazione, Aree Interne, Protezione Civile, Trasporti). Identificare champion politici credibili. Senza, AS-001 wishful thinking.
+ Mapping Assessorati attuali (Innovazione, Aree Interne, Protezione Civile, Trasporti). Identificare champion politici credibili. Senza, AS-001 wishful thinking.
 
-4. **Triangolazione TAM-IT con AIAD + Eurospace + EUSPA** (business-model-strategist), **M+5**
-   Chiusura DR-007 + DR-012. Se TAM-IT realisticamente €30-60M (non €100-200M), SAM/SOM/ARR/NPV vanno re-baselinati.
+4. **Triangolazione TAM-IT con AIAD + Eurospace + EUSPA** (team strategia business model), **M+5**
+ Chiusura DR-007 + DR-012. Se TAM-IT realisticamente €30-60M (non €100-200M), SAM/SOM/ARR/NPV vanno re-baselinati.
 
-5. **Benchmark pricing PA italiana e-GEOS / Planetek / NHazca via CONSIP/MEPA** (business-model-strategist + financial-cfo), **M+5**
-   Validare pricing baseline Y1. Se contratti reali sono €30-80k/anno (non €100-300k), MVP revenue Y1 €355-405k diventa €120-180k. SyR-Cost-003 (≥ €200k) potenzialmente fallisce.
+5. **Benchmark pricing PA italiana e-GEOS / Planetek / NHazca via CONSIP/MEPA** (team strategia business model + financial-cfo), **M+5**
+ Validare pricing baseline Y1. Se contratti reali sono €30-80k/anno (non €100-300k), MVP revenue Y1 €355-405k diventa €120-180k. SyR-Cost-003 (≥ €200k) potenzialmente fallisce.
 
 ### Priorità 2. Decisioni stratoegiche (M+6 a M+8)
 
-6. **Quotation contratti JOUAV + Tekever** (vtol-uas-specialist), **M+6**
-   Chiusura OQ-F03. Pre-finalize TS-PLATFORM-6A con cifre verificate, non datasheet.
+6. **Quotation contratti JOUAV + Tekever** (team VTOL UAS specialistico), **M+6**
+ Chiusura OQ-F03. Pre-finalize TS-PLATFORM-6A con cifre verificate, non datasheet.
 
-7. **Pre-application meeting ENAC condotto + feedback documentato** (aviation-regulatory-counsel), **M+6**
-   Chiusura DR-004. Verifica realistica SAIL II-III vs IV-V. Senza, il verdetto Cap. 10 è speculation.
+7. **Pre-application meeting ENAC condotto + feedback documentato** (consulenza legale-regolatoria aviazione), **M+6**
+ Chiusura DR-004. Verifica realistica SAIL II-III vs IV-V. Senza, il verdetto Cap. 10 è speculation.
 
-8. **Workshop pubblico Pentema condotto** (data-privacy-counsel + business-model-strategist), **M+6**
-   Validare AS-009 (accettabilità sociale). Senza, pilota a Pentema è speculation.
+8. **Workshop pubblico Pentema condotto** (consulenza privacy e protezione dati + team strategia business model), **M+6**
+ Validare AS-009 (accettabilità sociale). Senza, pilota a Pentema è speculation.
 
 9. **LoI Regione Liguria firmata** (snai-funding-expert + sovereign-strategist), **M+6**
-   Chiusura OQ-010. Senza, anchor B2G regionale è ipotesi.
+ Chiusura OQ-010. Senza, anchor B2G regionale è ipotesi.
 
-10. **MoU 8/10 cooperative pilota** (business-model-strategist), **M+6**
-    Chiusura OQ-011 (parziale). Validare formalmente la rete. Lista nominale, non più "dato sensibile".
+10. **MoU 8/10 cooperative pilota** (team strategia business model), **M+6**
+ Chiusura OQ-011 (parziale). Validare formalmente la rete. Lista nominale, non più "dato sensibile".
 
 ### Priorità 3. Riallineamento documentale (M+8 a M+10)
 
-11. **Riformulare Cap. 0 e Cap. 10 con le 6 categorie distinte (feasibile/tecnicamente/operativamente fattibile, regolatoriamente autorizzabile, economicamente sostenibile, operativo)** (aerospace-SE + business-model-strategist), **M+8**
-    Chiudere Critica G-05.
+11. **Riformulare Cap. 0 e Cap. 10 con le 6 categorie distinte (feasibile/tecnicamente/operativamente fattibile, regolatoriamente autorizzabile, economicamente sostenibile, operativo)** (aerospace-SE + team strategia business model), **M+8**
+ Chiudere Critica G-05.
 
 12. **Spostare capital intensity Y8-Y10 (€500M-€2B / €10-30B) dal Volume 1 a Volume 2 Allegato "Vettore strategico"** (sovereign-strategist + communications-lead), **M+8**
-    Chiudere Critica G-07. Decoppiare narrativamente decisione Y1-Y3 da vettore Y4-Y10.
+ Chiudere Critica G-07. Decoppiare narrativamente decisione Y1-Y3 da vettore Y4-Y10.
 
-13. **Aggiungere a Cap. 10 opzione "Defer 6A 12 mesi" come do-nothing benchmark** (red-team-skeptic + business-model-strategist), **M+9**
-    Chiudere Critica G-08. Conforme art. 41 D.Lgs. 36/2023 + Allegato I.7 (ipotesi di non realizzazione).
+13. **Aggiungere a Cap. 10 opzione "Defer 6A 12 mesi" come do-nothing benchmark** (review critica indipendente + team strategia business model), **M+9**
+ Chiudere Critica G-08. Conforme art. 41 D.Lgs. 36/2023 + Allegato I.7 (ipotesi di non realizzazione).
 
-14. **Aggiungere a Cap. 9 escalation matrix Hold a No-Go con kill criteria quantitativi** (gate-review-checklist skill + aerospace-SE), **M+9**
-    Chiudere Critica G-04. Esempio: 3 Hold consecutivi su LoI Regione = No-Go scale-up Liguria.
+14. **Aggiungere a Cap. 9 escalation matrix Hold a No-Go con kill criteria quantitativi** (checklist gate review skill + aerospace-SE), **M+9**
+ Chiudere Critica G-04. Esempio: 3 Hold consecutivi su LoI Regione = No-Go scale-up Liguria.
 
-15. **Dichiarare timeline realistica EASA RMT HAPS con base rate 5-10 anni** (aviation-regulatory-counsel + sovereign-strategist), **M+9**
-    Chiudere Critica G-10. Onestà sul fatto che Phase B 6B M+24-48 si chiude prima dell'apertura RMT.
+15. **Dichiarare timeline realistica EASA RMT HAPS con base rate 5-10 anni** (consulenza legale-regolatoria aviazione + sovereign-strategist), **M+9**
+ Chiudere Critica G-10. Onestà sul fatto che Phase B 6B M+24-48 si chiude prima dell'apertura RMT.
 
 ### Priorità 4. Robustezza finanziaria (M+9 a M+10)
 
-16. **Modello DCF completo Excel con scenarios + Monte Carlo + sensitivity** (financial-cfo-analyst), **M+9**
-    Chiusura OQ-F05, OQ-F06. Senza, NPV/IRR baseline è "suggestion", non analysis.
+16. **Modello DCF completo Excel con scenarios + Monte Carlo + sensitivity** (analisi finanziaria CFO), **M+9**
+ Chiusura OQ-F05, OQ-F06. Senza, NPV/IRR baseline è "suggestion", non analysis.
 
-17. **Bridge financing strategy quantificata** (financial-cfo-analyst), **M+9**
-    Chiusura OQ-F04. €100-300k buffer richiesto. Identificare strumento concreto (linea CCB, anticipazione bandi, factoring).
+17. **Bridge financing strategy quantificata** (analisi finanziaria CFO), **M+9**
+ Chiusura OQ-F04. €100-300k buffer richiesto. Identificare strumento concreto (linea CCB, anticipazione bandi, factoring).
 
-18. **Sensitivity Y2 cum FCF + kill criterion** (financial-cfo-analyst), **M+9**
-    Cap. 8 §8.6.2 cita kill criterion Y2 < -€2.5M ma non lo aggancia a gate. Esplicitarlo come Hard No-Go trigger.
+18. **Sensitivity Y2 cum FCF + kill criterion** (analisi finanziaria CFO), **M+9**
+ Cap. 8 §8.6.2 cita kill criterion Y2 < -€2.5M ma non lo aggancia a gate. Esplicitarlo come Hard No-Go trigger.
 
 ### Priorità 5. Posizionamento difensivo (M+10 a M+11)
 
-19. **Competitor monitoring Aalto/Skydweller/PHASA-35 con Early Warning Indicators trimestrali** (competitor-intelligence), **M+10**
-    Aggiungere a Cap. 2 §2.2 + Cap. 7 §7.4. Mappare 5-7 player globali HAPS con EWI per ciascuno.
+19. **Competitor monitoring Aalto/Skydweller/PHASA-35 con Early Warning Indicators trimestrali** (analisi competitor), **M+10**
+ Aggiungere a Cap. 2 §2.2 + Cap. 7 §7.4. Mappare 5-7 player globali HAPS con EWI per ciascuno.
 
-20. **Falsifying Observations Tracker formale** (epistemic-rigor skill + risk-register-builder), **M+10**
-    Cap. 2.6 Critica 6 ha azione aperta. Implementare come allegato Vol. 2.
+20. **Falsifying Observations Tracker formale** (metodologia di rigore epistemico + metodologia risk register), **M+10**
+ Cap. 2.6 Critica 6 ha azione aperta. Implementare come allegato Vol. 2.
 
 21. **Position paper "Italian Stratospheric Sovereignty" draft** (sovereign-strategist + communications-lead), **M+10**
-    Cap. 11 §11.10.6 + §11.13. Prima esposizione pubblica della visione, controllata, prima di gate G3.
+ Cap. 11 §11.10.6 + §11.13. Prima esposizione pubblica della visione, controllata, prima di gate G3.
 
 ---
 
@@ -412,6 +412,6 @@ Senza, il rischio è che il gate G3 produca un **Go Cond. teatrale** che il prim
 
 ---
 
-**Fine audit Red Team Volume 1.**
+**Fine review critica Volume 1.**
 
 > Brutality is mercy. Better critica oggi che no-go al primo Series Seed.

@@ -7,7 +7,7 @@
 > **Versione:** v1.0 (M+3)
 > **Conformità:** NASA Systems Engineering Handbook Rev 2 (NASA/SP-2016-6105 Rev 2), §5.3 Verification + §5.4 Validation
 > **Allineamento:** cap-03-requisiti-e-RTM §3.7 V&V Plan preliminare, cap-06-analisi-tecnica §6.6 V&V tecnica, cap-09-cronoprogramma-e-gate (Gate G2/G3/G4/G5/G6)
-> **Disciplina epistemica:** applicate Regole 1-7 della skill `epistemic-rigor`
+> **Disciplina metodologica:** applicate le regole di rigore epistemico
 > **Output Excel companion:** `VV-Plan-v1.0.xlsx` (7 sheet)
 
 ---
@@ -88,13 +88,13 @@ La matrice completa risiede nel file Excel sheet `VV_Matrix_SyR` con 71 righe (S
 | Req-ID | Description | Method | Phase | Owner | Risk link |
 |---|---|---|---|---|---|
 | SyR-F-003 | Rileva hotspot ≥40°C, alert ≤5 min | D+T | B,C | EO-expert | RSK-OPS-002 |
-| SyR-P-001 | Autonomia sortie ≥4 h con payload 4 kg | A+T | A,C | propulsion-energy-engineer | – |
+| SyR-P-001 | Autonomia sortie ≥4 h con payload 4 kg | A+T | A,C | team propulsione e energia | – |
 | SyR-P-007 | C2 link RF range ≥30 km LOS, fade margin ≥12 dB | A+T | A,C | telecom-payload | RSK-TEC-005 |
 | SyR-S-002 | FTA top event "Loss of Vehicle BVLOS" ≤ 10⁻⁵/h | A | A | systems-engineer | RSK-TEC-007 |
 | SyR-C-002 | ConOps SORA SAIL ≤III Pentema BVLOS auth ENAC | I | Pre-A,A | aviation-regulatory | RSK-REG-002 |
-| SsR-PROP-001 | Energy balance HALE inverno 44°N margine ≥20% | A | A | propulsion-energy-engineer | RSK-TEC-001 |
+| SsR-PROP-001 | Energy balance HALE inverno 44°N margine ≥20% | A | A | team propulsione e energia | RSK-TEC-001 |
 | SsR-AERO-003 | Flutter speed margin ≥20% rispetto VD | A+T | B | aero-structures-engineer | RSK-TEC-002 |
-| SsR-AVI-002 | GNSS spoofing/jamming detection + alert | T | B | avionics-gnc-engineer | RSK-TEC-005 |
+| SsR-AVI-002 | GNSS spoofing/jamming detection + alert | T | B | team avionica e GNC | RSK-TEC-005 |
 | SsR-COMMS-005 | HAPS feeder link Ka 31 GHz availability 99.9% | A | A,B | telecom-payload | – |
 | SsR-HALE-001 | HALE subscale 1:3 prototype TRL 5 by M+36 | D+T | B (6B) | aero-structures-engineer | RSK-TEC-002 |
 
@@ -115,22 +115,22 @@ Obiettivo: chiudere tutti i requisiti di compliance documentale prima dell'avvio
 
 | Attività | Owner | Deliverable | Status M+3 |
 |---|---|---|---|
-| Compliance matrix SyR-C-001..C-006 | aviation-regulatory-counsel + telecom-payload + data-privacy-counsel | Allegato `A.5.x` Compliance matrix v1 | Planned |
-| Stakeholder workshop + StNeeds collection | snai-funding-territorial-expert | StNeeds-001..017 + provenance log | In progress |
-| Vendor selection preliminary VTOL (datasheet review) | vtol-uas-specialist | Vendor short-list + DoC review | Done (3 candidati: JOUAV, Tekever, Quantum) |
+| Compliance matrix SyR-C-001..C-006 | consulenza legale-regolatoria aviazione + telecom-payload + consulenza privacy e protezione dati | Allegato `A.5.x` Compliance matrix v1 | Planned |
+| Stakeholder workshop + StNeeds collection | team SNAI e funding territoriale | StNeeds-001..017 + provenance log | In progress |
+| Vendor selection preliminary VTOL (datasheet review) | team VTOL UAS specialistico | Vendor short-list + DoC review | Done (3 candidati: JOUAV, Tekever, Quantum) |
 
 ### A.5.3.2 Phase A (M+3-12), analysis
 
 | Attività | Tipo | Allegato output | Deadline | Owner |
 |---|---|---|---|---|
 | **Link budget RF** (4 link analizzati) | A | A.7 | M+6 | telecom-payload |
-| **Energy balance HALE 44°N** (annual + sensitivity) | A | A.6 | M+10 | propulsion-energy-engineer |
+| **Energy balance HALE 44°N** (annual + sensitivity) | A | A.6 | M+10 | team propulsione e energia |
 | **FMECA payload + propulsion + avionics** | A | A.2 | M+9 | systems-engineer |
 | **FTA "Loss of Vehicle in BVLOS"** | A | A.2 | M+10 | systems-engineer |
 | **Trade Study reports** (TS-PLATFORM, TS-MATERIAL, TS-PROP-6B, TS-AVI, TS-PAYLOAD, TS-COMMS) | A | A.3 DOCFAP | M+9 | aerospace-SE |
 | **ENAC pre-application + SORA stima GRC** | I + A | A.5.x SORA pre-doc | M+9 | aviation-regulatory |
 | **AGCOM spectrum consultation + plan** | I + A | A.5.x Spectrum plan | M+10 | telecom-payload |
-| **DPIA preliminary + Garante engagement** | I | A.5.x DPIA prelim | M+9 | data-privacy-counsel |
+| **DPIA preliminary + Garante engagement** | I | A.5.x DPIA prelim | M+9 | consulenza privacy e protezione dati |
 
 Per ogni Analysis l'output include la lista delle **assunzioni dichiarate** e l'**uncertainty quantification** (sensitivity sweep). Vedi convenzione `cap-03 §3.1.4` (epistemic discipline).
 
@@ -141,13 +141,13 @@ La Phase B 6A corrisponde alla messa in opera del **pilota Pentema** e comprende
 | Test | Tipo | Facility | Periodo | Owner |
 |---|---|---|---|---|
 | GS test bed setup + walkthrough | D | GS Pentema | M+12-15 | aerospace-SE |
-| HIL simulator FCS fault injection | D | HIL bench in-house o partner | M+13-20 | avionics-gnc-engineer |
+| HIL simulator FCS fault injection | D | HIL bench in-house o partner | M+13-20 | team avionica e GNC |
 | Range test ground RF + payload swap | T | Albenga/Pentema range | M+14-18 | telecom-payload |
-| Climatic chamber test (-10/+30°C) | T | External lab (Pavia/Milano) | M+15-18 | vtol-uas-specialist |
-| EMC test (EN 55032 + DO-160G §20) | T | IMQ/ICIM/TUV | M+15-18 | avionics-gnc-engineer |
-| Parachute drop test | T | In-house drop rig | M+13-15 | vtol-uas-specialist |
-| GNSS spoofing detection test | T | GNSS simulator (Spirent/Skydel) | M+14-16 | avionics-gnc-engineer |
-| Battery thermal runaway (UN 38.3) | T | CNR-ITAE / accredited | M+13-15 | propulsion-energy-engineer |
+| Climatic chamber test (-10/+30°C) | T | External lab (Pavia/Milano) | M+15-18 | team VTOL UAS specialistico |
+| EMC test (EN 55032 + DO-160G §20) | T | IMQ/ICIM/TUV | M+15-18 | team avionica e GNC |
+| Parachute drop test | T | In-house drop rig | M+13-15 | team VTOL UAS specialistico |
+| GNSS spoofing detection test | T | GNSS simulator (Spirent/Skydel) | M+14-16 | team avionica e GNC |
+| Battery thermal runaway (UN 38.3) | T | CNR-ITAE / accredited | M+13-15 | team propulsione e energia |
 
 ### A.5.3.4 Phase C (M+9-24), test full-scale e operational validation
 
@@ -155,10 +155,10 @@ La Phase C 6A inizia con l'**autorizzazione ENAC** (M+9) e con le prime missioni
 
 | Attività | Tipo | Facility | Periodo | Owner |
 |---|---|---|---|---|
-| Flight test BVLOS Pentema + GATB Grottaglie | T | Sito Pentema + GATB | M+9-12 | vtol-uas-specialist |
+| Flight test BVLOS Pentema + GATB Grottaglie | T | Sito Pentema + GATB | M+9-12 | team VTOL UAS specialistico |
 | Hotspot detection field trial (fuoco controllato) | D+T | Sito Pentema con autorizzazione | M+11-14 | EO-expert |
 | Operations validation Y1 (≥50 missioni) | D | Pentema operativo | M+10-24 | program-manager |
-| Customer feedback collection (Regione, PC, coop) | I | NPS survey + meeting | M+12-24 | business-model-strategist |
+| Customer feedback collection (Regione, PC, coop) | I | NPS survey + meeting | M+12-24 | team strategia business model |
 
 > **Gate G4 (M+12)** entry criteria collegati a V&V:
 > - ≥50 missioni completate senza FATAL/major
@@ -179,9 +179,9 @@ Pre-requisito: il gate **G5** (M+24) ha approvato la Phase B 6B.
 
 | Test | Allegato output | Facility | Owner |
 |---|---|---|---|
-| Solar panel efficiency (IEC 60904 AM1.5) | Cert IEC | ENEA Casaccia o EURAC Bolzano (TUV cert) | propulsion-energy-engineer |
-| Battery LiS/SS-Li pack-level cycle test | Cycle curve + cert | In-house o CNR-ICMATE | propulsion-energy-engineer |
-| UV degradation accelerated (ASTM G154/G155) | UV test report | UV chamber lab | propulsion-energy-engineer |
+| Solar panel efficiency (IEC 60904 AM1.5) | Cert IEC | ENEA Casaccia o EURAC Bolzano (TUV cert) | team propulsione e energia |
+| Battery LiS/SS-Li pack-level cycle test | Cycle curve + cert | In-house o CNR-ICMATE | team propulsione e energia |
+| UV degradation accelerated (ASTM G154/G155) | UV test report | UV chamber lab | team propulsione e energia |
 | Composite layup test panel (CFRP/lino skin) | Material qual report | UniGE DICCA / POLITO DIMEAS | aero-structures-engineer |
 
 ### A.5.4.2 M+30-36, subscale prototype 1:3 ground tests
@@ -193,8 +193,8 @@ Pre-requisito: lab tests M+24-30 passati.
 | Wind tunnel subscale 1:3 | WT report | POLITO/CIRA wind tunnel | aero-structures-engineer |
 | GVT (Ground Vibration Test) subscale | Modal analysis | POLITO DIMEAS / CIRA | aero-structures-engineer |
 | Aeroelastic correlation analysis | p-k flutter analysis | CFD/CSD coupled solver | aero-structures-engineer |
-| Subscale propulsion integration test | Cell test | In-house o partner | propulsion-energy-engineer |
-| Avionics HIL stratospheric envelope | HIL strat report | In-house o DiPSIM | avionics-gnc-engineer |
+| Subscale propulsion integration test | Cell test | In-house o partner | team propulsione e energia |
+| Avionics HIL stratospheric envelope | HIL strat report | In-house o DiPSIM | team avionica e GNC |
 
 > **Gate G6 (M+36)** entry criteria collegati a V&V:
 > - TRL subsystem critici ≥ 5
@@ -222,14 +222,14 @@ Allineato con la tabella di `cap-06 §6.6`:
 ### A.5.5.1 AERO/Struct
 
 ```
-Phase A:  XFLR5 / AVL low-fidelity polare         (Analysis)
-          Calcoli analitici + FEA preliminare      (Analysis)
-                          ↓
-Phase B:  CFD RANS + wind tunnel subscale 1:5      (Analysis + Test)
-          Test panel + structural test subscale    (Test)
-                          ↓
-Phase C:  GVT + flight test load envelope          (Test)
-          Flight test full-scale aerodynamic       (Test)
+Phase A: XFLR5 / AVL low-fidelity polare (Analysis)
+ Calcoli analitici + FEA preliminare (Analysis)
+ ↓
+Phase B: CFD RANS + wind tunnel subscale 1:5 (Analysis + Test)
+ Test panel + structural test subscale (Test)
+ ↓
+Phase C: GVT + flight test load envelope (Test)
+ Flight test full-scale aerodynamic (Test)
 ```
 
 Output deliverables: aerodynamic polare report, FEA report, WT report, GVT report, flight test load envelope.
@@ -237,14 +237,14 @@ Output deliverables: aerodynamic polare report, FEA report, WT report, GVT repor
 ### A.5.5.2 PROP/Energy
 
 ```
-Phase A:  Modello energy balance + sensitivity     (Analysis, Allegato A.6)
-                          ↓
-Phase B:  Test cell pannelli (IEC 60904)           (Test)
-          Battery pack-level cycle test            (Test)
-          UV degradation accelerated               (Test)
-                          ↓
-Phase C:  Test integrato subscale propulsione      (Test)
-          Perennial flight HALE                    (Test)
+Phase A: Modello energy balance + sensitivity (Analysis, Allegato A.6)
+ ↓
+Phase B: Test cell pannelli (IEC 60904) (Test)
+ Battery pack-level cycle test (Test)
+ UV degradation accelerated (Test)
+ ↓
+Phase C: Test integrato subscale propulsione (Test)
+ Perennial flight HALE (Test)
 ```
 
 Output deliverables: A.6 energy report, IEC 60904 cert, battery cycle cert, UV cert, propulsion integration test report.
@@ -252,14 +252,14 @@ Output deliverables: A.6 energy report, IEC 60904 cert, battery cycle cert, UV c
 ### A.5.5.3 AVI/GNC
 
 ```
-Phase A:  Architecture document + DAL allocation   (Inspection + Analysis)
-                          ↓
-Phase B:  HIL simulation (fault injection)         (Demonstration + Test)
-          GNSS spoofing detection                  (Test)
-          IMU redundancy 2-of-3 voting             (Demonstration)
-                          ↓
-Phase C:  Ground test integrato                    (Test)
-          Flight test BVLOS                        (Test)
+Phase A: Architecture document + DAL allocation (Inspection + Analysis)
+ ↓
+Phase B: HIL simulation (fault injection) (Demonstration + Test)
+ GNSS spoofing detection (Test)
+ IMU redundancy 2-of-3 voting (Demonstration)
+ ↓
+Phase C: Ground test integrato (Test)
+ Flight test BVLOS (Test)
 ```
 
 Output deliverables: DO-178C trace matrix (se autopilot custom), HIL test report, GNSS test report, IMU fault test report, flight test BVLOS log.
@@ -267,15 +267,15 @@ Output deliverables: DO-178C trace matrix (se autopilot custom), HIL test report
 ### A.5.5.4 PAY (Payload EO/IR/Telecom)
 
 ```
-Phase A:  Bench-level functional test              (Demonstration)
-          Camera/IR spec verification              (Inspection)
-                          ↓
-Phase B:  Camera MTF calibration                   (Test)
-          IR NEdT calibration (blackbody INRIM)    (Test)
-          Edge AI ROC curve                        (Analysis + Test)
-                          ↓
-Phase C:  Fly-and-measure missioni reali           (Test)
-          Operations validation                    (Demonstration)
+Phase A: Bench-level functional test (Demonstration)
+ Camera/IR spec verification (Inspection)
+ ↓
+Phase B: Camera MTF calibration (Test)
+ IR NEdT calibration (blackbody INRIM) (Test)
+ Edge AI ROC curve (Analysis + Test)
+ ↓
+Phase C: Fly-and-measure missioni reali (Test)
+ Operations validation (Demonstration)
 ```
 
 Output deliverables: MTF report, NEdT cert, FAR ROC curve, fly-and-measure report.
@@ -283,14 +283,14 @@ Output deliverables: MTF report, NEdT cert, FAR ROC curve, fly-and-measure repor
 ### A.5.5.5 COMMS
 
 ```
-Phase A:  Link budget analysis (Allegato A.7)     (Analysis)
-                          ↓
-Phase B:  Range test ground RF                     (Test)
-          Crypto bench test + pen-test             (Test)
-          Antenna pattern measurement              (Test)
-                          ↓
-Phase C:  RSSI in volo + fade margin measured      (Test)
-          Throughput iperf in flight               (Test)
+Phase A: Link budget analysis (Allegato A.7) (Analysis)
+ ↓
+Phase B: Range test ground RF (Test)
+ Crypto bench test + pen-test (Test)
+ Antenna pattern measurement (Test)
+ ↓
+Phase C: RSSI in volo + fade margin measured (Test)
+ Throughput iperf in flight (Test)
 ```
 
 Output deliverables: A.7 link budget Excel, range test report, crypto/pen-test report, antenna pattern report, in-flight RSSI log.
@@ -298,13 +298,13 @@ Output deliverables: A.7 link budget Excel, range test report, crypto/pen-test r
 ### A.5.5.6 GS (Ground Segment)
 
 ```
-Phase A:  Architecture walkthrough                 (Inspection)
-                          ↓
-Phase B:  Integrated test bed end-to-end           (Demonstration)
-          Latency test end-to-end                  (Test)
-                          ↓
-Phase C:  Operations validation 24/7               (Demonstration)
-          Drill simulato outage                    (Demonstration)
+Phase A: Architecture walkthrough (Inspection)
+ ↓
+Phase B: Integrated test bed end-to-end (Demonstration)
+ Latency test end-to-end (Test)
+ ↓
+Phase C: Operations validation 24/7 (Demonstration)
+ Drill simulato outage (Demonstration)
 ```
 
 Output deliverables: GS test bed report, end-to-end latency report, operations drill log, 24/7 monitoring dashboard.
@@ -434,13 +434,13 @@ Output: file Excel `Qualification-Matrix-v1.0.xlsx` (da preparare per G3, M+10-1
 | Deliverable | Output type | Owner | Status M+3 |
 |---|---|---|---|
 | A.5 V&V Plan v1.0 | Markdown + Excel | aerospace-SE (V&V manager) | **Done (presente documento)** |
-| A.6 Energy Balance Report v1.0 | Markdown + Python + Excel | propulsion-energy-engineer | Done |
+| A.6 Energy Balance Report v1.0 | Markdown + Python + Excel | team propulsione e energia | Done |
 | A.7 Link Budget Report v1.0 | Markdown + Python + Excel | telecom-payload | Done |
 | A.2 Risk Register + FMECA + FTA | Markdown + Excel | systems-engineer | In progress |
 | A.3 Trade Study Reports (DOCFAP) | Markdown × 6 | aerospace-SE | In progress |
 | A.5.x ENAC pre-application doc | PDF formale | aviation-regulatory | Planned M+9 |
 | A.5.x AGCOM spectrum plan | Markdown | telecom-payload | Planned M+9 |
-| A.5.x DPIA preliminary | PDF + workshop log | data-privacy-counsel | Planned M+9 |
+| A.5.x DPIA preliminary | PDF + workshop log | consulenza privacy e protezione dati | Planned M+9 |
 | A.5.x Compliance Matrix v1 (SyR-C series) | Excel | aviation-regulatory | Planned M+10 |
 | Qualification Matrix v1.0 (pre-G3) | Excel | aerospace-SE | Planned M+10 |
 | Independent verification report (RINA/DNV) | PDF | program-manager | Planned M+11 |
@@ -489,8 +489,8 @@ Le V&V open questions tracciate per i gate successivi:
 |---|---|---|---|---|
 | OQ-VV-01 | Disponibilità RINA o equivalente per feasibility audit G3? | Engagement formale entro M+9 | program-manager | M+9 |
 | OQ-VV-02 | Quale partner academic per wind tunnel subscale 1:3 (POLITO vs CIRA vs UniGE)? | Negoziazione + booking | aero-structures-engineer | M+18 |
-| OQ-VV-03 | Quale battery cycler lab (in-house build vs CNR-ICMATE partnership)? | Decisione CapEx vs OpEx | propulsion-energy-engineer | M+15 |
-| OQ-VV-04 | HIL simulator: build in-house vs partner DiPSIM? | Trade-off costo + tempo | avionics-gnc-engineer | M+12 |
+| OQ-VV-03 | Quale battery cycler lab (in-house build vs CNR-ICMATE partnership)? | Decisione CapEx vs OpEx | team propulsione e energia | M+15 |
+| OQ-VV-04 | HIL simulator: build in-house vs partner DiPSIM? | Trade-off costo + tempo | team avionica e GNC | M+12 |
 | OQ-VV-05 | Quale partner stratospheric test site (Sardegna ASI vs ESRANGE Kiruna)? | Engagement formale + funding Phase B | aero-structures-engineer | M+24 |
 | OQ-VV-06 | Engagement INRIM Torino per IR cal blackbody: formal contract? | LoI + Q4 booking | EO-expert | M+12 |
 | OQ-VV-07 | Indep. verification cybersecurity NIS2: quale audit firm (Deloitte, PwC, in-house ACN partner)? | RFP + valutazione | aerospace-SE | M+15 |
@@ -531,7 +531,7 @@ Rischi specifici della V&V che possono compromettere il piano:
 Il presente V&V Plan v1.0 costituisce il **deliverable baseline** richiesto per il **Gate G3 (M+10/M+11) FEASIBILITY GATE PRIMARIO**. Esso:
 
 1. **Traccia 71 requisiti** SyR + SsR + IR (sopra il target minimo 60-70 dichiarato in `cap-03 §3.7`)
-2. **Allinea ogni requisito** con metodo V&V (I/A/D/T), fase NASA SE (Pre-A/A/B/C), owner agent, test facility, document evidence, risk link, trade study link
+2. **Allinea ogni requisito** con metodo V&V (I/A/D/T), fase NASA SE (Pre-A/A/B/C), owner specialista, test facility, document evidence, risk link, trade study link
 3. **Fornisce gantt schedule** allineato con i 5 gate (G2/G3/G4/G5/G6)
 4. **Quantifica i costi** test (CapEx €210k + OpEx €630k Y1+Y2 + Phase B 6B €730k)
 5. **Definisce strategia independent verification** con RINA preferred per il G3 audit
@@ -548,7 +548,7 @@ Il presente V&V Plan v1.0 costituisce il **deliverable baseline** richiesto per 
 
 ### A.5.12.2 Coerenza epistemica
 
-In coerenza con `epistemic-rigor`:
+In coerenza con rigore epistemico:
 - Ogni V&V method dichiarato risulta **falsificabile**: se il test fallisce, il requisito è violato.
 - Ogni Analysis include **assunzioni esplicite** e sensitivity sweep.
 - Ogni cost figure dichiara la propria **source/vendor** (cf. sheet `Test_Costs`).

@@ -110,5 +110,5 @@ Se al gate G2 (M+6) non esistono CAD detailed degli elementi critici (longherone
 
 - `Progetto concettuale struttura HALE.md` (root)
 - Cap. 6 §6.1 + §6.2
-- Skill `trade-study-analysis` per TS-MATERIAL + TS-AERO
+- Metodologia metodologia trade study per TS-MATERIAL + TS-AERO
 - Vol. 3 R.2 [T-65] CMH-17 + standard CAD aerospace

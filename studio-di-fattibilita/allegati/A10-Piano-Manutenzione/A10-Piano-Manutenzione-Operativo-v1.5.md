@@ -395,21 +395,21 @@ Per Y1 (startup operations) l'organizzazione di manutenzione resta **interna a F
 
 ```
 Maintenance Manager (0.3 FTE, coinvolto anche come Ingegnere Ops)
-    |
-    +-- Maintainer Certificato Principale (ML2, 0.5 FTE)
-    |       Responsabile: 25H, 100H, ANN, MX-COR complessa
-    |
-    +-- PIC (Pilota in Comando), abilitato ML1
-    |       Responsabile: MX-PRE, MX-POST, MX-DAILY, osservazione anomalie
-    |
-    +-- Subcontractor NDT (esterno, on-call)
-    |       Attivato per: MX-STR-006 (100H o post-impatto)
-    |
-    +-- OEM JOUAV Service Contract (remoto + missione annuale)
-    |       Attivato per: ispezione accettazione, 100H, ANN, sostituzione motori
-    |
-    +-- Payload Specialist (esterno, on-call)
-            Attivato per: calibrazione radiometrica IR assoluta, boresight correction
+ |
+ +-- Maintainer Certificato Principale (ML2, 0.5 FTE)
+ | Responsabile: 25H, 100H, ANN, MX-COR complessa
+ |
+ +-- PIC (Pilota in Comando), abilitato ML1
+ | Responsabile: MX-PRE, MX-POST, MX-DAILY, osservazione anomalie
+ |
+ +-- Subcontractor NDT (esterno, on-call)
+ | Attivato per: MX-STR-006 (100H o post-impatto)
+ |
+ +-- OEM JOUAV Service Contract (remoto + missione annuale)
+ | Attivato per: ispezione accettazione, 100H, ANN, sostituzione motori
+ |
+ +-- Payload Specialist (esterno, on-call)
+ Attivato per: calibrazione radiometrica IR assoluta, boresight correction
 ```
 
 ### 5.2 Requisiti di qualificazione del personale
@@ -485,7 +485,7 @@ Il contratto di servizio OEM costituisce un elemento critico della strategia di 
 
 ### 6.1 Razionale strategico
 
-La strategia di ricambi risponde direttamente alla Critica 3 del Red Team Cap. 6 (rischio supply chain JOUAV CN) e al RSK-GEO-003 del Risk Register (Allegato A.2). L'obiettivo: garantire la continuità operativa per **12 mesi** anche in caso di blocco temporaneo delle forniture JOUAV (es. restrizioni export, sanzioni, problemi logistici COVID-like).
+La strategia di ricambi risponde direttamente alla Critica 3 della review critica Cap. 6 (rischio supply chain JOUAV CN) e al RSK-GEO-003 del Risk Register (Allegato A.2). L'obiettivo: garantire la continuità operativa per **12 mesi** anche in caso di blocco temporaneo delle forniture JOUAV (es. restrizioni export, sanzioni, problemi logistici COVID-like).
 
 Lo stock spare target copre:
 - **Livello 1 (in stock a Pentema)**: componenti critici ad alta frequenza di sostituzione e lunghi lead time
@@ -941,7 +941,7 @@ La presente sezione elenca i gap critici da chiudere prima dell'avvio operazioni
 
 ## Appendice B. Falsifying observations del PMO
 
-In linea con il principio di rigore epistemico del progetto HALE (CLAUDE.md), si dichiarano le osservazioni falsificanti del presente PMO:
+In linea con il principio di rigore epistemico del progetto HALE (briefing operativo di progetto), si dichiarano le osservazioni falsificanti del presente PMO:
 
 1. **Se MTBF reale motori VTOL < 100 h** (vs 200-400 h vendor dichiarato), il piano PM 25H risulta insufficiente: attivare ispezione MX-PROP-007-008 ogni 15H e rivedere OpEx al rialzo (+€8-20k/anno per sostituzioni anticipate). Trigger: primo fallimento motore prima delle 100H operative.
 
@@ -960,7 +960,7 @@ In linea con il principio di rigore epistemico del progetto HALE (CLAUDE.md), si
 | Versione | Data | Autore | Modifiche principali |
 |---|---|---|---|
 | v1.0 | M+3 | Firmamento Technologies | Piano preliminare (207 righe, categorie base) |
-| v1.5 | 2026-05-17 | Firmamento Technologies (vtol-uas-specialist + aerospace-systems-engineer) | Piano operativo completo: 5 sistemi, task table completa, LCC Y1-Y5, spare parts strategy, HSE, gap analysis, cross-volume linkage |
+| v1.5 | 2026-05-17 | Firmamento Technologies (team VTOL UAS specialistico + team ingegneria di sistema) | Piano operativo completo: 5 sistemi, task table completa, LCC Y1-Y5, spare parts strategy, HSE, gap analysis, cross-volume linkage |
 | v2.0 | M+10 (target) | Firmamento Technologies + OEM JOUAV | Aggiornamento post-ricezione manuale OEM + prime operazioni reali + SORA application allegato definitivo |
 
 ---

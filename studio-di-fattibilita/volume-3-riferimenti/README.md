@@ -50,4 +50,4 @@ Versione corrente: **M+3 bozza**. Aggiornamenti previsti:
 
 ## Disciplina epistemica
 
-I riferimenti del Vol. 3 sono **vincolanti** per la skill `epistemic-rigor`: ogni claim del Volume 1 che cita un riferimento di questo Vol. 3 deve essere ricontrollato se la fonte è stata aggiornata o falsificata. Vedi `riferimenti/audit-rigore-epistemico.md` e `DR-research-closure-M3.md` per il debt log.
+I riferimenti del Vol. 3 sono **vincolanti** per la metodologia di rigore epistemico: ogni claim del Volume 1 che cita un riferimento di questo Vol. 3 deve essere ricontrollato se la fonte è stata aggiornata o falsificata. Vedi `riferimenti/audit-rigore-epistemico.md` e `DR-research-closure-M3.md` per il debt log.

@@ -5,9 +5,9 @@
 > Volume 1, Capitolo 10
 >
 > **Versione:** bozza M+11 (proiezione del verdetto)
-> **Conformità:** NASA SE Handbook §3.0 + skill `gate-review-checklist`
-> **Disciplina epistemica:** Regole 1-7 della skill `epistemic-rigor`
-> **Red Team review:** combinata (`red-team-skeptic` + `regulatory-adversary` + `competitor-intelligence`), vedi §10.6
+> **Conformità:** NASA SE Handbook §3.0 + metodologia di gate review
+> **Disciplina metodologica:** rigore epistemico
+> **Review critica indipendente:** combinata (review critica + regolatoria + analisi competitor), vedi §10.6
 
 ---
 
@@ -21,7 +21,7 @@ Il capitolo sintetizza le evidenze prodotte nei Cap. 1-9 e 11 dello Studio, valu
 
 ## 10.0bis Revisione Verdetto post-Audit M+3 (CRITICAL, DEFAULT SCENARIO BASE)
 
-> **Inserimento post-audit M+3** (red-team-skeptic + regulatory-adversary + competitor-intelligence): la formulazione originale "Go Condizionato 6A" (vedi §10.1 sotto) **sopravvaluta la probabilità di Go pieno al gate G3**. Calcolo realistico: P(AND 5 hard conditions C1-C5) = **5-15%** scenario realistico (vedi `AUDIT-QUALITY-VOLUME-1.md` §6).
+> **Inserimento alla milestone M+3 (post review critica)** (review critica + regolatoria + analisi competitor): la formulazione originale "Go Condizionato 6A" (vedi §10.1 sotto) **sopravvaluta la probabilità di Go pieno al gate G3**. Calcolo realistico: P(AND 5 hard conditions C1-C5) = **5-15%** scenario realistico (vedi l'audit qualita interno §6).
 >
 > Lo scenario base atteso al gate G3 (M+10/M+11) è **HOLD CON PIANO REGOLATORIO RAFFORZATO** (probabilità 60-80%), con re-review M+13-16 e attivazione della **sliding timeline** del Cap. 9 §9.12. Il verdetto "Go Condizionato" del §10.3 sotto resta valido come **scenario ottimistico** (15-35% probabilità).
 
@@ -36,7 +36,7 @@ Il capitolo sintetizza le evidenze prodotte nei Cap. 1-9 e 11 dello Studio, valu
 
 ### 10.0bis.2 Verdetto Percorso 6B in scenario realistico
 
-Il verdetto **HOLD / GO CONDIZIONATO ESTREMO 6B** della §10.4 sotto resta valido. Gli aggiornamenti post-audit M+3 ridefiniscono però il profilo del percorso.
+Il verdetto **HOLD / GO CONDIZIONATO ESTREMO 6B** della §10.4 sotto resta valido. Gli aggiornamenti alla milestone M+3 ridefiniscono però il profilo del percorso.
 
 Il 6B non parte mai prima del gate G5 (M+24), e con le sliding timeline §9.12 realisticamente slitta a **M+30-48**. Quindici showstopper regolatori aggiuntivi (vedi Cap. 5 §5.16) confermano la severità del path 6B. Il **DR-013 finding** (`riferimenti/DR-research-closure-M3.md`) consolida un base rate di **0% HALE solari commerciali operativi globalmente** in 22 anni di tentativi: dodici programmi 2003-2025 analizzati (NASA Helios crashed 2003, Aalto HAWK30 cancellato 2020, Solara 50 dissolto, Sanswire StratXX mai operativo, AALTO Zephyr "commercial entry 2024" che è in realtà operations militari, Skydweller solo dual-use Navy AMPA, PHASA-35 operativo 2026 ma dual-use, ecc.). Da qui la posizione **HOLD 6B con criteri di uscita estremamente stringenti**.
 
@@ -46,7 +46,7 @@ La probabilità di operatività perennial Y10 standalone è stimata realisticame
 
 ### 10.0bis.3 Comunicazione esterna del verdetto
 
-Per evitare l'effetto "CYA decisionale" (Red Team critica §5), il verdetto va comunicato esternamente come segue.
+Per evitare l'effetto "CYA decisionale" (Critica della review §5), il verdetto va comunicato esternamente come segue.
 
 > **Comunicazione raccomandata al CdA + sponsor**:
 > "Lo Studio di Fattibilità conferma la solidità tecnica e di mercato del Percorso 6A pilota Pentema. Le evidenze regolatorie e di engagement institutionale al M+11 sono in costruzione: il verdetto è **GO subordinato al completamento del piano regolatorio rafforzato**, con probabilità di Go pieno immediato ~5-15% e probabilità di Hold con re-review ~60-80%. Il Percorso 6B resta in HOLD strutturale subordinato a gate G5 (M+24)."
@@ -146,7 +146,7 @@ Gli asset 6A→6B sono riusabili al ~30-40% del CapEx Y1 in valore monetario riu
 
 Il verdetto Go Condizionato è **subordinato** al raggiungimento delle seguenti condizioni.
 
-> **⚠️ Caveat probabilistico onesto (post Audit Red Team M+3)**: il verdetto "Go Condizionato" ha probabilità di trasformarsi in **Go pieno** al M+10/M+11 stimata effettivamente al ~**15-35%** (non 60-80%, come potrebbe suggerire una lettura ottimistica). Le 5 hard conditions sotto sono in AND logico: la P(tutte soddisfatte simultaneamente) è il prodotto delle probabilità marginali. Lo scenario base atteso è **Hold con piano di mitigazione** nel 60-80% dei percorsi, con re-review M+13-14. Lo scenario "Go pieno immediato" richiede esecuzione perfetta multi-stakeholder e nessuno slittamento ENAC. Vedi `AUDIT-QUALITY-VOLUME-1.md` §6 per il calcolo dettagliato.
+> **⚠️ Caveat probabilistico onesto (post review critica M+3)**: il verdetto "Go Condizionato" ha probabilità di trasformarsi in **Go pieno** al M+10/M+11 stimata effettivamente al ~**15-35%** (non 60-80%, come potrebbe suggerire una lettura ottimistica). Le 5 hard conditions sotto sono in AND logico: la P(tutte soddisfatte simultaneamente) è il prodotto delle probabilità marginali. Lo scenario base atteso è **Hold con piano di mitigazione** nel 60-80% dei percorsi, con re-review M+13-14. Lo scenario "Go pieno immediato" richiede esecuzione perfetta multi-stakeholder e nessuno slittamento ENAC. Vedi l'audit qualita interno §6 per il calcolo dettagliato.
 
 **Hard conditions** (vincolanti, no-Go se mancanti):
 - ☐ **C1**: LoI o accordo formale Regione Liguria firmato entro M+9. *FO linkata: FO-ADD-04 (pricing PA €75k/anno ACV)*
@@ -155,7 +155,7 @@ Il verdetto Go Condizionato è **subordinato** al raggiungimento delle seguenti 
 - ☐ **C4**: ≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6. *FO linkata: FO-ADD-07 (workshop M+6 output) + FO-ADD-01 (cooperative come vantaggio competitivo)*
 - ☐ **C5**: Pre-application meeting ENAC con feedback documentato entro M+3-6
 
-> **🔬 Falsifying observations aggiuntive linkate alle hard conditions C1-C5**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` per le FO operazionalizzate. I trigger principali sono: C1 (FO-ADD-04: pricing baseline €75k/anno per servizio EO Regione); C3 (FO-ADD-09: 60% mix funding committed); C4 (FO-ADD-07: workshop M+6 con 8/10 cooperative + FO-ADD-01: cooperative engagement metrics M+12). Per Phase B 6B (§10.4) si aggiungono FO-ADD-05 (EASA HAPS framework apertura M+36) e FO-ADD-06 (CIRA partnership willingness M+12). Tabella consolidata: §10.X "Falsifying observations consolidate per Cap. 10".
+> **🔬 Falsifying observations aggiuntive linkate alle hard conditions C1-C5**: vedi addendum falsifying observations per le FO operazionalizzate. I trigger principali sono: C1 (FO-ADD-04: pricing baseline €75k/anno per servizio EO Regione); C3 (FO-ADD-09: 60% mix funding committed); C4 (FO-ADD-07: workshop M+6 con 8/10 cooperative + FO-ADD-01: cooperative engagement metrics M+12). Per Phase B 6B (§10.4) si aggiungono FO-ADD-05 (EASA HAPS framework apertura M+36) e FO-ADD-06 (CIRA partnership willingness M+12). Tabella consolidata: §10.X "Falsifying observations consolidate per Cap. 10".
 
 **Soft conditions** (raccomandate, no blocking ma trigger review):
 - ☐ S1: DPIA pubblica preliminare entro M+6
@@ -224,9 +224,9 @@ I gate G4, G5 e oltre sono i punti di verifica formali per il proseguimento.
 
 ---
 
-## 10.6 Red Team, Critica Combinata al Verdetto
+## 10.6 Review critica combinata al Verdetto
 
-Critica aggregata da `red-team-skeptic` + `regulatory-adversary` + `competitor-intelligence` + `business-model-strategist` + `financial-cfo-analyst`.
+Critica aggregata da review critica + regolatoria + analisi competitor + strategia business model + analisi finanziaria CFO.
 
 ### Critica 1: "Go Condizionato 6A è troppo morbido: hard conditions C1-C5 sono ambizione, non realismo"
 **Razionale**: 5 hard conditions tutte da soddisfare al M+9-10 = AND di probabilità ~70%-90% ognuno → P(tutte) ~25-60%. Significa che ~40% scenario è Hold, non Go.
@@ -276,7 +276,7 @@ In coerenza con boundary B1+B2 e con il verdetto, lo Studio dichiara esplicitame
 
 ## 10.7bis Falsifying Observations Consolidate per il Verdetto Cap. 10
 
-> **Compliance epistemic-rigor Regola 1 (falsifiability)**: ogni claim del verdetto Cap. 10 deve avere almeno una falsifying observation operativamente verificabile. Tabella consolidata di **15 falsifying observations** che, se verificate, attivano revisione del verdetto.
+> **Compliance rigore epistemico Regola 1 (falsifiability)**: ogni claim del verdetto Cap. 10 deve avere almeno una falsifying observation operativamente verificabile. Tabella consolidata di **15 falsifying observations** che, se verificate, attivano revisione del verdetto.
 
 ### 10.7bis.1 FO per il verdetto Percorso 6A "HOLD CON PIANO REGOLATORIO RAFFORZATO / GO CONDIZIONATO"
 
@@ -310,7 +310,7 @@ In coerenza con boundary B1+B2 e con il verdetto, lo Studio dichiara esplicitame
 
 > **Logica di attivazione consolidata**: il verificarsi di **≥ 2 FO 10A** in finestra simultanea attiva pre-review del verdetto 6A → HOLD esteso. Il verificarsi di **≥ 1 FO 10B critical** (10B-02 OR 10B-04) attiva pre-review del verdetto 6B → trigger B2-relaxed Cap. 11 §11.6bis. Confidence sul framework di attivazione: **medium-high** (definizioni operative + trigger osservabili).
 
-> **Compliance Regola 1 epistemic-rigor**: 15 FO esplicite operative. Il gap "Cap. 10 = 0 falsifying observations" identificato dall'audit Red Team M+3 è ora chiuso.
+> **Conformità alla prima regola di rigore epistemico (falsifiability)**: 15 FO esplicite operative. Il gap "Cap. 10 = 0 falsifying observations" identificato dalla review critica M+3 è ora chiuso.
 
 ---
 
@@ -374,7 +374,7 @@ Per ognuno di questi livelli il presente Studio fornisce evidenze, requisiti e g
 
 [^2]: D.Lgs. 36/2023 art. 41, gate review framework PFTE. Source: `fonti/2023_0036.md`.
 
-[^3]: Skill `gate-review-checklist` + `epistemic-rigor` + `red-team-skeptic`.
+[^3]: Metodologia interna di checklist gate review, rigore epistemico e review critica.
 
 [^4]: Tutti i Cap. 1-9 e 11 dello Studio di Fattibilità sono fonti per le evidenze citate nel presente capitolo.
 

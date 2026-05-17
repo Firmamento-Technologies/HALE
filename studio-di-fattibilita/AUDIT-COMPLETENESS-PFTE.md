@@ -126,13 +126,13 @@
 |---|---|---|---|
 | SyR-F-006 | F | PAY (IR notturno) + COMMS (telemedicina) | aerospace-SE |
 | SyR-F-009 | F | PAY (EO multi-stagionale) | aerospace-SE |
-| SyR-F-010 | F | PAY (gNB 5G NR-NTN, già SsR-PAY-004): formalizzare link | telecom-ntn-payload-expert |
-| SyR-P-002 | P | AERO (cruise + powertrain) | vtol-uas-specialist |
-| SyR-P-011 | P | AERO (MTOW 6A, già SsR-AERO-007): formalizzare link | vtol-uas-specialist |
-| SyR-P-010 | P | COMMS (già SsR-COMMS-001/002): formalizzare link | telecom-ntn-payload-expert |
-| SyR-O-007 | O | AVI (ConOps + ENAV LoA) | avionics-gnc-engineer |
-| SyR-O-008 | O | AERO + PROP (maintenance program) | vtol-uas-specialist |
-| SyR-S-005 | S | AVI (failure rate FTA + FCS DAL-C) | avionics-gnc-engineer |
+| SyR-F-010 | F | PAY (gNB 5G NR-NTN, già SsR-PAY-004): formalizzare link | team telecom NTN |
+| SyR-P-002 | P | AERO (cruise + powertrain) | team VTOL UAS specialistico |
+| SyR-P-011 | P | AERO (MTOW 6A, già SsR-AERO-007): formalizzare link | team VTOL UAS specialistico |
+| SyR-P-010 | P | COMMS (già SsR-COMMS-001/002): formalizzare link | team telecom NTN |
+| SyR-O-007 | O | AVI (ConOps + ENAV LoA) | team avionica e GNC |
+| SyR-O-008 | O | AERO + PROP (maintenance program) | team VTOL UAS specialistico |
+| SyR-S-005 | S | AVI (failure rate FTA + FCS DAL-C) | team avionica e GNC |
 | SyR-S-008 | S | GS (hangar ATEX) + PROP (BMS), già SsR-GS-011/SsR-PROP-008: formalizzare link | esg-sustainability-officer |
 | SyR-E-004 | E | (cross-cutting LCA, NASA SE §4.3 accetta no SsR): accettato | esg-sustainability-officer |
 | SyR-E-005 | E | (cross-cutting EOL plan): accettato | esg-sustainability-officer |
@@ -181,7 +181,7 @@ Action effective: 9 SyR da decomporre + 3 da formalizzare link a SsR esistenti =
 >
 > | ID | Owner | Fase critica | Mitigation |
 > |---|---|---|---|
-> | RSK-TEC-001 | propulsion-energy-engineer | Y3-Y5 (Phase B 6B) | Plan A E5 Seasonal mandatory; Plan B Y6+ SS Li 450 Wh/kg / PEM+LH2; Plan C R&D-only |
+> | RSK-TEC-001 | team propulsione e energia | Y3-Y5 (Phase B 6B) | Plan A E5 Seasonal mandatory; Plan B Y6+ SS Li 450 Wh/kg / PEM+LH2; Plan C R&D-only |
 > | RSK-REG-001 | aviation-regulatory + sovereign-strategist | Y3-Y6 (Phase B/C) | EASA Innovation Network + consortium CIRA/TAS; ASD-Eurospace HAPS WG; DG MOVE/DEFIS lobby |
 > | RSK-FIN-001 | financial-cfo + sovereign-strategist | Y2-Y3 (gate G5) | Mix EDF + Horizon + PNRR + Series B equity (CDP, EIB); partnership prime cost sharing |
 > | RSK-TEC-002 | aero-structures-engineer | Y3-Y4 (Phase B 6B) | Aeroelastic non-lineare (NASTRAN+ZAERO) + GVT + flight test subscale + winglet/damping |
@@ -306,7 +306,7 @@ Tutti già esplicitati in `riferimenti/audit-rigore-epistemico.md` (15 DR-001..D
 | **GAP-IG-1** | **LoI Regione Liguria non firmata** | Engagement DGR formale Regione Liguria + Assessorato Coesione + Assessorato Innovazione | snai-funding + CEO | M+6-9 |
 | **GAP-IG-2** | **Coopfond bando Cooding 2026 non confermato** (DR-002) | Contatto diretto Coopfond + Legacoop nazionale | snai-funding | M+1 |
 | **GAP-IG-3** | **Pre-application ENAC non eseguita** (DR-004) | Domanda formale ENAC + meeting + feedback documentato | aviation-regulatory | M+3-6 |
-| **GAP-IG-4** | **Quotation vendor reali mancanti** (DR-003) | RFQ doppia parallela JOUAV + Tekever (template già in `vendor-rfq/`) + reference call con ≥2 operatori EU | vtol-uas-specialist + procurement | M+3-6 |
+| **GAP-IG-4** | **Quotation vendor reali mancanti** (DR-003) | RFQ doppia parallela JOUAV + Tekever (template già in `vendor-rfq/`) + reference call con ≥2 operatori EU | team VTOL UAS specialistico + procurement | M+3-6 |
 | **GAP-IG-5** | **DPIA pubblica solo parziale** (DR-006) | Workshop Garante M+12 raccomandato; DPIA v1.0 completa M+5-6; consultazione pubblica comunità Pentema | data-privacy + DPO | M+6 |
 | **GAP-IG-6** | **Dichiarazioni di conformità formali firmate mancanti** | Template AS/EN 9100, ISO 9001, ISO/IEC 27001 in corso certificazione → upgrade dichiarazione attiva firmata Firmamento | quality manager + CEO | M+9 |
 | **GAP-IG-7** | **Validation RINA/DNV non confermata** (OQ-VV-01) | Engagement RINA o equivalente per audit feasibility study Vol. 1+2+3; budget €35-40k pre-negoziato; deadline M+9 per audit pre-G3 | program-manager | M+9 |
@@ -347,7 +347,7 @@ In ordine di priorità (urgenza × dipendenze gate G3):
 
 1. **AC-01**, **Registrazione ACN preventiva NIS2** (RSK-REG-027). Owner: CISO (da assumere) / CEO interim. Deadline: M+1
 2. **AC-02**, **Contatto diretto Coopfond per verifica bando Cooding 2026** (DR-002 / GAP-IG-2). Owner: snai-funding. Deadline: M+1
-3. **AC-03**, **RFQ doppia parallela JOUAV + Tekever** (GAP-IG-4 / DR-003). Owner: vtol-uas-specialist + procurement. Deadline: M+3
+3. **AC-03**, **RFQ doppia parallela JOUAV + Tekever** (GAP-IG-4 / DR-003). Owner: team VTOL UAS specialistico + procurement. Deadline: M+3
 
 ### 7.2 Priorità P1 (M+3-M+6, completamento bozza M+6 al gate G2)
 
@@ -393,13 +393,13 @@ In ordine di priorità (urgenza × dipendenze gate G3):
 
 - **18/18 elaborati Allegato I.7** coperti (13 conformi + 5 placeholder/parziali, 0 mancanti)
 - **4/4 catene di tracciabilità** verificate numericamente:
-  - StNeed→SyR 100%, SyR→V&V 100%, SsR allocazione 100%, 17→28 ereditarietà 100%
-  - SyR→SsR 72% (gap aperto con action plan documentato 8-12 ore M+5-6)
-  - 25/116 rischi narrati + 91/116 trackati XLSX; 10 showstopper con mitigation/owner/deadline
-  - 20/20 INT primarie → 59 sub-interfacce A.4 (mapping esplicito 100%)
+ - StNeed→SyR 100%, SyR→V&V 100%, SsR allocazione 100%, 17→28 ereditarietà 100%
+ - SyR→SsR 72% (gap aperto con action plan documentato 8-12 ore M+5-6)
+ - 25/116 rischi narrati + 91/116 trackati XLSX; 10 showstopper con mitigation/owner/deadline
+ - 20/20 INT primarie → 59 sub-interfacce A.4 (mapping esplicito 100%)
 - **11 famiglie normative** dichiarate, di cui 6 con evidence chain completa in `fonti/` e 5 con action item documentati (NON dichiarate falsamente)
 - **NASA SE methodology** applicata coerentemente (§3 gates, §4 RTM, §5 V&V, §6 ICD)
-- **Disciplina epistemica** consolidata: confidence levels, falsifying observations, Red Team review, base-rate awareness, source provenance
+- **Disciplina epistemica** consolidata: confidence levels, falsifying observations, Review critica indipendente, base-rate awareness, source provenance
 - **Boundary conditions B1+B2** mantenute coerentemente in tutti i capitoli + allegati
 
 ### 8.3 Caveats onesti
@@ -426,7 +426,7 @@ Riprendendo i disclaimer già presenti nello Studio:
 > - AC-05 assunzione 3 FTE senior (sblocca RSK-REG critical aggiuntivi + OpEx Y1 +€450-800k)
 > - AC-16 RINA/DNV audit (segnale di robustezza per investor + bandi pubblici)
 >
-> Il documento al M+3 è **autoreflessivamente onesto** sui propri limiti e sulla distanza da investment-grade. Questo è esso stesso un elemento di robustezza metodologica (epistemic-rigor §1 falsifiability + §3 source provenance + §7 base-rate awareness).
+> Il documento al M+3 è **autoreflessivamente onesto** sui propri limiti e sulla distanza da investment-grade. Questo è esso stesso un elemento di robustezza metodologica (rigore epistemico §1 falsifiability + §3 source provenance + §7 base-rate awareness).
 
 ---
 
@@ -437,7 +437,7 @@ Riprendendo i disclaimer già presenti nello Studio:
 - `riferimenti/audit-rigore-epistemico.md`: 15 DR-research-closure (4 chiusi + 6 parziali + 4 aperti)
 - `riferimenti/DR-research-closure-M3.md`: desk research M+3 (DR-008/009/011/013 chiusi)
 - `studio-di-fattibilita/AUDIT-QUALITY-VOLUME-1.md`: Quality audit + scenario probabilities
-- `studio-di-fattibilita/AUDIT-REDTEAM-VOLUME-1.md` + `AUDIT-COMPETITOR-VOLUME-1.md` + `AUDIT-REGULATORY-VOLUME-1.md`: Red Team / Competitor Intelligence / Regulatory Adversary M+3
+- `studio-di-fattibilita/AUDIT-REDTEAM-VOLUME-1.md` + `AUDIT-COMPETITOR-VOLUME-1.md` + `AUDIT-REGULATORY-VOLUME-1.md`: review critica / analisi competitor / review regolatoria M+3
 - `studio-di-fattibilita/README.md` (Vol. 1) + `studio-di-fattibilita/allegati/README.md` (Vol. 2): stato documentale aggregato
 - Tutti i capitoli `cap-00..11-*.md` (Vol. 1, 14.871 righe totali)
 - Tutti gli allegati `A1..A13/*.md` + `energy-balance/`, `financial-model/`, `vendor-rfq/`

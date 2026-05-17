@@ -6,7 +6,7 @@
 >
 > **Versione documento:** v1.0 (baseline estesa M+3)
 > **Data emissione:** 2026-05-17
-> **Owner:** aerospace-systems-engineer (Firmamento Technologies)
+> **Owner:** team ingegneria di sistema (Firmamento Technologies)
 > **Riferimento Cap. 3:** `studio-di-fattibilita/cap-03-requisiti-e-RTM.md` (RTM v0.5 baseline)
 > **Boundary conditions:** B1 (service-only + Legacoop) + B2 (EU sovereign stratospheric / "complementare a IRIS²")
 
@@ -20,7 +20,7 @@ La RTM v1.0 segue la metodologia del **NASA Systems Engineering Handbook Rev 2**
 - **§4.2 Technical Requirements Definition**: derivazione di 65 System Requirements (SyR) misurabili, organizzati in 7 famiglie (F, P, O, S, E, C, Cost), in piena conformità alle regole VAFC (Verificable, Atomic, Feasible, Complete) della Appendix C del Handbook più INCOSE Guide for Writing Requirements (GtWR, 2023).
 - **§5.3-5.4 V&V Processes**: pianificazione di 67 Verification Requirements (VR) con metodo (Inspection/Analysis/Demonstration/Test) e fase target NASA SE V-model (Pre-A, A, B, B+).
 
-A questa baseline metodologica si aggiungono i **Subsystem Requirements (SsR)** decomposti su 6 sottosistemi tecnici (AERO, PROP, AVI, PAY, COMMS, GS) per un totale di 81 SsR (espansione fine-grained rispetto ai circa 80 SsR campione del Cap. 3.6); 22 **Interface Requirements (IR)** critici (payload-bus, C2 link, GS-cloud, ENAV/U-Space, broker assicurativi, NOTAM, PA portal, ecc.); 15 **Negative Requirements (NegR)** "shall not" organizzati in 5 famiglie (B Business, Geo Sovereignty, Reg Regulatory, Tech Technical, Mkt Communication), ereditati senza modifiche dal Cap. 3 §3.5.8 (risposta alla Critica 5 del Red Team) con audit semestrale obbligatorio per ognuno (Active / Waived / Reviewed); la **disciplina epistemica** della skill `epistemic-rigor`, per cui ogni requisito porta esplicitamente confidence level più falsifying observation. Per i requisiti critici (top-20) la falsifying observation è estesa in forma operativa (trigger osservabile più fonte di evidenza più remediation).
+A questa baseline metodologica si aggiungono i **Subsystem Requirements (SsR)** decomposti su 6 sottosistemi tecnici (AERO, PROP, AVI, PAY, COMMS, GS) per un totale di 81 SsR (espansione fine-grained rispetto ai circa 80 SsR campione del Cap. 3.6); 22 **Interface Requirements (IR)** critici (payload-bus, C2 link, GS-cloud, ENAV/U-Space, broker assicurativi, NOTAM, PA portal, ecc.); 15 **Negative Requirements (NegR)** "shall not" organizzati in 5 famiglie (B Business, Geo Sovereignty, Reg Regulatory, Tech Technical, Mkt Communication), ereditati senza modifiche dal Cap. 3 §3.5.8 (risposta alla Critica 5 della review critica) con audit semestrale obbligatorio per ognuno (Active / Waived / Reviewed); la **disciplina epistemica** della metodologia di rigore epistemico, per cui ogni requisito porta esplicitamente confidence level più falsifying observation. Per i requisiti critici (top-20) la falsifying observation è estesa in forma operativa (trigger osservabile più fonte di evidenza più remediation).
 
 **Standard secondari di riferimento:** INCOSE Systems Engineering Handbook 5th Edition (2023); ISO/IEC/IEEE 15288:2015 "System life cycle processes"; ECSS-E-ST-10C (ESA, coerenza europea aerospace).
 
@@ -136,16 +136,16 @@ Action item M+5-6 per portare la coverage SyR→SsR da 72% a ≥80% (target G2):
 |---|---|---|---|
 | SyR-F-006 | F | PAY (IR notturno) + COMMS (telemedicina) | aerospace-SE |
 | SyR-F-009 | F | PAY (EO multi-stagionale) | aerospace-SE |
-| SyR-F-010 | F | PAY (gNB 5G NR-NTN, già SsR-PAY-004), formalizzare link | telecom-ntn-payload-expert |
-| SyR-P-002 | P | AERO (cruise + powertrain) | vtol-uas-specialist |
-| SyR-P-011 | P | AERO (MTOW 6A, già SsR-AERO-007), formalizzare link | vtol-uas-specialist |
-| SyR-O-007 | O | AVI (ConOps + ENAV LoA) | avionics-gnc-engineer |
-| SyR-O-008 | O | AERO + PROP (maintenance program) | vtol-uas-specialist |
-| SyR-S-005 | S | AVI (failure rate FTA + FCS DAL-C) | avionics-gnc-engineer |
+| SyR-F-010 | F | PAY (gNB 5G NR-NTN, già SsR-PAY-004), formalizzare link | team telecom NTN |
+| SyR-P-002 | P | AERO (cruise + powertrain) | team VTOL UAS specialistico |
+| SyR-P-011 | P | AERO (MTOW 6A, già SsR-AERO-007), formalizzare link | team VTOL UAS specialistico |
+| SyR-O-007 | O | AVI (ConOps + ENAV LoA) | team avionica e GNC |
+| SyR-O-008 | O | AERO + PROP (maintenance program) | team VTOL UAS specialistico |
+| SyR-S-005 | S | AVI (failure rate FTA + FCS DAL-C) | team avionica e GNC |
 | SyR-S-008 | S | GS (hangar ATEX) + PROP (BMS), già SsR-GS-011/SsR-PROP-008, formalizzare link | esg-sustainability-officer |
 | SyR-E-004 | E | (cross-cutting, LCA non si decompone per sottosistema), accettato senza SsR | esg-sustainability-officer |
 | SyR-E-005 | E | (cross-cutting, EOL plan non si decompone per sottosistema), accettato senza SsR | esg-sustainability-officer |
-| SyR-P-010 | P | COMMS (già SsR-COMMS-001/002), formalizzare link | telecom-ntn-payload-expert |
+| SyR-P-010 | P | COMMS (già SsR-COMMS-001/002), formalizzare link | team telecom NTN |
 
 **Stima effort**: 8-12 ore engineer più 1 review collettiva systems engineering → coverage target 80% raggiungibile entro M+5.
 
@@ -158,7 +158,7 @@ Action item M+5-6 per portare la coverage SyR→SsR da 72% a ≥80% (target G2):
 
 ### 5.6 Nuovo requisito da integrare v1.5, REQ-NF-AMB-01 (proposto da A.12 VIA v2.0)
 
-Il refinement Allegato A.12 VIA preliminare v2.0 (subagent batch 2 M+3) ha identificato un **nuovo requisito non-funzionale ambientale** da integrare al RTM v1.5 M+6:
+Il refinement Allegato A.12 VIA preliminare v2.0 (team specialistico batch 2 M+3) ha identificato un **nuovo requisito non-funzionale ambientale** da integrare al RTM v1.5 M+6:
 
 | Req-ID | Tipo | Statement | Confidence | Verification | Parent | Riferimento |
 |---|---|---|---|---|---|---|
@@ -211,7 +211,7 @@ Il refinement Allegato A.12 VIA preliminare v2.0 (subagent batch 2 M+3) ha ident
 
 ### Column schema (sheet 2-12)
 
-15 colonne standard secondo schema della skill `requirements-traceability-matrix`:
+15 colonne standard secondo schema della metodologia RTM:
 
 ```
 ID | Description | Rationale | Source | Type | Parent | Owner_agent | Priority |
@@ -262,7 +262,7 @@ La RTM v1.0 rappresenta la **baseline estesa M+3** dello Studio di Fattibilità 
 - File `RTM-v1.0.xlsx` esistente in `/studio-di-fattibilita/allegati/A1-RTM/` è il **single source of truth** della RTM dello Studio.
 - Aggiornamento RTM v1.5 M+6: rigenerare via `build_rtm.py` con dati aggiornati (workflow riproducibile più git versioned).
 
-**Disclaimer epistemico** (skill `epistemic-rigor`): la presente RTM v1.0 è una baseline tecnica **provvisoria al M+3**. La confidence aggregata è **medium** (con singoli requisiti high/medium/low/boundary esplicitati). Il documento non è validato da ente terzo (RINA, DNV); la validazione si raccomanda per uso "investment-grade" prima del G5 (M+24). I numeri di performance vendor-driven (es. JOUAV CW-30E autonomia 4h) sono **input di progetto**, non claim di marketing, e attendono triangulation via reference call con almeno 2 operatori EU (DR-003 dell'audit-rigore-epistemico).
+**Disclaimer epistemico** (metodologia di rigore epistemico): la presente RTM v1.0 è una baseline tecnica **provvisoria al M+3**. La confidence aggregata è **medium** (con singoli requisiti high/medium/low/boundary esplicitati). Il documento non è validato da ente terzo (RINA, DNV); la validazione si raccomanda per uso "investment-grade" prima del G5 (M+24). I numeri di performance vendor-driven (es. JOUAV CW-30E autonomia 4h) sono **input di progetto**, non claim di marketing, e attendono triangulation via reference call con almeno 2 operatori EU (DR-003 dell'audit-rigore-epistemico).
 
 ---
 
@@ -286,10 +286,10 @@ La RTM v1.0 rappresenta la **baseline estesa M+3** dello Studio di Fattibilità 
 
 [^9]: **Cap. 9 Cronoprogramma e Gate**: `studio-di-fattibilita/cap-09-cronoprogramma-e-gate.md` §9.2 (Gate G0-G6 entry/exit criteria).
 
-[^10]: **Skill `requirements-traceability-matrix`**: `.claude/skills/requirements-traceability-matrix/SKILL.md`, workflow di costruzione applicato.
+[^10]: **Metodologia metodologia RTM**: metodologia interna: workflow di costruzione applicato.
 
-[^11]: **Skill `epistemic-rigor`**: `.claude/skills/epistemic-rigor/SKILL.md`, disciplina di falsifiability più confidence levels applicata.
+[^11]: **Metodologia di rigore epistemico**: metodologia interna, disciplina di falsifiability più confidence levels applicata.
 
-[^12]: **Boundary conditions B1+B2** dichiarate in `CLAUDE.md` (project root) più `riferimenti/visione-10-anni.md` più `riferimenti/RESERVED-rischi-geopolitici.md` (riservato, access-controlled).
+[^12]: **Boundary conditions B1+B2** dichiarate in briefing operativo di progetto (project root) più `riferimenti/visione-10-anni.md` più `riferimenti/RESERVED-rischi-geopolitici.md` (riservato, access-controlled).
 
 [^13]: Build script `/studio-di-fattibilita/allegati/A1-RTM/build_rtm.py`, riproducibilità del file `RTM-v1.0.xlsx` e CSV via `python3 build_rtm.py`.

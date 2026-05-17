@@ -14,9 +14,9 @@
 ```
 HALE/
 ├── studio-di-fattibilita/
-│   ├── cap-00..11.md (Volume 1)
-│   ├── allegati/A1..A13 (Volume 2)
-│   └── volume-3-riferimenti/R1..R5 (Volume 3)
+│ ├── cap-00..11.md (Volume 1)
+│ ├── allegati/A1..A13 (Volume 2)
+│ └── volume-3-riferimenti/R1..R5 (Volume 3)
 ├── fonti/ (30 file MD + 26 PDF/DOCX originali, fonti normative e dati)
 └── riferimenti/ (audit, visione, ricerche)
 ```
@@ -51,19 +51,19 @@ Tredici allegati tecnici accompagnano il Volume 1 con i dati operativi: RTM, Ris
 
 | All. | Titolo | Path | Output | Status |
 |---|---|---|---|---|
-| **A.1** | Requirements Traceability Matrix v1.0 | [`allegati/A1-RTM/`](../allegati/A1-RTM/) | 4 file (.md + .xlsx 14 sheet + .csv + .py); 279 record | OK |
-| **A.2** | Risk Register consolidato v1.0 | [`allegati/A2-Risk-Register/`](../allegati/A2-Risk-Register/) | 4 file (.md + .xlsx 22 sheet + .csv + .py); 116 rischi | OK |
-| **A.3** | DOCFAP, Trade Studies | [`allegati/A3-Trade-Studies/`](../allegati/A3-Trade-Studies/) | 1 .md | OK |
-| **A.4** | Interface Control Document v1.0 | [`allegati/A4-ICD/`](../allegati/A4-ICD/) | 3 file (.md + .xlsx 13 sheet + .py); 59 interfacce | OK |
-| **A.5** | Verification & Validation Plan v1.0 | [`allegati/A5-VV-Plan/`](../allegati/A5-VV-Plan/) | 3 file (.md + .xlsx 7 sheet + .py); 71 SyR | OK |
+| **A.1** | Requirements Traceability Matrix v1.0 | [`allegati/A1-RTM/`](../allegati/A1-RTM/) | 4 file (.md +.xlsx 14 sheet +.csv +.py); 279 record | OK |
+| **A.2** | Risk Register consolidato v1.0 | [`allegati/A2-Risk-Register/`](../allegati/A2-Risk-Register/) | 4 file (.md +.xlsx 22 sheet +.csv +.py); 116 rischi | OK |
+| **A.3** | DOCFAP, Trade Studies | [`allegati/A3-Trade-Studies/`](../allegati/A3-Trade-Studies/) | 1.md | OK |
+| **A.4** | Interface Control Document v1.0 | [`allegati/A4-ICD/`](../allegati/A4-ICD/) | 3 file (.md +.xlsx 13 sheet +.py); 59 interfacce | OK |
+| **A.5** | Verification & Validation Plan v1.0 | [`allegati/A5-VV-Plan/`](../allegati/A5-VV-Plan/) | 3 file (.md +.xlsx 7 sheet +.py); 71 SyR | OK |
 | **A.6** | Schemi CAD del concept | [`allegati/A6-CAD/`](../allegati/A6-CAD/) | 1 README (placeholder; CAD binari in `/cad/`) | OK |
 | **A.7** | Modelli di calcolo (3 modelli) | [`allegati/A7-Link-Budget/`](../allegati/A7-Link-Budget/) + [`energy-balance/`](../allegati/energy-balance/) + [`financial-model/`](../allegati/financial-model/) | (a) Link Budget Python + xlsx 11 sheet + report + 4 PNG; (b) Energy Balance Python + xlsx + CSV 365gg + 4 PNG + report; (c) Financial Model xlsx 10 sheet + Python | OK |
-| **A.8** | Bilanci di Massa Preliminari | [`allegati/A8-Bilanci-Massa/`](../allegati/A8-Bilanci-Massa/) | 1 .md | OK |
-| **A.9** | Computo Metrico Estimativo | [`allegati/A9-Computo-Metrico/`](../allegati/A9-Computo-Metrico/) | 1 .md | OK |
-| **A.10** | Piano di Manutenzione Preliminare | [`allegati/A10-Piano-Manutenzione/`](../allegati/A10-Piano-Manutenzione/) | 1 .md | OK |
-| **A.11** | PSC + SORA Safety Case Preliminary | [`allegati/A11-Safety-Case-SORA/`](../allegati/A11-Safety-Case-SORA/) | 1 .md | OK |
-| **A.12** | Relazione VIA Preliminare | [`allegati/A12-VIA-preliminare/`](../allegati/A12-VIA-preliminare/) | 1 .md | OK |
-| **A.13** | Documentazione Fotografica | [`allegati/A13-Documentazione-Fotografica/`](../allegati/A13-Documentazione-Fotografica/) | 1 .md (indice; foto da acquisire) | OK |
+| **A.8** | Bilanci di Massa Preliminari | [`allegati/A8-Bilanci-Massa/`](../allegati/A8-Bilanci-Massa/) | 1.md | OK |
+| **A.9** | Computo Metrico Estimativo | [`allegati/A9-Computo-Metrico/`](../allegati/A9-Computo-Metrico/) | 1.md | OK |
+| **A.10** | Piano di Manutenzione Preliminare | [`allegati/A10-Piano-Manutenzione/`](../allegati/A10-Piano-Manutenzione/) | 1.md | OK |
+| **A.11** | PSC + SORA Safety Case Preliminary | [`allegati/A11-Safety-Case-SORA/`](../allegati/A11-Safety-Case-SORA/) | 1.md | OK |
+| **A.12** | Relazione VIA Preliminare | [`allegati/A12-VIA-preliminare/`](../allegati/A12-VIA-preliminare/) | 1.md | OK |
+| **A.13** | Documentazione Fotografica | [`allegati/A13-Documentazione-Fotografica/`](../allegati/A13-Documentazione-Fotografica/) | 1.md (indice; foto da acquisire) | OK |
 | **(extra)** | Vendor RFQ | [`allegati/vendor-rfq/`](../allegati/vendor-rfq/) | 4 file (.md template + cover letter + analysis + CSV) | OK |
 
 ---
@@ -85,15 +85,15 @@ Il terzo volume documenta le fonti su cinque assi: normativo, tecnico, mercato-c
 
 ## DOCUMENTI DI AUDIT E DEBITO
 
-A corredo del corpo principale, lo Studio ospita gli atti dei quattro audit avversariali condotti (Red Team, Competitor, Regulatory, Quality consolidato), un addendum di Falsifying Observations, l'audit di rigore epistemico con i Debiti di Rigore, la visione decennale e il dossier riservato sui rischi geopolitici.
+A corredo del corpo principale, lo Studio ospita gli atti dei quattro cicli di review critica indipendente, un addendum di Falsifying Observations, l'audit di rigore epistemico con i Debiti di Rigore, la visione decennale e il dossier riservato sui rischi geopolitici.
 
 | Doc | Path | Contenuto |
 |---|---|---|
-| Audit Red Team Volume 1 | [`AUDIT-REDTEAM-VOLUME-1.md`](../AUDIT-REDTEAM-VOLUME-1.md) | 70+ critiche per capitolo |
-| Audit Competitor | [`AUDIT-COMPETITOR-VOLUME-1.md`](../AUDIT-COMPETITOR-VOLUME-1.md) | Wargame scenari + survivability |
-| Audit Regulatory | [`AUDIT-REGULATORY-VOLUME-1.md`](../AUDIT-REGULATORY-VOLUME-1.md) | 12 scenari blocco regolatorio |
-| Audit Quality consolidato | [`AUDIT-QUALITY-VOLUME-1.md`](../AUDIT-QUALITY-VOLUME-1.md) | Sintesi 3 audit + 10 action items |
-| Falsifying Obs addendum | [`FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md`](../FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md) | 10 FO mancanti aggiunte |
+| review critica Volume 1 | [la review critica interna](../review critica interna) | 70+ critiche per capitolo |
+| Audit Competitor | [l'analisi competitor interna](../analisi competitor interna) | Wargame scenari + survivability |
+| Audit Regulatory | [la review regolatoria interna](../review regolatoria interna) | 12 scenari blocco regolatorio |
+| Audit Quality consolidato | [l'audit qualita interno](../audit qualita interno) | Sintesi 3 audit + 10 action items |
+| Falsifying Obs addendum | [addendum falsifying observations](../addendum falsifying observations) | 10 FO mancanti aggiunte |
 | Audit rigore epistemico | [`/riferimenti/audit-rigore-epistemico.md`](../../riferimenti/audit-rigore-epistemico.md) | 124 claim auditati + 15 DR |
 | DR research closure M+3 | [`/riferimenti/DR-research-closure-M3.md`](../../riferimenti/DR-research-closure-M3.md) | 9 DR processati |
 | Visione strategica 10 anni | [`/riferimenti/visione-10-anni.md`](../../riferimenti/visione-10-anni.md) | 5 fasi + capital intensity scenarios |
@@ -101,17 +101,10 @@ A corredo del corpo principale, lo Studio ospita gli atti dei quattro audit avve
 
 ---
 
-## FRAMEWORK OPERATIVO (`.claude/`)
+## METODOLOGIE INTERNE DI LAVORO
 
-Il framework operativo sostiene la stesura del documento attraverso 17 agenti di dominio e 7 skill operative, catalogati in `.claude/README.md` insieme ai workflow pattern di riferimento.
+Lo Studio è stato sviluppato applicando un framework metodologico interno che integra consulenze specialistiche per dominio (aerospaziale, regolatorio, finanziario, di mercato, ambientale) e metodologie operative consolidate (feasibility framework PFTE, RTM, risk register, trade study DOCFAP, link budget, gate review checklist, rigore epistemico). Le metodologie sono coerenti con NASA SE Handbook Rev 2 e con la prassi italiana di art. 41 D.Lgs. 36/2023.
 
-| Componente | Path | Contenuto |
-|---|---|---|
-| Agenti esperti | `.claude/agents/` | 17 esperti di dominio (aerospace, regolatorio, finanziario, etc.) |
-| Skill operative | `.claude/skills/` | 7 skill (feasibility framework, RTM, risk, trade study, link budget, gate review, epistemic rigor) |
-| README | `.claude/README.md` | Catalogo agenti + skill + workflow patterns |
-
----
 
 ## FONTI ESTERNE SCARICATE
 
@@ -126,7 +119,7 @@ Le fonti esterne risiedono in `/fonti/` (root del repo): 26 documenti originali 
 | **Capitoli Vol. 1** | 11/11 (100%) |
 | **Allegati Vol. 2** | 13/13 (100%) + extra |
 | **Sezioni Vol. 3** | 5/5 (100%) |
-| **Audit avversariali** | 4 (RedTeam + Competitor + Regulatory + Quality) |
+| **Review critiche indipendenti** | 4 |
 | **DR chiusi** | 9/15 (4 OK + 4 parz + 1 aperto + 6 esterni) |
 | **Falsifying observations** | ~50+ totali distribuite |
 | **Citazioni autoritative** | ~270 totali (Vol. 3) |

@@ -4,14 +4,14 @@
 > **Firmamento Technologies S.r.l.**, Progetto HALE, Studio di Fattibilità Volume 2, Allegato Vendor Selection
 > **Riferimento DR:** DR-003 (parziale chiusura, quotation reale da RFQ formale)
 > **Riferimento Studio:** Cap. 6 §6.3.1 TS-PLATFORM-6A più Cap. 8 §8.3.1, §8.4.1
-> **Skill applicate:** `vtol-uas-specialist` più `trade-study-analysis` più `epistemic-rigor` più `competitor-intelligence`
+> **Metodologie applicate:** specialistica VTOL UAS, metodologia trade study, rigore epistemico, analisi competitor
 > **Versione:** 1.0, bozza M+3
 > **Data:** [DD/MM/YYYY]
 > **Owner analisi:** Procurement Manager più Lead Systems Engineer Firmamento
 
 ---
 
-## CAVEAT EPISTEMICO PRIORITARIO (epistemic-rigor Regola 1)
+## CAVEAT EPISTEMICO PRIORITARIO (rigore epistemico Regola 1)
 
 > **Le cifre contenute in questo documento sono STIME basate su benchmark pubblici disponibili al M+3 (maggio 2026).**
 > Confidence aggregata: **low-medium** (range ± 50% sulle voci più incerte).
@@ -47,7 +47,7 @@ Switch automatico Plan A → Plan B se sanzioni o restrizioni export US-CN blocc
 
 > **CONFIDENCE: low-medium**. Il range resta ampio per riflettere l'incertezza intrinseca su quotation non ricevute. Le quotation reali possono divergere ± 50% da queste stime.
 
-### 1.3 Falsifying observations chiave (epistemic-rigor Regola 5)
+### 1.3 Falsifying observations chiave (rigore epistemico Regola 5)
 
 - **FO-1**: quotation JOUAV reale > 50% sopra range stima (es. > €1.2M CapEx) attiva **re-baseline** scope MVP: eliminare payload telecom Y1, ridurre GS mobile, considerare Tekever.
 - **FO-2**: quotation JOUAV reale < 50% sotto range stima (es. < €290k CapEx) attiva **scope expansion**: aggiungere LiDAR più multispettrale Y1.
@@ -62,7 +62,7 @@ Switch automatico Plan A → Plan B se sanzioni o restrizioni export US-CN blocc
 | **M+4** | Invio RFQ a JOUAV (via reseller EU) + Tekever + (opt.) Quantum | 3 RFQ emesse |
 | **M+4 → M+5** | Round chiarimenti vendor (15-30 gg) | Q&A documentate |
 | **M+6** | Ricezione quotation (45 gg da emissione) | 2-3 quotation ricevute |
-| **M+6 → M+7** | Valutazione tecnica + commercial scoring (skill `trade-study-analysis`) | Matrice decisionale finale |
+| **M+6 → M+7** | Valutazione tecnica + commercial scoring (metodologia di trade study) | Matrice decisionale finale |
 | **M+7 → M+8** | Negoziazione contratto con vendor finalist | Term sheet condivisi |
 | **M+8 → M+9** | Drafting contratto + Golden Power notifica (se vendor CN) | Bozza contratto |
 | **M+9 → M+10** | Esito Golden Power (45 gg legali) | Risposta governo |
@@ -379,7 +379,7 @@ JOUAV è il vendor unico: single point of failure su un singolo produttore CN.
 
 ## 6. Matrice Decisionale Pesata (Trade Study)
 
-Riferimento: skill `trade-study-analysis` più matrice Cap. 6 §6.3.1.
+Riferimento: metodologia di trade study più matrice Cap. 6 §6.3.1.
 
 ### 6.1 Pesi criteri (allineati Cap. 6 §6.3.1)
 
@@ -434,7 +434,7 @@ Riferimento: skill `trade-study-analysis` più matrice Cap. 6 §6.3.1.
 
 ---
 
-## 7. Caveat Onesto e Falsifying Observations (Epistemic-Rigor)
+## 7. Caveat Onesto e Falsifying Observations (Rigore Epistemico)
 
 ### 7.1 Caveat sulle stime
 
@@ -482,7 +482,7 @@ Le stime non includono: sconti volume eventuali (acquisto multi-piattaforma Y2-Y
 | W3 | Invio RFQ a JOUAV (via reseller EU) + Tekever + Quantum F90+ (opzionale) | 3 RFQ inviati via PEC + ack ricevuto | Procurement Manager |
 | W3-5 | Periodo domande chiarimenti vendor (15 gg) | Q&A documentate, response Firmamento | Lead Systems Engineer |
 | W6-9 | Vendor preparazione quotation (45 gg da emissione RFQ) | Quotation ricevute | Vendor |
-| W10-11 | Valutazione tecnica + commercial scoring (skill `trade-study-analysis`) | Matrice valutazione + ranking | Procurement + Systems + CFO |
+| W10-11 | Valutazione tecnica + commercial scoring (metodologia di trade study) | Matrice valutazione + ranking | Procurement + Systems + CFO |
 | W12-13 | Round chiarimenti tecnici post-quotation (BAFO, Best And Final Offer) | Quotation aggiornate | Vendor + Procurement |
 | W14-16 | Negoziazione contratto con vendor finalist | Term sheet condiviso | Procurement + Legal + CFO |
 | W17 (eventuale, vendor CN) | Golden Power pre-screening informale DPSCS | Pre-approval informale | Legal + AD |
@@ -519,7 +519,7 @@ Composizione consigliata per la decisione finale vendor:
 
 - Studio di Fattibilità Vol. 1 Cap. 6 §6.1.1, §6.3.1 TS-PLATFORM-6A: `/home/user/HALE/studio-di-fattibilita/cap-06-analisi-tecnica.md`
 - Studio di Fattibilità Vol. 1 Cap. 8 §8.3.1, §8.4.1 CapEx breakdown: `/home/user/HALE/studio-di-fattibilita/cap-08-economico-finanziario.md`
-- VTOL UAS Specialist agent: `/home/user/HALE/.claude/agents/vtol-uas-specialist.md`
+- VTOL UAS Specialist agent: `/home/user/HALEteam specialistico interno`
 - RESERVED RSK-GEO-003 (supply chain non-EU): `/home/user/HALE/riferimenti/RESERVED-rischi-geopolitici.md` §RSK-GEO-003
 - RFQ Template ufficiale: `RFQ-TEMPLATE-VTOL-FIRMAMENTO.md` (questa stessa directory)
 - RFQ Cover Letter: `RFQ-cover-letter-template.md` (questa stessa directory)
@@ -553,13 +553,13 @@ Composizione consigliata per la decisione finale vendor:
 - US drone tariffs 2025-2026 (Section 301 più 122): https://uavcoach.com/drone-tariffs/
 - MarketsAndMarkets Fixed-wing VTOL UAV Market Report 2024-2030: https://www.marketsandmarkets.com/Market-Reports/fixed-wing-vtol-uav-market-173456250.html
 
-### 9.4 Skill applicate
+### 9.4 Metodologie applicate
 
-- `vtol-uas-specialist` (database piattaforme più pricing benchmark): `.claude/agents/vtol-uas-specialist.md`
-- `trade-study-analysis` (matrice decisionale ponderata): `.claude/skills/`
-- `epistemic-rigor` (caveat più falsifying observations più confidence calibration): `.claude/skills/`
-- `competitor-intelligence` (analisi vendor più reference customers): `.claude/skills/`
-- `regulatory-adversary` (compliance EU/IT più Golden Power): `.claude/skills/`
+- Team specialistico VTOL UAS (database piattaforme + pricing benchmark)
+- `metodologia trade study` (matrice decisionale ponderata): metodologie interne
+- rigore epistemico (caveat più falsifying observations più confidence calibration): metodologie interne
+- analisi competitor (analisi vendor più reference customers): metodologie interne
+- review regolatoria (compliance EU/IT più Golden Power): metodologie interne
 
 ---
 

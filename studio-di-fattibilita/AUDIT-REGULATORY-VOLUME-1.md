@@ -1,6 +1,6 @@
-# Audit Regulatory Adversary. Volume 1
+# review regolatoria. Volume 1
 
-> **Agente:** `regulatory-adversary` (impersona ENAC / EASA / AGCOM / Garante / ENAV / MIMIT / DG CNECT/DEFIS / Presidenza Consiglio Golden Power)
+> **Agente:** `review regolatoria indipendente` (impersona ENAC / EASA / AGCOM / Garante / ENAV / MIMIT / DG CNECT/DEFIS / Presidenza Consiglio Golden Power)
 > **Target:** Volume 1 Studio di Fattibilità, capitoli 4, 5, 6, 9, 10
 > **Versione:** M+3 (bozza), audit prodotto autonomamente in 30 min
 > **Postura:** "ecco esattamente come ti blocchiamo", niente "se", niente offerte di soluzione consulenziale, solo critica
@@ -44,19 +44,19 @@ Dodici scenari di blocco, ognuno con riferimento normativo che lo renderebbe leg
 Se andasse male (non catastrofe, solo **prassi italiana normale** + lobbying incumbent + sovraccarico autorità):
 
 ```
-M+3      M+6      M+9      M+12     M+18     M+24     M+36     M+48
-│        │        │        │        │        │        │        │
-│ Pre-app│ Stop   │ Risp.   │ SORA   │ Ric.    │ Auth   │ DPIA   │ ENAV
-│ ENAC   │ U-Sp   │ ENAC:  │ subm   │ integr.│ Spec.  │ chiusa │ NoGo
-│ rinvi- │ consul-│ "SAIL  │ ritard.│ #1+#2  │ SAIL II│ rivisi-│ HAPS
-│ ata    │ taz.   │ V → no"│ M+15   │ ENAC   │ VLOS+  │ ta hw  │ FL400
-│        │        │        │        │        │ EVLOS  │ +eng   │ +
-│        │        │        │        │        │ subset │ retr.  │ Spec.
-│        │        │        │        │        │ ridot- │        │ Cond.
-│        │        │        │        │        │ to     │        │ EASA
-│        │        │        │        │        │        │        │ rige-
-│        │        │        │        │        │        │        │ ttata
-│        │        │        │        │        │        │        │ (TRL)
+M+3 M+6 M+9 M+12 M+18 M+24 M+36 M+48
+│ │ │ │ │ │ │ │
+│ Pre-app│ Stop │ Risp. │ SORA │ Ric. │ Auth │ DPIA │ ENAV
+│ ENAC │ U-Sp │ ENAC: │ subm │ integr.│ Spec. │ chiusa │ NoGo
+│ rinvi- │ consul-│ "SAIL │ ritard.│ #1+#2 │ SAIL II│ rivisi-│ HAPS
+│ ata │ taz. │ V → no"│ M+15 │ ENAC │ VLOS+ │ ta hw │ FL400
+│ │ │ │ │ │ EVLOS │ +eng │ +
+│ │ │ │ │ │ subset │ retr. │ Spec.
+│ │ │ │ │ │ ridot- │ │ Cond.
+│ │ │ │ │ │ to │ │ EASA
+│ │ │ │ │ │ │ │ rige-
+│ │ │ │ │ │ │ │ ttata
+│ │ │ │ │ │ │ │ (TRL)
 ```
 
 **Slippage atteso** rispetto al Cap. 9 (cronoprogramma):
@@ -190,7 +190,7 @@ Il §5.7.1 cita NIS2 (D.Lgs. 138/2024) ma:
 Il Cap. 5 menziona ENAV come stakeholder engagement (§5.11.3) ma:
 
 - **HAPS perennial a FL400+ attraversa**: spazio C controllato (FL195-FL245), classe A FL245+ (transito civile/militare), zone temporanee Difesa. Ogni *ascesa e discesa* dura 6-12 ore in volo lento, con conflitto continuativo con traffico CAT controllato (Linate, Genova, Nizza routing).
-- **ENAV ha pubblicato 0 procedure** per HAPS perennial. Non c'è SID/STAR, non c'è MOC, non c'è OAT/GAT framework. Lo Studio non ha **alcun documento di engagement** con ENAV (Cap. 5.11.3 dichiara "Semestrale, U-Space + spazio aereo, owner avionics-gnc-engineer", ma nessun documento prodotto né timeline).
+- **ENAV ha pubblicato 0 procedure** per HAPS perennial. Non c'è SID/STAR, non c'è MOC, non c'è OAT/GAT framework. Lo Studio non ha **alcun documento di engagement** con ENAV (Cap. 5.11.3 dichiara "Semestrale, U-Space + spazio aereo, owner team avionica e GNC", ma nessun documento prodotto né timeline).
 - **ENAV è SpA con azionariato MEF**. Non ha incentivo commerciale a fare R&D regolatorio per un newcomer. Risorse umane sono assorbite da Single European Sky 2+, U-Space, AAM, Drone Strategy 2.0 EU.
 - **Precedente Zephyr**: i flight test stratosferici Airbus Zephyr in Italia non si sono fatti, sono stati spostati in Arizona (Yuma) e Australia (Wyndham) **proprio per assenza framework EU FL400+**.
 
@@ -400,9 +400,9 @@ Lista numerata di azioni che, **se non eseguite entro M+9**, rendono il Gate G3 
 Cose che il Cap. 5 ha **completamente omesso** e che possono diventare bloccanti.
 
 1. **AI Act (Reg. UE 2024/1689)**: operativo agosto 2026 / agosto 2027 / agosto 2028. Citato solo "AI Act compliance" in §5.6.2 ma:
-   - art. 5 (pratiche vietate) può colpire payload IR + biometric
-   - Annex III (high-risk) classifica gestione infrastrutture critiche + PA-safety: sistemi Firmamento qualificati high-risk
-   - Costo compliance + Notified Body: €100-300k iniziali
+ - art. 5 (pratiche vietate) può colpire payload IR + biometric
+ - Annex III (high-risk) classifica gestione infrastrutture critiche + PA-safety: sistemi Firmamento qualificati high-risk
+ - Costo compliance + Notified Body: €100-300k iniziali
 
 2. **EUSPA (EU Agency for the Space Programme)**: citato 0 volte. EUSPA gestisce IRIS² + Galileo + Copernicus. Per qualunque servizio EO commerciale che si interfacci con Copernicus, serve coordinamento EUSPA. Per HAPS che vuole "complementare a IRIS²" (Boundary B2), engagement EUSPA è critico.
 
@@ -436,9 +436,9 @@ Cose che il Cap. 5 ha **completamente omesso** e che possono diventare bloccanti
 
 ## Note finali
 
-Questo audit è prodotto dall'agente `regulatory-adversary` come **stress-test** del Volume 1. La postura è **deliberatamente avversaria**, non per ostilità al progetto, ma per identificare i blocchi che un regolatore reale (lento, conservativo, terrorizzato dal precedente, sotto-staffato, sensibile a lobbying) **userebbe legittimamente** per dire no o sospendere.
+Questo audit è prodotto dall'agente `review regolatoria indipendente` come **stress-test** del Volume 1. La postura è **deliberatamente avversaria**, non per ostilità al progetto, ma per identificare i blocchi che un regolatore reale (lento, conservativo, terrorizzato dal precedente, sotto-staffato, sensibile a lobbying) **userebbe legittimamente** per dire no o sospendere.
 
-**Convergenza con altri Red Team**: l'audit è coerente con red-team-skeptic (sopravvalutazione confidence), competitor-intelligence (Tier 1 lobby contro newcomer), aviation-regulatory-counsel (anti-padre del SÌ). Le critiche sono **complementari**, non sovrapposte.
+**Convergenza con altri review critica**: l'audit è coerente con review critica indipendente (sopravvalutazione confidence), analisi competitor indipendente (Tier 1 lobby contro newcomer), consulenza legale-regolatoria aviazione (anti-padre del SÌ). Le critiche sono **complementari**, non sovrapposte.
 
 **Raccomandazione operativa al management Firmamento** (unica concessione consulenziale, in deroga alla regola "no soluzioni"):
 

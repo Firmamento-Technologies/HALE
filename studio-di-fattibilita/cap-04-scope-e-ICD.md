@@ -7,8 +7,8 @@
 > **Versione:** bozza M+3 (post-Allineamento Strategico Maggio 2026)
 > **Metodologia:** NASA Systems Engineering Handbook Rev 2 (NASA/SP-2016-6105), §4.3 Logical Decomposition + §6.3 Interface Management
 > **Conformità:** D.Lgs. 36/2023 art. 41 + Allegato I.7 (PFTE), definizione perimetro, scope e quadro delle interfacce
-> **Disciplina epistemica:** applicate Regole 1-7 della skill `epistemic-rigor`
-> **Red Team review:** verifica condotta dall'agente `red-team-skeptic`. Vedi §4.8.
+> **Disciplina metodologica:** applicate le regole di rigore epistemico
+> **Review critica indipendente:** verifica condotta dall'revisione critica indipendente. Vedi §4.8.
 
 ---
 
@@ -92,7 +92,7 @@ I deliverable PFTE non sono fini a se stessi: sono evidenze necessarie al verdet
 
 ### 4.1.4 Decisione Go/No-Go fattibilità (Gate M+10/M+11)
 
-Il gate M+10/M+11 è il gate decisionale principale del PFTE. Si applica la convenzione di esito a tre stati (cf. skill `gate-review-checklist`):
+Il gate M+10/M+11 è il gate decisionale principale del PFTE. Si applica la convenzione di esito a tre stati (cf. metodologia di gate review):
 
 - **GO**: tutti i criteri Cap. 3.2 superano soglia, Studio chiuso, autorizzato passaggio a Fase 1 (Pilota Operativo VTOL M+12-M+24)
 - **HOLD**: ≥ 30% dei criteri non soddisfatti, ma non No-Go: re-review M+13-15 con piano correttivo
@@ -112,7 +112,7 @@ Il gate è multidimensionale (tecnico × regolatorio × economico × business ×
 
 ### 4.1.5 Confini del perimetro: cosa NON è fattibilità
 
-In coerenza con la disciplina di scope creep avoidance raccomandata dalla skill `gate-review-checklist`, dichiaro esplicitamente cosa il PFTE non valida, lasciando questi punti ai gate successivi:
+In coerenza con la disciplina di scope creep avoidance raccomandata dalla metodologia di gate review, dichiaro esplicitamente cosa il PFTE non valida, lasciando questi punti ai gate successivi:
 
 - Costruzione fisica del velivolo HALE full-scale: analisi aerodinamica e modellazione strutturale concettuale SÌ (Cap. 6); fabbricazione e first-flight di prototipo full-scale NO. Deferito a Fase 4 R&D (M+36-M+60+).
 - Operazioni commerciali continuative VTOL post-M+12: il PFTE valida la fattibilità del pilota; le operazioni di servizio retributive con SLA contrattualizzati sono Fase 1 esecutiva (M+12-M+24), non fattibilità.
@@ -143,9 +143,9 @@ Quanto alla convenzione: IN = oggetto formale del PFTE, deliverable previsto; OU
 |---|---|---|---|---|
 | A-01 | Architettura concettuale velivolo 6A VTOL | **IN** | Cap. 6.1 + Trade Study TS-PLATFORM-6A; ConOps (SyR-F-001) | Selezione baseline JOUAV CW-30E o alternative EU; analisi datasheet, integrazione |
 | A-02 | Architettura concettuale velivolo 6B HALE | **IN** | Cap. 6.1 + Trade Study TS-MATERIAL + TS-PROP; SyR-F-005 | Concept high-AR, T-tail, fibra lino sec; modello high-level |
-| A-03 | FMECA + FTA preliminari | **IN** | Cap. 6.6 + skill `risk-register-builder`; Risk Register | Volume 2 Allegato A.2; 16-20 rischi top |
-| A-04 | Trade Study formali (DOCFAP) | **IN** | Cap. 6.3; skill `trade-study-analysis`; OQ-001/003/005/006/007 | TS-PLATFORM, TS-MATERIAL, TS-PROP, TS-AVI, TS-PAYLOAD |
-| A-05 | Modelli di calcolo (energy balance, link budget, polare aerodinamica) | **IN** | Cap. 6.2; skill `link-budget-calculator`; SyR-P-004, -005, -006 | Excel/Python; output grafici sensitivity |
+| A-03 | FMECA + FTA preliminari | **IN** | Cap. 6.6 + metodologia di risk register; Risk Register | Volume 2 Allegato A.2; 16-20 rischi top |
+| A-04 | Trade Study formali (DOCFAP) | **IN** | Cap. 6.3; metodologia di trade study; OQ-001/003/005/006/007 | TS-PLATFORM, TS-MATERIAL, TS-PROP, TS-AVI, TS-PAYLOAD |
+| A-05 | Modelli di calcolo (energy balance, link budget, polare aerodinamica) | **IN** | Cap. 6.2; metodologia di link budget; SyR-P-004, -005, -006 | Excel/Python; output grafici sensitivity |
 | A-06 | Bilanci di massa preliminari | **IN** | Cap. 6.2; SsR-AERO-* | Tabella mass breakdown 6A + 6B |
 | A-07 | Costruzione fisica prototipi | **OUT** | Fuori budget M+0-M+11; deferito Fase 1 (6A) / Fase 4 (6B) | Hardware: nessuno costruito durante PFTE |
 | A-08 | Wind tunnel test fisici (HALE) | **OUT** | Fase 3 R&D (M+36+); richiede facility specialistica | CFD preliminary OK; wind tunnel NO |
@@ -181,12 +181,12 @@ Quanto alla convenzione: IN = oggetto formale del PFTE, deliverable previsto; OU
 | # | Voce | In/Out/Parz | Razionale | Note di esecuzione |
 |---|---|---|---|---|
 | D-01 | Business Model Canvas (BMC) + Value Proposition Canvas (VPC) | **IN** | Cap. 7 (esistente) | Vol. 2 Allegato C |
-| D-02 | Analisi mercato TAM-IT + competitor scan | **IN** | Cap. 7.3-7.4; skill `competitor-intelligence` | Confidence low-medium dichiarato |
+| D-02 | Analisi mercato TAM-IT + competitor scan | **IN** | Cap. 7.3-7.4; metodologia analisi competitor | Confidence low-medium dichiarato |
 | D-03 | Quadro Economico ex art. 41 + Computo Metrico Estimativo | **IN** | Cap. 8 + Vol. 2 Allegato F; Allegato I.7 D.Lgs. 36/2023 | Granularità WBS livello 3-4; ±25% accuracy |
 | D-04 | Piano finanziario NPV/IRR/payback/sensitivity worst-base-best | **IN** | Cap. 8.6-8.8; SyR-Cost-001/002/003 | WACC 12% baseline; sensitivity ±30% |
 | D-05 | Contratti firmati con anchor customer pluriennali | **OUT** | Fase 1 M+13-M+18 | LoI Regione Liguria sì (DEL-PFTE-11) |
 | D-06 | Fundraising round equity / venture | **OUT** | Fase 1+; non scope PFTE | Pitch deck preparatorio OK |
-| D-07 | Bandi PNRR/Horizon/EDF, application formale | **PARZIALE** | Cap. 8.5 + skill `snai-funding-territorial-expert` | Scouting opportunità + application Coopfond SÌ; altri bandi mappati ma application NO |
+| D-07 | Bandi PNRR/Horizon/EDF, application formale | **PARZIALE** | Cap. 8.5 + metodologia expertise SNAI e territoriale | Scouting opportunità + application Coopfond SÌ; altri bandi mappati ma application NO |
 
 #### Dominio E. Territorial & Stakeholder Engagement
 
@@ -207,7 +207,7 @@ Quanto alla convenzione: IN = oggetto formale del PFTE, deliverable previsto; OU
 | F-01 | Data governance + cloud architecture (GDPR + NIS2) | **IN** | SsR-GS-002 + Cap. 5.6 + 5.7 | Architettura sì; deployment full NO |
 | F-02 | Sustainability assessment + ESG narrative | **IN** | SyR-E-001/002/003; Cap. 7.7 (BMC sostenibilità) | LCA preliminare OK |
 | F-03 | Valutazione Impatto Ambientale (VIA) preliminare | **PARZIALE** | Vol. 2 Allegato I; SyR-E-* | Screening preliminare SÌ; VIA formale (se richiesta) Fase 1 |
-| F-04 | Risk Register + Assumption Log + Dependency Log | **IN** | Cap. 6.5 + Vol. 2 Allegato A.2; skill `risk-register-builder` | DEL-PFTE-13; 16-20 rischi |
+| F-04 | Risk Register + Assumption Log + Dependency Log | **IN** | Cap. 6.5 + Vol. 2 Allegato A.2; metodologia di risk register | DEL-PFTE-13; 16-20 rischi |
 | F-05 | Governance partnership Firmamento + cooperative + PA | **IN** | Cap. 2 + Cap. 7.7 + B1 boundary | Modello RTI vs JV vs Contratto di Rete (Trade Study TS-GOV) |
 | F-06 | Audit terzo indipendente (RINA / DNV) dello Studio | **OUT** | Raccomandato post-M+11 per "investment grade"; non in budget PFTE | Lista auditor scoutata OK |
 
@@ -215,7 +215,7 @@ Quanto alla convenzione: IN = oggetto formale del PFTE, deliverable previsto; OU
 
 Alcune voci risultano PARZIALE anziché IN o OUT per ragioni precise. PARZIALE corrisponde a concept / preliminare / desk-only anziché esecutivo. Esempio B-02 (SOP draft): produciamo le bozze, ma le SOP finalizzate richiedono il vero ambiente operativo Fase 1. PARZIALE indica anche analisi SÌ, validazione esterna NO. Esempio C-06 (NIS2): produciamo threat model + checklist; il penetration test esecutivo richiede ambiente di staging non disponibile a M+10. Infine PARZIALE rende il caso in cui parte del lavoro ricade nel PFTE, parte nei gate successivi. Esempio C-08 (AS/EN 9100): definiamo la roadmap di certificazione (in scope), ma il certificato si ottiene in Fase 1-2 (out of scope).
 
-Sul piano delle esclusioni siamo deliberatamente restrittivi per tre ragioni. Anzitutto rispetto del budget e del tempo M+11: un PFTE con budget di circa €150-300k e 11 mesi non può ragionevolmente coprire più dello scope dichiarato. Sovrastimare lo scope equivale a un fallimento gate sicuro. In secondo luogo, disciplina contrattuale: tutto ciò che è OUT deve essere esplicitamente accettato dagli stakeholder PRIMA del Gate M+3 (vedi Criterion 2 di §4.5.1), per evitare richieste di "extra" non finanziate. Infine rispetto del rischio aerospace: la base rate di programmi aerospace che falliscono per scope creep è alta (vedi `epistemic-rigor` Regola 7; storia di HALE solari falliti: NASA Helios, Solara/Titan, Aalto HAWK30). Un PFTE che cerca di fare troppo è già un programma in crisi.
+Sul piano delle esclusioni siamo deliberatamente restrittivi per tre ragioni. Anzitutto rispetto del budget e del tempo M+11: un PFTE con budget di circa €150-300k e 11 mesi non può ragionevolmente coprire più dello scope dichiarato. Sovrastimare lo scope equivale a un fallimento gate sicuro. In secondo luogo, disciplina contrattuale: tutto ciò che è OUT deve essere esplicitamente accettato dagli stakeholder PRIMA del Gate M+3 (vedi Criterion 2 di §4.5.1), per evitare richieste di "extra" non finanziate. Infine rispetto del rischio aerospace: la base rate di programmi aerospace che falliscono per scope creep è alta (vedi rigore epistemico Regola 7; storia di HALE solari falliti: NASA Helios, Solara/Titan, Aalto HAWK30). Un PFTE che cerca di fare troppo è già un programma in crisi.
 
 > **Falsifying observation §4.2**: se durante l'esecuzione del PFTE uno stakeholder (ad esempio Regione Liguria) richiede ufficialmente l'estensione di una voce da OUT a IN ("vogliamo che il PFTE includa il volo dimostrativo a Pentema entro M+9"), il **Change Control Board** (cf. §4.5.1 Criterion 2) viene convocato e valuta formalmente l'impatto su budget/tempo/risk. Modificare implicitamente lo scope equivale a fallimento gate al M+10. **Confidence: high** (lezioni apprese da progetti aerospace simili).
 
@@ -230,21 +230,21 @@ La tabella elenca i 17 deliverable documentali del PFTE, in coerenza con i conte
 | ID | Deliverable | Contenuto minimo | Formato | Owner principale | Timing (M+) | Evidenza accettazione | Mapping art. 41 / Allegato I.7 |
 |---|---|---|---|---|---|---|---|
 | **DEL-PFTE-01** | Studio di Fattibilità completo (Volume 1, 11 capitoli) | Cap. 0 Sintesi Esecutiva + Cap. 1-11 + glossario + bibliografia, 150-200 pp | PDF + Markdown nel repo | Firmamento Tech (lead editor) + Coopfond (sponsor finanziatore) | M+10 draft / **M+11 final** | Firma DG Coopfond + controfirma Legacoop + protocollo | PFTE, testo del progetto di fattibilità |
-| **DEL-PFTE-02** | Quadro Esigenziale formalizzato + Requisiti tracciati (Cap. 1 + Cap. 3 + RTM completa) | StNeed (17) + SyR (42) + SsR (~80) + RTM Excel zero-orphan | Excel RTM (.xlsx) + PDF | aerospace-systems-engineer (Firmamento) + Coopfond validation | M+3 draft / **M+8 final** | RTM audit M+8 zero-gap | Quadro Esigenziale (Allegato I.7) + tracciabilità NASA |
-| **DEL-PFTE-03** | DOCFAP (Documento di Fattibilità delle Alternative Progettuali) = Trade Study Report | A0-A4 alternative + matrice multi-criterio Pugh / AHP + DOCFAP narrativo + raccomandazione architettura | Word/PDF + Excel scoring | trade-study-analysis skill + aerospace-systems-engineer | M+6 interim / **M+8 final** | Approvazione workshop stakeholder M+8 | DOCFAP (Allegato I.7), sintesi DOCFAP italiano |
+| **DEL-PFTE-02** | Quadro Esigenziale formalizzato + Requisiti tracciati (Cap. 1 + Cap. 3 + RTM completa) | StNeed (17) + SyR (42) + SsR (~80) + RTM Excel zero-orphan | Excel RTM (.xlsx) + PDF | team ingegneria di sistema (Firmamento) + Coopfond validation | M+3 draft / **M+8 final** | RTM audit M+8 zero-gap | Quadro Esigenziale (Allegato I.7) + tracciabilità NASA |
+| **DEL-PFTE-03** | DOCFAP (Documento di Fattibilità delle Alternative Progettuali) = Trade Study Report | A0-A4 alternative + matrice multi-criterio Pugh / AHP + DOCFAP narrativo + raccomandazione architettura | Word/PDF + Excel scoring | metodologia trade study metodologia + team ingegneria di sistema | M+6 interim / **M+8 final** | Approvazione workshop stakeholder M+8 | DOCFAP (Allegato I.7), sintesi DOCFAP italiano |
 | **DEL-PFTE-04** | ConOps v1.0 → v2.0 (Concept of Operations) | Missione ordinaria + scenario emergenza + procedure SOP draft + flowchart + storyboard | Word/PDF + Visio | CONOPS Lead (Firmamento) + Protezione Civile liaison | M+3 v1.0 / **M+8 v2.0** | Firma PC Liguria + tabletop M+7 | DIP, Documento di Indirizzo alla Progettazione |
-| **DEL-PFTE-05** | Analisi Tecnica di Fattibilità (Cap. 6 completo) | 6A VTOL: 10 aree critica + semafori; 6B HALE: gap TRL + showstopper + benchmark HAPS competitor | PDF tecnico 60-80 pp + Excel FMEA + schemi CAD | aerospace-systems-engineer + propulsion-energy-engineer + avionics-gnc-engineer | M+6 interim / **M+10 final** | Review tecnico Coopfond + Regione M+10 | Relazione tecnica (Allegato I.7) |
-| **DEL-PFTE-06** | Modelli di calcolo (energy balance, link budget, polare, propagazione RF) | Modelli Excel/Python: (a) energy balance 6B inverno/estate, (b) link budget service + feeder + C2, (c) propagazione RF DTM Pentema, (d) autonomia 6A vs wind/payload | Excel master + script Python (.py) + report PDF | propulsion-energy-engineer + telecom-payload-expert + skill `link-budget-calculator` | M+3 → M+10 | Validazione cross-check da consulente esterno M+10 | Allegati tecnici (Allegato I.7) |
+| **DEL-PFTE-05** | Analisi Tecnica di Fattibilità (Cap. 6 completo) | 6A VTOL: 10 aree critica + semafori; 6B HALE: gap TRL + showstopper + benchmark HAPS competitor | PDF tecnico 60-80 pp + Excel FMEA + schemi CAD | team ingegneria di sistema + team propulsione e energia + team avionica e GNC | M+6 interim / **M+10 final** | Review tecnico Coopfond + Regione M+10 | Relazione tecnica (Allegato I.7) |
+| **DEL-PFTE-06** | Modelli di calcolo (energy balance, link budget, polare, propagazione RF) | Modelli Excel/Python: (a) energy balance 6B inverno/estate, (b) link budget service + feeder + C2, (c) propagazione RF DTM Pentema, (d) autonomia 6A vs wind/payload | Excel master + script Python (.py) + report PDF | team propulsione e energia + telecom-payload-expert + metodologia di link budget | M+3 → M+10 | Validazione cross-check da consulente esterno M+10 | Allegati tecnici (Allegato I.7) |
 | **DEL-PFTE-07** | V&V Plan (Verification & Validation Plan) preliminare | Matrice attività V&V 6A (12) + 6B (12), metodi I/A/D/T, gate criticality, evidence plan | Excel matrice + Word/PDF | V&V engineer (Firmamento) | M+2 draft / **M+8 final** | Approvazione review meeting M+5 (interim) + M+8 | Cronoprogramma verifiche (Allegato I.7) |
-| **DEL-PFTE-08** | DPIA (Data Protection Impact Assessment) preliminare GDPR Art. 35 | (a) trattamento + mapping dati personali, (b) rischi privacy, (c) mitigazioni AES-256 + RBAC + retention, (d) DSAR procedure | PDF DPIA 20-30 pp + allegati crittografia | data-privacy-counsel + DPO Firmamento/Regione | M+4 draft / **M+5 final signed** | Firma DPO + audit interno M+5-M+6 | Allegato compliance (Allegato I.7) |
-| **DEL-PFTE-09** | Consultazione AGCOM (Spettro radio) | Richiesta formale lettera M+1-M+2 + risposta AGCOM banda L o ISM + coexistence analysis | Lettere PDF + report tecnico | telecom-ntn-payload-expert + Firmamento + AGCOM liaison Regione | M+1-M+2 richiesta / **M+2-M+4 risposta** | Lettera AGCOM confermativa + fallback ISM analysis | Allegato compliance regolatoria |
-| **DEL-PFTE-10** | Pre-Assessment ENAC (SORA pathway) | PEC/lettera pre-consultazione + worksheet SORA preliminare + risposta ENAC SAIL atteso + lead time | Lettere PDF + Excel SORA worksheet | aviation-regulatory-counsel + Firmamento + Regione liaison ENAC | M+1-M+3 pre-cons / **M+3-M+6 risposta** | Lettera ENAC feedback SAIL pathway | Allegato compliance regolatoria |
-| **DEL-PFTE-11** | Atti Amministrativi (MOA + MOU) | MOA Regione-Comuni-PC-Prefettura + MOU 8/10 cooperative Legacoop | PDF MOA + MOU con firme dirigenti scanned | Coopfond legal + business-model-strategist + Regione affari legali | **M+3-M+6** | Controfirme depositate Regione + ≥80% adesione cooperative | Atti di assenso (Allegato I.7) |
-| **DEL-PFTE-12** | Quadro Economico + Computo Metrico Estimativo + Piano Finanziario (Cap. 8) | Budget WBS 3-4 livelli ±25%, 3 scenari Worst/Base/Best, NPV/IRR/payback, sensitivity, Computo Metrico ground segment | Excel master + WBS Gantt + PDF analisi | financial-cfo-analyst + Firmamento cost estimator | M+4 draft / **M+9 final** | Approvazione Coopfond economia + LoI co-financing | **Quadro Economico** + **Computo Metrico Estimativo** + Piano Economico-Finanziario (Allegato I.7) |
-| **DEL-PFTE-13** | Risk Register + Assumption Log + Dependency Log | 16-20 rischi P×I; 30+ assumptions; 14+ dependencies | Excel master + PDF executive | risk-register-builder skill + aerospace-systems-engineer | M+1 baseline / **M+3/M+6/M+9 update** / M+11 closure | Trend P×I downward + chiusura ≥ 80% top 5 mitigations | Allegato Risk Management |
-| **DEL-PFTE-14** | Cronoprogramma + WBS + Gate Schedule (Cap. 9) | Roadmap Fase 1 VTOL (M+12-M+24) + Fase 2 scale-up (M+24-M+36) + Fase 3 HALE (M+36-M+60), 5+ gate decisionali | Word/PDF + Gantt MS Project (.mpp) | aerospace-systems-engineer + PM Firmamento | M+9 draft / **M+11 final** | Approvazione Steering Committee | Cronoprogramma (Allegato I.7) |
-| **DEL-PFTE-15** | Workshop & Stakeholder Engagement Report | Registri ≥ 5 workshop (kick-off, ConOps, scenario, results, demo debrief), foto, feedback, comunicati | PDF registri + foto + comunicati .docx | Legacoop coordinamento + business-model-strategist | M+2 → M+10, submission **M+10** | Cumulative workshop ≥ 5; partecipazione ≥ 80% | Allegato consultazione preventiva (Allegato I.7) |
-| **DEL-PFTE-16** | Allegati Tecnici (DTM, modelli, benchmark, datasheet) | DTM Liguria 10m + script simulazione + dati PVGIS + benchmark HAPS + datasheet COTS JOUAV/modem/antenne | Archive .zip strutturato | Firmamento data manager + consulenti specializzati | M+3 → **M+8 aggregazione** | Deposito repository Git protetto, accesso stakeholder | Vol. 2 Allegati tecnici |
+| **DEL-PFTE-08** | DPIA (Data Protection Impact Assessment) preliminare GDPR Art. 35 | (a) trattamento + mapping dati personali, (b) rischi privacy, (c) mitigazioni AES-256 + RBAC + retention, (d) DSAR procedure | PDF DPIA 20-30 pp + allegati crittografia | consulenza privacy e protezione dati + DPO Firmamento/Regione | M+4 draft / **M+5 final signed** | Firma DPO + audit interno M+5-M+6 | Allegato compliance (Allegato I.7) |
+| **DEL-PFTE-09** | Consultazione AGCOM (Spettro radio) | Richiesta formale lettera M+1-M+2 + risposta AGCOM banda L o ISM + coexistence analysis | Lettere PDF + report tecnico | team telecom NTN + Firmamento + AGCOM liaison Regione | M+1-M+2 richiesta / **M+2-M+4 risposta** | Lettera AGCOM confermativa + fallback ISM analysis | Allegato compliance regolatoria |
+| **DEL-PFTE-10** | Pre-Assessment ENAC (SORA pathway) | PEC/lettera pre-consultazione + worksheet SORA preliminare + risposta ENAC SAIL atteso + lead time | Lettere PDF + Excel SORA worksheet | consulenza legale-regolatoria aviazione + Firmamento + Regione liaison ENAC | M+1-M+3 pre-cons / **M+3-M+6 risposta** | Lettera ENAC feedback SAIL pathway | Allegato compliance regolatoria |
+| **DEL-PFTE-11** | Atti Amministrativi (MOA + MOU) | MOA Regione-Comuni-PC-Prefettura + MOU 8/10 cooperative Legacoop | PDF MOA + MOU con firme dirigenti scanned | Coopfond legal + team strategia business model + Regione affari legali | **M+3-M+6** | Controfirme depositate Regione + ≥80% adesione cooperative | Atti di assenso (Allegato I.7) |
+| **DEL-PFTE-12** | Quadro Economico + Computo Metrico Estimativo + Piano Finanziario (Cap. 8) | Budget WBS 3-4 livelli ±25%, 3 scenari Worst/Base/Best, NPV/IRR/payback, sensitivity, Computo Metrico ground segment | Excel master + WBS Gantt + PDF analisi | analisi finanziaria CFO + Firmamento cost estimator | M+4 draft / **M+9 final** | Approvazione Coopfond economia + LoI co-financing | **Quadro Economico** + **Computo Metrico Estimativo** + Piano Economico-Finanziario (Allegato I.7) |
+| **DEL-PFTE-13** | Risk Register + Assumption Log + Dependency Log | 16-20 rischi P×I; 30+ assumptions; 14+ dependencies | Excel master + PDF executive | metodologia risk register metodologia + team ingegneria di sistema | M+1 baseline / **M+3/M+6/M+9 update** / M+11 closure | Trend P×I downward + chiusura ≥ 80% top 5 mitigations | Allegato Risk Management |
+| **DEL-PFTE-14** | Cronoprogramma + WBS + Gate Schedule (Cap. 9) | Roadmap Fase 1 VTOL (M+12-M+24) + Fase 2 scale-up (M+24-M+36) + Fase 3 HALE (M+36-M+60), 5+ gate decisionali | Word/PDF + Gantt MS Project (.mpp) | team ingegneria di sistema + PM Firmamento | M+9 draft / **M+11 final** | Approvazione Steering Committee | Cronoprogramma (Allegato I.7) |
+| **DEL-PFTE-15** | Workshop & Stakeholder Engagement Report | Registri ≥ 5 workshop (kick-off, ConOps, scenario, results, demo debrief), foto, feedback, comunicati | PDF registri + foto + comunicati.docx | Legacoop coordinamento + team strategia business model | M+2 → M+10, submission **M+10** | Cumulative workshop ≥ 5; partecipazione ≥ 80% | Allegato consultazione preventiva (Allegato I.7) |
+| **DEL-PFTE-16** | Allegati Tecnici (DTM, modelli, benchmark, datasheet) | DTM Liguria 10m + script simulazione + dati PVGIS + benchmark HAPS + datasheet COTS JOUAV/modem/antenne | Archive.zip strutturato | Firmamento data manager + consulenti specializzati | M+3 → **M+8 aggregazione** | Deposito repository Git protetto, accesso stakeholder | Vol. 2 Allegati tecnici |
 | **DEL-PFTE-17** | Executive Summary + Decision Brief + Slide Deck | Sintesi 5 pp + slide 8-12 + 1-pager Go/No-Go status M+11 | PDF 5 pp + PPTX 12 slide + Word 1-pager | Firmamento DG + Coopfond | M+11 pre-go / **M+11 presentazione** | Presentazione CdA Coopfond + Giunta Regionale; verbale Go decisione | Sintesi non tecnica (Allegato I.7) |
 
 #### Note operative sui deliverable
@@ -331,19 +331,19 @@ L'Interface Control Document (ICD) preliminare rappresenta il primo livello di f
 | **INT-04** | Ground Station (RF Antenna) ↔ Aircraft (RF Antenna) | Antenna ground 12-15 dBi parabolica/Yagi; antenna aircraft 5 dBi omnidir; LOS Pentema, margine ≥ 5 dB | PHY + DAT | FCC Part 15 (ISM 2.4 GHz fallback); MIL-C-39012 (SMA connectors); LMR-400 cable | RF Systems Engineer (consulente RF) | Preliminary |
 | **INT-05** | Ground Station ↔ Backhaul Internet (Mission data upload) | Flight log + ortofoto upload post-mission 25-50 MB; latency < 100 ms; SLA backhaul provider | DAT + CTR | HTTPS REST API + TLS 1.2; SLA ≥ 10 Mbps, uptime 99.5% | Cloud Architect (Firmamento) + Regione TLC Provider liaison | Concept (SLA da negoziare) |
 | **INT-06** | Cloud Data Platform ↔ Cooperative Dashboard (Data access) | Login SPID + RBAC granularità per cooperativa/area; ortofoto download; consent token GDPR Art. 7; audit log CEF | DAT + REG | OAuth 2.0 + SPID + JWT RFC 7519 + GDPR Art. 7 + RFC 3164 CEF logging | DPO/Data Governor (Regione + Firmamento) + Platform Developer | Preliminary |
-| **INT-07** | Modem Airborne ↔ AGCOM Band Allocation | Allocazione frequenza operativa (L-band 1615-1660 MHz primary; ISM 2.4 GHz fallback); EIRP enforcement; coexistence | REG + PHY | AGCOM decreti spettro; ITU-R RR; Direttiva 2014/53/EU (RED); FCC Part 15 (ISM) | aviation-regulatory-counsel + AGCOM liaison Regione + RF SE | Concept (consultazione M+1-M+4) |
+| **INT-07** | Modem Airborne ↔ AGCOM Band Allocation | Allocazione frequenza operativa (L-band 1615-1660 MHz primary; ISM 2.4 GHz fallback); EIRP enforcement; coexistence | REG + PHY | AGCOM decreti spettro; ITU-R RR; Direttiva 2014/53/EU (RED); FCC Part 15 (ISM) | consulenza legale-regolatoria aviazione + AGCOM liaison Regione + RF SE | Concept (consultazione M+1-M+4) |
 | **INT-08** | Power Management ↔ Flight Control (Battery SOC) | Battery SOC real-time feedback per RTH trigger; algoritmo Coulomb counting + V/T-corrected | CTL + DAT | CAN bus J1939 / CANopen 10 Hz; MAVLink battery_status; sense resistor ±1% | Power Management SE (Avionics Lead) + Battery specialist | Preliminary |
 | **INT-09** | Autopilot ↔ Sensor Suite (IMU/Baro/Compass) | Feedback loop 50 Hz IMU → Kalman filter → PWM motor; baro alt hold ±0.5 m; compass ±5° | CTL | SPI (IMU), I²C (baro/compass), MAVLink; sampling 200 Hz IMU sync | Flight Control Lead (autopilot engineer) | Preliminary |
 | **INT-10** | Cooperative Request ↔ GCS ↔ Aircraft Execution | Operator submits mission request → MAVLink WP list → aircraft executes → ortofoto preview + log; SMS alert PC su emergency | CTL + DAT | REST API JSON + Webhooks + SMS gateway; OAUTH 2.0 cooperative login | GCS UX Developer (Firmamento) + Cooperative Training Lead (Legacoop) | Concept |
 | **INT-11** | Emergency Escalation Protocol (PC → GCS rapid response) | PC trigger emergency (frana/fire/flood/SAR) → SMS+call pilot → launch < 15 min TTR → 2h loiter + ortofoto live PC | CTR + CTL | SOP standard testate tabletop M+6-M+7; SMS gateway + email; futura web form GCS | PC Liaison Officer (Regione) + GCS Pilot Lead (Firmamento) | Concept (SOP M+6-M+9) |
 | **INT-12** | Data Governance ↔ Regione Archive ↔ DPO Audit | Cooperativa data sharing opt-in GDPR Art. 7; DPO audit mensile log; data retention 7 giorni operative log + 3 anni archive | REG + DAT | GDPR Art. 7 + Art. 17 + Art. 35; CEF logging RFC 3164; retention policy SOP | DPO/Data Governance Officer (Regione) + Cloud Security Engineer (Firmamento) | Preliminary |
-| **INT-13** | Sistema ↔ ENAC SORA Authorization | Operazione UAS Specific BVLOS SAIL III; SORA application + Operations Manual + Operator Declaration | REG | Reg. UE 2019/947 + AMC/GM Amendment 3 (Sett 2025) SORA 2.5 EU; ENAC Reg. APR Ed. 3 | aviation-regulatory-counsel + ENAC liaison | Concept (pre-app M+3-M+6) |
-| **INT-14** | Sistema ↔ ENAV / D-Flight U-Space | Coordinamento traffico aereo, network identification, geo-awareness, UAS flight authorization se area U-Space istituita su Pentema | REG + DAT | Reg. UE 2021/664 + ENAC LG-2023/006; D-Flight USSP+CISP API | aviation-regulatory-counsel + ENAV liaison | Concept (post pre-app ENAC) |
-| **INT-15** | Sistema ↔ Garante Privacy / DPIA pubblica | DPIA Art. 35 GDPR + workshop pubblico comunità Pentema + procedura DSAR + privacy by design | REG | GDPR Reg. UE 2016/679 Art. 35 + D.Lgs. 196/2003 novellato + Provv. Garante | data-privacy-counsel + DPO Firmamento + DPO Regione | Concept (DPIA M+4-M+5) |
+| **INT-13** | Sistema ↔ ENAC SORA Authorization | Operazione UAS Specific BVLOS SAIL III; SORA application + Operations Manual + Operator Declaration | REG | Reg. UE 2019/947 + AMC/GM Amendment 3 (Sett 2025) SORA 2.5 EU; ENAC Reg. APR Ed. 3 | consulenza legale-regolatoria aviazione + ENAC liaison | Concept (pre-app M+3-M+6) |
+| **INT-14** | Sistema ↔ ENAV / D-Flight U-Space | Coordinamento traffico aereo, network identification, geo-awareness, UAS flight authorization se area U-Space istituita su Pentema | REG + DAT | Reg. UE 2021/664 + ENAC LG-2023/006; D-Flight USSP+CISP API | consulenza legale-regolatoria aviazione + ENAV liaison | Concept (post pre-app ENAC) |
+| **INT-15** | Sistema ↔ Garante Privacy / DPIA pubblica | DPIA Art. 35 GDPR + workshop pubblico comunità Pentema + procedura DSAR + privacy by design | REG | GDPR Reg. UE 2016/679 Art. 35 + D.Lgs. 196/2003 novellato + Provv. Garante | consulenza privacy e protezione dati + DPO Firmamento + DPO Regione | Concept (DPIA M+4-M+5) |
 | **INT-16** | Firmamento ↔ Vendor SLA (JOUAV o equivalente VTOL) | Specifiche tecniche commessa: datasheet, performance certificati, training, parts spares, customer support; warranty | CTR | ICAO Annex 19 (vendor quality); AS/EN 9100 supplier audit; contratto fornitura | Procurement Lead (Firmamento) + Vendor account manager | Concept (pre-RFQ M+1-M+6) |
 | **INT-17** | Firmamento ↔ Vendor Payload (EO + IR + Modem) | Datasheet performance + integrazione + interfaccia meccanica/elettrica/dati con airframe; warranty | CTR + PHY + DAT | AS/EN 9100; vendor-specific ICD; Reg. UE 2019/945 design | Procurement Lead (Firmamento) + Payload vendor | Concept |
-| **INT-18** | Firmamento ↔ Cooperative Legacoop (Service contract framework) | Tipologia contratto (DaaS, ore-volo, canone, outcome-based); SLA, KPI, pricing, billing, cooperative data use, governance, IP, exit | CTR | Codice Civile + contratto di rete L. 33/2009; contratto di servizi atipici PA | business-model-strategist + Coopfond legal + cooperative Legacoop (Fabrica) | Concept (M+6-M+9) |
-| **INT-19** | Firmamento ↔ Anchor PA (Regione Liguria + PC + Comuni) | Convenzione operativa + LoI multi-year + clausole assicurative + data sharing + privacy + KPI di servizio | CTR + REG | D.Lgs. 36/2023 art. 41-ss; convenzioni operative ex art. 15 L. 241/1990; LoI standard PA | snai-funding-territorial-expert + Coopfond legal + Regione affari legali | Concept (LoI M+6-M+9) |
+| **INT-18** | Firmamento ↔ Cooperative Legacoop (Service contract framework) | Tipologia contratto (DaaS, ore-volo, canone, outcome-based); SLA, KPI, pricing, billing, cooperative data use, governance, IP, exit | CTR | Codice Civile + contratto di rete L. 33/2009; contratto di servizi atipici PA | team strategia business model + Coopfond legal + cooperative Legacoop (Fabrica) | Concept (M+6-M+9) |
+| **INT-19** | Firmamento ↔ Anchor PA (Regione Liguria + PC + Comuni) | Convenzione operativa + LoI multi-year + clausole assicurative + data sharing + privacy + KPI di servizio | CTR + REG | D.Lgs. 36/2023 art. 41-ss; convenzioni operative ex art. 15 L. 241/1990; LoI standard PA | team SNAI e funding territoriale + Coopfond legal + Regione affari legali | Concept (LoI M+6-M+9) |
 | **INT-20** | Sistema ↔ Ecosistema EU (IRIS² + GAIA-X + futuro consorzio HAPS) | Interfaccia dati EO (Copernicus / EUMETSAT); cloud sovrano GAIA-X; coordinamento future HAPS EU consortium (post-Y6+) | ECO + REG | GAIA-X compliance specifiche; Copernicus/EUMETSAT API; future EU HAPS framework TBD | sovereign-strategist + Firmamento DG | Concept (long-term, boundary B2) |
 
 **Totale: 20 interfacce primarie** identificate. Sub-interfacce di dettaglio (ad esempio INT-03 declinata in INT-03a C2 uplink + INT-03b telemetria downlink + INT-03c video downlink) rientrano nella versione Vol. 2 Allegato A.4.
@@ -437,7 +437,7 @@ Il Capitolo 4 si considera "chiuso e approvato" quando tutti gli 8 criteri segue
 
 **Stato target**: per ciascuno dei 17 deliverable PFTE (Tabella §4.3.1), è assegnato un owner RACI completo (Responsible / Accountable / Consulted / Informed) tracciato in una RACI Matrix Excel.
 
-- *Evidenza*: RACI Matrix .xlsx firmata Firmamento + Coopfond (digital signatures) M+1-M+2.
+- *Evidenza*: RACI Matrix.xlsx firmata Firmamento + Coopfond (digital signatures) M+1-M+2.
 - *Owner del criterio*: PMO Firmamento + Coopfond Steering Chair.
 - *Escalation se non soddisfatto al M+2*: Steering meeting straordinario M+2 con verbale escalation.
 
@@ -454,14 +454,14 @@ Il Capitolo 4 si considera "chiuso e approvato" quando tutti gli 8 criteri segue
 **Stato target**: le 20 interfacce ICD (Tabella §4.4.1) ricevono conferma di feasibility preliminare dai supplier chiave (JOUAV / equivalente VTOL; vendor payload; vendor avionic) e dai loro counterparts regolatori (ENAC su INT-13; AGCOM su INT-07; Garante su INT-15). Nessuna "show-stopper mismatch" sull'ICD.
 
 - *Evidenza*: email + verbali meeting tecnici M+2-M+3 con supplier; risposta preliminare ENAC/AGCOM su INT-13/INT-07 entro M+3-M+4.
-- *Owner*: aerospace-systems-engineer (Firmamento) + Procurement Lead.
+- *Owner*: team ingegneria di sistema (Firmamento) + Procurement Lead.
 - *Escalation*: architecture review meeting M+3 se interface mismatch identificato; possibile pivoting su vendor alternativo.
 
 #### Criterion 4. Dipendenze esterne formalizzate (Regione/ENAC/AGCOM/Cooperative) (M+0-M+1)
 
 **Stato target**: il Dependency Log (Cap. 6.5 + Vol. 2 Allegato A.2) contiene 14+ dipendenze esterne identificate con owner allocato. Regione Liguria commitment pubblico ai sensi MOA per liaison ENAC/AGCOM. Adesione cooperative ≥ 80% (MoU firmati 8/10) entro M+2-M+3.
 
-- *Evidenza*: Dependency Log .xlsx M+0 baseline; MOA M+2-M+3 firmato; MoU cooperative ≥ 8/10 firmati M+3.
+- *Evidenza*: Dependency Log.xlsx M+0 baseline; MOA M+2-M+3 firmato; MoU cooperative ≥ 8/10 firmati M+3.
 - *Owner*: Risk Manager (Firmamento) + Legacoop coordinamento cooperative.
 - *Escalation*: Steering Board M+1 se Regione non identifica liaison ENAC/AGCOM; alert M+3 se cooperative < 8/10.
 
@@ -474,7 +474,7 @@ Il Capitolo 4 si considera "chiuso e approvato" quando tutti gli 8 criteri segue
 - Nessun requisito orphan (dangling, non coperto da V&V)
 - Audit RTM v0.6 al M+6 con tasso copertura ≥ 80%; v0.8 al M+10 con tasso ≥ 95%
 
-Evidenza: RTM .xlsx audit report M+6 + M+10 signed RACI. Owner: aerospace-systems-engineer + Coopfond validation. Escalation: CAB meeting M+8 se requisiti orphan > 5 o deliverable orphan presenti.
+Evidenza: RTM.xlsx audit report M+6 + M+10 signed RACI. Owner: team ingegneria di sistema + Coopfond validation. Escalation: CAB meeting M+8 se requisiti orphan > 5 o deliverable orphan presenti.
 
 #### Criterion 6. Gate intermedi M+3 + M+6 superati (M+3 + M+6)
 
@@ -490,13 +490,13 @@ Evidenza: verbali Gate M+3 e M+6 firmati Coopfond + Firmamento. Owner: Coopfond 
 
 **Stato target**: Risk Register Cap. 6 baseline M+1 contiene ≥ 16 rischi; top 5 rischi con P×I ≥ 0.30 hanno owner, mitigation action esplicita, target closure milestone. Trend di chiusura mostrato M+3/M+6/M+9 (P×I avg decrescente). Al M+9 closure ≥ 80% top 5 mitigations; residual P×I avg < 0.30.
 
-Evidenza: Risk Register .xlsx con monthly updates; trend chart M+1 → M+11; closure report M+11. Owner: Risk Manager (Firmamento) + PMO Coopfond. Escalation: Steering Board M+6 se top 5 rischi sono ancora P×I > 0.40 senza piano credibile.
+Evidenza: Risk Register.xlsx con monthly updates; trend chart M+1 → M+11; closure report M+11. Owner: Risk Manager (Firmamento) + PMO Coopfond. Escalation: Steering Board M+6 se top 5 rischi sono ancora P×I > 0.40 senza piano credibile.
 
 #### Criterion 8. Budget PFTE tracciato WBS, monthly ETC, contingency 20% preserved (M+11)
 
 **Stato target**: budget PFTE (€150-300k stimato ±25% al M+0; baseline al M+3) è tracciato mensilmente con WBS 3-4 livelli; variance Actual vs Plan ≤ ±10% mensile; contingency buffer 20% preservato durante PFTE; release contingency solo per show-stopper risk mitigation con approvazione PMO.
 
-Al M+11: variance ≤ ±15% vs forecast originale; contingency residual ≥ 50% preservato per Fase 1. Evidenza: WBS budget Excel master M+0-M+11; variance report M+11 firmato CFO Firmamento + Coopfond. Owner: financial-cfo-analyst (Firmamento) + Coopfond. Escalation: Steering Board M+11 se overrun > 15%; impatto su Fase 1 budget allocation.
+Al M+11: variance ≤ ±15% vs forecast originale; contingency residual ≥ 50% preservato per Fase 1. Evidenza: WBS budget Excel master M+0-M+11; variance report M+11 firmato CFO Firmamento + Coopfond. Owner: analisi finanziaria CFO (Firmamento) + Coopfond. Escalation: Steering Board M+11 se overrun > 15%; impatto su Fase 1 budget allocation.
 
 ### 4.5.2 Verifica copertura StNeeds → scope (matrice condensata)
 
@@ -528,7 +528,7 @@ Ogni StNeed del Cap. 3.3.2 deve avere copertura nello scope PFTE Cap. 4. La tabe
 
 ## 4.6 Assunzioni e Limiti del Cap. 4
 
-In coerenza con la skill `epistemic-rigor`, dichiaro esplicitamente le assunzioni di capitolo (assumptions specifiche al perimetro), distinte dalle assumptions di programma (Cap. 3.9) e dalle limitazioni dello Studio (Cap. 3.9.2).
+In coerenza con la metodologia di rigore epistemico, dichiaro esplicitamente le assunzioni di capitolo (assumptions specifiche al perimetro), distinte dalle assumptions di programma (Cap. 3.9) e dalle limitazioni dello Studio (Cap. 3.9.2).
 
 ### 4.6.1 Assumptions Cap. 4
 
@@ -563,47 +563,47 @@ Le Open Questions specifiche al Cap. 4 (perimetro, deliverable, ICD), da chiuder
 | OQ-CAP4-01 | Quale formato deliverable PFTE finale: PDF + Word + Markdown + Excel, o subset? | Decisione editoriale Coopfond | Coopfond editorial + Firmamento PM | M+5 |
 | OQ-CAP4-02 | Quali stakeholder firmano fisicamente DEL-PFTE-11 (MOA/MOU)? In quale formato (PEC, paper signed, digital)? | Allineamento Regione + Legacoop | Regione affari legali | M+3 |
 | OQ-CAP4-03 | Lo Studio è investment-grade (audit RINA / DNV) o decision-grade interno (Coopfond)? | Decisione strategica + budget audit | Coopfond CdA | M+4 |
-| OQ-CAP4-04 | Quale livello di detail nell'ICD per Percorso 6B HALE: solo concept high-level o spec partial? | Negoziazione scope HALE preparatorio | aerospace-systems-engineer | M+6 |
+| OQ-CAP4-04 | Quale livello di detail nell'ICD per Percorso 6B HALE: solo concept high-level o spec partial? | Negoziazione scope HALE preparatorio | team ingegneria di sistema | M+6 |
 | OQ-CAP4-05 | DEL-PFTE-16 Allegati Tecnici: repository git protetto Coopfond o cloud share Regione? | IT decision Coopfond + Regione | Coopfond IT + Cloud Architect | M+3 |
-| OQ-CAP4-06 | Computo Metrico Estimativo (DEL-PFTE-12): granularità € o $/h FTE / m² infrastruttura, o tariffario regionale Liguria? | Conformità procedurale RUP | financial-cfo-analyst + Regione RUP | M+5 |
-| OQ-CAP4-07 | DPIA (DEL-PFTE-08): coinvolgere Garante Privacy con notifica preventiva (Art. 36 GDPR) o solo DPIA interna? | Valutazione legale rischio privacy | data-privacy-counsel | M+4 |
-| OQ-CAP4-08 | Workshop comunità Pentema (E-03): formato (pubblico open o invito chiuso, presenza vs online)? Tempistica? | Engagement Comune Torriglia | snai-funding-territorial-expert + sindaco Torriglia | M+5 |
+| OQ-CAP4-06 | Computo Metrico Estimativo (DEL-PFTE-12): granularità € o $/h FTE / m² infrastruttura, o tariffario regionale Liguria? | Conformità procedurale RUP | analisi finanziaria CFO + Regione RUP | M+5 |
+| OQ-CAP4-07 | DPIA (DEL-PFTE-08): coinvolgere Garante Privacy con notifica preventiva (Art. 36 GDPR) o solo DPIA interna? | Valutazione legale rischio privacy | consulenza privacy e protezione dati | M+4 |
+| OQ-CAP4-08 | Workshop comunità Pentema (E-03): formato (pubblico open o invito chiuso, presenza vs online)? Tempistica? | Engagement Comune Torriglia | team SNAI e funding territoriale + sindaco Torriglia | M+5 |
 | OQ-CAP4-09 | INT-19 LoI Regione Liguria: valore vincolante (LoI binding) o non-binding letter of support? | Negoziazione Regione | Coopfond legal | M+6 |
 | OQ-CAP4-10 | INT-20 ecosistema EU: produciamo un'analisi preliminare di "compatibility" GAIA-X + Copernicus + future HAPS consortium durante PFTE, o lo deferiamo? | Decisione strategica boundary B2 | sovereign-strategist + Firmamento DG | M+6 |
 
-### 4.7bis Open Questions tracciate dai refinement Volume 2 v2.0 (subagent batch 2 M+3)
+### 4.7bis Open Questions tracciate dai refinement Volume 2 v2.0 (team specialistico batch 2 M+3)
 
-> **Origine**: il refinement engineering-grade Allegati A.4 ICD Detailed v2.0 + A.11 SORA Safety Case COMPLETE v2.0 + A.12 VIA preliminare COMPLETE v2.0 ha identificato 24 GAP residui che diventano Open Questions tracciate del Cap. 4. Owner agent assegnato + deadline operativa + criticità per gate.
+> **Origine**: il refinement engineering-grade Allegati A.4 ICD Detailed v2.0 + A.11 SORA Safety Case COMPLETE v2.0 + A.12 VIA preliminare COMPLETE v2.0 ha identificato 24 GAP residui che diventano Open Questions tracciate del Cap. 4. Owner specialista assegnato + deadline operativa + criticità per gate.
 
 #### A.4 ICD Detailed v2.0, GAP residui (10 OQ)
 
 | OQ-ID | Domanda / Gap | Criticità | Owner | Deadline | Gate target |
 |---|---|---|---|---|---|
-| **OQ-ICD-01 (GAP-01)** | MAVLink dialect proprietary JOUAV: il dialetto custom del FCS JOUAV CW-30E non è documentato pubblicamente. Necessaria documentazione completa da vendor RFQ per validare compatibilità GCS Firmamento. Rischio rework €15-30k se incompatibile. | HIGH | vtol-uas-specialist + avionics-gnc-engineer | M+6 | Gate G2 (vendor quotation) |
-| **OQ-ICD-02 (GAP-02)** | SATCOM Iridium Certus coverage Pentema: area montana 1100-1300 m s.l.m., possibili occlusioni in canyon stretto. Coverage non misurata. Test di copertura M+8-M+10. | MEDIUM | avionics-gnc-engineer + operations | M+8-M+10 | Gate G3 (pre-operations) |
-| **OQ-ICD-03 (GAP-03)** | SATCOM Inmarsat BGAN vs Iridium Certus per backup C2: confronto disponibilità + costi + bitrate effettivo per area Pentema. | MEDIUM | avionics-gnc-engineer | M+10 | Gate G3 |
-| **OQ-ICD-04 (GAP-04)** | Mission Computer (MC) hardware non definitivamente selezionato: candidate Jetson Orin AGX (Privacy pipeline INT-15) vs alternative aerospace-qualified (Curtiss-Wright modules). Decisione TS-AVI-6A. | MEDIUM | avionics-gnc-engineer + aerospace-systems-engineer | M+8 | Gate G3 |
-| **OQ-ICD-05 (GAP-05)** | Sony 7R IV shutter lag in payload chain: calibrazione PPS-GNSS sync timing diurna vs notturna; test bed reale. | LOW | telecom-ntn-payload-expert + avionics-gnc-engineer | M+10 | Gate G3 |
-| **OQ-ICD-06 (GAP-06)** | ENAC feedback DAA non-cooperative: TRL 5-6, ENAC potrebbe richiedere validazione operativa per SAIL III. Rischio 6-12 mesi ritardo + €150-300k se richiesto. **Critico per gate**. | HIGH | aviation-regulatory-counsel + avionics-gnc-engineer | M+6 (pre-application) | Gate G2 |
-| **OQ-ICD-07 (GAP-07)** | DO-260B compliance ADS-B vendor (Sagetech XPS-TR + alternative): verifica MOPS + retest dopo aggiornamenti firmware. | MEDIUM | avionics-gnc-engineer | M+10 | Gate G3 |
-| **OQ-ICD-08 (GAP-08)** | DPIA Garante Privacy per blur on-board YOLOv8n: necessaria notifica preventiva art. 36 GDPR (rischio alto su biometria territoriale)? **Critico per gate operatività**. | HIGH | data-privacy-counsel + CISO new | M+7 | Gate G3 + operations Y1 |
-| **OQ-ICD-09 (GAP-09)** | YOLOv8n su dataset UAV italiano: modello non testato su dataset locale (volti, targhe, oggetti rurali Liguria). False positive rate da validare. | MEDIUM | data-privacy-counsel + ML engineer (nuovo FTE?) | M+9 | Gate G3 |
-| **OQ-ICD-10 (GAP-10)** | Standard MAVLink Common Message Set v2.0: verifica retrocompatibilità con possibili future versioni dialect Firmamento custom. | LOW | avionics-gnc-engineer | M+12 | post-MVP Y1 |
+| **OQ-ICD-01 (GAP-01)** | MAVLink dialect proprietary JOUAV: il dialetto custom del FCS JOUAV CW-30E non è documentato pubblicamente. Necessaria documentazione completa da vendor RFQ per validare compatibilità GCS Firmamento. Rischio rework €15-30k se incompatibile. | HIGH | team VTOL UAS specialistico + team avionica e GNC | M+6 | Gate G2 (vendor quotation) |
+| **OQ-ICD-02 (GAP-02)** | SATCOM Iridium Certus coverage Pentema: area montana 1100-1300 m s.l.m., possibili occlusioni in canyon stretto. Coverage non misurata. Test di copertura M+8-M+10. | MEDIUM | team avionica e GNC + operations | M+8-M+10 | Gate G3 (pre-operations) |
+| **OQ-ICD-03 (GAP-03)** | SATCOM Inmarsat BGAN vs Iridium Certus per backup C2: confronto disponibilità + costi + bitrate effettivo per area Pentema. | MEDIUM | team avionica e GNC | M+10 | Gate G3 |
+| **OQ-ICD-04 (GAP-04)** | Mission Computer (MC) hardware non definitivamente selezionato: candidate Jetson Orin AGX (Privacy pipeline INT-15) vs alternative aerospace-qualified (Curtiss-Wright modules). Decisione TS-AVI-6A. | MEDIUM | team avionica e GNC + team ingegneria di sistema | M+8 | Gate G3 |
+| **OQ-ICD-05 (GAP-05)** | Sony 7R IV shutter lag in payload chain: calibrazione PPS-GNSS sync timing diurna vs notturna; test bed reale. | LOW | team telecom NTN + team avionica e GNC | M+10 | Gate G3 |
+| **OQ-ICD-06 (GAP-06)** | ENAC feedback DAA non-cooperative: TRL 5-6, ENAC potrebbe richiedere validazione operativa per SAIL III. Rischio 6-12 mesi ritardo + €150-300k se richiesto. **Critico per gate**. | HIGH | consulenza legale-regolatoria aviazione + team avionica e GNC | M+6 (pre-application) | Gate G2 |
+| **OQ-ICD-07 (GAP-07)** | DO-260B compliance ADS-B vendor (Sagetech XPS-TR + alternative): verifica MOPS + retest dopo aggiornamenti firmware. | MEDIUM | team avionica e GNC | M+10 | Gate G3 |
+| **OQ-ICD-08 (GAP-08)** | DPIA Garante Privacy per blur on-board YOLOv8n: necessaria notifica preventiva art. 36 GDPR (rischio alto su biometria territoriale)? **Critico per gate operatività**. | HIGH | consulenza privacy e protezione dati + CISO new | M+7 | Gate G3 + operations Y1 |
+| **OQ-ICD-09 (GAP-09)** | YOLOv8n su dataset UAV italiano: modello non testato su dataset locale (volti, targhe, oggetti rurali Liguria). False positive rate da validare. | MEDIUM | consulenza privacy e protezione dati + ML engineer (nuovo FTE?) | M+9 | Gate G3 |
+| **OQ-ICD-10 (GAP-10)** | Standard MAVLink Common Message Set v2.0: verifica retrocompatibilità con possibili future versioni dialect Firmamento custom. | LOW | team avionica e GNC | M+12 | post-MVP Y1 |
 
 #### A.11 SORA Safety Case Complete v2.0, GAP residui (10 OQ-SORA)
 
 | OQ-ID | Domanda / Gap | Criticità | Owner | Deadline | Gate target |
 |---|---|---|---|---|---|
-| **OQ-SORA-01** | Sparse vs moderate density classification Pentema: ENAC potrebbe classificare diversamente data presenza ferrovia Genova-Casella + SS45 + comunità sparse circostanti. Impatta GRC finale. | HIGH | aviation-regulatory-counsel + ENAC pre-app | M+6 | Pre-application ENAC |
-| **OQ-SORA-02** | Characteristic dimension CW-30E (1-3 m provisional): necessaria specifica vendor JOUAV per definitiva. Impatta lethality calc + GRC. | HIGH | vtol-uas-specialist + aviation-regulatory-counsel | M+6 | Pre-application ENAC |
-| **OQ-SORA-03** | Vendor evidence JOUAV: design assurance level, software DAL, hardware DAL, MTBF, FMEA test reports. Necessari per OSO #18-21 (Software/Hardware Design). | HIGH | vtol-uas-specialist + aerospace-systems-engineer | M+6 (RFQ vendor) | Pre-application ENAC + Gate G2 |
+| **OQ-SORA-01** | Sparse vs moderate density classification Pentema: ENAC potrebbe classificare diversamente data presenza ferrovia Genova-Casella + SS45 + comunità sparse circostanti. Impatta GRC finale. | HIGH | consulenza legale-regolatoria aviazione + ENAC pre-app | M+6 | Pre-application ENAC |
+| **OQ-SORA-02** | Characteristic dimension CW-30E (1-3 m provisional): necessaria specifica vendor JOUAV per definitiva. Impatta lethality calc + GRC. | HIGH | team VTOL UAS specialistico + consulenza legale-regolatoria aviazione | M+6 | Pre-application ENAC |
+| **OQ-SORA-03** | Vendor evidence JOUAV: design assurance level, software DAL, hardware DAL, MTBF, FMEA test reports. Necessari per OSO #18-21 (Software/Hardware Design). | HIGH | team VTOL UAS specialistico + team ingegneria di sistema | M+6 (RFQ vendor) | Pre-application ENAC + Gate G2 |
 | **OQ-SORA-04** | CISO/Part-IS gap (cross RSK-REG-019): CISO FTE non ancora assunto; Part-IS EASA compliance richiede Information Security Management System operativo. | HIGH | aviation-regulatory + HR | M+6 (CISO hire) | Pre-application ENAC |
 | **OQ-SORA-05** | PIC (Pilot In Command) BVLOS hire: pilota qualificato BVLOS SAIL III non ancora identificato. Tempistiche assunzione + training 6-9 mesi. | MEDIUM | HR + operations | M+9 | Operations Y1 |
 | **OQ-SORA-06** | Parachute test in volo: BRS parachute < 7 m/s tasso di discesa target richiede test di rilascio in volo certificati. Costo test €30-60k. | MEDIUM | operations + vendor parachute | M+10 | Operations Y1 |
 | **OQ-SORA-07** | Operations Manual completo: sub-deliverable DEL-PFTE-04 ConOps v2.0, da redigere in dettaglio per SORA application. | MEDIUM | aviation-regulatory + operations | M+10 | Gate G3 |
 | **OQ-SORA-08** | Maintenance Program (Allegato A.10): da espandere da preliminary a programma operativo per SORA application. | MEDIUM | operations + EN 9110 consultant | M+10 | Gate G3 |
-| **OQ-SORA-09** | TMPR (Tactical Mitigations Performance Requirements) validation: ADS-B IN + non-cooperative DAA performance evidence. | MEDIUM | avionics-gnc-engineer + aviation-regulatory | M+10 | Gate G3 |
-| **OQ-SORA-10** | Adjacent containment testing: geofence hard + FTS test in scenario adjacent area (Torriglia 3.5 km, ferrovia Genova-Casella). | MEDIUM | operations + avionics-gnc-engineer | M+10-M+12 | Operations Y1 |
+| **OQ-SORA-09** | TMPR (Tactical Mitigations Performance Requirements) validation: ADS-B IN + non-cooperative DAA performance evidence. | MEDIUM | team avionica e GNC + aviation-regulatory | M+10 | Gate G3 |
+| **OQ-SORA-10** | Adjacent containment testing: geofence hard + FTS test in scenario adjacent area (Torriglia 3.5 km, ferrovia Genova-Casella). | MEDIUM | operations + team avionica e GNC | M+10-M+12 | Operations Y1 |
 
 #### A.12 VIA Preliminare Complete v2.0, GAP residui (5 OQ-AMB top)
 
@@ -619,9 +619,9 @@ Le Open Questions specifiche al Cap. 4 (perimetro, deliverable, ICD), da chiuder
 
 ---
 
-## 4.8 Red Team check, Critical Review
+## 4.8 Review critica, Critical Review
 
-L'agente `red-team-skeptic` ha condotto attacco strutturato al presente capitolo. Sintesi delle critiche e risposte:
+L'revisione critica indipendente ha condotto attacco strutturato al presente capitolo. Sintesi delle critiche e risposte:
 
 ### Critica 1. "Lo scope dichiarato è troppo ambizioso per €150-300k + 11 mesi"
 
@@ -682,20 +682,20 @@ D'altra parte, è ragionevole che almeno un volo dimostrativo tethered (a quota 
 
 **Action item**: allocare €40k dedicato in budget Cap. 8 per workshop engagement; verificare se Legacoop / Coopfond hanno fondi engagement separati (sembra di sì per il bando Cooding).
 
-### 4.8.7 Action Item Tracking (anti Red Team theater)
+### 4.8.7 Action Item Tracking (anti review formale senza follow-through)
 
-> **Compliance audit M+3**: per evitare il pattern "Red Team theater" (critiche acknowledged senza follow-through operativo), ogni critica §4.8.1-6 ha un action item esplicito con owner e deadline. Stato consolidato:
+> **Conformità review M+3**: per evitare il pattern "review formale senza follow-through" (critiche acknowledged senza follow-through operativo), ogni critica §4.8.1-6 ha un action item esplicito con owner e deadline. Stato consolidato:
 
 | Critica | Action item | Owner | Deadline | Stato M+3 | Verifica chiusura |
 |---|---|---|---|---|---|
-| C1 (budget €150-300k vs base rate aerospace) | Revisione finale budget Cap. 8 (€250-300k realistic / €400-500k stretched) + FTE mese-per-mese | financial-cfo-analyst + Firmamento DG | M+6 | open (allineamento OpEx Cap. 8 §8.5.1.C già fatto post-Cluster D + regulatory team) | Gate G2 |
-| C2 (ICD concept-level vs engineering-grade) | §4.4 sub-section "Detailed ICD: scope of Vol. 2 Allegato A.4" + template ICD detailed Fase 1 | aerospace-systems-engineer + avionics-gnc-engineer | M+6 | closed (sub-section aggiunta, ICD detailed in Vol. 2 Allegato A.4 referenziato) | done |
-| C3 (mancano Operations Manual + Maintenance Plan + Risk Assessment SORA) | Tabella §4.3.1 arricchita con sub-deliverable Vol. 2 (§4.3.3 nuovo) + verifica linking Cap. 6, 8, 9 | aerospace-systems-engineer | M+5 | closed (§4.3.3 con 15 sub-deliverable Vol. 2 aggiunta) | done |
-| C4 (out-of-scope troppo restrittivo: senza flight test PFTE → SORA rifiutata) | Ri-classificazione B-03 "Voli operativi" da OUT a PARZIALE + sub-deliverable DEL-PFTE-15 "Field Trial demo tethered" + contingency budget +€20-40k | aviation-regulatory-counsel + Firmamento DG | M+8 | in progress (PARZIALE registrato; permessi ENAC locali in fase di engagement) | Gate G2 + Field trial M+8-M+9 |
-| C5 (DEL-PFTE-12 WBS 3-4 non dimensionato in 11 mesi) | Chiarimento Cap. 8 + DEL-PFTE-12: WBS 3 per 6A, WBS 2 per 6B; Computo Metrico solo ground segment Pentema | financial-cfo-analyst + Cost Estimator esterno | M+4-M+9 | open (Cost Estimator esterno da ingaggiare) | Gate G2 |
-| C6 (workshop cooperative ≥ 5 senza budget engagement) | Allocazione €40k in Cap. 8 per workshop engagement + verifica fondi engagement Legacoop/Coopfond | business-model-strategist + snai-funding-territorial-expert | M+3 | closed (budget allocato; engagement Coopfond fondi separati confermato per bando Cooding) | done |
+| C1 (budget €150-300k vs base rate aerospace) | Revisione finale budget Cap. 8 (€250-300k realistic / €400-500k stretched) + FTE mese-per-mese | analisi finanziaria CFO + Firmamento DG | M+6 | open (allineamento OpEx Cap. 8 §8.5.1.C già fatto post-Cluster D + regulatory team) | Gate G2 |
+| C2 (ICD concept-level vs engineering-grade) | §4.4 sub-section "Detailed ICD: scope of Vol. 2 Allegato A.4" + template ICD detailed Fase 1 | team ingegneria di sistema + team avionica e GNC | M+6 | closed (sub-section aggiunta, ICD detailed in Vol. 2 Allegato A.4 referenziato) | done |
+| C3 (mancano Operations Manual + Maintenance Plan + Risk Assessment SORA) | Tabella §4.3.1 arricchita con sub-deliverable Vol. 2 (§4.3.3 nuovo) + verifica linking Cap. 6, 8, 9 | team ingegneria di sistema | M+5 | closed (§4.3.3 con 15 sub-deliverable Vol. 2 aggiunta) | done |
+| C4 (out-of-scope troppo restrittivo: senza flight test PFTE → SORA rifiutata) | Ri-classificazione B-03 "Voli operativi" da OUT a PARZIALE + sub-deliverable DEL-PFTE-15 "Field Trial demo tethered" + contingency budget +€20-40k | consulenza legale-regolatoria aviazione + Firmamento DG | M+8 | in progress (PARZIALE registrato; permessi ENAC locali in fase di engagement) | Gate G2 + Field trial M+8-M+9 |
+| C5 (DEL-PFTE-12 WBS 3-4 non dimensionato in 11 mesi) | Chiarimento Cap. 8 + DEL-PFTE-12: WBS 3 per 6A, WBS 2 per 6B; Computo Metrico solo ground segment Pentema | analisi finanziaria CFO + Cost Estimator esterno | M+4-M+9 | open (Cost Estimator esterno da ingaggiare) | Gate G2 |
+| C6 (workshop cooperative ≥ 5 senza budget engagement) | Allocazione €40k in Cap. 8 per workshop engagement + verifica fondi engagement Legacoop/Coopfond | strategia business model + expertise territoriale | M+3 | closed (budget allocato; engagement Coopfond fondi separati confermato per bando Cooding) | done |
 
-> **Stato Red Team check Cap. 4 al M+3**: 3 critiche closed (C2, C3, C6) + 1 in progress (C4 field trial) + 2 open Gate G2 (C1 budget, C5 WBS Computo Metrico). Nessuna critica residual "Red Team theater" (= acknowledged senza action concreta tracciata).
+> **Stato Review critica Cap. 4 al M+3**: 3 critiche closed (C2, C3, C6) + 1 in progress (C4 field trial) + 2 open Gate G2 (C1 budget, C5 WBS Computo Metrico). Nessuna critica residual "review formale senza follow-through" (= acknowledged senza action concreta tracciata).
 
 ---
 
@@ -705,15 +705,15 @@ D'altra parte, è ragionevole che almeno un volo dimostrativo tethered (a quota 
 
 [^2]: D.Lgs. 36/2023 (Codice dei Contratti Pubblici), art. 41 Progetto di Fattibilità Tecnico-Economica + Allegato I.7 (Contenuti minimi del PFTE). Confidence: high (norma in vigore).
 
-[^3]: Skill `gate-review-checklist` (`/.claude/skills/gate-review-checklist/SKILL.md`), workflow di gate decisionale Go/Hold/No-Go applicato in §4.1.4.
+[^3]: Metodologia interna di checklist gate review, workflow di gate decisionale Go/Hold/No-Go applicato in §4.1.4.
 
-[^4]: Skill `requirements-traceability-matrix` (`/.claude/skills/requirements-traceability-matrix/SKILL.md`), traceability StNeed → SyR → SsR → V&V → deliverable applicata in §4.5.2.
+[^4]: Metodologia RTM interna, traceability StNeed → SyR → SsR → V&V → deliverable applicata in §4.5.2.
 
-[^5]: Skill `epistemic-rigor` (`/.claude/skills/epistemic-rigor/SKILL.md`), disciplina di falsifiability + triangulation + confidence levels applicata in §4.6.
+[^5]: Metodologia di rigore epistemico (metodologia interna), disciplina di falsifiability + triangulation + confidence levels applicata in §4.6.
 
-[^6]: Skill `risk-register-builder` (`/.claude/skills/risk-register-builder/SKILL.md`), Risk Register dinamico applicato in DEL-PFTE-13.
+[^6]: Metodologia risk register interna, Risk Register dinamico applicato in DEL-PFTE-13.
 
-[^7]: Skill `trade-study-analysis` (`/.claude/skills/trade-study-analysis/SKILL.md`), DOCFAP italiano + Pugh matrix NASA per DEL-PFTE-03.
+[^7]: Metodologia trade study interna, DOCFAP italiano + Pugh matrix NASA per DEL-PFTE-03.
 
 [^8]: Reg. UE 2019/947 (Operations UAS). Source: `fonti/CELEX_32019R0947_IT_TXT.md` + Cap. 5.1.2-5.1.5. Confidence: high.
 
@@ -749,7 +749,7 @@ L'ICD preliminare a 20 interfacce è il secondo strato di rigore del capitolo: i
 4. **MoU cooperative**: adesione ≥ 8/10 entro M+3 (INT-18 framework).
 5. **LoI Regione Liguria**: entro M+9 (INT-19 framework).
 6. **ICD Vol. 2 Allegato A.4**: versione preliminary completa entro M+8.
-7. **Field trial demo tethered**: fattibilità da valutare M+6-M+8 (Red Team Critica 4); 1 volo VLOS bassa quota M+8-M+9 condizionato a permessi.
+7. **Field trial demo tethered**: fattibilità da valutare M+6-M+8 (Critica review 4); 1 volo VLOS bassa quota M+8-M+9 condizionato a permessi.
 
 **Versionamento Cap. 4**:
 - v0.5 (M+3, presente capitolo): scope baseline + ICD preliminary 20 interfacce
@@ -757,7 +757,7 @@ L'ICD preliminare a 20 interfacce è il secondo strato di rigore del capitolo: i
 - v0.8 (M+10, post Trade Study + Workshop ≥ 5): scope finalized + ICD detailed v1.0 in Vol. 2 Allegato A.4
 - v1.0 (M+11, baseline finale per gate decisionale): scope frozen per Fase 1 execution
 
-Il capitolo è chiuso al M+3 con verdetto Red Team OK con action items (6 action items aperti, di cui 1 critico, Critica 4 field trial demo).
+Il capitolo è chiuso al M+3 con verdetto della review critica OK con action items (6 action items aperti, di cui 1 critico, Critica 4 field trial demo).
 
 ---
 

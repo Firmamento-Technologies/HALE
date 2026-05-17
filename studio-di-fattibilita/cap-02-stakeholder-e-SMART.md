@@ -7,8 +7,8 @@
 > **Versione:** bozza M+3 (post-Allineamento Strategico Maggio 2026)
 > **Conformità:** D.Lgs. 36/2023 art. 41 + Allegato I.7 (sezioni "Quadro Esigenziale" e "obiettivi e indicatori")
 > **Metodologia:** NASA SE Handbook Rev 2 [^1] §4.1 Stakeholder Expectations Definition, ISO/IEC/IEEE 15288 §6.4.1 Stakeholder Needs and Requirements Definition, framework SMART (Doran 1981) adattato a NASA Project Management
-> **Disciplina epistemica:** si applicano le Regole 1-7 della skill `epistemic-rigor` (falsifiability, triangulation, source provenance, confidence levels, pre-mortem, steel-manning, base-rate)
-> **Red Team review:** verifica condotta dall'agente `red-team-skeptic` (vedi §2.6)
+> **Disciplina metodologica:** si applicano le le regole di rigore epistemico (falsifiability, triangulation, source provenance, confidence levels, pre-mortem, steel-manning, base-rate)
+> **Review critica indipendente:** verifica condotta dall'revisione critica indipendente (vedi §2.6)
 
 ---
 
@@ -113,40 +113,40 @@ In coerenza con NASA SE Handbook §4.1.1.2.1 [^1] e con la stakeholder map basel
 
 **Tabella stakeholder estesa** (S-01, S-30, ridenominata "consolidata M+3"; le aggiunte rispetto a Cap. 3.3.1 sono evidenziate con **(+)**):
 
-| ID | Stakeholder | Categoria | Ruolo (sintesi) | Leva engagement | Frequenza interazione | Owner agent |
+| ID | Stakeholder | Categoria | Ruolo (sintesi) | Leva engagement | Frequenza interazione | Owner specialista |
 |---|---|---|---|---|---|---|
 | S-01 | Firmamento Technologies | INTERNAL | Proponente, capofila tecnico, decisore | (sé) | Continuativa | sovereign-strategist |
-| S-02 | Fabrica (cooperativa capofila) | CUSTOMER | Aggregatore rete cooperative, co-progettista requisiti | Contratto di rete + workshop | Settimanale | business-model-strategist |
-| S-03 | Rete 10 cooperative Legacoop | CUSTOMER | Utenti-pilota, beneficiari DaaS/IaaS | Workshop + abbonamenti DaaS | Mensile | business-model-strategist |
+| S-02 | Fabrica (cooperativa capofila) | CUSTOMER | Aggregatore rete cooperative, co-progettista requisiti | Contratto di rete + workshop | Settimanale | team strategia business model |
+| S-03 | Rete 10 cooperative Legacoop | CUSTOMER | Utenti-pilota, beneficiari DaaS/IaaS | Workshop + abbonamenti DaaS | Mensile | team strategia business model |
 | S-04 | Regione Liguria | CUSTOMER + REGULATOR | Anchor customer + sponsor istituzionale + co-pianificatore SNAI | Accordo quadro + co-progettazione (art. 55 CTS) + LoI | Mensile | snai-funding-expert |
 | S-05 | Comune di Torriglia (Pentema) | CUSTOMER + COMMUNITY | Sede pilota, autorizzazioni locali, beneficiario diretto | Convenzione + workshop pubblico | Mensile in pilota | snai-funding-expert |
 | S-06 | Protezione Civile Liguria + ARPA Liguria | CUSTOMER | Cliente pilota PRIMARIO emergenze / monitoraggio | Convenzione operativa + ore-volo | Settimanale in stagione critica | aerospace-SE |
-| S-07 | Comunità Pentema (**14 residenti ISTAT**, frazione 3.27 km da Torriglia, 11 famiglie, 100 edifici) | COMMUNITY | Accettabilità sociale, diritti privacy | Workshop pubblico + DPIA pubblica + canali web | Trimestrale (continuativa in pilota) | data-privacy-counsel |
-| S-08 | ENAC | REGULATOR | Autorizzazione operativa SORA, certificazione, vigilanza | Pre-application meeting + Operations Manual + SORA application | Mensile inizialmente, poi trimestrale | aviation-regulatory-counsel |
-| S-09 | EASA | REGULATOR | Framework europeo, Special Condition HAPS, NPA HAPS | Engagement RMT + comments NPA | Trimestrale | aviation-regulatory-counsel |
-| S-10 | AGCOM | REGULATOR | Spettro radio, licensing, posizione HAPS bands | Istanza licenze + position paper | Trimestrale | telecom-ntn-payload-expert |
-| S-11 | Garante Privacy | REGULATOR | Tutela dati personali, DPIA pareri | DPIA pubblica + protocollo Garante | Annuale (su richiesta) | data-privacy-counsel |
-| S-12 | ENAV / D-Flight | REGULATOR + PARTNER | Integrazione U-Space, traffico aereo | Convenzione USSP/CISP + coordination | Settimanale in operativa | aviation-regulatory-counsel |
+| S-07 | Comunità Pentema (**14 residenti ISTAT**, frazione 3.27 km da Torriglia, 11 famiglie, 100 edifici) | COMMUNITY | Accettabilità sociale, diritti privacy | Workshop pubblico + DPIA pubblica + canali web | Trimestrale (continuativa in pilota) | consulenza privacy e protezione dati |
+| S-08 | ENAC | REGULATOR | Autorizzazione operativa SORA, certificazione, vigilanza | Pre-application meeting + Operations Manual + SORA application | Mensile inizialmente, poi trimestrale | consulenza legale-regolatoria aviazione |
+| S-09 | EASA | REGULATOR | Framework europeo, Special Condition HAPS, NPA HAPS | Engagement RMT + comments NPA | Trimestrale | consulenza legale-regolatoria aviazione |
+| S-10 | AGCOM | REGULATOR | Spettro radio, licensing, posizione HAPS bands | Istanza licenze + position paper | Trimestrale | team telecom NTN |
+| S-11 | Garante Privacy | REGULATOR | Tutela dati personali, DPIA pareri | DPIA pubblica + protocollo Garante | Annuale (su richiesta) | consulenza privacy e protezione dati |
+| S-12 | ENAV / D-Flight | REGULATOR + PARTNER | Integrazione U-Space, traffico aereo | Convenzione USSP/CISP + coordination | Settimanale in operativa | consulenza legale-regolatoria aviazione |
 | S-13 | MIMIT (Direz. Aerospazio + Comunicazioni) | REGULATOR + PARTNER | Strategia nazionale, PNRR Aerospazio, PNRF, PSN AAM | Position paper + tavoli + bandi PNRR | Trimestrale | sovereign-strategist |
-| S-14 | MIT (Trasporti) | REGULATOR | Vigilanza ENAC, politiche trasporti | Indiretto via ENAC | Annuale | aviation-regulatory-counsel |
+| S-14 | MIT (Trasporti) | REGULATOR | Vigilanza ENAC, politiche trasporti | Indiretto via ENAC | Annuale | consulenza legale-regolatoria aviazione |
 | S-15 | ACN, Agenzia Cybersicurezza Nazionale | REGULATOR | NIS2 compliance, cyber-incident reporting | Notifica + audit cybersec | Annuale | cybersecurity-officer |
-| S-16 | Coopfond + Fondazione PICO ETS | PARTNER (finanziatore) | Bando Cooding Prototypes + Cooding Invest | Erogazione + reporting + LoI | Mensile (gate review) | financial-cfo-analyst |
+| S-16 | Coopfond + Fondazione PICO ETS | PARTNER (finanziatore) | Bando Cooding Prototypes + Cooding Invest | Erogazione + reporting + LoI | Mensile (gate review) | analisi finanziaria CFO |
 | S-17 | Commissione UE (DG CNECT, DEFIS, MOVE, GROW) | PARTNER + REGULATOR | Programmi EDF, Horizon, IRIS², EU Space, IPCEI | Risposta a call + dialogo policy | Trimestrale | sovereign-strategist |
 | S-18 | ASI, Agenzia Spaziale Italiana | PARTNER + REGULATOR | Coordinamento spazio + EO + budget nazionale spazio | Position paper + tavoli + co-progetti | Trimestrale | sovereign-strategist |
 | S-19 | CIRA, Centro Italiano Ricerche Aerospaziali | PARTNER (R&D) | Phase B HALE consortium, ricerca aero | Accordo R&D + co-progettazione | Mensile (in Phase B) | aerospace-SE |
 | S-20 | POLITO, DIMEAS | PARTNER (R&D) | HELIPLAT lineage, R&D HALE, tesi/dottorati | Convenzione accademica + assegni | Mensile (in Phase B) | aero-structures-engineer |
-| S-21 | DTA Puglia + GATB Grottaglie | PARTNER (test bed) | BVLOS test bed, area volo controllata | Convenzione test bed | Trimestrale | vtol-uas-specialist |
-| S-22 | TIM, Vodafone, Iliad, WindTre, Open Fiber | PARTNER + Cust. potenziale | NTN backhaul, capacity wholesale, partnership futura | LoI commerciali, MoU | Trimestrale | telecom-ntn-payload-expert |
+| S-21 | DTA Puglia + GATB Grottaglie | PARTNER (test bed) | BVLOS test bed, area volo controllata | Convenzione test bed | Trimestrale | team VTOL UAS specialistico |
+| S-22 | TIM, Vodafone, Iliad, WindTre, Open Fiber | PARTNER + Cust. potenziale | NTN backhaul, capacity wholesale, partnership futura | LoI commerciali, MoU | Trimestrale | team telecom NTN |
 | S-23 | Leonardo + Telespazio + TAS | PARTNER + COMPETITOR | Incumbent aerospace IT, consorzio sovrano EU, acquisition risk | Dialogo strategico + position paper | Trimestrale | sovereign-strategist |
 | S-24 | Vigili del Fuoco + Carabinieri Forestali | CUSTOMER | Antincendio, monitoraggio territoriale | Convenzione operativa + protocollo | Mensile in stagione | aerospace-SE |
-| S-25 | ASL3 Genovese | CUSTOMER | Telemedicina rurale, supporto emergenze sanitarie | Convenzione + protocollo SSN | Trimestrale | business-model-strategist |
+| S-25 | ASL3 Genovese | CUSTOMER | Telemedicina rurale, supporto emergenze sanitarie | Convenzione + protocollo SSN | Trimestrale | team strategia business model |
 | S-26 | Ente Parco Antola, Ente Parco Aveto | CUSTOMER + COMMUNITY | Vigilanza ambientale, anti-bracconaggio, monitoraggio fauna | Convenzione + ore-volo | Stagionale | aerospace-SE |
-| **S-27 (+)** | **DTA Liguria / Aero-cluster Liguria** | PARTNER | **Cluster aerospaziale regionale, lobbying, formazione** | **Membership + co-progetti** | **Trimestrale** | **business-model-strategist** |
+| **S-27 (+)** | **DTA Liguria / Aero-cluster Liguria** | PARTNER | **Cluster aerospaziale regionale, lobbying, formazione** | **Membership + co-progetti** | **Trimestrale** | **team strategia business model** |
 | **S-28 (+)** | **UNCEM Liguria (Unione Naz. Comuni e Comunità Montane)** | COMMUNITY + CUSTOMER | **Aggregatore dei Comuni delle Aree Interne, advocacy** | **Position paper + workshop** | **Trimestrale** | **snai-funding-expert** |
-| **S-29 (+)** | **Cassa Depositi e Prestiti (CDP) + EIB** | PARTNER (finanziatore futuro) | **Equity / debt strategico per Phase 3-4** | **Investor relations da M+24** | **Annuale (inizio); trimestrale in raising** | **financial-cfo-analyst** |
+| **S-29 (+)** | **Cassa Depositi e Prestiti (CDP) + EIB** | PARTNER (finanziatore futuro) | **Equity / debt strategico per Phase 3-4** | **Investor relations da M+24** | **Annuale (inizio); trimestrale in raising** | **analisi finanziaria CFO** |
 | **S-30 (+)** | **Stampa locale + nazionale + tech media** | COMMUNITY | **Narrativa pubblica, accettabilità sociale, branding** | **Press release + interviste + factsheet** | **Mensile** | **communications-lead** |
 
-**Note di lettura**: le doppie categorie (es. S-04 CUSTOMER+REGULATOR, S-12 REGULATOR+PARTNER) riflettono il fatto che alcuni stakeholder hanno ruoli ibridi nel ciclo di vita del progetto. La colonna **Owner agent** rinvia agli agenti definiti in `.claude/agents/`, ciascuno responsabile della relazione operativa con lo stakeholder. La frequenza riportata è quella di interazione strutturata (workshop, meeting, report); le interazioni ad-hoc operative possono essere più frequenti.
+**Note di lettura**: le doppie categorie (es. S-04 CUSTOMER+REGULATOR, S-12 REGULATOR+PARTNER) riflettono il fatto che alcuni stakeholder hanno ruoli ibridi nel ciclo di vita del progetto. La colonna **Owner specialista** rinvia agli agenti definiti in consulenze specialistiche interne, ciascuno responsabile della relazione operativa con lo stakeholder. La frequenza riportata è quella di interazione strutturata (workshop, meeting, report); le interazioni ad-hoc operative possono essere più frequenti.
 
 ### 2.2.2 Power/Interest grid
 
@@ -186,26 +186,26 @@ In coerenza con la metodologia Mendelow / NASA SE §4.1.1.2.1 [^1], gli stakehol
 **Visualizzazione concettuale del power/interest grid** (semplificata):
 
 ```
-                         HIGH INTEREST
-                              │
-   Coopfond (S-16)            │            Regione Liguria (S-04)
-   Coop Legacoop (S-02,03)    │            ENAC (S-08)
-   Comunità Pentema (S-07)    │            Garante Privacy (S-11)
-   PC + ARPA (S-06)           │            Coopfond (S-16)
-   VVF + CCFor (S-24)         │            MIMIT (S-13)
-   Enti Parco (S-26)          │            ENAV (S-12)
-   UNCEM (S-28)               │            Leonardo/TAS (S-23 ambiguo)
-                              │
+ HIGH INTEREST
+ │
+ Coopfond (S-16) │ Regione Liguria (S-04)
+ Coop Legacoop (S-02,03) │ ENAC (S-08)
+ Comunità Pentema (S-07) │ Garante Privacy (S-11)
+ PC + ARPA (S-06) │ Coopfond (S-16)
+ VVF + CCFor (S-24) │ MIMIT (S-13)
+ Enti Parco (S-26) │ ENAV (S-12)
+ UNCEM (S-28) │ Leonardo/TAS (S-23 ambiguo)
+ │
 ─────────────────────────────────┼──────────────────────────────────
-   LOW POWER                  │                          HIGH POWER
-                              │
-   Stampa locale (S-30)       │            EASA (S-09)
-   MIT (S-14)                 │            AGCOM (S-10)
-   ACN (S-15)                 │            CDP/EIB (S-29) [Y3+]
-   ASI (S-18) oggi            │            Commissione UE (S-17) [Y3+]
-   Telco IT (S-22) oggi       │            ASI (S-18) [Y3+]
-                              │
-                         LOW INTEREST
+ LOW POWER │ HIGH POWER
+ │
+ Stampa locale (S-30) │ EASA (S-09)
+ MIT (S-14) │ AGCOM (S-10)
+ ACN (S-15) │ CDP/EIB (S-29) [Y3+]
+ ASI (S-18) oggi │ Commissione UE (S-17) [Y3+]
+ Telco IT (S-22) oggi │ ASI (S-18) [Y3+]
+ │
+ LOW INTEREST
 ```
 
 ### 2.2.3 Stakeholder critici: Top-5 con strategia di engagement
@@ -279,7 +279,7 @@ Cinque stakeholder sono show-stopper o show-maker per il successo del Percorso 6
 
 > **Falsifying observation**: se al M+6 meno di 8 su 10 cooperative confermano partecipazione formalizzata (MoU), il modello di rete cooperativa è in crisi e va riesaminata l'aggregazione (ridurre ambito, cambiare capofila, ecc.). Probabilità: low (engagement esistente forte), impatto: high.
 
-> **Falsifying observations aggiuntive linkate**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-07** (8/10 cooperative confermate post-workshop M+6) e **FO-ADD-01** (cooperative come vantaggio competitivo, metriche engagement M+12). Action se attivate: pivot BMC con peso minore B2B cooperative + focus B2G (PA) come canale dominante; co-design intensivo per ri-attrarre cooperative.
+> **Falsifying observations aggiuntive linkate**: vedi addendum falsifying observations **FO-ADD-07** (8/10 cooperative confermate post-workshop M+6) e **FO-ADD-01** (cooperative come vantaggio competitivo, metriche engagement M+12). Action se attivate: pivot BMC con peso minore B2B cooperative + focus B2G (PA) come canale dominante; co-design intensivo per ri-attrarre cooperative.
 
 #### Top-5. Comunità Pentema (S-07)
 
@@ -362,7 +362,7 @@ Il framework **SMART** (Doran, 1981 [^10]), acronimo di Specific, Measurable, Ac
 | **R, Relevant** | È coerente con la missione di progetto e gli stakeholder? | Obiettivo orfano, non collegato a StNeed |
 | **T, Time-bound** | Quando viene verificato il completamento? | "Eventualmente, in futuro" |
 
-In coerenza con la skill `epistemic-rigor`, ad ogni obiettivo SMART vengono aggiunti Owner (chi è responsabile, agent o stakeholder), Confidence (livello di confidenza nel raggiungimento: high / medium / low) e Falsifying observation (l'evidenza che renderebbe l'obiettivo non raggiungibile o sbagliato).
+In coerenza con la metodologia di rigore epistemico, ad ogni obiettivo SMART vengono aggiunti Owner (chi è responsabile, agent o stakeholder), Confidence (livello di confidenza nel raggiungimento: high / medium / low) e Falsifying observation (l'evidenza che renderebbe l'obiettivo non raggiungibile o sbagliato).
 
 ### 2.4.2 Obiettivi SMART del Piano di Fattibilità (M+0 → M+11)
 
@@ -376,7 +376,7 @@ Il **Piano di Fattibilità** (lo Studio di Fattibilità stesso, finanziato dal b
 > **Relevant**: prerequisito per Cap. 3 (RTM) e Cap. 7 (mercato)
 > **Time-bound**: completato **M+3** (versione baseline); M+6 versione consolidata post-workshop
 >
-> **Owner**: aerospace-SE + business-model-strategist | **Confidence**: high (lavoro desk + workshop pianificati)
+> **Owner**: aerospace-SE + team strategia business model | **Confidence**: high (lavoro desk + workshop pianificati)
 > **Falsifying obs**: se al M+6 meno di 17 StNeeds sono validati da almeno 1 stakeholder via workshop, la baseline va ri-eseguita.
 
 #### PF-02. Validazione regolatoria preliminare ENAC
@@ -387,7 +387,7 @@ Il **Piano di Fattibilità** (lo Studio di Fattibilità stesso, finanziato dal b
 > **Relevant**: SyR-F-002 + criterio di gate M+10 (cf. Cap. 3.2.2)
 > **Time-bound**: **M+6**
 >
-> **Owner**: aviation-regulatory-counsel | **Confidence**: medium (dipendenza da disponibilità ENAC)
+> **Owner**: consulenza legale-regolatoria aviazione | **Confidence**: medium (dipendenza da disponibilità ENAC)
 > **Falsifying obs**: se al M+9 ENAC non ha calendarizzato pre-application, si attiva il canale via MIMIT-DTA Aerospazio.
 
 #### PF-03. Workshop validato delle 10 cooperative
@@ -398,7 +398,7 @@ Il **Piano di Fattibilità** (lo Studio di Fattibilità stesso, finanziato dal b
 > **Relevant**: criterio di gate M+10 §3.2.5; B1 boundary
 > **Time-bound**: **M+6** workshop conclusi; **M+9** MoU firmati
 >
-> **Owner**: business-model-strategist + Fabrica | **Confidence**: medium-high
+> **Owner**: team strategia business model + Fabrica | **Confidence**: medium-high
 > **Falsifying obs**: se al M+6 meno di 8 cooperative su 10 confermano partecipazione, si rivede il modello di rete (cf. §2.3.3).
 
 #### PF-04. LoI Regione Liguria firmata
@@ -420,7 +420,7 @@ Il **Piano di Fattibilità** (lo Studio di Fattibilità stesso, finanziato dal b
 > **Relevant**: SyR-C-003 + criterio gate M+10 §3.2.5
 > **Time-bound**: **M+6**
 >
-> **Owner**: data-privacy-counsel | **Confidence**: high
+> **Owner**: consulenza privacy e protezione dati | **Confidence**: high
 > **Falsifying obs**: se il Garante esprime parere preventivo negativo, si procede a ri-design operazioni + ConOps.
 
 #### PF-06. Trade Studies chiave conclusi (DOCFAP)
@@ -438,7 +438,7 @@ Il **Piano di Fattibilità** (lo Studio di Fattibilità stesso, finanziato dal b
 
 > **Specific**: redigere Risk Register con ≥ 30 rischi identificati + scoring P×I + mitigation plan per rischi rossi
 > **Measurable**: Risk Register Vol. 2 con almeno 30 risk items; 0 rischi rossi senza mitigation plan
-> **Achievable**: skill `risk-register-builder` + analisi FMECA/FTA in corso
+> **Achievable**: metodologia di risk register + analisi FMECA/FTA in corso
 > **Relevant**: criterio gate M+10 §3.2.1
 > **Time-bound**: **M+10**
 >
@@ -453,14 +453,14 @@ Il **Piano di Fattibilità** (lo Studio di Fattibilità stesso, finanziato dal b
 > **Relevant**: criterio gate M+10 §3.2.3; conformità art. 41 D.Lgs. 36/2023
 > **Time-bound**: **M+10**
 >
-> **Owner**: financial-cfo-analyst | **Confidence**: medium
+> **Owner**: analisi finanziaria CFO | **Confidence**: medium
 > **Falsifying obs**: NPV scenario base < 0 con WACC 12%, con conseguente re-design business model o no-Go 6A.
 
 #### PF-09. Documento di Studio integrato (3 volumi)
 
 > **Specific**: consegnare lo Studio di Fattibilità completo (3 volumi: Studio + Allegati + Riferimenti) in formato docx/pdf, conformità art. 41 D.Lgs. 36/2023 + Allegato I.7
 > **Measurable**: 1 dossier completo M+11; ≥ 12 capitoli Volume 1; ≥ 8 allegati tecnici Volume 2
-> **Achievable**: skill `feasibility-study-framework` + lavoro coordinato dei vari agenti
+> **Achievable**: metodologia di feasibility study + lavoro coordinato dei vari agenti
 > **Relevant**: prodotto finale per gate M+10/M+11 decisione finanziatori
 > **Time-bound**: **M+11**
 >
@@ -475,7 +475,7 @@ Il **Piano di Fattibilità** (lo Studio di Fattibilità stesso, finanziato dal b
 > **Relevant**: prodotto finale dello Studio
 > **Time-bound**: **M+11**
 >
-> **Owner**: sovereign-strategist + aerospace-SE + financial-cfo-analyst | **Confidence**: medium
+> **Owner**: sovereign-strategist + aerospace-SE + analisi finanziaria CFO | **Confidence**: medium
 > **Falsifying obs**: se uno o più dei 10 obiettivi sopra non sono raggiunti, il verdetto sarà HOLD anziché GO.
 
 ### 2.4.3 Obiettivi SMART del Percorso 6A (M+0 → M+24)
@@ -490,7 +490,7 @@ Obiettivi del Percorso 6A operativo (pilota Pentema + scale-up regionale Y2).
 > **Relevant**: SyR-F-002 + funzione operativa
 > **Time-bound**: **M+15** (post Studio di Fattibilità M+11)
 >
-> **Owner**: aviation-regulatory-counsel | **Confidence**: medium
+> **Owner**: consulenza legale-regolatoria aviazione | **Confidence**: medium
 > **Falsifying obs**: ENAC nega definitivamente SAIL III, con conseguente ConOps re-design o sito alternativo.
 
 #### 6A-02. Piattaforma VTOL acquisita e integrata
@@ -501,7 +501,7 @@ Obiettivi del Percorso 6A operativo (pilota Pentema + scale-up regionale Y2).
 > **Relevant**: piattaforma operativa per use case UC-001/002/003/004
 > **Time-bound**: **M+15**
 >
-> **Owner**: vtol-uas-specialist + procurement-officer | **Confidence**: medium-high
+> **Owner**: team VTOL UAS specialistico + procurement-officer | **Confidence**: medium-high
 > **Falsifying obs**: vendor scelto non commercializzato in EU, con re-source a +20-30% costo (cf. AS-008 Cap. 3.9.1).
 
 #### 6A-03. Primo volo operativo Pentema
@@ -512,7 +512,7 @@ Obiettivi del Percorso 6A operativo (pilota Pentema + scale-up regionale Y2).
 > **Relevant**: dimostrazione end-to-end del modello operativo
 > **Time-bound**: **M+16**
 >
-> **Owner**: vtol-uas-specialist + aerospace-SE | **Confidence**: medium
+> **Owner**: team VTOL UAS specialistico + aerospace-SE | **Confidence**: medium
 > **Falsifying obs**: primo volo fallisce o incidente, con conseguente root cause analysis + ripianificazione M+18.
 
 #### 6A-04. ≥ 50 missioni operative completate Y1
@@ -534,7 +534,7 @@ Obiettivi del Percorso 6A operativo (pilota Pentema + scale-up regionale Y2).
 > **Relevant**: dimostra modello service-only + revenue ricorrente (B1)
 > **Time-bound**: **M+18** (1° contratto); **M+24** (3 contratti totali)
 >
-> **Owner**: business-model-strategist | **Confidence**: medium
+> **Owner**: team strategia business model | **Confidence**: medium
 > **Falsifying obs**: nessun contratto firmato M+18, con revisione pricing + scope.
 
 #### 6A-06. Revenue ricorrente Y1 ≥ €200k
@@ -545,7 +545,7 @@ Obiettivi del Percorso 6A operativo (pilota Pentema + scale-up regionale Y2).
 > **Relevant**: sostenibilità modello service-only + StNeed-016
 > **Time-bound**: **M+24**
 >
-> **Owner**: business-model-strategist + CFO | **Confidence**: medium
+> **Owner**: team strategia business model + CFO | **Confidence**: medium
 > **Falsifying obs**: revenue Y1 < €100k, con revisione drastica MVP scope (SyR-Cost-003 falsifying obs).
 
 #### 6A-07. Zero incidenti FATAL o major
@@ -567,7 +567,7 @@ Obiettivi del Percorso 6A operativo (pilota Pentema + scale-up regionale Y2).
 > **Relevant**: prerequisito scale-up SNAI Italia Y2
 > **Time-bound**: **M+22** (indagine); **M+24** (report)
 >
-> **Owner**: business-model-strategist + customer-success | **Confidence**: medium
+> **Owner**: team strategia business model + customer-success | **Confidence**: medium
 > **Falsifying obs**: NPS < 20, con re-design servizio + customer success program.
 
 ### 2.4.4 Obiettivi SMART del Percorso 6B (M+0 → M+48, R&D)
@@ -582,19 +582,19 @@ Il Percorso 6B è in HOLD / Go Condizionato Estremo al M+11. Gli obiettivi SMART
 > **Relevant**: SyR-F-005 + criterio gate M+24 6B
 > **Time-bound**: **M+24**
 >
-> **Owner**: aviation-regulatory-counsel + sovereign-strategist | **Confidence**: medium
+> **Owner**: consulenza legale-regolatoria aviazione + sovereign-strategist | **Confidence**: medium
 > **Falsifying obs**: EASA non apre framework HAPS entro M+36, con 6B rinviato post-2030 (cf. AS-005 Cap. 3.9.1).
 
 #### 6B-02. Energy balance simulazione completa worst-case
 
 > **Specific**: completare simulazione energy balance HALE solar + battery worst-case (solstizio inverno 21/12 a 44°N) con tech 2026
 > **Measurable**: simulazione documentata; verdetto margin ≥ 30% (Go) o < 30% (seasonal fallback)
-> **Achievable**: skill aerospace + propulsion engineer + dati panel/batterie 2026
+> **Achievable**: metodologia aerospace + propulsion engineer + dati panel/batterie 2026
 > **Relevant**: SyR-P-006 (showstopper RSK-TEC-001)
 > **Time-bound**: **M+10**
 >
-> **Owner**: propulsion-energy-engineer | **Confidence**: medium-low
-> **Falsifying obs**: margin worst-case < 0%, con seasonal-only fallback obbligatorio (cf. Critica 3 Red Team Cap. 3.11).
+> **Owner**: ingegneria propulsione e energia | **Confidence**: medium-low
+> **Falsifying obs**: margin worst-case < 0%, con seasonal-only fallback obbligatorio (cf. Critica 3 review Cap. 3.11).
 
 #### 6B-03. Partnership R&D consortium
 
@@ -611,11 +611,11 @@ Il Percorso 6B è in HOLD / Go Condizionato Estremo al M+11. Gli obiettivi SMART
 
 > **Specific**: mappare ≥ 5 fonti di funding R&D HALE (PNRR Aerospazio, Horizon Europe, EDF, IPCEI, FESR + privati) con scadenze + criteri ammissibilità
 > **Measurable**: mappa documentata Vol. 2 Allegato funding; ≥ 1 candidatura ammessa entro M+24
-> **Achievable**: skill financial-cfo-analyst + monitoraggio attivo bandi
+> **Achievable**: metodologia analisi finanziaria CFO + monitoraggio attivo bandi
 > **Relevant**: prerequisito CapEx Phase B ≥ €5.5M
 > **Time-bound**: **M+18** (mappa); **M+24** (1° candidatura ammessa)
 >
-> **Owner**: financial-cfo-analyst + snai-funding-expert | **Confidence**: medium
+> **Owner**: analisi finanziaria CFO + snai-funding-expert | **Confidence**: medium
 > **Falsifying obs**: nessuna candidatura ammessa M+30, con Phase B differita o cancellata.
 
 #### 6B-05. Subscale flight test design
@@ -685,11 +685,11 @@ Riassunti dal Cap. 5 (`cap-05-quadro-normativo.md`):
 
 ### 2.5.2 Vincoli finanziari
 
-Dalla strategia duale (CLAUDE.md) e dai SyR Cost (Cap. 3.5.7) discendono i vincoli seguenti. Il Percorso 6A prevede CapEx Y1 di €700-1200k come baseline ingegneristico (si veda Cap. 8 §8.3.1 per il Quadro Economico completo con IVA + contingency: €975k-€1.96M, scenario base €1.4M) e OpEx run-rate Y2 di €260-480k/anno (Cap. 8 §8.5.1). Il Percorso 6B (R&D Phase B) richiede un investimento di €5,5-13,5M (preparatorio R&D, non manufacturing); il funding plan multi-source è obbligatorio (PNRR + Horizon + EDF + equity). Lo Studio di Fattibilità (presente documento) ha budget bando Coopfond di €80-150k (M+0 → M+11), eseguito in conformità Cooding Prototypes. La capital intensity totale della visione 10 anni si colloca tra €500M e €2B (small fleet) e tra €10 e €30B (EU sovereign scale); vedi `visione-10-anni.md` §4.
+Dalla strategia duale (briefing operativo di progetto) e dai SyR Cost (Cap. 3.5.7) discendono i vincoli seguenti. Il Percorso 6A prevede CapEx Y1 di €700-1200k come baseline ingegneristico (si veda Cap. 8 §8.3.1 per il Quadro Economico completo con IVA + contingency: €975k-€1.96M, scenario base €1.4M) e OpEx run-rate Y2 di €260-480k/anno (Cap. 8 §8.5.1). Il Percorso 6B (R&D Phase B) richiede un investimento di €5,5-13,5M (preparatorio R&D, non manufacturing); il funding plan multi-source è obbligatorio (PNRR + Horizon + EDF + equity). Lo Studio di Fattibilità (presente documento) ha budget bando Coopfond di €80-150k (M+0 → M+11), eseguito in conformità Cooding Prototypes. La capital intensity totale della visione 10 anni si colloca tra €500M e €2B (small fleet) e tra €10 e €30B (EU sovereign scale); vedi `visione-10-anni.md` §4.
 
 ### 2.5.3 Vincoli temporali
 
-Calendario dei gate decisionali (cf. Cap. 9 + skill `gate-review-checklist`):
+Calendario dei gate decisionali (cf. Cap. 9 + metodologia di gate review):
 
 | Gate | Mese | Obiettivo verdetto | Verdetto target |
 |---|---|---|---|
@@ -731,9 +731,9 @@ In coerenza con Cap. 3.9.1 (10 assunzioni baseline AS-001 → AS-010), le assunz
 
 ---
 
-## 2.6 Red Team Check, Critical Review
+## 2.6 Review critica, Critical Review
 
-L'agente `red-team-skeptic` ha condotto attacco strutturato al presente capitolo. Sintesi delle critiche e risposte.
+L'revisione critica indipendente ha condotto attacco strutturato al presente capitolo. Sintesi delle critiche e risposte.
 
 ### Critica 1. "La stakeholder map è incompleta: mancano i potenziali competitor e i nemici del progetto"
 
@@ -791,7 +791,7 @@ L'agente `red-team-skeptic` ha condotto attacco strutturato al presente capitolo
 
 **Action item**: in Cap. 11 (Roadmap post-fattibilità) trade study esplicito **TS-GOVERNANCE** per scegliere tra contratto di rete, JV, consorzio cooperativo, holding cooperativa; output target M+18.
 
-### Verdetto Red Team
+### Verdetto della review critica
 
 Il capitolo è strutturalmente solido, ma le azioni richieste prima del gate M+10 sono le seguenti.
 
@@ -809,14 +809,14 @@ Il capitolo è strutturalmente solido, ma le azioni richieste prima del gate M+1
 
 Le **Open Questions** specifiche del Cap. 2 (oltre alle OQ-010, OQ-011, OQ-016 già ereditate da Cap. 3.10) sono raccolte nella tabella seguente.
 
-| OQ-ID | Domanda | Trigger per chiusura | Owner agent | Deadline |
+| OQ-ID | Domanda | Trigger per chiusura | Owner specialista | Deadline |
 |---|---|---|---|---|
 | **OQ-2.01** | Composizione attuale Giunta Regione Liguria + tempistica prossime elezioni regionali | Verifica DGR + sito Regione | snai-funding-expert | **M+3** |
 | **OQ-2.02** | Posizione UNCEM Liguria su sperimentazioni aerospaziali in Aree Interne | Workshop UNCEM | snai-funding-expert | **M+6** |
-| **OQ-2.03** | Disponibilità Comune di Torriglia a delibera di sostegno pilota Pentema | Riunione Consiglio Comunale | snai-funding-expert + business-model-strategist | **M+6** |
-| **OQ-2.04** | Quale modello di property of data nei contratti con cooperative? | Discussione legal + Fabrica | data-privacy-counsel + business-model-strategist | **M+9** |
-| **OQ-2.05** | Quale meccanismo di feedback continuo dalla comunità Pentema? | Workshop pubblico + sportello | data-privacy-counsel | **M+6** |
-| **OQ-2.06** | Quali NPS strumenti / metodi per misurare soddisfazione stakeholder eterogenei? | Decisione metodologica | business-model-strategist | **M+12** |
+| **OQ-2.03** | Disponibilità Comune di Torriglia a delibera di sostegno pilota Pentema | Riunione Consiglio Comunale | snai-funding-expert + team strategia business model | **M+6** |
+| **OQ-2.04** | Quale modello di property of data nei contratti con cooperative? | Discussione legal + Fabrica | consulenza privacy e protezione dati + team strategia business model | **M+9** |
+| **OQ-2.05** | Quale meccanismo di feedback continuo dalla comunità Pentema? | Workshop pubblico + sportello | consulenza privacy e protezione dati | **M+6** |
+| **OQ-2.06** | Quali NPS strumenti / metodi per misurare soddisfazione stakeholder eterogenei? | Decisione metodologica | team strategia business model | **M+12** |
 | **OQ-2.07** | Quale strategia di comunicazione pubblica per il progetto (press, social, web)? | Plan comunicazione + budget | communications-lead | **M+9** |
 | **OQ-2.08** | Quale frequenza e modalità di gate review dopo M+11 (operative pilot)? | Decisione governance | aerospace-SE + sovereign-strategist | **M+9** |
 
@@ -848,7 +848,7 @@ Le **Open Questions** specifiche del Cap. 2 (oltre alle OQ-010, OQ-011, OQ-016 g
 
 [^12]: Codice del Terzo Settore (D.Lgs. 117/2017) art. 55, co-programmazione e co-progettazione PA + Terzo Settore. Riferimento normativo per partnership Firmamento-Regione Liguria-cooperative.
 
-[^13]: Skill `feasibility-study-framework` (`/.claude/skills/feasibility-study-framework/SKILL.md`); skill `epistemic-rigor` (`/.claude/skills/epistemic-rigor/SKILL.md`); skill `gate-review-checklist` (`/.claude/skills/gate-review-checklist/SKILL.md`); skill `risk-register-builder` (`/.claude/skills/risk-register-builder/SKILL.md`); skill `requirements-traceability-matrix` (`/.claude/skills/requirements-traceability-matrix/SKILL.md`); skill `trade-study-analysis` (`/.claude/skills/trade-study-analysis/SKILL.md`).
+[^13]: Framework di feasibility study interno; metodologia di rigore epistemico (metodologia interna); metodologia di gate review (metodologia interna); metodologia di risk register (metodologia interna); metodologia RTM (metodologia interna); metodologia di trade study (metodologia interna).
 
 [^14]: Documento di visione 10 anni Firmamento Technologies. Source: `riferimenti/visione-10-anni.md`. Specifico: §1 obiettivo finale, §2 le 5 fasi, §3 vettore strategico, §4 capital intensity, §8 boundary conditions B1+B2. **Confidence: high** (documento interno progetto, baseline strategica).
 
@@ -858,7 +858,7 @@ Le **Open Questions** specifiche del Cap. 2 (oltre alle OQ-010, OQ-011, OQ-016 g
 
 Il presente Cap. 2 costituisce il ponte logico tra il Quadro Esigenziale del Cap. 1 (art. 41 D.Lgs. 36/2023) e l'apparato dei requisiti tracciabili del Cap. 3 (NASA SE / RTM). Tre prodotti chiave sono stati consegnati: l'inquadramento del contesto strategico su 5 cornici di policy (SNAI/PSNAI 2025, PNRR, FESR Liguria, ENAC AAM, framework normativo UE) con citazioni autoritative; la mappa stakeholder consolidata con 30 entità classificate su 5 categorie, power/interest grid e top-5 stakeholder critici con strategia di engagement dettagliata e KPI binari; i 30 obiettivi SMART distribuiti su 4 orizzonti (Piano di Fattibilità M+11, Percorso 6A M+24, Percorso 6B M+48, visione 10 anni Y10), ciascuno con owner, confidence, falsifying observation.
 
-**Debolezze dichiarate onestamente** (cf. §2.6 Red Team):
+**Debolezze dichiarate onestamente** (cf. §2.6 review critica):
 
 1. Stakeholder map completa ma manca **competitor monitoring** esplicito, action M+6
 2. Gli obiettivi V10- sono **vision pillars** (boundary B2), non veri SMART, da chiarire in Cap. 11
@@ -884,4 +884,4 @@ Il presente Cap. 2 costituisce il ponte logico tra il Quadro Esigenziale del Cap
 - v0.8 (M+10): post-trade study + falsifying observations tracker formalizzato
 - v1.0 (M+11): congelato per gate review
 
-Il capitolo è **chiuso al M+3** con verdetto Red Team **OK con 7 action items** e 8 Open Questions Cap. 2 tracciate per la versione M+6.
+Il capitolo è **chiuso al M+3** con verdetto della review critica **OK con 7 action items** e 8 Open Questions Cap. 2 tracciate per la versione M+6.

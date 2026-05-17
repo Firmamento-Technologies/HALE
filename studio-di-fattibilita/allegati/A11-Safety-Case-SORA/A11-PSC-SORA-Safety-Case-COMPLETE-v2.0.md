@@ -5,7 +5,7 @@
 > Conformità: **EASA SORA 2.5 (ED Decision 2025/018/R, 15 settembre 2025)** + **Reg. (UE) 2019/947** + **ENAC Regolamento APR Ed.3 (2019) + Em.1 (2020)**
 > **Versione**: 2.0, Maggio 2026 (M+3 baseline)
 > **Operatore proponente**: Firmamento Technologies S.r.l. (in registrazione UAS Operator ENAC)
-> **Author**: `aviation-regulatory-counsel` (HALE Studio di Fattibilità)
+> **Author**: consulenza legale-regolatoria aviazione (HALE Studio di Fattibilità)
 > **Stato**: PRELIMINARY, per istruttoria pre-application; **NON sostituisce** la SORA application formale ex art. 11 Reg. (UE) 2019/947.
 
 ---
@@ -114,10 +114,10 @@ Il presente Safety Case ha **finalità di supporto al Pre-Application Meeting co
 - **Salita verticale** a 30 m AGL, transizione fase fixed-wing
 - **Cruise** a 200–350 m AGL, velocità 80–110 km/h
 - **Raster pattern** su 4 punti critici frane attive (cfr. mappa PAI Liguria 2024):
-  - Versante SE Pentema (geomorfologia attiva)
-  - Versante N Pentema verso Torriglia
-  - Area Brugneto (escludendo sorvolo R-71)
-  - Versante Casanova di Rovegno
+ - Versante SE Pentema (geomorfologia attiva)
+ - Versante N Pentema verso Torriglia
+ - Area Brugneto (escludendo sorvolo R-71)
+ - Versante Casanova di Rovegno
 - **Durata missione**: 2–3 ore (autonomy CW-30E 6h, margine 100%)
 - **Ritorno**: transizione VTOL + atterraggio verticale GS
 - **Post-flight**: download dati, ispezione visiva, ricarica batterie
@@ -616,33 +616,33 @@ L'**Adjacent Area** è il volume di spazio aereo adiacente all'**Operational Vol
 Il **Safety Portfolio** integra tutti gli elementi dello Step 1–8 in una rappresentazione strutturata. Pentema 6A:
 
 ```
-                        ┌─────────────────────────────┐
-                        │  SORA 2.5 SAFETY PORTFOLIO  │
-                        │       Pentema 6A v2.0       │
-                        └─────────────┬───────────────┘
-                                      │
-        ┌─────────────────────────────┼─────────────────────────────┐
-        ▼                             ▼                             ▼
-┌─────────────────┐         ┌─────────────────┐         ┌─────────────────┐
-│ GROUND RISK     │         │ AIR RISK        │         │ DESIGN/OSO      │
-│ iGRC 5 → GRC 3  │         │ iARC b → ARC b  │         │ SAIL III        │
-│ M1 + M2 robust  │         │ TMPR Standard   │         │ 16 Med + 8 Low  │
-│ M3 ERP medium   │         │ ADS-B + NOTAM   │         │ Vendor evidence │
-└────────┬────────┘         └────────┬────────┘         └────────┬────────┘
-         │                           │                           │
-         └───────────────────────────┼───────────────────────────┘
-                                     ▼
-                        ┌─────────────────────────────┐
-                        │  CONTAINMENT < 1×10⁻⁴ /h    │
-                        │  Geofence + FTS + Parachute  │
-                        │  Adjacent Torriglia analyzed │
-                        └─────────────────────────────┘
-                                     │
-                                     ▼
-                        ┌─────────────────────────────┐
-                        │  RESIDUAL RISK ACCEPTABLE   │
-                        │  (subject to ENAC review)   │
-                        └─────────────────────────────┘
+ ┌─────────────────────────────┐
+ │ SORA 2.5 SAFETY PORTFOLIO │
+ │ Pentema 6A v2.0 │
+ └─────────────┬───────────────┘
+ │
+ ┌─────────────────────────────┼─────────────────────────────┐
+ ▼ ▼ ▼
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│ GROUND RISK │ │ AIR RISK │ │ DESIGN/OSO │
+│ iGRC 5 → GRC 3 │ │ iARC b → ARC b │ │ SAIL III │
+│ M1 + M2 robust │ │ TMPR Standard │ │ 16 Med + 8 Low │
+│ M3 ERP medium │ │ ADS-B + NOTAM │ │ Vendor evidence │
+└────────┬────────┘ └────────┬────────┘ └────────┬────────┘
+ │ │ │
+ └───────────────────────────┼───────────────────────────┘
+ ▼
+ ┌─────────────────────────────┐
+ │ CONTAINMENT < 1×10⁻⁴ /h │
+ │ Geofence + FTS + Parachute │
+ │ Adjacent Torriglia analyzed │
+ └─────────────────────────────┘
+ │
+ ▼
+ ┌─────────────────────────────┐
+ │ RESIDUAL RISK ACCEPTABLE │
+ │ (subject to ENAC review) │
+ └─────────────────────────────┘
 ```
 
 ### A.11.9.4 Evidence portfolio (cross-reference)
@@ -775,7 +775,7 @@ Sulla base di prassi consolidata (cfr. ENAC report autorizzazioni 2023-2024 e wo
 | §5.2 Specific Category | §A.11.6.3 implications SAIL III |
 | §5.3 ENAC Regolamento APR Ed.3 | art. 11 (autorizzazione) + art. 26 (BVLOS) + art. 29 (reporting) |
 | §5.4.1 Percorso 6A timeline | §A.11.10.2 ENAC tempistiche |
-| §5.13 Red Team regulatory | Confidence aggregato + gap residui di questo doc |
+| §5.13 review critica regolatoria | Confidence aggregato + gap residui di questo doc |
 
 ### A.11.11.4 RTM linkage
 
@@ -964,4 +964,4 @@ Legenda: 🟢 = ready / achievable; 🟡 = in progress with closure target M+3÷
 
 ---
 
-> **End of document A.11 v2.0**, preparato da `aviation-regulatory-counsel` HALE Studio di Fattibilità Firmamento Technologies. Per istruttoria pre-application ENAC. NON sostituisce SORA application formale ex art. 11 Reg. (UE) 2019/947.
+> **End of document A.11 v2.0**, preparato da consulenza legale-regolatoria aviazione HALE Studio di Fattibilità Firmamento Technologies. Per istruttoria pre-application ENAC. NON sostituisce SORA application formale ex art. 11 Reg. (UE) 2019/947.

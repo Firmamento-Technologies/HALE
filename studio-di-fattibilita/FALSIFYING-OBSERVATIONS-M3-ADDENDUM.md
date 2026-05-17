@@ -1,13 +1,13 @@
-# 10 Falsifying Observations Aggiuntive. Addendum Post-Audit M+3
+# 10 Falsifying Observations Aggiuntive. Addendum Alla milestone M+3
 
-> **Inserimento post-audit M+3**: l'audit `red-team-skeptic` (vedi `AUDIT-REDTEAM-VOLUME-1.md` §3) ha identificato **10 claim importanti del Volume 1 senza falsifying observation dichiarata** (violazione Regola 1 della skill `epistemic-rigor`).
+> **Inserimento alla milestone M+3 (post review critica)**: la review critica indipendente (vedi la review critica interna §3) ha identificato **10 claim importanti del Volume 1 senza falsifying observation dichiarata** (violazione prima regola del rigore epistemico (falsifiability)).
 >
 > Questo addendum **dichiara formalmente** le 10 falsifying observations mancanti, agganciandole ai capitoli rilevanti. Per ogni FO:
 > - **Claim originale** + posizione nel Volume 1
 > - **Falsifying observation** (cosa osservabile renderebbe falso il claim)
 > - **Trigger di attivazione** (cosa monitorare)
 > - **Action se attivata** (cosa fare se il claim viene falsificato)
-> - **Owner agent**
+> - **Owner specialista**
 >
 > Le FO qui contenute integrano (non sostituiscono) le ~40 FO già dichiarate nei singoli capitoli del Volume 1.
 
@@ -25,7 +25,7 @@
 
 **Action se attivata**: re-design BMC con peso minore sul canale B2B cooperative; pivot focus B2G (PA) come canale dominante.
 
-**Owner**: business-model-strategist + snai-funding-territorial-expert.
+**Owner**: strategia business model + expertise SNAI territoriale.
 
 **Confidence dell'observation**: medium (richiede metriche operative Y1).
 
@@ -41,7 +41,7 @@
 
 **Action se attivata**: re-baseline boundary B2 da "EU sovereign stratospheric layer complementary to IRIS²" a "Italian sovereign stratospheric services + future EU consortium option". Comunicazione esterna ridotta a Italia + bilaterali UE.
 
-**Owner**: sovereign-infrastructure-strategist + CEO.
+**Owner**: strategia sovranita tecnologica + CEO.
 
 **Confidence**: low (richiede pubblicazione IRIS² roadmap).
 
@@ -57,7 +57,7 @@
 
 **Action se attivata**: Cap. 6 §6.1.3 va riscritto; 4° pilastro Cap. 7 §7.5.1 "approccio incrementale" è declassato; il Percorso 6B Phase B richiede CapEx pieno (€5.5-13.5M) senza scaffold riutilizzato.
 
-**Owner**: aerospace-systems-engineer + financial-cfo-analyst.
+**Owner**: ingegneria di sistema + analisi finanziaria CFO.
 
 **Confidence**: medium (valutabile al gate G5).
 
@@ -75,7 +75,7 @@
 
 **Action se attivata**: pivot pricing model verso outcome-based (€/event verificato) + canone più basso ma cumulativo; oppure pivot canale verso B2B utility (Enel ispezione infrastrutture) a pricing premium.
 
-**Owner**: aerospace-market-analyst + business-model-strategist.
+**Owner**: analisi di mercato aerospace + strategia business model.
 
 **Confidence**: medium-high (driver primario sensitivity Cap. 8 §8.6.3).
 
@@ -91,7 +91,7 @@
 
 **Action se attivata**: trigger TRG-B2R-01 del Cap. 11 §11.6bis (scenario B2-relaxed). Phase B 6B sospesa; focus esclusivo 6A scale-up.
 
-**Owner**: aviation-regulatory-counsel + sovereign-infrastructure-strategist.
+**Owner**: consulenza regolatoria aviazione + strategia sovranita tecnologica.
 
 **Confidence**: medium (base rate EASA novel framework apertura 5-10 anni).
 
@@ -107,7 +107,7 @@
 
 **Action se attivata**: pivot a partner accademico (POLITO DIMEAS HELIPLAT lineage) come substitute, con minore peso istituzionale ma maggiore agilità.
 
-**Owner**: sovereign-infrastructure-strategist + CEO.
+**Owner**: strategia sovranita tecnologica + CEO.
 
 **Confidence**: low-medium (richiede engagement reale).
 
@@ -123,7 +123,7 @@
 
 **Action se attivata**: pivot del modello partnership cooperative (es. da 10 cooperative pilota a 5 anchor + scale-up); o re-design del modello service-only per essere più attractive (più analitiche, prezzo più basso, co-design intensivo).
 
-**Owner**: business-model-strategist + snai-funding-territorial-expert.
+**Owner**: strategia business model + expertise SNAI territoriale.
 
 **Confidence**: medium.
 
@@ -139,7 +139,7 @@
 
 **Action se attivata**: re-baseline Phase B 6B con architettura E5 Seasonal-only; ridimensionamento KPI endurance Y3-Y5; eventuale spostamento timeline architettura E3 SS Li al M+48+.
 
-**Owner**: propulsion-energy-engineer.
+**Owner**: ingegneria propulsione e energia.
 
 **Confidence**: medium (vendor roadmaps disponibili pubblicamente).
 
@@ -155,7 +155,7 @@
 
 **Action se attivata**: re-baseline Y1 con CapEx ridotto (es. €700-900k invece di €1-2M, modello "MVP super-lean"); bridge financing emergency; eventuale slittamento operatività a Y2 con Y1 = pre-operational R&D only.
 
-**Owner**: financial-cfo-analyst + snai-funding-territorial-expert.
+**Owner**: analisi finanziaria CFO + expertise SNAI territoriale.
 
 **Confidence**: medium-high (driver finanziario primario).
 
@@ -176,7 +176,7 @@
 
 **Action se attivata**: trigger scenario B2-relaxed; il vettore B2 full diventa "blue sky aspiration" non operativo; Firmamento opera come "standalone IT operator small fleet" Y10. (vedi Cap. 11 §11.6bis.2 TRG-B2R-01..06).
 
-**Owner**: CEO + sovereign-infrastructure-strategist + Board.
+**Owner**: CEO + strategia sovranita tecnologica + Board.
 
 **Confidence**: low (timeline lunga, molti driver esterni); ma observation **operativamente testabile** ai 4 milestone.
 
@@ -218,7 +218,7 @@ Queste 10 FO sono **integrate per riferimento** nei capitoli rilevanti:
 
 ## Disciplina epistemica
 
-Queste 10 FO chiudono la lacuna identificata dal Red Team (Critica G-03 + audit consolidato `AUDIT-QUALITY-VOLUME-1.md` §3). Il Volume 1 passa da ~40 FO totali a **~50 FO totali** (≥ 4-7 per capitolo, target rispettato).
+Queste 10 FO chiudono la lacuna identificata dal review critica (Critica G-03 + audit consolidato l'audit qualita interno §3). Il Volume 1 passa da ~40 FO totali a **~50 FO totali** (≥ 4-7 per capitolo, target rispettato).
 
 **Versionamento**: questa è la **versione M+3 baseline**. Aggiornamenti previsti:
 - M+6: gate G2, re-baseline FO con evidenze pre-application ENAC + workshop cooperative

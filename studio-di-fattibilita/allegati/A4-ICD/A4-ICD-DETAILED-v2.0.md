@@ -7,7 +7,7 @@
 > **Versione:** v2.0 (Detailed Engineering-Grade, 5 interfacce critiche Percorso 6A)
 > **Baseline parent:** A4-ICD-PRELIMINARE-v1.0.md (M+3, Maggio 2026)
 > **Data:** 2026-05-17
-> **Trigger:** Audit Red Team Cap. 4 §4.8 Critica 2: ICD v1.0 "checklist di superficie, non design document"
+> **Trigger:** review critica Cap. 4 §4.8 Critica 2: ICD v1.0 "checklist di superficie, non design document"
 > **Owner:** Avionics GNC Engineer (Firmamento Technologies)
 > **Metodologia:** ARP4754A + DO-178C + DO-326A/ED-202A + NASA SE Handbook §6.3
 > **Scope:** INT-03, INT-04, INT-05, INT-13, INT-15. Engineering-grade specification.
@@ -16,7 +16,7 @@
 
 ## Premessa
 
-Questo documento costituisce il **Livello 2 (Detailed ICD)** della roadmap di versioning definita in A4-ICD-PRELIMINARE-v1.0 §A.4.8, prodotto in anticipo rispetto alla milestone nominale M+10/M+12 a seguito del rilievo Red Team. Le 5 interfacce trattate sono quelle identificate come **flight-critical o safety-critical** per il Percorso 6A VTOL Pentema BVLOS.
+Questo documento costituisce il **Livello 2 (Detailed ICD)** della roadmap di versioning definita in A4-ICD-PRELIMINARE-v1.0 §A.4.8, prodotto in anticipo rispetto alla milestone nominale M+10/M+12 a seguito del rilievo review critica. Le 5 interfacce trattate sono quelle identificate come **flight-critical o safety-critical** per il Percorso 6A VTOL Pentema BVLOS.
 
 Le rimanenti 15 interfacce (INT-01/02/06-12/14/16-20) restano a livello Preliminary v1.0 fino a M+10/M+12.
 
@@ -60,14 +60,14 @@ Le rimanenti 15 interfacce (INT-01/02/06-12/14/16-20) restano a livello Prelimin
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  L7  Application   │ MAVLink v2.0 dialect (Common + JOUAV ext.) │
-│  L6  Presentation  │ AES-256-GCM (payload encryption)           │
-│  L5  Session       │ MAVLink session (SYSTEM_ID / COMP_ID)      │
-│  L4  Transport     │ UDP/IP (primario) o raw serial (fallback)   │
-│  L3  Network       │ IP punto-punto (subnet /30) o no-IP serial │
-│  L2  Data Link     │ CSMA/TDD frame; CRC-X25 per MAVLink packet │
-│  L1  Physical      │ OFDM 2400-2483.5 MHz; BPSK/QPSK/16QAM/    │
-│                    │ 64QAM adattivo; DSSS fallback (link budget) │
+│ L7 Application │ MAVLink v2.0 dialect (Common + JOUAV ext.) │
+│ L6 Presentation │ AES-256-GCM (payload encryption) │
+│ L5 Session │ MAVLink session (SYSTEM_ID / COMP_ID) │
+│ L4 Transport │ UDP/IP (primario) o raw serial (fallback) │
+│ L3 Network │ IP punto-punto (subnet /30) o no-IP serial │
+│ L2 Data Link │ CSMA/TDD frame; CRC-X25 per MAVLink packet │
+│ L1 Physical │ OFDM 2400-2483.5 MHz; BPSK/QPSK/16QAM/ │
+│ │ 64QAM adattivo; DSSS fallback (link budget) │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -80,13 +80,13 @@ Le rimanenti 15 interfacce (INT-01/02/06-12/14/16-20) restano a livello Prelimin
 **Formato header MAVLink v2.0 (10 byte fissi):**
 
 ```
-Byte 0:   Magic (0xFD)
-Byte 1:   Payload length (0-253)
-Byte 2:   Incompat flags
-Byte 3:   Compat flags
-Byte 4:   Packet sequence (0-255 wrap)
-Byte 5:   System ID (UAV=1, GCS=255)
-Byte 6:   Component ID (autopilot=1, payload=100, GCS=0)
+Byte 0: Magic (0xFD)
+Byte 1: Payload length (0-253)
+Byte 2: Incompat flags
+Byte 3: Compat flags
+Byte 4: Packet sequence (0-255 wrap)
+Byte 5: System ID (UAV=1, GCS=255)
+Byte 6: Component ID (autopilot=1, payload=100, GCS=0)
 Byte 7-9: Message ID (24-bit little-endian)
 Byte 10-N: Payload (variable)
 Byte N+1-N+2: CRC-X25 (2 byte, little-endian)
@@ -127,9 +127,9 @@ Byte N+1-N+2: CRC-X25 (2 byte, little-endian)
 **Throughput aggregato nominale:**
 
 ```
-Uplink (GCS→UAV):   COMMAND_LONG on-demand ~5 pkt/s × 33+10 B = ~215 B/s
+Uplink (GCS→UAV): COMMAND_LONG on-demand ~5 pkt/s × 33+10 B = ~215 B/s
 Downlink (UAV→GCS): telemetry aggregata ≈ 10 Hz × 200 B/pkt = ~2000 B/s
-                     + video preview H.265 (INT-6A-DATA-006) = 0.5-2 Mbps separato
+ + video preview H.265 (INT-6A-DATA-006) = 0.5-2 Mbps separato
 Bitrate C2 netto richiesto: ~50-100 kbps (solo MAVLink, senza video)
 ```
 
@@ -141,13 +141,13 @@ La cifratura del payload MAVLink v2.0 utilizza **AES-256-GCM** (AEAD, Authentica
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│ MAVLink v2.0 header (10 byte in chiaro, ASSOCIATED DATA)     │
-│ ┌────────────────────────────────────────────────────────┐   │
-│ │ AES-256-GCM Ciphertext (payload cifrato)               │   │
-│ │  + GCM Tag (16 byte, autenticazione)                   │   │
-│ └────────────────────────────────────────────────────────┘   │
-│ MAVLink signature field (25 byte):                           │
-│   link_id (1B) | timestamp_48 (6B) | signature (13B→GCM Tag)│
+│ MAVLink v2.0 header (10 byte in chiaro, ASSOCIATED DATA) │
+│ ┌────────────────────────────────────────────────────────┐ │
+│ │ AES-256-GCM Ciphertext (payload cifrato) │ │
+│ │ + GCM Tag (16 byte, autenticazione) │ │
+│ └────────────────────────────────────────────────────────┘ │
+│ MAVLink signature field (25 byte): │
+│ link_id (1B) | timestamp_48 (6B) | signature (13B→GCM Tag)│
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -155,10 +155,10 @@ La cifratura del payload MAVLink v2.0 utilizza **AES-256-GCM** (AEAD, Authentica
 
 ```
 Nonce = LINK_ID (8 bit) || SYSTEM_ID (8 bit) || COMP_ID (8 bit)
-        || SEQUENCE_48 (48 bit) || DIRECTION_BIT (1 bit) || RESERVED (7 bit)
+ || SEQUENCE_48 (48 bit) || DIRECTION_BIT (1 bit) || RESERVED (7 bit)
 
 dove SEQUENCE_48 = MAVLink timestamp_48 (µs epoch, resolution 10 µs)
-     DIRECTION_BIT = 0 (GCS→UAV uplink), 1 (UAV→GCS downlink)
+ DIRECTION_BIT = 0 (GCS→UAV uplink), 1 (UAV→GCS downlink)
 ```
 
 **Requisiti nonce:**
@@ -191,21 +191,21 @@ CRC calcolato su: [len=9][incompat][compat][seq][sysid][compid][0x00][0x00][0x00
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                    LINK MONITORING STATE MACHINE                        │
-│                                                                         │
-│  LINK_OK ──────── last_heartbeat_age > 2s ──────► LINK_DEGRADED        │
-│     ▲                                                    │              │
-│     │ heartbeat received                                 │ age > 3s    │
-│     │                                                    ▼              │
-│     └────────────────────────────── LINK_WARNING ◄──────┘              │
-│                                          │                              │
-│                                          │ age > 5s (consecutive)       │
-│                                          ▼                              │
-│                                    LINK_LOST ───► TRIGGER RTL          │
-│                                          │                              │
-│                                          │ age > 30s (RTL unreachable) │
-│                                          ▼                              │
-│                                   EMERGENCY_LAND ───► descend + land   │
+│ LINK MONITORING STATE MACHINE │
+│ │
+│ LINK_OK ──────── last_heartbeat_age > 2s ──────► LINK_DEGRADED │
+│ ▲ │ │
+│ │ heartbeat received │ age > 3s │
+│ │ ▼ │
+│ └────────────────────────────── LINK_WARNING ◄──────┘ │
+│ │ │
+│ │ age > 5s (consecutive) │
+│ ▼ │
+│ LINK_LOST ───► TRIGGER RTL │
+│ │ │
+│ │ age > 30s (RTL unreachable) │
+│ ▼ │
+│ EMERGENCY_LAND ───► descend + land │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -228,7 +228,7 @@ Protocollo retry:
 3. Se no ACK: retransmit con confirmation++ (max 3 tentativi)
 4. Se no ACK dopo 3 tentativi: log + escalate a pilot alert
 5. Per comandi safety-critical (RTL, LAND): confirmation ignorata dopo LINK_LOST
-   (FCS esegue autonomamente senza attendere ACK uplink)
+ (FCS esegue autonomamente senza attendere ACK uplink)
 
 T_ack = 500 ms (≤ latency budget 250 ms × 2 = margine 500 ms round-trip)
 Max retry = 3
@@ -238,10 +238,10 @@ Total timeout per comando = 500 ms × 3 = 1.5 s
 **Sequenza timing link drop → RTL:**
 
 ```
-t=0:    ultimo HEARTBEAT valido ricevuto
-t=2s:   LINK_DEGRADED, prepara RTH waypoint, throttle -10%
-t=3s:   LINK_WARNING, tentativi switch SATCOM (vedi INT-04)
-t=5s:   LINK_LOST, esegue RTL autonomo (no uplink richiesto)
+t=0: ultimo HEARTBEAT valido ricevuto
+t=2s: LINK_DEGRADED, prepara RTH waypoint, throttle -10%
+t=3s: LINK_WARNING, tentativi switch SATCOM (vedi INT-04)
+t=5s: LINK_LOST, esegue RTL autonomo (no uplink richiesto)
 t=5s+Δ: UAV vira verso home waypoint pre-caricato a pre-flight
 t=5s+60s-120s: stimata rientro (dipende da distanza, circa 5-10 km/min)
 t=RTL+30s: GCS tenta riconnessione ogni 5 s durante RTL
@@ -338,15 +338,15 @@ Il link C2 RF si conforma a: MAVLink Common Message Set v2.0 dialect [^MAVLink];
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│                    C2 LINK HIERARCHY: PERCORSO 6A                    │
-│                                                                      │
-│  LIVELLO 1 (PRIMARY):    RF 2.4 GHz ISM / Licensed                  │
-│  LIVELLO 2 (SECONDARY):  SATCOM (selezione per scenario, vedi sotto)│
-│  LIVELLO 3 (FALLBACK):   Loiter → RTL → Emergency Land               │
-│                                                                      │
-│  Escalation logic:                                                   │
-│  t=0-3s link degraded → SATCOM switch attempt                        │
-│  t=3-5s no RF + no SATCOM → LINK_LOST → RTL (Livello 3)             │
+│ C2 LINK HIERARCHY: PERCORSO 6A │
+│ │
+│ LIVELLO 1 (PRIMARY): RF 2.4 GHz ISM / Licensed │
+│ LIVELLO 2 (SECONDARY): SATCOM (selezione per scenario, vedi sotto)│
+│ LIVELLO 3 (FALLBACK): Loiter → RTL → Emergency Land │
+│ │
+│ Escalation logic: │
+│ t=0-3s link degraded → SATCOM switch attempt │
+│ t=3-5s no RF + no SATCOM → LINK_LOST → RTL (Livello 3) │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -385,13 +385,13 @@ Il link C2 RF si conforma a: MAVLink Common Message Set v2.0 dialect [^MAVLink];
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  L7  Application   │ MAVLink v2.0 (subset ridotto, vedi sotto)  │
-│  L6  Presentation  │ AES-256-GCM (stesso schema INT-03)         │
-│  L5  Session       │ TCP keepalive (60 s interval)              │
-│  L4  Transport     │ TCP/IP (affidabilità vs UDP per link lento) │
-│  L3  Network       │ IP (Iridium PPP address assignment)         │
-│  L2  Data Link     │ PPP (RFC 1661) over Iridium IRDSS bearer   │
-│  L1  Physical      │ L-band 1616-1626.5 MHz, TDMA/FDMA IRIDIUM │
+│ L7 Application │ MAVLink v2.0 (subset ridotto, vedi sotto) │
+│ L6 Presentation │ AES-256-GCM (stesso schema INT-03) │
+│ L5 Session │ TCP keepalive (60 s interval) │
+│ L4 Transport │ TCP/IP (affidabilità vs UDP per link lento) │
+│ L3 Network │ IP (Iridium PPP address assignment) │
+│ L2 Data Link │ PPP (RFC 1661) over Iridium IRDSS bearer │
+│ L1 Physical │ L-band 1616-1626.5 MHz, TDMA/FDMA IRIDIUM │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -426,28 +426,28 @@ Il bitrate Iridium 22 kbps uplink impone un subset di messaggi MAVLink.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│              LINK ESCALATION SEQUENCE: TEMPORIZZAZIONE                  │
-│                                                                         │
-│  t=0:    Ultimo HEARTBEAT RF valido                                      │
-│  t=2s:   RF DEGRADED, inizia switch SATCOM (modem power-on se dormante) │
-│           AT+SBDIX tentativo connessione Iridium                        │
-│  t=3s:   SATCOM connessione stabilita (se disponibile)                  │
-│           MAVLink rerouting: UDP socket → TCP socket SATCOM             │
-│           GCS alert: "C2 via SATCOM, latency elevated 1.5s"             │
-│  t=3s+:  Operazioni con latency SATCOM; no pilot-in-loop manovre        │
-│           Missione autonoma waypoint prosegue; operator monitora solo   │
-│                                                                         │
-│  IF SATCOM NOT available at t=3s:                                       │
-│  t=5s:   LINK_LOST definitivo → RTL autonomo (FCS indipendente)         │
-│  t=5s:   GCS alert CRITICAL + SMS Protezione Civile via gateway         │
-│                                                                         │
-│  During RTL (RF still absent, SATCOM present):                          │
-│  t=5s-RTL: SATCOM heartbeat monitoring; FCS stato via SATCOM            │
-│            IF RF restored: seamless switch back RF primary              │
-│                                                                         │
-│  IF SATCOM lost DURING RTL:                                             │
-│  t+60s:  Loiter 2 min @ RTL altitude (wait RF restoration)             │
-│  t+120s: Emergency land pre-computed safe zone (DTM Liguria)            │
+│ LINK ESCALATION SEQUENCE: TEMPORIZZAZIONE │
+│ │
+│ t=0: Ultimo HEARTBEAT RF valido │
+│ t=2s: RF DEGRADED, inizia switch SATCOM (modem power-on se dormante) │
+│ AT+SBDIX tentativo connessione Iridium │
+│ t=3s: SATCOM connessione stabilita (se disponibile) │
+│ MAVLink rerouting: UDP socket → TCP socket SATCOM │
+│ GCS alert: "C2 via SATCOM, latency elevated 1.5s" │
+│ t=3s+: Operazioni con latency SATCOM; no pilot-in-loop manovre │
+│ Missione autonoma waypoint prosegue; operator monitora solo │
+│ │
+│ IF SATCOM NOT available at t=3s: │
+│ t=5s: LINK_LOST definitivo → RTL autonomo (FCS indipendente) │
+│ t=5s: GCS alert CRITICAL + SMS Protezione Civile via gateway │
+│ │
+│ During RTL (RF still absent, SATCOM present): │
+│ t=5s-RTL: SATCOM heartbeat monitoring; FCS stato via SATCOM │
+│ IF RF restored: seamless switch back RF primary │
+│ │
+│ IF SATCOM lost DURING RTL: │
+│ t+60s: Loiter 2 min @ RTL altitude (wait RF restoration) │
+│ t+120s: Emergency land pre-computed safe zone (DTM Liguria) │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -457,23 +457,23 @@ Il modem Iridium 9770 (o compatibile Iridium Certus 100) viene controllato via *
 
 ```
 # 1. Verifica stato modem
-AT           → OK
-AT+SBDMTA=1  → OK   (abilita ricezione MT SBD, mobile-terminated)
+AT → OK
+AT+SBDMTA=1 → OK (abilita ricezione MT SBD, mobile-terminated)
 
 # 2. Tentativo connessione e invio primo heartbeat
-AT+SBDWB=19  → READY   (write binary 19 byte, HEARTBEAT MAVLink)
+AT+SBDWB=19 → READY (write binary 19 byte, HEARTBEAT MAVLink)
 [invia 19 byte MAVLink HEARTBEAT + 2 byte checksum]
-              → 0  (OK)
-AT+SBDIX     → +SBDIX: <MO_status>,<MOMSN>,<MT_status>,<MTMSN>,<MT_len>,<MT_queued>
+ → 0 (OK)
+AT+SBDIX → +SBDIX: <MO_status>,<MOMSN>,<MT_status>,<MTMSN>,<MT_len>,<MT_queued>
 # MO_status=0 → successo invio; MO_status=1 → nessun response; >2 → errore
 
 # 3. Lettura risposta MT (se MT_status=1 → dato in coda)
-AT+SBDRB     → [binary data MT, MAVLink da GCS]
+AT+SBDRB → [binary data MT, MAVLink da GCS]
 
 # 4. Loop telemetria SATCOM (ogni 5 s)
-AT+SBDWB=<len>  → READY
-[dati]          → 0
-AT+SBDIX        → +SBDIX: 0,...   (success)
+AT+SBDWB=<len> → READY
+[dati] → 0
+AT+SBDIX → +SBDIX: 0,... (success)
 
 # 5. Switch back a RF primario (se heartbeat RF restored)
 # Nessun comando AT necessario, il routing layer software gestisce
@@ -554,19 +554,19 @@ AT+SBDIX        → +SBDIX: 0,...   (success)
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
-│                  PAYLOAD-TO-AVIONICS BUS ARCHITECTURE              │
-│                                                                    │
-│  Sony α7R IV ─── GigE Vision 1000BASE-T ──┐                       │
-│  (100 MP RAW 16-bit, trigger 1-5 fps)      │                       │
-│                                            ├──► Mission Computer  │
-│  Workswell WIRIS ─ USB 3.1 Gen1 ──────────┤    (Jetson Orin NX)  │
-│  (LWIR 640×512, 60 fps, 16-bit thermal)   │                       │
-│                                            │                       │
-│  Gimbal PWM/CAN ─ CAN FD (500 kbps) ─────┘                       │
-│  (pan/tilt/roll control; FOV commands)                             │
-│                                                                    │
-│  GNSS PPS ──────────────────────────────────► MC timestamp engine │
-│  (1 PPS ±50 ns GPS disciplined, NMEA 0183)  (geotagging sync)    │
+│ PAYLOAD-TO-AVIONICS BUS ARCHITECTURE │
+│ │
+│ Sony α7R IV ─── GigE Vision 1000BASE-T ──┐ │
+│ (100 MP RAW 16-bit, trigger 1-5 fps) │ │
+│ ├──► Mission Computer │
+│ Workswell WIRIS ─ USB 3.1 Gen1 ──────────┤ (Jetson Orin NX) │
+│ (LWIR 640×512, 60 fps, 16-bit thermal) │ │
+│ │ │
+│ Gimbal PWM/CAN ─ CAN FD (500 kbps) ─────┘ │
+│ (pan/tilt/roll control; FOV commands) │
+│ │
+│ GNSS PPS ──────────────────────────────────► MC timestamp engine │
+│ (1 PPS ±50 ns GPS disciplined, NMEA 0183) (geotagging sync) │
 └────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -582,9 +582,9 @@ Compresso JPEG lossless (ratio 2:1): ~60 MB/frame
 Compresso HEIF 10-bit (ratio 4:1): ~30 MB/frame
 
 Rate operativo:
-  - Fotogrammetria ispezione: 1 fps → 60-120 MB/s (bus GigE 125 MB/s → OK margine)
-  - Ispezione continua HD: 3 fps → 180-360 MB/s (ECCEDE GigE 1G, richiede compressione in-camera o riduzione risoluzione)
-  
+ - Fotogrammetria ispezione: 1 fps → 60-120 MB/s (bus GigE 125 MB/s → OK margine)
+ - Ispezione continua HD: 3 fps → 180-360 MB/s (ECCEDE GigE 1G, richiede compressione in-camera o riduzione risoluzione)
+ 
 Soluzione: Sony α7R IV in modalità APS-C crop (26 MP) a 3 fps = 26×10^6 × 16 bit / 8 = 52 MB/frame × 3 = 156 MB/s < 125 MB/s GigE
 → OPPURE: full frame 1 fps + burst 3 fps in memoria buffer camera (buffer interno 828 MB per circa 7 frame burst)
 
@@ -598,7 +598,7 @@ GigE Vision configurazione: binning 2×2 → 4752×3168 = 15 MP × 16 bit = 30 M
 Sensore: FLIR Lepton 3.5 o Lynred Pico640, 640×512 px, 16-bit thermal
 Frame rate: 25 fps (EXPORT CONTROLLED) o 9 fps (non-export-restricted)
 Bitrate RAW: 640 × 512 × 16 bit × 25 fps = 131.1 Mbps
-             640 × 512 × 16 bit × 9 fps  = 47.2 Mbps
+ 640 × 512 × 16 bit × 9 fps = 47.2 Mbps
 
 USB 3.1 Gen1 bandwidth: 5 Gbps → ampiamente sufficiente
 Formato output: TIFF 16-bit radiometrico o JPG 8-bit display
@@ -615,17 +615,17 @@ NOTE EXPORT CONTROL: LWIR 640×512 > 9 Hz → dual-use (EAR/ITAR/Reg. UE 2021/82
 Gimbal: DJI Zenmuse X7-equivalent o gimbal custom 3-axis
 Bus: CAN FD (ISO 11898-2) @ 500 kbps nominal, 2 Mbps data phase
 Protocollo: MAVLink GIMBAL_DEVICE_SET_ATTITUDE (MSG ID 284) over CAN-MAVLink bridge
-            o DroneCAN (ex UAVCAN v1.0) per gimbal di nuova generazione
+ o DroneCAN (ex UAVCAN v1.0) per gimbal di nuova generazione
 
 Messaggi gimbal (frequenza 10 Hz per controllo smooth):
-  - GIMBAL_DEVICE_SET_ATTITUDE: q[4] float, angular_velocity[3] float, flags
-  - GIMBAL_DEVICE_ATTITUDE_STATUS: attitude corrente, failure flags
-  Bitrate: 10 Hz × (50 byte CAN frame × 8) = 4 kbps → < 500 kbps OK ampiamente
+ - GIMBAL_DEVICE_SET_ATTITUDE: q[4] float, angular_velocity[3] float, flags
+ - GIMBAL_DEVICE_ATTITUDE_STATUS: attitude corrente, failure flags
+ Bitrate: 10 Hz × (50 byte CAN frame × 8) = 4 kbps → < 500 kbps OK ampiamente
 
 FOV control protocol:
-  MAV_CMD_SET_CAMERA_ZOOM (MSG ID 531): zoom_type, zoom_value
-  MAV_CMD_DO_MOUNT_CONTROL (MSG ID 205): pitch/roll/yaw target
-  MAV_CMD_IMAGE_START_CAPTURE (MSG ID 2000): interval, total_images, sequence
+ MAV_CMD_SET_CAMERA_ZOOM (MSG ID 531): zoom_type, zoom_value
+ MAV_CMD_DO_MOUNT_CONTROL (MSG ID 205): pitch/roll/yaw target
+ MAV_CMD_IMAGE_START_CAPTURE (MSG ID 2000): interval, total_images, sequence
 ```
 
 ### [v2.0 NEW] GNSS PPS Timing Sync: sub-microsecond Geotagging
@@ -634,28 +634,28 @@ La sincronizzazione temporale per geotagging sub-microsecondo è critica per fot
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│                  GNSS PPS TIMING ARCHITECTURE                        │
-│                                                                      │
-│  GNSS Receiver (u-blox F9P o equivalente) ──PPS signal──► MC GPIO  │
-│  (1 PPS rising edge, accuracy ±50 ns RMS, NMEA $GPRMC time ref)    │
-│                                                                      │
-│  MC Timestamp Engine:                                                │
-│   - PPS interrupt handler latency < 10 µs (kernel PREEMPT_RT)      │
-│   - Hardware timer latch at PPS rising edge: absolute time = TAI    │
-│   - Software interpolation between PPS pulses: 100 kHz counter      │
-│   - Timestamp resolution: 10 µs (counter period)                    │
-│   - Timestamp accuracy: ±50 ns PPS + ±10 µs interpolation ≈ ±10 µs│
-│                                                                      │
-│  Geotagging injection:                                               │
-│   - Camera trigger signal: MC GPIO → camera external trigger        │
-│   - Trigger latency measured: camera shutter lag (α7R IV ≈ 30 ms)  │
-│   - Correction applied: timestamp = T_PPS_latch + shutter_lag_cal  │
-│   - Shutter lag calibration: factory test M+10 (measured per unit) │
-│                                                                      │
-│  EXIF/XMP embedding:                                                 │
-│   - Lat/Lon/Alt: GLOBAL_POSITION_INT MAVLink interpolated @ T_shutter│
-│   - Timestamp: UTC ISO 8601 µs precision                            │
-│   - IMU attitude: ATTITUDE MAVLink @ T_shutter (roll/pitch/yaw)     │
+│ GNSS PPS TIMING ARCHITECTURE │
+│ │
+│ GNSS Receiver (u-blox F9P o equivalente) ──PPS signal──► MC GPIO │
+│ (1 PPS rising edge, accuracy ±50 ns RMS, NMEA $GPRMC time ref) │
+│ │
+│ MC Timestamp Engine: │
+│ - PPS interrupt handler latency < 10 µs (kernel PREEMPT_RT) │
+│ - Hardware timer latch at PPS rising edge: absolute time = TAI │
+│ - Software interpolation between PPS pulses: 100 kHz counter │
+│ - Timestamp resolution: 10 µs (counter period) │
+│ - Timestamp accuracy: ±50 ns PPS + ±10 µs interpolation ≈ ±10 µs│
+│ │
+│ Geotagging injection: │
+│ - Camera trigger signal: MC GPIO → camera external trigger │
+│ - Trigger latency measured: camera shutter lag (α7R IV ≈ 30 ms) │
+│ - Correction applied: timestamp = T_PPS_latch + shutter_lag_cal │
+│ - Shutter lag calibration: factory test M+10 (measured per unit) │
+│ │
+│ EXIF/XMP embedding: │
+│ - Lat/Lon/Alt: GLOBAL_POSITION_INT MAVLink interpolated @ T_shutter│
+│ - Timestamp: UTC ISO 8601 µs precision │
+│ - IMU attitude: ATTITUDE MAVLink @ T_shutter (roll/pitch/yaw) │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -715,35 +715,35 @@ La sincronizzazione temporale per geotagging sub-microsecondo è critica per fot
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│                    DAA ARCHITECTURE: PERCORSO 6A                    │
-│                                                                      │
-│  ┌─────────────────────────────────────────────────────────┐        │
-│  │  SENSORI                                                │        │
-│  │  ADS-B IN Receiver (uAvionix ping2020i o equiv)         │        │
-│  │  - 1090ES (DF17/18/19): traffico GA cooperativo         │        │
-│  │  - ADS-L (868 MHz): UAV cooperativi registrati U-Space  │        │
-│  │  - FLARM (868 MHz OGN): alianti, ULM, parapendio        │        │
-│  │                                                         │        │
-│  │  [SAIL III OPZIONALE] Radar non-cooperativo             │        │
-│  │  o EO visual detection (se ENAC richiede)               │        │
-│  └─────────────────────────────────────────────────────────┘        │
-│                    │                                                 │
-│                    ▼                                                 │
-│  ┌─────────────────────────────────────────────────────────┐        │
-│  │  DAA PROCESSING (Mission Computer / FCS)                │        │
-│  │  - Track fusion: ADS-B + ADS-L + FLARM                  │        │
-│  │  - Threat assessment: CPA (Closest Point of Approach)   │        │
-│  │  - DMOD/ZTHR thresholds (DO-365B §2.2.3)                │        │
-│  │  - Alert levels: TA (Traffic Advisory) + RA (Resolution)│        │
-│  └─────────────────────────────────────────────────────────┘        │
-│                    │                                                 │
-│                    ▼                                                 │
-│  ┌─────────────────────────────────────────────────────────┐        │
-│  │  RESPONSE                                               │        │
-│  │  - TA: GCS alert + pilot decision (pilot-in-loop)       │        │
-│  │  - RA: Auto maneuver suggerita (SAIL III: auto-execute  │        │
-│  │        se pilot no-response in 5 s)                     │        │
-│  └─────────────────────────────────────────────────────────┘        │
+│ DAA ARCHITECTURE: PERCORSO 6A │
+│ │
+│ ┌─────────────────────────────────────────────────────────┐ │
+│ │ SENSORI │ │
+│ │ ADS-B IN Receiver (uAvionix ping2020i o equiv) │ │
+│ │ - 1090ES (DF17/18/19): traffico GA cooperativo │ │
+│ │ - ADS-L (868 MHz): UAV cooperativi registrati U-Space │ │
+│ │ - FLARM (868 MHz OGN): alianti, ULM, parapendio │ │
+│ │ │ │
+│ │ [SAIL III OPZIONALE] Radar non-cooperativo │ │
+│ │ o EO visual detection (se ENAC richiede) │ │
+│ └─────────────────────────────────────────────────────────┘ │
+│ │ │
+│ ▼ │
+│ ┌─────────────────────────────────────────────────────────┐ │
+│ │ DAA PROCESSING (Mission Computer / FCS) │ │
+│ │ - Track fusion: ADS-B + ADS-L + FLARM │ │
+│ │ - Threat assessment: CPA (Closest Point of Approach) │ │
+│ │ - DMOD/ZTHR thresholds (DO-365B §2.2.3) │ │
+│ │ - Alert levels: TA (Traffic Advisory) + RA (Resolution)│ │
+│ └─────────────────────────────────────────────────────────┘ │
+│ │ │
+│ ▼ │
+│ ┌─────────────────────────────────────────────────────────┐ │
+│ │ RESPONSE │ │
+│ │ - TA: GCS alert + pilot decision (pilot-in-loop) │ │
+│ │ - RA: Auto maneuver suggerita (SAIL III: auto-execute │ │
+│ │ se pilot no-response in 5 s) │ │
+│ └─────────────────────────────────────────────────────────┘ │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -762,23 +762,23 @@ La sincronizzazione temporale per geotagging sub-microsecondo è critica per fot
 
 ```
 ME Type Code (5 bit) → determina tipo messaggio:
-  TC 1-4:   Aircraft Identification (callsign 8 char)
-  TC 5-8:   Surface Position (lat/lon, ground speed)
-  TC 9-18:  Airborne Position (lat/lon, altitude, CPR)
-  TC 19:    Airborne Velocity (speed, heading, vertical rate)
-  TC 20-22: Airborne Position (Gillham altitude)
-  TC 28:    Aircraft Status (emergency/priority)
-  TC 29:    Target State and Status (FMS targets)
-  TC 31:    Aircraft Operational Status (ADS-B version, capability)
+ TC 1-4: Aircraft Identification (callsign 8 char)
+ TC 5-8: Surface Position (lat/lon, ground speed)
+ TC 9-18: Airborne Position (lat/lon, altitude, CPR)
+ TC 19: Airborne Velocity (speed, heading, vertical rate)
+ TC 20-22: Airborne Position (Gillham altitude)
+ TC 28: Aircraft Status (emergency/priority)
+ TC 29: Target State and Status (FMS targets)
+ TC 31: Aircraft Operational Status (ADS-B version, capability)
 
 Per DAA, messaggi prioritari:
-  TC 9-18: Posizione (lat/lon CPR encoded, altitude Gillham/Gray)
-    - CPR (Compact Position Reporting): 17 bit lat + 17 bit lon
-    - Risoluzione dopo decode: ~5.1 m @ equatore
-    - Update rate: 0.5-2 Hz (regime crociera) o fino a 5 Hz (superficie)
-  TC 19:   Velocità
-    - Subsonic: East-West velocity (11 bit) + North-South velocity (11 bit)
-    - Vertical rate (9 bit, 64 fpm resolution)
+ TC 9-18: Posizione (lat/lon CPR encoded, altitude Gillham/Gray)
+ - CPR (Compact Position Reporting): 17 bit lat + 17 bit lon
+ - Risoluzione dopo decode: ~5.1 m @ equatore
+ - Update rate: 0.5-2 Hz (regime crociera) o fino a 5 Hz (superficie)
+ TC 19: Velocità
+ - Subsonic: East-West velocity (11 bit) + North-South velocity (11 bit)
+ - Vertical rate (9 bit, 64 fpm resolution)
 ```
 
 **MOPS DO-260B §2.2.1: Range di ricezione DAA:**
@@ -799,15 +799,15 @@ Per DAA, messaggi prioritari:
 
 ```
 ADS-L message format (EUROCAE ED-270 Annex A):
-  Header:    3 byte (version, message type, source ID)
-  Position:  lat/lon 4 byte each (WGS-84, 10e-7 deg resolution)
-  Altitude:  3 byte (cm above WGS-84, range 0-16777 m)
-  Velocity:  2 byte N/S + 2 byte E/W (cm/s, range ±327 m/s)
-  Heading:   2 byte (0.01 deg resolution)
-  Timestamp: 4 byte (Unix epoch seconds)
-  CRC:       2 byte CRC-16/CCITT
-  Total:     ≈ 26 byte per frame
-  Rate:      1 Hz obbligatorio (ogni 1 s ±200 ms jitter)
+ Header: 3 byte (version, message type, source ID)
+ Position: lat/lon 4 byte each (WGS-84, 10e-7 deg resolution)
+ Altitude: 3 byte (cm above WGS-84, range 0-16777 m)
+ Velocity: 2 byte N/S + 2 byte E/W (cm/s, range ±327 m/s)
+ Heading: 2 byte (0.01 deg resolution)
+ Timestamp: 4 byte (Unix epoch seconds)
+ CRC: 2 byte CRC-16/CCITT
+ Total: ≈ 26 byte per frame
+ Rate: 1 Hz obbligatorio (ogni 1 s ±200 ms jitter)
 ```
 
 **Integrazione con U-Space via D-Flight:** il FCS del CW-30E trasmette ADS-L (o FLARM + traduzione ADS-L via bridge) verso D-Flight USSP (U-Space Service Provider) per tracciamento cooperativo. Il receiver ADS-L a bordo riceve gli altri UAV registrati nel volume operativo.
@@ -818,22 +818,22 @@ ADS-L message format (EUROCAE ED-270 Annex A):
 
 ```
 Input per ogni intruder tracciato:
-  p_own = [lat, lon, alt, Vn, Ve, Vd]  (ownship da GNSS + IMU)
-  p_int = [lat, lon, alt, Vn, Ve, Vd]  (intruder da ADS-B/ADS-L)
+ p_own = [lat, lon, alt, Vn, Ve, Vd] (ownship da GNSS + IMU)
+ p_int = [lat, lon, alt, Vn, Ve, Vd] (intruder da ADS-B/ADS-L)
 
 Calcolo:
-  Δp = p_int - p_own  (relativa posizione, frame NED)
-  Δv = v_int - v_own  (relativa velocità)
-  
-  t_CPA = -dot(Δp, Δv) / dot(Δv, Δv)   (tempo a CPA)
-  CPA_range = |Δp + Δv × t_CPA|          (distanza al CPA)
-  CPA_alt = Δalt + ΔVd × t_CPA          (separazione verticale)
+ Δp = p_int - p_own (relativa posizione, frame NED)
+ Δv = v_int - v_own (relativa velocità)
+ 
+ t_CPA = -dot(Δp, Δv) / dot(Δv, Δv) (tempo a CPA)
+ CPA_range = |Δp + Δv × t_CPA| (distanza al CPA)
+ CPA_alt = Δalt + ΔVd × t_CPA (separazione verticale)
 
 Alert thresholds (derivati DO-365B §2.2.3 [^DO365B]):
-  DMOD (Distance Modification Threshold): 0.66 NM (1.22 km) per Specific Category
-  ZTHR (Z Threshold vertical): 450 ft (137 m) per Specific Category
-  TMOD (Time to CPA): ≤ 35 s → Traffic Advisory (TA)
-              ≤ 20 s → Resolution Advisory (RA)
+ DMOD (Distance Modification Threshold): 0.66 NM (1.22 km) per Specific Category
+ ZTHR (Z Threshold vertical): 450 ft (137 m) per Specific Category
+ TMOD (Time to CPA): ≤ 35 s → Traffic Advisory (TA)
+ ≤ 20 s → Resolution Advisory (RA)
 
 Alert latency from track update to alert: ≤ 5 s (target < 2 s per TA)
 Safe separation maneuver: climb/descend 500 fpm + turn ≤ 25° bank
@@ -863,50 +863,50 @@ Safe separation maneuver: climb/descend 500 fpm + turn ≤ 25° bank
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                 DAA LATENCY CHAIN: END-TO-END                          │
-│                                                                         │
-│  ADS-B message received (1090 MHz) → ADS-B receiver decode             │
-│  Latency: 50 ms (receiver processing + UART output)                    │
-│                    │                                                    │
-│                    ▼                                                    │
-│  GDL90 / JSON → Mission Computer track fusion                          │
-│  Latency: 100 ms (track association, CPA calculation)                  │
-│                    │                                                    │
-│                    ▼                                                    │
-│  Alert generated → MAVLink STATUSTEXT + TRAFFIC_REPORT (MSG 246)       │
-│  Latency: 10 ms (MAVLink encoding + transmission RF/SATCOM)            │
-│                    │                                                    │
-│                    ▼                                                    │
-│  GCS alert display + audio                                             │
-│  Latency: 50 ms (network + display rendering)                          │
-│                    │                                                    │
-│                    ▼                                                    │
-│  Pilot assessment + decision                                           │
-│  Latency: 2-5 s (human factor, DO-365B §3.2 pilot reaction time)      │
-│                    │                                                    │
-│  TOTAL TA latency (ADS-B rx → pilot aware): ≈ 2.5-5.5 s              │
-│  TOTAL RA latency (to auto-maneuver initiation): ≤ 5 s (threshold)    │
-│                                                                         │
-│  DO-365B §2.2.3 requirement: alert ≤ 35 s before CPA per TA           │
-│  → Budget residuo: 35 s - 5.5 s = 29.5 s sufficiente ✓               │
+│ DAA LATENCY CHAIN: END-TO-END │
+│ │
+│ ADS-B message received (1090 MHz) → ADS-B receiver decode │
+│ Latency: 50 ms (receiver processing + UART output) │
+│ │ │
+│ ▼ │
+│ GDL90 / JSON → Mission Computer track fusion │
+│ Latency: 100 ms (track association, CPA calculation) │
+│ │ │
+│ ▼ │
+│ Alert generated → MAVLink STATUSTEXT + TRAFFIC_REPORT (MSG 246) │
+│ Latency: 10 ms (MAVLink encoding + transmission RF/SATCOM) │
+│ │ │
+│ ▼ │
+│ GCS alert display + audio │
+│ Latency: 50 ms (network + display rendering) │
+│ │ │
+│ ▼ │
+│ Pilot assessment + decision │
+│ Latency: 2-5 s (human factor, DO-365B §3.2 pilot reaction time) │
+│ │ │
+│ TOTAL TA latency (ADS-B rx → pilot aware): ≈ 2.5-5.5 s │
+│ TOTAL RA latency (to auto-maneuver initiation): ≤ 5 s (threshold) │
+│ │
+│ DO-365B §2.2.3 requirement: alert ≤ 35 s before CPA per TA │
+│ → Budget residuo: 35 s - 5.5 s = 29.5 s sufficiente ✓ │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
 **MAVLink TRAFFIC_REPORT (MSG ID 246):**
 ```
-icao_address:    uint32 (24-bit ICAO + parity bits)
-lat:             int32 (1e7 deg)
-lon:             int32 (1e7 deg)
-altitude_type:   uint8 (0=ADSB_ALTITUDE_TYPE_PRESSURE, 1=GNSS)
-altitude:        float (m, MSL o GNSS)
-heading:         uint16 (cdeg, 0-35999)
-hor_velocity:    uint16 (cm/s)
-ver_velocity:    int16 (cm/s, + up)
-callsign:        char[9] (ICAO callsign)
-emitter_type:    uint8 (ADSB_EMITTER_TYPE enum)
-tslc:            uint8 (Time Since Last Communication, s)
-flags:           uint16 (ADSB_FLAGS bitmap: VALID_COORDS, VALID_ALTITUDE, etc.)
-squawk:          uint16 (Mode C squawk)
+icao_address: uint32 (24-bit ICAO + parity bits)
+lat: int32 (1e7 deg)
+lon: int32 (1e7 deg)
+altitude_type: uint8 (0=ADSB_ALTITUDE_TYPE_PRESSURE, 1=GNSS)
+altitude: float (m, MSL o GNSS)
+heading: uint16 (cdeg, 0-35999)
+hor_velocity: uint16 (cm/s)
+ver_velocity: int16 (cm/s, + up)
+callsign: char[9] (ICAO callsign)
+emitter_type: uint8 (ADSB_EMITTER_TYPE enum)
+tslc: uint8 (Time Since Last Communication, s)
+flags: uint16 (ADSB_FLAGS bitmap: VALID_COORDS, VALID_ALTITUDE, etc.)
+squawk: uint16 (Mode C squawk)
 ```
 
 ### Failure Mode Behavior
@@ -955,64 +955,64 @@ squawk:          uint16 (Mode C squawk)
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│              PRIVACY PIPELINE: FLOW DETTAGLIATO                     │
-│                                                                      │
-│  INPUT: EO RAW frame (15 MP GigE Vision, 1-3 fps)                   │
-│                                                                      │
-│  STEP 1: Resize per inference                                        │
-│    RAW 15 MP → resize bicubic → 640×640 px (YOLO input size)        │
-│    Latency: 5 ms (GPU CUDA resize, Jetson Orin)                     │
-│                                                                      │
-│  STEP 2: Face detection (YOLOv8n)                                   │
-│    Model: YOLOv8n (nano) quantized INT8 (TensorRT engine)           │
-│    Input: 640×640×3 uint8                                           │
-│    Output: bounding boxes [x,y,w,h,confidence,class]                │
-│    Threshold: confidence ≥ 0.5, NMS IoU 0.45                        │
-│    Latency: 8-12 ms (Jetson Orin GPU, batch=1)                      │
-│    Classes: face (class 0), person (class 1)                        │
-│                                                                      │
-│  STEP 3: Plate detection (ANPR, Automatic Number Plate Rec.)        │
-│    Model: custom YOLO fine-tuned su targhe EU (IT, FR, DE, EU std)  │
-│    Input: 640×640×3 uint8 (stessa inference pass di Step 2)         │
-│    Output: bounding boxes targa                                     │
-│    Latency: incluso in Step 2 (multi-class detection)               │
-│                                                                      │
-│  STEP 4: Backproject ROI → coordinate originale 15 MP               │
-│    Scale factor: 15 MP / 640px → scale_x = 9504/640 = 14.85       │
-│                                   scale_y = 6336/640 = 9.9         │
-│    Expand ROI: +10% padding per coprire occhiali/capello            │
-│    Min size check: ROI < 5×5 px @ scala originale → skip (già blur) │
-│                                                                      │
-│  STEP 5: Blur applicazione                                           │
-│    Algoritmo: Gaussian blur kernel 51×51 σ=15 (face)               │
-│               Pixelation 8×8 block average (plate, più leggibile)   │
-│    OpenCV: cv2.GaussianBlur(roi, (51,51), 15) su ROI estratto       │
-│    Iniettato back nel frame originale a coordinata backprojected     │
-│    Latency: 2-5 ms (CPU, per ROI; GPU possibile se > 10 ROI/frame)  │
-│                                                                      │
-│  STEP 6: Encoding H.265                                              │
-│    Standard: HEVC (ITU-T H.265 / ISO/IEC 23008-2)                  │
-│    Profile: Main 10 (10-bit per qualità fotogrammetrica)            │
-│    Encoder: hardware NVENC Jetson Orin (non degradare processing GPU)│
-│    CRF equivalent: 23 (visually lossless per fotogrammetria)        │
-│    Container: MP4 (ISO Base Media File Format)                      │
-│    Latency: 10-20 ms (hardware encoder, latency mode = low)         │
-│                                                                      │
-│  STEP 7: DPIA Evidence Chain                                        │
-│    Hash frame processed: SHA-256(frame_H265_encoded) → 32 byte     │
-│    Hash frame RAW: SHA-256(frame_RAW_original) → 32 byte           │
-│    Timestamp: TAI µs precision (PPS-disciplined, vedi INT-05)       │
-│    Log entry: JSON record → append-only log (immutable)             │
-│    Latency: 1 ms (SHA-256 hardware accelerator Jetson)             │
-│                                                                      │
-│  STEP 8: Cloud Upload                                                │
-│    API: AWS S3 compatible (Aruba Object Storage GAIA-X)             │
-│    Protocol: HTTPS (TLS 1.3) + pre-signed URL                       │
-│    Chunk: multipart upload 10 MB per chunk                          │
-│    Latency upload: dipende da backhaul (INT-6A-PHY-010)             │
-│                                                                      │
-│  TOTAL PIPELINE LATENCY: 5+12+5+20+1 = 43 ms (nominal 1 fps)       │
-│  TARGET: < 500 ms ✓  (ampio margine)                                │
+│ PRIVACY PIPELINE: FLOW DETTAGLIATO │
+│ │
+│ INPUT: EO RAW frame (15 MP GigE Vision, 1-3 fps) │
+│ │
+│ STEP 1: Resize per inference │
+│ RAW 15 MP → resize bicubic → 640×640 px (YOLO input size) │
+│ Latency: 5 ms (GPU CUDA resize, Jetson Orin) │
+│ │
+│ STEP 2: Face detection (YOLOv8n) │
+│ Model: YOLOv8n (nano) quantized INT8 (TensorRT engine) │
+│ Input: 640×640×3 uint8 │
+│ Output: bounding boxes [x,y,w,h,confidence,class] │
+│ Threshold: confidence ≥ 0.5, NMS IoU 0.45 │
+│ Latency: 8-12 ms (Jetson Orin GPU, batch=1) │
+│ Classes: face (class 0), person (class 1) │
+│ │
+│ STEP 3: Plate detection (ANPR, Automatic Number Plate Rec.) │
+│ Model: custom YOLO fine-tuned su targhe EU (IT, FR, DE, EU std) │
+│ Input: 640×640×3 uint8 (stessa inference pass di Step 2) │
+│ Output: bounding boxes targa │
+│ Latency: incluso in Step 2 (multi-class detection) │
+│ │
+│ STEP 4: Backproject ROI → coordinate originale 15 MP │
+│ Scale factor: 15 MP / 640px → scale_x = 9504/640 = 14.85 │
+│ scale_y = 6336/640 = 9.9 │
+│ Expand ROI: +10% padding per coprire occhiali/capello │
+│ Min size check: ROI < 5×5 px @ scala originale → skip (già blur) │
+│ │
+│ STEP 5: Blur applicazione │
+│ Algoritmo: Gaussian blur kernel 51×51 σ=15 (face) │
+│ Pixelation 8×8 block average (plate, più leggibile) │
+│ OpenCV: cv2.GaussianBlur(roi, (51,51), 15) su ROI estratto │
+│ Iniettato back nel frame originale a coordinata backprojected │
+│ Latency: 2-5 ms (CPU, per ROI; GPU possibile se > 10 ROI/frame) │
+│ │
+│ STEP 6: Encoding H.265 │
+│ Standard: HEVC (ITU-T H.265 / ISO/IEC 23008-2) │
+│ Profile: Main 10 (10-bit per qualità fotogrammetrica) │
+│ Encoder: hardware NVENC Jetson Orin (non degradare processing GPU)│
+│ CRF equivalent: 23 (visually lossless per fotogrammetria) │
+│ Container: MP4 (ISO Base Media File Format) │
+│ Latency: 10-20 ms (hardware encoder, latency mode = low) │
+│ │
+│ STEP 7: DPIA Evidence Chain │
+│ Hash frame processed: SHA-256(frame_H265_encoded) → 32 byte │
+│ Hash frame RAW: SHA-256(frame_RAW_original) → 32 byte │
+│ Timestamp: TAI µs precision (PPS-disciplined, vedi INT-05) │
+│ Log entry: JSON record → append-only log (immutable) │
+│ Latency: 1 ms (SHA-256 hardware accelerator Jetson) │
+│ │
+│ STEP 8: Cloud Upload │
+│ API: AWS S3 compatible (Aruba Object Storage GAIA-X) │
+│ Protocol: HTTPS (TLS 1.3) + pre-signed URL │
+│ Chunk: multipart upload 10 MB per chunk │
+│ Latency upload: dipende da backhaul (INT-6A-PHY-010) │
+│ │
+│ TOTAL PIPELINE LATENCY: 5+12+5+20+1 = 43 ms (nominal 1 fps) │
+│ TARGET: < 500 ms ✓ (ampio margine) │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -1027,18 +1027,18 @@ Model size: 6.3 MB (FP32) → 1.6 MB (INT8 quantized TensorRT)
 Input: 640×640×3 RGB
 Output: [N_detections × 6] → [x_center, y_center, width, height, confidence, class_id]
 Performance (Jetson Orin NX 16 GB):
-  - FP32: ~50 fps
-  - INT8 TensorRT: ~120 fps
-  - Batch=1 latency: ≈ 8 ms (INT8)
+ - FP32: ~50 fps
+ - INT8 TensorRT: ~120 fps
+ - Batch=1 latency: ≈ 8 ms (INT8)
 Accuracy (WiderFace val hard): mAP ≈ 0.72 (distanza > 5 m, face > 5×5 px @ 640px)
-  NOTA: a bassa quota UAV (≤ 100 m AGL) i volti sono tipicamente > 20×20 px → detection rate > 95%
-  A quota ≥ 150 m AGL: volti < 5 px → detection impossibile → non è tecnicamente necessario blur
-  Soglia operativa raccomandata: altitudine ≤ 120 m AGL per privacy-sensitive operations
+ NOTA: a bassa quota UAV (≤ 100 m AGL) i volti sono tipicamente > 20×20 px → detection rate > 95%
+ A quota ≥ 150 m AGL: volti < 5 px → detection impossibile → non è tecnicamente necessario blur
+ Soglia operativa raccomandata: altitudine ≤ 120 m AGL per privacy-sensitive operations
 False positive rate: ≈ 2-5% (pose non-frontale, oggetti simili a volti) → blurring conservativo OK per GDPR
 
 Requirement GDPR Art. 25 (privacy by design):
-  Qualsiasi bounding box con confidence ≥ 0.5 → BLURRED (approccio conservative)
-  Non si richiede certezza di identificazione; sufficiente probabilità di essere un volto
+ Qualsiasi bounding box con confidence ≥ 0.5 → BLURRED (approccio conservative)
+ Non si richiede certezza di identificazione; sufficiente probabilità di essere un volto
 ```
 
 **ANPR (Plate detection):**
@@ -1049,12 +1049,12 @@ Training data: OpenALPR + EU plates dataset (pubblico) + augmentation
 Classi: [plate_IT, plate_EU, plate_motorcycle]
 Accuracy: mAP ≈ 0.80 per targe EU leggibili (angolo ≤ 30°, distanza ≤ 30 m)
 Nota operativa: a quota ≥ 60 m AGL, targhe auto generalmente illeggibili (< 10 px)
-  → ANPR detection significativa solo a quota < 60 m (poco frequente in missioni BVLOS standard)
-  → Inserire comunque nel pipeline per coprire fasi take-off/landing
+ → ANPR detection significativa solo a quota < 60 m (poco frequente in missioni BVLOS standard)
+ → Inserire comunque nel pipeline per coprire fasi take-off/landing
 
 Alternativa COTS: OpenALPR (Apache License 2.0), già addestrato su targhe EU
-  Performance: ≈ 95% detection rate su immagini ad alta risoluzione
-  Integrazione: Python API o C++ library su Jetson
+ Performance: ≈ 95% detection rate su immagini ad alta risoluzione
+ Integrazione: Python API o C++ library su Jetson
 ```
 
 ### [v2.0 NEW] DPIA Evidence Chain: specifiche immutabilità
@@ -1065,31 +1065,31 @@ Alternativa COTS: OpenALPR (Apache License 2.0), già addestrato su targhe EU
 
 ```json
 {
-  "frame_id": "6A-20260901-143022-000142",
-  "timestamp_tai_us": 1756741822123456,
-  "timestamp_utc_iso": "2026-09-01T12:30:22.123456Z",
-  "gnss_lat_1e7": 446123456,
-  "gnss_lon_1e7": 91234567,
-  "gnss_alt_mm": 850000,
-  "platform_id": "VTOL-6A-001",
-  "operator_id": "FIRMAMENTO-IT-001",
-  "mission_id": "PENTEMA-MISSION-042",
-  "privacy_processing": {
-    "faces_detected": 2,
-    "faces_blurred": 2,
-    "plates_detected": 0,
-    "plates_blurred": 0,
-    "model_version": "yolov8n-face-v1.3",
-    "confidence_threshold": 0.5,
-    "processing_latency_ms": 43
-  },
-  "hashes": {
-    "frame_raw_sha256": "a3f2b1c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2",
-    "frame_processed_sha256": "b4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3"
-  },
-  "raw_retained": false,
-  "raw_retention_reason": null,
-  "log_version": "1.0"
+ "frame_id": "6A-20260901-143022-000142",
+ "timestamp_tai_us": 1756741822123456,
+ "timestamp_utc_iso": "2026-09-01T12:30:22.123456Z",
+ "gnss_lat_1e7": 446123456,
+ "gnss_lon_1e7": 91234567,
+ "gnss_alt_mm": 850000,
+ "platform_id": "VTOL-6A-001",
+ "operator_id": "FIRMAMENTO-IT-001",
+ "mission_id": "PENTEMA-MISSION-042",
+ "privacy_processing": {
+ "faces_detected": 2,
+ "faces_blurred": 2,
+ "plates_detected": 0,
+ "plates_blurred": 0,
+ "model_version": "yolov8n-face-v1.3",
+ "confidence_threshold": 0.5,
+ "processing_latency_ms": 43
+ },
+ "hashes": {
+ "frame_raw_sha256": "a3f2b1c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2",
+ "frame_processed_sha256": "b4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3"
+ },
+ "raw_retained": false,
+ "raw_retention_reason": null,
+ "log_version": "1.0"
 }
 ```
 
@@ -1097,24 +1097,24 @@ Alternativa COTS: OpenALPR (Apache License 2.0), già addestrato su targhe EU
 
 ```
 1. Frame RAW non salvato su storage persistente (memoria volatile MC solo)
-   ECCEZIONE: se operatore dichiara legittimo interesse + consenso esplicito
-              (es. incidente aereo in corso → evidence preservation)
-              → log entry: raw_retained=true, raw_retention_reason="INCIDENTE-202609-001"
+ ECCEZIONE: se operatore dichiara legittimo interesse + consenso esplicito
+ (es. incidente aereo in corso → evidence preservation)
+ → log entry: raw_retained=true, raw_retention_reason="INCIDENTE-202609-001"
 
 2. Log record → append-only file (ext4 append-only flag: chattr +a log.jsonl)
-   → Integrazione SIEM via RFC 5425 TLS Syslog (vedi INT-X-LOGGING-001)
+ → Integrazione SIEM via RFC 5425 TLS Syslog (vedi INT-X-LOGGING-001)
 
 3. Hash chain: H(frame_n) incluso in log_entry(frame_n+1)
-   → Blockchain-light: ogni record firma il precedente (Merkle-like senza distributed ledger)
+ → Blockchain-light: ogni record firma il precedente (Merkle-like senza distributed ledger)
 
 4. Firma digitale log batch (ogni 100 frame o 60 s):
-   → Batch hash = SHA-256(concatenazione di tutti H(frame_i) nel batch)
-   → Firma: ECDSA P-256 con chiave privata HSM airborne (Hardware Security Module)
-   → Firma inviata a cloud ogni ciclo → immutabilità garantita post-landing
+ → Batch hash = SHA-256(concatenazione di tutti H(frame_i) nel batch)
+ → Firma: ECDSA P-256 con chiave privata HSM airborne (Hardware Security Module)
+ → Firma inviata a cloud ogni ciclo → immutabilità garantita post-landing
 
 5. DPO access: dashboard cloud con ricerca per mission_id, data, area geografica
-   → DSAR response entro 30 giorni (GDPR Art. 12)
-   → Evidenza: esporta log JSON per periodo richiesto + hash verification
+ → DSAR response entro 30 giorni (GDPR Art. 12)
+ → Evidenza: esporta log JSON per periodo richiesto + hash verification
 ```
 
 ### Processing Latency: analisi
@@ -1171,7 +1171,7 @@ La pipeline si conforma a: GDPR Reg. UE 2016/679 Art. 25 (Privacy by Design), Ar
 | **INT-13 DAA** | ADS-B IN dichiarato; no message format, no algoritmo, no threshold | DF17/18/19 payload structure; CPR decode; MOPS DO-260B table; CPA algorithm pseudocode; DO-365B DMOD/ZTHR thresholds; ADS-L ED-270 format; TRAFFIC_REPORT MSG 246 spec; latency chain diagram; trade non-coop tecnologie |
 | **INT-15 Privacy** | Anonymization pipeline dichiarata; no algoritmo, no latency, no evidence chain | Pipeline 8-step con latency per step; YOLOv8n spec INT8 TensorRT; ANPR fine-tuning approach; JSON log record completo; hash chain immutabile con ECDSA firma batch; failure mode full-blur fallback; test plan 8 test |
 
-**Riduzione gap Red Team §4.8 Critica 2:**
+**Riduzione gap review critica §4.8 Critica 2:**
 
 | Critica originale | Status in v2.0 |
 |---|---|
@@ -1239,4 +1239,4 @@ I seguenti gap rimangono aperti e devono essere risolti in Fase 1:
 
 *Versione: 2.0 | Data: 2026-05-17 | Owner: Avionics GNC Engineer, Firmamento Technologies*
 *Baseline parent: A4-ICD-PRELIMINARE-v1.0.md (M+3)*
-*Trigger: Red Team audit Cap. 4 §4.8 Critica 2*
+*Trigger: audit review critica Cap. 4 §4.8 Critica 2*

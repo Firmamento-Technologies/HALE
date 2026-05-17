@@ -5,9 +5,9 @@
 > Volume 1, Capitolo 9
 >
 > **Versione:** bozza M+3
-> **Conformità:** D.Lgs. 36/2023 art. 41 (sezione "Cronoprogramma") con NASA SE Handbook §3.0 (Project Life Cycle Reviews) e skill `gate-review-checklist`
-> **Disciplina epistemica:** Regole 1-7 della skill `epistemic-rigor`
-> **Red Team review:** `aerospace-systems-engineer` e `red-team-skeptic` (vedi §9.8)
+> **Conformità:** D.Lgs. 36/2023 art. 41 (sezione "Cronoprogramma") con NASA SE Handbook §3.0 (Project Life Cycle Reviews) e metodologia di gate review
+> **Disciplina metodologica:** rigore epistemico
+> **Review critica indipendente:** ingegneria di sistema aerospaziale e review critica (vedi §9.8)
 
 ---
 
@@ -18,17 +18,17 @@ Il capitolo definisce il **cronoprogramma** dello Studio di Fattibilità (M+0 ve
 ### 9.0.1 Cronoprogramma overall
 
 ```
-M+0    M+3    M+6    M+10/11   M+12         M+24            M+36            M+48
-│      │      │      │         │            │               │               │
-│ G0   │ G1   │ G2   │ G3       │ G4         │ G5            │ G6            │
-│ Kick │ Conc │ Arch │ FEAS     │ End 6A     │ Eval 6B       │ Eval 6B       │ Phase B
-│ off  │ ept  │ itet │ verdict  │ MVP        │ start         │ midterm       │ end
-│      │ fro  │ tura │ Go/Hold  │            │ Phase B       │               │
-│      │ zen  │ base │          │            │               │               │
-│      │      │ line │          │            │               │               │
+M+0 M+3 M+6 M+10/11 M+12 M+24 M+36 M+48
+│ │ │ │ │ │ │ │
+│ G0 │ G1 │ G2 │ G3 │ G4 │ G5 │ G6 │
+│ Kick │ Conc │ Arch │ FEAS │ End 6A │ Eval 6B │ Eval 6B │ Phase B
+│ off │ ept │ itet │ verdict │ MVP │ start │ midterm │ end
+│ │ fro │ tura │ Go/Hold │ │ Phase B │ │
+│ │ zen │ base │ │ │ │ │
+│ │ │ line │ │ │ │ │
 ├──────┼──────┼──────┼──────────┼────────────┼───────────────┼───────────────┼─────►
-│   STUDIO DI FATTIBILITÀ      │   PILOTA 6A VTOL OP        │   R&D 6B HALE PHASE B           │
-│       (Pre-Phase A → A)       │   (Phase B operativo)      │   (Phase B/C R&D HALE)          │
+│ STUDIO DI FATTIBILITÀ │ PILOTA 6A VTOL OP │ R&D 6B HALE PHASE B │
+│ (Pre-Phase A → A) │ (Phase B operativo) │ (Phase B/C R&D HALE) │
 ```
 
 ### 9.0.2 Gate decisionali del Piano di Fattibilità
@@ -70,99 +70,99 @@ In coerenza con Cap. 5.0bis, 3.0bis, 7.0bis:
 ```
 Studio di Fattibilità HALE/VTOL - WBS
 ├── 1.0 Project Management
-│   ├── 1.1 Project planning + governance
-│   ├── 1.2 Risk management continuous (Risk Register update)
-│   ├── 1.3 Stakeholder engagement coordination
-│   └── 1.4 Gate review preparation (G1-G3)
+│ ├── 1.1 Project planning + governance
+│ ├── 1.2 Risk management continuous (Risk Register update)
+│ ├── 1.3 Stakeholder engagement coordination
+│ └── 1.4 Gate review preparation (G1-G3)
 │
 ├── 2.0 Stakeholder & Requirements
-│   ├── 2.1 Stakeholder workshop (M+0-3)
-│   ├── 2.2 StNeeds collection + validation (M+3-6)
-│   ├── 2.3 System Requirements (SyR) baseline (M+3-6)
-│   ├── 2.4 RTM construction + expansion (M+3-10)
-│   └── 2.5 Subsystem Requirements (SsR) decomposition (M+6-10)
+│ ├── 2.1 Stakeholder workshop (M+0-3)
+│ ├── 2.2 StNeeds collection + validation (M+3-6)
+│ ├── 2.3 System Requirements (SyR) baseline (M+3-6)
+│ ├── 2.4 RTM construction + expansion (M+3-10)
+│ └── 2.5 Subsystem Requirements (SsR) decomposition (M+6-10)
 │
 ├── 3.0 Technical Engineering
-│   ├── 3.1 Concept architecture 6A + 6B (M+0-3)
-│   ├── 3.2 Trade studies (M+3-9)
-│   │   ├── TS-PLATFORM-6A
-│   │   ├── TS-MATERIAL
-│   │   ├── TS-PROP-6B
-│   │   ├── TS-AVI-6A
-│   │   ├── TS-PAYLOAD-EO
-│   │   └── TS-COMMS
-│   ├── 3.3 Performance analysis (M+3-9)
-│   ├── 3.4 FMECA + FTA preliminary (M+6-10)
-│   └── 3.5 Energy balance HALE simulation (M+6-10)
+│ ├── 3.1 Concept architecture 6A + 6B (M+0-3)
+│ ├── 3.2 Trade studies (M+3-9)
+│ │ ├── TS-PLATFORM-6A
+│ │ ├── TS-MATERIAL
+│ │ ├── TS-PROP-6B
+│ │ ├── TS-AVI-6A
+│ │ ├── TS-PAYLOAD-EO
+│ │ └── TS-COMMS
+│ ├── 3.3 Performance analysis (M+3-9)
+│ ├── 3.4 FMECA + FTA preliminary (M+6-10)
+│ └── 3.5 Energy balance HALE simulation (M+6-10)
 │
 ├── 4.0 Regulatory Engagement
-│   ├── 4.1 Pre-application meeting ENAC (M+3-6)
-│   ├── 4.2 Engagement EASA Innovation Network (M+6-9)
-│   ├── 4.3 AGCOM spectrum consultation (M+6-10)
-│   ├── 4.4 Privacy/Garante DPIA preliminary (M+3-9)
-│   └── 4.5 Compliance documentation (M+9-11)
+│ ├── 4.1 Pre-application meeting ENAC (M+3-6)
+│ ├── 4.2 Engagement EASA Innovation Network (M+6-9)
+│ ├── 4.3 AGCOM spectrum consultation (M+6-10)
+│ ├── 4.4 Privacy/Garante DPIA preliminary (M+3-9)
+│ └── 4.5 Compliance documentation (M+9-11)
 │
 ├── 5.0 Market & Business
-│   ├── 5.1 Market analysis Liguria (M+0-3)
-│   ├── 5.2 Stakeholder workshop cooperative (M+3-6)
-│   ├── 5.3 LoI Regione Liguria (M+3-6)
-│   ├── 5.4 Customer pricing benchmark (M+3-9)
-│   ├── 5.5 BMC + VPC consolidation (M+6-9)
-│   └── 5.6 MVP definition (M+6-10)
+│ ├── 5.1 Market analysis Liguria (M+0-3)
+│ ├── 5.2 Stakeholder workshop cooperative (M+3-6)
+│ ├── 5.3 LoI Regione Liguria (M+3-6)
+│ ├── 5.4 Customer pricing benchmark (M+3-9)
+│ ├── 5.5 BMC + VPC consolidation (M+6-9)
+│ └── 5.6 MVP definition (M+6-10)
 │
 ├── 6.0 Financial
-│   ├── 6.1 Quadro Economico baseline (M+3-9)
-│   ├── 6.2 NPV/IRR/Payback model (M+6-9)
-│   ├── 6.3 Sensitivity + Monte Carlo (M+9-11)
-│   ├── 6.4 Funding mix consolidation (M+6-10)
-│   └── 6.5 Funding LoI/contracts (M+6-11)
+│ ├── 6.1 Quadro Economico baseline (M+3-9)
+│ ├── 6.2 NPV/IRR/Payback model (M+6-9)
+│ ├── 6.3 Sensitivity + Monte Carlo (M+9-11)
+│ ├── 6.4 Funding mix consolidation (M+6-10)
+│ └── 6.5 Funding LoI/contracts (M+6-11)
 │
 ├── 7.0 Documentation
-│   ├── 7.1 Volume 1 Studio (Cap. 1-11) (M+0-11)
-│   ├── 7.2 Volume 2 Allegati tecnici (M+3-11)
-│   ├── 7.3 Volume 3 Riferimenti (M+9-11)
-│   └── 7.4 Executive Summary (Cap. 0) (M+10-11)
+│ ├── 7.1 Volume 1 Studio (Cap. 1-11) (M+0-11)
+│ ├── 7.2 Volume 2 Allegati tecnici (M+3-11)
+│ ├── 7.3 Volume 3 Riferimenti (M+9-11)
+│ └── 7.4 Executive Summary (Cap. 0) (M+10-11)
 │
 └── 8.0 Gate Review
-    ├── 8.1 G1 preparation (M+2-3)
-    ├── 8.2 G2 preparation (M+5-6)
-    └── 8.3 G3 FEASIBILITY GATE prep (M+9-11)
+ ├── 8.1 G1 preparation (M+2-3)
+ ├── 8.2 G2 preparation (M+5-6)
+ └── 8.3 G3 FEASIBILITY GATE prep (M+9-11)
 ```
 
 ### 9.1.2 Gantt schematico dello Studio di Fattibilità (M+0 verso M+11)
 
 ```
-M+0          M+3          M+6          M+10        M+11
-│            │            │            │           │
+M+0 M+3 M+6 M+10 M+11
+│ │ │ │ │
 │ ── PM/Governance ──────────────────────────────► │
-│            │            │            │           │
-│ Stakeholder workshop ──►│            │           │
-│            │ ── Requirements + RTM ─────────────►│
-│            │            │            │           │
-│ ── Concept arch 6A+6B ─►│            │           │
-│            │ ── Trade studies ──────►│           │
-│            │            │ Performance + FMECA ──►│
-│            │            │            │           │
-│            │ ENAC pre-application ──►│           │
-│            │            │ EASA engagement ──────►│
-│            │            │ AGCOM consultation ───►│
-│            │            │ Garante DPIA ─────────►│
-│            │            │            │           │
-│ Market Liguria ────────►│            │           │
-│            │ LoI Regione + workshop coop ──────►│           │
-│            │            │ MVP definition ───────►│           │
-│            │            │            │           │
-│            │ Quadro Economico ──────────────────►│           │
-│            │            │ NPV/IRR ──────────────►│           │
-│            │            │ Sensitivity + funding ►│           │
-│            │            │            │           │
-│ ── Vol.1 chapters draft ──────────────────────►│           │
-│            │            │ Vol.2 allegati ────►│           │
-│            │            │            │ Vol.3 + Exec Summary │
-│            │            │            │           │
-│ G0        G1           G2            G3         G3 final
-│ Kick      Concept      Arch          FEAS       FEAS verdict
-│ off       Frozen       Baselined     review     Go/Hold
+│ │ │ │ │
+│ Stakeholder workshop ──►│ │ │
+│ │ ── Requirements + RTM ─────────────►│
+│ │ │ │ │
+│ ── Concept arch 6A+6B ─►│ │ │
+│ │ ── Trade studies ──────►│ │
+│ │ │ Performance + FMECA ──►│
+│ │ │ │ │
+│ │ ENAC pre-application ──►│ │
+│ │ │ EASA engagement ──────►│
+│ │ │ AGCOM consultation ───►│
+│ │ │ Garante DPIA ─────────►│
+│ │ │ │ │
+│ Market Liguria ────────►│ │ │
+│ │ LoI Regione + workshop coop ──────►│ │
+│ │ │ MVP definition ───────►│ │
+│ │ │ │ │
+│ │ Quadro Economico ──────────────────►│ │
+│ │ │ NPV/IRR ──────────────►│ │
+│ │ │ Sensitivity + funding ►│ │
+│ │ │ │ │
+│ ── Vol.1 chapters draft ──────────────────────►│ │
+│ │ │ Vol.2 allegati ────►│ │
+│ │ │ │ Vol.3 + Exec Summary │
+│ │ │ │ │
+│ G0 G1 G2 G3 G3 final
+│ Kick Concept Arch FEAS FEAS verdict
+│ off Frozen Baselined review Go/Hold
 ```
 
 ### 9.1.3 Risorse umane per fase
@@ -224,7 +224,7 @@ M+0          M+3          M+6          M+10        M+11
 - ☐ DOCFAP draft per le decisioni architetturali principali
 
 **Exit criteria**:
-- ✅ Architecture sign-off da systems engineer + Red Team check OK
+- ✅ Architecture sign-off da systems engineer + Review critica OK
 - ✅ RTM coverage ≥ 70% StNeeds tracciati
 - ✅ Ogni trade study chiave porta una raccomandazione preliminare
 - ✅ Risk score top-5 con mitigation plan definito
@@ -332,13 +332,13 @@ Il G3 costituisce il gate principale dello Studio. Verdetto formale Go/No-Go per
 (Sovrapposto allo Studio di Fattibilità nei primi 11 mesi.)
 
 ```
-M+0     M+3      M+6        M+9         M+12
-│       │        │          │           │
-│ Setup │ SORA   │ License  │ Auth      │ Operations
-│ team  │ pre-   │ AGCOM    │ ENAC      │ + first
-│ + GS  │ app    │ + DPIA   │ + first   │ revenue
-│       │ ENAC   │          │ missions  │ → G4
-│       │        │          │           │
+M+0 M+3 M+6 M+9 M+12
+│ │ │ │ │
+│ Setup │ SORA │ License │ Auth │ Operations
+│ team │ pre- │ AGCOM │ ENAC │ + first
+│ + GS │ app │ + DPIA │ + first │ revenue
+│ │ ENAC │ │ missions │ → G4
+│ │ │ │ │
 ```
 
 | Milestone | Mese | Deliverable |
@@ -357,12 +357,12 @@ M+0     M+3      M+6        M+9         M+12
 ### 9.3.2 Fase 2, Y2 Espansione Liguria (M+12 verso M+24)
 
 ```
-M+12      M+15        M+18        M+21        M+24
-│         │           │           │           │
-│ Scale   │ Expand    │ 2-3 GS    │ Multi-    │ G5
-│ to 4    │ to 4-6    │ flotta    │ regione   │ Phase B
-│ SNAI    │ use case  │ 2-3 UAS   │ adds      │ start
-│         │           │           │           │
+M+12 M+15 M+18 M+21 M+24
+│ │ │ │ │
+│ Scale │ Expand │ 2-3 GS │ Multi- │ G5
+│ to 4 │ to 4-6 │ flotta │ regione │ Phase B
+│ SNAI │ use case │ 2-3 UAS │ adds │ start
+│ │ │ │ │
 ```
 
 | Milestone | Mese | Deliverable |
@@ -376,12 +376,12 @@ M+12      M+15        M+18        M+21        M+24
 ### 9.3.3 Fase 3, Y3 Multi-regione SNAI (M+24 verso M+36)
 
 ```
-M+24       M+30         M+36
-│          │            │
+M+24 M+30 M+36
+│ │ │
 │ Flotta 3-5│ 3-4 regioni│ HALE
-│ UAS       │ servite    │ subscale
-│           │            │ TRL 5
-│           │            │ G6
+│ UAS │ servite │ subscale
+│ │ │ TRL 5
+│ │ │ G6
 ```
 
 | Milestone | Mese | Deliverable |
@@ -454,11 +454,11 @@ Ogni gate review prevede una **review esplicita dei rischi**.
 
 | ID | Rischio | Score | Gate critico | Mitigation owner |
 |---|---|---|---|---|
-| RSK-TEC-001 | Energy balance HALE inverno 44°N | 20 🔴 | G5 (M+24) | propulsion-energy-engineer |
+| RSK-TEC-001 | Energy balance HALE inverno 44°N | 20 🔴 | G5 (M+24) | team propulsione e energia |
 | RSK-TEC-002 | Aeroelasticità ala high-AR | 15 🔴 | G6 (M+36) | aero-structures-engineer |
-| RSK-REG-001 | Mancanza framework HAPS EASA | 20 🔴 | G5 | aviation-regulatory-counsel |
-| RSK-FIN-001 | Mancanza funding R&D 6B €5.5-11M | 20 🔴 | G3-G5 | financial-cfo-analyst |
-| RSK-TEC-003 | Type Cert HALE > 5 anni | 16 🔴 | G3 (per Phase B Go) | aviation-regulatory-counsel |
+| RSK-REG-001 | Mancanza framework HAPS EASA | 20 🔴 | G5 | consulenza legale-regolatoria aviazione |
+| RSK-FIN-001 | Mancanza funding R&D 6B €5.5-11M | 20 🔴 | G3-G5 | analisi finanziaria CFO |
+| RSK-TEC-003 | Type Cert HALE > 5 anni | 16 🔴 | G3 (per Phase B Go) | consulenza legale-regolatoria aviazione |
 
 ---
 
@@ -490,7 +490,7 @@ Board allargato, integrato da:
 
 ---
 
-## 9.8 Red Team Check, Schedule Stress Test
+## 9.8 Review critica, Schedule Stress Test
 
 ### Critica 1: "11 mesi per Studio di Fattibilità completo è poco rispetto alla base rate aerospace"
 **Razionale**: gli studi di fattibilità aerospace richiedono tipicamente 12-24 mesi. Undici mesi è aggressivo.
@@ -533,9 +533,9 @@ Board allargato, integrato da:
 
 [^2]: D.Lgs. 36/2023 art. 41 e Allegato I.7 (Cronoprogramma). Source: `fonti/2023_0036.md`. Confidence: high.
 
-[^3]: Skill `gate-review-checklist` (`.claude/skills/gate-review-checklist/SKILL.md`). Workflow Go/No-Go applicato.
+[^3]: Metodologia interna di checklist gate review. Workflow Go/No-Go applicato.
 
-[^4]: Skill `epistemic-rigor` con `red-team-skeptic` per stress test del cronoprogramma.
+[^4]: Metodologia di rigore epistemico con review critica per stress test del cronoprogramma.
 
 [^5]: ENAC AAM Roadmap 2021-2030, reference per timing dell'engagement istituzionale. Source: `fonti/02_AAM-Italian-Ecosystem-Roadmap_web-1.md`.
 
@@ -545,9 +545,9 @@ Board allargato, integrato da:
 
 ---
 
-## 9.12 Sliding Timeline Realistica (post Audit Regulatory Adversary M+3)
+## 9.12 Sliding Timeline Realistica (post review regolatoria M+3)
 
-> **Inserimento post-audit M+3**: l'audit `regulatory-adversary` (vedi `AUDIT-REGULATORY-VOLUME-1.md` §2) e l'audit `red-team-skeptic` (vedi `AUDIT-REDTEAM-VOLUME-1.md`) hanno rilevato che **il cronoprogramma del Cap. 9 risulta strutturalmente ottimistico** rispetto alla base rate aerospace italiana. Questa sezione introduce la **sliding timeline realistica** ("worst-case ma plausibile"), in alternativa al piano ottimistico del §9.1-9.5. Lo Studio di Fattibilità **mantiene entrambi**: il piano nominale come target di esecuzione e la sliding timeline come baseline di rischio finanziario e di pianificazione cash flow.
+> **Inserimento alla milestone M+3 (post review critica)**: la review regolatoria indipendente (vedi la review regolatoria interna §2) e la review critica indipendente (vedi la review critica interna) hanno rilevato che **il cronoprogramma del Cap. 9 risulta strutturalmente ottimistico** rispetto alla base rate aerospace italiana. Questa sezione introduce la **sliding timeline realistica** ("worst-case ma plausibile"), in alternativa al piano ottimistico del §9.1-9.5. Lo Studio di Fattibilità **mantiene entrambi**: il piano nominale come target di esecuzione e la sliding timeline come baseline di rischio finanziario e di pianificazione cash flow.
 
 ### 9.12.1 Confronto piano nominale e sliding timeline
 
@@ -617,7 +617,7 @@ Al M+24 nominale la sliding timeline comporta:
 
 ## 9.11 Note di chiusura del capitolo
 
-Il Cap. 9 è **bozza M+3 con aggiornamento sliding timeline post-audit M+3** e verdetto Red Team **OK con caveat strutturali**: il piano nominale resta ottimistico (in coerenza con la cultura aerospace startup); la sliding timeline §9.12 costituisce il **baseline realistico** che lo Studio raccomanda di adottare per la pianificazione finanziaria e per l'aspettativa stakeholder. Entrambi i piani vanno mantenuti come strumenti complementari.
+Il Cap. 9 è **bozza M+3 con aggiornamento sliding timeline alla milestone M+3** e verdetto della review critica **OK con caveat strutturali**: il piano nominale resta ottimistico (in coerenza con la cultura aerospace startup); la sliding timeline §9.12 costituisce il **baseline realistico** che lo Studio raccomanda di adottare per la pianificazione finanziaria e per l'aspettativa stakeholder. Entrambi i piani vanno mantenuti come strumenti complementari.
 
 **Verdetto cronoprogramma riepilogato**:
 - Studio di Fattibilità (M+0-11): **realizzabile** con team focused e consultants.
@@ -632,4 +632,4 @@ Il Cap. 9 è **bozza M+3 con aggiornamento sliding timeline post-audit M+3** e v
 - Workshop comunità Pentema.
 - Workshop cooperative.
 
-Il capitolo si chiude al M+3 con verdetto Red Team **OK con 5 azioni**.
+Il capitolo si chiude al M+3 con verdetto della review critica **OK con 5 azioni**.

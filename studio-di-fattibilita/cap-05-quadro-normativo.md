@@ -6,8 +6,8 @@
 >
 > **Versione:** bozza M+3 (post-Allineamento Strategico Maggio 2026)
 > **Stato:** capitolo redatto con fonti normative autoritative aggiornate al settembre 2025 (EASA ED Decision 2025/018/R)
-> **Disciplina epistemica:** applicate Regole 1-7 della skill `epistemic-rigor` (falsifiability, triangulation, source provenance, confidence levels, pre-mortem, steel-manning, base-rate)
-> **Red Team review:** verifica condotta dall'agente `regulatory-adversary` (cfr. §5.13)
+> **Disciplina metodologica:** applicate le regole di rigore epistemico (falsifiability, triangulation, source provenance, confidence levels, pre-mortem, steel-manning, base-rate)
+> **Review critica indipendente:** verifica condotta dalla review regolatoria indipendente (cfr. §5.13)
 
 ---
 
@@ -38,7 +38,7 @@ Il capitolo presuppone, in qualità di scelte strategico-politiche del fondatore
 
 L'analisi regolatoria che segue è applicata a *come* sostenere e *come* attuare queste due posizioni, non a *se* siano gli obiettivi giusti.
 
-> **Falsifying observation aggiuntiva linkata (B2 operazionalizzazione)**: cfr. `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-02** (linguaggio pubblico "complementare a IRIS²"). Trigger M+18: roadmap ufficiale IRIS² (DG CNECT) include "stratospheric layer" / "complementary platforms layer". Se NO al M+18, riformulazione posizionamento esterno (riduzione narrativo a "Italian operator of strategic stratospheric services" pur preservando B2 internamente).
+> **Falsifying observation aggiuntiva linkata (B2 operazionalizzazione)**: cfr. addendum falsifying observations **FO-ADD-02** (linguaggio pubblico "complementare a IRIS²"). Trigger M+18: roadmap ufficiale IRIS² (DG CNECT) include "stratospheric layer" / "complementary platforms layer". Se NO al M+18, riformulazione posizionamento esterno (riduzione narrativo a "Italian operator of strategic stratospheric services" pur preservando B2 internamente).
 
 ---
 
@@ -80,7 +80,7 @@ Per il Percorso 6A (VTOL ibrido tipo JOUAV CW-30E, circa 38 kg MTOM) la categori
 
 Per il Percorso 6B (HALE) la classificazione standard C0-C6 non si applica: il velivolo richiede un Type Certificate ai sensi del Reg. 2018/1139 art. 11, con applicazione di Certification Specifications custom (Special Condition Light UAS o equivalente per HAPS).
 
-> **Falsifying observation** (Regola 1, epistemic-rigor): se EASA, entro M+24, pubblica una Certification Specification specifica per HAPS che esclude la categoria di massa del nostro concept (< 200 kg MTOM), l'architettura di sistema va rivista con riduzione massa. Confidence framework: **medium** (basato su andamento NPA EASA 2024-2025).
+> **Falsifying observation** (Regola 1, rigore epistemico): se EASA, entro M+24, pubblica una Certification Specification specifica per HAPS che esclude la categoria di massa del nostro concept (< 200 kg MTOM), l'architettura di sistema va rivista con riduzione massa. Confidence framework: **medium** (basato su andamento NPA EASA 2024-2025).
 
 ### 5.1.4 EASA Acceptable Means of Compliance e Guidance Material, Amendment 3 (settembre 2025)
 
@@ -231,7 +231,7 @@ L'iter regolatorio raccomandato si articola in quattro fasi.
 
 **M+9-12, Authorization issuance**: autorizzazione operativa ENAC, conduzione prime missioni pilota Pentema, reporting eventi (art. 29 Reg. ENAC APR Ed. 3).
 
-I costi stimati dell'iter regolatorio 6A (`agents/aviation-regulatory-counsel.md`) si articolano in SORA application e supporto legale (€30-80k), audit e integrazioni (€10-30k), pre-application meetings e travel (€5-15k), per un totale di €45-125k incluso nel CapEx 6A.
+I costi stimati dell'iter regolatorio 6A (consulenza legale-regolatoria interna) si articolano in SORA application e supporto legale (€30-80k), audit e integrazioni (€10-30k), pre-application meetings e travel (€5-15k), per un totale di €45-125k incluso nel CapEx 6A.
 
 > **Falsifying observation Percorso 6A**: se entro M+6 la pre-application ENAC genera un GRC > 5 o un SAIL ≥ IV, il modello operativo va ripensato (riducendo l'area di missione o eliminando il BVLOS in fase iniziale). Probabilità: M, impatto: M-H. Mitigazione: M1+M2 documentate fin dal ConOps preliminare.
 
@@ -251,7 +251,7 @@ La strategia operativa raccomandata si sviluppa lungo quattro orizzonti.
 
 **M+48+, Type Certificate / Special Condition**: issuance del Type Certificate (TC) o Special Condition equivalente, Operating Certificate (AOC) per servizio commerciale.
 
-I costi stimati dell'iter regolatorio 6B (`agents/aviation-regulatory-counsel.md`) comprendono Certification Plan e Means of Compliance negotiation (€500k-1.5M), Compliance Demonstration con analisi e test (€1-3M, inclusi nel R&D €5.5-11M Phase B) e TC issuance (€0.3-0.8M), per un totale di €2-5M distribuito su 36-48 mesi.
+I costi stimati dell'iter regolatorio 6B (consulenza legale-regolatoria interna) comprendono Certification Plan e Means of Compliance negotiation (€500k-1.5M), Compliance Demonstration con analisi e test (€1-3M, inclusi nel R&D €5.5-11M Phase B) e TC issuance (€0.3-0.8M), per un totale di €2-5M distribuito su 36-48 mesi.
 
 Sulle tempistiche realistiche per il TC, il base rate delle certificazioni aerospaziali colloca un TC custom per aircraft innovativo in un range di 3-7 anni in scenari ottimistici. Esempi recenti confermano questa stima: PHASA-35 (BAE Prismatic) ha dichiarato operatività "from 2026" con TC ancora in negoziazione dopo oltre 6 anni di flight test; Zephyr AALTO Airbus opera "commercialmente" dal 2024, ma per missioni Government/DoD e non in Certified civile generale.
 
@@ -310,7 +310,7 @@ Il Reg. (UE) 2016/679 (GDPR) [^16] disciplina il trattamento dei dati personali 
 
 Il principio di liceità, correttezza e trasparenza (art. 5.1.a) e il principio di limitazione della finalità (art. 5.1.b) implicano che l'EO per monitoraggio frane non possa essere riutilizzato per altri scopi senza nuova base giuridica. La minimizzazione (art. 5.1.c) impone risoluzione, durata e copertura proporzionate al bisogno; l'esattezza è disciplinata dall'art. 5.1.d. La limitazione della conservazione (art. 5.1.e) va definita per tipo di dato: imagery emergenza 30 giorni raw, prodotti derivati anonimi indefinitamente. L'integrità e riservatezza (art. 5.1.f) si traducono in security measures specifiche.
 
-Le basi giuridiche del trattamento per i casi d'uso del progetto (cfr. `agents/data-privacy-counsel.md`) sono riassunte nella tabella seguente.
+Le basi giuridiche del trattamento per i casi d'uso del progetto (cfr. consulenza privacy interna) sono riassunte nella tabella seguente.
 
 | Caso d'uso | Base giuridica primaria | Base giuridica alternativa |
 |---|---|---|
@@ -329,7 +329,7 @@ Come posizione di principio il Garante considera la sorveglianza persistente con
 
 Le implicazioni per Firmamento sono concrete: DPIA preliminare obbligatoria (cfr. Volume 2, Allegato A.12), privacy-by-design hardware (blur volti e targhe a bordo), geofence di esclusione su aree residenziali sensibili, conservazione differenziata con imagery non-emergenza max 30 giorni raw e prodotti derivati anonimi.
 
-> **Falsifying observation §5.6.2**: se il Garante Privacy, in risposta a un eventuale reclamo da cittadini di Pentema o cooperative, emette un provvedimento ex art. 58 GDPR sospendendo le missioni EO, l'intera linea di servizio EO ad alta risoluzione resta bloccata fino a ridisegno con anonimizzazione hardware. Probabilità: L-M (Pentema è comunità di 14 residenti ISTAT, basso rischio numerico di reclami ma alto rischio mediatico se un singolo evento polarizza), impatto: M. Mitigazione: engagement preventivo comunità Pentema, DPIA pubblica e governance condivisa (cfr. `agents/data-privacy-counsel.md`).
+> **Falsifying observation §5.6.2**: se il Garante Privacy, in risposta a un eventuale reclamo da cittadini di Pentema o cooperative, emette un provvedimento ex art. 58 GDPR sospendendo le missioni EO, l'intera linea di servizio EO ad alta risoluzione resta bloccata fino a ridisegno con anonimizzazione hardware. Probabilità: L-M (Pentema è comunità di 14 residenti ISTAT, basso rischio numerico di reclami ma alto rischio mediatico se un singolo evento polarizza), impatto: M. Mitigazione: engagement preventivo comunità Pentema, DPIA pubblica e governance condivisa (cfr. consulenza privacy interna).
 
 ### 5.6.3 Direttiva ePrivacy 2002/58/CE per Dati Telecom
 
@@ -353,7 +353,7 @@ Per la cybersecurity della parte volante (avionica, payload, link C2) si applica
 
 ## 5.7bis Quadro Ambientale e di Tutela del Paesaggio, Pillar Ambientale (post A.12 VIA v2.0)
 
-> **Inserimento post audit M+3 + refinement A.12 VIA v2.0** (subagent batch 2): il refinement dell'Allegato A.12 Relazione VIA Preliminare COMPLETE v2.0 (55 KB / 838 righe) ha identificato un pillar normativo ambientale completo non coperto dalle sezioni precedenti del Cap. 5 (in precedenza l'ambientale era limitato a riferimenti ISO 14001 generici). Questa sezione formalizza il quadro normativo applicabile alle operazioni VTOL su area protetta Pentema/Parco Antola.
+> **Inserimento alla milestone M+3 post review + refinement A.12 VIA v2.0** : il refinement dell'Allegato A.12 Relazione VIA Preliminare COMPLETE v2.0 (55 KB / 838 righe) ha identificato un pillar normativo ambientale completo non coperto dalle sezioni precedenti del Cap. 5 (in precedenza l'ambientale era limitato a riferimenti ISO 14001 generici). Questa sezione formalizza il quadro normativo applicabile alle operazioni VTOL su area protetta Pentema/Parco Antola.
 
 ### 5.7bis.1 Normativa ambientale UE e nazionale applicabile
 
@@ -477,7 +477,7 @@ Sul Percorso 6B questo si traduce in due conseguenze. La Fase 3 della visione (M
 
 > **Showstopper formalmente registrato come RSK-REG-001 nel Risk Register**: P = High (5), I = High (4), Score = 20 (rosso). Mitigation: engagement EASA Innovation Network e partnership con EuroHAPS-adjacent (CIRA, TAS) per leveraging Special Condition consortium.
 
-> **Falsifying observation aggiuntive linkate**: cfr. `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-05** (EASA HAPS framework apertura 2030: al M+36 se nessun RMT/CRD/NPA è aperto, il path Certified 6B è bloccato 5-10 anni aggiuntivi, trigger TRG-B2R-01 scenario B2-relaxed) e **FO-ADD-06** (CIRA partnership willingness al M+12: se nessuna LoI/MoU CIRA, pivot a POLITO DIMEAS HELIPLAT lineage).
+> **Falsifying observation aggiuntive linkate**: cfr. addendum falsifying observations **FO-ADD-05** (EASA HAPS framework apertura 2030: al M+36 se nessun RMT/CRD/NPA è aperto, il path Certified 6B è bloccato 5-10 anni aggiuntivi, trigger TRG-B2R-01 scenario B2-relaxed) e **FO-ADD-06** (CIRA partnership willingness al M+12: se nessuna LoI/MoU CIRA, pivot a POLITO DIMEAS HELIPLAT lineage).
 
 ### 5.10.2 Gap #2, U-Space Italia in Costruzione
 
@@ -519,19 +519,19 @@ Cfr. §5.4.2 per l'iter dettagliato.
 
 | Autorità / Stakeholder | Trigger | Frequenza | Owner | Documento di engagement |
 |---|---|---|---|---|
-| **ENAC** Direzione Regolamentazione UAS | Pre-application 6A | Q | aviation-regulatory-counsel | Lettera di intent + ConOps |
+| **ENAC** Direzione Regolamentazione UAS | Pre-application 6A | Q | consulenza legale-regolatoria aviazione | Lettera di intent + ConOps |
 | **ENAC** Direzione AAM | Posizionamento HALE | Semestrale | sovereign-strategist | Position paper "Italian Stratospheric Layer" |
-| **EASA** UAS Department | Special Condition 6B | Annuale | aviation-regulatory-counsel | Engagement letter + concept paper |
+| **EASA** UAS Department | Special Condition 6B | Annuale | consulenza legale-regolatoria aviazione | Engagement letter + concept paper |
 | **EASA** Innovation Network | Innovation track HAPS | Annuale | sovereign-strategist | RMT request |
-| **AGCOM** Direzione Reti Servizi | Spettro HAPS | Semestrale | telecom-ntn-payload-expert | Domanda licensing + analisi non-interferenza |
-| **MIMIT** Direzione Comunicazioni | PNRF + ITU coordination | Annuale | telecom-ntn-payload-expert | Posizionamento PNRF |
+| **AGCOM** Direzione Reti Servizi | Spettro HAPS | Semestrale | team telecom NTN | Domanda licensing + analisi non-interferenza |
+| **MIMIT** Direzione Comunicazioni | PNRF + ITU coordination | Annuale | team telecom NTN | Posizionamento PNRF |
 | **MIMIT** Direzione Aerospazio | Strategia nazionale + PNRR | Q | sovereign-strategist | Project briefing |
-| **ENAV** | U-Space + spazio aereo | Semestrale | avionics-gnc-engineer | Operational coordination doc |
-| **D-Flight** (USSP+CISP) | Integrazione U-Space | Sì se U-Space Pentema | avionics-gnc-engineer | Service agreement |
-| **Garante Privacy** | DPIA + sorveglianza | Annuale | data-privacy-counsel | DPIA pubblica + governance |
+| **ENAV** | U-Space + spazio aereo | Semestrale | team avionica e GNC | Operational coordination doc |
+| **D-Flight** (USSP+CISP) | Integrazione U-Space | Sì se U-Space Pentema | team avionica e GNC | Service agreement |
+| **Garante Privacy** | DPIA + sorveglianza | Annuale | consulenza privacy e protezione dati | DPIA pubblica + governance |
 | **ACN, Cybersicurezza** | NIS2 compliance | Annuale | (cybersec, futuro) | NIS2 audit annuale |
 | **CIRA** | Partnership R&D 6B + EuroHAPS-adjacent | Q | sovereign-strategist | MOU R&D |
-| **DTA Puglia / GATB** | Test bed BVLOS 6A | Annuale | vtol-uas-specialist | Service agreement |
+| **DTA Puglia / GATB** | Test bed BVLOS 6A | Annuale | team VTOL UAS specialistico | Service agreement |
 
 ---
 
@@ -551,23 +551,23 @@ Entrambi i verdetti sono coerenti con la raccomandazione del Briefing iniziale e
 
 ---
 
-## 5.13 Red Team Check, Regulatory Adversary
+## 5.13 Review critica, review regolatoria
 
-L'agente `regulatory-adversary` ha condotto stress-test del presente capitolo. Si riporta una sintesi delle critiche principali (per il dettaglio cfr. `agents/regulatory-adversary.md` Scenari R1-R7).
+La review regolatoria indipendente ha condotto stress-test del presente capitolo. Si riporta una sintesi delle critiche principali (per il dettaglio cfr. review regolatoria interna, scenari R1-R7).
 
-Sul SAIL Pentema, il Red Team osserva che la stima preliminare GRC 4-5 con final 2-3 è ottimistica: ENAC potrebbe classificare Pentema "popolazione moderate" e portare GRC a 6, SAIL a IV-V. La risposta è che la stima è dichiarata low-medium confidence ed è subordinata alla pre-application meeting (DR-004); la pianificazione 6A include questa contingency con buffer SORA da €30k.
+Sul SAIL Pentema, la review critica osserva che la stima preliminare GRC 4-5 con final 2-3 è ottimistica: ENAC potrebbe classificare Pentema "popolazione moderate" e portare GRC a 6, SAIL a IV-V. La risposta è che la stima è dichiarata low-medium confidence ed è subordinata alla pre-application meeting (DR-004); la pianificazione 6A include questa contingency con buffer SORA da €30k.
 
 Sul SORA 2.5 europea, l'Amendment 3 di settembre 2025 è fresca (3 mesi dalla pubblicazione al M+0 Firmamento). Possibili evoluzioni dottrinali ENAC nei primi 6 mesi di applicazione. La risposta è che l'engagement con ENAC nei primi 3 mesi serve specificamente a calibrare l'application sull'interpretazione corrente.
 
 Sul Percorso 6B Special Condition, il claim "Special Condition negoziata caso per caso" risulta astratto, dato che nessuna HAPS commerciale civile ha ancora TC EU emesso (base rate 0/N). La risposta è che il rischio è registrato come RSK-REG-001 score 20 (rosso), con mitigazione tramite partnership con consorzio (CIRA + TAS) ed engagement EuroHAPS-adjacent; il Percorso 6B è dichiarato Hold / Go Condizionato Estremo proprio per riconoscere questa incertezza.
 
-Sul Garante Privacy, il rischio sospensione missioni EO è ritenuto sottostimato dal Red Team (P = L-M); casi recenti (drone deployments urbani 2023-2024) hanno visto provvedimenti rapidi. La risposta è l'aggiunta della falsifying observation §5.6.2 e della mitigazione preventiva di engagement della comunità Pentema.
+Sul Garante Privacy, il rischio sospensione missioni EO è ritenuto sottostimato dalla review critica (P = L-M); casi recenti (drone deployments urbani 2023-2024) hanno visto provvedimenti rapidi. La risposta è l'aggiunta della falsifying observation §5.6.2 e della mitigazione preventiva di engagement della comunità Pentema.
 
 Sul Golden Power, il capitolo non tratta il rischio classificazione strategica IT (D.L. 21/2012). La risposta è che il rischio è trattato in documento riservato `RESERVED-rischi-geopolitici.md` per scelta strategica del progetto, non nello Studio pubblico.
 
 Sull'engagement plan, infine, la frequenza dichiarata risulta ottimistica per le capacità di una PMI. La risposta è che il plan è target; la prima fase prioritizza ENAC, EASA e Coopfond, gli altri stakeholder vengono attivati progressivamente.
 
-**Verdetto Red Team**: il capitolo risulta sostanzialmente solido, con le seguenti azioni richieste prima del gate review M+10:
+**Verdetto della review critica**: il capitolo risulta sostanzialmente solido, con le seguenti azioni richieste prima del gate review M+10:
 
 - Pre-application meeting ENAC entro M+3 con feedback documentato
 - Engagement preliminare EASA entro M+6
@@ -614,7 +614,7 @@ Sull'engagement plan, infine, la frequenza dichiarata risulta ottimistica per le
 
 ## 5.16 Showstopper Regolatori Aggiuntivi, Pillar Regolatorio Critico (15 RSK-REG-016..030)
 
-> **Promozione M+3 da addendum a sezione pilastro**: questa sezione era inizialmente concepita come addendum post-audit `regulatory-adversary` (M+3) ma identifica 15 showstopper regolatori critici non coperti dalle sezioni 5.1-5.15. Per la sua criticità operativa (5+1 critical hanno impatto su OpEx Y2 RECONCILED €1.18M con +3 FTE regulatory team obbligatorio, cfr. Cap. 8 §8.5.1.B), questa sezione è promossa a pillar section del Cap. 5. **Stato registro rischi**: tutti aggiunti al Risk Register Vol. 2 Allegato A.2 con score P×I dedicato (RSK-REG-016..030).
+> **Promozione M+3 da addendum a sezione pilastro**: questa sezione era inizialmente concepita come addendum post-review regolatoria indipendente (M+3) ma identifica 15 showstopper regolatori critici non coperti dalle sezioni 5.1-5.15. Per la sua criticità operativa (5+1 critical hanno impatto su OpEx Y2 RECONCILED €1.18M con +3 FTE regulatory team obbligatorio, cfr. Cap. 8 §8.5.1.B), questa sezione è promossa a pillar section del Cap. 5. **Stato registro rischi**: tutti aggiunti al Risk Register Vol. 2 Allegato A.2 con score P×I dedicato (RSK-REG-016..030).
 >
 > **Importanza strategica**: questi 15 showstopper sono driver primario del verdetto §5.12 Cap. 5 (regulatory hold con piano rafforzato) e dell'OpEx team mandatory in Cap. 8. Non sono "minor compliance items" ma 5+1 critical più 9 high-impact:
 > - **5+1 critical mandatory Y0** (regulatory team obbligatorio): Part-IS EASA Information Security (5.16.4) + AgID/PSN hosting (5.16.6) + NIS2 registrazione (5.16.7) + Codice Contratti art. 50 (5.16.5) + ENAV FL400+ (5.16.8) + EUROCONTROL HAPS (5.16.3)
@@ -626,9 +626,9 @@ Sull'engagement plan, infine, la frequenza dichiarata risulta ottimistica per le
 
 | ID | Showstopper | Probabilità | Impatto | Score | Fase | Mitigation owner |
 |---|---|---|---|---|---|---|
-| RSK-REG-016 | AI Act sistemi biometrici onboard (§5.16.1) | M (40-55%) | M-H | 10-13 | Y1+ | data-privacy-counsel |
+| RSK-REG-016 | AI Act sistemi biometrici onboard (§5.16.1) | M (40-55%) | M-H | 10-13 | Y1+ | consulenza privacy e protezione dati |
 | RSK-REG-017 | EUSPA accreditation downstream (§5.16.2) | M (30-45%) | M | 6-9 | Y3+ | sovereign-strategist |
-| **RSK-REG-018** | **EUROCONTROL HAPS coordination (§5.16.3)** | **H (65-80%)** | **H** | **15-20** | **Y3+** | **avionics-gnc-engineer** |
+| **RSK-REG-018** | **EUROCONTROL HAPS coordination (§5.16.3)** | **H (65-80%)** | **H** | **15-20** | **Y3+** | **team avionica e GNC** |
 | **RSK-REG-019** | **Part-IS EASA Information Security (§5.16.4)** | **H (75-85%)** | **H** | **15-20** | **Y0+ (urgente)** | **aviation-regulatory + CISO new** |
 | RSK-REG-020 | Penale 432-bis incidente BVLOS (§5.16.5) | L-M (10-25%) | H | 6-15 | Y1+ | aviation-regulatory + ops |
 | **RSK-REG-021** | **AgID/PSN hosting dati PA (§5.16.6)** | **H (70-85%)** | **M-H** | **12-17** | **Y1+** | **data-privacy + IT** |
@@ -807,7 +807,7 @@ Il costo aggregato stimato Y1 è di **+€450-800k OpEx** (3 FTE qualificati). T
 
 ## 5.15 Note di chiusura del capitolo
 
-Il presente capitolo è una bozza M+3 con aggiornamento post-audit M+3, redatta sulla base delle fonti normative autoritative aggiornate al settembre 2025 (EASA ED Decision 2025/018/R), estesa con 15 showstopper regolatori aggiuntivi identificati dall'audit `regulatory-adversary`. Le fonti scaricate coprono i regolamenti UE e italiani principali necessari per la base regolatoria del progetto.
+Il presente capitolo è una bozza M+3 con aggiornamento alla milestone M+3, redatta sulla base delle fonti normative autoritative aggiornate al settembre 2025 (EASA ED Decision 2025/018/R), estesa con 15 showstopper regolatori aggiuntivi identificati dalla review regolatoria indipendente. Le fonti scaricate coprono i regolamenti UE e italiani principali necessari per la base regolatoria del progetto.
 
 Il **debito di rigore residuo per il Cap. 5** (cfr. `riferimenti/audit-rigore-epistemico.md`) si compone di tre item: DR-004 (ENAC SAIL stima per Pentema, pre-application meeting), DR-005 (AGCOM spettro HAPS Italia, consultazione AGCOM) e DR-006 (Garante Privacy posizione su sorveglianza HAPS, analisi precedenti dedicata). Questi item richiedono engagement esterno (non più solo desk research) e vanno chiusi nei primi 6 mesi di operatività del progetto, prima del gate M+10.
 

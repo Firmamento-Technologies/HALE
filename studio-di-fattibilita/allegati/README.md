@@ -39,26 +39,26 @@ I 13 allegati principali coprono l'intera catena di evidenze: tracciabilità req
 
 ## Status complessivo M+3
 
-Al milestone M+3 risultano completati **13/13 allegati del Volume 2** (8 prodotti nella main session, 5 affidati a subagent specialistici), oltre all'**allegato extra vendor-rfq/** (RFQ template più analisi quotation JOUAV vs Tekever). Il **Volume 3** dei riferimenti bibliografici è completo nelle sezioni R.1, R.2, R.3, R.4, R.5.
+Al milestone M+3 risultano completati **13/13 allegati del Volume 2** (8 prodotti nella main session, 5 affidati a team specialistico specialistici), oltre all'**allegato extra vendor-rfq/** (RFQ template più analisi quotation JOUAV vs Tekever). Il **Volume 3** dei riferimenti bibliografici è completo nelle sezioni R.1, R.2, R.3, R.4, R.5.
 
 ### Dimensioni aggregate Volume 2
 
 L'output complessivo del Volume 2 comprende circa 30 file `.md`, 12 file `.xlsx`, 15 file `.py`, 10 immagini PNG e 3 file `.csv`, per un totale di 1.5-2 MB di documentazione tecnica indicizzabile.
 
-### Subagent batch 1 completati
+### Team specialistico batch 1 completati
 
 1. A.1 RTM v1.0: 279 record (28 StNeed + 65 SyR + 81 SsR + 22 IR + 15 NegR + 68 VR), coverage 100/72/100%
 2. A.2 Risk Register v1.0: 116 rischi in 11 categorie, 5+5 showstopper, post-mitigation RED da 17→2 (88% reduction)
 3. A.4 ICD v1.0: 59 interfacce in 8 categorie, 13 sheet Excel
 4. A.5 V&V + A.7 Link Budget: V&V Matrix 71 SyR + 14 scenari link budget ITU-R compliant (12/14 OK)
 
-### Subagent batch 2, refinement engineering-grade (M+3 post audit Red Team)
+### Team specialistico batch 2, refinement engineering-grade (M+3 post review critica)
 
 5. **A.4 ICD Detailed v2.0** (77.7 KB / 1260 righe): 5 interfacce critiche byte-level, fra cui MAVLink v2.0 dialect JOUAV con AES-256-GCM nonce mgmt e state machine lost-link, Iridium Certus AT command con escalation timer, MIL-1553 vs Ethernet AVB vs CAN FD trade con verdetto ibrido GigE+CAN FD, DAA ADS-B DO-260B + non-cooperative pseudocode CPA DO-365B + ADS-L ED-270, privacy pipeline 8-step YOLOv8n INT8 TensorRT 8ms con JSON log hash chain ECDSA P-256. Confidence aggregato sistema: medium. 10 GAP tracciati (top 3: GAP-01 MAVLink dialect proprietary M+6, GAP-06 ENAC feedback DAA non-cooperative M+6, GAP-08 DPIA Garante M+7).
 6. **A.11 SORA Safety Case Complete v2.0** (64 KB / 969 righe): SORA 2.5 ED Decision 2025/018/R Amendment 3, con Steps 1-8 + ConOps narrative UC-001..004, Class III, iGRC 5→GRC 3 (M1+M2+M3), iARC b→ARC b (TMPR Standard), **SAIL III preliminary** (driver GRC 3 × ARC b), 24 OSO matrice completa, Containment target sotto 1×10⁻⁴/h via geofence hard+FTS+parachute. Pre-Application Package ENAC: 11 documenti D-01..11 + Q&A top-10 anticipato + 10 OQ-SORA tracciate. Confidence: medium (adeguato pre-app, non sufficiente per application formale).
 7. **A.12 VIA Preliminare Complete v2.0** (55 KB / 838 righe): 13 sezioni + VIncA screening Allegato G DPR 357/1997 + Parco Antola L.R. 12/1995 + SIC/ZSC/ZPS IT1331402 + impatti su 10 fattori ambientali + linkage Risk Register con **3 nuovi RSK-AMB-001/002/003 proposti** (avifauna/rumore/paesaggio) + 18 mitigazioni dettagliate M-AVI/NOI/ACQ/PAE + cronoprogramma engagement M+3-M+12. **Procedura raccomandata**: Verifica di Assoggettabilità ex art. 19 D.Lgs. 152/2006 + L.R. 32/2012 con esito atteso NON-assoggettabilità (P 60-70%) + Screening VIncA Livello I. Proposto **REQ-NF-AMB-01** nuovo per RTM.
 
-### Subagent batch 3, integrazione cross-volume e refinement v1.5 (M+3 post integrazione)
+### Team specialistico batch 3, integrazione cross-volume e refinement v1.5 (M+3 post integrazione)
 
 8. **A.1 RTM v1.5** (34.7 KB report + 12.7 KB CSV delta): integrazione StNeed-029 Ente Parco Antola e Natura 2000 IT1331402, SyR-NF-AMB-001 famiglia NF Environmental Compliance, 3 SsR ambientali (OPS geofence Parco, AVI quota min 200m AGL su SIC, DAT logging conformità), 1 NegR-016 (NO sorvolo nidi marzo-luglio buffer 500m) e 2 VR-AMB (audit Ente Parco, monitoring acustico). Totale record 279→285 (+6); StNeed 28→29, SyR 65→66, SsR 81→84, NegR 15→16, VR 68→70. Coverage StNeed→SyR 100%, SyR→VR 100%, SyR→SsR 75% (+2.9pp). Confidence sezione ambientale: medium.
 9. **A.2 Risk Register v1.5** (60.8 KB report + 4.85 KB CSV delta): integrazione di 3 RSK-AMB ambientali in Top-28 (#26 RSK-AMB-001 Avifauna YELLOW, #27 RSK-AMB-002 Rumore GREEN, #28 RSK-AMB-003 Paesaggio GREEN), nuova categoria "Ambientale" (14 categorie totali), 10 EWI-AMB ambientali (continuo log, stagionale bioacustica, trimestrale Ente Parco, una-tantum DGR), FMECA ambientale preliminary (6 failure modes, RPN dominante 140 flushing aquila reale), FTA cut-set bird-strike ~5E-7/h + abort ambientale 1-2%. Totale rischi 116→119. Showstopper 5+5 invariato. RED reduction 88% mantenuta.

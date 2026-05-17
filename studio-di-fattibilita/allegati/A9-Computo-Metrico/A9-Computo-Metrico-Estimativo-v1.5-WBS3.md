@@ -82,7 +82,7 @@ Ogni voce in tabella riporta colonna "Fonte" e "Confidence".
 
 ## Sezione 2. WBS 3 Computo Metrico per categoria
 
-> **Nota di lettura**: ogni macro-categoria riporta tabella WBS 3 con sub-totale categoria. Le 10 macro-categorie sono allineate al perimetro Ground Segment Pentema da CLAUDE.md briefing operativo.
+> **Nota di lettura**: ogni macro-categoria riporta tabella WBS 3 con sub-totale categoria. Le 10 macro-categorie sono allineate al perimetro Ground Segment Pentema dal briefing operativo di progetto.
 
 ### 2.1 Categoria 1. Hangar Pentema (riuso edificio esistente + adeguamento minimo)
 
@@ -319,38 +319,38 @@ Ogni voce in tabella riporta colonna "Fonte" e "Confidence".
 QUADRO ECONOMICO. Ground Segment Pentema Y1 (Percorso 6A)
 Riferimento art. 41 D.Lgs. 36/2023 + Allegato I.7
 ─────────────────────────────────────────────────────────────────
-A) IMPORTO LAVORI E FORNITURE                                €
-   A.1  Hangar Pentema (riuso + adeguamento)            48.310
-   A.2  GCS fissa                                       73.160
-   A.3  GCS mobile (kit Y1 leggero)                     27.750
-   A.4  Antenne RF + comunicazione                      27.900
-   A.5  Storage + processing                            37.880
-   A.6  Connettività (CapEx + Y1 OpEx)                  13.990
-   A.7  Sicurezza fisica                                22.290
-   A.8  Impianti HVAC + elettrico + safety              43.260
-   A.9  Cartellonistica + segnaletica                    4.650
-   A.10 Allestimenti ufficio operations                 11.920
-                                  TOTALE A           311.110
+A) IMPORTO LAVORI E FORNITURE €
+ A.1 Hangar Pentema (riuso + adeguamento) 48.310
+ A.2 GCS fissa 73.160
+ A.3 GCS mobile (kit Y1 leggero) 27.750
+ A.4 Antenne RF + comunicazione 27.900
+ A.5 Storage + processing 37.880
+ A.6 Connettività (CapEx + Y1 OpEx) 13.990
+ A.7 Sicurezza fisica 22.290
+ A.8 Impianti HVAC + elettrico + safety 43.260
+ A.9 Cartellonistica + segnaletica 4.650
+ A.10 Allestimenti ufficio operations 11.920
+ TOTALE A 311.110
 
-B) SOMME A DISPOSIZIONE                                       €
-   B.1  Spese tecniche (progett. + DL + CSP + RUP)
-        10% di A (Linee Guida ANAC n. 1/2016)          31.111
-   B.2  Imprevisti (5% di A, art. 41 c. 12)            15.556
-   B.3  Contingency aerospace (15% di A)               46.667
-   B.4  Spese pubblicità bandi (eventuali)              1.500
-   B.5  Allacciamenti + autorizzazioni (esclusi A)      4.800
-        (ENAC SORA, AGCOM, oneri ENEL, VVF)
-   B.6  Spese collaudo + verifiche di conformità        3.500
-   B.7  Indagini integrative + sopralluoghi             2.800
-                                  TOTALE B           105.934
+B) SOMME A DISPOSIZIONE €
+ B.1 Spese tecniche (progett. + DL + CSP + RUP)
+ 10% di A (Linee Guida ANAC n. 1/2016) 31.111
+ B.2 Imprevisti (5% di A, art. 41 c. 12) 15.556
+ B.3 Contingency aerospace (15% di A) 46.667
+ B.4 Spese pubblicità bandi (eventuali) 1.500
+ B.5 Allacciamenti + autorizzazioni (esclusi A) 4.800
+ (ENAC SORA, AGCOM, oneri ENEL, VVF)
+ B.6 Spese collaudo + verifiche di conformità 3.500
+ B.7 Indagini integrative + sopralluoghi 2.800
+ TOTALE B 105.934
 
-C) IVA + ONERI FISCALI                                        €
-   C.1  IVA 22% su A                                   68.444
-   C.2  IVA 22% su B (su voci imponibili)              19.605
-                                  TOTALE C            88.049
+C) IVA + ONERI FISCALI €
+ C.1 IVA 22% su A 68.444
+ C.2 IVA 22% su B (su voci imponibili) 19.605
+ TOTALE C 88.049
 
 ─────────────────────────────────────────────────────────────────
-TOTALE GENERALE (A + B + C), scenario BASE         € 505.093
+TOTALE GENERALE (A + B + C), scenario BASE € 505.093
 ─────────────────────────────────────────────────────────────────
 ```
 
@@ -437,7 +437,7 @@ TOTALE GENERALE (A + B + C), scenario BASE         € 505.093
 | **Pilota BVLOS junior** | 38.000-45.000 | 49.400-58.500 | 4.117-4.875 | 227-268 | Brevetto SORA + 2 anni exp |
 | **Ingegnere ops aerospace** | 42.000-52.000 | 54.600-67.600 | 4.550-5.633 | 250-310 | Laurea ing. + 3-5 anni exp |
 | **Ingegnere senior systems** | 55.000-72.000 | 71.500-93.600 | 5.958-7.800 | 328-429 | Laurea ing. + 7+ anni exp |
-| **Analista dati / GIS specialist** | 36.000-46.000 | 46.800-59.800 | 3.900-4.983 | 215-274 | Skill QGIS/Python/AI/ML |
+| **Analista dati / GIS specialist** | 36.000-46.000 | 46.800-59.800 | 3.900-4.983 | 215-274 | Competenze QGIS/Python/AI/ML |
 | **Project Manager certificato** | 50.000-68.000 | 65.000-88.400 | 5.417-7.367 | 298-405 | PMP/Prince2 + esperienza aerospace |
 | **CISO (Chief Information Security Officer)** | 70.000-95.000 | 91.000-123.500 | 7.583-10.292 | 417-566 | Cybersecurity + ISO 27001 + NIS2 |
 | **DPO (Data Protection Officer)** | 45.000-65.000 | 58.500-84.500 | 4.875-7.042 | 268-388 | GDPR cert. + 3+ anni exp |
@@ -559,19 +559,19 @@ Razionale:
 
 ```
 % Cumulato CapEx Y1
-100% |                                     ████
- 90% |                                ████
- 80% |                          ████
- 70% |                     ████
- 60% |                ████
- 50% |          ████
- 40% |       ███
- 30% |    ███
- 20% |  ██
+100% | ████
+ 90% | ████
+ 80% | ████
+ 70% | ████
+ 60% | ████
+ 50% | ████
+ 40% | ███
+ 30% | ███
+ 20% | ██
  10% | █
-  0% |__________________________________________
-     M0  M1  M2  M3  M4  M5  M6  M7  M8  M9  M10 M11 M12
-        Design     | Procurement | Install.  | Commiss.| Ramp
+ 0% |__________________________________________
+ M0 M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 M12
+ Design | Procurement | Install. | Commiss.| Ramp
 ```
 
 Picco esborso CapEx: M+7 (saldo 60% ordini GCS + lavori installazione).
@@ -647,7 +647,7 @@ Picco esborso CapEx: M+7 (saldo 60% ordini GCS + lavori installazione).
 | Versione | Data | Granularità | Autore | Note |
 |---|---|---|---|---|
 | v1.0 | M+3 (precedente) | WBS 2 preliminary | CFO Analyst | Skeleton iniziale, 9 KB |
-| **v1.5** | **M+5 (presente)** | **WBS 3 (sub-component)** | **CFO Analyst** | **Granularità per ground segment Pentema, audit Red Team Cap. 4 §4.8** |
+| **v1.5** | **M+5 (presente)** | **WBS 3 (sub-component)** | **CFO Analyst** | **Granularità per ground segment Pentema, review critica Cap. 4 §4.8** |
 | v2.0 (prevista) | M+10 | WBS 4-5 investment-grade | Cost Estimator certificato + RUP Liguria | CME definitivo gate G3 |
 
 ---
@@ -662,4 +662,4 @@ Il presente Computo Metrico Estimativo v1.5 è elaborato in conformità a D.Lgs.
 
 è obbligatoria la validazione da Cost Estimator certificato AACE/ICCM, la revisione RUP Regione Liguria e le offerte vendor vincolanti (gap M+8-M+9 da §6.3). I range scenario worst/base/best vanno comunicati integralmente, evitando di citare il solo scenario base con pretesa di precisione superiore alla classe AACE 4.
 
-*Documento elaborato dall'agente financial-cfo-analyst del progetto HALE Firmamento Technologies. Maggio 2026.*
+*Documento elaborato dall'agente analisi finanziaria CFO del progetto HALE Firmamento Technologies. Maggio 2026.*

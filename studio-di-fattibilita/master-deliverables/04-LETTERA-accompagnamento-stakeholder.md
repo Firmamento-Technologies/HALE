@@ -41,9 +41,9 @@ Il **Percorso 6B, HALE Stratosferico R&D** (orizzonte 24-48+ mesi, budget Phase 
 
 ## Disciplina metodologica
 
-Lo Studio adotta un framework metodologico ibrido che combina lo standard italiano normativo (D.Lgs. 36/2023 art. 41 e Allegato I.7) con lo standard internazionale aerospace (NASA Systems Engineering Handbook Rev 2, NASA/SP-2016-6105). La disciplina epistemica adottata applica i criteri di falsificabilità (Popper), triangulation, base-rate awareness, pre-mortem (Klein 2007) e red teaming. La compliance dichiarata copre AS/EN 9100, ISO 9001, ISO 14001, GDPR, NIS2 e Reg. UE 2019/947 e 2019/945.
+Lo Studio adotta un framework metodologico ibrido che combina lo standard italiano normativo (D.Lgs. 36/2023 art. 41 e Allegato I.7) con lo standard internazionale aerospace (NASA Systems Engineering Handbook Rev 2, NASA/SP-2016-6105). La disciplina epistemica adottata applica i criteri di falsificabilità (Popper), triangulation, base-rate awareness, pre-mortem (Klein 2007) e review critica strutturata. La compliance dichiarata copre AS/EN 9100, ISO 9001, ISO 14001, GDPR, NIS2 e Reg. UE 2019/947 e 2019/945.
 
-Il documento include quattro audit avversariali indipendenti (Red Team, Competitor Intelligence, Regulatory Adversary, Quality Consolidation) a garanzia del rigore epistemico.
+Il documento include quattro review critiche indipendenti a garanzia del rigore epistemico.
 
 ## Stato del documento
 
@@ -67,9 +67,9 @@ Firmamento Technologies S.r.l.
 
 ## Allegati
 
-- Volume 1, Studio (PDF + .md)
-- Volume 2, Allegati Tecnici (PDF + .md + .xlsx)
-- Volume 3, Riferimenti (PDF + .md)
+- Volume 1, Studio (PDF +.md)
+- Volume 2, Allegati Tecnici (PDF +.md +.xlsx)
+- Volume 3, Riferimenti (PDF +.md)
 - Sintesi Esecutiva 1-pagina (PDF)
 - [Eventuali allegati specifici per destinatario]
 

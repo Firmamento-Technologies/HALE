@@ -1,6 +1,6 @@
-# Audit Competitor Intelligence. Volume 1
+# Audit analisi competitor. Volume 1
 
-> **Agent**: `competitor-intelligence`
+> **Agent**: `analisi competitor indipendente`
 > **Data**: M+3 (maggio 2026)
 > **Capitoli auditati**: Cap. 1 (positioning), Cap. 7 (mercato + business case), Cap. 8 (capital intensity), Cap. 10 (verdetto), Cap. 11 (roadmap 10y)
 > **Boundary conditions preservate**: B1 (service-only + cooperative) e B2 (EU sovereign stratospheric) NON sono oggetto di attacco. Si attacca COME ci si arriva: timing, esecuzione, capital intensity, partnership, comunicazione.
@@ -48,11 +48,11 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 ### Threat 1. TAS-Leonardo (acquisition difensiva preceduta da esclusione)
 
 - **Mossa avversaria sequenziale**:
-  1. M+6-12: TAS-Leonardo identifica Firmamento via deal-flow MIMIT / Coopfond. Engagement informale ("ti aiutiamo con CIRA partnership").
-  2. M+12-24: lobby attivo per **non includere Firmamento** in bandi MIMIT Aerospazio + Horizon Cluster 4-5 dove TAS-Leonardo è gatekeeper. Riserva ai propri consorzi €2-5M finanziamenti che Firmamento aveva pianificato (Cap. 8 mix funding Y2-Y3).
-  3. M+18-30: Firmamento al Series A fatica a chiudere €3-8M (Cap. 11 §11.4.7). TAS-Leonardo propone "investment + JV" 25-40% equity a valutazione €15-30M pre-money (sotto fair value).
-  4. M+24-36: se rifiutato, lobby contro Firmamento in EuroHAPS-2 (€100-300M EDF call 2027-2029). Esclusione di fatto dal consortium "ufficiale" EU HAPS.
-  5. M+36-48: offerta acquisizione integrale €40-100M (5-10× ARR Y3). Founder davanti a scelta: vendere o esaurire cash al Series B.
+ 1. M+6-12: TAS-Leonardo identifica Firmamento via deal-flow MIMIT / Coopfond. Engagement informale ("ti aiutiamo con CIRA partnership").
+ 2. M+12-24: lobby attivo per **non includere Firmamento** in bandi MIMIT Aerospazio + Horizon Cluster 4-5 dove TAS-Leonardo è gatekeeper. Riserva ai propri consorzi €2-5M finanziamenti che Firmamento aveva pianificato (Cap. 8 mix funding Y2-Y3).
+ 3. M+18-30: Firmamento al Series A fatica a chiudere €3-8M (Cap. 11 §11.4.7). TAS-Leonardo propone "investment + JV" 25-40% equity a valutazione €15-30M pre-money (sotto fair value).
+ 4. M+24-36: se rifiutato, lobby contro Firmamento in EuroHAPS-2 (€100-300M EDF call 2027-2029). Esclusione di fatto dal consortium "ufficiale" EU HAPS.
+ 5. M+36-48: offerta acquisizione integrale €40-100M (5-10× ARR Y3). Founder davanti a scelta: vendere o esaurire cash al Series B.
 
 - **Trigger**: (a) Firmamento ottiene primo grant PNRR Aerospazio M+12-18 (segnale visibilità), oppure (b) Series A chiusa con CDP/EIB anchor (segnale capital structure resistente), oppure (c) primo position paper "Italian Stratospheric Sovereignty" pubblicato (segnale ambizione B2).
 
@@ -61,11 +61,11 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 - **Effetto su Firmamento**: scenario base = founder esce a valutazione "fair ma non vita-cambiante" €30-80M tra Y4-Y5. Boundary B1 (cooperative) preservata simbolicamente; boundary B2 (EU sovereign IT-led) **persa**, diventa "asset di Leonardo nell'EuroHAPS-successor".
 
 - **Contromossa Firmamento** (no opzioni magiche):
-  1. **Capital structure resistente prima del primo round estero** (M+18-24): dual-class shares + golden share preview MIMIT (già flaggato Cap. 11.10 Critica 6, ma listed come "action" non "fait accompli", è gap critico).
-  2. **CDP/EIB anchor obbligatorio** al Series A: rifiutare lead VC estera privatistica. Trade-off: timing più lento, valutazione più bassa.
-  3. **Diversificare pipeline grant out of MIMIT**: PNRR Coesione (non Aerospazio), EIC Accelerator UE, ESA BIC. Riduce single-point-of-failure su Leonardo gatekeeper.
-  4. **Posizionamento pubblico early**: position paper Italian Stratospheric Sovereignty entro M+12 (Cap. 11.10 action 5) ti rende **politicamente costoso** da assorbire (Coopfond + Legacoop + Liguria + 10 cooperative diventano shield).
-  5. **NON firmare equity con TAS-Leonardo prima di M+72** (Cap. 11 §11.4.5 lo dice ma è soft constraint).
+ 1. **Capital structure resistente prima del primo round estero** (M+18-24): dual-class shares + golden share preview MIMIT (già flaggato Cap. 11.10 Critica 6, ma listed come "action" non "fait accompli", è gap critico).
+ 2. **CDP/EIB anchor obbligatorio** al Series A: rifiutare lead VC estera privatistica. Trade-off: timing più lento, valutazione più bassa.
+ 3. **Diversificare pipeline grant out of MIMIT**: PNRR Coesione (non Aerospazio), EIC Accelerator UE, ESA BIC. Riduce single-point-of-failure su Leonardo gatekeeper.
+ 4. **Posizionamento pubblico early**: position paper Italian Stratospheric Sovereignty entro M+12 (Cap. 11.10 action 5) ti rende **politicamente costoso** da assorbire (Coopfond + Legacoop + Liguria + 10 cooperative diventano shield).
+ 5. **NON firmare equity con TAS-Leonardo prima di M+72** (Cap. 11 §11.4.5 lo dice ma è soft constraint).
 
 - **Probabilità contromossa effettiva**: ~40%. Anche con tutte e 5 le contromosse, l'asimmetria di potere è strutturale.
 
@@ -74,25 +74,25 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 ### Threat 2. SpaceX Starlink (saturazione rural EU in corso)
 
 - **Mossa avversaria** (in atto dal 2025):
-  1. Già operativo: Starlink Residential €40/mese, latenza 25-50 ms, copertura Pentema **oggi**. 6000+ sat LEO.
-  2. Roadmap nota: Starlink Direct-to-Cell (D2C) lanciata commercialmente 2026 con T-Mobile US, Optus AU, KDDI JP, Rogers CA. Espansione EU 2026-2027 condizionata a spettro nazionale (Italia: Iliad-Starlink agreement annunciato 2024).
-  3. Starlink V3 satelliti: latenza target 20 ms, throughput 1-10 Gbps per cella, lancio 2026-2027.
-  4. Starlink Business €200-300/mese per FWA aziendale / PA in aree non servite.
-  5. Pricing PA rurale italiana: già contratti pilota Comune Tirolesi / Friulani 2024-2025 a €200-500/mese.
+ 1. Già operativo: Starlink Residential €40/mese, latenza 25-50 ms, copertura Pentema **oggi**. 6000+ sat LEO.
+ 2. Roadmap nota: Starlink Direct-to-Cell (D2C) lanciata commercialmente 2026 con T-Mobile US, Optus AU, KDDI JP, Rogers CA. Espansione EU 2026-2027 condizionata a spettro nazionale (Italia: Iliad-Starlink agreement annunciato 2024).
+ 3. Starlink V3 satelliti: latenza target 20 ms, throughput 1-10 Gbps per cella, lancio 2026-2027.
+ 4. Starlink Business €200-300/mese per FWA aziendale / PA in aree non servite.
+ 5. Pricing PA rurale italiana: già contratti pilota Comune Tirolesi / Friulani 2024-2025 a €200-500/mese.
 
 - **Trigger**: nessun trigger necessario, è già in atto. Il **trigger lato Firmamento** è ogni LoI/contratto con cooperative o PA per "connettività di emergenza" o "telemedicina rurale" UC-003/UC-008: il decisore PA si chiede "perché non Starlink a €200/mese?".
 
 - **Tempistica realistica**: 
-  - Y1 (M+0-12): Starlink Business già contesa il caso UC-003 a Pentema. Cap. 7 §7.8.2 pricing "Backup connettività emergenza on-demand €5-15k/event + €20k retainer" = €45-95k/anno PC Liguria, vs Starlink €2.4-3.6k/anno per terminale. **Differenza 20-40×.**
-  - Y2-Y3 (M+12-36): Direct-to-Cell EU operativo, mangia anche UC-008 telemedicina.
+ - Y1 (M+0-12): Starlink Business già contesa il caso UC-003 a Pentema. Cap. 7 §7.8.2 pricing "Backup connettività emergenza on-demand €5-15k/event + €20k retainer" = €45-95k/anno PC Liguria, vs Starlink €2.4-3.6k/anno per terminale. **Differenza 20-40×.**
+ - Y2-Y3 (M+12-36): Direct-to-Cell EU operativo, mangia anche UC-008 telemedicina.
 
 - **Effetto su Firmamento**: UC-003 e UC-008 (Cap. 7 §7.2.2) diventano residuali. La risposta Cap. 7 §7.4.3 (latenza bassa per ISR, geographic persistence, sovranità dati, backup independent) è valida ma **riduce drasticamente il revenue connettività**: passa dal 20-30% del ARR baseline al 5-10%.
 
 - **Contromossa Firmamento**:
-  1. **Riposizionare UC-003/008 come "complementari Starlink", non sostituiti**: backup quando Starlink down (rare ma esistenti, Solar storms 2024 ha causato outage), e per use case che richiedono latenza <10 ms (industrial control, droni di squadra). Confidence: medium.
-  2. **Argomento sovranità dati per PA**: leverage Garante Privacy + AGCOM su Starlink US-controlled, soprattutto in scenari Cyber/NIS2. Funziona solo se Cap. 5 normativo è ironclad, al M+3 lo è ancora in costruzione.
-  3. **NON contare su UC-003 come anchor revenue**: declassare a UC opportunistico.
-  4. **Spostare narrativa "digital divide Aree Interne" da connettività a EO + alert events**: Cap. 7 va riscritto per de-enfatizzare connettività come pilastro. Implica revisione anche di Cap. 1 §1.2.4 criticità C-2 e C-3 (digital divide).
+ 1. **Riposizionare UC-003/008 come "complementari Starlink", non sostituiti**: backup quando Starlink down (rare ma esistenti, Solar storms 2024 ha causato outage), e per use case che richiedono latenza <10 ms (industrial control, droni di squadra). Confidence: medium.
+ 2. **Argomento sovranità dati per PA**: leverage Garante Privacy + AGCOM su Starlink US-controlled, soprattutto in scenari Cyber/NIS2. Funziona solo se Cap. 5 normativo è ironclad, al M+3 lo è ancora in costruzione.
+ 3. **NON contare su UC-003 come anchor revenue**: declassare a UC opportunistico.
+ 4. **Spostare narrativa "digital divide Aree Interne" da connettività a EO + alert events**: Cap. 7 va riscritto per de-enfatizzare connettività come pilastro. Implica revisione anche di Cap. 1 §1.2.4 criticità C-2 e C-3 (digital divide).
 
 - **Probabilità contromossa effettiva**: 60%. Starlink non muore mai per HALE Firmamento; il problema è risolvibile se UC-003/008 sono ridotti al 5% di ARR e si rebuild su EO + alert.
 
@@ -101,11 +101,11 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 ### Threat 3. AALTO HAPS Ltd (Airbus): entry IT via JV Leonardo o partnership istituzionale
 
 - **Mossa avversaria sequenziale**:
-  1. **Y1-Y2 (M+0-24)**: silenzio strategico. AALTO osserva Firmamento via open-source (bandi pubblici, press release Coopfond, position paper se pubblicato). Costo per AALTO: zero.
-  2. **Y2 (M+18-24)**: trigger = Firmamento pubblica primi risultati operativi MVP Pentema + posizionamento "Italian HAPS leader". AALTO inizia engagement Roma (MIMIT Direzione Aerospazio + ENAC) con offer "Zephyr 8 demo flight Italia 2027, partnership Leonardo".
-  3. **Y2-Y3 (M+24-36)**: announce JV AALTO-Leonardo "Stratospheric Italian Services" con sede Roma o Torino, ~30 FTE, budget €30-50M. Backing Airbus Defence and Space. Posizionamento: "the proven Italian HAPS solution, with TRL 9 Zephyr platform".
-  4. **Y3-Y4 (M+36-48)**: pricing "intro" sotto i costi Firmamento per primi 2-3 contratti Regioni IT (€80-100k/anno servizio EO vs Firmamento target €150-300k). Margine negativo accettabile per ad Airbus dato il floor strategico.
-  5. **Y4-Y5 (M+48-60)**: dominio mercato HAPS commerciale IT. Firmamento marginalizzata o spinta in nicchia "cooperative" non sufficiente a sostentare scale-up.
+ 1. **Y1-Y2 (M+0-24)**: silenzio strategico. AALTO osserva Firmamento via open-source (bandi pubblici, press release Coopfond, position paper se pubblicato). Costo per AALTO: zero.
+ 2. **Y2 (M+18-24)**: trigger = Firmamento pubblica primi risultati operativi MVP Pentema + posizionamento "Italian HAPS leader". AALTO inizia engagement Roma (MIMIT Direzione Aerospazio + ENAC) con offer "Zephyr 8 demo flight Italia 2027, partnership Leonardo".
+ 3. **Y2-Y3 (M+24-36)**: announce JV AALTO-Leonardo "Stratospheric Italian Services" con sede Roma o Torino, ~30 FTE, budget €30-50M. Backing Airbus Defence and Space. Posizionamento: "the proven Italian HAPS solution, with TRL 9 Zephyr platform".
+ 4. **Y3-Y4 (M+36-48)**: pricing "intro" sotto i costi Firmamento per primi 2-3 contratti Regioni IT (€80-100k/anno servizio EO vs Firmamento target €150-300k). Margine negativo accettabile per ad Airbus dato il floor strategico.
+ 5. **Y4-Y5 (M+48-60)**: dominio mercato HAPS commerciale IT. Firmamento marginalizzata o spinta in nicchia "cooperative" non sufficiente a sostentare scale-up.
 
 - **Trigger**: (a) Firmamento riconosciuta da MIMIT in bando Aerospazio M+12-18, (b) o pubblicazione position paper EU Stratospheric Sovereignty se interpretato a Bruxelles come "Italia gioca da sola", (c) o annuncio Series A con CDP/sovereign IT.
 
@@ -114,11 +114,11 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 - **Effetto su Firmamento**: scale-up SNAI multi-regione Y3 (Cap. 11 §11.3) **bloccato**. AALTO-Leonardo cattura 2-3 Regioni con pricing aggressivo. Cap. 11 OBJ-F2-04 (primo grant PNRR Aerospazio €2-5M) **a rischio H**: MIMIT preferisce dare a JV consolidato. ARR Y3 target €2-5M non raggiunto, Series A non chiude, Phase B 6B in dubbio, boundary B2 morta.
 
 - **Contromossa Firmamento**:
-  1. **Speed di esecuzione**: raggiungere ≥ 3 Regioni SNAI con contratti pluriennali firmati entro M+24 (Cap. 11 OBJ-F2-04). Crea lock-in customer prima che AALTO-Leonardo arrivi.
-  2. **Differenziazione "cooperativa + sostenibilità + Aree Interne + privacy"**: argomento NON replicabile da AALTO-Leonardo (Airbus-Leonardo non possono raccontare "service cooperativo" credibilmente). Funziona se la narrativa è cementata via PSNAI + Coopfond + Legacoop in early Y1.
-  3. **Lock-in regulatorio ENAC**: essere il primo a passare SAIL II-III BVLOS Pentema lascia traccia istituzionale (Cap. 5). AALTO entrerà come "secondo" con autorità ENAC che già "conoscono Firmamento".
-  4. **NON pubblicare position paper EU Stratospheric Sovereignty prima di avere capital structure resistente + 3 LoI Regioni firmate**: l'azione 5 di Cap. 11.10 Red Team va **rallentata**, non accelerata, perché è il trigger per AALTO. Trade-off: ritarda boundary B2 narrative.
-  5. **Engage Airbus preventivamente**: bizzarro ma efficace. Engagement letter MoU "Zephyr 8 use case Italia complementare a Firmamento". Trasforma AALTO da nemico potenziale a partner formale, riduce probabilità mossa aggressiva. Trade-off: cede leadership narrativa.
+ 1. **Speed di esecuzione**: raggiungere ≥ 3 Regioni SNAI con contratti pluriennali firmati entro M+24 (Cap. 11 OBJ-F2-04). Crea lock-in customer prima che AALTO-Leonardo arrivi.
+ 2. **Differenziazione "cooperativa + sostenibilità + Aree Interne + privacy"**: argomento NON replicabile da AALTO-Leonardo (Airbus-Leonardo non possono raccontare "service cooperativo" credibilmente). Funziona se la narrativa è cementata via PSNAI + Coopfond + Legacoop in early Y1.
+ 3. **Lock-in regulatorio ENAC**: essere il primo a passare SAIL II-III BVLOS Pentema lascia traccia istituzionale (Cap. 5). AALTO entrerà come "secondo" con autorità ENAC che già "conoscono Firmamento".
+ 4. **NON pubblicare position paper EU Stratospheric Sovereignty prima di avere capital structure resistente + 3 LoI Regioni firmate**: l'azione 5 di Cap. 11.10 review critica va **rallentata**, non accelerata, perché è il trigger per AALTO. Trade-off: ritarda boundary B2 narrative.
+ 5. **Engage Airbus preventivamente**: bizzarro ma efficace. Engagement letter MoU "Zephyr 8 use case Italia complementare a Firmamento". Trasforma AALTO da nemico potenziale a partner formale, riduce probabilità mossa aggressiva. Trade-off: cede leadership narrativa.
 
 - **Probabilità contromossa effettiva**: 35-50%. AALTO ha cost-to-enter Italy basso e ha già infrastructure (Zephyr commerciale). L'unico vero baluardo è speed Firmamento. Capi al M+9 hard condition C1 LoI Regione Liguria, se slitta a M+12+, Firmamento perde.
 
@@ -141,8 +141,8 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 - **Probabilità**: H (~55-70%), è la mossa naturale di un incumbent. Le PMI aerospace IT che diventano visibili senza capital structure resistente sono storicamente acquisite (vedi storia Tellumat acquisita da Leonardo, Sitael ecosystem).
 - **Effetto**: founder out, boundary B2 persa. Asset diventa parte di EuroHAPS-2.
 - **Decisione Firmamento al Gate G5 (M+24)**: due opzioni binarie:
-  1. **Accetta acquisizione "fair"**: exit a €30-80M, founder out con golden share simbolica, IP HALE assorbita.
-  2. **Resiste**: richiede capital structure resistente già in essere (dual-class + golden share + CDP/EIB anchor) + Series A chiusa con investitori non ostili + Position paper EU Stratospheric Sovereignty già pubblicato con buy-in MIMIT + ENAC + Bruxelles. Se anche solo un elemento manca, decidere accettazione fair offer è razionale.
+ 1. **Accetta acquisizione "fair"**: exit a €30-80M, founder out con golden share simbolica, IP HALE assorbita.
+ 2. **Resiste**: richiede capital structure resistente già in essere (dual-class + golden share + CDP/EIB anchor) + Series A chiusa con investitori non ostili + Position paper EU Stratospheric Sovereignty già pubblicato con buy-in MIMIT + ENAC + Bruxelles. Se anche solo un elemento manca, decidere accettazione fair offer è razionale.
 - **Pre-condizioni "Resisti"**: M+24 hard conditions (5 voci Cap. 11.10) tutte completate. Realisticamente al M+24 saranno 3-4 su 5 nella migliore delle ipotesi.
 
 ---
@@ -162,8 +162,8 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 - **Probabilità**: M-H (~50-60%). IRIS² è già €10.6B, governance Commissione, ha consortium che ha già speso. Bruxelles ha incentivi ad evitare programmi paralleli (capital constraints + simplicity).
 - **Effetto**: Cap. 11 §11.6 Fase 5 EU sovereign full scale **strutturalmente non finanziabile** (è il falsifying observation chiave del capitolo, §11.9.2). Visione capital intensity €10-30B muore. Cap. 11 dichiara mitigazione "ridimensiona a small fleet €500M-2B", ma anche €500M-2B è speculativo senza programma EU dedicato. Realisticamente Firmamento si ferma a Y8 ARR €30-80M e capital intensity €100-500M Fase 4.
 - **Decisione Firmamento al Gate Fase 3 (M+72)**: explicit decision tree:
-  - Se EU sovereign HAPS programma esiste, procedi Fase 4-5 piena.
-  - Se non esiste, ridimensiona a "operatore IT/Mediterraneo standalone" con ambizione massima 10-15 HAPS. Exit strategy via IPO STAR (no consortium EU).
+ - Se EU sovereign HAPS programma esiste, procedi Fase 4-5 piena.
+ - Se non esiste, ridimensiona a "operatore IT/Mediterraneo standalone" con ambizione massima 10-15 HAPS. Exit strategy via IPO STAR (no consortium EU).
 - **Mitigazione adesso**: Cap. 11 action 5 "position paper Italian Stratospheric Sovereignty entro M+12" + lobbying Bruxelles via MIMIT + Italia/Francia/Germania (richiede MIMIT che probabilmente è gestito da TAS-Leonardo influence). Tasso di successo lobbying: 15-25%.
 
 ---
@@ -174,10 +174,10 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 - **Probabilità**: M (~30-45%). ENAC è generalmente collaborativa, ma ha bandwidth limitato e relationships preferenziali con Leonardo/TAS/ENAV. Una richiesta di "approfondimento" può facilmente costare 6-12 mesi.
 - **Effetto**: Cap. 10 hard condition C2 (SORA approvata entro M+9) slitta a M+15-18. Gate G3 M+11 deve essere reso "Hold con re-application". Cap. 7 §7.9.3 MVP success a M+12 impossibile. Cap. 11 milestone MS-F1-05 (M+12 primo volo BVLOS) saltata.
 - **Decisione Firmamento**: 
-  1. **Pre-application aggressiva M+0-3** (Cap. 10 hard condition C5), già flaggata, ma deve essere completata con feedback documentato.
-  2. **Plan B Tekever** (Cap. 10 soft S2) come fallback se JOUAV ENAC import friction.
-  3. **VLOS-only Y1 fallback**: ridimensiona scope MVP a VLOS o EVLOS, accettando -40% utilization e perdita UC-002 antincendio (richiede BVLOS). Revenue Y1 baseline scende a €200-250k, soglia minima SyR-Cost-003 a malapena raggiunta.
-  4. **Engagement strutturato ENAC Innovation Office**: presenza fisica Firmamento Roma trimestrale Y1.
+ 1. **Pre-application aggressiva M+0-3** (Cap. 10 hard condition C5), già flaggata, ma deve essere completata con feedback documentato.
+ 2. **Plan B Tekever** (Cap. 10 soft S2) come fallback se JOUAV ENAC import friction.
+ 3. **VLOS-only Y1 fallback**: ridimensiona scope MVP a VLOS o EVLOS, accettando -40% utilization e perdita UC-002 antincendio (richiede BVLOS). Revenue Y1 baseline scende a €200-250k, soglia minima SyR-Cost-003 a malapena raggiunta.
+ 4. **Engagement strutturato ENAC Innovation Office**: presenza fisica Firmamento Roma trimestrale Y1.
 
 ---
 
@@ -187,9 +187,9 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 - **Probabilità**: L-M (~20-35%). AGCOM è generalmente disponibile per uso emergenza temporaneo; il rischio è su uso commerciale stabile.
 - **Effetto**: UC-003 backup connettività non eseguibile. Cap. 7 §7.8.2 revenue €45-95k da PC Liguria perso, revenue Y1 baseline €280-340k (combinato con Scenario C anche più basso, ~€250-280k).
 - **Decisione Firmamento**:
-  1. **NON contare su LTE tattico Y1**. Eliminarlo dal MVP scope a M+3. Cap. 7 §7.9.1 va revisionato.
-  2. **Wi-Fi / mesh radio amatoriali / partnership telco esistente**: alternative spectrum-free per emergenza.
-  3. **Engagement AGCOM workshop HAPS spectrum** (Y2-Y3): è impossibile influenzare allocazione WRC-23 (chiusa 2023); WRC-27 (2027) è il prossimo cycle. Firmamento deve essere in delegation italiana ITU entro M+12.
+ 1. **NON contare su LTE tattico Y1**. Eliminarlo dal MVP scope a M+3. Cap. 7 §7.9.1 va revisionato.
+ 2. **Wi-Fi / mesh radio amatoriali / partnership telco esistente**: alternative spectrum-free per emergenza.
+ 3. **Engagement AGCOM workshop HAPS spectrum** (Y2-Y3): è impossibile influenzare allocazione WRC-23 (chiusa 2023); WRC-27 (2027) è il prossimo cycle. Firmamento deve essere in delegation italiana ITU entro M+12.
 
 ---
 
@@ -214,7 +214,7 @@ Il Cap. 7 sottovaluta sistematicamente Cluster D. Il Cap. 10 sottovaluta Cluster
 
 Cap. 7 §7.3.2 dichiara confidence low e cita necessità di AIAD Annual Report + Eurospace Facts & Figures. **Manca il benchmark più importante**: contratti EO già esistenti su Regioni IT (e-GEOS, Planetek, NHazca). Esempio: Planetek ha contratto Regione Puglia ~€500k/anno multi-anno. e-GEOS ha contratti ARPA/Regioni multi-anno simili. Sommando 20 Regioni × €200-500k/anno = €4-10M/anno mercato EO PA italiana **esistente**. Stima Firmamento "SAM-IT Y5 €40-100M" implica **10-20×** market expansion entro 4 anni. È falsificabile e probabilmente sbagliata.
 
-### Critica C7.2. Pricing €150k/anno servizio EO Regione è inventato (Red Team Critica 6 già ammessa, ma incompleta)
+### Critica C7.2. Pricing €150k/anno servizio EO Regione è inventato (Critica review 6 già ammessa, ma incompleta)
 
 Benchmark reali pubblici (gare consip / MePA / contratti Regioni):
 - Planetek-Telespazio Regione Puglia monitoraggio dissesto: €120-180k/anno (multi-anno, già firmato, fonte: portali MEPA).
@@ -239,7 +239,7 @@ Cap. 7 §7.7.3 elenca jobs/pains/gains per comunità Pentema. Manca completament
 
 Cap. 7 §7.5.1:
 1. **Specializzazione geografica Aree Interne IT**: ineliminabile da TAS-Leonardo entrambi italiani; AALTO può comprare il moat con €5M JV con Leonardo. Difendibile <24 mesi.
-2. **Modello cooperativo Legacoop**: vero moat solo se ENAC + Coopfond + Legacoop creano un "regime esclusivo" (improbabile, la cooperativa Legacoop può lavorare con AALTO se vince un bando MIMIT). Cap. 7 Red Team Critica 2 già rivelata. Difendibile parzialmente.
+2. **Modello cooperativo Legacoop**: vero moat solo se ENAC + Coopfond + Legacoop creano un "regime esclusivo" (improbabile, la cooperativa Legacoop può lavorare con AALTO se vince un bando MIMIT). Cap. 7 Critica review 2 già rivelata. Difendibile parzialmente.
 3. **Sostenibilità + ESG**: replicabile da chiunque dichiari "scope 1-2-3" + greenwashing. AALTO è già 100% solare (Zephyr). Falso moat.
 4. **Approccio incrementale VTOL, MALE, HALE**: vantaggio operativo, non competitivo. Genera revenue intermedio (vero), ma non difende da AALTO che semplicemente non ha bisogno di incrementare (ha già HALE TRL 9).
 
@@ -253,7 +253,7 @@ I 4 argomenti citati (latenza, persistenza, sovranità, backup) sono **veri** ma
 
 ### Critica C7.8. Cap. 7 §7.10 Fase 5 ARR €100-500M Y10 è incompatibile con base rate
 
-Cap. 7 §7.10 cita "ARR target Fase 5 €100-500M (potenziale)". Cap. 11 Red Team Critica 5 (business-model-strategist) già confessa "100-400× in 7 anni è inverosimile". La risposta "scenario consolidamento standalone Y8 ARR €10-30M" è onesta ma **dovrebbe diventare baseline**, non scenario alternativo. La narrativa €100-500M è dannosa per la credibilità del documento verso investitori VC (paradossalmente, il rigore epistemico in §7.10 caveat protegge ma sottoutilizza).
+Cap. 7 §7.10 cita "ARR target Fase 5 €100-500M (potenziale)". Cap. 11 Critica review 5 (team strategia business model) già confessa "100-400× in 7 anni è inverosimile". La risposta "scenario consolidamento standalone Y8 ARR €10-30M" è onesta ma **dovrebbe diventare baseline**, non scenario alternativo. La narrativa €100-500M è dannosa per la credibilità del documento verso investitori VC (paradossalmente, il rigore epistemico in §7.10 caveat protegge ma sottoutilizza).
 
 ### Critica C7.9. Mancanza analisi competitor Tier 3 operatori UAS-as-a-Service IT
 
@@ -279,7 +279,7 @@ Revenue Y1 €200k (soglia SyR-Cost-003) è raggiungibile con sforzo. €355-405
 
 ### Critica C10.1. Hard conditions Go Condizionato 6A sono AND di probabilità basse
 
-Cap. 10 §10.6 Critica 1 (red-team-skeptic interno) già ammette: 5 hard conditions AND = P(tutte) ~25-60%. La risposta "il punto del Go Cond. è esattamente questo" è formalmente corretta ma **statisticamente** significa che il verdetto realistico atteso al M+12 è **Hold** ~40-50% delle volte, non Go.
+Cap. 10 §10.6 Critica 1 (review critica indipendente interno) già ammette: 5 hard conditions AND = P(tutte) ~25-60%. La risposta "il punto del Go Cond. è esattamente questo" è formalmente corretta ma **statisticamente** significa che il verdetto realistico atteso al M+12 è **Hold** ~40-50% delle volte, non Go.
 
 Implicazione: il piano operativo M+12 deve avere **piano B esecutivo per Hold** (non solo re-review tra 30 gg). Cap. 10 §10.3.3 elenca scenari alternativi (HOLD se C1 mancante etc.) ma non quantifica costi/conseguenze. In particolare:
 - Se C1 (LoI Regione) manca, Hold automatico. Cap. 10 dice "cercare anchor alternative (Piemonte, Calabria)". **Quanto costa**? Cycle time 6-12 mesi. Firmamento ha cash per attendere?
@@ -321,7 +321,7 @@ Realisticamente: CdA + sponsor (Coopfond, Regione) valutano "esit fair" come raz
 
 ### Critica C11.1. Capital intensity €10-30B Fase 5 è onesta ma narrativamente kamikaze
 
-Cap. 11 §11.10 Red Team Critica 3 già lo ammette parzialmente: "narrativamente disastroso". La risposta "stratificazione tipi capitale per fase" è elegante ma non risolve il problema:
+Cap. 11 §11.10 Critica review 3 già lo ammette parzialmente: "narrativamente disastroso". La risposta "stratificazione tipi capitale per fase" è elegante ma non risolve il problema:
 
 - VC al Series A che leggono lo Studio (e lo leggeranno, se trasparente) vedono "questa azienda dice che il full success scenario richiede €30B e programma EU che oggi non esiste". Confidenza scende.
 - MIMIT che legge §11.6 sente "ambizione fuori scala per PMI early-stage". Probabilità grant Y2-Y3 diminuisce.
@@ -405,7 +405,7 @@ In ordine di priorità competitiva (tutti vanno fatti tra M+3 e M+10):
 
 8. **[M+6-12] Position paper "Italian Stratospheric Sovereignty" con timing accurato**: NON pubblicare prima di M+12 (Threat 3 trigger). Da redigere internamente entro M+9, pubblicazione M+12-15 con buy-in MIMIT preliminare. Apre Cap. 11 boundary B2 narrative responsabilmente.
 
-9. **[M+6-12] Mappa Early Warning Indicators competitivi attivata**: Monitor mensile: AALTO press releases, EuroHAPS-2 call, IRIS² consortium announcements, EU Stratospheric programma policy. Trigger automatico Red Team review se EWI scatta.
+9. **[M+6-12] Mappa Early Warning Indicators competitivi attivata**: Monitor mensile: AALTO press releases, EuroHAPS-2 call, IRIS² consortium announcements, EU Stratospheric programma policy. Trigger automatico Review critica indipendente se EWI scatta.
 
 10. **[M+9-12] Decisione esplicita engagement TAS-Leonardo**: Timing, perimetro, line-in-the-sand su equity diretto. Cap. 11.10 action item, deve essere documento di governance approvato CdA. **Senza, exit forzato a Y3-Y4**.
 
@@ -460,7 +460,7 @@ L'output più probabile a Y10 è **acquisizione difensiva da TAS-Leonardo a Y3-Y
 
 La boundary B2 EU sovereign è vettore strategico onesto. La traiettoria realistica per realizzarla passa attraverso (1) eccellenza esecutiva Y1-Y3 (improbabile ma non impossibile), (2) consolidamento standalone IT Y4-Y6 (probabile se Y1-Y3 OK), (3) leadership EU consortium Y7-Y10 (improbabile ma vivo solo se Y4-Y6 dato). La probabilità di completare tutti e 3 i passi: ~6%. La probabilità di completare i primi 2: ~15-20%.
 
-**Raccomandazione operativa finale del Red Team competitivo**: 
+**Raccomandazione operativa finale della review critica competitivo**: 
 - Approva Cap. 10 verdetto Go Condizionato 6A.
 - Riconfigura Cap. 7 con pricing reale benchmark e UC-003/008 declassati (action items #2, #5).
 - Riconfigura Cap. 11 con scenario "B2-relaxed" esplicito (critica C11.6).

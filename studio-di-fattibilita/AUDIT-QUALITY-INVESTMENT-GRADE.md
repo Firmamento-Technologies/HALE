@@ -1,7 +1,7 @@
 # Audit Quality Investment-Grade. M+3 Final Review
 
 > **Data:** 17 maggio 2026 (M+3, proiezione M+11)
-> **Scope:** Volume 1 (Cap. 0-11) + Volume 2 Allegati (A1-A13 + Energy + Financial + Vendor RFQ) + Volume 3 Riferimenti (R1-R5) + 4 audit precedenti (RedTeam + Competitor + Regulatory + Quality).
+> **Scope:** Volume 1 (Cap. 0-11) + Volume 2 Allegati (A1-A13 + Energy + Financial + Vendor RFQ) + Volume 3 Riferimenti (R1-R5) + 4 audit precedenti.
 > **Mandato:** verifica investment-grade per 5 target audience: Coopfond/Legacoop, Regione Liguria/Protezione Civile, PNRR Aerospazio/MIMIT, EDF/Horizon/EU, Investor seed/Series A.
 > **Boundary conditions non attaccabili:** B1 (service-only + cooperative Legacoop) + B2 (EU sovereign / "complementare IRIS²"). I 3 audit avversariali precedenti attaccano *come ci si arriva*, non gli obiettivi strategici.
 > **Stile:** brutalmente fattuale, no whitewashing.
@@ -53,15 +53,15 @@ Detail:
 4. **Cap. 10 (Verdetto) ha 0 confidence levels esplicite** nonostante l'intero capitolo sia il verdetto del documento. §10.0bis.1 ha probabilità (5-15%, 45-60%, 20-30%, 5-10%) ma **non confidence sulle probabilità stesse**. Quanto è la confidence che "Scenario B base case ha 45-60% probabilità"? **FIX OBBLIGATORIO**.
 
 5. **DR findings sono trasferiti con confidence in 2/9 casi su 9** dei DR chiusi/parz-chiusi (`DR-research-closure-M3.md`). Esempi:
-   - DR-014 (capital intensity $50M-1B) **non ha confidence** trasferita esplicitamente in Cap. 8 caveat (è dichiarato "benchmark" senza confidence)
-   - DR-013 (0% base rate HALE) **è dichiarato confidence high in DR doc** ma trasferito in Cap. 6 §6.0.1 senza confidence esplicita ("CAVEAT CRITICO POST DR-013" ma non "confidence high")
-   - DR-009 (IRIS² no stratospheric) trasferito con confidence implicita "high" in §5.16bis, OK
+ - DR-014 (capital intensity $50M-1B) **non ha confidence** trasferita esplicitamente in Cap. 8 caveat (è dichiarato "benchmark" senza confidence)
+ - DR-013 (0% base rate HALE) **è dichiarato confidence high in DR doc** ma trasferito in Cap. 6 §6.0.1 senza confidence esplicita ("CAVEAT CRITICO POST DR-013" ma non "confidence high")
+ - DR-009 (IRIS² no stratospheric) trasferito con confidence implicita "high" in §5.16bis, OK
 
 6. **Numeri commerciali single-source declassificati a low ma usati come baseline**:
-   - TAM HAPS MarkNtel €99M→€240M: dichiarato "confidence low" Cap. 7 §7.1.2 ✓
-   - Costo Zephyr/Skydweller: dichiarato "vendor PR confidence medium-low" Cap. 7 ✓
-   - Insurance BVLOS €15-40k/anno: NO confidence dichiarata in Cap. 8 §8.5.1 ⚠️
-   - Pricing PA €150k/anno: **falsificato post-audit Cluster D** e dichiarato in §7.4.4.2 + financial model README; ma Cap. 8 §8.6.1 baseline ancora usa €380k revenue Y1 senza nota di recalibrazione. **INCONSISTENZA CRITICA Cap. 7 vs Cap. 8**.
+ - TAM HAPS MarkNtel €99M→€240M: dichiarato "confidence low" Cap. 7 §7.1.2 ✓
+ - Costo Zephyr/Skydweller: dichiarato "vendor PR confidence medium-low" Cap. 7 ✓
+ - Insurance BVLOS €15-40k/anno: NO confidence dichiarata in Cap. 8 §8.5.1 ⚠️
+ - Pricing PA €150k/anno: **falsificato post-audit Cluster D** e dichiarato in §7.4.4.2 + financial model README; ma Cap. 8 §8.6.1 baseline ancora usa €380k revenue Y1 senza nota di recalibrazione. **INCONSISTENZA CRITICA Cap. 7 vs Cap. 8**.
 
 7. **Numeri normativi sono uniformemente confidence high** ✓ (D.Lgs. 36/2023 + Reg. UE 2019/947 + EASA SORA 2.5 + GDPR + NIS2). Coerente con la regola.
 
@@ -157,7 +157,7 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 | Cap. | B1 dichiarata in §0bis? | Coerenza interna? | Note |
 |---|:---:|---|---|
-| Cap. 1 | ✓ §1.0bis | ✓ pillar centrale | Cooperatività esplicitata come scelta strutturale, non vantaggio competitivo (Red Team R1 OK) |
+| Cap. 1 | ✓ §1.0bis | ✓ pillar centrale | Cooperatività esplicitata come scelta strutturale, non vantaggio competitivo (review critica R1 OK) |
 | Cap. 2 | ✓ §2.0bis | ✓ SMART obj derivati | 30 obj coerenti con service-only |
 | Cap. 3 | ✓ §3.0bis | ✓ + NegR-B-001 Critical | Audit semestrale contratti vendita asset |
 | Cap. 4 | ✓ §4.0bis | ✓ Scope service-only | "NON è in scope alcuna vendita velivoli" esplicito |
@@ -190,7 +190,7 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 ---
 
-## 5. Disciplina epistemica (7 regole skill epistemic-rigor)
+## 5. Disciplina epistemica (7 regole skill rigore epistemico)
 
 ### 5.1 Audit per capitolo
 
@@ -209,15 +209,15 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 1. **R1 (Falsifiability): Cap. 10 ha 0 FO esplicite**. ⚠️ FIX obbligatorio.
 2. **R4 (Confidence): Cap. 0, 8, 9, 10 sotto-applicato**. ⚠️ FIX obbligatorio.
 3. **R5 (Pre-mortem): Cap. 0 non ha pre-mortem aggregato**. Pre-mortem aggregato esiste in AUDIT-QUALITY-VOLUME-1.md §7 ma **non trasferito in Cap. 0**. ⚠️ FIX raccomandato.
-4. **R6 (Distinzione concetti): Critica G-05 Red Team identifica confusione "feasibile / fattibile / operativo"** in Cap. 0, 6, 10. **Risposta nei capitoli: non implementata**, il documento sa che è un problema, lo dichiara, non lo corregge. ⚠️ FIX raccomandato Cap. 0 + Cap. 10.
+4. **R6 (Distinzione concetti): Critica G-05 review critica identifica confusione "feasibile / fattibile / operativo"** in Cap. 0, 6, 10. **Risposta nei capitoli: non implementata**, il documento sa che è un problema, lo dichiara, non lo corregge. ⚠️ FIX raccomandato Cap. 0 + Cap. 10.
 5. **R7 (Base rates): Cap. 8 cita "base rate aerospace cost overrun 30-150%" (GAO-20-195G ref) ma applica contingency solo 15%**. Inconsistenza: l'output del scenario base CapEx Y1 €1.4M è 30% sotto la base rate aerospace. ⚠️ FIX raccomandato.
 
 ### 5.3 Steel-manning della posizione contraria
 
-- **Cap. 1 Red Team (5 critiche)**: ✓ steel-manning R1-R5 con risposte dettagliate
-- **Cap. 7 Red Team (6 critiche post-Cluster D)**: ✓ steel-manning su Starlink, modello cooperativo, TAM ottimismo, AALTO entry, MVP ambizioso, pricing inventato, tutti con **risposta + action item**
-- **Cap. 10 Red Team (6 critiche)**: ✓ steel-manning ma **Red Team critica G-08** dell'AUDIT-REDTEAM: "Tutte le risposte concludono in difesa del verdetto. Nessuna critica ha provocato modifica del verdetto. Pattern 'red team theater'". Questa critica è valida: post-audit M+3 il Cap. 10 ha aggiunto §10.0bis con HOLD CON PIANO RAFFORZATO come scenario base, **risolvendo la critica G-08** ✓ POST-FIX
-- **Cap. 8 Red Team (6 critiche)**: ✓ steel-manning su CapEx, Revenue, WACC, Phase B, Capital Intensity, Mix funding
+- **Cap. 1 review critica (5 critiche)**: ✓ steel-manning R1-R5 con risposte dettagliate
+- **Cap. 7 review critica (6 critiche post-Cluster D)**: ✓ steel-manning su Starlink, modello cooperativo, TAM ottimismo, AALTO entry, MVP ambizioso, pricing inventato, tutti con **risposta + action item**
+- **Cap. 10 review critica (6 critiche)**: ✓ steel-manning ma **Critica della review G-08** dell'AUDIT-REDTEAM: "Tutte le risposte concludono in difesa del verdetto. Nessuna critica ha provocato modifica del verdetto. Pattern 'red team theater'". Questa critica è valida: post-audit M+3 il Cap. 10 ha aggiunto §10.0bis con HOLD CON PIANO RAFFORZATO come scenario base, **risolvendo la critica G-08** ✓ POST-FIX
+- **Cap. 8 review critica (6 critiche)**: ✓ steel-manning su CapEx, Revenue, WACC, Phase B, Capital Intensity, Mix funding
 
 **VERDETTO STEEL-MANNING: 9/10**. Eccezionale per documento aerospace early-stage. Il pattern "red team theater" del Cap. 10 originale è stato corretto post-audit M+3.
 
@@ -235,7 +235,7 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 | **Bandi pubblici vinti al primo tentativo 15-25%** | AUDIT-QUALITY-VOLUME-1.md §5 base rate #11 | medium | ⚠️ NON applicata a Cap. 8 mix funding 60% target |
 | **Startup aerospace seed→revenue operational 10-20%** | DR-007 (aperto), Cap. 7 §7.1.2 | low | ⚠️ NON triangulata né applicata |
 
-**Verdetto base rate**: **4 out of 9 base rate non applicate** dove dovrebbero essere. Le base rate citate sono CITATE ma non sempre RIFLESSE nei piani. Questo è il **pattern G-03 del Red Team audit** ancora non chiuso.
+**Verdetto base rate**: **4 out of 9 base rate non applicate** dove dovrebbero essere. Le base rate citate sono CITATE ma non sempre RIFLESSE nei piani. Questo è il **pattern G-03 della review critica audit** ancora non chiuso.
 
 ### 5.5 Survivor bias
 
@@ -253,11 +253,11 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 ---
 
-## 6. Red Team check coverage
+## 6. Review critica coverage
 
-### 6.1 Capitoli con Red Team check
+### 6.1 Capitoli con Review critica
 
-| Cap. | Red Team explicit | # critiche | Response + action items? | Qualità critiche |
+| Cap. | review critica explicit | # critiche | Response + action items? | Qualità critiche |
 |---|:---:|:---:|:---:|---|
 | Cap. 0 | ⚠️ no esplicito | 0 | n/a | ⚠️ Sintesi Esecutiva non auditata dal RT |
 | Cap. 1 | ✓ §1.10 | 5 (R1-R5) | ✓ 5 action items + 6 DR | Eccellente |
@@ -285,17 +285,17 @@ Le **3/20 occorrenze NON-negative** di "alternativa Starlink":
 
 **VERDETTO COERENZA: 9.5/10**. I 4 audit sono **strutturalmente coerenti**. Nessun audit contraddice gli altri sui temi chiave. Il Cap. 10 §10.0bis ha integrato esplicitamente i finding dei 4 audit.
 
-### 6.3 Gap Red Team
+### 6.3 Gap review critica
 
-1. **Cap. 0 (Sintesi Esecutiva) non è Red Team-auditato esplicitamente**. AUDIT-REDTEAM §2.0 fornisce critiche puntuali (Critica 2.0.3, 2.0.4, 2.0.6) ma **non integrate nel Cap. 0 stesso**. ⚠️ FIX OBBLIGATORIO: aggiungere §0.13 "Red Team check executive" come response.
+1. **Cap. 0 (Sintesi Esecutiva) non è review critica-auditato esplicitamente**. AUDIT-REDTEAM §2.0 fornisce critiche puntuali (Critica 2.0.3, 2.0.4, 2.0.6) ma **non integrate nel Cap. 0 stesso**. ⚠️ FIX OBBLIGATORIO: aggiungere §0.13 "Review critica executive" come response.
 
-2. **Pattern "Red Team theater" residuo**: l'AUDIT-REDTEAM Critica G-08 ("Tutte le risposte concludono in difesa del verdetto") è **risolta solo per Cap. 10** post-audit M+3. Cap. 7 §7.13, Cap. 6 §6.8, Cap. 8 §8.10, Cap. 4 §4.8 hanno tutte risposte che difendono il verdetto. Necessario un audit **"quale critica ha modificato il verdetto?"** per evitare il pattern teatrale.
+2. **Pattern "review formale senza follow-through" residuo**: l'AUDIT-REDTEAM Critica G-08 ("Tutte le risposte concludono in difesa del verdetto") è **risolta solo per Cap. 10** post-audit M+3. Cap. 7 §7.13, Cap. 6 §6.8, Cap. 8 §8.10, Cap. 4 §4.8 hanno tutte risposte che difendono il verdetto. Necessario un audit **"quale critica ha modificato il verdetto?"** per evitare il pattern teatrale.
 
-3. **Cap. 0 + Cap. 10 mancano "kill criteria"** formali (Red Team Critica G-04). Quando un verdetto "Hold" diventa "No-Go"? Quante Hold consecutive? ⚠️ FIX RACCOMANDATO.
+3. **Cap. 0 + Cap. 10 mancano "kill criteria"** formali (Critica review G-04). Quando un verdetto "Hold" diventa "No-Go"? Quante Hold consecutive? ⚠️ FIX RACCOMANDATO.
 
-### 6.4 Verdetto Red Team coverage
+### 6.4 Verdetto della review critica coverage
 
-**COVERAGE: 9.5/10**. Tutti i capitoli 1-11 hanno Red Team. **Cap. 0 manca**. Coerenza tra 4 audit avversariali eccezionale.
+**COVERAGE: 9.5/10**. Tutti i capitoli 1-11 hanno review critica. **Cap. 0 manca**. Coerenza tra 4 audit avversariali eccezionale.
 
 ---
 
@@ -395,63 +395,63 @@ Lista numerata per portare il documento da "quasi-investment-grade" a "investmen
 ### Priorità 1. Bloccanti per audience institutional (Coopfond + Regione + PNRR)
 
 1. **Riscrittura Cap. 0 (Sintesi Esecutiva)**: 4-6 ore
-   - Aggiungere confidence per ogni numero in §0.11 (NPV, IRR, ARR, capital intensity)
-   - Aggiungere §0.13 "Red Team check executive" con 3-5 critiche aggregate dei 4 audit
-   - Aggiungere §0.14 "Pre-mortem aggregato top 5+1 driver di fallimento"
-   - Propagare pivot 6B "operatore servizi su prime contractor" in §0.3
-   - Richiamare sliding timeline §9.12 in §0.10 cronoprogramma
-   - Aggiungere disclaimer epistemico finale (come Cap. 11.13 closing)
+ - Aggiungere confidence per ogni numero in §0.11 (NPV, IRR, ARR, capital intensity)
+ - Aggiungere §0.13 "Review critica executive" con 3-5 critiche aggregate dei 4 audit
+ - Aggiungere §0.14 "Pre-mortem aggregato top 5+1 driver di fallimento"
+ - Propagare pivot 6B "operatore servizi su prime contractor" in §0.3
+ - Richiamare sliding timeline §9.12 in §0.10 cronoprogramma
+ - Aggiungere disclaimer epistemico finale (come Cap. 11.13 closing)
 
 2. **Cap. 10, Top-5 Falsifying Observations del verdetto**: 1-2 ore
-   - Attualmente 0 FO esplicite (gap critico R1)
-   - Aggiungere §10.10bis "FO del verdetto Cap. 10": almeno 5 FO operative + datate
-   - Es. "Se al M+6 mix funding committed < 25%, attivazione Hold automatico"
-   - Es. "Se al M+9 nessun contratto Regione firmato, Scenario D PIVOT STRATEGICO attivato"
+ - Attualmente 0 FO esplicite (gap critico R1)
+ - Aggiungere §10.10bis "FO del verdetto Cap. 10": almeno 5 FO operative + datate
+ - Es. "Se al M+6 mix funding committed < 25%, attivazione Hold automatico"
+ - Es. "Se al M+9 nessun contratto Regione firmato, Scenario D PIVOT STRATEGICO attivato"
 
 3. **Cap. 5 §5.16, promozione da addendum a pillar**: 2-3 ore
-   - 15 showstopper regolatori aggiuntivi sono in §5.16 ma non integrati nel discorso generale del capitolo
-   - Per investment-grade PNRR/EDF serve riscrittura Cap. 5 con i 15 showstopper come **categoria 4° del framework** (oltre a EASA/ENAC/AGCOM/Garante)
+ - 15 showstopper regolatori aggiuntivi sono in §5.16 ma non integrati nel discorso generale del capitolo
+ - Per investment-grade PNRR/EDF serve riscrittura Cap. 5 con i 15 showstopper come **categoria 4° del framework** (oltre a EASA/ENAC/AGCOM/Garante)
 
 ### Priorità 2. Bloccanti per VC / EDF / Horizon
 
 4. **Modello finanziario Excel, completamento Sensitivity + Scenarios + Monte Carlo**: 8-12 ore
-   - Sensitivity sheet attualmente statico (0 formule), necessario tabulato data-table
-   - Scenarios sheet statico, formule che leggono da Assumptions
-   - Monte Carlo: aggiungere foglio dedicato (5000 iterazioni) su 7 driver primari
-   - DCF estesa Y6-Y10 (attualmente solo Y1-Y5 tabulato + estrapolazione testuale Y6-Y10)
+ - Sensitivity sheet attualmente statico (0 formule), necessario tabulato data-table
+ - Scenarios sheet statico, formule che leggono da Assumptions
+ - Monte Carlo: aggiungere foglio dedicato (5000 iterazioni) su 7 driver primari
+ - DCF estesa Y6-Y10 (attualmente solo Y1-Y5 tabulato + estrapolazione testuale Y6-Y10)
 
 5. **Cap. 7 + Cap. 8, recepimento Cluster D recalibrazione pricing**: 3-4 ore
-   - Cap. 7 §7.8.2 originale (€150k base) **non riscritto** post-audit Cluster D; il valore è declassato solo nel financial model README + nel Red Team risposta §7.13.6
-   - Cap. 8 §8.6.1 cash flow Y1 €380k revenue non recalibrato a €220-260k post-Cluster D
-   - **INCONSISTENZA NUMERICA** tra Cap. 7 / Cap. 8 / financial model README
+ - Cap. 7 §7.8.2 originale (€150k base) **non riscritto** post-audit Cluster D; il valore è declassato solo nel financial model README + nel review critica risposta §7.13.6
+ - Cap. 8 §8.6.1 cash flow Y1 €380k revenue non recalibrato a €220-260k post-Cluster D
+ - **INCONSISTENZA NUMERICA** tra Cap. 7 / Cap. 8 / financial model README
 
 6. **Position paper "Italian Stratospheric Sovereignty"**: 6-8 ore (esterno allo Studio)
-   - Pre-condizione per credibilità DG DEFIS / DG CNECT
-   - Cap. 11 §11.10.1 azione 2 obbligatoria entro M+12
-   - Senza, narrazione "complementare IRIS²" è auto-narrativa (Critica 2.0.6 Red Team)
+ - Pre-condizione per credibilità DG DEFIS / DG CNECT
+ - Cap. 11 §11.10.1 azione 2 obbligatoria entro M+12
+ - Senza, narrazione "complementare IRIS²" è auto-narrativa (Critica 2.0.6 review critica)
 
 ### Priorità 3. Raccomandate (non bloccanti ma alta utilità)
 
 7. **TOP-50 FO consolidate in singolo documento**: 2-3 ore
-   - Distribuire 145 FO nel Volume 1 + 10 FO ADD = ~155 FO totali
-   - Per investment-grade serve **Master FO Table** consolidato per gate review
-   - Format: FO-ID | Capitolo | Claim | Trigger | Milestone | Confidence | Action | Owner
+ - Distribuire 145 FO nel Volume 1 + 10 FO ADD = ~155 FO totali
+ - Per investment-grade serve **Master FO Table** consolidato per gate review
+ - Format: FO-ID | Capitolo | Claim | Trigger | Milestone | Confidence | Action | Owner
 
 8. **Cap. 8, base rate aerospace cost overrun applicata**: 1-2 ore
-   - Contingency 15% sotto base rate 30-150%; aggiornare CapEx scenario realistico Y1 €1.3-3.0M (vs €0.97-1.96M nominale)
-   - Aggiungere riga "Scenario realistico aerospace base rate" nelle tabelle §8.3.1 + §8.6.2
+ - Contingency 15% sotto base rate 30-150%; aggiornare CapEx scenario realistico Y1 €1.3-3.0M (vs €0.97-1.96M nominale)
+ - Aggiungere riga "Scenario realistico aerospace base rate" nelle tabelle §8.3.1 + §8.6.2
 
 9. **Cap. 11 §11.6bis.7, Cap. 7 + Cap. 8 aggiornati a B2-relaxed come caso base Y6-Y10**: 4-6 ore
-   - Cap. 8 modello finanziario M+9 deve avere scenario B2-relaxed (ARR €30-80M Y8) come caso base operativo
-   - Cap. 7 pricing target PA €100-200k/anno regione coerente con scala B2-relaxed (non scala B2 full)
+ - Cap. 8 modello finanziario M+9 deve avere scenario B2-relaxed (ARR €30-80M Y8) come caso base operativo
+ - Cap. 7 pricing target PA €100-200k/anno regione coerente con scala B2-relaxed (non scala B2 full)
 
 10. **Cap. 0 + Cap. 10, kill criteria escalation matrix**: 1-2 ore
-    - "Quanti Hold consecutivi prima del No-Go automatico" non dichiarato
-    - Es. "3 Hold consecutivi su LoI Regione (M+13 / M+16 / M+20) = No-Go scale-up Liguria + pivot Piemonte"
+ - "Quanti Hold consecutivi prima del No-Go automatico" non dichiarato
+ - Es. "3 Hold consecutivi su LoI Regione (M+13 / M+16 / M+20) = No-Go scale-up Liguria + pivot Piemonte"
 
 11. **Rimozione 2 minor "alternativa Starlink"** non-negative (Cap. 7 + Cap. 8): 15 min
-    - Cap. 8 §0.0.3: parentetica "(alternativa Starlink EU)" → rimuovere o sostituire con "EU sovereign full scale"
-    - Cap. 7 §7.12.2.667: "Per scala 'alternativa Starlink EU'" → "Per scala EU sovereign full scale"
+ - Cap. 8 §0.0.3: parentetica "(alternativa Starlink EU)" → rimuovere o sostituire con "EU sovereign full scale"
+ - Cap. 7 §7.12.2.667: "Per scala 'alternativa Starlink EU'" → "Per scala EU sovereign full scale"
 
 ### Effort totale stimato per portare a investment-grade per VC/EDF: **30-45 ore di scrittura focused**.
 
@@ -479,10 +479,10 @@ Lista numerata per portare il documento da "quasi-investment-grade" a "investmen
 | Dimensione | Score | Note |
 |---|:---:|---|
 | **Rigore metodologico** (NASA SE + art.41) | **9/10** | Eccezionale. Tutti i deliverable PFTE coperti. RTM v1.0 con 0 orphan + 0 untestable. Risk Register ISO 31000 compliant. |
-| **Onestà epistemica** (7 regole epistemic-rigor) | **8.5/10** | Eccezionale per Cap. 1, 3, 7, 11. Lacuna in Cap. 0 + 10 (confidence + FO). |
+| **Onestà epistemica** (7 regole rigore epistemico) | **8.5/10** | Eccezionale per Cap. 1, 3, 7, 11. Lacuna in Cap. 0 + 10 (confidence + FO). |
 | **Coerenza interna** (boundary B1/B2 + linguaggio) | **9.5/10** | B1+B2 preservate 11/11 capitoli. 2 fix minori linguistici. |
 | **Coerenza inter-capitolo** (numeri allineati) | **6.5/10** | **GAP CRITICO**: Cap. 7 pricing originale (€150k) vs Cap. 8 revenue baseline (€380k) vs financial model README (€260k) NON allineati post-recalibrazione Cluster D. |
-| **Audit avversariali integrati** | **9/10** | 4 audit + AUDIT-QUALITY-VOLUME-1.md + FALSIFYING-OBSERVATIONS-M3-ADDENDUM. Pattern "Red Team theater" corretto Cap. 10. |
+| **Review critiche indipendenti integrati** | **9/10** | 4 audit + AUDIT-QUALITY-VOLUME-1.md + FALSIFYING-OBSERVATIONS-M3-ADDENDUM. Pattern "review formale senza follow-through" corretto Cap. 10. |
 | **Allegati Volume 2 maturità** | **7.5/10** | A1 RTM + A2 Risk Register + A7 Link Budget + Energy Balance maturi. A9 Computo Metrico + A10 Piano Manutenzione + A11 PSC SORA + A12 VIA = placeholder. |
 | **Modello finanziario executable** | **6/10** | 161 formule funzionanti. Sensitivity + Scenarios + Monte Carlo statici. DCF solo Y1-Y5 tabulato. |
 | **Evidenze esterne raccolte** (LoI, contratti, pre-app ENAC) | **2/10** | **GAP STRUTTURALE M+3**: 0 LoI firmate, 0 contratti, 0 pre-app ENAC formalmente documentata. DR-001..DR-005 aperti. |
@@ -496,7 +496,7 @@ Lista numerata per portare il documento da "quasi-investment-grade" a "investmen
 
 ### 10.3 Sintesi brutalmente onesta
 
-Il documento è **strutturalmente più rigoroso del 90% degli Studi di Fattibilità aerospace italiani early-stage** (giudizio del Red Team audit confermato). Ha **4 audit avversariali integrati** con response e action items, scenario B2-relaxed esplicitato, base rate 0% HALE solari dichiarata, sliding timeline §9.12, caveat post-DR-014, NegR-Mkt-001 binding sul linguaggio pubblico. Questa onestà metodologica è **leva di credibilità verso audience sofisticate** (RINA review, DG DEFIS, EIB DCF specialist).
+Il documento è **strutturalmente più rigoroso del 90% degli Studi di Fattibilità aerospace italiani early-stage** (giudizio della review critica audit confermato). Ha **4 audit avversariali integrati** con response e action items, scenario B2-relaxed esplicitato, base rate 0% HALE solari dichiarata, sliding timeline §9.12, caveat post-DR-014, NegR-Mkt-001 binding sul linguaggio pubblico. Questa onestà metodologica è **leva di credibilità verso audience sofisticate** (RINA review, DG DEFIS, EIB DCF specialist).
 
 Ma:
 - Per **audience VC top-tier "pitch deck classico"** il pattern di onestà brutale è **debolezza percepita**: P(Go pieno) 5-15% dichiarato apertamente non vende.
@@ -532,9 +532,9 @@ Ma:
 
 ## 12. Riferimenti audit
 
-- `AUDIT-REDTEAM-VOLUME-1.md` (417 righe): red-team-skeptic
-- `AUDIT-COMPETITOR-VOLUME-1.md` (474 righe): competitor-intelligence
-- `AUDIT-REGULATORY-VOLUME-1.md` (445 righe): regulatory-adversary
+- `AUDIT-REDTEAM-VOLUME-1.md` (417 righe): review critica indipendente
+- `AUDIT-COMPETITOR-VOLUME-1.md` (474 righe): analisi competitor indipendente
+- `AUDIT-REGULATORY-VOLUME-1.md` (445 righe): review regolatoria indipendente
 - `AUDIT-QUALITY-VOLUME-1.md` (295 righe): quality consolidation M+3
 - `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` (226 righe): 10 FO ADD
 - `riferimenti/DR-research-closure-M3.md`: 9/15 DR chiusi M+3

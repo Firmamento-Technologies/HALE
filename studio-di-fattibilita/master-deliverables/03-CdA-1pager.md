@@ -78,7 +78,7 @@ Il CdA è chiamato ad approvare lo Studio di Fattibilità Vol. 1+2+3 nella versi
 
 ## CONFIDENCE AGGREGATO
 
-Volume 1, Volume 2 e Volume 3 risultano completi a M+3 bozza, con quattro audit avversariali condotti (Red Team, Competitor, Regulatory, Quality). Sui quindici DR (Debito di Rigore) ne risultano chiusi nove via desk research, mentre sei richiedono engagement esterno per chiusura. Il confidence aggregato è quindi MEDIUM-LOW e impone validazione esterna prima del G3 effettivo M+10.
+Volume 1, Volume 2 e Volume 3 risultano completi a M+3 bozza, con quattro cicli di review critica indipendente. Sui quindici DR (Debito di Rigore) ne risultano chiusi nove via desk research, mentre sei richiedono engagement esterno per chiusura. Il confidence aggregato è quindi MEDIUM-LOW e impone validazione esterna prima del G3 effettivo M+10.
 
 Va detto con chiarezza che il documento non è investment-grade per finanziatori istituzionali finché non saranno raccolti la LoI firmata della Regione Liguria, le vendor quotation reali, il pre-application ENAC documentato, la validazione del modello finanziario da parte di un soggetto terzo (RINA/DNV) ed eventualmente un'analisi Monte Carlo.
 

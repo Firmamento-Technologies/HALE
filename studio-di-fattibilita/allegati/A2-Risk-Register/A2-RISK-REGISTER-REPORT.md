@@ -1,9 +1,9 @@
 # Allegato A.2 - Risk Register Report v1.0
 
-> **Volume 2 - Allegati tecnici - Studio di Fattibilita Piattaforma Aerea HALE/VTOL**  
-> Firmamento Technologies srl coop - bando Cooding Prototypes (Coopfond / Legacoop)  
-> Versione: **v1.0** - Data: **2026-05-17** - Stato: **Bozza M+3 consolidata**  
-> Metodologia: NASA NPR 8000.4A + FMECA (MIL-STD-1629A) + FTA (ARP4761) + ISO 31000:2018  
+> **Volume 2 - Allegati tecnici - Studio di Fattibilita Piattaforma Aerea HALE/VTOL** 
+> Firmamento Technologies srl coop - bando Cooding Prototypes (Coopfond / Legacoop) 
+> Versione: **v1.0** - Data: **2026-05-17** - Stato: **Bozza M+3 consolidata** 
+> Metodologia: NASA NPR 8000.4A + FMECA (MIL-STD-1629A) + FTA (ARP4761) + ISO 31000:2018 
 > Conformita: D.Lgs. 36/2023 art. 41 + EASA SORA 2.5 + Part-IS + NIS2
 
 ---
@@ -110,341 +110,341 @@ Ordinati per Score baseline (P x I) decrescente. Per ciascuno: descrizione, impa
 
 ### 1. RSK-TEC-001 - Tecnico - Score 25 -> residual 20 (RED)
 
-**Descrizione**: Energy balance HALE inverno 44N - deficit -50% confermato da simulazione (vs +0-15% stima a mano)  
-**Trigger**: Simulazione 365gg M+3 mostra -50.1% margin solstizio dic; perennial flight NON fattibile baseline 2026-28  
-**Owner**: propulsion-energy-engineer  
-**Status**: Showstopper  
-**Response**: Mitigate  
-**Mitigation**: Plan A obbligato E5 'Seasonal-only mar-ott' (~7 mesi). Plan B Y6+: migrazione SS Li 450 Wh/kg o PEM+LH2. Plan C: ridimensionamento R&D-only fino tech 2030+  
-**Residual P x I**: 5 x 4 = 20  
-**Fase critica**: Y3-Y5 (Phase B 6B)  
-**Confidence**: high  
-**EWI**: Sim. allegato A.7 + monthly clear-sky variability + LiS pack TRL update trimestrale  
-**Falsifying observation**: Se al gate G5 (M+24) sim. con dati operativi reali conferma deficit >30% giorni anche scenario E5, Percorso 6B terminato come operativo perennial  
+**Descrizione**: Energy balance HALE inverno 44N - deficit -50% confermato da simulazione (vs +0-15% stima a mano) 
+**Trigger**: Simulazione 365gg M+3 mostra -50.1% margin solstizio dic; perennial flight NON fattibile baseline 2026-28 
+**Owner**: ingegneria propulsione e energia 
+**Status**: Showstopper 
+**Response**: Mitigate 
+**Mitigation**: Plan A obbligato E5 'Seasonal-only mar-ott' (~7 mesi). Plan B Y6+: migrazione SS Li 450 Wh/kg o PEM+LH2. Plan C: ridimensionamento R&D-only fino tech 2030+ 
+**Residual P x I**: 5 x 4 = 20 
+**Fase critica**: Y3-Y5 (Phase B 6B) 
+**Confidence**: high 
+**EWI**: Sim. allegato A.7 + monthly clear-sky variability + LiS pack TRL update trimestrale 
+**Falsifying observation**: Se al gate G5 (M+24) sim. con dati operativi reali conferma deficit >30% giorni anche scenario E5, Percorso 6B terminato come operativo perennial 
 
 ### 2. RSK-REG-001 - Regolatorio - Score 20 -> residual 16 (RED)
 
-**Descrizione**: Mancanza framework HAPS EASA/ENAC - no Special Condition aperto HALE solare civile  
-**Trigger**: EASA non apre RMT HAPS nel calendario 2026-2028; ENAC non rilascia AMC HAPS  
-**Owner**: aviation-regulatory + sovereign-strategist  
-**Status**: Showstopper  
-**Response**: Mitigate  
-**Mitigation**: Engagement EASA Innovation Network + consortium CIRA/TAS per Special Condition collettiva; partecipazione ASD-Eurospace HAPS WG; lobby DG MOVE/DG DEFIS  
-**Residual P x I**: 4 x 4 = 16  
-**Fase critica**: Y3-Y6 (Phase B/C)  
-**Confidence**: high  
-**EWI**: EASA RMT calendar (semestrale) + Special Condition published + ASD-Eurospace minutes  
-**Falsifying observation**: Se al gate G5 (M+24) RMT HAPS non aperto e nessuna Special Condition in dialogo formale, Phase B 6B sospesa fino 2028+  
+**Descrizione**: Mancanza framework HAPS EASA/ENAC - no Special Condition aperto HALE solare civile 
+**Trigger**: EASA non apre RMT HAPS nel calendario 2026-2028; ENAC non rilascia AMC HAPS 
+**Owner**: aviation-regulatory + sovereign-strategist 
+**Status**: Showstopper 
+**Response**: Mitigate 
+**Mitigation**: Engagement EASA Innovation Network + consortium CIRA/TAS per Special Condition collettiva; partecipazione ASD-Eurospace HAPS WG; lobby DG MOVE/DG DEFIS 
+**Residual P x I**: 4 x 4 = 16 
+**Fase critica**: Y3-Y6 (Phase B/C) 
+**Confidence**: high 
+**EWI**: EASA RMT calendar (semestrale) + Special Condition published + ASD-Eurospace minutes 
+**Falsifying observation**: Se al gate G5 (M+24) RMT HAPS non aperto e nessuna Special Condition in dialogo formale, Phase B 6B sospesa fino 2028+ 
 
 ### 3. RSK-FIN-001 - Finanziario - Score 20 -> residual 12 (RED)
 
-**Descrizione**: Mancanza commitment funding Phase B 6B - 5.5-13.5M EUR mix EDF+Horizon+PNRR+equity  
-**Trigger**: Gate G5 M+24 mostra funding mix Phase B < 30%  
-**Owner**: financial-cfo + sovereign-strategist  
-**Status**: Showstopper  
-**Response**: Mitigate  
-**Mitigation**: Mix funding: EDF (DG DEFIS) + Horizon Europe + PNRR Aerospazio + Series B equity (CDP, EIB); fasi graduali; partnership prime per cost sharing  
-**Residual P x I**: 3 x 4 = 12  
-**Fase critica**: Y2-Y3 (gate G5)  
-**Confidence**: medium-high  
-**EWI**: Calendar bandi EDF/Horizon + Series B pipeline + LoI investitori  
-**Falsifying observation**: Se al gate G5 funding < 30% committed, DEFER 6B a M+36 con re-review; se < 15%, Hold permanente fino 2030+  
+**Descrizione**: Mancanza commitment funding Phase B 6B - 5.5-13.5M EUR mix EDF+Horizon+PNRR+equity 
+**Trigger**: Gate G5 M+24 mostra funding mix Phase B < 30% 
+**Owner**: financial-cfo + sovereign-strategist 
+**Status**: Showstopper 
+**Response**: Mitigate 
+**Mitigation**: Mix funding: EDF (DG DEFIS) + Horizon Europe + PNRR Aerospazio + Series B equity (CDP, EIB); fasi graduali; partnership prime per cost sharing 
+**Residual P x I**: 3 x 4 = 12 
+**Fase critica**: Y2-Y3 (gate G5) 
+**Confidence**: medium-high 
+**EWI**: Calendar bandi EDF/Horizon + Series B pipeline + LoI investitori 
+**Falsifying observation**: Se al gate G5 funding < 30% committed, DEFER 6B a M+36 con re-review; se < 15%, Hold permanente fino 2030+ 
 
 ### 4. RSK-TEC-003 - Tecnico/Regolatorio - Score 16 -> residual 12 (RED)
 
-**Descrizione**: Type Certification HALE timeline > 5 anni - no precedente HALE solare civile EU con TC emesso  
-**Trigger**: EASA non apre RMT HAPS o Special Condition path entro 2028  
-**Owner**: aviation-regulatory + sovereign-strategist  
-**Status**: Showstopper  
-**Response**: Mitigate+Accept  
-**Mitigation**: Parallel approach: ops 6A genera revenue + esperienza mentre TC HALE matura. Engagement EASA Innovation Network + consortium CIRA/TAS per Special Condition collettiva  
-**Residual P x I**: 4 x 3 = 12  
-**Fase critica**: Y4-Y8  
-**Confidence**: medium-high  
-**EWI**: EASA RMT HAPS calendar + advisory bodies pubblicazioni + AALTO/Skydweller TC progress  
-**Falsifying observation**: Se a Y5 (M+60) EASA non ha aperto RMT HAPS, Percorso 6B operativo commerciale rinviato a Y8+, scenario No-Go pieno se anche window IRIS2 chiusa  
+**Descrizione**: Type Certification HALE timeline > 5 anni - no precedente HALE solare civile EU con TC emesso 
+**Trigger**: EASA non apre RMT HAPS o Special Condition path entro 2028 
+**Owner**: aviation-regulatory + sovereign-strategist 
+**Status**: Showstopper 
+**Response**: Mitigate+Accept 
+**Mitigation**: Parallel approach: ops 6A genera revenue + esperienza mentre TC HALE matura. Engagement EASA Innovation Network + consortium CIRA/TAS per Special Condition collettiva 
+**Residual P x I**: 4 x 3 = 12 
+**Fase critica**: Y4-Y8 
+**Confidence**: medium-high 
+**EWI**: EASA RMT HAPS calendar + advisory bodies pubblicazioni + AALTO/Skydweller TC progress 
+**Falsifying observation**: Se a Y5 (M+60) EASA non ha aperto RMT HAPS, Percorso 6B operativo commerciale rinviato a Y8+, scenario No-Go pieno se anche window IRIS2 chiusa 
 
 ### 5. RSK-HR-002 - Risorse Umane - Score 16 -> residual 9 (RED)
 
-**Descrizione**: Reclutamento CISO + DPO + Head Regulatory - 3 ruoli senior in mercato compresso  
-**Trigger**: Tempo hire > 9 mesi (vs target 3-6 mesi)  
-**Owner**: HR + CEO  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: Headhunter specializzati; contratti competitivi (180-220k EUR/anno per CISO senior); part-time fractional CISO/DPO M+0-6; partnership consulting Legal/Cyber  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y0-Y1  
-**Confidence**: medium  
-**EWI**: Hire pipeline weekly + headhunter pipeline status  
-**Falsifying observation**: Se ruoli senior non riempiti M+9, NIS2/Part-IS compliance a rischio + cap.OpEx esplode con consulting fees  
+**Descrizione**: Reclutamento CISO + DPO + Head Regulatory - 3 ruoli senior in mercato compresso 
+**Trigger**: Tempo hire > 9 mesi (vs target 3-6 mesi) 
+**Owner**: HR + CEO 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: Headhunter specializzati; contratti competitivi (180-220k EUR/anno per CISO senior); part-time fractional CISO/DPO M+0-6; partnership consulting Legal/Cyber 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y0-Y1 
+**Confidence**: medium 
+**EWI**: Hire pipeline weekly + headhunter pipeline status 
+**Falsifying observation**: Se ruoli senior non riempiti M+9, NIS2/Part-IS compliance a rischio + cap.OpEx esplode con consulting fees 
 
 ### 6. RSK-REG-008 - Regolatorio - Score 16 -> residual 9 (RED)
 
-**Descrizione**: EASA Part-21 design organisation approval (DOA) - richiesto per HALE Phase C  
-**Trigger**: Transition Phase B->C richiede DOA accreditata o partner con DOA  
-**Owner**: aviation-regulatory + systems-engineer  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Partnership con DOA esistente (Leonardo, Tekever, AALTO) per Phase C; preparazione DOA Firmamento Y5+  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y5+  
-**Confidence**: medium  
-**EWI**: DOA holders pubblicati EASA + partnership negotiation status  
+**Descrizione**: EASA Part-21 design organisation approval (DOA) - richiesto per HALE Phase C 
+**Trigger**: Transition Phase B->C richiede DOA accreditata o partner con DOA 
+**Owner**: aviation-regulatory + systems-engineer 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Partnership con DOA esistente (Leonardo, Tekever, AALTO) per Phase C; preparazione DOA Firmamento Y5+ 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y5+ 
+**Confidence**: medium 
+**EWI**: DOA holders pubblicati EASA + partnership negotiation status 
 
 ### 7. RSK-REG-018 - Regolatorio - Score 16 -> residual 9 (RED)
 
-**Descrizione**: EUROCONTROL Network Manager - coordinamento ATM-ANS HAPS FL400+ EU airspace  
-**Trigger**: EUROCONTROL non rilascia procedure operative HAPS perennial entro Y4-Y5  
-**Owner**: avionics-gnc-engineer + aviation-regulatory  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: Engagement EUROCONTROL precocemente (Y2-Y3); partecipazione workshop UAM/HAPS Network Manager; contributo definizione procedure  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y3+  
-**Confidence**: medium  
-**EWI**: EUROCONTROL Network Manager workplan + HAPS procedure pubblicate  
-**Falsifying observation**: Se EUROCONTROL declina procedure HAPS perennial entro Y5, operativita cross-border bloccata; ridimensionamento operazioni IT-only  
+**Descrizione**: EUROCONTROL Network Manager - coordinamento ATM-ANS HAPS FL400+ EU airspace 
+**Trigger**: EUROCONTROL non rilascia procedure operative HAPS perennial entro Y4-Y5 
+**Owner**: team avionica e GNC + aviation-regulatory 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: Engagement EUROCONTROL precocemente (Y2-Y3); partecipazione workshop UAM/HAPS Network Manager; contributo definizione procedure 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y3+ 
+**Confidence**: medium 
+**EWI**: EUROCONTROL Network Manager workplan + HAPS procedure pubblicate 
+**Falsifying observation**: Se EUROCONTROL declina procedure HAPS perennial entro Y5, operativita cross-border bloccata; ridimensionamento operazioni IT-only 
 
 ### 8. RSK-REG-019 - Regolatorio - Score 16 -> residual 9 (RED)
 
-**Descrizione**: Part-IS EASA Reg.UE 2023/203 - ISMS obbligatorio da feb 2026, CISO assente  
-**Trigger**: Audit ENAC Part-IS rileva non-conformita sostanziali ISMS  
-**Owner**: aviation-regulatory + CISO (new)  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: Assunzione CISO entro M+6; ISMS implementazione entro M+9; certificazione ISO/IEC 27001 entro M+12; audit interno + pre-audit ENAC  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y1 (M+0 → M+12) urgente  
-**Confidence**: high  
-**EWI**: CISO hire date + ISMS gap analysis + ISO 27001 cert progress  
-**Falsifying observation**: Se al M+9 ISMS non implementato, ENAC sospende operazioni commerciali continuative fino remediation  
+**Descrizione**: Part-IS EASA Reg.UE 2023/203 - ISMS obbligatorio da feb 2026, CISO assente 
+**Trigger**: Audit ENAC Part-IS rileva non-conformita sostanziali ISMS 
+**Owner**: aviation-regulatory + CISO (new) 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: Assunzione CISO entro M+6; ISMS implementazione entro M+9; certificazione ISO/IEC 27001 entro M+12; audit interno + pre-audit ENAC 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y1 (M+0 → M+12) urgente 
+**Confidence**: high 
+**EWI**: CISO hire date + ISMS gap analysis + ISO 27001 cert progress 
+**Falsifying observation**: Se al M+9 ISMS non implementato, ENAC sospende operazioni commerciali continuative fino remediation 
 
 ### 9. RSK-REG-025 - Regolatorio - Score 16 -> residual 9 (RED)
 
-**Descrizione**: Affidamento PA art.50 D.Lgs.36/2023 - contratto Regione > 140k EUR richiede gara  
-**Trigger**: Regione Liguria contratto pluriennale > 300k EUR bocciato fase amministrativa  
-**Owner**: snai-funding + legal + business-model  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: Pre-engagement Regione + accordo quadro (art.59 D.Lgs.36); partnership Coopfond come veicolo non-gara; accordi di programma SNAI; gara con specificita tecniche Firmamento-friendly  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y0+  
-**Confidence**: high  
-**EWI**: Bando Regione pubblicato + legal review procedura  
-**Falsifying observation**: Se contratto Regione bocciato per gara, rinvio M+6-12 + competitor risk (Leonardo, Telespazio)  
+**Descrizione**: Affidamento PA art.50 D.Lgs.36/2023 - contratto Regione > 140k EUR richiede gara 
+**Trigger**: Regione Liguria contratto pluriennale > 300k EUR bocciato fase amministrativa 
+**Owner**: snai-funding + legal + business-model 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: Pre-engagement Regione + accordo quadro (art.59 D.Lgs.36); partnership Coopfond come veicolo non-gara; accordi di programma SNAI; gara con specificita tecniche Firmamento-friendly 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y0+ 
+**Confidence**: high 
+**EWI**: Bando Regione pubblicato + legal review procedura 
+**Falsifying observation**: Se contratto Regione bocciato per gara, rinvio M+6-12 + competitor risk (Leonardo, Telespazio) 
 
 ### 10. RSK-REG-030 - Regolatorio - Score 16 -> residual 9 (RED)
 
-**Descrizione**: ENAV procedure FL400+ - HAPS perennial sopra FL400/FL650 senza procedure dedicate  
-**Trigger**: ENAV declina procedure HAPS perennial entro Y4  
-**Owner**: avionics + sovereign-strategist + aviation-regulatory  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: Engagement ENAV precoce (Y2); contributo definizione procedure standard EUROCONTROL; testing spazio aereo segregato (Sardinia, GATB Apulia)  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y3+  
-**Confidence**: medium-high  
-**EWI**: ENAV operational instruction + AIP Italy SUP HAPS  
-**Falsifying observation**: Se ENAV declina procedure entro Y5, operativita italiana 6B bloccata; ridimensionamento test bed estero  
+**Descrizione**: ENAV procedure FL400+ - HAPS perennial sopra FL400/FL650 senza procedure dedicate 
+**Trigger**: ENAV declina procedure HAPS perennial entro Y4 
+**Owner**: avionics + sovereign-strategist + aviation-regulatory 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: Engagement ENAV precoce (Y2); contributo definizione procedure standard EUROCONTROL; testing spazio aereo segregato (Sardinia, GATB Apulia) 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y3+ 
+**Confidence**: medium-high 
+**EWI**: ENAV operational instruction + AIP Italy SUP HAPS 
+**Falsifying observation**: Se ENAV declina procedure entro Y5, operativita italiana 6B bloccata; ridimensionamento test bed estero 
 
 ### 11. RSK-SUP-003 - Supply Chain - Score 16 -> residual 9 (RED)
 
-**Descrizione**: Batterie LiS - capacity allocation Northvolt/Italvolt incerta  
-**Trigger**: Northvolt bankruptcy o Italvolt ritardo > 2 anni production  
-**Owner**: propulsion-energy-engineer + supply-chain  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Multi-vendor LiS pipeline (Oxis Energy heir, Lyten, NexTech); custom pack assembly con cell suppliers diversi  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y3+  
-**Confidence**: medium  
-**EWI**: Battery vendors financials + production timelines  
+**Descrizione**: Batterie LiS - capacity allocation Northvolt/Italvolt incerta 
+**Trigger**: Northvolt bankruptcy o Italvolt ritardo > 2 anni production 
+**Owner**: ingegneria propulsione e energia + supply-chain 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Multi-vendor LiS pipeline (Oxis Energy heir, Lyten, NexTech); custom pack assembly con cell suppliers diversi 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y3+ 
+**Confidence**: medium 
+**EWI**: Battery vendors financials + production timelines 
 
 ### 12. RSK-TEC-016 - Tecnico - Score 16 -> residual 9 (RED)
 
-**Descrizione**: NTN payload winter unsustainable - margin -58.9% con P_payload 500 W (scenario E5)  
-**Trigger**: Simulazione M+3 (DR-014) conferma deficit anche con payload pulse-mode  
-**Owner**: propulsion-energy-engineer + telecom-ntn-payload-expert  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: NTN seasonal-only + payload pulse-mode duty-cycle < 30% + dedicated battery bank NTN  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y4-Y5  
-**Confidence**: medium-high  
-**EWI**: Sim. allegato A.7 update; product roadmap 5G NTN bypass requirements  
+**Descrizione**: NTN payload winter unsustainable - margin -58.9% con P_payload 500 W (scenario E5) 
+**Trigger**: Simulazione M+3 (DR-014) conferma deficit anche con payload pulse-mode 
+**Owner**: ingegneria propulsione e energia + team telecom NTN 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: NTN seasonal-only + payload pulse-mode duty-cycle < 30% + dedicated battery bank NTN 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y4-Y5 
+**Confidence**: medium-high 
+**EWI**: Sim. allegato A.7 update; product roadmap 5G NTN bypass requirements 
 
 ### 13. RSK-REG-021 - Regolatorio - Score 16 -> residual 6 (RED)
 
-**Descrizione**: AgID/PSN hosting dati PA - cloud non qualificato blocca contratti Regione/PC  
-**Trigger**: Verifica AgID al M+9 rivela cloud Aruba/OVH non PSN-qualified per livello criticita  
-**Owner**: data-privacy + IT + DPO  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: Migrazione provider PSN-qualified (TIM Enterprise, Polo PSN, CDP Cloud) o cloud qualificato AgID (Aruba qualified, Engineering, Reply, Almaviva); audit AgID compliance  
-**Residual P x I**: 2 x 3 = 6  
-**Fase critica**: Y1+  
-**Confidence**: high  
-**EWI**: AgID qualifica list update + audit compliance internal  
-**Falsifying observation**: Se al M+9 dati Pentema non in cloud PSN-qualified, contratti PA pluriennali rifiutati  
+**Descrizione**: AgID/PSN hosting dati PA - cloud non qualificato blocca contratti Regione/PC 
+**Trigger**: Verifica AgID al M+9 rivela cloud Aruba/OVH non PSN-qualified per livello criticita 
+**Owner**: data-privacy + IT + DPO 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: Migrazione provider PSN-qualified (TIM Enterprise, Polo PSN, CDP Cloud) o cloud qualificato AgID (Aruba qualified, Engineering, Reply, Almaviva); audit AgID compliance 
+**Residual P x I**: 2 x 3 = 6 
+**Fase critica**: Y1+ 
+**Confidence**: high 
+**EWI**: AgID qualifica list update + audit compliance internal 
+**Falsifying observation**: Se al M+9 dati Pentema non in cloud PSN-qualified, contratti PA pluriennali rifiutati 
 
 ### 14. RSK-REG-027 - Regolatorio - Score 16 -> residual 6 (RED)
 
-**Descrizione**: NIS2 D.Lgs.138/2024 - registrazione ACN omessa, sanzioni fino 10M EUR / 2% fatturato  
-**Trigger**: Firmamento classificata 'soggetto essenziale' senza registrazione entro 30gg  
-**Owner**: CISO (new) + legal  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: Registrazione preventiva ACN entro M+1; ISMS Part-IS allineato; notifica incidenti 24h procedure  
-**Residual P x I**: 2 x 3 = 6  
-**Fase critica**: Y0+ immediato  
-**Confidence**: high  
-**EWI**: ACN classification notice + sanction publications  
-**Falsifying observation**: Se incidente cyber senza registrazione, sanzione amministrativa + reputazione + esclusione bandi PA  
+**Descrizione**: NIS2 D.Lgs.138/2024 - registrazione ACN omessa, sanzioni fino 10M EUR / 2% fatturato 
+**Trigger**: Firmamento classificata 'soggetto essenziale' senza registrazione entro 30gg 
+**Owner**: CISO (new) + legal 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: Registrazione preventiva ACN entro M+1; ISMS Part-IS allineato; notifica incidenti 24h procedure 
+**Residual P x I**: 2 x 3 = 6 
+**Fase critica**: Y0+ immediato 
+**Confidence**: high 
+**EWI**: ACN classification notice + sanction publications 
+**Falsifying observation**: Se incidente cyber senza registrazione, sanzione amministrativa + reputazione + esclusione bandi PA 
 
 ### 15. RSK-TEC-015 - Tecnico - Score 15 -> residual 12 (RED)
 
-**Descrizione**: Riduzione TRL gap M+24 - integrato HALE subsystem critici < TRL 5  
-**Trigger**: Gate G5 review M+24 mostra TRL integrato propulsione/avionica/payload < 5  
-**Owner**: systems-engineer + propulsion-energy-engineer  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: Roadmap TRL puntuale per sottosistema + milestone trimestrali + partnership prime per acceleration TRL (DR-013 finding)  
-**Residual P x I**: 3 x 4 = 12  
-**Fase critica**: Y3 (gate G5)  
-**Confidence**: medium  
-**EWI**: TRL milestone tracker + subsystem demo report + partnership signed  
-**Falsifying observation**: Se TRL gap > 2 a M+24, Phase C-D non finanziabile; ridimensionamento seasonal-only + R&D-only mode  
+**Descrizione**: Riduzione TRL gap M+24 - integrato HALE subsystem critici < TRL 5 
+**Trigger**: Gate G5 review M+24 mostra TRL integrato propulsione/avionica/payload < 5 
+**Owner**: systems-engineer + team propulsione e energia 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: Roadmap TRL puntuale per sottosistema + milestone trimestrali + partnership prime per acceleration TRL (DR-013 finding) 
+**Residual P x I**: 3 x 4 = 12 
+**Fase critica**: Y3 (gate G5) 
+**Confidence**: medium 
+**EWI**: TRL milestone tracker + subsystem demo report + partnership signed 
+**Falsifying observation**: Se TRL gap > 2 a M+24, Phase C-D non finanziabile; ridimensionamento seasonal-only + R&D-only mode 
 
 ### 16. RSK-FIN-004 - Finanziario - Score 15 -> residual 8 (RED)
 
-**Descrizione**: OpEx Y1 underestimato - +450-800k EUR per 3 FTE regulatory (CISO+DPO+Head Reg.Aff)  
-**Trigger**: Audit regulatory M+3 rivela 3 FTE addizionali non-budget  
-**Owner**: financial-cfo  
-**Status**: Open-Critical  
-**Response**: Mitigate  
-**Mitigation**: Aggiornamento Cap.8 OpEx Y1 con +450-800k EUR fixed cost; revisione mix funding equity Series A; cost sharing su CISO/DPO via partnership cooperative  
-**Residual P x I**: 4 x 2 = 8  
-**Fase critica**: Y0-Y1  
-**Confidence**: high  
-**EWI**: FTE hire pipeline + payroll forecast  
+**Descrizione**: OpEx Y1 underestimato - +450-800k EUR per 3 FTE regulatory (CISO+DPO+Head Reg.Aff) 
+**Trigger**: Audit regulatory M+3 rivela 3 FTE addizionali non-budget 
+**Owner**: financial-cfo 
+**Status**: Open-Critical 
+**Response**: Mitigate 
+**Mitigation**: Aggiornamento Cap.8 OpEx Y1 con +450-800k EUR fixed cost; revisione mix funding equity Series A; cost sharing su CISO/DPO via partnership cooperative 
+**Residual P x I**: 4 x 2 = 8 
+**Fase critica**: Y0-Y1 
+**Confidence**: high 
+**EWI**: FTE hire pipeline + payroll forecast 
 
 ### 17. RSK-TEC-002 - Tecnico - Score 15 -> residual 8 (RED)
 
-**Descrizione**: Aeroelasticita ala high-AR (AR>=25) - flutter, divergenza, instabilita non lineare  
-**Trigger**: Analisi aeroelastica preliminare M+12 mostra flutter speed < 1.3x Vdive o divergenza < 1.5x Vc  
-**Owner**: aero-structures-engineer  
-**Status**: Showstopper  
-**Response**: Mitigate  
-**Mitigation**: Aeroelastic analysis non-lineare (NASTRAN+ZAERO o MSC.Nastran SOL145) + GVT (Ground Vibration Test) + flight test subscale + winglet/passive damping design. Tilted spar caps + balance mass.  
-**Residual P x I**: 2 x 4 = 8  
-**Fase critica**: Y3-Y4 (Phase B 6B)  
-**Confidence**: medium-high  
-**EWI**: Output FEA aeroelastico subscale + risultati GVT + base rate Helios/PHASA flutter events  
-**Falsifying observation**: Se subscale flight test M+18-24 mostra divergence o flutter sotto envelope, ridisegno radicale ala richiesto - costo +1-2M EUR + delay 6-12 mesi  
+**Descrizione**: Aeroelasticita ala high-AR (AR>=25) - flutter, divergenza, instabilita non lineare 
+**Trigger**: Analisi aeroelastica preliminare M+12 mostra flutter speed < 1.3x Vdive o divergenza < 1.5x Vc 
+**Owner**: aero-structures-engineer 
+**Status**: Showstopper 
+**Response**: Mitigate 
+**Mitigation**: Aeroelastic analysis non-lineare (NASTRAN+ZAERO o MSC.Nastran SOL145) + GVT (Ground Vibration Test) + flight test subscale + winglet/passive damping design. Tilted spar caps + balance mass. 
+**Residual P x I**: 2 x 4 = 8 
+**Fase critica**: Y3-Y4 (Phase B 6B) 
+**Confidence**: medium-high 
+**EWI**: Output FEA aeroelastico subscale + risultati GVT + base rate Helios/PHASA flutter events 
+**Falsifying observation**: Se subscale flight test M+18-24 mostra divergence o flutter sotto envelope, ridisegno radicale ala richiesto - costo +1-2M EUR + delay 6-12 mesi 
 
 ### 18. RSK-MKT-001 - Mercato - Score 12 -> residual 9 (YELLOW)
 
-**Descrizione**: Adozione lenta PA - cicli appalti pubblici 12-24 mesi vs piano 6-9 mesi  
-**Trigger**: Contratti pluriennali Regione Liguria non firmati entro M+12  
-**Owner**: snai-funding + business-model  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Anchor customer Regione + LoI pre-formale; contratti pluriennali quadro; partnership cooperative come veicolo di servizi  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y1-Y2  
-**Confidence**: high  
-**EWI**: Bandi Regione publication + LoI tracking  
+**Descrizione**: Adozione lenta PA - cicli appalti pubblici 12-24 mesi vs piano 6-9 mesi 
+**Trigger**: Contratti pluriennali Regione Liguria non firmati entro M+12 
+**Owner**: snai-funding + business-model 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Anchor customer Regione + LoI pre-formale; contratti pluriennali quadro; partnership cooperative come veicolo di servizi 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y1-Y2 
+**Confidence**: high 
+**EWI**: Bandi Regione publication + LoI tracking 
 
 ### 19. RSK-MKT-002 - Mercato - Score 12 -> residual 9 (YELLOW)
 
-**Descrizione**: Competitor Tier 1 AALTO-Leonardo JV - cattura 2-3 Regioni SNAI con pricing aggressivo  
-**Trigger**: AALTO-Leonardo annuncia JV o pilota multi-regionale entro Y2  
-**Owner**: competitive-intelligence + business-model  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Differenziazione cooperativa + sovranita IT; speed to market 6A; partnership CIRA/POLITO; lock-in cooperative Legacoop  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y2-Y3  
-**Confidence**: medium  
-**EWI**: AALTO press releases + Leonardo strategy update  
+**Descrizione**: Competitor Tier 1 AALTO-Leonardo JV - cattura 2-3 Regioni SNAI con pricing aggressivo 
+**Trigger**: AALTO-Leonardo annuncia JV o pilota multi-regionale entro Y2 
+**Owner**: competitive-intelligence + business-model 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Differenziazione cooperativa + sovranita IT; speed to market 6A; partnership CIRA/POLITO; lock-in cooperative Legacoop 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y2-Y3 
+**Confidence**: medium 
+**EWI**: AALTO press releases + Leonardo strategy update 
 
 ### 20. RSK-MKT-004 - Mercato - Score 12 -> residual 9 (YELLOW)
 
-**Descrizione**: Pricing pressure - PA italiana clienti price-sensitive vs servizi premium  
-**Trigger**: Tender Regione cost ceiling < 50k EUR/anno per servizio EO/SAR  
-**Owner**: business-model + financial-cfo  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Bundle servizi multipli (EO+IR+NTN+monitoring) per economia scale; cost-shared infrastruttura cooperative; modello canone vs ore-volo  
-**Residual P x I**: 3 x 3 = 9  
-**Fase critica**: Y1-Y3  
-**Confidence**: medium-high  
-**EWI**: Tender history pricing + benchmark drone services market IT  
+**Descrizione**: Pricing pressure - PA italiana clienti price-sensitive vs servizi premium 
+**Trigger**: Tender Regione cost ceiling < 50k EUR/anno per servizio EO/SAR 
+**Owner**: business-model + financial-cfo 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Bundle servizi multipli (EO+IR+NTN+monitoring) per economia scale; cost-shared infrastruttura cooperative; modello canone vs ore-volo 
+**Residual P x I**: 3 x 3 = 9 
+**Fase critica**: Y1-Y3 
+**Confidence**: medium-high 
+**EWI**: Tender history pricing + benchmark drone services market IT 
 
 ### 21. RSK-MKT-005 - Mercato - Score 12 -> residual 8 (YELLOW)
 
-**Descrizione**: Single-customer concentration Liguria - alternanza politica regionale evapora anchor  
-**Trigger**: Elezioni Regione Liguria 2025+ portano cambio amministrazione + scope revision  
-**Owner**: business-model + sovereign-strategist  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Espansione 2-3 regioni SNAI Y3 (Piemonte, Marche, Calabria, Basilicata); LoI pre-formalizzata multi-region; contratti pluriennali con clausole continuita amministrative  
-**Residual P x I**: 2 x 4 = 8  
-**Fase critica**: Y2-Y3  
-**Confidence**: medium  
-**EWI**: Elezioni regionali calendar + cambio assessori Liguria  
+**Descrizione**: Single-customer concentration Liguria - alternanza politica regionale evapora anchor 
+**Trigger**: Elezioni Regione Liguria 2025+ portano cambio amministrazione + scope revision 
+**Owner**: business-model + sovereign-strategist 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Espansione 2-3 regioni SNAI Y3 (Piemonte, Marche, Calabria, Basilicata); LoI pre-formalizzata multi-region; contratti pluriennali con clausole continuita amministrative 
+**Residual P x I**: 2 x 4 = 8 
+**Fase critica**: Y2-Y3 
+**Confidence**: medium 
+**EWI**: Elezioni regionali calendar + cambio assessori Liguria 
 
 ### 22. RSK-TEC-012 - Tecnico - Score 12 -> residual 8 (YELLOW)
 
-**Descrizione**: FCS DAL-C HALE custom - mancanza track record civile + costo qualification ~2-5M EUR  
-**Trigger**: Vendor FCS DAL-C EU rifiuta development partnership o costo > budget  
-**Owner**: avionics-gnc-engineer  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Engagement early vendor EU (UAVOS, MicroPilot, Honeywell EU); partnership con CIRA su FCS Italian sovereign; budget riservato 2-3M EUR R&D  
-**Residual P x I**: 2 x 4 = 8  
-**Fase critica**: Y3-Y4  
-**Confidence**: medium  
-**EWI**: Quotation vendor FCS + RMT EASA on autonomy  
+**Descrizione**: FCS DAL-C HALE custom - mancanza track record civile + costo qualification ~2-5M EUR 
+**Trigger**: Vendor FCS DAL-C EU rifiuta development partnership o costo > budget 
+**Owner**: team avionica e GNC 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Engagement early vendor EU (UAVOS, MicroPilot, Honeywell EU); partnership con CIRA su FCS Italian sovereign; budget riservato 2-3M EUR R&D 
+**Residual P x I**: 2 x 4 = 8 
+**Fase critica**: Y3-Y4 
+**Confidence**: medium 
+**EWI**: Quotation vendor FCS + RMT EASA on autonomy 
 
 ### 23. RSK-FIN-005 - Finanziario - Score 12 -> residual 6 (YELLOW)
 
-**Descrizione**: Slittamento grant FESR/PNRR - tempi PA italiani median 18-30 mesi  
-**Trigger**: Grant FESR Liguria comunicato slittato > 12 mesi vs piano  
-**Owner**: financial-cfo + snai-funding  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Bridge financing (banca + founder); pipeline grant multiple parallele; flessibilita timeline progetto  
-**Residual P x I**: 3 x 2 = 6  
-**Fase critica**: Y1-Y3  
-**Confidence**: high  
-**EWI**: Grant decisional timeline tracking + Regione comunicazioni  
+**Descrizione**: Slittamento grant FESR/PNRR - tempi PA italiani median 18-30 mesi 
+**Trigger**: Grant FESR Liguria comunicato slittato > 12 mesi vs piano 
+**Owner**: financial-cfo + snai-funding 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Bridge financing (banca + founder); pipeline grant multiple parallele; flessibilita timeline progetto 
+**Residual P x I**: 3 x 2 = 6 
+**Fase critica**: Y1-Y3 
+**Confidence**: high 
+**EWI**: Grant decisional timeline tracking + Regione comunicazioni 
 
 ### 24. RSK-FIN-006 - Finanziario - Score 12 -> residual 6 (YELLOW)
 
-**Descrizione**: WACC effettivo > 18% se grant mix < 30% - NPV diventa negativo (sensitivity Cap.8)  
-**Trigger**: Grant mix committed < 30% al M+12  
-**Owner**: financial-cfo  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Pricing premium servizi + cost optimization OpEx; renegotiate equity terms; cost-shared infrastructure con cooperative  
-**Residual P x I**: 2 x 3 = 6  
-**Fase critica**: Y1-Y3  
-**Confidence**: medium-high  
-**EWI**: Grant commitment % monthly + NPV sensitivity update  
+**Descrizione**: WACC effettivo > 18% se grant mix < 30% - NPV diventa negativo (sensitivity Cap.8) 
+**Trigger**: Grant mix committed < 30% al M+12 
+**Owner**: financial-cfo 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Pricing premium servizi + cost optimization OpEx; renegotiate equity terms; cost-shared infrastructure con cooperative 
+**Residual P x I**: 2 x 3 = 6 
+**Fase critica**: Y1-Y3 
+**Confidence**: medium-high 
+**EWI**: Grant commitment % monthly + NPV sensitivity update 
 
 ### 25. RSK-FIN-008 - Finanziario - Score 12 -> residual 6 (YELLOW)
 
-**Descrizione**: Cash flow gap Y2-Y3 - revenue ramp lento vs OpEx fixed  
-**Trigger**: Revenue Y2 < 500k EUR (50% target)  
-**Owner**: financial-cfo + business-model  
-**Status**: Open-High  
-**Response**: Mitigate  
-**Mitigation**: Bridge financing Series A; cost flex su FTE variable; contratti pluriennali Regione anticipated payment  
-**Residual P x I**: 2 x 3 = 6  
-**Fase critica**: Y2-Y3  
-**Confidence**: medium  
-**EWI**: Revenue actuals monthly + cash burn rate  
+**Descrizione**: Cash flow gap Y2-Y3 - revenue ramp lento vs OpEx fixed 
+**Trigger**: Revenue Y2 < 500k EUR (50% target) 
+**Owner**: financial-cfo + business-model 
+**Status**: Open-High 
+**Response**: Mitigate 
+**Mitigation**: Bridge financing Series A; cost flex su FTE variable; contratti pluriennali Regione anticipated payment 
+**Residual P x I**: 2 x 3 = 6 
+**Fase critica**: Y2-Y3 
+**Confidence**: medium 
+**EWI**: Revenue actuals monthly + cash burn rate 
 
 ---
 
@@ -454,47 +454,47 @@ Ordinati per Score baseline (P x I) decrescente. Per ciascuno: descrizione, impa
 
 ### 26. RSK-AMB-001 - Ambientale - Score 12 -> residual 6 (YELLOW)
 
-**Descrizione**: Disturbo avifauna nidificante in SIC IT1331402 Parco Antola: operazioni VTOL in stagione riproduttiva marzo-luglio possono indurre flushing aquila reale (Aquila chrysaetos, Allegato I Direttiva Uccelli) e gufo reale (Bubo bubo) con abbandono nido + perdita covata  
-**Trigger**: Ente Parco Antola comunica nidificazione attiva in raggio < 500 m da corridoi volo M+6+, OR ARPAL/ISPRA segnala incidenti documentati di flushing UAV  
-**Owner**: ambientalista esterno + operations + Ente Parco Antola  
-**Status**: Open-Medium  
-**Response**: Mitigate  
-**Mitigation**: M-AVI-01 (buffer 500 m da nidi noti); M-AVI-02 (restrizione operativa marzo-luglio in zone nidificazione); M-AVI-03 (quota minima 200 m AGL su SIC vs minimo regolamentare 120 m); M-AVI-04 (acquisizione mappa nidi Ente Parco entro M+6); M-AVI-05 (engagement formale Ente Parco con convenzione operativa bozza M+9); M-AVI-06 (training piloti su comportamento avifauna); M-AVI-07 (osservazione visiva pre-volo + abort se avvistamento rapaci)  
-**Residual P x I**: 2 x 3 = 6  
-**Fase critica**: Y1+ (operazioni continuative)  
-**Confidence**: medium (richiede mappa nidi da Ente Parco, ARPAL bioacustica)  
-**EWI**: Report Ente Parco trimestrale + monitoring acustico passive 3 punti rappresentativi + audit ARPAL annuale  
-**Falsifying observation**: Se al M+12 audit Ente Parco/ARPAL rileva ≥ 2 incidenti documentati di flushing nidi entro buffer 500 m, mitigation insufficiente: attivazione re-baseline corridoi volo + estensione restrizione stagionale a febbraio-agosto + eventuale sospensione operazioni in zone SIC critiche  
+**Descrizione**: Disturbo avifauna nidificante in SIC IT1331402 Parco Antola: operazioni VTOL in stagione riproduttiva marzo-luglio possono indurre flushing aquila reale (Aquila chrysaetos, Allegato I Direttiva Uccelli) e gufo reale (Bubo bubo) con abbandono nido + perdita covata 
+**Trigger**: Ente Parco Antola comunica nidificazione attiva in raggio < 500 m da corridoi volo M+6+, OR ARPAL/ISPRA segnala incidenti documentati di flushing UAV 
+**Owner**: ambientalista esterno + operations + Ente Parco Antola 
+**Status**: Open-Medium 
+**Response**: Mitigate 
+**Mitigation**: M-AVI-01 (buffer 500 m da nidi noti); M-AVI-02 (restrizione operativa marzo-luglio in zone nidificazione); M-AVI-03 (quota minima 200 m AGL su SIC vs minimo regolamentare 120 m); M-AVI-04 (acquisizione mappa nidi Ente Parco entro M+6); M-AVI-05 (engagement formale Ente Parco con convenzione operativa bozza M+9); M-AVI-06 (training piloti su comportamento avifauna); M-AVI-07 (osservazione visiva pre-volo + abort se avvistamento rapaci) 
+**Residual P x I**: 2 x 3 = 6 
+**Fase critica**: Y1+ (operazioni continuative) 
+**Confidence**: medium (richiede mappa nidi da Ente Parco, ARPAL bioacustica) 
+**EWI**: Report Ente Parco trimestrale + monitoring acustico passive 3 punti rappresentativi + audit ARPAL annuale 
+**Falsifying observation**: Se al M+12 audit Ente Parco/ARPAL rileva ≥ 2 incidenti documentati di flushing nidi entro buffer 500 m, mitigation insufficiente: attivazione re-baseline corridoi volo + estensione restrizione stagionale a febbraio-agosto + eventuale sospensione operazioni in zone SIC critiche 
 **Linkage**: A.12 VIA v2.0 §A.12.3 fauna + §A.12.4 VIncA + §A.12.6 mitigazioni; REQ-NF-AMB-01 nuovo per RTM v1.5; FO-AMB-01 (proposed)
 
 ### 27. RSK-AMB-002 - Ambientale - Score 9 -> residual 4 (GREEN)
 
-**Descrizione**: Inquinamento acustico VTOL in area parco: 65-75 dB(A) a 100 m può superare limiti L. 447/1995 + classificazione acustica L.R. Liguria 12/1998 in fasce protette parco (Classe I notturna 40 dB / diurna 50 dB; Classe II diurna 55 dB) durante operazioni ravvicinate (< 100 m AGL su zone urbanizzate o eventi raduno)  
-**Trigger**: Misurazione fonometrica Y1 > limiti tabella zonizzazione, OR esposto comunità Pentema/Torriglia per disturbo acustico (anche un solo cittadino può attivare Comune + ARPAL)  
-**Owner**: operations + ambientalista esterno + Comune Torriglia  
-**Status**: Open-Medium  
-**Response**: Mitigate  
-**Mitigation**: M-NOI-01 (modello propagazione rumore pre-pilota a 7 punti rappresentativi + classificazione acustica Comune Torriglia); M-NOI-02 (corridoi di volo evitano sorvolo Pentema centro abitato < 200 m AGL); M-NOI-03 (no operazioni notturne 22:00-06:00 salvo emergency PC); M-NOI-04 (campagna informativa preventiva comunità Pentema)  
-**Residual P x I**: 2 x 2 = 4  
-**Fase critica**: Y1+  
-**Confidence**: medium-high (limite operativo conservativo VTOL CW-30E classe rumore moderata)  
-**EWI**: Esposti Comune Torriglia + misure fonometriche ARPAL ad-hoc + feedback workshop comunità Pentema  
-**Falsifying observation**: Se al M+12 ≥ 1 esposto cittadino formale OR ARPAL rileva sforamento > 5 dB rispetto limite zonale, mitigation insufficiente: re-baseline corridoi + eventuale relocation hangar Pentema  
+**Descrizione**: Inquinamento acustico VTOL in area parco: 65-75 dB(A) a 100 m può superare limiti L. 447/1995 + classificazione acustica L.R. Liguria 12/1998 in fasce protette parco (Classe I notturna 40 dB / diurna 50 dB; Classe II diurna 55 dB) durante operazioni ravvicinate (< 100 m AGL su zone urbanizzate o eventi raduno) 
+**Trigger**: Misurazione fonometrica Y1 > limiti tabella zonizzazione, OR esposto comunità Pentema/Torriglia per disturbo acustico (anche un solo cittadino può attivare Comune + ARPAL) 
+**Owner**: operations + ambientalista esterno + Comune Torriglia 
+**Status**: Open-Medium 
+**Response**: Mitigate 
+**Mitigation**: M-NOI-01 (modello propagazione rumore pre-pilota a 7 punti rappresentativi + classificazione acustica Comune Torriglia); M-NOI-02 (corridoi di volo evitano sorvolo Pentema centro abitato < 200 m AGL); M-NOI-03 (no operazioni notturne 22:00-06:00 salvo emergency PC); M-NOI-04 (campagna informativa preventiva comunità Pentema) 
+**Residual P x I**: 2 x 2 = 4 
+**Fase critica**: Y1+ 
+**Confidence**: medium-high (limite operativo conservativo VTOL CW-30E classe rumore moderata) 
+**EWI**: Esposti Comune Torriglia + misure fonometriche ARPAL ad-hoc + feedback workshop comunità Pentema 
+**Falsifying observation**: Se al M+12 ≥ 1 esposto cittadino formale OR ARPAL rileva sforamento > 5 dB rispetto limite zonale, mitigation insufficiente: re-baseline corridoi + eventuale relocation hangar Pentema 
 **Linkage**: A.12 VIA v2.0 §A.12.3 rumore + §A.12.6 M-NOI; Cap. 2 §2.4 top-5 comunità Pentema (accettabilità sociale); FO-AMB-02 (proposed)
 
 ### 28. RSK-AMB-003 - Ambientale - Score 8 -> residual 3 (GREEN)
 
-**Descrizione**: Impatto visivo paesaggistico VTOL in area vincolata D.Lgs. 42/2004: sorvolo paesaggi tutelati Parco Antola può configurare impatto visivo transitorio percepito dalla comunità + turisti, con potenziale opposizione associazioni ambientaliste (Italia Nostra, WWF, Legambiente) in fase istruttoria Regione  
-**Trigger**: Esposto associazioni ambientaliste in fase consultazione pubblica VIA OR opposizione Comune Torriglia in DGR  
-**Owner**: business-model + ambientalista esterno + Ente Parco + Comune Torriglia  
-**Status**: Open-Low  
-**Response**: Mitigate  
-**Mitigation**: M-PAE-01 (engagement preventivo associazioni ambientaliste Italia Nostra Liguria + WWF Liguria + Legambiente Liguria); M-PAE-02 (comunicazione trasparente impatto transitorio + benefici ambientali controfattuale -99% CO₂ vs elicottero manned); M-PAE-03 (eventi pubblici Pentema con dimostrazione volo + Q&A comunità); M-PAE-04 (rispetto corridoi volo concertati con Ente Parco evitando viste paesaggistiche iconiche es. Monte Antola panoramica)  
-**Residual P x I**: 1 x 3 = 3  
-**Fase critica**: Y0-Y1 (fase istruttoria Regione + autorizzazione Parco)  
-**Confidence**: medium  
-**EWI**: Press monitoring associazioni ambientaliste + workshop Pentema feedback + Regione Liguria DGR esito  
-**Falsifying observation**: Se al M+9 ≥ 2 associazioni ambientaliste pubblicano opposizione formale a Regione Liguria, mitigation insufficiente: re-design comunicazione + eventuale pivot site pilota alternative (es. Val Trebbia Comune Rondanina)  
+**Descrizione**: Impatto visivo paesaggistico VTOL in area vincolata D.Lgs. 42/2004: sorvolo paesaggi tutelati Parco Antola può configurare impatto visivo transitorio percepito dalla comunità + turisti, con potenziale opposizione associazioni ambientaliste (Italia Nostra, WWF, Legambiente) in fase istruttoria Regione 
+**Trigger**: Esposto associazioni ambientaliste in fase consultazione pubblica VIA OR opposizione Comune Torriglia in DGR 
+**Owner**: business-model + ambientalista esterno + Ente Parco + Comune Torriglia 
+**Status**: Open-Low 
+**Response**: Mitigate 
+**Mitigation**: M-PAE-01 (engagement preventivo associazioni ambientaliste Italia Nostra Liguria + WWF Liguria + Legambiente Liguria); M-PAE-02 (comunicazione trasparente impatto transitorio + benefici ambientali controfattuale -99% CO₂ vs elicottero manned); M-PAE-03 (eventi pubblici Pentema con dimostrazione volo + Q&A comunità); M-PAE-04 (rispetto corridoi volo concertati con Ente Parco evitando viste paesaggistiche iconiche es. Monte Antola panoramica) 
+**Residual P x I**: 1 x 3 = 3 
+**Fase critica**: Y0-Y1 (fase istruttoria Regione + autorizzazione Parco) 
+**Confidence**: medium 
+**EWI**: Press monitoring associazioni ambientaliste + workshop Pentema feedback + Regione Liguria DGR esito 
+**Falsifying observation**: Se al M+9 ≥ 2 associazioni ambientaliste pubblicano opposizione formale a Regione Liguria, mitigation insufficiente: re-design comunicazione + eventuale pivot site pilota alternative (es. Val Trebbia Comune Rondanina) 
 **Linkage**: A.12 VIA v2.0 §A.12.3 paesaggio + §A.12.9 engagement plan; Cap. 7 §7.5.1 pilastro #3 sostenibilità + ESG narrative; FO-AMB-03 (proposed)
 
 ---
@@ -507,13 +507,13 @@ Ordinati per Score baseline (P x I) decrescente. Per ciascuno: descrizione, impa
 |---|---|---:|---|---|
 | **RSK-TEC-001** | Energy balance HALE inverno 44N - deficit -50% confermato da simulazione (vs +0-... | 25 | 6B | Mitigate: Plan A obbligato E5 'Seasonal-only mar-ott' (~7 mesi). Plan B Y6+: migrazione SS... |
 | **RSK-TEC-002** | Aeroelasticita ala high-AR (AR>=25) - flutter, divergenza, instabilita non linea... | 15 | 6B | Mitigate: Aeroelastic analysis non-lineare (NASTRAN+ZAERO o MSC.Nastran SOL145) + GVT (Gro... |
-| **RSK-TEC-003** | Type Certification HALE timeline > 5 anni - no precedente HALE solare civile EU ... | 16 | 6B | Mitigate+Accept: Parallel approach: ops 6A genera revenue + esperienza mentre TC HALE matura. Eng... |
+| **RSK-TEC-003** | Type Certification HALE timeline > 5 anni - no precedente HALE solare civile EU... | 16 | 6B | Mitigate+Accept: Parallel approach: ops 6A genera revenue + esperienza mentre TC HALE matura. Eng... |
 | **RSK-REG-001** | Mancanza framework HAPS EASA/ENAC - no Special Condition aperto HALE solare civi... | 20 | 6B | Mitigate: Engagement EASA Innovation Network + consortium CIRA/TAS per Special Condition c... |
 | **RSK-FIN-001** | Mancanza commitment funding Phase B 6B - 5.5-13.5M EUR mix EDF+Horizon+PNRR+equi... | 20 | 6B | Mitigate: Mix funding: EDF (DG DEFIS) + Horizon Europe + PNRR Aerospazio + Series B equity... |
 
 ### 4.2 Showstopper critici aggiuntivi §5.16 (5)
 
-Identificati dall'audit `regulatory-adversary` M+3, formalizzati in Cap. 5 §5.16. Score 15-20.
+Identificati dalla review regolatoria indipendente M+3, formalizzati in Cap. 5 §5.16. Score 15-20.
 
 | ID | Rischio | Score | Owner | Deadline mitigation |
 |---|---|---:|---|---|
@@ -522,7 +522,7 @@ Identificati dall'audit `regulatory-adversary` M+3, formalizzati in Cap. 5 §5.1
 | **RSK-REG-025** | Affidamento PA art.50 D.Lgs.36/2023 - contratto Regione > 140k EUR richiede gara... | 16 | snai-funding + legal + business-model | Y0+ |
 | **RSK-REG-027** | NIS2 D.Lgs.138/2024 - registrazione ACN omessa, sanzioni fino 10M EUR / 2% fattu... | 16 | CISO (new) + legal | Y0+ immediato |
 | **RSK-REG-030** | ENAV procedure FL400+ - HAPS perennial sopra FL400/FL650 senza procedure dedicat... | 16 | avionics + sovereign-strategist + aviation-regulatory | Y3+ |
-| **RSK-REG-018** | EUROCONTROL Network Manager - coordinamento ATM-ANS HAPS FL400+ EU airspace... | 16 | avionics-gnc-engineer + aviation-regulatory | Y3+ |
+| **RSK-REG-018** | EUROCONTROL Network Manager - coordinamento ATM-ANS HAPS FL400+ EU airspace... | 16 | team avionica e GNC + aviation-regulatory | Y3+ |
 
 ### 4.3 Implicazione per il verdetto Cap. 10
 
@@ -532,7 +532,7 @@ Il verdetto Cap. 10 "Go Condizionato 6A" presuppone:
 - OpEx Y1 aggiornato con +450-800k EUR (RSK-FIN-004)
 - RSK-FIN-001 (funding Phase B) tracciato come precondizione gate G5
 
-Scenario realistico (post Red Team M+3): 60-80% percorsi sono **Hold con piano** vs **Go pieno** al M+10/M+11.
+Scenario realistico (post review critica M+3): 60-80% percorsi sono **Hold con piano** vs **Go pieno** al M+10/M+11.
 
 ---
 
@@ -575,7 +575,7 @@ Vedi fogli XLSX: `FMECA_Payload`, `FMECA_Avionica`, `FMECA_Propulsione`.
 
 ### 6.1 Top event: Loss of Vehicle in BVLOS (Percorso 6A)
 
-**Target SAIL III SORA 2.5**: P < 1E-5 / flight hour  
+**Target SAIL III SORA 2.5**: P < 1E-5 / flight hour 
 **Stima Firmamento (preliminare)**: P ~ 2-3E-5 / flight hour (**MARGINALE**)
 
 **Cut sets dominanti**:
@@ -596,7 +596,7 @@ Vedi fogli XLSX: `FMECA_Payload`, `FMECA_Avionica`, `FMECA_Propulsione`.
 
 ### 6.2 Top event: Loss of Mission EO (Percorso 6A pilota Pentema)
 
-**Target SLA cliente**: < 5% per missione  
+**Target SLA cliente**: < 5% per missione 
 **Stima Firmamento (preliminare)**: 15-20% / missione (**NON-CONFORME al target 5%**)
 
 **Cut sets dominanti**:
@@ -635,7 +635,7 @@ Post-mitigation, il profilo rischio aggregato e':
 
 ### 7.2 Caveat epistemico
 
-Tutti i residual score sono **stime expert judgment** del risk-register-builder + safety engineer, con confidence dichiarato per ogni rischio. La probabilita di mitigation effettiva al M+9-12 dipende da:
+Tutti i residual score sono **stime expert judgment** del metodologia risk register + safety engineer, con confidence dichiarato per ogni rischio. La probabilita di mitigation effettiva al M+9-12 dipende da:
 - Hiring 3 ruoli senior (RSK-HR-002)
 - Pre-application ENAC outcomes (RSK-REG-002)
 - Funding mix outcomes (RSK-FIN-001 + RSK-MKT-001)
@@ -653,8 +653,8 @@ Top-26 rischi monitorati con Early Warning Indicators dedicati. Frequenza minimu
 
 **18 EWI** ad alta frequenza:
 - **RSK-TEC-004** (Mensile): Test bench HIL - trigger: Mismatch ICD > 2 critical - owner: systems-engineer
-- **RSK-TEC-005** (Settimanale): GPS interference EASA bulletin - trigger: Eventi jamming Mar Ligure > 3/mese - owner: avionics-gnc-engineer
-- **RSK-TEC-008** (Mensile): Battery thermal events sector - trigger: Recall cella o vendor incident - owner: propulsion-energy-engineer
+- **RSK-TEC-005** (Settimanale): GPS interference EASA bulletin - trigger: Eventi jamming Mar Ligure > 3/mese - owner: team avionica e GNC
+- **RSK-TEC-008** (Mensile): Battery thermal events sector - trigger: Recall cella o vendor incident - owner: team propulsione e energia
 - **RSK-REG-002** (Mensile): ENAC SAIL pre-app feedback - trigger: SAIL > III determination - owner: aviation-regulatory
 - **RSK-REG-019** (Mensile): CISO hire + ISMS gap analysis - trigger: CISO non hired entro M+6 - owner: aviation-regulatory + CISO
 - **RSK-REG-020** (Mensile): Settore UAS BVLOS incidents - trigger: Incidente grave settore IT - owner: ops + safety
@@ -665,9 +665,9 @@ Top-26 rischi monitorati con Early Warning Indicators dedicati. Frequenza minimu
 
 ### 8.2 Quarterly review meeting
 
-**Cadence**: Q+1, Q+2, Q+3, Q+4 (ogni 3 mesi)  
-**Partecipanti**: Risk Manager (=CISO joint Head of Regulatory Affairs fino assunzione), CEO, owner ogni RED risk, observer Coopfond/Legacoop  
-**Output**: aggiornamento P/I/Score, residual update, new risks identification, escalation Steering Committee  
+**Cadence**: Q+1, Q+2, Q+3, Q+4 (ogni 3 mesi) 
+**Partecipanti**: Risk Manager (=CISO joint Head of Regulatory Affairs fino assunzione), CEO, owner ogni RED risk, observer Coopfond/Legacoop 
+**Output**: aggiornamento P/I/Score, residual update, new risks identification, escalation Steering Committee 
 **Documenti generati**: Risk Register vN+1 (versioning) + EWI dashboard + escalation log
 
 ---
@@ -717,10 +717,10 @@ Top-26 rischi monitorati con Early Warning Indicators dedicati. Frequenza minimu
 - `studio-di-fattibilita/cap-06-analisi-tecnica.md` §6.4 - Top-10 + FMECA Payload + FTA preliminari
 - `studio-di-fattibilita/cap-10-raccomandazione-di-gate.md` §10.2 - Risk residuo aggregato
 - `riferimenti/RESERVED-rischi-geopolitici.md` - 5 RSK-GEO (accesso ristretto)
-- `studio-di-fattibilita/AUDIT-REDTEAM-VOLUME-1.md` - Red Team M+3
-- `studio-di-fattibilita/AUDIT-COMPETITOR-VOLUME-1.md` - Competitor Intelligence M+3
-- `studio-di-fattibilita/AUDIT-REGULATORY-VOLUME-1.md` - Regulatory Adversary M+3
-- `.claude/skills/risk-register-builder/SKILL.md` - Metodologia operativa
+- `studio-di-fattibilita/review critica interna` - review critica M+3
+- `studio-di-fattibilita/analisi competitor interna` - analisi competitor M+3
+- `studio-di-fattibilita/review regolatoria interna` - review regolatoria M+3
+- Metodologia interna di risk register
 
 ---
 

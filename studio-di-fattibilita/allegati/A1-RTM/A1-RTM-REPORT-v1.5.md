@@ -6,7 +6,7 @@
 >
 > **Versione documento:** v1.5 (proiezione M+6, integrazione refinement A.12 VIA v2.0 batch 2 M+3)
 > **Data emissione:** 2026-05-17
-> **Owner:** aerospace-systems-engineer (Firmamento Technologies)
+> **Owner:** team ingegneria di sistema (Firmamento Technologies)
 > **Riferimento Cap. 3:** `studio-di-fattibilita/cap-03-requisiti-e-RTM.md` (RTM v0.5 baseline)
 > **Documenti predecessori:** `A1-RTM-REPORT.md` (v1.0 M+3 baseline estesa, 279 record) più `RTM-v1.0-full.csv` più `RTM-v1.0.xlsx`
 > **Delta v1.5:** `RTM-v1.5-delta.csv` (7 record nuovi più 7 link di traceability, totale 14 righe delta)
@@ -19,7 +19,7 @@
 
 La RTM v1.5 costituisce un **incremento riproducibile** della baseline v1.0 (M+3 estesa, 279 record), realizzato secondo la stessa metodologia del **NASA Systems Engineering Handbook Rev 2** (NASA/SP-2016-6105 Rev 2), in particolare §4.1 Stakeholder Expectations Definition, §4.2 Technical Requirements Definition, §4.3 Logical Decomposition (allocazione SsR) e §5.3-5.4 V&V Processes.
 
-L'incremento v1.5 ha origine in un **refinement chain** identificato durante il batch 2 M+3 di subagent verticali ambientali:
+L'incremento v1.5 ha origine in un **refinement chain** identificato durante il batch 2 M+3 di team specialistico verticali ambientali:
 
 1. **A.12 Relazione VIA Preliminare v2.0** (`studio-di-fattibilita/allegati/A12-VIA-preliminare/A12-Relazione-VIA-Preliminare-COMPLETE-v2.0.md`) ha identificato un requisito non-funzionale ambientale (REQ-NF-AMB-01) non presente nella baseline RTM v1.0 e non derivabile da nessuno degli StNeed-001…028 esistenti.
 2. **A.2 Risk Register v1.5** ha formalizzato 3 nuovi rischi ambientali (RSK-AMB-001 score 12→6, RSK-AMB-002 score 9→4, RSK-AMB-003 score 8→3) con linkage esplicito al requisito proposto e al §A.12.6 mitigazioni.
@@ -31,7 +31,7 @@ A questa baseline metodologica si aggiungono:
 
 - **Nuova famiglia SyR "NF" (Non-Functional / Environmental)**, che apre una settima sotto-famiglia oltre alle 7 esistenti (F, P, O, S, E, C, Cost). La famiglia E (Environmental) della baseline v1.0 raccoglie requisiti di sostenibilità di prodotto (LCA, EOL, propulsione elettrica, rumore in dB(A)), mentre la nuova famiglia NF accoglie requisiti **non-funzionali di conformità ambientale operativa** (vincoli normativi area protetta, buffer geofence, restrizioni stagionali). La distinzione è coerente con NASA SE Handbook §4.2.3 (quality-of-service vs functional requirements) e con la prassi INCOSE GtWR 2023 sui requisiti non-funzionali.
 - **Sheet `SyR_NF_ENV`** da aggiungere al file Excel v1.5 al momento della rigenerazione M+6 (in coerenza con la struttura sheet esistente, vedi §7.2 update).
-- **Disciplina epistemica** (skill `epistemic-rigor`): tutti i 7 nuovi record portano confidence level (medium per la maggioranza, in quanto dipendenti da engagement esterno Ente Parco Antola M+6) e falsifying observation operativa esplicita.
+- **Disciplina epistemica** (metodologia di rigore epistemico): tutti i 7 nuovi record portano confidence level (medium per la maggioranza, in quanto dipendenti da engagement esterno Ente Parco Antola M+6) e falsifying observation operativa esplicita.
 
 **Standard secondari di riferimento:** INCOSE Systems Engineering Handbook 5th Edition (2023); ISO/IEC/IEEE 15288:2015; ECSS-E-ST-10C; **Direttiva Uccelli 2009/147/CE** (specie Allegato I); **DPR 357/1997** art.5 (Valutazione di Incidenza); **L.R. Liguria 12/1995** (Parchi Regionali); **Decreto Min. 16.03.1998** (zonizzazione acustica aree protette).
 
@@ -190,7 +190,7 @@ In coerenza con il refinement batch 2 M+3 documentato in `studio-di-fattibilita/
 | OQ-024 | ICD baseline (22 IR) | tutti gli IR | M+6-9 | Open |
 | OQ-025 | Safety Case SORA draft | SyR-F-002 + SyR-S-001/005/006 + Cap. 6.4 | M+9-10 | Open |
 
-> **Nota tracker**: 3 delle 25 OQ batch 2 M+3 risultano già **chiuse o in progress** a M+3 (OQ-019, OQ-020, OQ-021) grazie all'azione del subagent batch 2. Le rimanenti 22 OQ hanno target M+4-M+10 e sono trackate nel piano di azione M+6 (G2 entry) e M+10/M+11 (G3 entry). L'aggiornamento status OQ avverrà alla v1.5.1 hotfix (atteso M+6) oppure alla v2.0 M+10 finale.
+> **Nota tracker**: 3 delle 25 OQ batch 2 M+3 risultano già **chiuse o in progress** a M+3 (OQ-019, OQ-020, OQ-021) grazie all'azione del team specialistico batch 2. Le rimanenti 22 OQ hanno target M+4-M+10 e sono trackate nel piano di azione M+6 (G2 entry) e M+10/M+11 (G3 entry). L'aggiornamento status OQ avverrà alla v1.5.1 hotfix (atteso M+6) oppure alla v2.0 M+10 finale.
 
 ---
 
@@ -238,14 +238,14 @@ Il file `RTM-v1.0.xlsx` (67 KB, 14 sheet) non viene modificato in v1.5. Resta il
 Per produrre il file `RTM-v1.5.xlsx` rigenerato al M+6 occorre:
 
 1. **Estendere `build_rtm.py`** (script Python esistente in `/studio-di-fattibilita/allegati/A1-RTM/build_rtm.py`) per:
-   - Aggiungere lista record v1.5 (lettura da `RTM-v1.5-delta.csv` con merge sul totale)
-   - Creare sheet nuovo `SyR_NF_ENV` con header standard 15 colonne più 1 riga (SyR-NF-AMB-001)
-   - Aggiungere 3 righe al sheet `SsR_AVI` (SsR-AVI-AMB-001), e creare 2 nuovi sheet `SsR_OPS` (SsR-OPS-AMB-001) più `SsR_DAT` (SsR-DAT-AMB-001), totale sheet xlsx: 14 → **16**
-   - Aggiungere 1 riga a sheet `StNeeds` (StNeed-029), 1 riga a sheet `NegR` (NegR-AMB-016) e 2 righe a sheet `VR` (VR-AMB-01 + VR-AMB-02)
-   - Aggiornare sheet `Cover` con statistiche v1.5 (totali, breakdown SyR per famiglia più NF, breakdown SsR per sottosistema più OPS più DAT)
-   - Aggiornare sheet `Coverage_Matrix` con 1 nuova riga (StNeed-029 → SyR-NF-AMB-001)
-   - Aggiornare sheet `Gap_Analysis` con metriche v1.5 (§3 di questo report)
-   - Mantenere color coding esistente più aggiungere palette specifica NF (es. verde scuro #548235 per famiglia NF Environmental Compliance)
+ - Aggiungere lista record v1.5 (lettura da `RTM-v1.5-delta.csv` con merge sul totale)
+ - Creare sheet nuovo `SyR_NF_ENV` con header standard 15 colonne più 1 riga (SyR-NF-AMB-001)
+ - Aggiungere 3 righe al sheet `SsR_AVI` (SsR-AVI-AMB-001), e creare 2 nuovi sheet `SsR_OPS` (SsR-OPS-AMB-001) più `SsR_DAT` (SsR-DAT-AMB-001), totale sheet xlsx: 14 → **16**
+ - Aggiungere 1 riga a sheet `StNeeds` (StNeed-029), 1 riga a sheet `NegR` (NegR-AMB-016) e 2 righe a sheet `VR` (VR-AMB-01 + VR-AMB-02)
+ - Aggiornare sheet `Cover` con statistiche v1.5 (totali, breakdown SyR per famiglia più NF, breakdown SsR per sottosistema più OPS più DAT)
+ - Aggiornare sheet `Coverage_Matrix` con 1 nuova riga (StNeed-029 → SyR-NF-AMB-001)
+ - Aggiornare sheet `Gap_Analysis` con metriche v1.5 (§3 di questo report)
+ - Mantenere color coding esistente più aggiungere palette specifica NF (es. verde scuro #548235 per famiglia NF Environmental Compliance)
 2. **Eseguire** `python3 build_rtm.py --version v1.5 --delta RTM-v1.5-delta.csv` (parametri da implementare)
 3. **Verificare integrità** confrontando count cells vs §2 statistiche
 4. **Commit Git** con messaggio "RTM v1.5, integrazione A.12 VIA v2.0 (M+6)" più versionare il nuovo xlsx accanto al v1.0 (non sovrascrivere)
@@ -315,7 +315,7 @@ La RTM v1.5 chiude anticipatamente a M+3 (batch 2) il gap §5.6 della v1.0 (REQ-
 - File `RTM-v1.0.xlsx` **invariato** in attesa rigenerazione M+6 → `RTM-v1.5.xlsx`.
 - Cross-reference Cap. 3 (RTM v0.5 baseline) più Cap. 5 §5.7bis (quadro normativo ambientale, atteso M+5-6) più Cap. 6 §6.4 (Safety Case più ambientale) più Cap. 9 §9.2 (gate G2 entry criteria deve includere SyR-NF-AMB-001 in coverage check).
 
-**Disclaimer epistemico** (skill `epistemic-rigor`): la presente RTM v1.5 mantiene la confidence aggregata **medium** della v1.0 con un overlay specifico **medium per la sezione ambientale**:
+**Disclaimer epistemico** (metodologia di rigore epistemico): la presente RTM v1.5 mantiene la confidence aggregata **medium** della v1.0 con un overlay specifico **medium per la sezione ambientale**:
 
 - Confidence StNeed-029 più SyR-NF-AMB-001 più 3 SsR più NegR-AMB-016 più VR-AMB-01/02: tutti dichiarati **medium** in attesa di engagement formale Ente Parco Antola M+6 (workshop atteso M+5-6). Il refresh a high è pianificato in v1.5.1 hotfix M+6 post-workshop.
 - Falsifying observation operativa di StNeed-029 esplicita: "Ente Parco Antola rifiuta firma Convenzione operativa entro M+9 (target M+12 latest) OPPURE comunità Pentema esprime opposizione formale documentata". Trigger osservabile e remediation declaration (relocate sito pilota su altra frazione SNAI non in Parco) garantiscono auditabilità del requisito.
@@ -358,10 +358,10 @@ La RTM v1.5 chiude anticipatamente a M+3 (batch 2) il gap §5.6 della v1.0 (REQ-
 
 [^16]: **Allegato A.1 RTM v1.0 Report (predecessore)**: `studio-di-fattibilita/allegati/A1-RTM/A1-RTM-REPORT.md`, baseline M+3 di riferimento.
 
-[^17]: **Skill `requirements-traceability-matrix`**: `.claude/skills/requirements-traceability-matrix/SKILL.md`, workflow di costruzione applicato.
+[^17]: **Metodologia metodologia RTM**: metodologia interna: workflow di costruzione applicato.
 
-[^18]: **Skill `epistemic-rigor`**: `.claude/skills/epistemic-rigor/SKILL.md`, disciplina di falsifiability più confidence levels applicata.
+[^18]: **Metodologia di rigore epistemico**: metodologia interna, disciplina di falsifiability più confidence levels applicata.
 
-[^19]: **Boundary conditions B1+B2** dichiarate in `CLAUDE.md` (project root) più `riferimenti/visione-10-anni.md` più `riferimenti/RESERVED-rischi-geopolitici.md`.
+[^19]: **Boundary conditions B1+B2** dichiarate in briefing operativo di progetto (project root) più `riferimenti/visione-10-anni.md` più `riferimenti/RESERVED-rischi-geopolitici.md`.
 
 [^20]: Build script `/studio-di-fattibilita/allegati/A1-RTM/build_rtm.py`, riproducibilità del file `RTM-v1.0.xlsx` e CSV via `python3 build_rtm.py`. Per v1.5 va esteso secondo istruzioni §7.2bis.

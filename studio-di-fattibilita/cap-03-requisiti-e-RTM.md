@@ -7,8 +7,8 @@
 > **Versione:** bozza M+3 (post-Allineamento Strategico Maggio 2026)
 > **Metodologia:** NASA Systems Engineering Handbook Rev 2 (NASA/SP-2016-6105), §4.1 Stakeholder Expectations Definition + §4.2 Technical Requirements Definition
 > **Conformità:** D.Lgs. 36/2023 art. 41 (Quadro Esigenziale richiamato dal Cap. 1)
-> **Disciplina epistemica:** applicate Regole 1-7 della skill `epistemic-rigor`
-> **Red Team review:** verifica condotta dall'agente `red-team-skeptic` (vedi §3.11)
+> **Disciplina metodologica:** applicate le regole di rigore epistemico
+> **Review critica indipendente:** verifica condotta dall'revisione critica indipendente (vedi §3.11)
 
 ---
 
@@ -22,7 +22,7 @@ La metodologia adottata è il **NASA Systems Engineering Handbook Rev 2** [^1] �
 2. **Definizione bisogni, obiettivi, vincoli** (§4.1.1.2.3)
 3. **Concept of Operations (ConOps)** preliminare (§4.1.1.2.4)
 4. **Trasformazione in System Requirements** misurabili (§4.2)
-5. **Costruzione della Requirements Traceability Matrix (RTM)** tramite `agents/aerospace-systems-engineer.md` + skill `requirements-traceability-matrix`
+5. **Costruzione della Requirements Traceability Matrix (RTM)** tramite + metodologia RTM
 
 Output del capitolo:
 
@@ -58,32 +58,32 @@ Lo Studio di Fattibilità HALE/VTOL adotta lo standard NASA per quattro motivi c
 
 ### 3.1.2 Tassonomia dei requisiti
 
-La struttura gerarchica adottata, in linea con NASA SE Handbook §4 [^1] e con la skill `requirements-traceability-matrix`:
+La struttura gerarchica adottata, in linea con NASA SE Handbook §4 [^1] e con la metodologia RTM:
 
 ```
 Stakeholder Needs (StNeed-NNN)
-        ↓ derivazione
+ ↓ derivazione
 System Requirements (SyR-NNN)
-        ↓ allocazione + decomposizione
+ ↓ allocazione + decomposizione
 Subsystem Requirements (SsR-XXX-NNN)
-        ↓ + Interface Requirements (IR-XXX-NNN)
-        ↓ verifica
+ ↓ + Interface Requirements (IR-XXX-NNN)
+ ↓ verifica
 Verification Requirements (VR-NNN)
 ```
 
 Convenzioni di identificazione:
 
 ```
-StNeed-NNN           # Stakeholder Need
-SyR-NNN              # System Requirement
-SsR-XXX-NNN          # Subsystem Requirement (XXX = AERO, PROP, AVI, PAY, GS, COMMS)
-IR-XXX-NNN           # Interface Requirement
-VR-NNN               # Verification Requirement
+StNeed-NNN # Stakeholder Need
+SyR-NNN # System Requirement
+SsR-XXX-NNN # Subsystem Requirement (XXX = AERO, PROP, AVI, PAY, GS, COMMS)
+IR-XXX-NNN # Interface Requirement
+VR-NNN # Verification Requirement
 ```
 
 ### 3.1.3 Criteri di buona scrittura (NASA SE Appendix C, regole VAFC)
 
-Ogni requisito del presente Studio è scritto secondo i quattro criteri citati nella skill `requirements-traceability-matrix` (derivati da NASA SE Handbook §4.2 + INCOSE Guide for Writing Requirements):
+Ogni requisito del presente Studio è scritto secondo i quattro criteri citati nella metodologia RTM (derivati da NASA SE Handbook §4.2 + INCOSE Guide for Writing Requirements):
 
 - **V, Verificabile**: ogni requisito deve dichiarare il metodo di verifica (Inspection, Analysis, Demonstration, Test)
 - **A, Atomico**: un requisito = un'affermazione (mai composti con "e/o", "qualora", "in funzione di")
@@ -100,13 +100,13 @@ Ogni requisito del presente Studio è scritto secondo i quattro criteri citati n
 
 ### 3.1.4 Disciplina epistemica
 
-In coerenza con la skill `epistemic-rigor`, ogni requisito riporta in annotazione: **Source provenance** (stakeholder origine, workshop o meeting, data), **Confidence level** (high se validato da fonte autoritativa, medium se in negoziazione, low se preliminare), **Falsifying observation** (cosa renderebbe falso il requisito o ne dimostrerebbe l'infeasibility), **Verification status** (Open / Planned / In progress / Verified / Failed / Waived), **Trade Study link** (se il requisito deriva da una scelta di trade study, riferimento al TS-ID), **Risk link** (se il requisito ha impatto su un rischio, riferimento al RSK-ID).
+In coerenza con la metodologia di rigore epistemico, ogni requisito riporta in annotazione: **Source provenance** (stakeholder origine, workshop o meeting, data), **Confidence level** (high se validato da fonte autoritativa, medium se in negoziazione, low se preliminare), **Falsifying observation** (cosa renderebbe falso il requisito o ne dimostrerebbe l'infeasibility), **Verification status** (Open / Planned / In progress / Verified / Failed / Waived), **Trade Study link** (se il requisito deriva da una scelta di trade study, riferimento al TS-ID), **Risk link** (se il requisito ha impatto su un rischio, riferimento al RSK-ID).
 
 ---
 
 ## 3.2 Criteri di Successo del Gate M+10 (Go/No-Go Baseline)
 
-Lo Studio di Fattibilità si conclude al gate **M+10/M+11** con verdetto per ciascuno dei due percorsi. I criteri di successo del Gate, formalizzati ai sensi della skill `gate-review-checklist`, sono articolati come segue.
+Lo Studio di Fattibilità si conclude al gate **M+10/M+11** con verdetto per ciascuno dei due percorsi. I criteri di successo del Gate, formalizzati ai sensi della metodologia di gate review, sono articolati come segue.
 
 ### 3.2.1 Criteri tecnici
 
@@ -305,11 +305,11 @@ In coerenza con NASA SE Handbook §4.1.1.2.4 [^1], il **ConOps** descrive *come*
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│ Use case primari Percorso 6A:                                            │
-│  • UC-001 Monitoraggio frane (BVLOS, settimanale stagione piovosa)       │
-│  • UC-002 Antincendio boschivo (BVLOS, on-demand stagione estiva)        │
-│  • UC-003 Connettività emergenza (LTE tattico, on-demand)               │
-│  • UC-004 Mappatura cooperative (VLOS/EVLOS, trimestrale)                │
+│ Use case primari Percorso 6A: │
+│ • UC-001 Monitoraggio frane (BVLOS, settimanale stagione piovosa) │
+│ • UC-002 Antincendio boschivo (BVLOS, on-demand stagione estiva) │
+│ • UC-003 Connettività emergenza (LTE tattico, on-demand) │
+│ • UC-004 Mappatura cooperative (VLOS/EVLOS, trimestrale) │
 └─────────────────────────────────────────────────────────────────────────┘
 
 Piattaforma: VTOL ibrido commerciale TRL 8-9 (JOUAV CW-30E baseline)
@@ -319,23 +319,23 @@ Ground Station: 1 fissa Pentema + 1 mobile (veicolo cooperativa)
 Payload: EO RGB + IR termico (mappa termica antincendio) + telecom backup
 
 Profilo missione tipico (monitoraggio frane):
-  T+0   Briefing meteo + ConOps + NOTAM
-  T+15  Decollo VTOL
-  T+18  Climb a 500 m AGL, transizione a cruise
-  T+25  Inizio sorvolo aree target a 200-500 m AGL
-  T+1h  Trasmissione real-time imagery a GS
-  T+5h  Return-to-base e atterraggio VTOL
-  T+5.5h Download dati + processamento + delivery PA <24h
+ T+0 Briefing meteo + ConOps + NOTAM
+ T+15 Decollo VTOL
+ T+18 Climb a 500 m AGL, transizione a cruise
+ T+25 Inizio sorvolo aree target a 200-500 m AGL
+ T+1h Trasmissione real-time imagery a GS
+ T+5h Return-to-base e atterraggio VTOL
+ T+5.5h Download dati + processamento + delivery PA <24h
 ```
 
 ### 3.4.2 ConOps Percorso 6B, HALE R&D Phase B Y3-Y5
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│ Use case primari Percorso 6B (post-pilota subscale):                     │
-│  • UC-005 EO persistente su area Liguria (>72h continuativi)             │
-│  • UC-006 NTN gNB regenerative HAPS (banda S o 700 MHz, ≥10 km cella)    │
-│  • UC-007 Dual-use civile-difesa (ISR, NATO DIANA, conditional)          │
+│ Use case primari Percorso 6B (post-pilota subscale): │
+│ • UC-005 EO persistente su area Liguria (>72h continuativi) │
+│ • UC-006 NTN gNB regenerative HAPS (banda S o 700 MHz, ≥10 km cella) │
+│ • UC-007 Dual-use civile-difesa (ISR, NATO DIANA, conditional) │
 └─────────────────────────────────────────────────────────────────────────┘
 
 Piattaforma: HALE solare custom Firmamento, b ≈ 25-30 m, MTOW ≈ 80-150 kg
@@ -345,11 +345,11 @@ Endurance target: > 30 giorni perennial in stagione estiva (Y3); 12 mesi target 
 Payload: EO multispettrale + IR + NTN gNodeB Rel-17/18
 
 Profilo missione tipico (persistent EO Liguria):
-  D-7   Mission planning + meteo + NOTAM + Airspace Coordination ENAV
-  D-1   Sortie da GATB con ascesa nominale 3-6h
-  D+0   Stabilizzazione FL650 + handover to mission control Liguria
-  D+0   to D+30  Persistent observation con tasking dinamico da GS
-  D+30  Discesa programmata o emergency return-to-base
+ D-7 Mission planning + meteo + NOTAM + Airspace Coordination ENAV
+ D-1 Sortie da GATB con ascesa nominale 3-6h
+ D+0 Stabilizzazione FL650 + handover to mission control Liguria
+ D+0 to D+30 Persistent observation con tasking dinamico da GS
+ D+30 Discesa programmata o emergency return-to-base
 ```
 
 ---
@@ -476,7 +476,7 @@ I 42 SyR baseline sono categorizzati in **7 famiglie**. Il capitolo riporta i Sy
 
 I **Negative Requirements** (NegR) sono requisiti espressi in forma negativa ("il sistema **NON** deve fare X") e dichiarano vincoli di disegno che restringono lo spazio delle soluzioni ammissibili. Risultano **complementari** ai SyR positivi delle famiglie F/P/O/S/E/C/Cost (§3.5.1-3.5.7), che descrivono invece **cosa il sistema deve fare**. La letteratura sistemistica (NASA SE Handbook §4.2.2 + INCOSE GtWR Rule R47 "Avoid Negative Requirements") raccomanda di limitare il numero dei NegR e di esplicitarne la verifica, perché un requisito formulato in negativo è intrinsecamente più difficile da testare di uno positivo: la verifica avviene per **assenza** del comportamento proibito, tipicamente tramite **Inspection** (process audit, contract review, BoM check) anziché Test.
 
-L'introduzione di una sezione NegR nel PFTE risponde alla critica del Red Team (vedi §3.11, Critica 5: "i 17 StNeeds non includono need negativi") e svolge tre funzioni nello Studio di Fattibilità HALE/VTOL. La prima, rendere **espliciti** vincoli che altrimenti rimarrebbero impliciti nelle boundary conditions (B1 service-only + B2 EU sovereign stratospheric layer), creando agganci tracciabili nella RTM. La seconda, ridurre il **rischio reputazionale e regolatorio** dichiarando *a priori* ciò che il sistema **non** farà (per esempio niente dual-use offensivo, niente cloud US default, niente linguaggio "alternativa Starlink"). La terza, fornire **falsifying observations** chiare: un NegR è violato se si osserva il comportamento proibito, e tale osservazione costituisce evento di re-baseline. Lo status di ciascun NegR nella RTM è uno dei tre seguenti: **Active** (vincolo vivo e monitorato), **Waived** (vincolo sospeso con razionale documentato e approvazione gate), **Reviewed** (vincolo confermato all'ultimo audit semestrale).
+L'introduzione di una sezione NegR nel PFTE risponde alla critica della review (vedi §3.11, Critica 5: "i 17 StNeeds non includono need negativi") e svolge tre funzioni nello Studio di Fattibilità HALE/VTOL. La prima, rendere **espliciti** vincoli che altrimenti rimarrebbero impliciti nelle boundary conditions (B1 service-only + B2 EU sovereign stratospheric layer), creando agganci tracciabili nella RTM. La seconda, ridurre il **rischio reputazionale e regolatorio** dichiarando *a priori* ciò che il sistema **non** farà (per esempio niente dual-use offensivo, niente cloud US default, niente linguaggio "alternativa Starlink"). La terza, fornire **falsifying observations** chiare: un NegR è violato se si osserva il comportamento proibito, e tale osservazione costituisce evento di re-baseline. Lo status di ciascun NegR nella RTM è uno dei tre seguenti: **Active** (vincolo vivo e monitorato), **Waived** (vincolo sospeso con razionale documentato e approvazione gate), **Reviewed** (vincolo confermato all'ultimo audit semestrale).
 
 #### Tassonomia in 5 famiglie
 
@@ -494,7 +494,7 @@ I 14 NegR baseline sono organizzati in 5 famiglie, ciascuna con prefisso identif
 
 > **NegR-B-001**: Il sistema **NON** deve essere venduto come prodotto/asset agli utenti pilota o a terzi. La piattaforma HALE/VTOL è erogata esclusivamente come **servizio ricorrente** (DaaS, IaaS, canone, capacity wholesale).
 > **Rationale:** boundary condition B1 (service-only + cooperative Legacoop). La vendita di velivoli trasformerebbe Firmamento in OEM aeronautico, richiedendo Type Certificate proprio (EASA Part 21J/G), capitale OEM-grade (>€50M), e snaturando il modello equivalente Starlink/operatore.
-> **Parent:** Boundary B1 (CLAUDE.md) + StNeed-015 + SyR-Cost-004 | **Verification:** Contract clause review (audit semestrale dei contratti con cooperative + PA) | **Status:** Active | **Confidence:** boundary | **Falsifying observation:** firma di un contratto di vendita asset (anche prototipale, anche a 1 cliente) → re-baseline immediato del business model + revisione boundary conditions in Cap. 1.
+> **Parent:** Boundary B1 (briefing operativo di progetto) + StNeed-015 + SyR-Cost-004 | **Verification:** Contract clause review (audit semestrale dei contratti con cooperative + PA) | **Status:** Active | **Confidence:** boundary | **Falsifying observation:** firma di un contratto di vendita asset (anche prototipale, anche a 1 cliente) → re-baseline immediato del business model + revisione boundary conditions in Cap. 1.
 
 > **NegR-B-002**: Il sistema **NON** deve essere offerto come servizio retail B2C (vendita diretta a consumatori finali individuali, abbonamenti residenziali, app store).
 > **Rationale:** boundary B1 + scelta strategica di servizio wholesale (B2B/B2G) verso cooperative aggregatrici + PA. Il modello retail richiederebbe customer care 24/7, billing residenziale, marketing mass-market: fuori scope e fuori capability di Firmamento.
@@ -554,7 +554,7 @@ I 14 NegR baseline sono organizzati in 5 famiglie, ciascuna con prefisso identif
 
 > **NegR-Mkt-001**: Il sistema **NON** deve essere comunicato pubblicamente come "**alternativa europea a Starlink**" o "**Starlink europeo**" in materiali ufficiali (pitch deck pubblici, comunicati stampa, sito web, social media, slide investitori non-NDA).
 > **Rationale:** boundary condition B2 (linguaggio pubblico "**complementare a IRIS²**", **non** "alternativa a Starlink"). Le ragioni geopolitiche sono dettagliate in `riferimenti/RESERVED-rischi-geopolitici.md`: evitare confronto diretto con asset US strategico (rischio retaliation tariffaria + diplomatica), preservare opzionalità consorzio EU dove Starlink non è target ma complemento (HAPS layer vs LEO layer).
-> **Parent:** Boundary B2 (CLAUDE.md) + `RESERVED-rischi-geopolitici.md` | **Verification:** Process audit dei materiali pubblici (sito, slide, press release), review pre-publication per ogni materiale > 500 visualizzazioni stimate | **Status:** Active | **Confidence:** boundary | **Falsifying observation:** linguaggio "alternativa Starlink" / "Starlink europeo" appare in materiali pubblici ufficiali → re-baseline messaging + addestramento team comms + revisione governance comunicazione.
+> **Parent:** Boundary B2 (briefing operativo di progetto) + `RESERVED-rischi-geopolitici.md` | **Verification:** Process audit dei materiali pubblici (sito, slide, press release), review pre-publication per ogni materiale > 500 visualizzazioni stimate | **Status:** Active | **Confidence:** boundary | **Falsifying observation:** linguaggio "alternativa Starlink" / "Starlink europeo" appare in materiali pubblici ufficiali → re-baseline messaging + addestramento team comms + revisione governance comunicazione.
 
 > **NegR-Mkt-002**: Il sistema **NON** deve essere comunicato come "**capability militare offensiva**" o "**arma**" o "**UCAV**" (Unmanned Combat Aerial Vehicle) in materiali ufficiali, anche per scopi di marketing in conferenze difesa.
 > **Rationale:** coerenza con NegR-Geo-002 (no capability offensive) + NegR-Geo-003 (no difesa pura senza separazione strutturale). Il posizionamento pubblico è "servizi ISR civili + dual-use difensivo NATO DIANA conditional", non "armamento aereo".
@@ -596,7 +596,7 @@ I 14 NegR sono tracciati nella **RTM v0.5 estesa** (Vol. 2 Allegato A.1) come ri
 | Description | Statement in forma "NON deve..." |
 | Source | Boundary B1/B2 + parent SyR + RSK-XXX correlato |
 | Type | NegR |
-| Parent | Boundary condition (CLAUDE.md) o SyR positivo correlato o RSK del Risk Register |
+| Parent | Boundary condition (briefing operativo di progetto) o SyR positivo correlato o RSK del Risk Register |
 | Priority | Critical / High / Medium / Low |
 | V&V Method | Inspection (process audit, contract review, BoM check), raramente Test |
 | V&V Status | Active / Waived (con razionale) / Reviewed |
@@ -605,7 +605,7 @@ I 14 NegR sono tracciati nella **RTM v0.5 estesa** (Vol. 2 Allegato A.1) come ri
 
 **Audit semestrale dei NegR**. A ogni gate review (M+6, M+10, M+13, M+24...) il systems engineer e il governance lead conducono uno **status check** dei 14 NegR. Per ciascuno: (i) confermare status Active (default), (ii) richiedere Waiver formale con razionale documentato e approvazione board (downgrade a Waived), (iii) marcare come Reviewed se l'audit non rileva violazioni nel periodo. Il **Waiver** richiede approvazione esplicita di Firmamento board + risk owner e, per NegR Critical, di Coopfond / Coopfond stakeholder advisory.
 
-**Trigger di review immediata** (fuori cadenza semestrale): qualunque **falsifying observation** dichiarata innesca review entro 30 giorni con coinvolgimento del red-team-skeptic agent + risk-register-builder skill per re-valutazione boundary conditions.
+**Trigger di review immediata** (fuori cadenza semestrale): qualunque **falsifying observation** dichiarata innesca review entro 30 giorni con coinvolgimento del review critica indipendente agent + metodologia risk register metodologia per re-valutazione boundary conditions.
 
 #### Falsifying observations critiche dettagliate
 
@@ -615,7 +615,7 @@ Per i 3 NegR più critici, si riporta la falsifying observation in forma estesa,
 
 - **Trigger osservabile**: firma di un contratto/MoU/LoI di **vendita asset velivolo** (qualunque importo, qualunque cliente), anche prototype, anche cooperative pilota, anche "vendita simbolica".
 - **Fonte di evidenza**: contract registry Firmamento + cap. dichiarazioni fiscali (DR-2025 / DR-2026 dichiarazione redditi) + scrittura privata + pubblicità presso CCIAA.
-- **Remediation**: re-baseline immediato del business model in Cap. 1 + revisione boundary B1 in CLAUDE.md (con board approval) + comunicazione formale a Coopfond + revisione narrativa "service-only" in tutti i materiali pubblici.
+- **Remediation**: re-baseline immediato del business model in Cap. 1 + revisione boundary B1 nel briefing operativo (con board approval) + comunicazione formale a Coopfond + revisione narrativa "service-only" in tutti i materiali pubblici.
 
 **FO-NegR-Geo-001 (NON cloud US default per imagery EO)**
 
@@ -644,7 +644,7 @@ I Negative Requirements **non sostituiscono** il Risk Register (Vol. 2 Allegato 
 
 In sintesi: un **RSK** è qualcosa che **potrebbe accadere e va mitigato**; un **NegR** è qualcosa che **non deve accadere per design**. La violazione di un NegR Critical equivale al manifestarsi di un risk di livello rosso ad alto impatto, ma a differenza del risk il NegR non ha probabilità < 1 di occorrere: la probabilità è governata dalla disciplina operativa interna, non da eventi esterni.
 
-I NegR risultano inoltre coordinati con le 3 skill di project governance: `requirements-traceability-matrix` (i NegR estendono la tassonomia RTM e sono tracciati con la stessa rigorosità dei SyR positivi), `risk-register-builder` (ogni falsifying observation di un NegR diventa un evento di re-baseline che innesca aggiornamento del Risk Register), `epistemic-rigor` (i NegR sono dichiarati con confidence level + falsifying observation, in piena coerenza con la disciplina epistemica del progetto).
+I NegR risultano inoltre coordinati con le 3 metodologia di project governance: `metodologia RTM` (i NegR estendono la tassonomia RTM e sono tracciati con la stessa rigorosità dei SyR positivi), `metodologia risk register` (ogni falsifying observation di un NegR diventa un evento di re-baseline che innesca aggiornamento del Risk Register), rigore epistemico (i NegR sono dichiarati con confidence level + falsifying observation, in piena coerenza con la disciplina epistemica del progetto).
 
 ---
 
@@ -699,7 +699,7 @@ I System Requirements sono **decomposti** in Subsystem Requirements, allocati ai
 ### 3.6.5 Sottosistema COMMS, Comunicazioni e Link
 
 > **SsR-COMMS-001**: Link budget service link 2.6 GHz @ 25 km slant range, SNR ≥ 11 dB con disponibilità 99.5% (rain fade ITU-R P.618-14 zona K).
-> **Parent:** SyR-F-001 + skill `link-budget-calculator` | **Verification:** A | **Confidence: high** | **Source:** ITU-R P.618-14 + 3GPP TR 38.821 v16.2.0
+> **Parent:** SyR-F-001 + metodologia di link budget | **Verification:** A | **Confidence: high** | **Source:** ITU-R P.618-14 + 3GPP TR 38.821 v16.2.0
 
 ### 3.6.6 Sottosistema GS, Ground Segment
 
@@ -718,7 +718,7 @@ I System Requirements sono **decomposti** in Subsystem Requirements, allocati ai
 
 In coerenza con NASA SE Handbook §5.3 (Verification) e §5.4 (Validation) [^1], il **V&V Plan preliminare** definisce per ogni requisito il **metodo di verifica** e la **fase di V&V** target.
 
-I 4 metodi standard (cf. skill `requirements-traceability-matrix`):
+I 4 metodi standard (cf. metodologia RTM):
 
 | Codice | Metodo | Tipico per |
 |---|---|---|
@@ -759,7 +759,7 @@ La RTM completa è in Vol. 2 Allegato A.1. Si riporta qui un **estratto rapprese
 
 ### 3.8.1 Estratto RTM, Caso d'uso "Antincendio boschivo Pentema"
 
-| Req-ID | Description | Rationale | Source | Type | Parent | Owner agent | Priority | V&V Method | V&V Status | Phase | Trade Study | Risks |
+| Req-ID | Description | Rationale | Source | Type | Parent | Owner specialista | Priority | V&V Method | V&V Status | Phase | Trade Study | Risks |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | StNeed-002 | PC Liguria + CC Forestali vogliono alert hotspot termico ≤ 5 min | Tempestività intervento antincendio | Protocollo PC Liguria | StNeed | – | snai-funding-expert | High | – | – | Pre-A | – | RSK-OPS-002 |
 | SyR-F-003 | Sistema rileva hotspot ≥ 40°C, alert + thumbnail in ≤ 5 min | Soddisfare StNeed-002 con margine di confidenza | StNeed-002 | SyR | StNeed-002 | aerospace-SE | High | D + T | Open | Phase A | – | RSK-OPS-002 |
@@ -817,32 +817,32 @@ Le **assunzioni** che seguono sono dichiarate esplicitamente. La loro **invalida
 
 Le **Open Questions** sono i quesiti irrisolti che devono essere chiusi per i gate successivi. Se ne riportano 18 prioritarie; la lista completa è in Vol. 2 Allegato A.1.
 
-| OQ-ID | Domanda | Trigger per chiusura | Owner agent | Deadline |
+| OQ-ID | Domanda | Trigger per chiusura | Owner specialista | Deadline |
 |---|---|---|---|---|
-| OQ-001 | Quale piattaforma VTOL baseline (JOUAV CW-30E vs Quantum vs FlyingBasket)? | Trade Study TS-PLATFORM-6A | vtol-uas-specialist | M+6 |
-| OQ-002 | Quale SAIL finale ENAC per Pentema BVLOS? | Pre-application meeting | aviation-regulatory-counsel | M+6 |
+| OQ-001 | Quale piattaforma VTOL baseline (JOUAV CW-30E vs Quantum vs FlyingBasket)? | Trade Study TS-PLATFORM-6A | team VTOL UAS specialistico | M+6 |
+| OQ-002 | Quale SAIL finale ENAC per Pentema BVLOS? | Pre-application meeting | consulenza legale-regolatoria aviazione | M+6 |
 | OQ-003 | Quale layup composito longherone HALE? | Trade Study TS-MATERIAL | aero-structures-engineer | M+12 |
-| OQ-004 | Energy balance HALE inverno 44°N feasible o seasonal fallback? | Simulazione completa | propulsion-energy-engineer | M+10 |
-| OQ-005 | Quale architettura propulsione 6B (solar+LiS vs solar+SS vs solar+H2)? | Trade Study TS-PROP | propulsion-energy-engineer | M+12 |
-| OQ-006 | Quale autopilota 6A (commerciale vs custom DAL-C)? | Trade Study TS-AVI | avionics-gnc-engineer | M+6 |
-| OQ-007 | Quale payload modulare baseline 6A (EO+IR vs EO+IR+LiDAR vs EO+IR+telecom)? | Trade Study TS-PAYLOAD | earth-observation-expert | M+6 |
-| OQ-008 | Banda radio operativa per payload telecom 6A, ISM vs banda commerciale licenziata? | Engagement AGCOM | telecom-ntn-payload-expert | M+9 |
+| OQ-004 | Energy balance HALE inverno 44°N feasible o seasonal fallback? | Simulazione completa | team propulsione e energia | M+10 |
+| OQ-005 | Quale architettura propulsione 6B (solar+LiS vs solar+SS vs solar+H2)? | Trade Study TS-PROP | team propulsione e energia | M+12 |
+| OQ-006 | Quale autopilota 6A (commerciale vs custom DAL-C)? | Trade Study TS-AVI | team avionica e GNC | M+6 |
+| OQ-007 | Quale payload modulare baseline 6A (EO+IR vs EO+IR+LiDAR vs EO+IR+telecom)? | Trade Study TS-PAYLOAD | team Earth Observation | M+6 |
+| OQ-008 | Banda radio operativa per payload telecom 6A, ISM vs banda commerciale licenziata? | Engagement AGCOM | team telecom NTN | M+9 |
 | OQ-009 | Quale ground segment scope (fissa+mobile vs solo mobile)? | Decisione operativa post-ConOps | aerospace-SE | M+6 |
-| OQ-010 | Quale anchor customer Regione Liguria (DGR + LoI)? | Engagement Regione | snai-funding-territorial-expert | M+6 |
-| OQ-011 | Quale ruolo cooperative (utenti vs co-investitori)? | Workshop cooperative | business-model-strategist | M+6 |
+| OQ-010 | Quale anchor customer Regione Liguria (DGR + LoI)? | Engagement Regione | team SNAI e funding territoriale | M+6 |
+| OQ-011 | Quale ruolo cooperative (utenti vs co-investitori)? | Workshop cooperative | team strategia business model | M+6 |
 | OQ-012 | Quale partnership CIRA per Percorso 6B? | Engagement CIRA | sovereign-strategist | M+9 |
-| OQ-013 | Quale test bed per Percorso 6A BVLOS (Pentema vs GATB Grottaglie vs altri)? | Verifica disponibilità + costi | vtol-uas-specialist | M+6 |
-| OQ-014 | Quale modello pricing servizi PA (canone vs ore-volo vs outcome-based)? | Negoziazione Regione | business-model-strategist | M+9 |
-| OQ-015 | Quale mix finanziamenti Y1 (Coopfond + FESR + equity + R&D credit)? | Mappatura bandi disponibili | financial-cfo-analyst | M+6 |
-| OQ-016 | Quale governance Firmamento + cooperative (RTI vs JV vs contratto rete)? | Decisione strategica + legale | business-model-strategist | M+9 |
-| OQ-017 | DPIA preliminare, quale risposta Garante? | Workshop privacy + DPIA pubblica | data-privacy-counsel | M+6 |
+| OQ-013 | Quale test bed per Percorso 6A BVLOS (Pentema vs GATB Grottaglie vs altri)? | Verifica disponibilità + costi | team VTOL UAS specialistico | M+6 |
+| OQ-014 | Quale modello pricing servizi PA (canone vs ore-volo vs outcome-based)? | Negoziazione Regione | team strategia business model | M+9 |
+| OQ-015 | Quale mix finanziamenti Y1 (Coopfond + FESR + equity + R&D credit)? | Mappatura bandi disponibili | analisi finanziaria CFO | M+6 |
+| OQ-016 | Quale governance Firmamento + cooperative (RTI vs JV vs contratto rete)? | Decisione strategica + legale | team strategia business model | M+9 |
+| OQ-017 | DPIA preliminare, quale risposta Garante? | Workshop privacy + DPIA pubblica | consulenza privacy e protezione dati | M+6 |
 | OQ-018 | Quale calendario gate decisionali (M+3, M+6, M+10, M+12)? | Master schedule | aerospace-SE | M+3 |
 
 ---
 
-## 3.11 Red Team Check, Critical Review
+## 3.11 Review critica, Critical Review
 
-L'agente `red-team-skeptic` ha condotto un attacco strutturato al presente capitolo. Sintesi delle critiche e risposte di seguito.
+L'revisione critica indipendente ha condotto un attacco strutturato al presente capitolo. Sintesi delle critiche e risposte di seguito.
 
 ### Critica 1, "I 17 StNeeds sono raccolti senza workshop strutturati con TUTTI gli stakeholder"
 
@@ -860,7 +860,7 @@ L'agente `red-team-skeptic` ha condotto un attacco strutturato al presente capit
 
 **Razionale critica**: il SyR dichiara "margine ≥ 30% O seasonal-only fallback". Si tratta di una **clausola di sopravvivenza**, non di un requisito. Operativamente significa "ammettiamo di non riuscire a fare HALE perennial in inverno a 44°N".
 **Risposta**: confermato. Il **fallback seasonal-only** (operazione marzo-ottobre) è esplicitamente la mitigazione del rischio RSK-TEC-001. Scelta strategica accettata: Y3 perennial estivo, Y6+ perennial annuale solo se la tech batterie raggiunge il target.
-**Action item**: simulazione energy balance completa worst-case M+6-10 con propulsion-energy-engineer per decisione formale (Y3 estivo vs Y5+ annuale).
+**Action item**: simulazione energy balance completa worst-case M+6-10 con team propulsione e energia per decisione formale (Y3 estivo vs Y5+ annuale).
 
 ### Critica 4, "Le boundary conditions B1 e B2 sono dichiarate fuori critica, ma i SyR cost (-001, -002, -003) sono assumption-driven non validati"
 
@@ -894,9 +894,9 @@ L'agente `red-team-skeptic` ha condotto un attacco strutturato al presente capit
 
 [^5]: ENAC Regolamento "Mezzi Aerei a Pilotaggio Remoto" Ed. 3 + Emendamento 1. Source: `fonti/Regolamento_APR_Ed_3_Emend_1.md`. Confidence: high.
 
-[^6]: Skill `requirements-traceability-matrix` (`/.claude/skills/requirements-traceability-matrix/SKILL.md`), workflow di costruzione RTM applicato in questo capitolo.
+[^6]: Metodologia RTM interna, workflow di costruzione RTM applicato in questo capitolo.
 
-[^7]: Skill `epistemic-rigor` (`/.claude/skills/epistemic-rigor/SKILL.md`), disciplina di falsifiability + triangulation + source provenance applicata in questo capitolo.
+[^7]: Metodologia di rigore epistemico (metodologia interna), disciplina di falsifiability + triangulation + source provenance applicata in questo capitolo.
 
 ---
 
@@ -920,4 +920,4 @@ La baseline dei requisiti M+3 è stata redatta usando il NASA SE Handbook come r
 - v0.8 (M+10): post trade study + V&V plan completo.
 - v1.0 (M+12, baseline finale per Phase B): set congelato per Operations Manual e SORA application.
 
-Il capitolo è **chiuso al M+3** con verdetto Red Team **OK con action items**.
+Il capitolo è **chiuso al M+3** con verdetto della review critica **OK con action items**.
