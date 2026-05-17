@@ -19,13 +19,67 @@ Il capitolo è **sintesi delle evidenze** prodotte nei Cap. 1-9 e 11 dello Studi
 
 ---
 
+## 10.0bis Revisione Verdetto post-Audit M+3 (CRITICAL — DEFAULT SCENARIO BASE)
+
+> **Inserimento post-audit M+3** (red-team-skeptic + regulatory-adversary + competitor-intelligence): la formulazione originale "Go Condizionato 6A" (vedi §10.1 sotto) **sopravvaluta la probabilità di Go pieno al gate G3**. Calcolo realistico: P(AND 5 hard conditions C1-C5) = **5-15%** scenario realistico (vedi `AUDIT-QUALITY-VOLUME-1.md` §6).
+>
+> **Scenario base atteso al gate G3 (M+10/M+11) è HOLD CON PIANO REGOLATORIO RAFFORZATO** (probabilità 60-80%), con re-review M+13-16 e attivazione **sliding timeline** del Cap. 9 §9.12. Il verdetto "Go Condizionato" del §10.3 sotto resta valido come **scenario ottimistico** (15-35% probabilità).
+
+### 10.0bis.1 Verdetto consolidato realistico
+
+| Scenario | Probabilità | Verdetto effettivo G3 | Action |
+|---|---|---|---|
+| **Scenario A — Best case** (5 hard conditions soddisfatte M+10) | **5-15%** | **GO PIENO 6A** | Avvio operations Y1 M+12 come da piano nominale Cap. 9 |
+| **Scenario B — Base case** (3-4 hard conditions soddisfatte) | **45-60%** | **HOLD CON PIANO REGOLATORIO RAFFORZATO** | Re-review G3-bis M+13-16; pivot a sliding timeline §9.12 |
+| **Scenario C — Worst case operativo** (≤ 2 hard conditions soddisfatte) | **20-30%** | **HOLD ESTESO** | Re-review G3-bis M+16-20; eventuale pivot scope MVP (VLOS-only, area ridotta) |
+| **Scenario D — No-Go materiale** (es. ENAC nega esplicitamente SAIL Pentema, Regione si tira indietro definitivamente) | **5-10%** | **PIVOT STRATEGICO** | Riesame business case, possibile pivot regionale (Piemonte/Calabria) o cancellazione 6A |
+
+### 10.0bis.2 Verdetto Percorso 6B in scenario realistico
+
+Il verdetto **HOLD / GO CONDIZIONATO ESTREMO 6B** della §10.4 sotto resta valido. Aggiornamenti post-audit:
+
+- Il 6B non parte mai prima del gate G5 (M+24), e con le sliding timeline §9.12 realisticamente **M+30-48**
+- 15 showstopper regolatori aggiuntivi (vedi Cap. 5 §5.16) confermano severità path 6B
+- Probabilità operatività perennial Y10 standalone stimata realisticamente **6-15%** (vedi Cap. 11 §11.6bis scenario B2-relaxed)
+- **Hold del 6B è il default permanente** fino a evidenza chiara di apertura framework EASA RMT HAPS
+
+### 10.0bis.3 Comunicazione esterna del verdetto
+
+Per evitare l'effetto "CYA decisionale" (Red Team critica §5), il verdetto va comunicato esternamente come segue:
+
+> **Comunicazione raccomandata al CdA + sponsor**:
+> "Lo Studio di Fattibilità conferma la solidità tecnica e di mercato del Percorso 6A pilota Pentema. Le evidenze regolatorie e di engagement institutionale al M+11 sono in costruzione: il verdetto è **GO subordinato al completamento del piano regolatorio rafforzato**, con probabilità di Go pieno immediato ~5-15% e probabilità di Hold con re-review ~60-80%. Il Percorso 6B resta in HOLD strutturale subordinato a gate G5 (M+24)."
+
+Questo evita l'overpromise ("Go!") e l'underpromise ("No-Go") che entrambi falsificano la realtà.
+
+### 10.0bis.4 Impatto su Cap. 8 (financial) e Cap. 9 (schedule)
+
+Il scenario base "HOLD con piano regolatorio rafforzato" implica:
+- **Cap. 8**: cash burn Y1 più alto (€2-3M cumulato vs €1.2M nominale); bridge financing €500k preallocato
+- **Cap. 9**: sliding timeline §9.12 è il **piano operativo di riferimento** per pianificazione finanziaria
+- **Cap. 7**: revenue Y1 realistico €100-250k (vs €355-405k baseline); break-even Y5-Y6 vs Y4-Y5
+- **Cap. 5 §5.17**: 3 FTE regulatory aggiuntivi (+€450-800k OpEx Y1) sono **fixed cost obbligatorio**
+
+### 10.0bis.5 Action immediato post-Studio M+11
+
+Il CdA + sponsor deve approvare:
+- ☐ Budget Y1 **aumentato** a €2.5-3.5M (CapEx + OpEx aggiuntivo regulatory team + bridge financing)
+- ☐ **Doppio binario di pianificazione**: piano nominale Cap. 9 + sliding timeline §9.12
+- ☐ Re-baseline Gate G3-bis a M+13-16 dichiarata come opzione legittima
+- ☐ Hold del 6B come default permanente fino gate G5
+- ☐ Strategia comunicazione esterna con linguaggio "GO subordinato" (non "GO pieno")
+
+---
+
 ## 10.1 Sintesi del verdetto
 
 ### 10.1.1 Verdetto sintetico per ciascun percorso
 
+> **Nota M+3**: la tabella sotto riflette il **verdetto formale al gate G3** se tutte le hard conditions sono soddisfatte (scenario A, P 5-15%). Per scenario base realistico (Hold con piano rafforzato, P 60-80%), vedi §10.0bis.
+
 | Percorso | Verdetto raccomandato | Confidenza | Razionale principale |
 |---|---|---|---|
-| **6A — VTOL Pilota Pentema** | ✅ **GO CONDIZIONATO** | medium-high | Fattibilità tecnica, regolatoria, di mercato confermata; rischi gestibili; condizioni: LoI Regione + Coopfond entro M+12, contratti ≥ 3 firmati Y1, SORA approvato |
+| **6A — VTOL Pilota Pentema** | ✅ **GO CONDIZIONATO** *(scenario A)* / ⚠️ **HOLD CON PIANO RAFFORZATO** *(scenario base B, default)* | medium-high | Fattibilità tecnica, regolatoria, di mercato confermata; rischi gestibili; condizioni: LoI Regione + Coopfond entro M+12, contratti ≥ 3 firmati Y1, SORA approvato |
 | **6B — HALE Stratosferico** | ⚠️ **HOLD / GO CONDIZIONATO ESTREMO R&D** | low-medium | Concept fattibile, ma 2 showstopper tecnici aperti + framework regolatorio HAPS EU assente. Phase B autorizzata solo a condizione di funding mix ≥ 50% pubblico al M+24 |
 
 ### 10.1.2 Riepilogo evidenze chiave

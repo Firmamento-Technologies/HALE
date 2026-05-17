@@ -20,8 +20,8 @@ Il presente capitolo presenta l'**analisi di mercato e il business case** per i 
 
 1. **Esiste un mercato indirizzabile reale** per servizi persistenti EO + NTN nelle Aree Interne italiane, ancorato da committenti PA (Regione Liguria, Protezione Civile) + rete cooperative Legacoop (10 cooperative pilota). Stima TAM-IT addressable Y5 (2030) per la categoria HAPS + UAV servizi territoriali: **€40-180M** (range a confidence low-medium).
 2. **Firmamento si posiziona come operatore di servizi**, non OEM aeronautico (boundary condition B1). Il modello di revenue è ricorrente (canoni, DaaS, ore-volo + analytics, outcome-based), non transattivo. **Nessun ricavo da vendita di velivoli** previsto né nel pilota né nello scale-up.
-3. **Vantaggio competitivo difendibile** poggia su 4 pilastri: (i) specializzazione geografica Aree Interne IT, (ii) modello cooperativo, (iii) sostenibilità + narrativa ESG, (iv) approccio incrementale VTOL → MALE → HALE che produce asset riusabili.
-4. **MVP Y1 (Percorso 6A Pentema)**: budget €700-1100k, target revenue Y1 €200-400k da 3-5 contratti pluriennali con PA + cooperative. Sostenibilità break-even Y3-Y4 dopo scale-up SNAI Liguria.
+3. **Vantaggio competitivo difendibile** poggia su 4 pilastri: (i) specializzazione geografica Aree Interne IT, (ii) modello cooperativo, (iii) sostenibilità + narrativa ESG, (iv) approccio incrementale VTOL → MALE → HALE che produce asset riusabili. **Nota di onestà post-audit competitor**: il pilastro (i) è difendibile vs Tier 1 globali (AALTO/Skydweller) **ma NON vs Cluster D italiani** (e-GEOS, Planetek, NHazca, FlyingBasket) che presidiano già il mercato B2G regionale (vedi §7.4.4 e §7.5.1).
+4. **MVP Y1 (Percorso 6A Pentema)**: budget €700-1100k, target revenue Y1 €200-400k da 3-5 contratti pluriennali con PA + cooperative. Sostenibilità break-even Y3-Y4 dopo scale-up SNAI Liguria. **Avvertenza pricing**: il baseline €150k/anno per servizio EO Regione (§7.8.2) è **falsificato** da contratti reali Cluster D (tipicamente €30-80k/anno per area, contratti pluriennali consolidati); il margine difensivo passa per persistence + latency + sovranità, NON per pricing (vedi §7.4.5).
 5. **Fase 2-5 della visione 10 anni**: traiettoria progressiva verso "nodo italiano di un futuro consorzio sovrano europeo HAPS" (boundary condition B2), con capital intensity totale stimata **€500M-€2B** per piccola flotta (5-10 HAPS) o **€10-30B** per scala "EU sovereign layer" (vedi `riferimenti/visione-10-anni.md`).
 
 **Verdetto business per il gate M+10**: **GO Percorso 6A** (MVP commerciale validabile in 12 mesi); **GO CONDIZIONATO Percorso 6B** (preparatorio R&D, no commitment a manufacturing né operations commerciali fino al gate M+24).
@@ -243,45 +243,243 @@ Per **calibrare** le stime sopra contro un dato ufficiale italiano, citiamo i nu
 > 3. **Sovranità dati italiana** (HAPS in mani italiane vs Starlink US-controlled) — argomento per PA, decisivo
 > 4. **Backup independent** (HAPS senza dipendenza Starlink in caso di crisi geopolitica)
 
-### 7.4.4 Concorrenti VTOL commerciali — Tier 3 per Percorso 6A
+### 7.4.4 Cluster D — Service Incumbent Italiani (vero competitor Y1 B2G)
 
-Per il Percorso 6A baseline (VTOL pilota), Firmamento **utilizza** piattaforme commerciali (es. JOUAV CW-30E), non concorre con i vendor. I concorrenti **operativi** del Percorso 6A sono:
+> **Premessa metodologica (post-audit avversariale)**: la versione M+0 del Cap. 7 elencava un singolo concorrente VTOL/UAS italiano in modalità superficiale. L'audit `competitor-intelligence` (vedi `AUDIT-COMPETITOR-VOLUME-1.md` §1 e Critica C7.9) ha dimostrato che **il vero competitor Y1 per il MVP Pentema e per lo scale-up SNAI Liguria non è AALTO né Skydweller** (rischi Y3-Y5) **bensì il cluster degli operatori italiani di servizi EO + UAS già presidio della PA** — di seguito **Cluster D**. Questi soggetti hanno (a) contratti pluriennali in essere con Regioni / PC / ARPA, (b) pricing 3-5× inferiore rispetto al baseline Cap. 7 §7.8.2, (c) reti di rapporti istituzionali consolidate, (d) capability tecnica matura. La presente sezione li profila in dettaglio.
 
-| Operatore IT | Categoria | Posizione | Minaccia per 6A |
+#### 7.4.4.1 Mappa Cluster D — operatori EO + UAS Italia
+
+| # | Operatore | Sede | Ownership | Asset / capability primaria | Track record PA Italia |
+|---|---|---|---|---|---|
+| **D1** | **e-GEOS S.p.A.** [^16] | Roma + Matera | Telespazio 80% (Leonardo/Thales) + ASI 20% | EO COSMO-SkyMed + Copernicus EMS lead consortium + InSAR + Rapid Mapping 24/7/365 | Contratto Copernicus EMS €36M 2023-2029; contratti regionali multipli (Lazio PC ≥ 2021); leader sostanzialmente monopolistico EO PA Italia |
+| **D2** | **Planetek Italia S.r.l.** [^17] | Bari | Privato (PMI, top-200 Sud Italia) | Piattaforma Rheticus® (InSAR Sentinel-1, COSMO-SkyMed, ALOS) + analytics; servizi Cloud SaaS; consorzio Osiride | ASSET Puglia (mitigazione rischio idrogeologico, training 150 professionisti); contratti Regione Puglia multipli; OpenCoesione progetti PA |
+| **D3** | **NHazca S.r.l.** [^18] | Roma | Spin-off Sapienza Dip. Scienze della Terra (2009) | InSAR/DInSAR satellitare + TInSAR ground-based + PhotoMonitoring™ + integrazione data intelligence | Monitoraggio frane / infrastrutture critiche / patrimonio culturale; collaborazioni PA + infrastructure manager (AGCOM-ANAS-RFI tier); academic spin-off IntelligEarth |
+| **D4** | **FlyingBasket S.r.l.** [^19] | Bolzano | Privato + investimento Leonardo S.p.A. (2024) | Cargo drone FB3 100 kg payload; primo LUC ENAC Italia (2024); primo BVLOS cross-border EU | Provincia Bolzano (21 voli, 4 rifugi alpini, >1 t cargo); contratti offshore UK; pilotato heavy-lift IT operativo |
+| **D5** | **Skyrobotic S.p.A.** [^20] | Terni | Gruppo Italeaf | Produzione SAPR sotto 25 kg; SR-SF6 piattaforma multirotore; primo "scenari misti" ENAC (2015 via Consulcad) | Geomatica + mapping PA via integratori; partnership ATC Servizi aviosuperficie sperimentale |
+| **D6** | **Aermatica3D S.r.l.** [^21] | Colverde (CO) | Privato | Drone Solutions Provider — integrazione droni custom + sensori + software; primo ENAC scenari critici industriali e urbani | Industria + research centers + PA enti governativi (target dichiarato); operatore certificato BVLOS aree critiche |
+| **D7** | **Telespazio S.p.A. (downstream EO)** [^22] | Roma | Leonardo 67% + Thales 33% | Integrato EO + telecomunicazioni + navigation; servizi monitoraggio ambientale + rush mapping + InSAR + thematic mapping; programma IRIDE €1.1B come prime contractor IT | Tutti i settori PA italiani — la "spine dorsale" downstream EO Italia |
+| **D8** | **CIRA — Centro Italiano Ricerche Aerospaziali** [^23] | Capua (CE) | Consorzio: ASI + CNR + Regione Campania + industrie aerospace IT | R&D piattaforme stratosferiche per telerilevamento; HELIPLAT lineage; fee-for-service contracts | Partner istituzionale R&D — può diventare partner Firmamento (vedi §7.4.5) o competitor diretto se sviluppa servizio HAPS proprio |
+
+> **Sintesi capability map**: Cluster D copre l'intero stack downstream IT — dati satellitari (D1, D2, D7), analytics + InSAR (D2, D3), operazioni UAS commerciali (D4, D5, D6), R&D piattaforme stratosferiche (D8). Firmamento si sovrappone su (a) UAS service (D4, D5, D6), (b) analytics/monitoraggio (D2, D3), (c) potenziale HAPS R&D (D8). **Tre cluster di sovrapposizione frontale** — non è un mercato vuoto.
+
+#### 7.4.4.2 Pricing benchmark Cluster D vs Firmamento baseline
+
+> **⚠️ Caveat pricing (confidence: low-medium)** — I prezzi sotto riportati sono ricostruzioni dedotte da: (a) press release pubbliche dei contratti vinti, (b) bilanci pubblici degli operatori (Telespazio €701M revenue 2023, e-GEOS €68.8M revenue 2023, Planetek Italia €18-22M revenue 2024 [^17]), (c) portali pubblici MEPA/Consip/InfoGareWeb [^24], (d) benchmark di settore IT/EU 2024-2026. **Non sono prezzi contratti specifici**. Per pricing investment-grade serve accesso a (i) DGR Regionali con allegato economico, (ii) contratti Consip dettaglio, (iii) interviste dirette con buyer PA. Action item benchmark M+6 (riferimento AUDIT-QUALITY-VOLUME-1.md §1 azione #6).
+
+| Linea servizio | Operatore Cluster D di riferimento | Pricing tipico stimato | Note |
 |---|---|---|---|
-| **ItaliaMeteo + Servizi droni regionali** | EO + monitoraggio PA | Operatori incumbent in alcune regioni | Media — accesso preferenziale a PA esistenti |
-| **Imprese ingegneria droni commerciali** (es. Dronebee, FlyingBasket) | Servizi mapping commerciali | Mercato frammentato | Bassa — focus diverso (commerciale, no SNAI) |
-| **Carabinieri / VVF flotte UAS interne** | Operazioni di emergenza | Capacità interna PA | Bassa — non concorrono ma sono "clienti potenziali" |
+| **Servizio EO monitoraggio frane Regione (canone annuo)** | Planetek Rheticus + e-GEOS InSAR | €30-80k/anno per area regionale | Multi-anno; software-as-a-service (Sentinel free + processing) — economia di scala forte |
+| **Mapping/monitoraggio satellitare ricorrente PA** | Telespazio + e-GEOS | €50-150k/anno per contratto | Servizio "chiavi in mano" includendo analytics + delivery |
+| **Rapid Mapping emergenze (on-demand)** | e-GEOS (Copernicus EMS gratuito per PA) | €0 marginale per PA (servizio EU gratuito) + €5-15k/event custom | Gratuito per PA tramite Copernicus EMS — falsifica modello "outcome-based event Firmamento" |
+| **Servizio UAS commerciale / mapping aereo** | FlyingBasket + Aermatica3D + Skyrobotic | €1.5-4k/giorno operativo o €15-40k per progetto | Pricing mercato libero; FlyingBasket BVLOS premium 30-50% |
+| **InSAR + analytics monitoraggio infrastruttura** | NHazca + Planetek | €25-100k/anno per infrastruttura monitorata | Contratti con infrastructure manager + PA |
+| **Servizio cargo drone aree impervie** | FlyingBasket | €2-5k/giorno operativo + setup | Mercato di nicchia; primo operatore italiano certificato |
+| **Pricing baseline Firmamento Cap. 7 §7.8.2 — monitoraggio EO Regione** | (Firmamento target) | **€150k/anno** | **3-5× sopra benchmark Cluster D** |
+
+> **Falsifying observation §7.4.4.1**: se nei prossimi 6 mesi il benchmark verifica che Cluster D opera servizi EO regionali equivalenti a **€30-60k/anno** con contratti multi-anno già firmati, allora il pricing baseline Firmamento §7.8.2 (€150k/anno) **NON è raggiungibile** entro Y1 senza differenziazione tangibile (es. persistence sub-day, latency <1 s, sovranità dati IT con asset domestico). **Probabilità materializzazione: H** (alta). **Impatto: H** (revenue Y1 baseline scende da €355-405k a €180-240k → sotto soglia SyR-Cost-003 in scenario worst). **Mitigazione**: ridimensionare pricing target a €60-90k/anno per servizio EO base + premium €30-60k/anno per persistence/sovranità verticale.
+
+#### 7.4.4.3 Bandi e contratti recenti — track record Cluster D
+
+| Anno | Operatore | Contratto | Cliente | Valore (dichiarato o stimato) |
+|---|---|---|---|---|
+| 2023-2029 | e-GEOS (lead consortium) | Copernicus EMS Rapid Mapping (4° rinnovo) | Commissione UE | **€36M** [^25] |
+| 2021- | e-GEOS | Mappe satellitari emergenze PC Lazio | Regione Lazio Dip. PC | Non disclosed (stimato €100-300k/anno) [^26] |
+| 2020-2024 | Planetek Italia | Rheticus® Displacement ASSET Puglia | Regione Puglia (ASSET) | Non disclosed; training 150 professionisti + monitoraggio continuo |
+| 2022-2024 | NHazca (subappalto) | Monitoraggio frane Mont de la Saxe (Courmayeur) | Comune Courmayeur | Stimato €40-120k complessivi GBINSAR [^24] |
+| 2024 | FlyingBasket | Light UAS Operator Certificate ENAC + pilot Provincia Bolzano | ENAC + PAB | Pilot project autofinanziato + Leonardo investment 2024 [^19] |
+| 2024-2025 | Telespazio (lead) | IRIDE costellazione EO sovrana italiana | ASI / PNRR (€1.1B totale) | Quota Telespazio significativa (non disclosed pubblicamente) |
+| 2024-2026 | Vari operatori UAS | RDO MEPA mapping/monitoring ambientale (esempio AMAT Milano) | Comuni / Agenzie | Tipicamente €10-50k per RDO singolo [^24] |
+
+> **Falsifying observation §7.4.4.2**: Telespazio Group ha generato **€701M revenue 2023** [^22] di cui circa **€68.8M da e-GEOS** [^27] (downstream EO). Il TAM-IT EO PA italiana **esistente e già contrattualizzato** è almeno **€50-100M/anno** (somma stimata Telespazio + e-GEOS + Planetek + NHazca + altri). La stima TAM-IT Cap. 7 §7.3.2 (€80-150M Y2026 categoria UAV territoriali) non è quindi un TAM "da costruire" ma un TAM **occupato al 60-80%** da Cluster D. La quota addressable per un newcomer è realisticamente **20-40% del residuo**, ovvero €5-20M, NON €40-100M come dichiarato in §7.3.3 SAM-IT.
+
+#### 7.4.4.4 Posizione di ogni operatore vs Firmamento
+
+| Operatore | Sovrapposizione UC Firmamento | Vantaggio strutturale dell'incumbent | Possibile mossa difensiva Firmamento |
+|---|---|---|---|
+| **D1 e-GEOS** | UC-001 frane, UC-002 antincendio (via EMS), UC-007 vigilanza | Monopolio sostanziale EO PA Italia + Copernicus gateway gratuito | Non concorrere head-to-head; **partnership downstream** (Firmamento = UAS layer aereo persistente, e-GEOS = satellite layer) — vedi §7.4.5 |
+| **D2 Planetek** | UC-001 frane (InSAR), UC-004 mapping infrastrutture | Track record Puglia + altre Regioni + SaaS scalabile | Co-progettazione "InSAR satellitare + UAV LIDAR sub-day": differenziazione integrata, non concorrenza diretta |
+| **D3 NHazca** | UC-001 frane, UC-004 mapping infrastrutture critiche | Credenziali accademiche Sapienza + reputation tecnica | Possibile R&D partner per validazione algoritmi; bassa minaccia commerciale diretta |
+| **D4 FlyingBasket** | UC operativo UAS in aree impervie (cargo + mapping) | Primo LUC ENAC Italia + cross-border BVLOS + **Leonardo investment 2024** | **Minaccia H**: ha già il SORA certificato + Leonardo backing; può competere frontalmente su BVLOS Pentema |
+| **D5 Skyrobotic** | UC mapping commerciale + scenari misti | Produttore + integratore con storia decennale | Minaccia M; focus prevalente su geomatica commerciale, non Aree Interne |
+| **D6 Aermatica3D** | UC mapping critico urbano + industriale | Primo ENAC scenari critici + capability custom integration | Minaccia M-H; cliente target sovrapposto (research centers, PA, industrie) |
+| **D7 Telespazio** | Tutti gli UC EO + telecom | Spine dorsale downstream EO IT + accesso istituzionale Leonardo | Non concorrere; **rischio acquisizione difensiva** post-Series A (vedi RSK-GEO-005 + Cap. 11 Threat 1) |
+| **D8 CIRA** | UC HAPS R&D (Fase 6B) | Lineage HELIPLAT + EuroHAPS partner + Capua test facility | **Partner critico** Phase B 6B — già flaggato Cap. 6 e Cap. 7 §7.6.2; se rifiuta partnership, Firmamento Phase B 6B è severamente ridimensionata |
+
+> **Falsifying observation §7.4.4.3**: la presenza di **Leonardo investment in FlyingBasket (2024)** [^19] è segnale forte che il gruppo Leonardo/TAS sta consolidando il proprio presidio UAS service Italia. **Implicazione**: la "spazio di mercato" che Firmamento mira a occupare (UAS service Aree Interne) è già in fase di rastrellamento da parte del Tier 1 italiano (TAS-Leonardo via FlyingBasket + Telespazio downstream). Lo scenario "acquisizione difensiva Firmamento entro Y3-Y5" (AUDIT-COMPETITOR-VOLUME-1.md §0, P ~50-70%) è coerente con questa traiettoria di consolidamento già in atto.
+
+---
+
+### 7.4.5 Verdetto Cluster D vs Firmamento — strategia di posizionamento
+
+#### 7.4.5.1 Conclusione cinica
+
+**Il Cluster D è il vero competitor Y1 di Firmamento, non AALTO / Skydweller / EuroHAPS** (questi ultimi sono rischio Y3-Y5 boundary B2). Le ragioni:
+
+1. **Cluster D è qui adesso**: e-GEOS, Planetek, NHazca, FlyingBasket, Aermatica3D sono operativi, fatturano, hanno contratti firmati e rapporti istituzionali consolidati. Sono il **default vendor** della PA italiana per servizi EO/UAS — un newcomer parte dietro di 5-15 anni di track record.
+2. **Cluster D è cash-positive**: Planetek €18-22M revenue 2024 [^17], e-GEOS €68.8M revenue 2023 [^27], Telespazio €701M Group revenue 2023 [^22]. Non sono startup in cerca di break-even — possono permettersi pricing aggressivo difensivo se Firmamento viene percepita come minaccia.
+3. **Cluster D è già nel cap-table dell'incumbent IT**: Telespazio 80% di e-GEOS, Leonardo 67% di Telespazio + investitore 2024 in FlyingBasket. Il gruppo Leonardo presidia 4 dei 7 operatori D commerciali (D1, D4 partial, D7, D8 partial via consorzio). **Il mercato non è frammentato — è consolidato attorno a Leonardo/TAS**.
+4. **Pricing baseline Firmamento è 3-5× sopra benchmark**: §7.8.2 €150k/anno servizio EO Regione vs €30-80k/anno Cluster D. **Non si vince un bando pubblico italiano con prezzo 3-5× più alto** senza un differenziatore non replicabile e dimostrato.
+
+#### 7.4.5.2 Implicazioni per il business case Firmamento
+
+**Non si può competere head-to-head per pricing.** Cluster D ha vantaggi strutturali insuperabili Y1 (economie di scala satellitari + Sentinel free + rapporti consolidati + Leonardo backing). Tre vie strategiche residue:
+
+**A — Differenziazione per persistence + latency + sovranità verticale (UC-001 + UC-002)**
+
+| Asse differenziazione | Vantaggio Firmamento UAS vs Cluster D satellite | Quantificazione |
+|---|---|---|
+| **Persistence** | Volo on-demand + missioni settimanali pianificate vs revisit satellite 5-12 gg | UAV: 1-7 gg latenza acquisizione; Sentinel-1: 6-12 gg; COSMO-SkyMed: 1-3 gg ma costo alto |
+| **Latency delivery** | UAS: minuti-ore (downlink locale); satellite: 1-3 gg processing | Decisivo per UC-002 antincendio (early detection <5 min) |
+| **GSD spaziale** | UAS GSD 5-20 cm; satellite GSD 50 cm-10 m | Decisivo per ispezione strutturale, NON per monitoraggio macro-area |
+| **Sovranità dati IT** | Asset domestico Firmamento vs e-GEOS (Telespazio = Leonardo+Thales FR) | Argomento marginale (e-GEOS è già IT-controlled), residuo solo vs Copernicus FR/DE |
+
+**Verdetto asse A**: difensibile per **UC-002 antincendio** (latency decisivo) e **UC-001 frane in fase di crisi acuta** (persistence sub-day per eventi attivi). Non difensibile per monitoraggio di routine, dove satellite + InSAR vincono per costo/area.
+
+**B — Partnership downstream invece di competition**
+
+| Configurazione | Razionale | Probabilità accettazione partner |
+|---|---|---|
+| **Firmamento operatore UAS + e-GEOS analytics layer** | Firmamento = aerial layer persistente; e-GEOS = EO satellitare + processing; insieme = "complete stack" Regione | M (~30-50%) — e-GEOS può essere recettivo per consolidare presidio Regione Liguria; trade-off: Firmamento subordinata commercialmente |
+| **Firmamento + Planetek Rheticus per InSAR + UAV LIDAR** | Integrazione "InSAR macro + UAV sub-day" per casi UC-001 frane Liguria | M-H (~40-60%) — Planetek ha track record Puglia, espansione Liguria possibile; partnership tecnica naturale |
+| **Firmamento + NHazca per validazione scientifica** | NHazca = lineage accademico Sapienza; Firmamento = operatore. Co-firma su position paper / report tecnici Regione | M (~30-50%) — natura R&D + accademia + commercial blend |
+| **Firmamento + CIRA per Phase B 6B HAPS** | Già flaggato Cap. 7 §7.6.2 e Cap. 6; partnership critica per Phase B | M-H (~40-60%) ma dipendenza forte = single-point-of-failure |
+| **Firmamento + FlyingBasket per BVLOS aree impervie** | FlyingBasket ha LUC + cross-border BVLOS; Firmamento può accederne come operator-of-operator | L-M (~15-30%) — FlyingBasket è Leonardo-backed, conflitto strategico potenziale |
+
+**Verdetto asse B**: partnership con D2 (Planetek) e D3 (NHazca) sono le opzioni più realistiche e meno onerose strategicamente. Partnership con D1 (e-GEOS) e D7 (Telespazio) crea dipendenza dal gruppo Leonardo (rischio RSK-GEO-005). Partnership con D8 (CIRA) è critica ma non sostitutiva (è R&D, non commercial Y1-Y2).
+
+**C — Specializzazione UC dove Cluster D non opera bene**
+
+| UC residuale | Razionale "blue ocean" residuo | Sostenibilità Y1 |
+|---|---|---|
+| **UC-002 antincendio early-detection persistence** | Cluster D non ha asset persistenti regionali; il default è Copernicus EMS post-evento, non early-detection real-time | Sostenibile se Firmamento riesce a dimostrare latency <5 min in campo |
+| **UC-006 SAR persone disperse** | Tipicamente operato da VVF/CC Forestali interno, no servizio commerciale strutturato | Mercato piccolo (€5-30k/event); non scalabile |
+| **UC-008 telemedicina rurale + NTN** | Mercato non presidiato da Cluster D né da Cluster C telco (per gap copertura); ma **Starlink lo divora già** (vedi Cap. 7 §7.4.3 Threat 2) | NON sostenibile come anchor; declassare a opportunistico (azione AUDIT §3 e §10.3) |
+| **UC-005 agricoltura precision cooperative** | Cluster D non target cooperative agricole singole (mercato non scalabile per loro); Topcon/Trimble/AGRIcolus sono i veri competitor | Sostenibile come UC complementare cooperative, NON come anchor revenue |
+
+**Verdetto asse C**: UC-002 antincendio + UC-005 agricoltura cooperative sono le due nicchie residue dove Cluster D non presidia in modo dominante. Sono coerenti con boundary B1 (cooperative) e con strategia Aree Interne. **Devono diventare il cuore del MVP Y1**, non gli UC accessori.
+
+#### 7.4.5.3 Raccomandazione strategica Cluster D
+
+**Riconfigurazione del posizionamento Y1 raccomandata** (input da integrare in Cap. 1 §1.7, Cap. 7 §7.5.1, Cap. 11 §11.2):
+
+1. **Abbandonare la narrativa "Firmamento sostituisce e-GEOS / Planetek nella PA italiana"**: è falsa e non vendibile. Cluster D resterà incumbent.
+2. **Posizionarsi come "operatore UAS persistente complementare a EO satellitare incumbent"**: Firmamento = sub-day persistence + sub-meter GSD + Aree Interne specialized; Cluster D = wide-area + revisit settimanale + analytics consolidato.
+3. **Aprire formalmente trattativa di partnership con Planetek (D2) entro M+6** — è il candidato più realistico per asse B partnership tecnica.
+4. **Aprire formalmente trattativa con CIRA (D8) entro M+6 per Phase B 6B** — non è opzionale, è critico.
+5. **NON aprire trattativa di acquisizione con Telespazio/e-GEOS prima di M+24** — preserva opzionalità (vedi Cap. 11 Threat 1).
+6. **Allineare pricing baseline §7.8.2 a benchmark Cluster D**: ridimensionare canone EO Regione da €150k/anno a **€60-90k/anno base + €30-60k/anno premium per persistence/sovranità**. Revenue Y1 baseline scende da €355-405k a **€220-300k**, ma è realistico e difensibile.
+7. **Monitor Leonardo + FlyingBasket strategy**: il rastrellamento operatori UAS service da parte del gruppo Leonardo è in atto (FlyingBasket investment 2024). Firmamento deve **decidere entro M+12** se posizionarsi come "asset acquisibile da Leonardo a valutazione fair" (exit precoce Y3-Y4) o come "asset indipendente con capital structure resistente". La scelta condiziona tutto il piano Y2-Y3.
+
+> **Falsifying observation §7.4.5**: se al M+12 (i) nessuna trattativa di partnership con Planetek o CIRA è formalizzata, AND (ii) il pricing baseline Firmamento non è stato ridimensionato a benchmark Cluster D, AND (iii) la quota di mercato UAS service Aree Interne Liguria di FlyingBasket/Aermatica3D non è stata profilata empiricamente, allora **il business case Firmamento Cap. 7 va riscritto ex novo** prima del Gate G3. Probabilità materializzazione di tutti e 3 i mancati al M+12: M (~30-40%). Impatto: H.
+
+---
+
+### 7.4.6 Concorrenti VTOL commerciali — Tier 3 per Percorso 6A
+
+Per il Percorso 6A baseline (VTOL pilota), Firmamento **utilizza** piattaforme commerciali (es. JOUAV CW-30E), non concorre con i vendor. I concorrenti **operativi** del Percorso 6A erano stati elencati in modalità sommaria nella versione M+0 del capitolo (ItaliaMeteo, generic UAS commerciali, flotte UAS interne PA). **Questa lista è ora ampiamente superata e riassorbita dalla §7.4.4 Cluster D**, che fornisce profilo dettagliato dei reali competitor operativi italiani (FlyingBasket, Skyrobotic, Aermatica3D, etc.).
+
+Per evitare ridondanza, in questa sezione si riportano solo le categorie che NON sono coperte dal Cluster D:
+
+| Categoria | Soggetti | Posizione vs Firmamento | Minaccia |
+|---|---|---|---|
+| **Flotte UAS interne PA** | Carabinieri Forestali, VVF, Polizia di Stato, Guardia Costiera | Capacità interna PA — clienti potenziali (vendono servizi a Regione), NON concorrenti commerciali | Bassa — anzi, possibile cliente B2G |
+| **Operatori UAS regionali frammentati** | Operatori locali per ispezioni infrastruttura, agro-mapping, eventi | Mercato frammentato + low-margin; tipicamente sotto soglia BVLOS | Bassa — non concorrono su scala SNAI/regionale |
+| **Operatori UAS amatoriali/volontari** | Rescue Drones Network (volontari PC); operatori amatoriali Comuni | Volontariato + supporto PC; non competono commercialmente | Trascurabile — possibile interlocutore institutional |
+
+> **Nota di rinvio**: per il dettaglio dei veri competitor UAS commerciali italiani (FlyingBasket, Skyrobotic, Aermatica3D) si rimanda a §7.4.4 Cluster D.
+
+---
+
+### 7.4.7 Verdetto agente `competitor-intelligence` consolidato (riconfigurato post-audit)
+
+> **Nota di versione**: la versione M+0 del Cap. 7 §7.4 chiudeva con un verdetto sintetico focalizzato su Tier 1 globali (AALTO, Skydweller, EuroHAPS) e su Starlink come sostituto. L'audit avversariale di maggio 2026 ha imposto una **riconfigurazione completa** del verdetto, perché il rischio competitivo Y1 è strutturalmente diverso dal rischio Y3-Y5.
+
+**Gerarchia dei rischi competitivi per orizzonte temporale**:
+
+| Orizzonte | Cluster di rischio prevalente | Razionale |
+|---|---|---|
+| **Y1 (M+0-12) — MVP Pentema** | **Cluster D — Service Incumbent IT** (e-GEOS, Planetek, NHazca, FlyingBasket, Aermatica3D, Telespazio) | Sono i veri competitor per ogni bando B2G regionale Liguria. Pricing 3-5× sotto Firmamento baseline; track record consolidato; rastrellamento Leonardo in atto via FlyingBasket investment 2024 |
+| **Y1-Y2 (M+0-24) — connettività rurale** | **Cluster B — SpaceX Starlink** (sostituto satellite) | Già operativo a Pentema; €40-60/mese consumer + Direct-to-Cell EU 2026-2027. Erode UC-003 + UC-008. Già flaggato §7.4.3 |
+| **Y2-Y3 (M+12-36) — scale-up SNAI multi-regione** | **Cluster A — AALTO HAPS (Airbus)** entry IT via JV Leonardo | Probabilità entry IT 35-50% se Firmamento diventa visibile; cattura mercato HAPS narrativo prima del consolidamento |
+| **Y3-Y5 (M+36-60) — survival standalone** | **Cluster C — TAS-Leonardo** acquisizione difensiva | Probabilità H (55-70%); offerta "fair value" €30-100M; founder out; boundary B2 IT-led morta |
+| **Y4-Y6 (M+48-72) — boundary B2 EU sovereign** | **IRIS² absorbs HAPS** + **Skydweller** + **PHASA-35** | Programma EU sovereign HAPS non si materializza autonomamente; HAPS confinato come "layer accessorio IRIS²" |
+
+**Conclusioni operative consolidate**:
+
+1. **Firmamento NON può competere head-to-head con Cluster D su pricing nel B2G regionale italiano**. Il pricing baseline §7.8.2 (€150k/anno servizio EO Regione) va ridimensionato a €60-90k/anno + premium €30-60k/anno (vedi §7.4.5.3 azione 6).
+
+2. **Firmamento NON può competere head-to-head con Cluster A/C globali su scala HALE perennial**. Mismatch dimensionale 100-1000x già flaggato §7.4.1. Differenziazione su geografia + cooperative + sovranità IT.
+
+3. **Firmamento NON può sostituire Starlink su connettività rurale consumer/PA**. UC-003 + UC-008 declassati a opportunistici (azione AUDIT-QUALITY §1 #5).
+
+4. **L'unica via strategica sostenibile per Y1-Y3 è**:
+   - **(a)** Specializzazione UC-001 frane in fase di crisi + UC-002 antincendio early-detection (asse persistence/latency dove Cluster D satellite non vince)
+   - **(b)** Partnership downstream con Planetek (D2) + NHazca (D3) + CIRA (D8 per Phase B 6B)
+   - **(c)** Anchor cooperative Legacoop come moat di posizionamento (non di prezzo)
+   - **(d)** Capital structure resistente PRIMA del Series A per neutralizzare scenario acquisizione Y3-Y5
+
+5. **Probabilità di successo del piano competitivo Y1-Y3 con riconfigurazione completa**: 25-40% (in linea con AUDIT-QUALITY-VOLUME-1.md §6 P(AND hard conditions) = 5-15% scenario realistico, elevato a 25-40% se action items §3 implementati integralmente).
+
+6. **Probabilità di successo del piano competitivo Y1-Y3 SENZA riconfigurazione (status quo M+0)**: <15% (AUDIT-COMPETITOR-VOLUME-1.md §0 baseline).
+
+> **Falsifying observation §7.4.7**: se al gate G3 M+11 (i) Firmamento non ha riconfigurato pricing §7.8.2 in linea con benchmark Cluster D, AND (ii) non ha aperto trattativa formale di partnership con almeno UN operatore D2/D3/D8, AND (iii) non ha riconosciuto esplicitamente Cluster D come competitor primario Y1 nel pitch verso finanziatori, allora **il verdetto Go Condizionato 6A va declassato a Hold rinforzato** indipendentemente dallo stato delle altre hard conditions C1-C5. Probabilità materializzazione di tutti e 3 i mancati al M+11: M (~30-40%). Impatto: H (verdetto gate compromesso).
 
 ---
 
 ## 7.5 Posizionamento Firmamento Technologies
 
-### 7.5.1 4 pilastri del vantaggio competitivo
+### 7.5.1 4 pilastri del vantaggio competitivo (riconfigurati post-audit Cluster D)
 
-Il posizionamento di Firmamento è giustificato da **4 pilastri di differenziazione difendibile**:
+> **Premessa post-audit**: la versione M+0 di questa sezione presentava i 4 pilastri come "difendibili" senza qualificare il **tipo di competitor** verso cui sono difendibili. L'audit `competitor-intelligence` (Critica C7.6) ha dimostrato che dei 4 pilastri, **solo il modello cooperativo è genuinamente difendibile** vs il vero competitor Y1 (Cluster D). Questa sezione è stata riscritta per riflettere la realtà.
 
-1. **Specializzazione geografica Aree Interne italiane**
-   - Focus esclusivo SNAI Liguria + scale-up SNAI nazionale
-   - Vantaggio "first mover" + reti di rapporti istituzionali consolidate
-   - Difensibile vs Tier 1 globali (Zephyr/Skydweller non sono interessati a micro-mercati regionali)
+Il posizionamento di Firmamento poggia su 4 pilastri, ognuno con **difensibilità differenziata per tipologia di competitor**:
 
-2. **Modello cooperativo Legacoop (boundary condition B1)**
-   - 10 cooperative pilota come utenti + co-progettisti
-   - Community ecosystem → barrier to entry per competitor (no easy replication of cooperative trust)
-   - Allineamento valoriale con PA regionale + SNAI mission
+#### Pilastro 1 — Specializzazione geografica Aree Interne italiane
 
-3. **Sostenibilità + narrativa ESG**
-   - Propulsione 100% solare (HALE) / elettrica (VTOL)
-   - Materiali bio-compositi (fibra di lino) per strutture secondarie
-   - Carbon footprint operativo basso vs alternative satellitari (no detriti spaziali)
-   - Storia narrativa forte per finanziatori ESG-aware (FESR, EIC, ESG-funds)
+- Focus esclusivo SNAI Liguria + scale-up SNAI nazionale
+- Vantaggio "first mover" + reti di rapporti istituzionali consolidate
+- ✅ **Difensibile vs Tier 1 globali** (Zephyr/Skydweller/PHASA-35 non sono interessati a micro-mercati regionali italiani Y1-Y3)
+- ❌ **NON difensibile vs Cluster D italiani** (e-GEOS, Planetek, NHazca, FlyingBasket): questi operatori **sono già in Liguria** o possono entrarvi rapidamente, sono italiani, hanno rapporti consolidati con la stessa PA, e in alcuni casi (e-GEOS, FlyingBasket via Leonardo investment 2024) hanno backing istituzionale forte. La "specializzazione geografica" Firmamento è un argomento marketing, NON un moat strutturale vs Cluster D.
+- **Conclusione onesta**: questo pilastro vale parzialmente. Difensibile vs threat globali; va integrato con partnership Cluster D (vedi §7.4.5) per non essere falsificato.
 
-4. **Approccio incrementale VTOL → MALE → HALE**
-   - Riduzione progressiva del rischio tecnologico (TRL 8-9 commerciale → R&D HALE)
-   - Asset riusabili: ground segment, data governance, brand, competenze, autorizzazioni regolatorie
-   - Capital efficiency superiore vs concorrenti "HAPS-only" (es. Zephyr) che non hanno revenue intermedio
-   - **Falsifying observation**: se il Percorso 6A non genera revenue Y1 ≥ €200k entro M+12, il "ladder" è interrotto e gli investitori per Phase B 6B non sono convinti.
+#### Pilastro 2 — Modello cooperativo Legacoop (boundary condition B1)
+
+- 10 cooperative pilota come utenti + co-progettisti
+- Community ecosystem → barrier to entry per competitor (no easy replication of cooperative trust)
+- Allineamento valoriale con PA regionale + SNAI mission
+- ✅ **Difensibile vs Tier 1 globali**: Airbus/BAE/Boeing non possono raccontare "service cooperativo italiano" credibilmente
+- ✅ **Parzialmente difensibile vs Cluster D italiani**: e-GEOS/Planetek/FlyingBasket non hanno DNA cooperativo, ma **possono fare partnership con Legacoop**: nulla impedisce a Coopfond di accettare un service contract da FlyingBasket se Firmamento fallisce. Il moat è reale ma non legale-vincolante — è una **switching cost soft**.
+- ✅ **Difensibile vs Cluster A/B sostituti**: Starlink non ha rapporto con cooperative SNAI; AALTO neppure
+- **Conclusione onesta**: questo è il **vero pilastro difendibile** del posizionamento Firmamento. Ma per essere un moat strutturale (non soft switching cost) richiede **strutturazione giuridicamente vincolante** (consorzio formale, contratto di rete con esclusive territoriali, regime "preferred provider" con Coopfond). Lavoro non ancora completato al M+3. Action item: governance giuridica cooperative entro M+12.
+
+#### Pilastro 3 — Sostenibilità + narrativa ESG
+
+- Propulsione 100% solare (HALE) / elettrica (VTOL)
+- Materiali bio-compositi (fibra di lino) per strutture secondarie
+- Carbon footprint operativo basso vs alternative satellitari (no detriti spaziali)
+- Storia narrativa forte per finanziatori ESG-aware (FESR, EIC, ESG-funds)
+- ❌ **NON difensibile vs nessun cluster competitor**: AALTO Zephyr è già 100% solare; FlyingBasket è 100% elettrico; e-GEOS opera su satellite Sentinel (nessuna emissione operativa marginale); Starlink dichiara propria roadmap ESG. La sostenibilità è un **commodity narrativa** nel 2026 — non un moat.
+- **Conclusione onesta**: questo pilastro è utile come narrative element verso finanziatori ESG (FESR, EIC, ESG funds), ma **non differenzia Firmamento** vs competitor. È un "must have", non un "nice to have differenziale". Va declassato da "pilastro difensivo" a "narrative requirement".
+
+#### Pilastro 4 — Approccio incrementale VTOL → MALE → HALE
+
+- Riduzione progressiva del rischio tecnologico (TRL 8-9 commerciale → R&D HALE)
+- Asset riusabili: ground segment, data governance, brand, competenze, autorizzazioni regolatorie
+- Capital efficiency superiore vs concorrenti "HAPS-only" (es. Zephyr) che non hanno revenue intermedio
+- ✅ **Difensibile vs Tier 1 HAPS pure-play** (AALTO, Skydweller): hanno revenue zero pre-HAPS operativo, brucianti cash; Firmamento può autoalimentarsi parzialmente da VTOL revenue
+- ❌ **NON difensibile vs Cluster D** (e-GEOS, Planetek, FlyingBasket, Telespazio): questi operatori sono già cash-positive, hanno asset operativi, non hanno bisogno di "incrementare" perché operano già il loro stack core
+- **Falsifying observation**: se il Percorso 6A non genera revenue Y1 ≥ €200k entro M+12, il "ladder" è interrotto e gli investitori per Phase B 6B non sono convinti. **Inoltre**: se il Percorso 6A genera revenue Y1 €200-300k SOLO grazie a partnership con Cluster D (subordinazione), il pilastro 4 diventa "revenue da subfornitura", non "ladder autonomo" — implicazione per valuation Series A.
+
+#### Sintesi pilastri rivisti
+
+| Pilastro | Difensibilità vs Tier 1 globali | Difensibilità vs Cluster D (vero competitor Y1) | Difensibilità vs sostituti (Starlink) |
+|---|---|---|---|
+| 1. Specializzazione geografica | ✅ Alta | ❌ Bassa | n/a |
+| 2. Modello cooperativo Legacoop | ✅ Alta | 🟡 Media (richiede strutturazione giuridica) | ✅ Alta |
+| 3. Sostenibilità + ESG | ❌ Nessuna (commodity) | ❌ Nessuna | ❌ Nessuna |
+| 4. Approccio incrementale VTOL → HALE | ✅ Alta | ❌ Bassa | n/a |
+
+**Conclusione consolidata §7.5.1**: dei 4 pilastri originali, **solo il #2 (cooperativo) è un moat vero vs il competitor reale Y1 (Cluster D)**, e richiede strutturazione giuridica per essere vincolante. I pilastri 1 e 4 funzionano vs threat Y3-Y5 (Tier 1 globali) ma non vs threat Y1 (Cluster D). Il pilastro 3 è narrative, non moat. **Il vantaggio competitivo difendibile reale di Firmamento è quindi 1 pilastro su 4, condizionato a esecuzione governance cooperative.** Questa è l'onesta lettura post-audit.
 
 ### 7.5.2 Linguaggio pubblico e posizionamento sovrano EU
 
@@ -597,6 +795,30 @@ Critica condotta dagli agenti `competitor-intelligence` + `business-model-strate
 [^14]: NASA SE Handbook Rev 2 (NASA/SP-2016-6105 Rev 2). Source: `fonti/NASA04. SysEng Handbook (NASA_SP-2016-6105 Rev 2).md`. Riferimento metodologico §4.1.1.2.4 (ConOps + business case derivation).
 
 [^15]: Skill `business-model-strategist` (`/.claude/agents/business-model-strategist.md`); skill `aerospace-market-analyst` (`/.claude/agents/aerospace-market-analyst.md`); skill `epistemic-rigor` (`/.claude/skills/epistemic-rigor/SKILL.md`); skill `feasibility-study-framework` (`/.claude/skills/feasibility-study-framework/SKILL.md`).
+
+[^16]: e-GEOS S.p.A. — Sources: ASI sito ufficiale (https://www.asi.it/en/the-agency/holdings/affiliated-companies/e-geos-s-p-a/); Telespazio press release "e-GEOS to lead consortium for Copernicus Security Service" (https://www.telespazio.com/en/press-release-detail/-/detail/e-geos-satcen); e-GEOS sito corporate (https://www.e-geos.it/en/). **Confidence: high** sui dati corporate (fonti istituzionali), **medium** sui dettagli contrattuali regionali.
+
+[^17]: Planetek Italia S.r.l. — Sources: Rheticus case study Puglia (https://www.rheticus.eu/it/about/casi-di-studio/monitoraggio-satellitare-per-la-mitigazione-del-rischio-idrogeologico-in-puglia); Planetek progetti monitoraggio corpi idrici Puglia (https://www.planetek.it/progetti/monitoraggio_dei_corpi_idrici_sotterranei_della_puglia); OpenCoesione PA tracciato Planetek (https://opencoesione.gov.it/it/dati/soggetti/planetek-italia-srl-04555490723-2/); Fatturato Italia bilancio 2024 €18-22M revenue (https://www.fatturatoitalia.it/planetek_italia_srl_04555490723). **Confidence: high** (fonti corporate + opencoesione PA).
+
+[^18]: NHazca S.r.l. — Sources: NHazca corporate (https://www.nhazca.com/en/); NHazca interferometria sito tecnico (http://www.interferometria.it/); Ingenio profilo azienda (https://www.ingenio-web.it/articoli/aziende/nhazca-srl/). Spin-off Sapienza 2009; founder Mazzanti, Bozzano, Scarascia Mugnozza. **Confidence: high** (fonti corporate verificate).
+
+[^19]: FlyingBasket S.r.l. — Sources: FlyingBasket corporate (https://flyingbasket.com/); Dronewatch Europe "FlyingBasket secures Italy's first LUC" (https://www.dronewatch.eu/flyingbasket-secures-italys-first-light-uas-operator-certificate/); Startmag "FlyingBasket conti e business azienda partecipata Leonardo" (https://www.startmag.it/smartcity/flyingbasket-ecco-conti-e-business-dellazienda-di-droni-partecipata-da-leonardo/); Quadricottero News droni cargo pilot rifugi alpini (https://www.dronezine.it/457350/droni-cargo-in-quota-in-italia-in-alto-adige-il-primo-progetto-pilota-per-rifornire-i-rifugi-alpini/). **Confidence: high** (fonti corporate + stampa specializzata). Investimento Leonardo 2024 confermato.
+
+[^20]: Skyrobotic S.p.A. — Sources: Skyrobotic corporate (http://www.skyrobotic.com/company/?lang=it); Italeaf Group (http://www.italeaf.com/?p=5476&lang=it); Specchio Economico intervista Michele Feroli (https://www.specchioeconomico.com/speciali/2163-speciale-droni-michele-feroli-skyrobotic-anche-sotto-i-25-chili-i-droni-aiutano-molto-i-professionisti). **Confidence: medium-high**.
+
+[^21]: Aermatica3D S.r.l. — Sources: Aermatica corporate (https://www.aermatica.com/); LinkedIn profilo (https://it.linkedin.com/company/aermatica3d). Prima ENAC autorizzazione scenari critici industriali e urbani. **Confidence: high** (fonti corporate dichiarate).
+
+[^22]: Telespazio S.p.A. — Sources: Telespazio corporate Italia (https://www.telespazio.com/en/italy); Fatturato Italia bilancio 2024 €317.8M revenue + Gruppo €701M revenue 2023 (https://www.fatturatoitalia.it/telespazio_spa-01366520284); AIAD aziende federate (https://aiad.it/aziende-federate/telespazio-2025/?lang=en). **Confidence: high** (fonti pubbliche corporate + ufficio camerale).
+
+[^23]: CIRA — Centro Italiano Ricerche Aerospaziali. Sources: CIRA corporate (https://www.cira.it/); Wikipedia CIRA (https://it.wikipedia.org/wiki/Centro_italiano_ricerche_aerospaziali); EREA membership (https://erea.org/members/cira/); AIAD federate (https://aiad.it/aziende-federate/cira-centro-italiano-ricerche-aerospaziali-2024/?lang=en). Già citato Cap. 6 come partner R&D HAPS. **Confidence: high** (fonti istituzionali).
+
+[^24]: Portali pubblici appalti italiani — MEPA Consip (https://www.sosmepa.it/public/rdo-valore.htm); InfoGareWeb banca dati appalti (https://infogareweb.it/); Appalti Liguria (https://appaltiliguria.regione.liguria.it/); Trasparenza AMAT Milano esempio RDO drone monitoring (https://trasparenza.amat-mi.it/archivio11_bandi-gare-e-contratti_0_1061331_876_1.html); Regione Abruzzo acquisto droni MEPA (https://www.regione.abruzzo.it/content/impegno-di-spesa-acquisto-attraverso-il-mepa-di-n-5-droni-dji-movic-e-accessori-necessari-il). **Confidence: low-medium** sui pricing dedotti (gare campione non sistematiche).
+
+[^25]: e-GEOS Copernicus EMS 4° rinnovo €36M 2023-2029 — Sources: SpaceEconomy 360 "Emergency Management Service e-Geos resta alla guida" (https://www.spaceconomy360.it/competenze-e-lavoro/emergency-management-service-e-geos-resta-alla-guida-del-consorzio-ue/); ANSA "e-GEOS confermata alla guida servizi emergenza satellitare" (https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2023/03/08/e-geos-confermata-alla-guida-di-servizi-emergenza-satellitare_2c022f0e-0350-4be1-b24c-2358955ee390.html); SpaceNews "Italy's e-Geos Wins Contract For Copernicus Imagery" (https://spacenews.com/italys-e-geos-wins-contract-for-copernicus-imagery/). **Confidence: high** (multiple sources triangulate).
+
+[^26]: e-GEOS contratto PC Lazio (2021+) — Sources: Telespazio press release "Emergency response: e-GEOS will supply satellite maps to Civil Protection Department of Lazio Region" (https://www.telespazio.com/en/news-and-stories-detail/-/detail/emergency-e-geos-lazio); SpacEconomy 360 (https://www.spaceconomy360.it/software-e-applicazioni/mappe-satellitari-a-servizio-delle-emergenze-e-geos-in-campo-per-la-protezione-civile-del-lazio/); Italicom (https://www.italicom.net/primo-piano/e-geos-fornira-mappe-satellitari-alla-protezione-civile-della-regione-lazio/). Valore contratto NON disclosed pubblicamente — stima €100-300k/anno dedotta da scala servizio. **Confidence: medium** (esistenza contratto verificata; pricing dedotto).
+
+[^27]: e-GEOS S.p.A. bilancio fatturato 2023 €68.85M revenue — Sources: ReportAziende (https://www.reportaziende.it/egeos_spa_mt_01032180778); Fatturato Italia (https://m.fatturatoitalia.it/e_geos_spa-01032180778); Ufficio Camerale (https://www.ufficiocamerale.it/8093/e-geos-spa). Net profit 2023 €1.61M. **Confidence: high** (fonti ufficio camerale).
 
 ---
 

@@ -683,9 +683,181 @@ L'agente `regulatory-adversary` ha condotto stress-test del presente capitolo. S
 
 ---
 
+## 5.16 Showstopper Regolatori Aggiuntivi (post-Audit Regulatory Adversary M+3)
+
+> **Inserimento post-audit M+3**: l'audit `regulatory-adversary` (vedi `AUDIT-REGULATORY-VOLUME-1.md` §10) ha identificato **15 showstopper regolatori non coperti** dalle sezioni precedenti del Cap. 5. Sono qui formalizzati con riferimento normativo, impatto sul progetto, e mitigazione raccomandata. Tutti vanno aggiunti al Risk Register Vol. 2 Allegato A.2 con score P×I dedicato.
+
+### 5.16.1 AI Act (Reg. UE 2024/1689) — sistemi onboard biometrici
+
+- **Riferimento**: Reg. (UE) 2024/1689 — Artificial Intelligence Act, in vigore dal 1° agosto 2024, applicazione progressiva 2025-2027
+- **Impatto progetto**: il payload IR LWIR + processing onboard per **antincendio / SAR (Search And Rescue) / sorveglianza territoriale** può rientrare nella categoria "alto rischio" (Annex III §1 biometria, §5 law enforcement) o "rischio inaccettabile" se identificazione biometrica remota real-time in spazi pubblici (art. 5)
+- **Probabilità**: M (40-55%) — dipende dall'interpretazione dei sistemi IR di crisis detection
+- **Mitigazione**: privacy by design hardware (blur on-board obbligatorio); esclusione esplicita di riconoscimento biometrico dal scope; engagement Garante + AGID per pre-clearance
+- **Falsifying observation**: se al M+6 Garante o AgID classificano i sistemi IR onboard come "alto rischio AI Act", obbligo di conformity assessment + registrazione UE prima delle operazioni
+
+### 5.16.2 EUSPA (EU Space Programme Agency)
+
+- **Riferimento**: Reg. (UE) 2021/696 (EU Space Programme), EUSPA mandato dal 2021
+- **Impatto progetto**: EUSPA gestisce Galileo, EGNOS, Copernicus downstream, **GOVSATCOM (governmental satcom services)**. HAPS-related services downstream possono incrociare la sua competenza per (a) accesso a EUSAT / GOVSATCOM, (b) co-finanziamenti, (c) accreditation servizi spaziali
+- **Probabilità impatto**: M (30-45%) — più rilevante per Fase 4-5 (consorzio EU)
+- **Mitigazione**: engagement EUSPA via CASSINI accelerator + workshop downstream services; mapping intersezione HAPS / GOVSATCOM
+- **Falsifying observation**: se EUSPA emette guideline che escludono HAPS dai servizi spaziali downstream EU, accesso a fondi e accreditation EU ridotto
+
+### 5.16.3 EUROCONTROL — coordinamento ATM-ANS HAPS spazio aereo europeo
+
+- **Riferimento**: EUROCONTROL Convention 1960 + Reg. UE 2017/373 (ATM/ANS) + Network Manager Functions
+- **Impatto progetto**: Phase B+C 6B HALE operazioni stratosferiche perennial richiedono **coordinamento Network Manager EUROCONTROL** per FL195+ in spazio aereo europeo. Non solo ENAV (nazionale)
+- **Probabilità**: H (65-80%) per Fase 3+
+- **Mitigazione**: engagement EUROCONTROL precocemente (Y2-Y3), partecipazione a workshop UAM/HAPS Network Manager
+- **Falsifying observation**: se EUROCONTROL non rilascia procedure operative per HAPS perennial entro Y4-Y5, operatività cross-border bloccata
+
+### 5.16.4 Part-IS EASA (Information Security) — Reg. UE 2023/203
+
+- **Riferimento**: Reg. (UE) 2023/203 — Part-IS Information Security per organizzazioni aeronautiche; applicazione obbligatoria da febbraio 2026
+- **Impatto progetto**: Firmamento come operatore UAS deve istituire un **Information Security Management System (ISMS)** conforme Part-IS, con CISO + audit + procedure documentate; vincolante prima di operazioni commerciali continuative
+- **Probabilità**: H (75-85%) — applicabile dal 2026
+- **Mitigazione**: assunzione CISO entro M+6; ISMS implementazione entro M+9
+- **Falsifying observation**: se ENAC, in audit Part-IS, rileva non-conformità sostanziali, operazioni sospese fino a remediation
+
+### 5.16.5 Codice Penale art. 432-bis — sicurezza traffico aereo
+
+- **Riferimento**: Codice Penale art. 432-bis (Attentati alla sicurezza dei trasporti aerei) + reati colposi connessi (art. 449)
+- **Impatto progetto**: in caso di incidente UAS BVLOS con conseguenze (anche solo near-miss vs aviazione manned), **responsabilità penale del PIC (Pilot in Command)** e dell'organizzazione (D.Lgs. 231/2001 modello organizzativo)
+- **Probabilità incidente**: L-M (10-25%) ma impatto reputazionale + finanziario H
+- **Mitigazione**: assicurazione RC + casco BVLOS adeguata (≥ €5M); D.Lgs. 231 compliance + modello organizzativo; SOPs rigorosi
+- **Falsifying observation**: se incidente con conseguenza penale a Y1-Y2, intero modello operativo a rischio
+
+### 5.16.6 AgID / PSN — Polo Strategico Nazionale per hosting dati PA
+
+- **Riferimento**: D.L. 76/2020 (Semplificazioni) art. 33 + Determinazione AgID 307/2022 + Strategia Cloud Italia 2022-2026
+- **Impatto progetto**: i dati EO acquisiti per conto della PA italiana (Regione, PC, Comune) **devono essere ospitati in cloud qualificato PSN** o in cloud "certificato AgID" per livelli di criticità medio/alto
+- **Probabilità**: H (70-85%) per contratti PA pluriennali
+- **Mitigazione**: scelta provider PSN-qualified (TIM Enterprise, Polo PSN, CDP Cloud Polo Strategico) o cloud "qualificato AgID" (Aruba, Engineering, Reply, Almaviva); audit AgID compliance
+- **Falsifying observation**: se al M+9 dati Pentema sono stoccati in cloud non-PSN-qualified, contratti PA rifiutati
+
+### 5.16.7 ATEX (Reg. UE 2014/34) — batterie LiS storage e atmosfere esplosive
+
+- **Riferimento**: Direttiva 2014/34/UE (Equipment in Explosive Atmospheres — ATEX) + D.Lgs. 81/2008 Titolo XI
+- **Impatto progetto**: storage e ricarica di batterie ad alta densità (LiS, Li-ion) in hangar Pentema → potenziale atmosfera esplosiva in caso di thermal runaway; classificazione zona ATEX + procedure obbligatorie
+- **Probabilità**: M (40-60%) per Phase B 6B con batterie ad alta densità
+- **Mitigazione**: hangar dedicato con ventilazione anti-esplosione; procedure ATEX; formazione operatori; assicurazione adeguata
+- **Falsifying observation**: se ASL / VVF in ispezione classificano hangar come "zona 1 ATEX" senza protezioni adeguate, sospensione attività
+
+### 5.16.8 RoHS (Direttiva 2011/65/UE) — sostanze pericolose in componenti elettronici
+
+- **Riferimento**: Direttiva 2011/65/UE (Restriction of Hazardous Substances) + Direttiva 2017/2102 (Aggiornamento RoHS 3)
+- **Impatto progetto**: componenti elettronici importati (incluse alcune avioniche cinesi JOUAV) **devono essere RoHS-compliant** per uso commerciale UE; non solo aerospace exemption
+- **Probabilità**: M (30-50%) — molti componenti commerciali sono già compliant
+- **Mitigazione**: verifica Declaration of Conformity (DoC) di ogni componente in BoM; audit RoHS pre-deployment
+- **Falsifying observation**: se componente critico non-RoHS, sostituzione obbligatoria con impatto CapEx + schedule
+
+### 5.16.9 Codice della Navigazione (R.D. 327/1942) + diritti di sorvolo
+
+- **Riferimento**: Codice Navigazione art. 793 (sorvolo bassa quota), art. 794 (sorvolo aree militari/sensibili); D.Lgs. 96/2005
+- **Impatto progetto**: voli BVLOS a bassa quota (≤ 500 m AGL) su proprietà private possono richiedere **autorizzazione proprietari** o concessione amministrativa; aree militari sensibili (es. base Aronia, base militare interna) → divieto
+- **Probabilità**: L-M (15-30%) per Pentema (area rurale, pochi proprietari)
+- **Mitigazione**: mappa aree militari/sensibili Liguria; consenso proprietari grandi appezzamenti; NOTAM coordinato
+- **Falsifying observation**: contestazione legale da proprietari → sospensione missioni in attesa di accordo
+
+### 5.16.10 Affidamento PA — vincoli Codice Contratti art. 50 + art. 124
+
+- **Riferimento**: D.Lgs. 36/2023 art. 50 (procedure ordinarie) + art. 124 (procedure semplificate) + art. 137 (affidamento diretto)
+- **Impatto progetto**: contratti PA con Firmamento possono richiedere **gara pubblica** se importo > soglie (€140k per servizi, salvo deroghe); affidamento diretto solo sotto soglia o per urgenza documentata
+- **Probabilità**: H (70-85%) per contratti pluriennali Regione
+- **Mitigazione**: pre-engagement Regione + accordo quadro (art. 59 D.Lgs.36); partnership Coopfond come veicolo non-gara (su determinati ambiti); accordi di programma SNAI
+- **Falsifying observation**: contratto pluriennale €300k con Regione bocciato in fase amministrativa per mancanza di gara → rinvio M+6-12
+
+### 5.16.11 Insurance BVLOS — Reg. UE 285/2004 + DM 25/02/2022
+
+- **Riferimento**: Reg. (UE) 285/2004 (assicurazione obbligatoria operatori aerei) + DM Trasporti 25/02/2022 (massimali UAS)
+- **Impatto progetto**: massimale assicurativo minimo per UAS BVLOS in Specific Category SAIL III ≈ **750.000 DSP (~€900k)**; per Certified Category ≥ €1.5M; premio annuo €15-50k stimato
+- **Probabilità**: H (impatto OpEx)
+- **Mitigazione**: tender assicurativo con broker specializzato aviation (Marsh, Aon, Willis Italia); copertura RC + casco + cyber + privacy
+- **Falsifying observation**: se nessun assicuratore aviation offre copertura BVLOS Pentema a costi sostenibili (>€100k/anno), modello operativo finanziariamente non sostenibile
+
+### 5.16.12 NIS2 operativo — D.Lgs. 138/2024 — termine registrazione gennaio 2025
+
+- **Riferimento**: già citato in §5.7.1; aggiunta operativa: **termine registrazione presso ACN** era gennaio 2025
+- **Impatto progetto**: Firmamento appena classificata "soggetto importante / essenziale" deve registrarsi entro 30 giorni dalla qualifica; sanzioni amministrative fino €10M / 2% fatturato
+- **Probabilità**: H (75%) appena operativa
+- **Mitigazione**: registrazione preventiva ACN + ISMS Part-IS (vedi §5.16.4)
+- **Falsifying observation**: omessa registrazione + incidente cyber = sanzione + reputazione
+
+### 5.16.13 Galileo PRS (Public Regulated Service) — se uso GNSS sicuro
+
+- **Riferimento**: Decisione (UE) 2011/740 + Decreto MEF 6/12/2021 (organizzazione PRS Italia)
+- **Impatto progetto**: per HAPS in operazioni dual-use civile-difesa (out-of-scope Studio attuale ma su tavolo Phase B 6B), accesso a **Galileo PRS** (signal anti-spoofing crittografato) richiede autorizzazione **CASD / Difesa**
+- **Probabilità**: L (5-15%) Y1; M (30-45%) Phase B 6B se dual-use
+- **Mitigazione**: per Y1 utilizzare GNSS standard L1/L5 + Galileo open service + anti-spoofing software-based; engagement CASD solo se dual-use Fase 3+
+
+### 5.16.14 Direttiva Macchine (Reg. UE 2023/1230) — UAS come prodotto industriale
+
+- **Riferimento**: Reg. (UE) 2023/1230 (Machinery Regulation, sostituisce Dir. 2006/42/CE; applicazione 20 gennaio 2027)
+- **Impatto progetto**: ground equipment + GS + carrelli movimentazione UAS = "macchine" → marcatura CE Direttiva Macchine + Declaration of Conformity
+- **Probabilità**: H (60-75%) per Phase B 6B con ground equipment custom
+- **Mitigazione**: design CE-compliant fin dalla fase concept; collaborazione con ente notificato
+
+### 5.16.15 ENAV operational coordination FL400+ — procedure dedicate
+
+- **Riferimento**: Reg. UE 2017/373 (ATM/ANS) + ENAV procedure pubblicate AIP Italy
+- **Impatto progetto**: HALE perennial sopra **FL400** (12 km) e specialmente FL650 (20 km) richiede **procedure ENAV ad hoc** per ascesa/discesa attraverso spazio aereo controllato; NOTAM dedicato + slot temporali
+- **Probabilità**: H (70-85%) per Phase B 6B
+- **Mitigazione**: engagement ENAV precoce (Y2); contributo a definizione procedure standard EUROCONTROL; testing in spazio aereo segregato (es. Sardinia, Apulia GATB)
+- **Falsifying observation**: se ENAV declina procedure dedicate per HAPS perennial entro Y4, operatività italiana 6B bloccata
+
+### 5.16.16 Tabella sintesi 15 showstopper aggiuntivi
+
+| ID | Showstopper | Probabilità | Impatto | Score | Fase | Mitigation owner |
+|---|---|---|---|---|---|---|
+| RSK-REG-016 | AI Act sistemi biometrici onboard | M (40-55%) | M-H | 10-13 | Y1+ | data-privacy-counsel |
+| RSK-REG-017 | EUSPA accreditation downstream | M (30-45%) | M | 6-9 | Y3+ | sovereign-strategist |
+| RSK-REG-018 | EUROCONTROL HAPS coordination | H (65-80%) | H | 15-20 | Y3+ | avionics-gnc-engineer |
+| RSK-REG-019 | Part-IS EASA Information Security | H (75-85%) | H | 15-20 | Y0+ (urgente) | aviation-regulatory + CISO new |
+| RSK-REG-020 | Penale 432-bis (incidente BVLOS) | L-M (10-25%) | H | 6-15 | Y1+ | aviation-regulatory + ops |
+| RSK-REG-021 | AgID/PSN hosting dati PA | H (70-85%) | M-H | 12-17 | Y1+ | data-privacy + IT |
+| RSK-REG-022 | ATEX batterie | M (40-60%) | M | 8-12 | Y0+ | propulsion-engineer + safety |
+| RSK-REG-023 | RoHS componenti | M (30-50%) | L-M | 4-8 | Y1 | systems-engineer |
+| RSK-REG-024 | Codice Navigazione sorvolo proprietà | L-M (15-30%) | M | 3-9 | Y1+ | regulatory + community |
+| RSK-REG-025 | Affidamento PA art. 50 D.Lgs.36 | H (70-85%) | M-H | 12-17 | Y0+ | snai-funding + legal |
+| RSK-REG-026 | Insurance BVLOS sostenibilità | H | M | 12 | Y0+ | financial-cfo |
+| RSK-REG-027 | NIS2 registrazione operativa | H (75%) | M-H | 12-17 | Y0+ (immediato) | CISO new |
+| RSK-REG-028 | Galileo PRS dual-use | L (5-15%) Y1, M (30-45%) Y3+ | M | 3-9 | Y3+ | sovereign-strategist + CASD |
+| RSK-REG-029 | Direttiva Macchine UAS+GS | H (60-75%) | M | 9-12 | Y3+ | systems-engineer |
+| RSK-REG-030 | ENAV procedure FL400+ | H (70-85%) | H | 15-20 | Y3+ | avionics + sovereign-strategist |
+
+**Impatto aggregato**: 15 nuovi RSK-REG-XXX da aggiungere al Risk Register. **5 con score H (15-20)** = showstopper effettivi: Part-IS, EUROCONTROL, AgID/PSN, Affidamento PA art.50, ENAV FL400+.
+
+**Implicazione operativa per il verdetto Cap. 10**: il verdetto "Go Condizionato 6A" presupponeva l'assenza di showstopper regolatori aggiuntivi. Con questi 15 aggiunti, il verdetto realistico è **"Hold con piano regolatorio rafforzato"** come scenario base (vedi Cap. 10 §10.3.2 caveat probabilistico aggiornato).
+
+---
+
+## 5.17 Aggiornamento Engagement Plan (post 15 showstopper)
+
+L'engagement plan §5.11.3 va esteso con:
+
+| Autorità aggiuntiva | Trigger | Frequenza | Owner |
+|---|---|---|---|
+| **AgID** (Agenzia per l'Italia Digitale) | Hosting dati PA cloud PSN-qualified | Annuale | data-privacy + IT |
+| **AGID + Garante** insieme | AI Act sistemi biometrici | Annuale | data-privacy + sovereign |
+| **EUROCONTROL** Network Manager | HAPS coordination procedures EU | Semestrale | avionics-gnc |
+| **EUSPA** Bruxelles | Downstream services accreditation | Annuale | sovereign-strategist |
+| **CASD / Difesa** | Galileo PRS dual-use (Phase B+) | Annuale (Y3+) | sovereign-strategist |
+| **ASL / VVF** locale Liguria | ATEX hangar + safety operativa | Annuale | safety + ops |
+| **Ente certificazione Direttiva Macchine** (TÜV, IMQ, Bureau Veritas) | CE marking GS + carrelli | Una tantum Y2-Y3 | systems-engineer |
+| **Broker assicurativi aviation** (Marsh, Aon, Willis) | RC + casco + cyber BVLOS | Annuale | financial-cfo |
+
+**Risorse FTE addizionali necessarie**:
+- **CISO** (Chief Information Security Officer) — full-time per Part-IS + NIS2 + cyber audit
+- **DPO** (Data Protection Officer) — part-time/full-time per GDPR + AgID + AI Act
+- **Head of Regulatory Affairs** — full-time per coordinamento autorità multiple
+
+Costo aggregato stimato Y1: **+€450-800k OpEx** (3 FTE qualificati). **Non incluso** nei budget Cap. 8 originali → da aggiungere come fixed cost obbligatorio per Y1.
+
+---
+
 ## 5.15 Note di chiusura del capitolo
 
-Il presente capitolo è una **bozza M+3** redatta sulla base delle fonti normative autoritative aggiornate al settembre 2025 (EASA ED Decision 2025/018/R). Le fonti scaricate coprono tutti i regolamenti UE e italiani necessari per la base regolatoria del progetto.
+Il presente capitolo è una **bozza M+3 + aggiornamento post-audit M+3** redatta sulla base delle fonti normative autoritative aggiornate al settembre 2025 (EASA ED Decision 2025/018/R), estesa con 15 showstopper regolatori aggiuntivi identificati dall'audit `regulatory-adversary`. Le fonti scaricate coprono i regolamenti UE e italiani principali necessari per la base regolatoria del progetto.
 
 **Debito di rigore residuo per il Cap. 5** (vedi `riferimenti/audit-rigore-epistemico.md`):
 - ☐ DR-004 — ENAC SAIL stima per Pentema (pre-application meeting)

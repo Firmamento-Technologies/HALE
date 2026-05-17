@@ -29,8 +29,9 @@ Il presente capitolo descrive la **roadmap post-fattibilità** del progetto Firm
 4. **Fase 3 (M+36 → M+72)** è la fase **R&D-intensiva**: HALE prototipo full-scale, primo volo stratosferico dimostrativo, engagement EASA Special Condition, Series A-B €5-15M. Capital intensity cumulato €15-50M.
 5. **Fase 4 (M+72 → M+96)** richiede **finanziamento sovrano**: costellazione iniziale 3-10 HAPS italiani, primo bando EDF HAPS, Series B-C €30-100M. Capital intensity cumulato €100-500M.
 6. **Fase 5 (M+96 → M+120)** è il **posizionamento EU sovereign**: consorzio EU stratospheric layer, 10-30 HAPS in cluster italiano + partner FR/DE/ES, esit strategico. Capital intensity onesta scenari "small fleet" €500M-2B vs **"EU sovereign full scale" €10-30B**, condizionata all'apertura di un programma equivalente IRIS² da parte della Commissione UE.
+7. **Scenario alternativo B2-relaxed (§11.6bis)** — riconosciuto esplicitamente: se al Y4-Y6 le pre-condizioni esterne (EASA RMT HAPS, programma EU sovereign, Series C €50M+, geopolitica EU) non si concretizzano, la traiettoria operativa Y10 ridimensiona la Fase 5 a **"Standalone IT Operator Small Fleet"** (5-10 HAPS + 10-20 VTOL/MALE, ARR €30-80M, capital intensity €500M-1.5B, probabilità 30-50%). Questo scenario **non è fallimento**: è un esito di successo dimensionato alle condizioni esterne reali, con la Fase 5 full "consorzio EU" mantenuta come **option di lungo termine**, non come unico esito accettabile.
 
-**Verdetto Cap. 11**: la roadmap **non è un commitment vincolante** sulle Fasi 3-5, è un **vettore strategico coerente** che attribuisce significato alle decisioni del gate M+10 e fornisce un quadro per i gate futuri. Gli **showstopper noti** delle Fasi 3-5 sono dichiarati esplicitamente e legati a **falsifying observations** verificabili.
+**Verdetto Cap. 11**: la roadmap **non è un commitment vincolante** sulle Fasi 3-5, è un **vettore strategico coerente** che attribuisce significato alle decisioni del gate M+10 e fornisce un quadro per i gate futuri. Gli **showstopper noti** delle Fasi 3-5 sono dichiarati esplicitamente e legati a **falsifying observations** verificabili. Lo scenario **B2-relaxed (§11.6bis)** è la rete di sicurezza strategica della boundary B2, non la sua negazione.
 
 ---
 
@@ -92,6 +93,10 @@ In particolare, il capitolo **eredita senza modifiche** dalla visione:
 - Il modello service-only (boundary B1) per ogni fase
 - L'obiettivo finale "EU sovereign stratospheric layer" (boundary B2)
 - Il caveat di **capital intensity onesta**: range "small fleet" €500M-2B vs scala "EU sovereign full scale" €10-30B
+
+Il capitolo **aggiunge** rispetto al documento `visione-10-anni.md`:
+
+- Una **operazionalizzazione esplicita dello scenario "small fleet"** in chiave **B2-relaxed "Standalone IT Operator"** (§11.6bis), con trigger di attivazione, KPI Y10, capital intensity €500M-1.5B, distribuzione di probabilità degli esiti Y10 e calibrazione del messaggio esterno. Questa estensione recepisce la raccomandazione `AUDIT-QUALITY-VOLUME-1.md` §2 Cap. 11 (gap "manca scenario B2-relaxed") e preserva l'integrità della boundary B2 come **target aspirazionale** + **option di lungo termine**.
 
 ### 11.1.4 Vincoli e dipendenze esterne
 
@@ -518,6 +523,146 @@ Decisione exit deferita a gate M+96 (entrata Fase 5).
 
 ---
 
+## 11.6bis Scenario B2-relaxed: "Standalone IT Operator Small Fleet" (Y10 alternative)
+
+> **Stato verdetto Cap. 11**: scenario **alternativo riconosciuto esplicitamente** — non è verdetto del gate, è esito operativo Y10 attivato dal verificarsi dei trigger esterni descritti in §11.6bis.2.
+> **Riferimenti**: §11.6 Fase 5 baseline; `riferimenti/visione-10-anni.md` §4 "small fleet"; `riferimenti/RESERVED-rischi-geopolitici.md` RSK-GEO-001/004; `studio-di-fattibilita/AUDIT-QUALITY-VOLUME-1.md` §2 (raccomandazione fix Cap. 11).
+> **Confidence pianificazione scenario**: **medium** (più realistico di Fase 5 full).
+> **Confidence numerica ARR Y10 €30-80M**: **medium-low** (extrapolation, no triangulation indipendente).
+> **Confidence probabilità scenari Y10**: **low** (judgment progetto, base rate aerospace).
+
+### 11.6bis.1 Razionale dello scenario
+
+L'audit avversariale ha identificato (`AUDIT-QUALITY-VOLUME-1.md` §2 Cap. 11) un'omissione strutturale del capitolo: la roadmap descrive con cura le Fasi 1-5 e dichiara onestamente la confidence speculative della Fase 5, ma **non articola lo scenario alternativo realistico** in cui le pre-condizioni esterne della Fase 5 non si verificano. La probabilità marginale di successo Fase 5 in autonomia è stimata **~6-15%** (stratificazione dipendenze multiple, vedi §11.9 + base rate "aerospace startup → €100M+ ARR in 10 anni" inferiore al 5% — cfr. McKinsey 2023 "Space economy report"; AIAD 2025 dati ricavi medi startup aerospace italiana).
+
+In assenza di uno scenario B2-relaxed esplicitato, il Cap. 11 corre due rischi:
+1. **Rischio narrativo asimmetrico**: presentare la Fase 5 full come "il successo" e tutto il resto come "fallimento implicito", inducendo a sovrastimare la probabilità di traiettorie estreme (95% fallimento totale + 5% successo totale).
+2. **Rischio strategico di pianificazione**: in assenza di articolazione del Plan B credibile, Firmamento rischierebbe di rifiutare opzioni operative razionali (es. consolidamento standalone IT) come "non in linea con la visione", quando invece queste sono **esiti di successo dimensionati al contesto**.
+
+Lo scenario **B2-relaxed** corregge questa asimmetria. Esso preserva la **boundary B2 originale** (visione "EU sovereign stratospheric layer / complementare a IRIS²") come **target aspirazionale di lungo termine**, ma riconosce che la traiettoria intermedia Y10 più probabile può essere una versione "standalone Italia" dello stesso modello, da cui è possibile rilanciare la traiettoria EU full in finestra Y10-Y15 quando/se le pre-condizioni maturano.
+
+### 11.6bis.2 Trigger di attivazione dello scenario B2-relaxed
+
+La transizione dalla traiettoria "Fase 5 full" alla traiettoria "B2-relaxed standalone IT" è attivata **non da una decisione interna**, ma dal **verificarsi (anche parziale)** di uno o più dei seguenti **trigger esterni osservabili**, monitorati a ogni gate post-Studio:
+
+| Trigger ID | Trigger osservabile | Finestra di osservazione | Severità | Effetto su traiettoria |
+|---|---|---|---|---|
+| **TRG-B2R-01** | EASA RMT HAPS non aperto formalmente (no NPA Special Condition pubblicato) | M+48 → M+60 (Y4-Y5) | **Critical** | Impossibile certificazione perennial Y6+ → no Fase 4 commerciale → flotta operativa standalone IT con framework Special Condition nazionale (ENAC LRA / Special Limited Cat) |
+| **TRG-B2R-02** | Commissione UE non lancia programma equivalente IRIS² stratospheric entro M+60-72 | M+60 → M+72 (Y5-Y6) | **Critical** | Fase 5 full non finanziabile → scenario "Small fleet" `visione-10-anni.md` §4 attivato |
+| **TRG-B2R-03** | Capital raise Series C €50M+ non chiuso entro M+84-96 | M+84 → M+96 (Y7-Y8) | **High** | Crescita flotta limitata a quanto auto-finanziabile da ARR + grant + EIB venture debt — no scalabilità EU |
+| **TRG-B2R-04** | Acquisition offer non-strategic da Tier 1 globale (Airbus, Boeing, Lockheed) **rifiutata** dal board Firmamento | M+48 → M+72 (Y4-Y6) | **High** | Firmamento opta per continuity standalone IT — preserva autonomia ma rinuncia a velocità di scala internazionale |
+| **TRG-B2R-05** | Geopolitica EU-US deteriora con consortium-mandate restrittivi (es. restrizioni export ITAR/EAR su HAPS dual-use, blocco partnership FR/DE su Air Combat sovereign) | M+36 → M+96 (Y3-Y8) | **Medium-High** | Consorzio EU 5-stati non costruibile → fallback IT standalone con eventuali bilaterali (IT-FR Trattato del Quirinale; IT-DE estensione) |
+| **TRG-B2R-06** | Tech batterie Li-S / Solid-State Li non raggiungono target ≥ 350 Wh/kg pack aerospace-qualified entro M+72 (Y6) | M+60 → M+72 (Y5-Y6) | **Critical** | Energy balance HALE inverno non chiuso → flotta perennial italiana limitata a 5-10 piattaforme operative nelle finestre stagionali favorevoli (no scala EU 100+ HAPS) |
+
+> **Logica di attivazione**: il verificarsi di **almeno 2 trigger su 6** (peso Critical doppio, High singolo) entro la finestra di osservazione corrispondente attiva la **revisione formale del Cap. 11 al gate successivo**, con riposizionamento della traiettoria Fase 5 full → B2-relaxed. La decisione formale spetta al board su raccomandazione di CEO + CFO + sovereign-infrastructure-strategist.
+>
+> **Falsifying observation di attivazione (FO-F11-07, nuovo)**: se al M+72 (Y6) si verificano **≥ 3 trigger** tra TRG-B2R-01/02/06 (i 3 Critical), lo scenario B2-relaxed è **traiettoria operativa di default**, e B2 full diventa **option di lungo termine** (rilancio Y10-Y15 se condizioni esterne maturano). Confidence falsificabilità: **high**.
+
+### 11.6bis.3 Caratteristiche operative Y10 nello scenario B2-relaxed
+
+| Dimensione | Configurazione B2-relaxed Y10 | Note |
+|---|---|---|
+| **Flotta HAPS perennial** | 5-10 piattaforme operative | Operate nelle finestre stagionali primavera-estate-autunno; ridotta operatività invernale (limitata energy balance senza batterie 350 Wh/kg) |
+| **Flotta VTOL/MALE** | 10-20 piattaforme service-only | Operatività continuativa 12 mesi/anno; replacement asset Y6-Y10 |
+| **Geografia operativa** | Italia (10-12 regioni SNAI + utility nazionale) | No copertura EU multi-paese; possibili estensioni mirate (es. canali Adriatico tramite accordi bilaterali) |
+| **Clienti primari** | PA regionale + nazionale + cooperative + utility (Enel, Snam, RFI, Terna ispezione infrastrutture lineari) | Modello B2G + B2B2C; servizi sovrani secure su scala IT |
+| **Modello business** | Service-only (boundary B1 mantenuto integralmente) | Cooperative Legacoop preservate come anchor + delivery partner |
+| **Personnel** | ~80-150 FTE (range medio 110) | Mix: 35-45% engineering, 20-25% operations, 15-20% commerciale + delivery, 15-20% G&A; presenza Liguria + Roma + presenza minima Bruxelles |
+| **Capital structure** | Maggioranza italiana stabile; CDP Venture / EIB / Italian sovereign fund (es. Fondo Italiano Aerospazio AIAD) come anchor; eventuale partecipazione strategic IT (TAS-Leonardo minoranza) sotto Golden Power | No Series mega (€100M+); rounds dimensionati a esigenze operative |
+| **Capital intensity totale 10y** | **€500M - €1.5B** (mediana ~€800M-1B) | Vs **€10-30B** scenario Fase 5 full EU sovereign |
+
+**Rationale capital intensity €500M-1.5B**: stima preliminare bottom-up: 5-10 HAPS × €15-30M unit cost (perennial qualified, scala manifatturiera bassa) = €75-300M flotta HAPS + 10-20 VTOL/MALE × €1-3M = €10-60M flotta VTOL + €30-80M ground segment (4-6 GCS regionali + spettro + datacenter) + €15-40M R&D HALE cumulato + €30-100M OpEx cumulato Y1-Y10 + €100-300M contingency + replacement = range **€260M-880M centrale, €500M-1.5B con cushion sovereign + golden share preview**. Confidence: **low** (extrapolation), da rifinire in Volume 2 modello finanziario.
+
+> **Confronto con scenario "Small fleet" di `visione-10-anni.md` §4** (€500M-2B): coerente, con range ridimensionato verso il basso (€500M-1.5B) per riflettere geografia limitata a IT + assenza componente "EU sovereign program" addizionale.
+
+### 11.6bis.4 KPI scenario B2-relaxed (target Y10)
+
+| KPI | Target B2-relaxed Y10 | Confidence | Verificabilità |
+|---|---|---|---|
+| **ARR Y10** | €30-80M (target mediano €50M) | **medium-low** | Verificabile da bilanci certificati Y10 |
+| **EBITDA margin Y10** | 20-35% (target 27%) | **medium-low** | Bilanci Y10 certificati |
+| **Numero clienti pluriennali Y10** | 15-30 (PA regionale 10-15 + nazionale 2-4 + utility 3-7) | **medium** | Contratti pluriennali cumulati Y6-Y10 |
+| **Numero HAPS perennial operativi** | 5-10 (Italia, finestre stagionali primaria) | **medium** | Flight log + ENAC LRA reports |
+| **Numero VTOL/MALE operativi** | 10-20 | **high** | Asset register |
+| **Numero coperture territoriali SNAI** | 30-50 aree interne servite (≥ 10 regioni IT) | **medium** | Reportistica SNAI + Regioni |
+| **FTE** | 80-150 | **medium** | HR records |
+| **Exit options Y10** | (a) IPO segmento STAR €100-300M valuation; (b) Strategic exit a CDP/EIB sovereign; (c) Continuity privata con dividend distribution | **low** | Decisione board Y9-Y10 contestuale |
+
+**KPI di salute strategica scenario B2-relaxed** (oltre i KPI finanziari):
+- Riconoscimento Firmamento come **operatore di riferimento IT** per servizi UAS infrastrutturali (~30% market share IT B2G + ~15-25% market share IT utility ispezione lineare entro Y10);
+- Mantenimento **cooperative Legacoop** come delivery + workforce partner (boundary B1 preservata);
+- **Position paper "Italian Stratospheric Sovereignty"** pubblicato e riconosciuto da MIMIT / ASI come reference document, anche in assenza di Fase 5 full;
+- **Option preservata** per rilancio EU consortium in finestra Y10-Y15 se condizioni esterne maturano (board mantiene opzionalità).
+
+### 11.6bis.5 Confronto onesto B2 full vs B2-relaxed
+
+| Dimensione | B2 full (consorzio EU) | B2-relaxed (standalone IT) |
+|---|---|---|
+| **Orizzonte temporale** | Y8-Y10 attivazione Fase 5 | Y6-Y10 consolidamento traiettoria IT |
+| **Capital intensity 10y** | **€10-30B** (programma EU IRIS²-equivalent) | **€500M-1.5B** (mix equity IT + grant + sovereign) |
+| **Probabilità di successo (Y10)** | **6-15%** | **30-50%** |
+| **ARR Y10** | €100-500M | €30-80M |
+| **Flotta HAPS perennial Y10** | 10-30 (cluster EU) → fino 100+ scala full | 5-10 (cluster Italia) |
+| **Geografia operativa Y10** | EU multi-paese (IT lead + FR/DE/ES) | Italia + bilaterali mirati |
+| **Personnel Y10** | 150-500 FTE | 80-150 FTE |
+| **Capital structure** | Maggioranza IT + golden share + co-investment EU sovereign + private mega-rounds | Maggioranza IT + CDP/EIB/Italian sovereign fund |
+| **Strategic posture** | Co-fondatore EU sovereign stratospheric layer | Operatore IT specializzato di riferimento |
+| **Exit Y10** | IPO con strong valuation (€500M-2B) o strategic con golden share preserved | IPO segmento STAR (€100-300M) o continuity privata o strategic exit a sovereign IT |
+| **Boundary B2 originale** | Pieno (target aspirativo realizzato) | **Ridimensionato** (Italia, non EU) — boundary B2 mantenuta come option di lungo termine |
+| **Coerenza con boundary B1** | Piena (service-only + cooperative) | Piena (service-only + cooperative) |
+| **Confidence pianificazione** | **speculative** (dipendenze esterne strutturali) | **medium** (esecuzione largamente sotto controllo Firmamento + Italia) |
+
+### 11.6bis.6 Distribuzione di probabilità degli esiti Y10 (consolidata)
+
+Stima consolidata della distribuzione degli **esiti possibili al Y10**, condizionata al verdetto target Cap. 10 (Go Condizionato Fase 1 + Hold preparato Fase 3):
+
+| Esito Y10 | Probabilità stimata | Confidence stima | Trigger osservabili |
+|---|---|---|---|
+| **B2 full — Consorzio EU sovereign Fase 5 operativo** | **6-15%** | **low** | Tutti i 5 vincoli esterni §11.1.4 soddisfatti + esecuzione disciplinata; programma EU multi-miliardario attivato |
+| **B2-relaxed — Standalone IT Operator Small Fleet** | **30-50%** | **low-medium** | Esecuzione disciplinata Fasi 1-3 + ≥ 1 trigger §11.6bis.2 attivato + sovereign IT funding accessibile |
+| **Acquisizione difensiva da TAS-Leonardo / Tier 1 globale (finestra Y3-Y5)** | **50-70%** condizionata al **non** soddisfacimento di RSK-GEO-005 mitigation | **medium** | Capital structure non resistente OR offerta strategica + board ratification + condizioni di mercato VC sfavorevoli |
+| **Dissoluzione Y3-Y5 per esaurimento cash (no Series A o B chiuso)** | **20-30%** | **medium** | Series A non chiuso entro M+36 OR Series B non chiuso entro M+60 + ARR < €2M Y3 + grant non vinte |
+
+> **Nota metodologica sulla somma delle probabilità**: le probabilità sopra **non sono mutuamente esclusive** in tutti i casi. Es. uno scenario di "dissoluzione" esclude tutti gli altri; "acquisizione difensiva" è esclusiva degli scenari B2; B2 full e B2-relaxed sono **sequenziali alternativi** condizionati ai trigger §11.6bis.2. Una rappresentazione decision-tree formale è oggetto di analisi nel **Volume 2 Risk Register §RSK-STRAT** (in lavorazione).
+>
+> **Implicazione probabilistica chiave**: lo scenario **modale (più probabile singolo)** è acquisizione difensiva, lo scenario **target di gestione attiva** è B2-relaxed, lo scenario **vettore aspirazionale** è B2 full. La gestione strategica Firmamento deve attivamente **mitigare scenario "acquisizione difensiva"** (vedi RSK-GEO-005 in `RESERVED-rischi-geopolitici.md`) e **costruire infrastruttura per B2-relaxed** come base credibile, mantenendo B2 full come **option di lungo termine** attivabile.
+
+### 11.6bis.7 Implicazione strategica e calibrazione del messaggio esterno
+
+Il riconoscimento esplicito dello scenario B2-relaxed **non modifica** il vettore strategico B2 originale dichiarato nelle boundary conditions (`CLAUDE.md` + `visione-10-anni.md`): la visione "EU sovereign stratospheric layer / complementare a IRIS²" rimane **target aspirativo** e **disciplina pubblica del linguaggio**.
+
+Lo Studio di Fattibilità **deve tuttavia** integrare le seguenti calibrazioni operative:
+
+1. **Calibrazione finanziaria (Cap. 8)**: il modello finanziario deve includere **scenario B2-relaxed** come **caso base operativo Y6-Y10** (ARR €30-80M, EBITDA 20-35%, capital intensity €500M-1.5B), non come "fallback negativo". Lo scenario B2 full è caso **upside** con probabilità dichiarata 6-15%.
+2. **Calibrazione pricing (Cap. 7)**: il pricing dei servizi PA + utility deve essere **sostenibile in scala IT standalone** (no riferimento implicito a "EU sovereign full scale economies"). Pricing target PA €100-200k/anno regione + utility €0.5-2M/anno per linea-servizio coerente con scala B2-relaxed.
+3. **Calibrazione partnership (§11.6.3 + §11.9.4)**: la matrice partnership EU 5-stati è vincolata alla traiettoria B2 full. Per B2-relaxed, la matrice si riduce a (a) IT core: TAS-Leonardo / CIRA / ASI / MIMIT, (b) bilaterali mirati IT-FR (Trattato del Quirinale stratospheric annex) e IT-DE (estensione MoU TAS Italia-DE), (c) ESA come bridge istituzionale. Niente consorzio formale 5-stati nello scenario B2-relaxed.
+4. **Comunicazione esterna calibrata**: il messaging pubblico deve evolvere da "alternativa Starlink europea inevitabile" (linguaggio interno scartato) verso "**Standalone IT operator + future option EU consortium**", posizione **difendibile e onesta** verso:
+   - **Investitori VC + sovereign IT**: scenario base B2-relaxed è investment-grade (ARR €30-80M, multipli sostenibili); B2 full è option upside non promessa.
+   - **Coopfond / Legacoop**: scenario B2-relaxed preserva integralmente boundary B1 (modello cooperativo) e ARR sufficiente a sostenere quote partnership stabili.
+   - **MIMIT / Presidenza Consiglio (Golden Power)**: scenario B2-relaxed è coerente con politica industriale "campioni italiani aerospazio" (vedi AIAD priorità 2025-2030) anche in assenza di programma EU sovereign HAPS.
+   - **Commissione UE (DG CNECT/DEFIS)**: posizionamento Firmamento come "Italian readiness for EU stratospheric layer when programma matures" — Firmamento non chiede sussidio EU per giustificare la propria esistenza; offre asset IT pronto per scaling EU futuro.
+5. **Calibrazione documento riservato**: aggiornare `RESERVED-rischi-geopolitici.md` con la riconoscenza che lo scenario B2-relaxed **riduce significativamente l'esposizione** a RSK-GEO-001 (frizione USA) e RSK-GEO-003 (export restrictions su HAPS dual-use), perché Firmamento standalone IT è meno "rilevante geopoliticamente" rispetto a un consorzio EU sovereign formale.
+
+### 11.6bis.8 Falsifying observations dello scenario B2-relaxed
+
+- **FO-F11-07 (nuova)**: se al **M+72 (Y6)** Firmamento è **single-player IT con ARR < €15M** e **zero traction in consortium EU formale** (no MoU bilaterale FR/DE/ES firmato, no risposta a EDF HAPS call), **lo scenario B2-relaxed è la traiettoria operativa di default**, e **B2 full diventa "blue sky aspiration"** sospesa. Confidence falsificabilità: **high**. Trigger osservabile: bilanci certificati Y5-Y6 + register di MoU/contratti EU.
+- **FO-F11-08 (nuova)**: se al **M+96 (Y8)** ARR Y8 < €15M **e** flotta HAPS perennial < 3 operative in finestre stagionali primarie, **lo scenario B2-relaxed stesso è in difficoltà**: la traiettoria operativa converge verso "operatore VTOL/MALE service-only IT specializzato" (no HAPS perennial) — scenario residuale **non coperto** dalla boundary B2 originale, da rivedere con board come **strategic pivot** o **continuity privata small-scale**. Confidence falsificabilità: **high**.
+
+> **Nota onesta**: nessuna delle due falsifying observations sopra implica "fallimento del progetto Firmamento". Implicano semplicemente che la traiettoria operativa effettiva **diverge dal vettore strategico aspirazionale B2 full** e si stabilizza su una scala operativa **inferiore** ma **ancora coerente** con modello service-only + cooperative + value creation territoriale italiana. Il rigore epistemico richiede di **chiamare le cose con il loro nome**: B2-relaxed è successo dimensionato, non fallimento dimensionato.
+
+### 11.6bis.9 Verdetto del paragrafo
+
+Lo scenario **B2-relaxed "Standalone IT Operator Small Fleet"** è:
+- **Strategicamente onesto** — riconosce la distribuzione di probabilità reale degli esiti Y10 senza diluire la boundary B2 originale.
+- **Operativamente attivabile** — i trigger §11.6bis.2 sono osservabili a gate intermedi M+48/M+60/M+72/M+96.
+- **Finanziariamente difendibile** — ARR €30-80M / EBITDA 20-35% / capital intensity €500M-1.5B è investment-grade per VC sovereign IT + CDP + EIB anchor.
+- **Coerente con boundary B1 + B2** — service-only + cooperative preservati; B2 mantenuta come option lungo termine.
+- **Comunicabile esternamente** — il framing "standalone IT operator + future option EU consortium" è la posizione **più difendibile** vs investitori, MIMIT, Commissione UE e USA (vedi §11.6bis.7).
+
+Il presente paragrafo §11.6bis **non modifica** il verdetto target Cap. 10 (Go Condizionato Fase 1 + Hold preparato Fase 3) né il vettore B2 originale. **Aggiunge** una rete di sicurezza strategica esplicita che migliora la qualità decisionale del board a tutti i gate post-Studio.
+
+---
+
 ## 11.7 Gate decisionali post-Studio
 
 Sintesi dei gate decisionali della roadmap (in coerenza con NASA SE Handbook §6.7 Phase B-F e con Cap. 9 cronoprogramma):
@@ -693,6 +838,8 @@ Critica condotta dagli agenti `sovereign-infrastructure-strategist` + `business-
 | OQ-F11-008 | Scenario "EU sovereign full scale €10-30B" realizzabile, ridimensionato o abbandonato? | CEO + sovereign + CFO | Decisione M+48-60 (gate Fase 3) |
 | OQ-F11-009 | Exit strategy preferita (IPO / sovereign consolidation / strategic) confermata? | Board | Gate M+96 (entrata Fase 5) |
 | OQ-F11-010 | Posizionamento Firmamento in IRIS² consortium (DG CNECT / DEFIS) formalizzato? | sovereign strategist | M+24-48 |
+| OQ-F11-011 | Trigger §11.6bis.2 attivati: scenario B2-relaxed attivato come traiettoria di default? | CEO + CFO + sovereign | Decisione M+72-84 (post gate Fase 4 conditional) |
+| OQ-F11-012 | Modello finanziario Cap. 8 + pricing Cap. 7 aggiornati con scenario B2-relaxed come caso base operativo Y6-Y10? | CFO | M+9 (pre-gate Studio M+10) |
 
 ---
 
@@ -738,11 +885,19 @@ Critica condotta dagli agenti `sovereign-infrastructure-strategist` + `business-
 
 [^20]: Briefing iniziale progetto: `da revisionare/Briefing_ Progetto Piattaforma Aerea per le Aree Interne.md`. Verdetto preliminare Percorso 6A GO Condizionato + Percorso 6B HOLD / Go Condizionato Estremo, coerente con presente capitolo.
 
+[^21]: `studio-di-fattibilita/AUDIT-QUALITY-VOLUME-1.md` — audit di qualità consolidato Volume 1 (sintesi 4 sorgenti audit: rigore epistemico, Red Team, competitor, regulatory). §2 Cap. 11 raccomanda esplicitamente l'aggiunta di scenario B2-relaxed "operatore IT standalone €30-80M ARR Y10, no consorzio EU" che il presente §11.6bis recepisce. **Confidence: high** (audit interno multi-fonte). Vedi anche §10 raccomandazioni pre-gate G3.
+
+[^22]: AIAD (Federazione Aziende Italiane per l'Aerospazio, Difesa e Sicurezza) — dati di settore aerospazio italiano. Ricavi medi aerospace IT 2023-2024 + priorità politica industriale 2025-2030 (campioni italiani). **Confidence: medium** (dati di settore associativi, da triangulare con MIMIT + ISTAT R&D aerospace per Volume 2). Riferimento per benchmark scala B2-relaxed "operatore IT specializzato di riferimento" §11.6bis.3.
+
+[^23]: Eurospace — European Space Industry Association, "Facts & Figures" annual report. Dati comparativi industria spazio EU vs USA, capital intensity programmi sovrani EU. **Confidence: medium-high** (associazione settore EU consolidata). Riferimento per benchmark capital intensity scenario B2 full vs B2-relaxed §11.6bis.5.
+
+[^24]: CDP (Cassa Depositi e Prestiti) — investimenti aerospazio italiano via CDP Venture / Fondo Italiano Aerospazio. Pubblicazioni 2024-2025 su politica investimento sovereign IT in aerospazio. **Confidence: medium** (pubblicazioni istituzionali parziali; dettaglio per Volume 2). Riferimento per anchor investor scenario B2-relaxed §11.6bis.3.
+
 ---
 
 ## 11.13 Note di chiusura del capitolo
 
-Il Cap. 11 è **bozza M+3** della Roadmap Post-Fattibilità. È coerente con:
+Il Cap. 11 è **bozza M+3** della Roadmap Post-Fattibilità (rev. **M+3.1** post-integrazione §11.6bis Scenario B2-relaxed da raccomandazione audit). È coerente con:
 
 - `riferimenti/visione-10-anni.md` (5 fasi temporali, ARR target, capital intensity, dipendenze esterne, boundary conditions B1/B2)
 - Cap. 3 (criteri gate M+10/M+11)
@@ -750,6 +905,7 @@ Il Cap. 11 è **bozza M+3** della Roadmap Post-Fattibilità. È coerente con:
 - Cap. 7 (segmentazione, MVP, scale-up roadmap §7.10)
 - ENAC AAM Roadmap 2021-2030 (struttura metodologica 3 waves)
 - NASA SE Handbook §6.7 Phase B-F lifecycle
+- `studio-di-fattibilita/AUDIT-QUALITY-VOLUME-1.md` §2 e §10 (recepimento raccomandazione "aggiungi scenario B2-relaxed Cap. 11" via §11.6bis)
 
 **Debolezze principali dichiarate onestamente:**
 
@@ -758,6 +914,7 @@ Il Cap. 11 è **bozza M+3** della Roadmap Post-Fattibilità. È coerente con:
 3. **Showstopper noti** dichiarati per ogni fase con falsifying observations verificabili
 4. **Linguaggio pubblico vincolato**: "complementare IRIS²", **mai** "alternativa Starlink" — disciplina obbligatoria coerente con `RESERVED-rischi-geopolitici.md` RSK-GEO-001
 5. **Boundary conditions B1+B2 preservate**: service-only + cooperative Legacoop in tutte le fasi; obiettivo EU sovereign mantenuto come vettore strategico indipendentemente dalla magnitudine finanziaria
+6. **Scenario B2-relaxed esplicitato (§11.6bis)**: riconoscimento onesto che la traiettoria Y10 più probabile (oltre acquisizione difensiva e dissoluzione) è "Standalone IT Operator Small Fleet" con ARR €30-80M, non Fase 5 full €100-500M. B2 full diventa option upside; B2-relaxed è caso base operativo gestibile.
 
 **Falsifying observations chiave del Cap. 11** (in coerenza con la skill `epistemic-rigor` Regola 1):
 
@@ -767,25 +924,29 @@ Il Cap. 11 è **bozza M+3** della Roadmap Post-Fattibilità. È coerente con:
 - **FO-F11-04**: se al M+60 EASA Special Condition HAPS non adopted → Fase 4 commerciale bloccata, roadmap "demonstrative only"
 - **FO-F11-05**: se al M+48 programma EU sovereign HAPS (analog IRIS²) non aperto → scenario "EU sovereign full scale" non finanziabile, Fase 5 ridimensionata a "small fleet"
 - **FO-F11-06**: se Leonardo/TAS attivano acquisizione difensiva pre-M+72 → traiettoria indipendente compromessa, decisione "merge or exit" obbligatoria
+- **FO-F11-07 (§11.6bis)**: se al M+72 Firmamento è single-player IT con ARR < €15M e zero traction in consortium EU formale → scenario B2-relaxed è traiettoria operativa di default; B2 full diventa blue sky aspiration
+- **FO-F11-08 (§11.6bis)**: se al M+96 ARR Y8 < €15M e flotta HAPS perennial < 3 operative → scenario B2-relaxed stesso in difficoltà; convergenza verso operatore VTOL/MALE service-only IT specializzato (strategic pivot da deliberare)
 
 **Prossimi step richiesti** (in ordine di criticità):
 
 1. Aggiornamento Cap. 11 dopo gate M+12 (verdetto MVP Y1)
-2. Position paper "Italian Stratospheric Sovereignty" pubblicato entro M+12-18
+2. Position paper "Italian Stratospheric Sovereignty" pubblicato entro M+12-18 — framing **"Standalone IT operator + future option EU consortium"** (vedi §11.6bis.7)
 3. Setup capital structure dual-class + golden share entro M+24 (pre-Series A)
 4. Engagement preventivo Dipartimento Coordinamento Politiche Economiche entro M+18
 5. Decisione esplicita TAS-Leonardo cooperation framework entro M+24-36
-6. Monitoring trimestrale dipendenze esterne (§11.9) con report a Board
+6. Monitoring trimestrale dipendenze esterne (§11.9) **+ trigger §11.6bis.2 (TRG-B2R-01/06)** con report a Board
+7. Aggiornamento Cap. 7 (pricing) + Cap. 8 (modello finanziario) per integrare **scenario B2-relaxed come caso base operativo Y6-Y10** entro M+9 (pre-gate Studio M+10)
 
 **Versionamento Cap. 11**:
-- v0.5 (M+3, presente capitolo): baseline coerente con visione 10 anni + tutti i capitoli redatti (Cap. 3, 5, 7)
+- v0.5 (M+3, baseline): coerente con visione 10 anni + tutti i capitoli redatti (Cap. 3, 5, 7)
+- v0.5.1 (M+3, presente revisione): integrazione §11.6bis Scenario B2-relaxed "Standalone IT Operator Small Fleet" da raccomandazione `AUDIT-QUALITY-VOLUME-1.md` §2 Cap. 11; aggiornamento §11.0 Sintesi, §11.1.3 Relazione con visione, §11.11 OQ-F11-011/012, §11.13 closing notes con FO-F11-07/08 nuove
 - v0.7 (M+6): post-engagement DG CNECT/DEFIS + EASA + Bruxelles
 - v0.9 (M+9): post-LoI Regione + ratificazione boundary conditions
 - v1.0 (M+10): congelato per gate Studio Fattibilità
 - aggiornamenti successivi: post ogni gate (M+12, M+24, M+36, etc.)
 
-Il capitolo è chiuso al M+3 con verdetto Red Team **OK con 6 action items**.
+Il capitolo è chiuso al M+3 con verdetto Red Team **OK con 6 action items** + integrazione M+3.1 dello scenario B2-relaxed che recepisce raccomandazione audit di qualità.
 
 ---
 
-> **Disclaimer epistemico finale**: la roadmap presentata in questo capitolo è **vettore strategico onesto**, non promessa di esecuzione lineare. La probabilità che il vettore venga eseguito esattamente come descritto è bassa (base rate aerospace startup: ~10% per Y8 ARR €10M+). La probabilità che venga eseguito **almeno fino a Fase 2-3** con esito commerciale è realistica con esecuzione disciplinata. Le decisioni del gate M+10/M+11 riguardano **solo Fase 1 + preparazione Fase 3** — il resto è coerenza vettoriale, non commitment.
+> **Disclaimer epistemico finale**: la roadmap presentata in questo capitolo è **vettore strategico onesto**, non promessa di esecuzione lineare. La probabilità che il vettore venga eseguito esattamente come descritto (Fase 5 full "EU sovereign consorzio") è **bassa (6-15%)** (base rate aerospace startup: ~10% per Y8 ARR €10M+; vedi §11.6bis.6 per distribuzione probabilità degli esiti Y10). La probabilità che venga eseguito **almeno fino a Fase 2-3** con esito commerciale è realistica con esecuzione disciplinata. **Lo scenario B2-relaxed "Standalone IT Operator" (§11.6bis) è esito di successo dimensionato a probabilità 30-50%** — non fallimento, ma stabilizzazione operativa coerente con boundary B1+B2 a scala IT. Le decisioni del gate M+10/M+11 riguardano **solo Fase 1 + preparazione Fase 3** — il resto è coerenza vettoriale, non commitment.

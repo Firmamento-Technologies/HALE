@@ -26,7 +26,7 @@ La metodologia adottata è il **NASA Systems Engineering Handbook Rev 2** [^1] �
 
 Output del capitolo:
 - **N° 17 Stakeholder Needs (StNeeds)** consolidati, espressi in forma di "vogliamo che..."
-- **N° 42 System Requirements (SyR)** misurabili, categorizzati in 7 famiglie
+- **N° 42 System Requirements (SyR)** misurabili, categorizzati in 7 famiglie, **+ N° 14 Negative Requirements (NegR)** di tipo "shall not" (vincoli di disegno dichiarati come boundary del sistema, cf. §3.5.8)
 - **N° ~80 Subsystem Requirements (SsR)** decomposti su 6 sottosistemi (sample rappresentativo nel capitolo, lista completa in Vol. 2 Allegato A.1)
 - **RTM v0.5** baseline (cf. §3.8)
 - **Criteri Go/No-Go** quantitativi per il gate M+10 (cf. §3.2)
@@ -484,6 +484,183 @@ I 42 SyR baseline sono categorizzati in **7 famiglie**. Riportiamo nel capitolo 
 
 ---
 
+### 3.5.8 Negative Requirements (NegR) — vincoli di disegno "shall not"
+
+#### Introduzione
+
+I **Negative Requirements** (NegR) sono requisiti espressi in forma negativa — "il sistema **NON** deve fare X" — e dichiarano vincoli di disegno che restringono lo spazio delle soluzioni ammissibili. Sono **complementari** ai SyR positivi delle famiglie F/P/O/S/E/C/Cost (§3.5.1-3.5.7), che invece descrivono **cosa il sistema deve fare**. La letteratura sistemistica (NASA SE Handbook §4.2.2 + INCOSE GtWR Rule R47 "Avoid Negative Requirements") raccomanda di limitare il numero dei NegR e di esplicitarne la verifica, perché un requisito formulato in negativo è intrinsecamente più difficile da testare di un requisito positivo: si verifica per **assenza** del comportamento proibito, tipicamente tramite **Inspection** (process audit, contract review, BoM check) anziché Test.
+
+L'introduzione di una sezione NegR nel PFTE risponde alla critica del Red Team (vedi §3.11, Critica 5: "i 17 StNeeds non includono need negativi") e ha tre funzioni nello Studio di Fattibilità HALE/VTOL: (i) rendere **espliciti** vincoli che altrimenti rimarrebbero impliciti nelle boundary conditions (B1 service-only + B2 EU sovereign stratospheric layer), creando agganci tracciabili nella RTM; (ii) ridurre il **rischio reputazionale e regolatorio** dichiarando *a priori* ciò che il sistema **non** farà (es. niente dual-use offensivo, niente cloud US default, niente linguaggio "alternativa Starlink"); (iii) fornire **falsifying observations** chiare — un NegR è violato se si osserva il comportamento proibito, e tale osservazione costituisce evento di re-baseline. Lo status di ciascun NegR nella RTM è uno dei tre seguenti: **Active** (vincolo vivo e monitorato), **Waived** (vincolo sospeso con razionale documentato e approvazione gate), **Reviewed** (vincolo confermato all'ultimo audit semestrale).
+
+#### Tassonomia in 5 famiglie
+
+I 14 NegR baseline sono organizzati in 5 famiglie, ciascuna con prefisso identificativo univoco:
+
+- **NegR-B** — Business / Modello (vincoli derivanti da boundary B1 service-only + cooperative Legacoop)
+- **NegR-Geo** — Sovranità / Geopolitica (vincoli derivanti da `RESERVED-rischi-geopolitici.md` e da boundary B2)
+- **NegR-Reg** — Compliance regolatoria (vincoli derivanti da GDPR, NIS2, AI Act, ENAC/EASA, ITU/AGCOM)
+- **NegR-Tech** — Architettura tecnica (vincoli su componentistica, fornitori, supply chain)
+- **NegR-Mkt** — Comunicazione / Posizionamento pubblico (vincoli su messaging, claim pubblici)
+
+#### Lista completa dei 14 Negative Requirements
+
+##### Famiglia NegR-B — Business / Modello
+
+> **NegR-B-001** — Il sistema **NON** deve essere venduto come prodotto/asset agli utenti pilota o a terzi: la piattaforma HALE/VTOL è erogata esclusivamente come **servizio ricorrente** (DaaS, IaaS, canone, capacity wholesale).
+> **Rationale:** boundary condition B1 (service-only + cooperative Legacoop). La vendita di velivoli trasformerebbe Firmamento in OEM aeronautico, richiedendo Type Certificate proprio (EASA Part 21J/G), capitale OEM-grade (>€50M), e snaturando il modello equivalente Starlink/operatore.
+> **Parent:** Boundary B1 (CLAUDE.md) + StNeed-015 + SyR-Cost-004 | **Verification:** Contract clause review (audit semestrale dei contratti con cooperative + PA) | **Status:** Active | **Confidence:** boundary | **Falsifying observation:** firma di un contratto di vendita asset (anche prototipale, anche a 1 cliente) → re-baseline immediato del business model + revisione boundary conditions in Cap. 1.
+
+> **NegR-B-002** — Il sistema **NON** deve essere offerto come servizio retail B2C (vendita diretta a consumatori finali individuali, abbonamenti residenziali, app store).
+> **Rationale:** boundary B1 + scelta strategica di servizio wholesale (B2B/B2G) verso cooperative aggregatrici + PA. Modello retail richiederebbe customer care 24/7, billing residenziale, marketing mass-market, fuori scope e fuori capability di Firmamento.
+> **Parent:** Boundary B1 + visione 10 anni (`riferimenti/visione-10-anni.md`) | **Verification:** Inspection del listino + audit dei canali commerciali | **Status:** Active | **Confidence:** high | **Falsifying observation:** apertura di un canale e-commerce o app store con abbonamenti individuali → violazione modello.
+
+> **NegR-B-003** — Il sistema **NON** deve concorrere direttamente in scala assoluta con i Tier 1 HAPS internazionali (Airbus Zephyr, AALTO HAPS Sunglider, Aerovironment Sceye) nel medesimo segmento e mercato.
+> **Rationale:** asimmetria di capitale e maturità tecnologica. La strategia è di **occupare nicchie regolatorie italiane** (cooperative Legacoop, SNAI, anchor PA Liguria) e contribuire come **nodo italiano** a un futuro consorzio EU, non confrontarsi head-to-head su scala globale.
+> **Parent:** Cap. 7 §7.4 (competitor analysis) + Boundary B2 | **Verification:** Process audit annuale del positioning competitivo | **Status:** Active | **Confidence:** high | **Falsifying observation:** lancio di bid su tender internazionale in head-to-head con Zephyr/Sunglider (es. NATO ISR contract) senza partner Tier 1 di copertura.
+
+##### Famiglia NegR-Geo — Sovranità / Geopolitica
+
+> **NegR-Geo-001** — Il sistema **NON** deve utilizzare cloud statunitense (AWS, Azure, GCP, Oracle US regions) come **default** per lo stoccaggio e processamento di imagery EO, dati C2, telemetria operativa, dati personali UE.
+> **Rationale:** sovranità dati UE (GDPR Art. 44-50 trasferimenti extra-UE + Schrems II + Data Act 2024). Cloud hosting di default deve essere Italia/EU sovrano (Aruba, OVH, IONOS, GAIA-X compliant). Eccezione ammessa solo con: (i) accordo specifico documentato, (ii) DPIA approvata, (iii) DR esplicito nel risk register.
+> **Parent:** StNeed-014 + SyR-C-003 + SsR-GS-002 + `RESERVED-rischi-geopolitici.md` | **Verification:** Inspection del provider cloud (contratti SaaS/IaaS + datasheet datacenter location) — audit semestrale | **Status:** Active | **Confidence:** high | **Falsifying observation:** imagery EO o dati personali UE stoccati in datacenter US senza accordo specifico documentato e DPIA approvata → violazione GDPR + NIS2 + boundary sovranità.
+
+> **NegR-Geo-002** — Il sistema **NON** deve sviluppare *capability dual-use militare offensiva* (armamento, weapon-mount integration, payload kinetic, mission planning per targeting militare letale).
+> **Rationale:** scope dichiarato in Cap. 5 §5.7.2 (operatore civile di servizi essenziali, ISR difensivo è ammesso solo per dual-use *difensivo*, NATO DIANA conditional). Capability offensive richiederebbero classification militare, autorizzazione MAECI export-control, governance non compatibile con modello cooperativo Legacoop + bando civile Coopfond.
+> **Parent:** Boundary B1 (cooperative civile) + Cap. 5.7.2 §10.7 + `RESERVED-rischi-geopolitici.md` | **Verification:** Process audit del payload roadmap + contratti commerciali (clausola "no offensive capability") + Cap. 4 Scope review | **Status:** Active | **Confidence:** high | **Falsifying observation:** firma di un contratto/PoC per integrazione di payload kinetic/armamento/targeting militare letale → re-baseline immediato governance + scope + revisione boundary B1.
+
+> **NegR-Geo-003** — Il sistema **NON** deve operare in **difesa pura** (clienti unici Difesa nazionale o NATO con scope ISR/strike) senza una **separazione strutturale** (società dedicata, governance separata, accounting distinto, contratto framework EDF/EDA).
+> **Rationale:** la commistione operatore civile + difesa pura comprometterebbe la natura cooperativa Legacoop e l'eligibilità a bandi civili (Coopfond, FESR, PNRR civile). Dual-use *difensivo* è ammesso (es. ISR per Protezione Civile + supporto NATO DIANA in regime di sperimentazione) ma con governance trasparente.
+> **Parent:** Boundary B1 + Cap. 5.7.2 + Cap. 7.3 (segmentazione mercato) | **Verification:** Inspection della struttura societaria + bilancio di esercizio (segregazione revenue stream) | **Status:** Active | **Confidence:** high | **Falsifying observation:** > 30% del fatturato annuo da clienti Difesa nazionali senza una società/divisione separata e governance dedicata.
+
+> **NegR-Geo-004** — Il sistema **NON** deve dipendere, per i sottosistemi critici di Phase B (Percorso 6B HALE), da componenti **ITAR-classified** statunitensi senza un piano documentato di EU-sourcing alternative.
+> **Rationale:** sovranità tech + ITAR restrictions limitano l'export control e l'autonomia operativa europea (rif. Reg. UE 2021/821 dual-use export). I sottosistemi critici (FCS DAL-C, GNSS anti-spoofing, propulsion solare, batterie LiS/SS) devono essere EU-sourced o avere fonte EU alternative qualificata entro M+24 per Phase B.
+> **Parent:** Boundary B2 + `RESERVED-rischi-geopolitici.md` + SyR-F-005 + RSK-GEO-001 | **Verification:** Inspection della BoM (Bill of Materials) per ITAR flag + audit supply chain annuale | **Status:** Active | **Confidence:** medium | **Falsifying observation:** > 20% del valore BoM Phase B in componenti ITAR-classified US senza piano EU-sourcing alternative entro M+24.
+
+##### Famiglia NegR-Reg — Compliance regolatoria
+
+> **NegR-Reg-001** — Il sistema **NON** deve trattare dati personali (immagini riconoscibili di persone, targhe veicoli, dati biometrici, dati di localizzazione individuale) senza una **DPIA documentata e approvata** dal DPO e, ove richiesto dal Garante (rif. GDPR Art. 35-36).
+> **Rationale:** GDPR Art. 35 (DPIA obbligatoria per trattamenti ad alto rischio, incluse sorveglianza sistematica e dati biometrici) + posizione Garante 2025 su droni urbani. Trattare dati personali senza DPIA è violazione amministrativa con sanzioni fino al 4% fatturato globale.
+> **Parent:** StNeed-008 + StNeed-014 + SyR-C-003 + SsR-GS-003 | **Verification:** Inspection del registro trattamenti + DPIA per ogni caso d'uso che processa imagery riconoscibile | **Status:** Active | **Confidence:** high | **Falsifying observation:** missione operativa che acquisisce imagery riconoscibile di persone senza DPIA depositata e validata dal DPO.
+
+> **NegR-Reg-002** — Il sistema **NON** deve eseguire **onboard processing di dati biometrici** (riconoscimento facciale, identificazione individuale tramite AI inferenza in-flight) né classificare individui in categorie sensibili (etnia, religione, orientamento politico).
+> **Rationale:** AI Act (Reg. UE 2024/1689) Art. 5 (pratiche proibite) + Art. 6 Annex III (high-risk systems incluso identificazione biometrica remota). Le pipeline ML on-board del payload EO devono essere progettate per **anonimizzazione automatica edge-level** (blur volti/targhe — già coperto da SsR-GS-003), non per identificazione individuale.
+> **Parent:** SyR-C-003 + SsR-GS-003 + AI Act + Garante | **Verification:** Inspection del codice ML on-board (algorithmic audit) + design review del payload AI pipeline | **Status:** Active | **Confidence:** high | **Falsifying observation:** documentazione di una pipeline ML on-board che esegue identificazione biometrica individuale (>1:N matching) senza anonimizzazione preventiva.
+
+> **NegR-Reg-003** — Il sistema **NON** deve operare in **spazio aereo controllato** (CTR, TMA, AWY, classi A-D ICAO) senza coordinamento formale ENAV / D-Flight e clearance ATC esplicita.
+> **Rationale:** Reg. UE 2019/947 + ENAC Reg. APR Ed.3 + ENAV procedures U-Space. Operazioni HALE Phase B richiedono climb/descent attraverso CTR Genova, Milano, Roma — il coordinamento ENAV è precondizione non negoziabile. Per Percorso 6A VTOL Pentema, lo spazio aereo è non-controllato (G class) sotto 500 ft AGL ma climb >500 ft AGL deve essere coordinato.
+> **Parent:** StNeed-011 + SyR-F-002 + SyR-S-004 | **Verification:** Inspection del Letter of Agreement (LoA) ENAV + Operations Manual procedures ATC | **Status:** Active | **Confidence:** high | **Falsifying observation:** volo BVLOS in CTR senza LoA ENAV e clearance ATC documentata → enforcement ENAC + sospensione operativa.
+
+##### Famiglia NegR-Tech — Architettura tecnica
+
+> **NegR-Tech-001** — Il sistema **NON** deve sviluppare un **Type Certificate** proprio EASA Part 21J (Design Organisation Approval + TC) **in autonomia** per il velivolo HALE Phase B: il TC richiede consorzio EU strutturato (lead OEM Tier 1 + Firmamento come technology partner / service operator).
+> **Rationale:** capex TC EASA full-cycle: €50-200M, durata 5-8 anni, manpower 50-150 FTE engineering qualified (vedi Pinato 2023 + AAM business cases). Fuori scope Firmamento standalone. Strategia: certificazione *via* consorzio EU (lead potenziale Leonardo / Airbus DS / partner industriale identificato post-M+24).
+> **Parent:** Boundary B2 + Cap. 5.1 + Cap. 6.2 + RSK-FIN-001 | **Verification:** Inspection del piano di certificazione (Cap. 9 + Vol. 2 Allegato A.3) + roadmap consorzio | **Status:** Active | **Confidence:** high | **Falsifying observation:** attivazione di un programma TC standalone Firmamento per HALE Phase B con budget > €5M e timeline > 24 mesi senza partner lead OEM identificato.
+
+> **NegR-Tech-002** — Il sistema **NON** deve utilizzare componenti **DJI** (o altri vendor cinesi soggetti a ban/restrizioni in EU/USA) come componenti critici per il C2 link, autopilota primario, gimbal payload o GS, per applicazioni in regime di sicurezza nazionale o PA italiana.
+> **Rationale:** Trump-era + Biden-era + Trump-2 export ban DJI in USA (NDAA 2024); posizione MIT/MEF e ACN su componentistica cinese in PA italiana (rif. NIS2 + Golden Power D.L. 21/2012). Rischio compliance + reputazionale + escalation regolatoria EU.
+> **Parent:** SyR-C-004 (NIS2) + AS-008 (vendor JOUAV CN accessibility) + `RESERVED-rischi-geopolitici.md` | **Verification:** Inspection della BoM + audit fornitori (no-DJI clause nei contratti) | **Status:** Active | **Confidence:** medium | **Falsifying observation:** vendor JOUAV (CN) bannato in EU entro M+12 senza piano sostituzione EU vendor (Quantum, FlyingBasket) documentato. NOTA: AS-008 attualmente assume JOUAV accessibile; se invalidata, vendor switch EU obbligatorio con CapEx +30%.
+
+> **NegR-Tech-003** — Il sistema **NON** deve trasferire ground segment, mission control, data hosting o dati operativi a infrastrutture extra-UE come **default operativo**, anche se più economiche.
+> **Rationale:** sovranità tech + GDPR + NIS2 + accordi quadro PA italiana che richiedono cloud certificato AgID/ACN (rif. Strategia Cloud Italia + Polo Strategico Nazionale).
+> **Parent:** SyR-C-004 + SsR-GS-002 + NegR-Geo-001 | **Verification:** Inspection del physical location dei datacenter + certificazioni AgID/ACN/GAIA-X | **Status:** Active | **Confidence:** high | **Falsifying observation:** spostamento di ground segment o data hosting in datacenter extra-UE per ragioni di costo, senza accordo specifico documentato e DPIA approvata.
+
+##### Famiglia NegR-Mkt — Comunicazione / Posizionamento
+
+> **NegR-Mkt-001** — Il sistema **NON** deve essere comunicato pubblicamente come "**alternativa europea a Starlink**" o "**Starlink europeo**" in materiali ufficiali (pitch deck pubblici, comunicati stampa, sito web, social media, slide investitori non-NDA).
+> **Rationale:** boundary condition B2 (linguaggio pubblico: "**complementare a IRIS²**", **non** "alternativa a Starlink"). Ragioni geopolitiche dettagliate in `riferimenti/RESERVED-rischi-geopolitici.md`: evitare confronto diretto con asset US strategico (rischio retaliation tariffaria + diplomatica), preservare opzionalità consorzio EU dove Starlink non è target ma complemento (HAPS layer vs LEO layer).
+> **Parent:** Boundary B2 (CLAUDE.md) + `RESERVED-rischi-geopolitici.md` | **Verification:** Process audit dei materiali pubblici (sito, slide, press release) — review pre-publication per ogni materiale > 500 visualizzazioni stimate | **Status:** Active | **Confidence:** boundary | **Falsifying observation:** linguaggio "alternativa Starlink" / "Starlink europeo" appare in materiali pubblici ufficiali → re-baseline messaging + addestramento team comms + revisione governance comunicazione.
+
+> **NegR-Mkt-002** — Il sistema **NON** deve essere comunicato come "**capability militare offensiva**" o "**arma**" o "**UCAV**" (Unmanned Combat Aerial Vehicle) in materiali ufficiali, anche per scopi di marketing in conferenze difesa.
+> **Rationale:** coerenza con NegR-Geo-002 (no capability offensive) + NegR-Geo-003 (no difesa pura senza separazione strutturale). Posizionamento pubblico = "servizi ISR civili + dual-use difensivo NATO DIANA conditional", non "armamento aereo".
+> **Parent:** Boundary B1 + Cap. 5.7.2 + NegR-Geo-002 | **Verification:** Process audit pre-publication + monitoring stampa e social | **Status:** Active | **Confidence:** high | **Falsifying observation:** materiale pubblico ufficiale Firmamento usa terminologia "UCAV", "armamento", "strike capability" → violazione e revisione immediata.
+
+#### Tabella riepilogativa dei 14 NegR — Priority Matrix
+
+| NegR-ID | Statement breve | Famiglia | Priority | Impact-if-violated | Status | Conf. |
+|---|---|---|---|---|---|---|
+| **NegR-B-001** | NON vendere velivoli (service-only) | B | **Critical** | Re-baseline business model + perdita boundary B1 + perdita eligibility bando Coopfond | Active | boundary |
+| NegR-B-002 | NON offrire retail B2C | B | Medium | Re-scope canali commerciali (limitato impatto se contenuto) | Active | high |
+| NegR-B-003 | NON concorrere head-to-head Tier 1 HAPS | B | High | Esaurimento capitale + perdita differenziazione competitive | Active | high |
+| **NegR-Geo-001** | NON usare cloud US default | Geo | **Critical** | Violazione GDPR + NIS2 + Schrems II → sanzioni + perdita PA contracts | Active | high |
+| **NegR-Geo-002** | NON sviluppare capability dual-use offensiva | Geo | **Critical** | Perdita boundary B1 + perdita bandi civili + escalation diplomatica | Active | high |
+| NegR-Geo-003 | NON operare difesa pura senza separazione | Geo | High | Compromissione natura cooperativa + perdita eligibility bandi civili | Active | high |
+| NegR-Geo-004 | NON dipendere ITAR US Phase B critici | Geo | High | Perdita sovranità tech + export control restrictions EU | Active | medium |
+| **NegR-Reg-001** | NON trattare dati personali senza DPIA | Reg | **Critical** | Sanzioni GDPR fino 4% fatturato + sospensione operativa Garante | Active | high |
+| NegR-Reg-002 | NON onboard biometric processing | Reg | High | Violazione AI Act high-risk + sanzioni + reputational damage | Active | high |
+| NegR-Reg-003 | NON operare CTR senza ENAV LoA | Reg | High | Enforcement ENAC + sospensione operativa + incidente safety | Active | high |
+| NegR-Tech-001 | NON sviluppare TC EASA in autonomia | Tech | High | Esaurimento capitale (€50-200M) + delay 5-8 anni | Active | high |
+| NegR-Tech-002 | NON usare componenti DJI/CN bannati PA | Tech | Medium | Compliance NIS2/Golden Power + perdita contratti PA | Active | medium |
+| NegR-Tech-003 | NON ospitare ground segment extra-UE | Tech | High | Violazione sovranità + perdita certificazione AgID/PSN | Active | high |
+| **NegR-Mkt-001** | NON usare "alternativa Starlink" pubblico | Mkt | **Critical** | Violazione boundary B2 + escalation US + perdita opzionalità EU consortium | Active | boundary |
+| NegR-Mkt-002 | NON comunicare come UCAV/arma | Mkt | High | Perdita boundary B1 + escalation politica + perdita bandi civili | Active | high |
+
+**Legenda priority:**
+- **Critical** (5 NegR): violazione = re-baseline immediato del progetto / showstopper boundary
+- **High** (7 NegR): violazione = revisione formale + remediation plan + gate review
+- **Medium** (2 NegR): violazione = correzione operativa entro 30 giorni + log audit
+
+#### Integrazione con la RTM
+
+I 14 NegR sono tracciati nella **RTM v0.5 estesa** (Vol. 2 Allegato A.1) come righe dedicate con `Type = NegR` (oltre ai tipi StNeed / SyR / SsR / IR / VR esistenti). I campi specifici dei NegR sono:
+
+| Campo RTM | Contenuto per NegR |
+|---|---|
+| Req-ID | NegR-X-NNN (X ∈ {B, Geo, Reg, Tech, Mkt}) |
+| Description | Statement in forma "NON deve..." |
+| Source | Boundary B1/B2 + parent SyR + RSK-XXX correlato |
+| Type | NegR |
+| Parent | Boundary condition (CLAUDE.md) o SyR positivo correlato o RSK del Risk Register |
+| Priority | Critical / High / Medium / Low |
+| V&V Method | Inspection (process audit, contract review, BoM check) — raramente Test |
+| V&V Status | Active / Waived (con razionale) / Reviewed |
+| Confidence | high / medium / low / boundary |
+| Falsifying observation | Evento osservabile che indica violazione |
+
+**Audit semestrale dei NegR**: a ogni gate review (M+6, M+10, M+13, M+24...) il systems engineer + il governance lead conducono uno **status check** dei 14 NegR. Per ciascuno: (i) confermare status Active (default), (ii) richiedere Waiver formale con razionale documentato e approvazione board (downgrade a Waived), (iii) marcare come Reviewed se l'audit non rileva violazioni nel periodo. Il **Waiver** richiede approvazione esplicita di Firmamento board + risk owner + (per NegR Critical) Coopfond / Coopfond stakeholder advisory.
+
+**Trigger di review immediata** (fuori cadenza semestrale): qualunque **falsifying observation** dichiarata triggera review entro 30 giorni con coinvolgimento del red-team-skeptic agent + risk-register-builder skill per re-valutazione boundary conditions.
+
+#### Falsifying observations critiche dettagliate
+
+Per i 3 NegR più critici, riportiamo la falsifying observation in forma estesa con trigger osservabile, fonte di evidenza, azione di remediation:
+
+**FO-NegR-B-001 (NON vendere velivoli)**
+- **Trigger osservabile**: firma di un contratto/MoU/LoI di **vendita asset velivolo** (qualunque importo, qualunque cliente) — anche prototype, anche cooperative pilota, anche "vendita simbolica".
+- **Fonte di evidenza**: contract registry Firmamento + cap. dichiarazioni fiscali (DR-2025 / DR-2026 dichiarazione redditi) + scrittura privata + pubblicità presso CCIAA.
+- **Remediation**: re-baseline immediato del business model in Cap. 1 + revisione boundary B1 in CLAUDE.md (con board approval) + comunicazione formale a Coopfond + revisione narrativa "service-only" in tutti i materiali pubblici.
+
+**FO-NegR-Geo-001 (NON cloud US default per imagery EO)**
+- **Trigger osservabile**: imagery EO o dati C2 o dati personali UE stoccati in **datacenter US** (AWS, Azure, GCP region us-east-1, us-west-2, ecc.) **senza**: (i) accordo specifico documentato (es. EU-US Data Privacy Framework adequacy decision per quel trattamento), (ii) DPIA approvata dal DPO, (iii) DR esplicito tracciato in Risk Register.
+- **Fonte di evidenza**: cloud audit log (provider) + DNS resolution endpoint + audit trail data residency + ispezione contratto SaaS/IaaS.
+- **Remediation**: migrazione obbligatoria entro 30 giorni a cloud EU sovrano (Aruba, OVH, IONOS, PSN) + notifica Garante (Art. 33 GDPR breach assessment) + log incident in Risk Register come RSK-REG-NEW + addestramento team DevOps.
+
+**FO-NegR-Mkt-001 (NON usare "alternativa Starlink" pubblico)**
+- **Trigger osservabile**: linguaggio "**alternativa Starlink**", "**Starlink europeo**", "**competitor di Starlink**" appare in: (i) sito web pubblico Firmamento, (ii) comunicato stampa ufficiale, (iii) pitch deck per investitori non-NDA o per finanziatori istituzionali, (iv) post social media account ufficiale, (v) intervista pubblica esponente Firmamento (CEO, CTO, comms lead).
+- **Fonte di evidenza**: monitoring stampa (Google Alerts + Mention + Brand24) + web archive snapshot + screenshot social + transcript intervista.
+- **Remediation**: rimozione/correzione del materiale entro 7 giorni + statement correttivo pubblico + retraining team comms + governance review della catena di approvazione materiali pubblici + log violazione in Risk Register come RSK-GEO-NEW.
+
+#### Caveat — NegR vs Risk Register
+
+I Negative Requirements **non sostituiscono** il Risk Register (Vol. 2 Allegato A.2). I due strumenti sono **complementari** e operano su orizzonti diversi:
+
+| Aspetto | Risk Register (RSK-XXX) | Negative Requirements (NegR-X-NNN) |
+|---|---|---|
+| Natura | Evento incerto futuro con P×I | Vincolo di disegno dichiarato come boundary del sistema |
+| Quando si applica | Solo se si manifesta (probabilità < 1) | Sempre, durante tutto il lifecycle del progetto |
+| Modalità di trattamento | Mitigation plan + owner + KRI monitoring | Compliance + inspection + audit + waiver process |
+| Esempio | RSK-REG-001: "ENAC ritarda SAIL approval" | NegR-Reg-003: "Sistema NON deve operare CTR senza ENAV LoA" |
+| Trigger di azione | KRI threshold breach (es. probability ≥ 50%) | Falsifying observation (violazione osservata o imminente) |
+| Output | Risk Register table + heatmap P×I | RTM rows + audit semestrale + waiver log |
+
+In sintesi: un **RSK** è qualcosa che **potrebbe accadere e va mitigato**; un **NegR** è qualcosa che **non deve accadere per design**. La violazione di un NegR Critical equivale al manifestarsi di un risk di livello rosso ad alto impatto — ma a differenza del risk, il NegR non ha probabilità < 1 di occorrere: la probabilità è governata dalla disciplina operativa interna, non da eventi esterni.
+
+I NegR sono inoltre coordinati con le 3 skill di project governance:
+- **`requirements-traceability-matrix`** — i NegR estendono la tassonomia RTM e sono tracciati con la stessa rigorosità dei SyR positivi
+- **`risk-register-builder`** — ogni falsifying observation di un NegR diventa un evento di re-baseline che innesca aggiornamento del Risk Register
+- **`epistemic-rigor`** — i NegR sono dichiarati con confidence level + falsifying observation, in piena coerenza con la disciplina epistemica del progetto
+
+---
+
 ## 3.6 Subsystem Requirements (SsR) — Campione rappresentativo
 
 I System Requirements sono **decomposti** in Subsystem Requirements, allocati ai 6 sottosistemi principali del sistema. Riportiamo qui un **campione rappresentativo** per ciascun sottosistema; la lista completa (~80 SsR) è in Vol. 2 Allegato A.1.
@@ -615,6 +792,7 @@ La RTM completa è in Vol. 2 Allegato A.1. Riportiamo qui un **estratto rapprese
 | SsR con allocazione subsystem | 80/80 (100%) | 100% | 100% |
 | Orphan SyR (senza parent StNeed) | 0 | 0 | 0 |
 | Untestable SyR | 3 (Cost SyR senza verifica D/T) | 2 | 0 |
+| **NegR con status Active / monitored** | **14/14 (100%)** (5 Critical + 7 High + 2 Medium) — audit semestrale | 14/14 Active + 0 violazioni rilevate | 14/14 Active + 0 violazioni rilevate + waiver log up-to-date |
 
 ---
 
@@ -701,8 +879,8 @@ L'agente `red-team-skeptic` ha condotto attacco strutturato al presente capitolo
 
 ### Critica 5 — "I 17 StNeeds non includono need negativi (cosa NON dobbiamo fare)"
 **Razionale critica**: i requisiti "anti-pattern" (es. "il sistema non deve usare cloud US per stoccaggio imagery EO") sono assenti.
-**Risposta**: corretto, parzialmente coperto da SsR-GS-002 (cloud IT/EU GDPR+NIS2). Aggiungo nel prossimo update un set di **negative requirements** ("shall not...") per coprire i vincoli da `RESERVED-rischi-geopolitici.md` (no Cloud US, no fornitori non-EU per componenti critici, no operazioni dual-use senza clearance).
-**Action item**: estendere RTM v0.6 con sezione "Negative Requirements" (5-10 items).
+**Risposta**: **RISOLTO nella revisione M+3 estesa**. Aggiunta sezione **§3.5.8 Negative Requirements (NegR)** con **14 requisiti negativi** organizzati in 5 famiglie (NegR-B Business, NegR-Geo Sovranità, NegR-Reg Regolatoria, NegR-Tech Tecnica, NegR-Mkt Comunicazione), di cui 5 Critical (NegR-B-001 no vendita velivoli, NegR-Geo-001 no cloud US default, NegR-Geo-002 no capability dual-use offensiva, NegR-Reg-001 no trattamento dati personali senza DPIA, NegR-Mkt-001 no linguaggio "alternativa Starlink") + 7 High + 2 Medium. Ciascun NegR tracciato in RTM v0.5 estesa con falsifying observation, verification method (Inspection / process audit / contract review), confidence level e status (Active / Waived / Reviewed). Audit semestrale dei NegR a ogni gate review. Coordinamento con Risk Register (RSK-GEO / RSK-REG) chiarito: NegR sono vincoli di disegno, RSK sono eventi incerti — strumenti complementari, non sostitutivi.
+**Action item**: ✓ **chiuso M+3**. Prossimo step: estensione fine-grained nella RTM v0.6 (M+6) con eventuali NegR addizionali emersi dai workshop stakeholder + pre-application meeting ENAC.
 
 ### Critica 6 — "Tasso di copertura RTM 74% al M+3 è basso per un gate M+6"
 **Razionale critica**: target 80% al gate M+6 (cf. §3.8.2). 74% al M+3 lascia 6 SyR senza decomposizione e 11 senza V&V plan completo.
@@ -739,7 +917,8 @@ La baseline dei requisiti M+3 è stata redatta usando il NASA SE Handbook come r
 2. **Pre-application meeting ENAC** (M+3-6) per validare SyR-F-002 (SAIL) e SyR-C-002 (SORA application)
 3. **Trade Studies chiave** (M+6 → M+12) per chiudere OQ-001 (platform), OQ-003 (material), OQ-005 (propulsion), OQ-006 (autopilot), OQ-007 (payload)
 4. **RTM expansion** verso copertura 80% al M+6 e 95% al M+10
-5. **Negative Requirements** addition (cf. critica Red Team)
+5. ~~Negative Requirements addition~~ ✓ **CHIUSO M+3** — §3.5.8 con 14 NegR in 5 famiglie. Estensione fine-grained M+6 con NegR emersi dai workshop stakeholder.
+6. **Audit semestrale NegR** (M+6, M+10, M+13...): status check Active/Waived/Reviewed dei 14 NegR + verifica assenza falsifying observations
 
 **Versionamento RTM**:
 - v0.5 (M+3, presente capitolo): 17 StNeed + 42 SyR + 80 SsR (campione)

@@ -545,9 +545,79 @@ Board allargato +:
 
 ---
 
+## 9.12 Sliding Timeline Realistica (post Audit Regulatory Adversary M+3)
+
+> **Inserimento post-audit M+3**: l'audit `regulatory-adversary` (vedi `AUDIT-REGULATORY-VOLUME-1.md` §2) e l'audit `red-team-skeptic` (vedi `AUDIT-REDTEAM-VOLUME-1.md`) hanno identificato che **il cronoprogramma del Cap. 9 è strutturalmente ottimistico** rispetto alla base rate aerospace italiana. Questa sezione presenta la **sliding timeline realistica** ("worst-case ma plausibile"), in alternativa al piano ottimistico del §9.1-9.5. Lo Studio di Fattibilità **deve mantenere entrambi**: il piano nominale come target di esecuzione + la sliding timeline come baseline di rischio finanziario e di pianificazione cash flow.
+
+### 9.12.1 Confronto piano nominale vs sliding timeline
+
+| Milestone | Piano nominale Cap.9 | Sliding timeline realistica | Slippage atteso |
+|---|---|---|---|
+| Pre-application meeting ENAC | M+3 | **M+6-9** | +3-6 mesi |
+| Risposta integrazione ENAC #1 | M+5 | M+9-12 | +4-7 mesi |
+| Risposta integrazione ENAC #2 | M+7 | M+12-15 | +5-8 mesi |
+| SORA submission completa | M+6 | **M+10-12** | +4-6 mesi |
+| SORA authorization issuance | M+9 | **M+15-24** | +6-15 mesi |
+| Prime missioni operative Pentema | M+10 | M+16-26 | +6-16 mesi |
+| Gate G3 (FEASIBILITY VERDICT) | M+10/M+11 | **M+11** (nominale tenuto) ma su evidenze parziali → Hold con piano | n/a (gate slittato a M+14-16 in scenario peggiore) |
+| LoI Regione Liguria firmata | M+9 | M+12-18 (cambio governo Bucci → renegoziazione) | +3-9 mesi |
+| Coopfond bando 2026 confermato | M+1 | M+3-9 (calendario bando incerto) | +2-8 mesi |
+| Cooperative 8/10 confermate | M+6 | M+9-12 (workshop iterativi) | +3-6 mesi |
+| DPIA Garante chiusa | M+12 | M+18-24 (Garante round multipli) | +6-12 mesi |
+| AGCOM licensing spettro HAPS | M+18-24 (atteso) | **M+48-72** (post WRC-27) | +24-48 mesi |
+| EASA Special Condition HAPS | M+36+ (atteso aperto) | **M+60-120** (RMT non aperto, base rate 5-10 anni) | +24-84 mesi |
+| Phase B 6B start | M+24 | **M+30-48** (subordinato a EASA + funding) | +6-24 mesi |
+| Phase B 6B HALE subscale TRL 5 | M+36 | **M+60-84** (TRL transition base rate 3-5 anni) | +24-48 mesi |
+| Phase B 6B end (TRL 6+) | M+48 | **M+72-108** | +24-60 mesi |
+
+### 9.12.2 Implicazioni finanziarie sliding timeline
+
+Slippage operativo Y1-Y2 = aumento OpEx run-rate non coperto da revenue:
+
+- **OpEx Y1 (12 mesi senza revenue significativo)**: €260-480k → **€350-650k** se schedule slitta a M+16-26 prime missioni
+- **Cash burn Y1-Y2 cumulato**: scenario nominale -€1.2M | scenario sliding -€2-3M
+- **Bridge financing necessario aggiuntivo**: €200-500k (oltre il €100-300k già stimato)
+- **Series A timing**: nominale M+18-24 | sliding M+24-36
+
+### 9.12.3 Gate G3 in scenario sliding timeline
+
+Al M+10-11 nominale, sliding timeline implica:
+- Pre-application ENAC fatta **M+6-9** con feedback ancora parziale
+- SORA application **non ancora submitted** (M+10-12)
+- LoI Regione **non firmata** (in negoziazione cambio governo)
+- Funding mix **40-50% committed** invece di 60% target
+- DPIA Garante **in consultazione**, no risposta definitiva
+
+**Verdetto Gate G3 in sliding timeline**: **HOLD con piano regolatorio rafforzato** → re-review **M+14-16** con condizioni recuperate.
+
+> Vedi Cap. 10 §10.3.2 caveat probabilistico aggiornato che riflette questo scenario base.
+
+### 9.12.4 Gate G5 (Phase B 6B start) in scenario sliding timeline
+
+Al M+24 nominale, sliding timeline implica:
+- EASA Special Condition HAPS **non aperto** (atteso M+60+)
+- Mix funding Phase B **<30% committed** (EDF call non aperta, Horizon in negoziazione)
+- TRL subsystem critici **non re-assessed** in modo formale
+
+**Verdetto Gate G5 sliding timeline**: **DEFER Phase B a M+36** con re-review.
+
+### 9.12.5 Mitigazioni sliding timeline
+
+1. **Doppio binario di pianificazione**: tutti i piani operativi e finanziari hanno scenario nominale + scenario sliding; reporting al CdA mensile mostra entrambi
+2. **Bridge financing strutturato**: linea di credito €500k attivata pre-emptivamente per coprire gap timing
+3. **Engagement intensivo Y0-Y1**: assunzione Head Regulatory + CISO + DPO entro M+6 per accelerare engagement multi-autorità (vedi Cap. 5 §5.17)
+4. **Pivot scope MVP**: se SORA slitta oltre M+15, pivot a VLOS-only fino ad approvazione (riduzione scope ma operatività mantenuta)
+5. **Re-baseline Gate G3 a M+13-16** dichiarata sin dall'inizio come opzione legittima (non come fallimento)
+
+### 9.12.6 Falsifying observation §9.12
+
+**Falsifying observation aggregata**: se al M+12 il cumulato slippage del piano nominale è > 30% (es. SORA non submitted, LoI Regione non firmata, < 5 cooperative confermate), il piano nominale è invalidato e la sliding timeline diventa **baseline operativa** con re-baseline formale al CdA + sponsor.
+
+---
+
 ## 9.11 Note di chiusura del capitolo
 
-Il Cap. 9 è **bozza M+3** con verdetto Red Team **OK con caveat** sulla aggressività dei tempi.
+Il Cap. 9 è **bozza M+3 + aggiornamento sliding timeline post-audit M+3** con verdetto Red Team **OK con caveat strutturali**: il piano nominale è ottimistico (in coerenza con cultura aerospace startup); la sliding timeline §9.12 è il **baseline realistico** che lo Studio raccomanda di adottare per la pianificazione finanziaria e l'aspettativa stakeholder. Entrambi i piani vanno mantenuti come strumenti complementari.
 
 **Verdetto cronoprogramma riepilogato**:
 - Studio di Fattibilità (M+0-11): **realizzabile** con team focused + consultants
