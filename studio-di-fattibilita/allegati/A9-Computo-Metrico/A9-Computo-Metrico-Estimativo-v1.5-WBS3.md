@@ -1,9 +1,9 @@
-# Allegato A.9 — Computo Metrico Estimativo v1.5 (WBS 3)
+# Allegato A.9. Computo Metrico Estimativo v1.5 (WBS 3)
 
-> Volume 2, Allegato A.9 — **Versione 1.5 (WBS livello 3)**
+> Volume 2, Allegato A.9. **Versione 1.5 (WBS livello 3)**
 > Computo Metrico Estimativo Ground Segment Pentema + OpEx correlati
 > Conformità: D.Lgs. 36/2023 art. 41 + Allegato I.7 (elaborato PFTE obbligatorio)
-> Versione: v1.5 — Maggio 2026 — Granularità WBS 3 (sub-component livello operativo)
+> Versione: v1.5, Maggio 2026. Granularità WBS 3 (sub-component livello operativo)
 > Sostituisce: v1.0 (WBS 2 preliminary) per la sola componente Ground Segment Pentema Percorso 6A
 > Confidence aggregato: **MEDIUM** (preliminary investment-grade richiede 200-400 h Cost Estimator certificato + revisione RUP Regione Liguria)
 
@@ -16,13 +16,13 @@
 3. Quadro Economico riepilogativo (sub-totali, scenario worst/base/best)
 4. Voci OPEX correlate (manutenzione, utenze, run-rate)
 5. Tariffario FTE (prestazioni professionali)
-6. Caveat epistemici + gap residui
-7. Cronoprogramma spese Y1 (M+0 → M+12)
+6. Caveat epistemici e gap residui
+7. Cronoprogramma spese Y1 (M+0 al M+12)
 8. Linkage cross-volume
 
 ---
 
-## Sezione 1 — Inquadramento normativo e metodologia
+## Sezione 1. Inquadramento normativo e metodologia
 
 ### 1.1 Quadro normativo di riferimento
 
@@ -30,10 +30,10 @@ Il presente Computo Metrico Estimativo (CME) v1.5 è elaborato in conformità a:
 
 | Riferimento | Ambito | Applicazione al CME |
 |---|---|---|
-| **D.Lgs. 36/2023 art. 41** | Codice dei Contratti Pubblici — PFTE | Obbligo di CME per progetti pubblici/cofinanziati |
+| **D.Lgs. 36/2023 art. 41** | Codice dei Contratti Pubblici, PFTE | Obbligo di CME per progetti pubblici/cofinanziati |
 | **Allegato I.7 D.Lgs. 36/2023** | Contenuti minimi PFTE | CME tra elaborati obbligatori (lett. l) |
 | **D.M. LL.PP. 14/01/2008** | Norme Tecniche Costruzioni (NTC 2018 aggiornamento) | Verifica strutturale opere edili (hangar) |
-| **Prezzario Regione Liguria 2025** | Tariffario lavori pubblici regionali | Base prezzi unitari opere edili / impianti |
+| **Prezzario Regione Liguria 2025** | Tariffario lavori pubblici regionali | Base prezzi unitari opere edili e impianti |
 | **DEI Tipografia del Genio Civile 2025** | Prezzi informativi infrastrutture | Cross-check voci speciali (data center, RF) |
 | **Linee Guida ANAC n. 1/2016** | Servizi di architettura e ingegneria | Calcolo spese tecniche (3-10% lavori) |
 | **Reg. UE 651/2014 GBER** | Aiuti di Stato compatibili | Vincoli intensità aiuto su CapEx grant-financed |
@@ -42,12 +42,12 @@ Il presente Computo Metrico Estimativo (CME) v1.5 è elaborato in conformità a:
 
 ### 1.2 Granularità WBS adottata
 
-Adottiamo **WBS livello 3** (sub-component operativo) per il Ground Segment Pentema (Percorso 6A), come compromesso ragionevole vs investment-grade:
+Adottiamo **WBS livello 3** (sub-component operativo) per il Ground Segment Pentema (Percorso 6A), come compromesso ragionevole rispetto all'investment-grade:
 
-- **WBS 1**: Macro-area (es. "Ground Segment Pentema")
-- **WBS 2**: Sistema (es. "Hangar", "GCS fissa")
-- **WBS 3**: Sub-component operativo (es. "Hangar — pavimentazione cemento industriale", "GCS fissa — UPS online 5 kVA")
-- WBS 4 (componente fisica + capitolato tecnico dettagliato) e WBS 5 (singolo articolo prezzario): richiesti per investment-grade ma fuori scope per studio di fattibilità.
+- **WBS 1**: macro-area (es. "Ground Segment Pentema")
+- **WBS 2**: sistema (es. "Hangar", "GCS fissa")
+- **WBS 3**: sub-component operativo (es. "Hangar, pavimentazione cemento industriale", "GCS fissa, UPS online 5 kVA")
+- WBS 4 (componente fisica e capitolato tecnico dettagliato) e WBS 5 (singolo articolo prezzario): richiesti per investment-grade ma fuori scope per studio di fattibilità.
 
 **Codifica WBS 3**: `GS.[macro-categoria 2 digit].[sub-sistema 2 digit].[item 3 digit]`
 
@@ -74,43 +74,43 @@ In ordine di preferenza:
 4. **Benchmark mercato comparabili** (e-GEOS, Planetek, Leonardo UAS service)
 5. **Stima parametrica** (ultima ratio, confidence ridotta a LOW)
 
-Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
+Ogni voce in tabella riporta colonna "Fonte" e "Confidence".
 
 `[fonte: metodologia consolidata da Linee Guida MIT 2018 + ANAC n. 1/2016 + best practice Cost Estimator IFAC | confidence: high]`
 
 ---
 
-## Sezione 2 — WBS 3 Computo Metrico per categoria
+## Sezione 2. WBS 3 Computo Metrico per categoria
 
 > **Nota di lettura**: ogni macro-categoria riporta tabella WBS 3 con sub-totale categoria. Le 10 macro-categorie sono allineate al perimetro Ground Segment Pentema da CLAUDE.md briefing operativo.
 
-### 2.1 Categoria 1 — Hangar Pentema (riuso edificio esistente + adeguamento minimo)
+### 2.1 Categoria 1. Hangar Pentema (riuso edificio esistente + adeguamento minimo)
 
-**Ipotesi base**: scenario A — affitto immobile rurale esistente 80-150 m² coperto + 30-60 m² scoperto pavimentato + adeguamento leggero. Scenario B (light build prefabbricato) in tabella alternative §2.1-B.
+**Ipotesi base**: scenario A, affitto immobile rurale esistente 80-150 m² coperto + 30-60 m² scoperto pavimentato + adeguamento leggero. Lo scenario B (light build prefabbricato) è in tabella alternative §2.1-B.
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
-| **GS.01 — Strutture coperte (riuso + adeguamento)** | | | | | | | |
+| **GS.01. Strutture coperte (riuso + adeguamento)** | | | | | | | |
 | GS.01.01.001 | Indagine strutturale preliminare (verifica capacità portante solaio + tetto) | a corpo | 1 | 2.500 | 2.500 | Tariffa OING Liguria 2025 | M |
 | GS.01.01.002 | Pratiche urbanistiche (SCIA edilizia, comunicazione cambio destinazione) | a corpo | 1 | 1.800 | 1.800 | Tariffa OAPPC Liguria | H |
 | GS.01.01.003 | Pavimentazione cemento industriale levigato 80 m² (resistenza UAV + batterie) | m² | 80 | 65 | 5.200 | Prezzario Liguria 2025 art. E.05.010 | H |
 | GS.01.01.004 | Trattamento antipolvere + segnaletica gialla parking UAV | m² | 80 | 18 | 1.440 | Prezzario Liguria 2025 art. E.07.150 | H |
 | GS.01.01.005 | Porta scorrevole industriale 3x3 m motorizzata | cad | 1 | 4.800 | 4.800 | DEI 2025 sez. NP.07 | H |
-| GS.01.01.006 | Manto copertura — verifica + ripristino impermeabilizzazione (50 m²) | m² | 50 | 45 | 2.250 | Prezzario Liguria 2025 art. C.03.220 | H |
+| GS.01.01.006 | Manto copertura, verifica e ripristino impermeabilizzazione (50 m²) | m² | 50 | 45 | 2.250 | Prezzario Liguria 2025 art. C.03.220 | H |
 | GS.01.01.007 | Tinteggiatura pareti interne lavabile (200 m² superficie) | m² | 200 | 12 | 2.400 | Prezzario Liguria 2025 art. F.01.080 | H |
 | GS.01.01.008 | Coibentazione termica leggera pareti (lana roccia 80 mm) | m² | 100 | 38 | 3.800 | Prezzario Liguria 2025 art. C.07.040 | H |
-| **GS.02 — Aree esterne pavimentate** | | | | | | | |
+| **GS.02. Aree esterne pavimentate** | | | | | | | |
 | GS.01.02.001 | Pavimentazione esterna in cls drenante 40 m² (piazzola decollo) | m² | 40 | 78 | 3.120 | Prezzario Liguria 2025 art. E.05.040 | H |
 | GS.01.02.002 | Pavimentazione asfaltata viabilità accesso (riassetto 50 m²) | m² | 50 | 42 | 2.100 | Prezzario Liguria 2025 art. E.04.010 | H |
 | GS.01.02.003 | Segnaletica orizzontale piazzola (T, H, area sicurezza ENAC) | a corpo | 1 | 850 | 850 | Stima parametrica | M |
 | GS.01.02.004 | Dissuasori automatici accesso veicolare | cad | 2 | 1.200 | 2.400 | DEI 2025 sez. SC.02 | M |
-| **GS.03 — Locazione annua (Y1)** | | | | | | | |
+| **GS.03. Locazione annua (Y1)** | | | | | | | |
 | GS.01.03.001 | Canone locazione immobile 80-150 m² Pentema 12 mesi | mese | 12 | 1.000 | 12.000 | Benchmark Borsino OMI Liguria 2025 | M |
 | GS.01.03.002 | Deposito cauzionale (3 mensilità) | a corpo | 1 | 3.000 | 3.000 | Prassi commerciale | H |
 | GS.01.03.003 | Spese notarili registrazione contratto + bolli | a corpo | 1 | 650 | 650 | Tariffa notarile 2025 | H |
-| | **Sub-totale Categoria 1 — Hangar (scenario A riuso)** | | | | **48.310** | | M |
+| | **Sub-totale Categoria 1. Hangar (scenario A riuso)** | | | | **48.310** | | M |
 
-**Alternativa GS.01-B — Light build prefabbricato (se riuso non praticabile)**:
+**Alternativa GS.01-B. Light build prefabbricato (se riuso non praticabile)**:
 
 | WBS 3 | Descrizione | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Conf. |
 |---|---|---|---|---|---|---|
@@ -122,19 +122,19 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.01.B.006 | Allacciamenti impianti generali | a corpo | 1 | 4.000 | 4.000 | M |
 | | **Sub-totale Alternativa B (light build)** | | | | **60.200** | M |
 
-`[Decision gate G2 M+6: scelta A vs B subordinata a sopralluogo + offerta locazione vincolante]`
+`[Decision gate G2 M+6: scelta A vs B subordinata a sopralluogo e offerta locazione vincolante]`
 
-### 2.2 Categoria 2 — GCS fissa (Ground Control Station)
+### 2.2 Categoria 2. GCS fissa (Ground Control Station)
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
-| **GS.02.01 — Rack + computing** | | | | | | | |
+| **GS.02.01. Rack + computing** | | | | | | | |
 | GS.02.01.001 | Rack 19" 24U + porta vetro + ventilazione attiva + PDU intelligente | cad | 1 | 1.450 | 1.450 | APC/Vertiv listino 2025 | H |
 | GS.02.01.002 | Server mission control 1U (Dell PowerEdge R660 o eq., 64 GB RAM, 2x SSD 1TB) | cad | 1 | 6.800 | 6.800 | Dell listino EDU 2025 | H |
 | GS.02.01.003 | Server payload processing 2U (GPU NVIDIA A4000, 128 GB RAM) | cad | 1 | 9.500 | 9.500 | Dell/Supermicro listino 2025 | H |
 | GS.02.01.004 | Switch managed L3 24 porte gigabit + 4 SFP+ | cad | 1 | 1.850 | 1.850 | Cisco/Aruba listino 2025 | H |
 | GS.02.01.005 | Firewall UTM hardware (Fortinet 80F o eq.) | cad | 1 | 2.200 | 2.200 | Fortinet listino 2025 | H |
-| **GS.02.02 — Workstation operatore** | | | | | | | |
+| **GS.02.02. Workstation operatore** | | | | | | | |
 | GS.02.02.001 | Workstation pilota BVLOS (PC desktop Dell Precision 3680, 32GB, RTX A2000) | cad | 1 | 2.400 | 2.400 | Dell listino PRO 2025 | H |
 | GS.02.02.002 | Workstation analista dati (PC desktop Dell Precision 3680, 64GB, RTX A4000) | cad | 1 | 3.800 | 3.800 | Dell listino PRO 2025 | H |
 | GS.02.02.003 | Monitor 32" 4K IPS calibrati (per mission control) | cad | 2 | 850 | 1.700 | Dell/LG listino 2025 | H |
@@ -142,22 +142,22 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.02.02.005 | KVM IP 4 porte enterprise (Raritan/Vertiv) | cad | 1 | 1.650 | 1.650 | Raritan listino 2025 | H |
 | GS.02.02.006 | Cuffie professionali aviation (Bose A30) | cad | 2 | 1.200 | 2.400 | Bose listino 2025 | H |
 | GS.02.02.007 | Joystick + throttle quadrant professionale (CH Products/Brunner) | set | 2 | 1.450 | 2.900 | Brunner listino 2025 | H |
-| **GS.02.03 — UPS + power conditioning** | | | | | | | |
+| **GS.02.03. UPS + power conditioning** | | | | | | | |
 | GS.02.03.001 | UPS online doppia conversione 5 kVA (4h autonomia carico nominale) | cad | 1 | 4.800 | 4.800 | APC/Vertiv listino 2025 | H |
 | GS.02.03.002 | Pacco batterie esteso (raddoppio autonomia 8h) | cad | 1 | 2.200 | 2.200 | APC/Vertiv listino 2025 | H |
 | GS.02.03.003 | Stabilizzatore tensione 6 kVA (zona rurale fluttuazioni) | cad | 1 | 1.350 | 1.350 | DEI 2025 sez. EI.04 | M |
 | GS.02.03.004 | Generatore diesel backup 8 kVA insonorizzato (avvio automatico) | cad | 1 | 6.500 | 6.500 | DEI 2025 sez. EI.06 | M |
-| **GS.02.04 — Software mission planning** | | | | | | | |
+| **GS.02.04. Software mission planning** | | | | | | | |
 | GS.02.04.001 | Licenza UgCS PRO mission planning (perpetua + 1 anno support) | cad | 2 | 2.800 | 5.600 | UgCS listino 2025 | H |
 | GS.02.04.002 | Licenza Pix4D Mapper Enterprise (annuale) | anno | 1 | 4.500 | 4.500 | Pix4D listino 2025 | H |
 | GS.02.04.003 | Licenza QGIS + plugin enterprise + setup | a corpo | 1 | 1.500 | 1.500 | Servizio + plugin commerciali | M |
 | GS.02.04.004 | Suite anonimizzazione GDPR (es. Brighter AI + setup) | anno | 1 | 6.500 | 6.500 | Brighter AI listino 2025 | M |
 | GS.02.04.005 | SIEM aziendale (Wazuh enterprise support 1 anno) | anno | 1 | 2.800 | 2.800 | Wazuh support 2025 | M |
-| | **Sub-totale Categoria 2 — GCS fissa** | | | | **73.160** | | H-M |
+| | **Sub-totale Categoria 2. GCS fissa** | | | | **73.160** | | H-M |
 
-### 2.3 Categoria 3 — GCS mobile (van adattato)
+### 2.3 Categoria 3. GCS mobile (van adattato)
 
-**Opzione Y1: differita a Y2**. Per Y1 inseriamo solo l'allestimento leggero rapido (kit removibile da furgone esistente). Van dedicato in Y2 post-MVP success.
+**Opzione Y1: differita a Y2**. Per Y1 si include solo l'allestimento leggero rapido (kit removibile da furgone esistente). Il van dedicato resta posticipato a Y2 post-MVP success.
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
@@ -171,11 +171,11 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.03.01.008 | Radio TETRA portatile (Sepura SC21) | cad | 2 | 1.600 | 3.200 | Sepura listino 2025 | H |
 | GS.03.01.009 | Modem 4G/5G industriale dual-SIM ruggedized | cad | 1 | 950 | 950 | Teltonika listino 2025 | H |
 | GS.03.01.010 | Tavolo pieghevole + sedia ergonomica ruggedized + tenda parasole | set | 1 | 1.200 | 1.200 | Mercato outdoor PRO | M |
-| | **Sub-totale Categoria 3 — GCS mobile (kit Y1 leggero)** | | | | **27.750** | | M |
+| | **Sub-totale Categoria 3. GCS mobile (kit Y1 leggero)** | | | | **27.750** | | M |
 
 > Van dedicato (Iveco Daily 4x4 allestito) differito a Y2: stima preliminare €60-80k allestimento completo + €30-45k veicolo.
 
-### 2.4 Categoria 4 — Antenne RF + sistema comunicazione
+### 2.4 Categoria 4. Antenne RF + sistema comunicazione
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
@@ -189,9 +189,9 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.04.01.008 | Lightning arrestor antenne + sistema messa terra dedicato | cad | 3 | 320 | 960 | PolyPhaser listino 2025 | H |
 | GS.04.01.009 | Misurazione + calibrazione VSWR + analisi spettro | a corpo | 1 | 1.800 | 1.800 | Servizio specialistico vendor | M |
 | GS.04.01.010 | Pratiche AGCOM/MISE autorizzazione frequenze sperimentali | a corpo | 1 | 2.500 | 2.500 | Studio legale specializzato | M |
-| | **Sub-totale Categoria 4 — Antenne RF** | | | | **27.900** | | H-M |
+| | **Sub-totale Categoria 4. Antenne RF** | | | | **27.900** | | H-M |
 
-### 2.5 Categoria 5 — Storage + processing
+### 2.5 Categoria 5. Storage + processing
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
@@ -204,9 +204,9 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.05.01.007 | Sottoscrizione cloud sync (AWS S3 IA / Wasabi 100 TB anno 1) | anno | 1 | 3.600 | 3.600 | AWS/Wasabi listino 2025 | H |
 | GS.05.01.008 | Software backup enterprise (Veeam Community + licenza estesa) | anno | 1 | 1.800 | 1.800 | Veeam listino 2025 | H |
 | GS.05.01.009 | Setup + configurazione iniziale storage + processing | h | 40 | 85 | 3.400 | Tariffa system integrator | M |
-| | **Sub-totale Categoria 5 — Storage + processing** | | | | **37.880** | | H-M |
+| | **Sub-totale Categoria 5. Storage + processing** | | | | **37.880** | | H-M |
 
-### 2.6 Categoria 6 — Connettività
+### 2.6 Categoria 6. Connettività
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
@@ -217,9 +217,9 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.06.01.005 | Backup 4G/5G professional con SIM M2M dual-carrier | a corpo | 1 | 1.200 | 1.200 | Teltonika + abbonamento | H |
 | GS.06.01.006 | Canone 4G/5G backup annuale (50 GB/mese, 2 carrier) | anno | 1 | 1.440 | 1.440 | Vodafone/TIM M2M 2025 | H |
 | GS.06.01.007 | VPN appliance + certificati (Wireguard enterprise) | a corpo | 1 | 1.500 | 1.500 | Setup + licenza | M |
-| | **Sub-totale Categoria 6 — Connettività (Y1 capex+opex Y1)** | | | | **13.990** | | M |
+| | **Sub-totale Categoria 6. Connettività (Y1 capex+opex Y1)** | | | | **13.990** | | M |
 
-### 2.7 Categoria 7 — Sicurezza fisica
+### 2.7 Categoria 7. Sicurezza fisica
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
@@ -233,13 +233,13 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.07.01.008 | Cablaggio + posa segnale debole + canalizzazioni | a corpo | 1 | 3.500 | 3.500 | Prezzario Liguria art. EI.07 | H |
 | GS.07.01.009 | Allacciamento istituto vigilanza (chiamata + ronda) anno 1 | anno | 1 | 1.800 | 1.800 | Mercato Liguria 2025 | M |
 | GS.07.01.010 | Certificazione impianto + cert. CEI 79 | a corpo | 1 | 850 | 850 | Tariffa professionista | H |
-| | **Sub-totale Categoria 7 — Sicurezza fisica** | | | | **22.290** | | H |
+| | **Sub-totale Categoria 7. Sicurezza fisica** | | | | **22.290** | | H |
 
-### 2.8 Categoria 8 — Impianti (HVAC + elettrico + UPS + groundbond + safety)
+### 2.8 Categoria 8. Impianti (HVAC + elettrico + UPS + groundbond + safety)
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
-| **GS.08.01 — Impianto elettrico** | | | | | | | |
+| **GS.08.01. Impianto elettrico** | | | | | | | |
 | GS.08.01.001 | Allacciamento ENEL trifase 15 kW dedicato (escluso oneri ENEL) | a corpo | 1 | 1.800 | 1.800 | Tariffa Enel 2025 (zona rurale C) | H |
 | GS.08.01.002 | Quadro elettrico generale + sub-quadri (server room + uffici) | a corpo | 1 | 3.500 | 3.500 | Prezzario Liguria art. EI.02 | H |
 | GS.08.01.003 | Cavidotti + cablaggio dorsale 3F+N+T 35 mmq (50 m posa) | m | 50 | 28 | 1.400 | Prezzario Liguria art. EI.05 | H |
@@ -247,13 +247,13 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.08.01.005 | Prese FM 16A + UPS dedicate (12 punti) | cad | 12 | 65 | 780 | Prezzario Liguria art. EI.11 | H |
 | GS.08.01.006 | DPI + cassette pronto soccorso elettrico + segnaletica | a corpo | 1 | 450 | 450 | Mercato sicurezza lavoro | H |
 | GS.08.01.007 | Certificazione impianto DM 37/08 + dichiarazione conformità | a corpo | 1 | 1.200 | 1.200 | Tariffa professionista | H |
-| **GS.08.02 — Impianto HVAC** | | | | | | | |
+| **GS.08.02. Impianto HVAC** | | | | | | | |
 | GS.08.02.001 | Climatizzatore split inverter 18.000 BTU (server room) | cad | 1 | 2.200 | 2.200 | Daikin/Mitsubishi listino 2025 | H |
 | GS.08.02.002 | Climatizzatore split inverter 12.000 BTU (uffici) | cad | 2 | 1.500 | 3.000 | Daikin/Mitsubishi listino 2025 | H |
 | GS.08.02.003 | Ventilazione meccanica controllata hangar (estrattore industriale) | cad | 1 | 1.800 | 1.800 | DEI 2025 sez. IT.04 | H |
 | GS.08.02.004 | Sistema umidificazione/deumidificazione server room | cad | 1 | 1.450 | 1.450 | DEI 2025 sez. IT.05 | M |
 | GS.08.02.005 | Riscaldamento pompa calore (zona montana, inverno -10°C) | cad | 1 | 4.500 | 4.500 | Daikin/Mitsubishi listino 2025 | H |
-| **GS.08.03 — Ground bond + safety** | | | | | | | |
+| **GS.08.03. Ground bond + safety** | | | | | | | |
 | GS.08.03.001 | Impianto messa terra dedicato (picchetti + cordone Cu nudo 50 mmq) | a corpo | 1 | 2.800 | 2.800 | Prezzario Liguria art. EI.13 | H |
 | GS.08.03.002 | Impianto scariche atmosferiche (palo + collettori) | a corpo | 1 | 3.500 | 3.500 | Prezzario Liguria art. EI.14 | H |
 | GS.08.03.003 | Verifica resistenza terra + cert. periodica DPR 462/01 | a corpo | 1 | 600 | 600 | Tariffa professionista | H |
@@ -261,9 +261,9 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.08.03.005 | Estintori CO2 + polvere + carrelli (12 unità) + segnaletica | a corpo | 1 | 1.800 | 1.800 | Prezzario Liguria art. SA.01 | H |
 | GS.08.03.006 | Armadio ATEX per stoccaggio batterie LiPo (vincolo VVF) | cad | 1 | 3.500 | 3.500 | Mercato chemical storage | M |
 | GS.08.03.007 | Centrale rilevazione fumo + sensori (8 sensori cablati EN54) | sistema | 1 | 2.200 | 2.200 | Inim/Bentel listino 2025 | H |
-| | **Sub-totale Categoria 8 — Impianti** | | | | **43.260** | | H-M |
+| | **Sub-totale Categoria 8. Impianti** | | | | **43.260** | | H-M |
 
-### 2.9 Categoria 9 — Cartellonistica + segnaletica (ENAC + ambientale)
+### 2.9 Categoria 9. Cartellonistica e segnaletica (ENAC + ambientale)
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
@@ -275,9 +275,9 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.09.01.006 | Cartellonistica antincendio + vie fuga (EN ISO 7010) | sistema | 1 | 380 | 380 | Mercato segnaletica safety | H |
 | GS.09.01.007 | Targa identificativa impianto trasmettente (AGCOM) | cad | 1 | 120 | 120 | Mercato segnaletica RF | H |
 | GS.09.01.008 | NOTAM Origination service (anno 1, gestione publicazioni) | anno | 1 | 1.800 | 1.800 | Tariffa ENAV/ENAC | M |
-| | **Sub-totale Categoria 9 — Cartellonistica** | | | | **4.650** | | H-M |
+| | **Sub-totale Categoria 9. Cartellonistica** | | | | **4.650** | | H-M |
 
-### 2.10 Categoria 10 — Allestimenti ufficio operations
+### 2.10 Categoria 10. Allestimenti ufficio operations
 
 | WBS 3 | Descrizione item | UM | Q.tà | Prezzo unit. (€) | Totale (€) | Fonte | Conf. |
 |---|---|---|---|---|---|---|---|
@@ -291,11 +291,11 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | GS.10.01.008 | Cassetta pronto soccorso conforme DM 388/03 | cad | 2 | 80 | 160 | Mercato safety 2025 | H |
 | GS.10.01.009 | Materiale ufficio start-up (cancelleria, etichette, raccoglitori) | a corpo | 1 | 600 | 600 | Stima parametrica | M |
 | GS.10.01.010 | Lavagna interattiva planning operativo | cad | 1 | 1.800 | 1.800 | Mercato office 2025 | M |
-| | **Sub-totale Categoria 10 — Allestimenti ufficio** | | | | **11.920** | | H |
+| | **Sub-totale Categoria 10. Allestimenti ufficio** | | | | **11.920** | | H |
 
 ---
 
-## Sezione 3 — Quadro Economico riepilogativo
+## Sezione 3. Quadro Economico riepilogativo
 
 ### 3.1 Sub-totali per categoria (scenario base, IVA esclusa)
 
@@ -311,12 +311,12 @@ Ogni voce in tabella riporta colonna "Fonte" + "Confidence".
 | 8 | Impianti (HVAC + elettrico + safety) | 43.260 | |
 | 9 | Cartellonistica + segnaletica | 4.650 | |
 | 10 | Allestimenti ufficio operations | 11.920 | |
-| | **A — TOTALE LAVORI + FORNITURE (no IVA)** | **311.110** | Base scenario A hangar riuso |
+| | **A. TOTALE LAVORI + FORNITURE (no IVA)** | **311.110** | Base scenario A hangar riuso |
 
 ### 3.2 Somme a disposizione (formato art. 41)
 
 ```
-QUADRO ECONOMICO — Ground Segment Pentema Y1 (Percorso 6A)
+QUADRO ECONOMICO. Ground Segment Pentema Y1 (Percorso 6A)
 Riferimento art. 41 D.Lgs. 36/2023 + Allegato I.7
 ─────────────────────────────────────────────────────────────────
 A) IMPORTO LAVORI E FORNITURE                                €
@@ -334,8 +334,8 @@ A) IMPORTO LAVORI E FORNITURE                                €
 
 B) SOMME A DISPOSIZIONE                                       €
    B.1  Spese tecniche (progett. + DL + CSP + RUP)
-        10% di A — Linee Guida ANAC n. 1/2016          31.111
-   B.2  Imprevisti (5% di A — art. 41 c. 12)           15.556
+        10% di A (Linee Guida ANAC n. 1/2016)          31.111
+   B.2  Imprevisti (5% di A, art. 41 c. 12)            15.556
    B.3  Contingency aerospace (15% di A)               46.667
    B.4  Spese pubblicità bandi (eventuali)              1.500
    B.5  Allacciamenti + autorizzazioni (esclusi A)      4.800
@@ -350,7 +350,7 @@ C) IVA + ONERI FISCALI                                        €
                                   TOTALE C            88.049
 
 ─────────────────────────────────────────────────────────────────
-TOTALE GENERALE (A + B + C) — scenario BASE        € 505.093
+TOTALE GENERALE (A + B + C), scenario BASE         € 505.093
 ─────────────────────────────────────────────────────────────────
 ```
 
@@ -371,11 +371,11 @@ TOTALE GENERALE (A + B + C) — scenario BASE        € 505.093
 
 `[fonte: cross-check vs Cap. 8 §8.3.1 Quadro Economico Y1 | confidence: medium]`
 
-**Falsifying observation**: se al M+6 le offerte vendor vincolanti riportano A > €420k (vs 311k base), attivare revisione scope (es. ridurre cluster Jetson da 3 a 1 nodo, GCS mobile differita Y3) o rinforzare grant pubblico per coprire delta.
+**Falsifying observation**: se al M+6 le offerte vendor vincolanti riportano A > €420k (vs 311k base), si attiva la revisione di scope (es. cluster Jetson da 3 a 1 nodo, GCS mobile differita Y3) oppure il rinforzo del grant pubblico a copertura del delta.
 
 ---
 
-## Sezione 4 — Voci OPEX correlate (run-rate annuale Ground Segment)
+## Sezione 4. Voci OPEX correlate (run-rate annuale Ground Segment)
 
 > Coerenza con Cap. 8 §8.5.1.A (baseline OpEx) + §8.5.1.B (regulatory team).
 
@@ -387,7 +387,7 @@ TOTALE GENERALE (A + B + C) — scenario BASE        € 505.093
 | OPEX.GS.01.002 | Manutenzione straordinaria hangar (5% valore opere) | anno | 1 | 1.500 | 1.500 | M |
 | OPEX.GS.02.001 | Manutenzione GCS hardware (server + workstation, contratto Dell PRO) | anno | 1 | 4.800 | 4.800 | H |
 | OPEX.GS.02.002 | Rinnovo licenze software (UgCS, Pix4D, anonim, SIEM) | anno | 1 | 18.500 | 18.500 | H |
-| OPEX.GS.02.003 | Sostituzione batterie UPS (ciclo 3 anni — ammortamento annuale) | anno | 1 | 1.500 | 1.500 | H |
+| OPEX.GS.02.003 | Sostituzione batterie UPS (ciclo 3 anni, ammortamento annuale) | anno | 1 | 1.500 | 1.500 | H |
 | OPEX.GS.04.001 | Canone abbonamento SATCOM Iridium Certus 700 (data plan) | anno | 1 | 6.500 | 6.500 | H |
 | OPEX.GS.04.002 | Manutenzione antenne RF + ricalibrazione VSWR annuale | anno | 1 | 1.800 | 1.800 | M |
 | OPEX.GS.05.001 | Sottoscrizione cloud sync (AWS S3 IA / Wasabi 100 TB) | anno | 1 | 3.600 | 3.600 | H |
@@ -409,7 +409,7 @@ TOTALE GENERALE (A + B + C) — scenario BASE        € 505.093
 | OPEX.UT.01.001 | Energia elettrica (15 kW × 4500 h equivalenti × 0,25 €/kWh) | kWh | 16.875 | 0,25 | 4.218 | H |
 | OPEX.UT.01.002 | Acqua + scarico (utenza domestica) | anno | 1 | 480 | 480 | H |
 | OPEX.UT.01.003 | Smaltimento rifiuti speciali (batterie LiPo dismesse, eco-fee) | anno | 1 | 850 | 850 | M |
-| OPEX.UT.01.004 | Canone locazione hangar Y2+ (se scenario A) | anno | 1 | 12.000 | 12.000 | M |
+| OPEX.UT.01.004 | Canone locazione hangar Y2+ (scenario A) | anno | 1 | 12.000 | 12.000 | M |
 | OPEX.UT.01.005 | Tassa rifiuti TARI + IMU (utenza non residenziale) | anno | 1 | 1.450 | 1.450 | M |
 | | **Totale Utenze Y2+ (€/anno)** | | | | **18.998** | H-M |
 
@@ -421,13 +421,13 @@ TOTALE GENERALE (A + B + C) — scenario BASE        € 505.093
 | Utenze | 18.998 |
 | **TOTALE OPEX Ground Segment (no FTE)** | **72.938** |
 
-> Cross-check Cap. 8 §8.5.1.A: voce "Costi sede / utilities Pentema" range €15-30k + voci manutenzione/licenze distribuite. Totale GS €73k/anno coerente con baseline (margine -10% rispetto a stima conservativa €80k).
+> Cross-check Cap. 8 §8.5.1.A: voce "Costi sede / utilities Pentema" range €15-30k + voci manutenzione/licenze distribuite. Il totale GS di €73k/anno resta coerente con il baseline (margine -10% rispetto a stima conservativa €80k).
 
 ---
 
-## Sezione 5 — Tariffario FTE (prestazioni professionali)
+## Sezione 5. Tariffario FTE (prestazioni professionali)
 
-> Riferimento mercato aerospace IT 2025-2026. Tariffe lorde azienda (costo per il datore di lavoro) — include retribuzione + contributi + TFR + welfare + assicurazioni.
+> Riferimento mercato aerospace IT 2025-2026. Tariffe lorde azienda (costo per il datore di lavoro), inclusive di retribuzione, contributi, TFR, welfare e assicurazioni.
 
 ### 5.1 Tariffe €/giorno e €/mese FTE
 
@@ -475,32 +475,32 @@ TOTALE GENERALE (A + B + C) — scenario BASE        € 505.093
 
 ---
 
-## Sezione 6 — Caveat epistemici + gap residui
+## Sezione 6. Caveat epistemici e gap residui
 
 ### 6.1 Confidence aggregato
 
 **Confidence aggregato CME v1.5: MEDIUM**
 
 Razionale:
-- **HIGH** su voci edili standard (prezzario Liguria 2025 ufficiale): cat. 1-Hangar, cat. 8-Impianti, cat. 10-Allestimenti
-- **MEDIUM-HIGH** su voci IT/RF (listini vendor 2025 ma non offerte vincolanti): cat. 2-GCS, cat. 3-Mobile, cat. 4-Antenne, cat. 5-Storage, cat. 7-Sicurezza
-- **MEDIUM** su voci specialistiche aerospace (tariffe parametriche + benchmark): allacciamento RF, AGCOM, NOTAM, ATEX LiPo, ATEX storage
-- **LOW** su 3 voci stimate parametricamente: cluster orchestrator (GS.05.01.006), cartellonistica orizzontale piazzola (GS.01.02.003), materiale ufficio start-up (GS.10.01.009)
+- **HIGH** sulle voci edili standard (prezzario Liguria 2025 ufficiale): cat. 1-Hangar, cat. 8-Impianti, cat. 10-Allestimenti
+- **MEDIUM-HIGH** sulle voci IT/RF (listini vendor 2025 ma non offerte vincolanti): cat. 2-GCS, cat. 3-Mobile, cat. 4-Antenne, cat. 5-Storage, cat. 7-Sicurezza
+- **MEDIUM** sulle voci specialistiche aerospace (tariffe parametriche e benchmark): allacciamento RF, AGCOM, NOTAM, ATEX LiPo, ATEX storage
+- **LOW** sulle 3 voci stimate parametricamente: cluster orchestrator (GS.05.01.006), cartellonistica orizzontale piazzola (GS.01.02.003), materiale ufficio start-up (GS.10.01.009)
 
-`[fonte: metodologia AACE Cost Estimate Classification System — Classe 4 "Study or Feasibility" tipica per PFTE pre-execution | confidence: high]`
+`[fonte: metodologia AACE Cost Estimate Classification System, Classe 4 "Study or Feasibility" tipica per PFTE pre-execution | confidence: high]`
 
-**Per investment-grade (Classe 2-3 AACE)**: richiesta integrazione obbligatoria — vedi gap 6.3.
+**Per investment-grade (Classe 2-3 AACE)** è richiesta integrazione obbligatoria (vedi gap 6.3).
 
 ### 6.2 Limiti dichiarati v1.5
 
-1. **WBS 3 vs WBS 4-5 investment-grade**: il presente CME è WBS 3 (sub-component operativo); per investment-grade serve WBS 4 (componente fisica + capitolato dettagliato) e WBS 5 (singolo articolo prezzario), tipicamente 200-400 h Cost Estimator certificato.
-2. **Assenza sopralluogo sito**: nessuna indagine fisica condotta su immobile Pentema target (privato o pubblico). Stima dimensioni 80-150 m² è parametrica.
-3. **Assenza offerte vendor vincolanti**: tutte le voci IT/RF basate su listini pubblici 2025 + benchmark. RFQ formale prevista M+3.
-4. **Assenza indagine strutturale**: hangar riuso assume conformità statica solaio/copertura per carichi UAV + batterie. Da verificare M+1.
-5. **Prezzario Liguria 2025**: utilizzato edizione corrente; eventuale aggiornamento 2026 potrebbe modificare voci edili ±3-5%.
+1. **WBS 3 vs WBS 4-5 investment-grade**: il presente CME è WBS 3 (sub-component operativo); l'investment-grade richiede WBS 4 (componente fisica + capitolato dettagliato) e WBS 5 (singolo articolo prezzario), tipicamente 200-400 h Cost Estimator certificato.
+2. **Assenza sopralluogo sito**: nessuna indagine fisica condotta su immobile Pentema target (privato o pubblico). La stima dimensioni 80-150 m² resta parametrica.
+3. **Assenza offerte vendor vincolanti**: tutte le voci IT/RF si basano su listini pubblici 2025 e benchmark. La RFQ formale è prevista M+3.
+4. **Assenza indagine strutturale**: il riuso hangar assume conformità statica solaio/copertura per carichi UAV e batterie, da verificare M+1.
+5. **Prezzario Liguria 2025**: utilizzato in edizione corrente; un eventuale aggiornamento 2026 può modificare le voci edili del ±3-5%.
 6. **Scenario A vs B hangar**: scelta finale subordinata a sopralluogo + offerta locazione vincolante (decision gate G2 M+6).
 7. **Vincoli Parco Antola**: assunta compatibilità autorizzativa baseline; VIA preliminare A.12 da finalizzare.
-8. **Tariffe FTE**: indagini retributive 2025; mercato aerospace IT in espansione, possibile incremento 5-8% 2026-2027.
+8. **Tariffe FTE**: derivate da indagini retributive 2025; il mercato aerospace IT in espansione lascia possibile un incremento del 5-8% nel 2026-2027.
 
 ### 6.3 Gap residui per investment-grade (M+9 target)
 
@@ -532,7 +532,7 @@ Razionale:
 
 ---
 
-## Sezione 7 — Cronoprogramma spese Y1
+## Sezione 7. Cronoprogramma spese Y1
 
 ### 7.1 Allocazione mese-per-mese (CapEx + OpEx Y1)
 
@@ -553,7 +553,7 @@ Razionale:
 | M+12 | Operativo | Inizio servizio + manutenzione ordinaria | 2.000 | 8.000 | 339.000 |
 | | **TOTALI Y1 (CapEx + OpEx parziale)** | | **305.000** | **34.000** | **339.000** |
 
-> Nota: il totale Y1 €339k è il flusso di cassa effettivo Y1 escluse spese tecniche/IVA/contingency (che vanno in B+C). Quadro Economico totale base €505k include tutte le voci (vedi §3.2).
+> Nota: il totale Y1 €339k rappresenta il flusso di cassa effettivo Y1 al netto di spese tecniche, IVA e contingency (che ricadono in B+C). Il Quadro Economico totale base di €505k include tutte le voci (vedi §3.2).
 
 ### 7.2 Curva spese cumulate (S-curve)
 
@@ -589,15 +589,15 @@ Picco esborso CapEx: M+7 (saldo 60% ordini GCS + lavori installazione).
 | T6 | M+12 | Regione Liguria FESR (SAL 1) | 80 | A rendicontazione SAL 50% |
 | | **Totale finanziamento Y1** | | **470** | Copre €339k CapEx+OpEx Y1 + buffer |
 
-`[fonte: scenario funding mix Cap. 8 §8.7 | confidence: medium — subordinato a esito bandi]`
+`[fonte: scenario funding mix Cap. 8 §8.7 | confidence: medium, subordinato a esito bandi]`
 
 ---
 
-## Sezione 8 — Linkage cross-volume
+## Sezione 8. Linkage cross-volume
 
 ### 8.1 Riferimenti normativi e standard
 
-- **D.Lgs. 36/2023 art. 41**: Codice dei Contratti Pubblici — PFTE
+- **D.Lgs. 36/2023 art. 41**: Codice dei Contratti Pubblici, PFTE
 - **D.Lgs. 36/2023 Allegato I.7**: Contenuti minimi PFTE (CME tra obbligatori lett. l)
 - **D.M. LL.PP. 14/01/2008**: Norme Tecniche Costruzioni (NTC 2018 vigenti)
 - **Linee Guida ANAC n. 1/2016**: Servizi di architettura e ingegneria
@@ -616,19 +616,19 @@ Picco esborso CapEx: M+7 (saldo 60% ordini GCS + lavori installazione).
 
 | Riferimento | Linkage |
 |---|---|
-| **Cap. 4 — Perimetro e scope** | DEL-PFTE-12 Quadro Economico + Computo Metrico (il presente A.9 v1.5 è il deliverable) |
-| **Cap. 8 §8.3 — CapEx baseline** | Cross-check tabella §3.4 (range CapEx Y1 €700k-2M, di cui infrastructure 25-30%) |
-| **Cap. 8 §8.5.1.A — OpEx baseline** | Cross-check §4.3 (OpEx GS €73k/anno coerente con voce "Costi sede / utilities") |
-| **Cap. 8 §8.5.1.B — Regulatory team** | Cross-check §5.3 (FTE Head Regulatory 20% retainer + DPO 10%) |
-| **Cap. 8 §8.7 — Mix funding** | Cross-check §7.3 (tranche finanziamento Y1 €470k coerente con mix Coopfond + FESR + R&D) |
-| **A.4 — ICD interfaces ground segment** | Voci GCS + antenne + storage coerenti con ICD GS-UAV link e GS-Cliente data delivery |
-| **A.11 — Safety Case SORA** | Vincoli operational requirements impattano dimensionamento GCS (workstation pilota, ridondanza) + cartellonistica |
-| **A.12 — VIA preliminare** | Vincoli edilizi area Parco Antola: limita alterazioni esterne, favorisce scenario A riuso |
-| **A.10 — Piano Manutenzione preliminare** | Correlato OpEx §4.1: piano manutenzione GS coerente con cicli e budget |
-| **A.6 — CAD** | Hangar dimensionamento richiede layout UAV + batterie (decisione M+1) |
-| **A.7 — Link Budget** | Dimensionamento antenne RF (§2.4) deriva da link budget HAPS/VTOL |
-| **A.2 — Risk Register** | Voci ATEX, ENAC, AGCOM linkate a RSK-REG-022, RSK-OPS-008, RSK-REG-014 |
-| **A.5 — V&V Plan** | Collaudo + verifica (§3.2 voce B.6) linkata a test acceptance |
+| **Cap. 4. Perimetro e scope** | DEL-PFTE-12 Quadro Economico + Computo Metrico (il presente A.9 v1.5 è il deliverable) |
+| **Cap. 8 §8.3. CapEx baseline** | Cross-check tabella §3.4 (range CapEx Y1 €700k-2M, di cui infrastructure 25-30%) |
+| **Cap. 8 §8.5.1.A. OpEx baseline** | Cross-check §4.3 (OpEx GS €73k/anno coerente con voce "Costi sede / utilities") |
+| **Cap. 8 §8.5.1.B. Regulatory team** | Cross-check §5.3 (FTE Head Regulatory 20% retainer + DPO 10%) |
+| **Cap. 8 §8.7. Mix funding** | Cross-check §7.3 (tranche finanziamento Y1 €470k coerente con mix Coopfond + FESR + R&D) |
+| **A.4. ICD interfaces ground segment** | Voci GCS + antenne + storage coerenti con ICD GS-UAV link e GS-Cliente data delivery |
+| **A.11. Safety Case SORA** | Vincoli operational requirements impattano dimensionamento GCS (workstation pilota, ridondanza) e cartellonistica |
+| **A.12. VIA preliminare** | Vincoli edilizi area Parco Antola: limita alterazioni esterne, favorisce scenario A riuso |
+| **A.10. Piano Manutenzione preliminare** | Correlato OpEx §4.1: piano manutenzione GS coerente con cicli e budget |
+| **A.6. CAD** | Hangar dimensionamento richiede layout UAV + batterie (decisione M+1) |
+| **A.7. Link Budget** | Dimensionamento antenne RF (§2.4) deriva da link budget HAPS/VTOL |
+| **A.2. Risk Register** | Voci ATEX, ENAC, AGCOM linkate a RSK-REG-022, RSK-OPS-008, RSK-REG-014 |
+| **A.5. V&V Plan** | Collaudo e verifica (§3.2 voce B.6) linkati a test acceptance |
 
 ### 8.3 Riferimenti esterni operativi
 
@@ -654,12 +654,12 @@ Picco esborso CapEx: M+7 (saldo 60% ordini GCS + lavori installazione).
 
 ## Disclaimer
 
-Il presente Computo Metrico Estimativo v1.5 è elaborato in conformità a D.Lgs. 36/2023 art. 41 + Allegato I.7 con granularità WBS 3 (livello AACE Classe 4 "Study/Feasibility"). I valori unitari e quantitativi sono stime parametriche basate su prezzari pubblici 2025 + listini vendor 2025 + benchmark mercato; **non costituiscono offerta vincolante**. Per l'utilizzo del presente CME ai fini di:
+Il presente Computo Metrico Estimativo v1.5 è elaborato in conformità a D.Lgs. 36/2023 art. 41 + Allegato I.7 con granularità WBS 3 (livello AACE Classe 4 "Study/Feasibility"). I valori unitari e quantitativi sono stime parametriche basate su prezzari pubblici 2025, listini vendor 2025 e benchmark mercato; **non costituiscono offerta vincolante**. Per l'utilizzo del presente CME ai fini di:
 
 - partecipazione a bandi pubblici (Coopfond, FESR Liguria, PNRR)
 - rendicontazione SAL a finanziatori
 - procurement contratti definitivi
 
-è obbligatoria la validazione da Cost Estimator certificato AACE/ICCM + revisione RUP Regione Liguria + offerte vendor vincolanti (gap M+8-M+9 da §6.3). I range scenario worst/base/best devono essere comunicati integralmente, evitando di citare il solo scenario base in pretesa di precisione superiore alla classe AACE 4.
+è obbligatoria la validazione da Cost Estimator certificato AACE/ICCM, la revisione RUP Regione Liguria e le offerte vendor vincolanti (gap M+8-M+9 da §6.3). I range scenario worst/base/best vanno comunicati integralmente, evitando di citare il solo scenario base con pretesa di precisione superiore alla classe AACE 4.
 
 *Documento elaborato dall'agente financial-cfo-analyst del progetto HALE Firmamento Technologies. Maggio 2026.*
