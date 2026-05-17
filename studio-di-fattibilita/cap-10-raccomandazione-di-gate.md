@@ -161,11 +161,13 @@ Il verdetto Go Condizionato è **subordinato** al raggiungimento delle seguenti 
 > **⚠️ Caveat probabilistico onesto (post Audit Red Team M+3)**: il verdetto "Go Condizionato" ha probabilità di trasformarsi in **Go pieno** al M+10/M+11 stimata effettivamente ~**15-35%** (non 60-80% come potrebbe suggerire una lettura ottimistica). Le 5 hard conditions sotto sono in AND logico: la P(tutte soddisfatte simultaneamente) è il prodotto delle probabilità marginali. Scenario base atteso: **Hold con piano di mitigazione** in 60-80% dei percorsi, con re-review M+13-14. Lo scenario "Go pieno immediato" richiede esecuzione perfetta multi-stakeholder + nessuno slittamento ENAC. Vedi `AUDIT-QUALITY-VOLUME-1.md` §6 per il calcolo dettagliato.
 
 **Hard conditions** (vincolanti, no-Go se mancanti):
-- ☐ **C1**: LoI o accordo formale Regione Liguria firmato entro M+9
+- ☐ **C1**: LoI o accordo formale Regione Liguria firmato entro M+9 — *FO linkata: FO-ADD-04 (pricing PA €75k/anno ACV)*
 - ☐ **C2**: Autorizzazione SORA ENAC operativa entro M+9
-- ☐ **C3**: Mix funding ≥ 60% committed (Coopfond + Regione + equity + R&D credit) entro M+10
-- ☐ **C4**: ≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6
+- ☐ **C3**: Mix funding ≥ 60% committed (Coopfond + Regione + equity + R&D credit) entro M+10 — *FO linkata: FO-ADD-09 (mix funding 60% threshold)*
+- ☐ **C4**: ≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6 — *FO linkata: FO-ADD-07 (workshop M+6 output) + FO-ADD-01 (cooperative come vantaggio competitivo)*
 - ☐ **C5**: Pre-application meeting ENAC con feedback documentato entro M+3-6
+
+> **🔬 Falsifying observations aggiuntive linkate alle hard conditions C1-C5**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` per le FO operazionalizzate. Trigger principali: C1 (FO-ADD-04: pricing baseline €75k/anno per servizio EO Regione); C3 (FO-ADD-09: 60% mix funding committed); C4 (FO-ADD-07: workshop M+6 con 8/10 cooperative + FO-ADD-01: cooperative engagement metrics M+12); inoltre per Phase B 6B (§10.4): FO-ADD-05 (EASA HAPS framework apertura M+36) + FO-ADD-06 (CIRA partnership willingness M+12). Tabella consolidata: §10.X "Falsifying observations consolidate per Cap. 10".
 
 **Soft conditions** (raccomandate, no blocking ma trigger review):
 - ☐ S1: DPIA pubblica preliminare entro M+6

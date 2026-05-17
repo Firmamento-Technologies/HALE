@@ -394,6 +394,8 @@ In coerenza con ENAC AAM BP §4 [^1, §4 Benefici qualitativi], i benefici econo
 
 > **Confidence: medium** (basata su esistenza programmi); **low** sulla concretezza di singole tranche fino a LoI/contratti firmati.
 
+> **🔬 Falsifying observation aggiuntiva linkata**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-09** (mix funding Y1 ≥ 60% committed entro M+10). Trigger M+10: Letter of Award + contratti firmati (non solo proposals/LoI). Se committed funding < 40% del CapEx Y1 target, hard condition C3 falsificata + re-baseline Y1 con CapEx ridotto "MVP super-lean" + bridge financing emergency + possibile slittamento operatività a Y2.
+
 ### 8.7.2 Mix raccomandato Percorso 6B Phase B (€5.5-13.5M target su 24 mesi)
 
 | Fonte | Importo target | % |

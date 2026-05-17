@@ -181,6 +181,8 @@ In linea con boundary B2 (asset riusabili dal Percorso 6A al 6B), le scelte arch
 
 Le due metriche misurano cose diverse e sono entrambe corrette. Confidence: medium (qualitativo); quantificazione monetaria precisa in Vol. 2 Allegato A.7.
 
+> **🔬 Falsifying observation aggiuntiva linkata**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-03** (asset reuse 30-40% valore monetario). Trigger M+24 gate G5: assessment formale + valutazione tecnica indipendente. Se valore reuse < 15% del CapEx 6A, il "ladder tecnologico" è rotto e il razionale "approccio incrementale" del Cap. 1.4 perde validità — Phase B 6B richiederebbe CapEx pieno senza scaffold.
+
 ---
 
 ## 6.2 Analisi delle Prestazioni Preliminari
@@ -444,6 +446,8 @@ Per ciascuna decisione architetturale chiave, conduciamo trade study formali sec
 **Raccomandazione Y6+ (post-Phase B)**: valutare migrazione a E3 SS Li (per safety + ciclo vita) o E4 PEM+LH2 (per perennial guaranteed).
 
 **Falsifying observation §6.3.3**: se al gate M+24 TRL pack LiS < 5 (target 2028), il Percorso 6B perennial è bloccato; attivazione automatica E5 Seasonal-only.
+
+> **🔬 Falsifying observation aggiuntiva linkata**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-08** (LiS pack 350 Wh/kg entro 2028). Trigger M+24: roadmap vendor (Sion, Lyten, OXIS Energy) + pubblicazioni SAE/IEEE. Se TRL pack-level < 5 OR Wh/kg pack < 280, architettura E2 non implementabile → attivazione automatica E5 + ridimensionamento KPI endurance Y3-Y5.
 
 ### 6.3.4 TS-AVI-6A — Autopilota Percorso 6A
 

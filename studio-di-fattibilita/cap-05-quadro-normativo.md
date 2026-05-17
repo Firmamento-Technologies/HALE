@@ -41,6 +41,8 @@ Il capitolo presuppone — come **scelte strategiche-politiche** del fondatore, 
 
 L'analisi regolatoria che segue è applicata a *come* sostenere e *come* attuare queste due posizioni, non a *se* siano gli obiettivi giusti.
 
+> **🔬 Falsifying observation aggiuntiva linkata (B2 operazionalizzazione)**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-02** (linguaggio pubblico "complementare a IRIS²"). Trigger M+18: roadmap ufficiale IRIS² (DG CNECT) include "stratospheric layer" / "complementary platforms layer". Se NO al M+18, riformulazione posizionamento esterno (riduzione narrativo a "Italian operator of strategic stratospheric services" pur preservando B2 internamente).
+
 ---
 
 ## 5.1 Quadro Unione Europea — Aviazione Civile e UAS
@@ -542,6 +544,8 @@ I template di dichiarazione sono allegati al Vol. 2 dello Studio (Allegato A.8).
 - Tempistiche TC realistiche: **5-8 anni** dall'avvio engagement formale, con costi €5-15M solo per la certificazione (incluso nel R&D Phase B €5.5-11M parzialmente)
 
 > **Showstopper formalmente registrato come RSK-REG-001 nel Risk Register**: P = High (5), I = High (4), Score = 20 🔴. Mitigation: engagement EASA Innovation Network + partnership con EuroHAPS-adjacent (CIRA, TAS) per leveraging Special Condition consortium.
+
+> **🔬 Falsifying observation aggiuntive linkate**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-05** (EASA HAPS framework apertura 2030 — al M+36 se no RMT/CRD/NPA aperto, path Certified 6B bloccato 5-10 anni aggiuntivi, trigger TRG-B2R-01 scenario B2-relaxed) + **FO-ADD-06** (CIRA partnership willingness al M+12 — se no LoI/MoU CIRA, pivot a POLITO DIMEAS HELIPLAT lineage).
 
 ### 5.10.2 Gap #2 — U-Space Italia in Costruzione
 

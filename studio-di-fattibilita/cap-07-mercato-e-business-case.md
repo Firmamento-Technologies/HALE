@@ -451,6 +451,7 @@ Il posizionamento di Firmamento poggia su 4 pilastri, ognuno con **difensibilit�
 - ✅ **Parzialmente difensibile vs Cluster D italiani**: e-GEOS/Planetek/FlyingBasket non hanno DNA cooperativo, ma **possono fare partnership con Legacoop**: nulla impedisce a Coopfond di accettare un service contract da FlyingBasket se Firmamento fallisce. Il moat è reale ma non legale-vincolante — è una **switching cost soft**.
 - ✅ **Difensibile vs Cluster A/B sostituti**: Starlink non ha rapporto con cooperative SNAI; AALTO neppure
 - **Conclusione onesta**: questo è il **vero pilastro difendibile** del posizionamento Firmamento. Ma per essere un moat strutturale (non soft switching cost) richiede **strutturazione giuridicamente vincolante** (consorzio formale, contratto di rete con esclusive territoriali, regime "preferred provider" con Coopfond). Lavoro non ancora completato al M+3. Action item: governance giuridica cooperative entro M+12.
+- **🔬 Falsifying observation aggiuntiva**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-01** (cooperative come vantaggio competitivo) + **FO-ADD-07** (8/10 cooperative confermate M+6). Se < 5 cooperative su 10 mostrano engagement attivo al M+12, questo pilastro va declassato a "narrativa marketing" (action item: BMC redesign verso B2G dominante).
 
 #### Pilastro 3 — Sostenibilità + narrativa ESG
 
@@ -602,6 +603,8 @@ Lo Studio adotta i seguenti **pricing baseline RECALIBRATED** per il MVP Y1, all
 | **(legacy pre-audit, FALSIFICATO)** | | | | (€355-405k) |
 
 > **Falsifying observation §7.8.2 RECALIBRATED**: se entro M+9 non sono firmati ≥ 3 contratti pluriennali con valore aggregato ≥ €200k al pricing baseline €75-100k/anno PA + €8-12k DaaS, il SyR-Cost-003 (revenue Y1 ≥ €200k) è in stato "Failed", e va attivata revisione del modello (es. pivot a more aggressive PA push, pure cooperative agricola, o pivot pricing dual-use con MOI/MAECI). **Probabilità: M, impatto: H**. Mitigazione: engagement intensivo Regione + PC entro M+0-6 + benchmark Cluster D pubblicizzato (DR-006 closure).
+
+> **🔬 Falsifying observation aggiuntiva linkata**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-04** (pricing PA €75k/anno ACV threshold per servizio EO baseline RECALIBRATED). Trigger: contratti firmati Q1-Q3 2026 + benchmark gare Consip / Mepa-Liguria. Action se attivata: pivot pricing model outcome-based + canale B2B utility (Enel) premium pricing.
 
 ### 7.8.3 Pricing post-MVP — scale-up Y2-Y5
 

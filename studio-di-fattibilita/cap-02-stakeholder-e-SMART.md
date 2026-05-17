@@ -317,6 +317,8 @@ Cinque stakeholder sono **show-stopper o show-maker** per il successo del Percor
 
 > **Falsifying observation**: se al M+6 meno di **8 su 10** cooperative confermano partecipazione formalizzata (MoU), il modello di rete cooperativa è in crisi e va riesaminata l'aggregazione (ridurre ambito, cambiare capofila, etc.). Probabilità: low (engagement esistente forte), impatto: high.
 
+> **🔬 Falsifying observations aggiuntive linkate**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` **FO-ADD-07** (8/10 cooperative confermate post-workshop M+6) + **FO-ADD-01** (cooperative come vantaggio competitivo, metriche engagement M+12). Action se attivate: pivot BMC con peso minore B2B cooperative + focus B2G (PA) come canale dominante; co-design intensivo per re-attrarre cooperative.
+
 #### Top-5 — Comunità Pentema (S-07)
 
 **Razionale di criticità**: comunità di **14 residenti ISTAT** — accettabilità sociale del pilota su comunità così minuscola è critica per visibilità mediatica. Senza accettabilità — anche solo con uno o due cittadini ostili che attivano media o Garante — il pilota è bloccato. Vedi caso recenti drone deployments urbani 2023-2024 (sospensione rapida).

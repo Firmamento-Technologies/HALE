@@ -558,6 +558,12 @@ La transizione dalla traiettoria "Fase 5 full" alla traiettoria "B2-relaxed stan
 >
 > **Falsifying observation di attivazione (FO-F11-07, nuovo)**: se al M+72 (Y6) si verificano **≥ 3 trigger** tra TRG-B2R-01/02/06 (i 3 Critical), lo scenario B2-relaxed è **traiettoria operativa di default**, e B2 full diventa **option di lungo termine** (rilancio Y10-Y15 se condizioni esterne maturano). Confidence falsificabilità: **high**.
 
+> **🔬 Falsifying observations aggiuntive linkate**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` per le FO operazionalizzate della Fase 5 / B2:
+> - **FO-ADD-02**: linguaggio "complementare a IRIS²" (M+18 roadmap DG CNECT) — se IRIS² non include "stratospheric layer", riformulazione posizionamento esterno.
+> - **FO-ADD-05**: EASA HAPS framework apertura entro 2030 — al M+36 trigger TRG-B2R-01.
+> - **FO-ADD-06**: CIRA partnership willingness (M+12) — pivot a POLITO DIMEAS HELIPLAT se no LoI/MoU CIRA.
+> - **FO-ADD-10**: visione 10 anni operazionalizzata aggregata — verifica milestone Y4/Y6/Y8/Y9 (ARR + funding + posizionamento istituzionale EU). Se 2 dei 4 milestone falliti, B2 full falsificata, attivazione automatica B2-relaxed.
+
 ### 11.6bis.3 Caratteristiche operative Y10 nello scenario B2-relaxed
 
 | Dimensione | Configurazione B2-relaxed Y10 | Note |
