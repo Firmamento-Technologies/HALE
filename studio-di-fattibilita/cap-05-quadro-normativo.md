@@ -450,6 +450,66 @@ Per la cybersecurity della parte volante (avionica + payload + link C2), si appl
 
 ---
 
+## 5.7bis Quadro Ambientale e di Tutela del Paesaggio — Pillar Ambientale (post A.12 VIA v2.0)
+
+> **Inserimento post audit M+3 + refinement A.12 VIA v2.0** (subagent batch 2): il refinement dell'Allegato A.12 Relazione VIA Preliminare COMPLETE v2.0 (55 KB / 838 righe) ha identificato un **pillar normativo ambientale completo** non coperto dalle sezioni precedenti del Cap. 5 (in precedenza l'ambientale era limitato a riferimenti ISO 14001 generici). Questa sezione formalizza il quadro normativo applicabile alle operazioni VTOL su area protetta Pentema/Parco Antola.
+
+### 5.7bis.1 Normativa ambientale UE e nazionale applicabile
+
+| Riferimento | Ambito | Applicabilità progetto |
+|---|---|---|
+| **D.Lgs. 152/2006** (Testo Unico Ambiente, TUA) art. 19 + Allegato IV | Procedure VIA — verifica di assoggettabilità (screening) | Procedura raccomandata A.12 v2.0; esito atteso NON-assoggettabilità (P 60-70%) |
+| **L. 394/1991** (Legge quadro Aree Protette) | Vincoli operativi parchi nazionali/regionali | Parco Naturale Regionale Antola |
+| **L.R. Liguria 12/1995** (Istituzione Parco Antola) | Zonizzazione + vincoli specifici Parco Antola | Pentema in area parco — vincoli zona; convenzione operativa Ente Parco entro M+9 |
+| **L.R. Liguria 32/2012** (Procedure VIA Liguria) | Procedure regionali VIA | Istruttoria Regione DG Ambiente; pre-application meeting ARPAL M+7 |
+| **L.R. Liguria 28/2009** (Procedure VIncA) | Valutazione Incidenza Ambientale Rete Natura 2000 | Screening VIncA Livello I Allegato G DPR 357/1997 (esito atteso NON-significatività) |
+| **DPR 357/1997** (recepimento Direttiva Habitat 92/43/CEE) | Tutela habitat Rete Natura 2000 | SIC/ZSC/ZPS IT1331402 "Parco Naturale dell'Antola"; specie target aquila reale Aquila chrysaetos (Allegato I Direttiva Uccelli), gufo reale Bubo bubo, lupo Canis lupus (Allegato II Habitat) |
+| **Direttiva 92/43/CEE Habitat** | Habitat tutelati EU | 9110 faggete tipiche Pentema |
+| **Direttiva 2009/147/CE Uccelli** | Avifauna selvatica tutelata | Allegato I specie protette |
+| **Direttiva 2014/52/UE VIA** | Procedure VIA EU | Recepito da D.Lgs. 152/2006 |
+| **L. 447/1995** (Legge quadro inquinamento acustico) | Limiti acustici + classificazione zonale | Rumore VTOL 65-75 dB(A) @ 100 m vs limiti Classe I-II Parco |
+| **L.R. Liguria 12/1998** (Disciplina inquinamento acustico) | Classificazione acustica Comuni | Comune Torriglia classificazione vigente da verificare |
+| **D.Lgs. 42/2004** (Codice Urbani — Beni Culturali e Paesaggio) | Vincoli paesaggistici | Parco Antola: tutela paesaggistica art. 142 |
+| **R.D. 3267/1923** (Vincolo idrogeologico) | Versanti montani Pentema | Hangar Pentema su edifici esistenti (no nuove costruzioni) |
+
+### 5.7bis.2 Procedura raccomandata per il Percorso 6A Pentema
+
+**Classe procedura applicabile**: **Verifica di Assoggettabilità (screening art. 19 D.Lgs. 152/2006 + L.R. Liguria 32/2012)** affiancata da **Screening VIncA Livello I (ex DPR 357/1997 + L.R. Liguria 28/2009)** per SIC IT1331402.
+
+**Esito atteso** (confidence medium 60-70%): **NON-assoggettabilità a VIA piena** con mitigazioni proposte (operazioni periodiche, non installazioni permanenti, MTOM <25 kg). Scenario fallback: VIA piena se Regione richiede (improbabile per VTOL Class III scala pilota).
+
+**Tempistiche istruttoria Regione Liguria**:
+- Pre-application meeting ARPAL: M+7
+- Domanda formale verifica assoggettabilità: M+9
+- Esito Regione DG Ambiente: M+12-M+15 (90-150 gg da domanda)
+- Convenzione operativa Ente Parco Antola: M+9 (parallela)
+
+### 5.7bis.3 Mitigazioni operative integrate nel disegno della missione
+
+Le 18 mitigazioni dettagliate in A.12 v2.0 §A.12.6 sono raggruppate in 4 famiglie con codici operativi tracciati:
+
+| Famiglia | Codici M-* | Aree target | Owner |
+|---|---|---|---|
+| **Avifauna** | M-AVI-01..07 | Buffer 500 m nidi noti; quota min 200 m AGL su SIC (vs minimo regolamentare 120 m); restrizione marzo-luglio; training piloti; observation pre-volo abort | Ambientalista esterno + Ente Parco + operations |
+| **Rumore** | M-NOI-01..04 | Modello propagazione 7 punti; corridoi evitano centro abitato Pentema < 200 m AGL; no operazioni notturne 22:00-06:00 salvo PC; campagna informativa | Operations + Comune Torriglia + ARPAL |
+| **Acque** | M-ACQ-01..03 | Cautela sorvolo Diga del Brugneto (CAP Genova riserva strategica); buffer protettivo | Operations + CAP Genova |
+| **Paesaggio** | M-PAE-01..04 | Engagement preventivo Italia Nostra Liguria + WWF + Legambiente; comunicazione benefici controfattuali; eventi pubblici Pentema | Business-model + ambientalista + Ente Parco |
+
+### 5.7bis.4 Linkage cross-volume
+
+- **Cap. 1.2.2**: territorio Pentema + Parco Antola contesto
+- **Cap. 2.4 top-5 comunità Pentema**: accettabilità sociale (RSK-AMB-002 rumore + RSK-AMB-003 paesaggio)
+- **Cap. 6 §6.1.3**: design choices VTOL coerenti con vincoli ambientali (quota min, payload elettrico)
+- **Cap. 7 §7.5.1 pilastro #3 sostenibilità**: narrativa ESG quantitata da A.12 §A.12.8 benefici controfattuale (-99% CO₂ vs elicottero manned)
+- **Cap. 10 §10.3.2 hard conditions**: nuovo requisito implicito C6 (autorizzazione Ente Parco Antola + non-assoggettabilità Regione) da considerare per gate G3 — non strettamente vincolante per Studio M+11 ma critico per operatività Y1 M+12
+- **Risk Register A.2** v1.5: **3 nuovi rischi RSK-AMB-001/002/003** + nuova categoria "Ambientale" (vedi `allegati/A2-Risk-Register/A2-RISK-REGISTER-REPORT.md` §3bis)
+- **RTM A.1** v1.5: **REQ-NF-AMB-01** nuovo requisito non-funzionale da formalizzare (vedi `allegati/A1-RTM/A1-RTM-REPORT.md` §5.6)
+- **A.12 Allegato VIA preliminare v2.0**: documento di riferimento istruttoria Regione Liguria
+
+> **Status M+3**: pillar ambientale **identificato + integrato + linkato cross-volume**; gap residui = engagement esterno (mappa nidi avifauna Ente Parco M+6, pre-app ARPAL M+7, convenzione operativa Parco M+9). Confidence aggregato: **medium** (procedura tecnica chiara; esito istruttoria Regione dipende da interpretazione DG Ambiente).
+
+---
+
 ## 5.8 Standard Tecnici Applicabili (Compliance Trasversale)
 
 | Standard | Ambito | Applicabilità progetto HALE/VTOL |

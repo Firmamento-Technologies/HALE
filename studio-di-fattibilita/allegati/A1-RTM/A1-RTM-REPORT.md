@@ -160,6 +160,21 @@ Action item M+5-6 per portare la coverage SyR→SsR da 72% a ≥80% (target G2):
 - 0 waiver formali concessi.
 - Prossimo audit semestrale: M+9 (pre-G3 M+10/M+11).
 
+### 5.6 Nuovo requisito da integrare v1.5 — REQ-NF-AMB-01 (proposto da A.12 VIA v2.0)
+
+Il refinement Allegato A.12 VIA preliminare v2.0 (subagent batch 2 M+3) ha identificato un **nuovo requisito non-funzionale ambientale** da integrare al RTM v1.5 M+6:
+
+| Req-ID | Tipo | Statement | Confidence | Verification | Parent | Riferimento |
+|---|---|---|---|---|---|---|
+| **REQ-NF-AMB-01** | Non-Functional / Environmental | Le operazioni di volo VTOL del Percorso 6A devono rispettare i vincoli ambientali del Parco Naturale Regionale dell'Antola (L.R. Liguria 12/1995) e della Rete Natura 2000 SIC/ZSC/ZPS IT1331402, includendo: (a) buffer 500 m da nidi specie Allegato I Direttiva Uccelli noti, (b) quota minima 200 m AGL su SIC (vs minimo regolamentare 120 m), (c) restrizione operativa marzo-luglio in zone di nidificazione, (d) monitoraggio acustico in 3 punti rappresentativi Y1. | medium (richiede mappa nidi Ente Parco Antola M+6) | VR-AMB-01 (audit ambientale M+12 con Ente Parco + ARPAL) + VR-AMB-02 (rilievo bioacustico M+10 baseline + M+12 monitoring) | StNeed-XXX (nuovo "rispetto vincoli ambientali Parco Antola") da formalizzare workshop M+6 + Boundary B1 (cooperative + territorio) | A.12 VIA v2.0 §A.12.6 mitigazioni + §A.12.5 RSK-AMB linkage |
+
+**Action item RTM v1.5 (M+6)**:
+- Aggiungere REQ-NF-AMB-01 a sheet `SyR` (sezione "Non-Functional / Environmental" nuova) → diventa SyR-NF-AMB-001 (numerazione standard)
+- Aggiungere nuovo StNeed "rispetto vincoli Parco Antola + Natura 2000" da workshop M+6 con Ente Parco Antola (parent legittimo del nuovo SyR)
+- Aggiungere VR-AMB-01 + VR-AMB-02 a sheet `VR` (audit + monitoring acustico)
+- Update coverage matrix: nuovo SyR-NF-AMB-001 deve avere 1+ SsR (es. SsR-OPS-XXX: mission planner deve includere geofence Parco + buffer nidi; SsR-AVI-XXX: FCS deve enforce quota min 200 m AGL su SIC)
+- Update statistiche v1.5: StNeed 28→29, SyR 65→66, NegR potenziale +1 ("NO sorvolo nidi avifauna in marzo-luglio")
+
 ---
 
 ## 6. Versioning Roadmap
@@ -168,7 +183,7 @@ Action item M+5-6 per portare la coverage SyR→SsR da 72% a ≥80% (target G2):
 |---|---|---|---|
 | **v0.5** | M+3 (Cap. 3 baseline) | 17 StNeed + 42 SyR + ~80 SsR campione + 14 NegR | aerospace-SE |
 | **v1.0** (presente) | M+3 estesa | 28 StNeed + 65 SyR + 81 SsR + 22 IR + 15 NegR + 68 VR (279 totali) — coverage 100% StNeed→SyR, 100% SyR→VR, 0 orphan, 0 untestable | aerospace-SE |
-| **v1.5** | M+6 (G2 Architecture Baselined) | Workshop stakeholder structured + pre-application ENAC + 30% expansion + chiusura OQ-001/006/007 → +10-15 SsR, refresh confidence levels, status update VR | aerospace-SE + tech-leads |
+| **v1.5** | M+6 (G2 Architecture Baselined) | Workshop stakeholder structured + pre-application ENAC + 30% expansion + chiusura OQ-001/006/007 + **integrazione REQ-NF-AMB-01 (A.12 VIA v2.0) + StNeed Ente Parco Antola + VR-AMB-01/02 + chiusura 24 GAP residui A.4/A.11/A.12** → +10-15 SsR, refresh confidence levels, status update VR | aerospace-SE + tech-leads + ambientalista |
 | **v2.0** | M+10/M+11 (G3 FEASIBILITY GATE PRIMARIO) | RTM congelata baseline Operations Manual + SORA application + Quadro Economico + Feasibility verdict — ≥95% coverage SyR→SsR, ≥100% coverage SyR→VR, 0 untestable, 0 orphan | systems engineering board |
 | **v2.5** | M+12 (G4 fine pilota VTOL) | Update post-pilot Y1 + lessons learned + revisione SyR-Cost-003 (revenue effettivo) + risk reassessment | aerospace-SE + ops |
 | **v3.0** | M+24 (G5 evaluation Phase B HALE) | Phase B HALE expansion + EASA Special Condition baseline + consortium EU formalizzato + SyR-F-005/P-005/P-006 revisione (energy balance simulation completa) | aerospace-SE + 6B tech-leads |

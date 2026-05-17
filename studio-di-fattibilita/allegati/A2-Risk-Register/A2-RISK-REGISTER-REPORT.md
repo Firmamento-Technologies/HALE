@@ -54,25 +54,26 @@ Il Risk Register Firmamento HALE/VTOL e' costruito secondo **NASA NPR 8000.4A - 
 
 ## 2. Statistiche aggregate
 
-**Totale rischi formalmente tracciati**: 116
+**Totale rischi formalmente tracciati**: 116 (v1.0) → **119** (v1.5 M+6 con nuova categoria Ambientale post A.12 VIA v2.0)
 
 ### 2.1 Per categoria
-| Categoria | N rischi | Showstopper | RED | YELLOW | GREEN |
-|---|---:|---:|---:|---:|---:|
-| Cybersecurity | 7 | 0 | 0 | 4 | 3 |
-| Finanziario | 10 | 1 | 2 | 6 | 2 |
-| Geopolitico | 5 | 0 | 0 | 5 | 0 |
-| Mercato | 10 | 0 | 0 | 8 | 2 |
-| Operativo | 12 | 0 | 0 | 8 | 4 |
-| Privacy/Legale | 7 | 0 | 0 | 4 | 3 |
-| Regolatorio | 30 | 1 | 8 | 13 | 9 |
-| Reputazionale | 5 | 0 | 0 | 3 | 2 |
-| Risorse Umane | 5 | 0 | 1 | 2 | 2 |
-| Supply Chain | 7 | 0 | 1 | 3 | 3 |
-| Tecnico | 15 | 2 | 4 | 8 | 3 |
-| Tecnico/Privacy | 1 | 0 | 0 | 1 | 0 |
-| Tecnico/Regolatorio | 2 | 1 | 1 | 1 | 0 |
-| **TOTALE** | **116** | **5** | **17** | **66** | **33** |
+| Categoria | N rischi v1.0 | N rischi v1.5 | Showstopper | RED | YELLOW | GREEN |
+|---|---:|---:|---:|---:|---:|---:|
+| **Ambientale (NEW v1.5)** | 0 | **3** | 0 | 0 | 1 (RSK-AMB-001) | 2 (RSK-AMB-002/003) |
+| Cybersecurity | 7 | 7 | 0 | 0 | 4 | 3 |
+| Finanziario | 10 | 10 | 1 | 2 | 6 | 2 |
+| Geopolitico | 5 | 5 | 0 | 0 | 5 | 0 |
+| Mercato | 10 | 10 | 0 | 0 | 8 | 2 |
+| Operativo | 12 | 12 | 0 | 0 | 8 | 4 |
+| Privacy/Legale | 7 | 7 | 0 | 0 | 4 | 3 |
+| Regolatorio | 30 | 30 | 1 | 8 | 13 | 9 |
+| Reputazionale | 5 | 5 | 0 | 0 | 3 | 2 |
+| Risorse Umane | 5 | 5 | 0 | 1 | 2 | 2 |
+| Supply Chain | 7 | 7 | 0 | 1 | 3 | 3 |
+| Tecnico | 15 | 15 | 2 | 4 | 8 | 3 |
+| Tecnico/Privacy | 1 | 1 | 0 | 0 | 1 | 0 |
+| Tecnico/Regolatorio | 2 | 2 | 1 | 1 | 1 | 0 |
+| **TOTALE** | **116** | **119** | **5** | **17** | **67** | **35** |
 
 ### 2.2 Per status
 
@@ -444,6 +445,57 @@ Ordinati per Score baseline (P x I) decrescente. Per ciascuno: descrizione, impa
 **Fase critica**: Y2-Y3  
 **Confidence**: medium  
 **EWI**: Revenue actuals monthly + cash burn rate  
+
+---
+
+## 3bis. Nuovi rischi ambientali proposti da A.12 VIA v2.0 (M+3 post audit batch 2)
+
+> **Fonte**: refinement Allegato A.12 Relazione VIA Preliminare COMPLETE v2.0 — §A.12.5 Linkage Risk Register. Nuova categoria **Ambientale** (n=3) da integrare al sheet `Categories` del Risk Register v1.5 M+6 (sostituirà v1.0 attuale di 116 rischi → v1.5 di 119 rischi, di cui 1 YELLOW + 2 GREEN).
+
+### 26. RSK-AMB-001 - Ambientale - Score 12 -> residual 6 (YELLOW)
+
+**Descrizione**: Disturbo avifauna nidificante in SIC IT1331402 Parco Antola — operazioni VTOL in stagione riproduttiva marzo-luglio possono indurre flushing aquila reale (Aquila chrysaetos, Allegato I Direttiva Uccelli) e gufo reale (Bubo bubo) con abbandono nido + perdita covata  
+**Trigger**: Ente Parco Antola comunica nidificazione attiva in raggio < 500 m da corridoi volo M+6+, OR ARPAL/ISPRA segnala incidenti documentati di flushing UAV  
+**Owner**: ambientalista esterno + operations + Ente Parco Antola  
+**Status**: Open-Medium  
+**Response**: Mitigate  
+**Mitigation**: M-AVI-01 (buffer 500 m da nidi noti); M-AVI-02 (restrizione operativa marzo-luglio in zone nidificazione); M-AVI-03 (quota minima 200 m AGL su SIC vs minimo regolamentare 120 m); M-AVI-04 (acquisizione mappa nidi Ente Parco entro M+6); M-AVI-05 (engagement formale Ente Parco con convenzione operativa bozza M+9); M-AVI-06 (training piloti su comportamento avifauna); M-AVI-07 (osservazione visiva pre-volo + abort se avvistamento rapaci)  
+**Residual P x I**: 2 x 3 = 6  
+**Fase critica**: Y1+ (operazioni continuative)  
+**Confidence**: medium (richiede mappa nidi da Ente Parco, ARPAL bioacustica)  
+**EWI**: Report Ente Parco trimestrale + monitoring acustico passive 3 punti rappresentativi + audit ARPAL annuale  
+**Falsifying observation**: Se al M+12 audit Ente Parco/ARPAL rileva ≥ 2 incidenti documentati di flushing nidi entro buffer 500 m, mitigation insufficiente — attivazione re-baseline corridoi volo + estensione restrizione stagionale a febbraio-agosto + eventuale sospensione operazioni in zone SIC critiche  
+**Linkage**: A.12 VIA v2.0 §A.12.3 fauna + §A.12.4 VIncA + §A.12.6 mitigazioni; REQ-NF-AMB-01 nuovo per RTM v1.5; FO-AMB-01 (proposed)
+
+### 27. RSK-AMB-002 - Ambientale - Score 9 -> residual 4 (GREEN)
+
+**Descrizione**: Inquinamento acustico VTOL in area parco — 65-75 dB(A) a 100 m può superare limiti L. 447/1995 + classificazione acustica L.R. Liguria 12/1998 in fasce protette parco (Classe I notturna 40 dB / diurna 50 dB; Classe II diurna 55 dB) durante operazioni ravvicinate (< 100 m AGL su zone urbanizzate o eventi raduno)  
+**Trigger**: Misurazione fonometrica Y1 > limiti tabella zonizzazione, OR esposto comunità Pentema/Torriglia per disturbo acustico (anche un solo cittadino può attivare Comune + ARPAL)  
+**Owner**: operations + ambientalista esterno + Comune Torriglia  
+**Status**: Open-Medium  
+**Response**: Mitigate  
+**Mitigation**: M-NOI-01 (modello propagazione rumore pre-pilota a 7 punti rappresentativi + classificazione acustica Comune Torriglia); M-NOI-02 (corridoi di volo evitano sorvolo Pentema centro abitato < 200 m AGL); M-NOI-03 (no operazioni notturne 22:00-06:00 salvo emergency PC); M-NOI-04 (campagna informativa preventiva comunità Pentema)  
+**Residual P x I**: 2 x 2 = 4  
+**Fase critica**: Y1+  
+**Confidence**: medium-high (limite operativo conservativo VTOL CW-30E classe rumore moderata)  
+**EWI**: Esposti Comune Torriglia + misure fonometriche ARPAL ad-hoc + feedback workshop comunità Pentema  
+**Falsifying observation**: Se al M+12 ≥ 1 esposto cittadino formale OR ARPAL rileva sforamento > 5 dB rispetto limite zonale, mitigation insufficiente — re-baseline corridoi + eventuale relocation hangar Pentema  
+**Linkage**: A.12 VIA v2.0 §A.12.3 rumore + §A.12.6 M-NOI; Cap. 2 §2.4 top-5 comunità Pentema (accettabilità sociale); FO-AMB-02 (proposed)
+
+### 28. RSK-AMB-003 - Ambientale - Score 8 -> residual 3 (GREEN)
+
+**Descrizione**: Impatto visivo paesaggistico VTOL in area vincolata D.Lgs. 42/2004 — sorvolo paesaggi tutelati Parco Antola può configurare impatto visivo transitorio percepito dalla comunità + turisti, con potenziale opposizione associazioni ambientaliste (Italia Nostra, WWF, Legambiente) in fase istruttoria Regione  
+**Trigger**: Esposto associazioni ambientaliste in fase consultazione pubblica VIA OR opposizione Comune Torriglia in DGR  
+**Owner**: business-model + ambientalista esterno + Ente Parco + Comune Torriglia  
+**Status**: Open-Low  
+**Response**: Mitigate  
+**Mitigation**: M-PAE-01 (engagement preventivo associazioni ambientaliste Italia Nostra Liguria + WWF Liguria + Legambiente Liguria); M-PAE-02 (comunicazione trasparente impatto transitorio + benefici ambientali controfattuale -99% CO₂ vs elicottero manned); M-PAE-03 (eventi pubblici Pentema con dimostrazione volo + Q&A comunità); M-PAE-04 (rispetto corridoi volo concertati con Ente Parco evitando viste paesaggistiche iconiche es. Monte Antola panoramica)  
+**Residual P x I**: 1 x 3 = 3  
+**Fase critica**: Y0-Y1 (fase istruttoria Regione + autorizzazione Parco)  
+**Confidence**: medium  
+**EWI**: Press monitoring associazioni ambientaliste + workshop Pentema feedback + Regione Liguria DGR esito  
+**Falsifying observation**: Se al M+9 ≥ 2 associazioni ambientaliste pubblicano opposizione formale a Regione Liguria, mitigation insufficiente — re-design comunicazione + eventuale pivot site pilota alternative (es. Val Trebbia Comune Rondanina)  
+**Linkage**: A.12 VIA v2.0 §A.12.3 paesaggio + §A.12.9 engagement plan; Cap. 7 §7.5.1 pilastro #3 sostenibilità + ESG narrative; FO-AMB-03 (proposed)
 
 ---
 

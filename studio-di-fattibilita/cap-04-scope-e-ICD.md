@@ -594,6 +594,52 @@ Le Open Questions specifiche al Cap. 4 (perimetro, deliverable, ICD), da chiuder
 | OQ-CAP4-09 | INT-19 LoI Regione Liguria: valore vincolante (LoI binding) o non-binding letter of support? | Negoziazione Regione | Coopfond legal | M+6 |
 | OQ-CAP4-10 | INT-20 ecosistema EU: produciamo un'analisi preliminare di "compatibility" GAIA-X + Copernicus + future HAPS consortium durante PFTE, o lo deferiamo? | Decisione strategica boundary B2 | sovereign-strategist + Firmamento DG | M+6 |
 
+### 4.7bis Open Questions tracciate dai refinement Volume 2 v2.0 (subagent batch 2 M+3)
+
+> **Origine**: refinement engineering-grade Allegati A.4 ICD Detailed v2.0 + A.11 SORA Safety Case COMPLETE v2.0 + A.12 VIA preliminare COMPLETE v2.0 ha identificato **24 GAP residui** che diventano Open Questions tracciate del Cap. 4. Owner agent assegnato + deadline operativa + criticità per gate.
+
+#### A.4 ICD Detailed v2.0 — GAP residui (10 OQ)
+
+| OQ-ID | Domanda / Gap | Criticità | Owner | Deadline | Gate target |
+|---|---|---|---|---|---|
+| **OQ-ICD-01 (GAP-01)** | MAVLink dialect proprietary JOUAV — il dialetto custom del FCS JOUAV CW-30E non è documentato pubblicamente. Necessaria documentazione completa da vendor RFQ per validare compatibilità GCS Firmamento. Rischio rework €15-30k se incompatibile. | HIGH | vtol-uas-specialist + avionics-gnc-engineer | M+6 | Gate G2 (vendor quotation) |
+| **OQ-ICD-02 (GAP-02)** | SATCOM Iridium Certus coverage Pentema — area montana 1100-1300 m s.l.m., possibili occlusioni in canyon stretto. Coverage non misurata. Test di copertura M+8-M+10. | MEDIUM | avionics-gnc-engineer + operations | M+8-M+10 | Gate G3 (pre-operations) |
+| **OQ-ICD-03 (GAP-03)** | SATCOM Inmarsat BGAN vs Iridium Certus per backup C2 — confronto disponibilità + costi + bitrate effettivo per area Pentema. | MEDIUM | avionics-gnc-engineer | M+10 | Gate G3 |
+| **OQ-ICD-04 (GAP-04)** | Mission Computer (MC) hardware non definitivamente selezionato — candidate Jetson Orin AGX (Privacy pipeline INT-15) vs alternative aerospace-qualified (es. Curtiss-Wright modules). Decisione TS-AVI-6A. | MEDIUM | avionics-gnc-engineer + aerospace-systems-engineer | M+8 | Gate G3 |
+| **OQ-ICD-05 (GAP-05)** | Sony 7R IV shutter lag in payload chain — calibrazione PPS-GNSS sync timing diurna vs notturna; test bed reale. | LOW | telecom-ntn-payload-expert + avionics-gnc-engineer | M+10 | Gate G3 |
+| **OQ-ICD-06 (GAP-06)** | ENAC feedback DAA non-cooperative — TRL 5-6, ENAC potrebbe richiedere validazione operativa per SAIL III. Rischio 6-12 mesi ritardo + €150-300k se richiesto. **Critico per gate**. | HIGH | aviation-regulatory-counsel + avionics-gnc-engineer | M+6 (pre-application) | Gate G2 |
+| **OQ-ICD-07 (GAP-07)** | DO-260B compliance ADS-B vendor (Sagetech XPS-TR + alternative) — verifica MOPS + retest dopo aggiornamenti firmware. | MEDIUM | avionics-gnc-engineer | M+10 | Gate G3 |
+| **OQ-ICD-08 (GAP-08)** | DPIA Garante Privacy per blur on-board YOLOv8n — necessaria notifica preventiva art. 36 GDPR (rischio alto su biometria territoriale)? **Critico per gate operatività**. | HIGH | data-privacy-counsel + CISO new | M+7 | Gate G3 + operations Y1 |
+| **OQ-ICD-09 (GAP-09)** | YOLOv8n su dataset UAV italiano — modello non testato su dataset locale (volti, targhe, oggetti rurali Liguria). False positive rate da validare. | MEDIUM | data-privacy-counsel + ML engineer (nuovo FTE?) | M+9 | Gate G3 |
+| **OQ-ICD-10 (GAP-10)** | Standard MAVLink Common Message Set v2.0 — verifica retrocompatibilità con possibili future versioni dialect Firmamento custom. | LOW | avionics-gnc-engineer | M+12 | post-MVP Y1 |
+
+#### A.11 SORA Safety Case Complete v2.0 — GAP residui (10 OQ-SORA)
+
+| OQ-ID | Domanda / Gap | Criticità | Owner | Deadline | Gate target |
+|---|---|---|---|---|---|
+| **OQ-SORA-01** | Sparse vs moderate density classification Pentema — ENAC potrebbe classificare diversamente data presenza ferrovia Genova-Casella + SS45 + comunità sparse circostanti. Impatta GRC finale. | HIGH | aviation-regulatory-counsel + ENAC pre-app | M+6 | Pre-application ENAC |
+| **OQ-SORA-02** | Characteristic dimension CW-30E (1-3 m provisional) — necessaria specifica vendor JOUAV per definitiva. Impatta lethality calc + GRC. | HIGH | vtol-uas-specialist + aviation-regulatory-counsel | M+6 | Pre-application ENAC |
+| **OQ-SORA-03** | Vendor evidence JOUAV — design assurance level, software DAL, hardware DAL, MTBF, FMEA test reports. Necessari per OSO #18-21 (Software/Hardware Design). | HIGH | vtol-uas-specialist + aerospace-systems-engineer | M+6 (RFQ vendor) | Pre-application ENAC + Gate G2 |
+| **OQ-SORA-04** | CISO/Part-IS gap (cross RSK-REG-019) — CISO FTE non ancora assunto; Part-IS EASA compliance richiede Information Security Management System operativo. | HIGH | aviation-regulatory + HR | M+6 (CISO hire) | Pre-application ENAC |
+| **OQ-SORA-05** | PIC (Pilot In Command) BVLOS hire — pilota qualificato BVLOS SAIL III non ancora identificato. Tempistiche assunzione + training 6-9 mesi. | MEDIUM | HR + operations | M+9 | Operations Y1 |
+| **OQ-SORA-06** | Parachute test in volo — BRS parachute < 7 m/s tasso di discesa target richiede test di rilascio in volo certificati. Costo test €30-60k. | MEDIUM | operations + vendor parachute | M+10 | Operations Y1 |
+| **OQ-SORA-07** | Operations Manual completo — sub-deliverable DEL-PFTE-04 ConOps v2.0, da redigere in dettaglio per SORA application. | MEDIUM | aviation-regulatory + operations | M+10 | Gate G3 |
+| **OQ-SORA-08** | Maintenance Program (Allegato A.10) — da espandere da preliminary a programma operativo per SORA application. | MEDIUM | operations + EN 9110 consultant | M+10 | Gate G3 |
+| **OQ-SORA-09** | TMPR (Tactical Mitigations Performance Requirements) validation — ADS-B IN + non-cooperative DAA performance evidence. | MEDIUM | avionics-gnc-engineer + aviation-regulatory | M+10 | Gate G3 |
+| **OQ-SORA-10** | Adjacent containment testing — geofence hard + FTS test in scenario adjacent area (Torriglia 3.5 km, ferrovia Genova-Casella). | MEDIUM | operations + avionics-gnc-engineer | M+10-M+12 | Operations Y1 |
+
+#### A.12 VIA Preliminare Complete v2.0 — GAP residui (5 OQ-AMB top)
+
+| OQ-ID | Domanda / Gap | Criticità | Owner | Deadline | Gate target |
+|---|---|---|---|---|---|
+| **OQ-AMB-01** | Mappa nidi specie Allegato I Direttiva Uccelli (aquila reale, gufo reale) da Ente Parco Antola — necessaria per definire buffer 500 m. | HIGH | ambientalista esterno + Ente Parco Antola | M+6 | Operations Y1 + RSK-AMB-001 mitigation |
+| **OQ-AMB-02** | Formulario aggiornato Natura 2000 IT1331402 — verifica habitat e specie target attuali (vs versione storica). | HIGH | ambientalista esterno + ARPAL | M+5 | VIncA screening + Gate G3 |
+| **OQ-AMB-03** | Pre-application meeting ARPAL — engagement formale Regione DG Ambiente per procedura screening art. 19. | HIGH | aviation-regulatory + Firmamento DG | M+7 | Procedura VIA + Gate G3 |
+| **OQ-AMB-04** | Convenzione operativa bozza Ente Parco Antola — accordo scritto su corridoi volo + buffer + restrizioni stagionali. | MEDIUM | business-model + Ente Parco | M+9 | Operations Y1 |
+| **OQ-AMB-05** | Modello propagazione rumore + rilievo bioacustico ante-operam — 7 punti rappresentativi + 3 punti monitoring acustico Y1. Costo €15-30k. | MEDIUM | ambientalista + ARPAL | M+8-M+10 | RSK-AMB-002 mitigation + Operations Y1 |
+
+> **Status M+3 OQ aggregate Cap. 4**: 10 OQ-CAP4 originali + 25 OQ batch 2 (10 OQ-ICD + 10 OQ-SORA + 5 OQ-AMB) = **35 OQ tracciate**. Di cui **9 HIGH criticità** (OQ-ICD-01, -06, -08; OQ-SORA-01, -02, -03, -04; OQ-AMB-01, -02, -03), tutte con deadline M+5-M+7 (pre-application ENAC + Gate G2). Status management: tracking in `studio-di-fattibilita/allegati/A4-ICD/` + `A11-Safety-Case-SORA/` + `A12-VIA-preliminare/` + nuovo file `OQ-CONSOLIDATED-M3.md` (proposed M+4).
+
 ---
 
 ## 4.8 Red Team check — Critical Review
