@@ -710,7 +710,7 @@ Questo report chiude il debito di rigore tecnico aperto al gate M+10 sul **shows
 4. Comparison architetture: la sola configurazione con margine **OK** in inverno è quella ipotetica E4 (PEM FC + LH2) che richiede però TRL 4 (HALE-grade) non disponibile prima di **Y6+**.
 5. **Raccomandazione operativa**: **PERENNIAL flight a 44°N NON è raccomandato come baseline operativo Y3-Y5**; attivare **fallback E5 Seasonal-only (marzo-ottobre)** come piano A commercialmente vendibile, mantenendo R&D su E2 LiS / E3 SS Li per upgrade Y5-Y7 perennial robusto.
 
-> **Verdetto gate M+10**: ⚠️ **HOLD** Percorso 6B perennial — ⚙️ **GO Condizionato** su 6B Seasonal (E5) come piano commerciale realistico.
+> **Verdetto gate M+10**: **HOLD** Percorso 6B perennial — **GO Condizionato** su 6B Seasonal (E5) come piano commerciale realistico.
 
 ---
 
@@ -852,9 +852,9 @@ Variazione univariata di MTOW (±20 %), area pannelli (±20 %), L/D (±10 %):
 
 **Lettura della tornado** (vedi `energy_balance_sensitivity.png`):
 
-1. **MTOW è il driver primario**: passare da 100 a 80 kg (−20 %) aumenta il margine di circa **+{(df_sens[(df_sens['parameter'].str.startswith('MTOW')) & (df_sens['value']==80.0)]['margin_pct'].values[0] - winter['margin_pct']):+.1f} pp**. Passare a 120 kg lo abbassa di **{(df_sens[(df_sens['parameter'].str.startswith('MTOW')) & (df_sens['value']==120.0)]['margin_pct'].values[0] - winter['margin_pct']):+.1f} pp**. ⇒ ogni kg di MTOW costa ~0.5 % di margine invernale.
-2. **Area pannelli è driver secondario forte**: +20 % di pannelli (25→30 m²) aggiunge ~**+{(df_sens[(df_sens['parameter'].str.startswith('Panel')) & (df_sens['value']==30.0)]['margin_pct'].values[0] - winter['margin_pct']):+.1f} pp**. Limite strutturale: apertura b ≤ 30 m + integrazione skin lino.
-3. **L/D è driver terziario**: +10 % L/D (28→30.8) aggiunge solo ~**+{(df_sens[(df_sens['parameter']=='L/D') & (df_sens['value']==30.8)]['margin_pct'].values[0] - winter['margin_pct']):+.1f} pp**. Buon margine di miglioramento ma fisicamente limitato (oltre L/D 35 si esce dalla feasibility low-Re).
+1. **MTOW è il driver primario**: passare da 100 a 80 kg (−20 %) aumenta il margine di circa **{(df_sens[(df_sens['parameter'].str.startswith('MTOW')) & (df_sens['value']==80.0)]['margin_pct'].values[0] - winter['margin_pct']):+.1f} pp**. Passare a 120 kg lo abbassa di **{(df_sens[(df_sens['parameter'].str.startswith('MTOW')) & (df_sens['value']==120.0)]['margin_pct'].values[0] - winter['margin_pct']):+.1f} pp**. Ogni kg di MTOW costa ~0.5 % di margine invernale.
+2. **Area pannelli è driver secondario forte**: +20 % di pannelli (25→30 m²) aggiunge ~**{(df_sens[(df_sens['parameter'].str.startswith('Panel')) & (df_sens['value']==30.0)]['margin_pct'].values[0] - winter['margin_pct']):+.1f} pp**. Limite strutturale: apertura b ≤ 30 m + integrazione skin lino.
+3. **L/D è driver terziario**: +10 % L/D (28→30.8) aggiunge solo ~**{(df_sens[(df_sens['parameter']=='L/D') & (df_sens['value']==30.8)]['margin_pct'].values[0] - winter['margin_pct']):+.1f} pp**. Buon margine di miglioramento ma fisicamente limitato (oltre L/D 35 si esce dalla feasibility low-Re).
 
 **Combinazione ottimale**: MTOW 80 kg + pannelli 30 m² + L/D 30 → simulazione separata necessaria. Stima a primo ordine: somma sensibilità ≈ +15-20 pp sul margine inverno → **ancora marginal**, non OK.
 
