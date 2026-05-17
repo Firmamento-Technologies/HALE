@@ -301,6 +301,46 @@ In coerenza con boundary B1+B2 e con il verdetto, lo Studio dichiara esplicitame
 
 ---
 
+## 10.7bis Falsifying Observations Consolidate per il Verdetto Cap. 10
+
+> **Compliance epistemic-rigor Regola 1 (falsifiability)**: ogni claim del verdetto Cap. 10 deve avere almeno una falsifying observation operativamente verificabile. Tabella consolidata di **15 falsifying observations** che, se verificate, attivano revisione del verdetto:
+
+### 10.7bis.1 FO per il verdetto Percorso 6A "HOLD CON PIANO REGOLATORIO RAFFORZATO / GO CONDIZIONATO"
+
+| FO-ID | Claim associato | Falsifying observation | Trigger / finestra | Effetto sul verdetto se attivata |
+|---|---|---|---|---|
+| **FO-10A-01** | P(Go pieno) = 5-15% (§10.0bis) | Se al M+10 **5 hard conditions C1-C5 tutte soddisfatte** (LoI Regione + SORA + funding 60% + 8 coop + pre-app ENAC) **simultaneamente**, P(Go pieno) attualizzato sale a 80%+. Inversamente, se **<3** hard conditions soddisfatte al M+10, P(Go pieno) → 0%. | M+10 gate G3 review | Verdetto formale Go pieno OR re-baseline a HOLD esteso |
+| **FO-10A-02** | C1 LoI Regione Liguria firmata entro M+9 | Se al **M+9 nessun atto formale Regione** (LoI, DGR, contratto preliminare) né dialogo attivo con Assessorato Innovazione documentato, C1 falsificata. | M+9, evidenza documentale | Hold automatico + re-review M+14 + pivot anchor alternative (Piemonte, Calabria) |
+| **FO-10A-03** | C2 SORA ENAC SAIL II-III BVLOS operativa entro M+9 | Se al **M+9 ENAC non ha rilasciato autorizzazione** OR la classificazione SAIL effettiva è IV-V (più restrittiva del target), C2 falsificata. | M+9, decisione ENAC formale | Hold con re-application + scope adjustment (VLOS solo Y1) |
+| **FO-10A-04** | C3 mix funding ≥ 60% committed entro M+10 | FO-ADD-09: se committed funding < 40% del CapEx Y1 target M+10, C3 falsificata. | M+10, Letter of Award firmate | Hold con bridge financing emergency + re-baseline CapEx ridotto |
+| **FO-10A-05** | C4 ≥ 8/10 cooperative confermate M+6 | FO-ADD-07 + FO-ADD-01: se < 6/10 cooperative confermano MoU entro M+6, C4 falsificata. | M+6 workshop output | Hold + workshop urgenza + eventuale BMC redesign verso B2G dominante |
+| **FO-10A-06** | C5 pre-application ENAC con feedback entro M+3-6 | Se al **M+6 ENAC non ha concesso pre-app meeting** OR feedback è negativo (no-go preliminare su classificazione SAIL prevista), C5 falsificata. | M+6, evidenza meeting + minute | Hold con re-engagement ENAC + revisione operational concept |
+| **FO-10A-07** | Revenue Y1 €260k centrale (RECALIBRATED) | FO-ADD-04: se al M+9 nessun contratto Regione firmato ≥ €75k/anno ACV per servizio EO, revenue model falsificato. Revenue Y1 scende a €130-180k → sotto SyR-Cost-003 €200k hard floor. | M+9 ACV contratti | Pivot pricing outcome-based + B2B utility (Enel) premium |
+| **FO-10A-08** | OpEx Y2 RECONCILED €1.18M sufficiente operativamente | Se al **M+18 il regulatory team (CISO + DPO + Head Regulatory) non è completamente assunto** (≥ 2/3 FTE in ruolo) OR i costi reali superano €1.4M, OpEx falsificato. | M+18 organigramma + budget actuals | Re-baseline OpEx Y2 + valutare outsourcing DPO + bridge equity |
+| **FO-10A-09** | Pilastro #2 cooperative come vantaggio competitivo | FO-ADD-01: se al **M+12 < 5/10 cooperative dimostrano engagement attivo** (workshop, contratti, contribuzione operativa), pilastro declassato a "narrativa marketing". | M+12 metriche engagement | Re-design BMC con peso minore B2B cooperative + focus B2G |
+
+### 10.7bis.2 FO per il verdetto Percorso 6B "HOLD CON CRITERI USCITA STRINGENTI + Pivot Strutturale"
+
+| FO-ID | Claim associato | Falsifying observation | Trigger / finestra | Effetto sul verdetto se attivata |
+|---|---|---|---|---|
+| **FO-10B-01** | Pivot strutturale "operatore di servizi su prime contractor" raccomandato | Se al **M+18 nessuna LoI/MoU con almeno 1 prime contractor** (Aalto/Sceye/Skydweller/CIRA-EuroHAPS-successor) firmata, il pivot non è operativo e Phase B 6B resta vincolato a path autonomo (NON raccomandato dallo Studio). | M+18 firma LoI/MoU prime | Re-review strategic pivot 6B: o autonomo (high risk) o exit Phase B |
+| **FO-10B-02** | EASA HAPS framework apertura entro Y4-Y5 (2030) | FO-ADD-05: se al **M+36 EASA non ha aperto** RMT HAPS né Special Condition (no CRD/NPA), path Certified 6B bloccato 5-10 anni aggiuntivi. | M+36 EASA pubblicazioni + Innovation Network engagement | Trigger TRG-B2R-01 Cap. 11 §11.6bis; Phase B 6B sospesa; focus esclusivo 6A scale-up |
+| **FO-10B-03** | CIRA partnership willingness per Phase B 6B HALE | FO-ADD-06: se entro **M+12 CIRA non firma né LoI né MoU preliminare** con Firmamento, partner italiano naturale assente. | M+12 comunicazioni formali CIRA + MIMIT | Pivot a POLITO DIMEAS HELIPLAT lineage (substitute con peso istituzionale minore) |
+| **FO-10B-04** | Energy balance HALE feasible con E2 Solar+LiS 350 Wh/kg pack 2028 | FO-ADD-08 + RSK-TEC-001 score 25: simulazione completa M+3 ha già confermato **margine inverno 44°N -50.1% DEFICIT**; al **M+24 gate G5** se TRL pack-level LiS < 5 OR Wh/kg pack < 280, architettura E2 NON implementabile. | M+24 vendor roadmaps (Sion, Lyten, OXIS) + TRL evidence | Attivazione automatica E5 Seasonal-only (operatività marzo-ottobre) + KPI endurance Y3-Y5 ridimensionati |
+| **FO-10B-05** | Asset reuse 6A→6B 30-40% valore monetario | FO-ADD-03: al **M+24 gate G5** valutazione tecnica indipendente — se valore reuse < 15% CapEx 6A, ladder rotto. | M+24 gate G5 assessment | Cap. 6 §6.1.3 riscrittura + Phase B 6B richiede CapEx pieno (€5.5-13.5M) senza scaffold riutilizzato |
+
+### 10.7bis.3 FO per la visione 10 anni / B2 (boundary)
+
+| FO-ID | Claim associato | Falsifying observation | Trigger / finestra | Effetto sul verdetto se attivata |
+|---|---|---|---|---|
+| **FO-10B2-01** | Posizionamento "complementare a IRIS²" operazionalizzato | FO-ADD-02: se al **M+18 roadmap ufficiale IRIS²** (DG CNECT) **non include esplicitamente** "stratospheric layer" / "complementary platforms layer", framing "complementare" diventa retorico. | M+18 roadmap DG CNECT + Mission Implementation Plan IRIS² | Re-baseline posizionamento esterno: "Italian operator of strategic stratospheric services" (preservando B2 interno) |
+
+> **Logica di attivazione consolidata**: il verificarsi di **≥ 2 FO 10A** in finestra simultanea attiva pre-review del verdetto 6A → HOLD esteso. Il verificarsi di **≥ 1 FO 10B critical** (10B-02 OR 10B-04) attiva pre-review del verdetto 6B → trigger B2-relaxed Cap. 11 §11.6bis. Confidence sul framework di attivazione: **medium-high** (definizioni operative + trigger osservabili).
+
+> **Compliance Regola 1 epistemic-rigor**: 15 FO esplicite operative — gap "Cap. 10 = 0 falsifying observations" identificato dall'audit Red Team M+3 è ora chiuso.
+
+---
+
 ## 10.8 Decisione Formale e Action Items Immediati
 
 ### 10.8.1 Decisione formale richiesta al CdA + sponsor
