@@ -1,68 +1,61 @@
-# Capitolo 10 — Raccomandazione di Gate (Verdetto Finale)
+# Capitolo 10. Raccomandazione di Gate (Verdetto Finale)
 
-> **Studio di Fattibilità — Piattaforma Aerea HALE / VTOL per Aree Interne**
-> Firmamento Technologies — bando Cooding Prototypes
+> **Studio di Fattibilità. Piattaforma Aerea HALE / VTOL per Aree Interne**
+> Firmamento Technologies, bando Cooding Prototypes
 > Volume 1, Capitolo 10
 >
 > **Versione:** bozza M+11 (proiezione del verdetto)
 > **Conformità:** NASA SE Handbook §3.0 + skill `gate-review-checklist`
 > **Disciplina epistemica:** Regole 1-7 della skill `epistemic-rigor`
-> **Red Team review:** combinata — `red-team-skeptic` + `regulatory-adversary` + `competitor-intelligence` — vedi §10.6
+> **Red Team review:** combinata (`red-team-skeptic` + `regulatory-adversary` + `competitor-intelligence`), vedi §10.6
 
 ---
 
 ## 10.0 Premessa
 
-Il presente capitolo formula la **raccomandazione di gate** dello Studio di Fattibilità — il verdetto **Go / Go Condizionato / Hold / No-Go** che il management Firmamento Technologies, in sede di Gate Review M+10/M+11 (G3 — FEASIBILITY GATE), porterà al CdA + sponsor (Coopfond + Regione Liguria) per la decisione formale di proseguire o fermare i due percorsi.
+Il presente capitolo formula la **raccomandazione di gate** dello Studio di Fattibilità, cioè il verdetto **Go / Go Condizionato / Hold / No-Go** che il management Firmamento Technologies, in sede di Gate Review M+10/M+11 (G3, FEASIBILITY GATE), porterà al CdA e agli sponsor (Coopfond, Regione Liguria) per la decisione formale di proseguire o fermare i due percorsi.
 
-Il capitolo è **sintesi delle evidenze** prodotte nei Cap. 1-9 e 11 dello Studio, valutate contro i **criteri Go/No-Go** definiti nel Cap. 3.2 e Cap. 9.2.4. È deliberato per essere **conclusivo** ma **onesto sui limiti** delle evidenze al M+11.
+Il capitolo sintetizza le evidenze prodotte nei Cap. 1-9 e 11 dello Studio, valutate contro i **criteri Go/No-Go** definiti nel Cap. 3.2 e Cap. 9.2.4. È stato deliberato per essere **conclusivo** ma **onesto sui limiti** delle evidenze al M+11.
 
 ---
 
-## 10.0bis Revisione Verdetto post-Audit M+3 (CRITICAL — DEFAULT SCENARIO BASE)
+## 10.0bis Revisione Verdetto post-Audit M+3 (CRITICAL, DEFAULT SCENARIO BASE)
 
 > **Inserimento post-audit M+3** (red-team-skeptic + regulatory-adversary + competitor-intelligence): la formulazione originale "Go Condizionato 6A" (vedi §10.1 sotto) **sopravvaluta la probabilità di Go pieno al gate G3**. Calcolo realistico: P(AND 5 hard conditions C1-C5) = **5-15%** scenario realistico (vedi `AUDIT-QUALITY-VOLUME-1.md` §6).
 >
-> **Scenario base atteso al gate G3 (M+10/M+11) è HOLD CON PIANO REGOLATORIO RAFFORZATO** (probabilità 60-80%), con re-review M+13-16 e attivazione **sliding timeline** del Cap. 9 §9.12. Il verdetto "Go Condizionato" del §10.3 sotto resta valido come **scenario ottimistico** (15-35% probabilità).
+> Lo scenario base atteso al gate G3 (M+10/M+11) è **HOLD CON PIANO REGOLATORIO RAFFORZATO** (probabilità 60-80%), con re-review M+13-16 e attivazione della **sliding timeline** del Cap. 9 §9.12. Il verdetto "Go Condizionato" del §10.3 sotto resta valido come **scenario ottimistico** (15-35% probabilità).
 
 ### 10.0bis.1 Verdetto consolidato realistico
 
 | Scenario | Probabilità | Verdetto effettivo G3 | Action |
 |---|---|---|---|
-| **Scenario A — Best case** (5 hard conditions soddisfatte M+10) | **5-15%** | **GO PIENO 6A** | Avvio operations Y1 M+12 come da piano nominale Cap. 9 |
-| **Scenario B — Base case** (3-4 hard conditions soddisfatte) | **45-60%** | **HOLD CON PIANO REGOLATORIO RAFFORZATO** | Re-review G3-bis M+13-16; pivot a sliding timeline §9.12 |
-| **Scenario C — Worst case operativo** (≤ 2 hard conditions soddisfatte) | **20-30%** | **HOLD ESTESO** | Re-review G3-bis M+16-20; eventuale pivot scope MVP (VLOS-only, area ridotta) |
-| **Scenario D — No-Go materiale** (es. ENAC nega esplicitamente SAIL Pentema, Regione si tira indietro definitivamente) | **5-10%** | **PIVOT STRATEGICO** | Riesame business case, possibile pivot regionale (Piemonte/Calabria) o cancellazione 6A |
+| **Scenario A, Best case** (5 hard conditions soddisfatte M+10) | **5-15%** | **GO PIENO 6A** | Avvio operations Y1 M+12 come da piano nominale Cap. 9 |
+| **Scenario B, Base case** (3-4 hard conditions soddisfatte) | **45-60%** | **HOLD CON PIANO REGOLATORIO RAFFORZATO** | Re-review G3-bis M+13-16; pivot a sliding timeline §9.12 |
+| **Scenario C, Worst case operativo** (≤ 2 hard conditions soddisfatte) | **20-30%** | **HOLD ESTESO** | Re-review G3-bis M+16-20; eventuale pivot scope MVP (VLOS-only, area ridotta) |
+| **Scenario D, No-Go materiale** (es. ENAC nega esplicitamente SAIL Pentema, Regione si tira indietro definitivamente) | **5-10%** | **PIVOT STRATEGICO** | Riesame business case, possibile pivot regionale (Piemonte/Calabria) o cancellazione 6A |
 
 ### 10.0bis.2 Verdetto Percorso 6B in scenario realistico
 
-Il verdetto **HOLD / GO CONDIZIONATO ESTREMO 6B** della §10.4 sotto resta valido. Aggiornamenti post-audit M+3:
+Il verdetto **HOLD / GO CONDIZIONATO ESTREMO 6B** della §10.4 sotto resta valido. Gli aggiornamenti post-audit M+3 ridefiniscono però il profilo del percorso.
 
-- Il 6B non parte mai prima del gate G5 (M+24), e con le sliding timeline §9.12 realisticamente **M+30-48**
-- 15 showstopper regolatori aggiuntivi (vedi Cap. 5 §5.16) confermano severità path 6B
-- **DR-013 finding (`riferimenti/DR-research-closure-M3.md`)**: base rate consolidato **0% HALE solari commerciali operativi globalmente** in 22 anni di tentativi (12 programmi 2003-2025 analizzati: NASA Helios crashed 2003, Aalto HAWK30 cancellato 2020, Solara 50 dissolto, Sanswire StratXX mai operativo, AALTO Zephyr "commercial entry 2024" è in realtà operations militari, Skydweller solo dual-use Navy AMPA, PHASA-35 operativo 2026 ma dual-use, ecc.) → **HOLD 6B con criteri di uscita estremamente stringenti**
-- **DR-014 finding**: capital intensity per HALE solare ad operatività commerciale è $50M-1B → la stima Firmamento €5.5-13.5M Phase B è **R&D Phase 0/A**, NON percorso completo. Rivedere Cap. 8 §8.3.3
-- **Energy balance simulation finding** (`allegati/energy-balance/`): margine inverno reale a 44°N = **-50.1% DEFICIT** (vs "0-15% critico" stimato a mano §6.2.2.2). Perennial flight 44°N **NON fattibile** con baseline 2026-2028. E5 "Seasonal-only" (marzo-ottobre, ~6 mesi/anno operativi) è l'**unico Plan A**. RSK-TEC-001 probabilità innalzata 4→5, score 20 invariato ma fallback E5 ora **mandatory**, non opzione.
-- Probabilità operatività perennial Y10 standalone stimata realisticamente **6-15%** (vedi Cap. 11 §11.6bis scenario B2-relaxed)
-- **Hold del 6B è il default permanente** fino a evidenza chiara di (a) apertura framework EASA RMT HAPS + (b) partnership prime contractor o consortium EU bid
-- **Pivot raccomandato per 6B**: da "HALE proprietario Firmamento" a "Firmamento operatore di servizi su piattaforme prime contractor (Aalto/Sceye/Skydweller/CIRA-EuroHAPS-successor)" come modello primario; standalone HALE Firmamento resta come **fallback R&D only**
+Il 6B non parte mai prima del gate G5 (M+24), e con le sliding timeline §9.12 realisticamente slitta a **M+30-48**. Quindici showstopper regolatori aggiuntivi (vedi Cap. 5 §5.16) confermano la severità del path 6B. Il **DR-013 finding** (`riferimenti/DR-research-closure-M3.md`) consolida un base rate di **0% HALE solari commerciali operativi globalmente** in 22 anni di tentativi: dodici programmi 2003-2025 analizzati (NASA Helios crashed 2003, Aalto HAWK30 cancellato 2020, Solara 50 dissolto, Sanswire StratXX mai operativo, AALTO Zephyr "commercial entry 2024" che è in realtà operations militari, Skydweller solo dual-use Navy AMPA, PHASA-35 operativo 2026 ma dual-use, ecc.). Da qui la posizione **HOLD 6B con criteri di uscita estremamente stringenti**.
+
+Il **DR-014 finding** mostra che la capital intensity per HALE solare ad operatività commerciale è $50M-1B: la stima Firmamento €5.5-13.5M Phase B è **R&D Phase 0/A**, non percorso completo. Va rivisto il Cap. 8 §8.3.3. L'**energy balance simulation finding** (`allegati/energy-balance/`) fissa il margine inverno reale a 44°N al **-50.1% DEFICIT** (contro lo "0-15% critico" stimato a mano in §6.2.2.2): perennial flight a 44°N **non è fattibile** con baseline 2026-2028. E5 "Seasonal-only" (marzo-ottobre, circa 6 mesi/anno operativi) diventa l'**unico Plan A**. RSK-TEC-001 vede la probabilità innalzata da 4 a 5, lo score 20 resta invariato ma il fallback E5 è ora **mandatory**, non opzione.
+
+La probabilità di operatività perennial Y10 standalone è stimata realisticamente al **6-15%** (vedi Cap. 11 §11.6bis scenario B2-relaxed). L'hold del 6B diventa il **default permanente** fino a evidenza chiara di (a) apertura framework EASA RMT HAPS e (b) partnership prime contractor o consortium EU bid. Il pivot raccomandato per 6B è il passaggio da "HALE proprietario Firmamento" a "Firmamento operatore di servizi su piattaforme prime contractor (Aalto/Sceye/Skydweller/CIRA-EuroHAPS-successor)" come modello primario; lo standalone HALE Firmamento resta come **fallback R&D only**.
 
 ### 10.0bis.3 Comunicazione esterna del verdetto
 
-Per evitare l'effetto "CYA decisionale" (Red Team critica §5), il verdetto va comunicato esternamente come segue:
+Per evitare l'effetto "CYA decisionale" (Red Team critica §5), il verdetto va comunicato esternamente come segue.
 
 > **Comunicazione raccomandata al CdA + sponsor**:
 > "Lo Studio di Fattibilità conferma la solidità tecnica e di mercato del Percorso 6A pilota Pentema. Le evidenze regolatorie e di engagement institutionale al M+11 sono in costruzione: il verdetto è **GO subordinato al completamento del piano regolatorio rafforzato**, con probabilità di Go pieno immediato ~5-15% e probabilità di Hold con re-review ~60-80%. Il Percorso 6B resta in HOLD strutturale subordinato a gate G5 (M+24)."
 
-Questo evita l'overpromise ("Go!") e l'underpromise ("No-Go") che entrambi falsificano la realtà.
+Questa formulazione evita sia l'overpromise ("Go!") sia l'underpromise ("No-Go"), che entrambi falsificano la realtà.
 
 ### 10.0bis.4 Impatto su Cap. 8 (financial) e Cap. 9 (schedule)
 
-Il scenario base "HOLD con piano regolatorio rafforzato" implica:
-- **Cap. 8**: cash burn Y1 più alto (€2-3M cumulato vs €1.2M nominale); bridge financing €500k preallocato
-- **Cap. 9**: sliding timeline §9.12 è il **piano operativo di riferimento** per pianificazione finanziaria
-- **Cap. 7**: revenue Y1 realistico €100-250k (vs €355-405k baseline); break-even Y5-Y6 vs Y4-Y5
-- **Cap. 5 §5.17**: 3 FTE regulatory aggiuntivi (+€450-800k OpEx Y1) sono **fixed cost obbligatorio**
+Lo scenario base "HOLD con piano regolatorio rafforzato" implica un cash burn Y1 più alto sul Cap. 8 (€2-3M cumulato contro €1.2M nominale), con bridge financing €500k preallocato. La sliding timeline §9.12 diventa il **piano operativo di riferimento** per la pianificazione finanziaria del Cap. 9. Sul Cap. 7 il revenue Y1 realistico scende a €100-250k (contro €355-405k baseline), con break-even spostato a Y5-Y6 (rispetto a Y4-Y5). I 3 FTE regulatory aggiuntivi del Cap. 5 §5.17 (+€450-800k OpEx Y1) diventano **fixed cost obbligatorio**.
 
 ### 10.0bis.5 Action immediato post-Studio M+11
 
@@ -83,8 +76,8 @@ Il CdA + sponsor deve approvare:
 
 | Percorso | Verdetto raccomandato | Confidenza | Razionale principale |
 |---|---|---|---|
-| **6A — VTOL Pilota Pentema** | ✅ **GO CONDIZIONATO** *(scenario A)* / ⚠️ **HOLD CON PIANO RAFFORZATO** *(scenario base B, default)* | medium-high | Fattibilità tecnica, regolatoria, di mercato confermata; rischi gestibili; condizioni: LoI Regione + Coopfond entro M+12, contratti ≥ 3 firmati Y1, SORA approvato |
-| **6B — HALE Stratosferico** | ⚠️ **HOLD / GO CONDIZIONATO ESTREMO R&D** | low-medium | Concept fattibile, ma 2 showstopper tecnici aperti + framework regolatorio HAPS EU assente. Phase B autorizzata solo a condizione di funding mix ≥ 50% pubblico al M+24 |
+| **6A, VTOL Pilota Pentema** | ✅ **GO CONDIZIONATO** *(scenario A)* / ⚠️ **HOLD CON PIANO RAFFORZATO** *(scenario base B, default)* | medium-high | Fattibilità tecnica, regolatoria, di mercato confermata; rischi gestibili; condizioni: LoI Regione + Coopfond entro M+12, contratti ≥ 3 firmati Y1, SORA approvato |
+| **6B, HALE Stratosferico** | ⚠️ **HOLD / GO CONDIZIONATO ESTREMO R&D** | low-medium | Concept fattibile, ma 2 showstopper tecnici aperti + framework regolatorio HAPS EU assente. Phase B autorizzata solo a condizione di funding mix ≥ 50% pubblico al M+24 |
 
 ### 10.1.2 Riepilogo evidenze chiave
 
@@ -92,7 +85,7 @@ Il CdA + sponsor deve approvare:
 |---|---|---|---|
 | **Inquadramento** | 1 | ✓ razionale pubblico confermato | PSNAI 2025 + Briefing + bando Cooding |
 | **Stakeholder + SMART** | 2 | ✓ mappa solida + 28 obiettivi SMART | 30 stakeholder mappati |
-| **Requisiti + RTM** | 3 | ✓ baseline robusta | 17 StNeeds + 42 SyR + ~80 SsR + RTM v0.5 |
+| **Requisiti + RTM** | 3 | ✓ baseline solida | 17 StNeeds + 42 SyR + ~80 SsR + RTM v0.5 |
 | **Scope + ICD** | 4 | ✓ scope chiaro + 17 deliverable + 20 interfacce | ICD preliminare completo |
 | **Quadro Normativo** | 5 | ✓ 6A GO, 6B HOLD (showstopper RSK-REG-001 framework HAPS) | EASA SORA 2.5 settembre 2025 + ENAC Reg. APR Ed.3 |
 | **Analisi Tecnica** | 6 | ✓ 6A GO, ⚠️ 6B HOLD (RSK-TEC-001 energy balance inverno + RSK-TEC-002 aeroelasticità) | NASA SE + 3GPP + ITU + Pinato flax |
@@ -137,37 +130,32 @@ Il CdA + sponsor deve approvare:
 
 ### 10.2.3 Rischio aggregato per percorso
 
-- **Percorso 6A**: nessun rischio rosso. Top 3 rischi gialli con piano mitigation chiaro. **Profilo rischio: medio-basso**. Compatibile con verdetto Go Condizionato.
-- **Percorso 6B**: 5 rischi rossi (showstopper). Mitigation strategy esiste, ma **non garantita**. **Profilo rischio: alto**. Compatibile con verdetto Hold / Go Condizionato Estremo (no Phase B commitment senza milestone gate G5).
+Il Percorso 6A non presenta rischi rossi: i top 3 rischi gialli hanno un piano di mitigation chiaro, con profilo di rischio medio-basso, compatibile con il verdetto Go Condizionato. Il Percorso 6B vede invece 5 rischi rossi (showstopper): la mitigation strategy esiste ma non è garantita, con profilo di rischio alto, coerente con il verdetto Hold / Go Condizionato Estremo (nessun Phase B commitment senza milestone gate G5).
 
 ---
 
-## 10.3 Verdetto Percorso 6A — Go Condizionato
+## 10.3 Verdetto Percorso 6A, Go Condizionato
 
 ### 10.3.1 Argomenti a supporto del Go
 
-1. **Tecnicamente fattibile** con piattaforma commerciale TRL 8-9 (JOUAV CW-30E o Tekever)
-2. **Regolatoriamente fattibile** in Specific Category SAIL II-III BVLOS — framework EASA SORA 2.5 europea (settembre 2025) disponibile
-3. **Mercato target identificato**: Regione Liguria + PC + cooperative pilota = anchor commerciale credibile
-4. **Modello di business coerente**: service-only DaaS/canone/ore-volo (boundary B1)
-5. **Asset riusabili 6A → 6B**: ~30-40% del CapEx Y1 in valore monetario riutilizzabile in Phase B HALE
-6. **Capital intensity gestibile**: €700k-2M Y1 con mix grant 35-55% + equity 25-45%
-7. **Tempistiche realistiche**: 12 mesi MVP, gate G4 strutturato
+Il Percorso 6A è tecnicamente fattibile con piattaforma commerciale TRL 8-9 (JOUAV CW-30E o Tekever) ed è regolatoriamente fattibile in Specific Category SAIL II-III BVLOS, dove il framework EASA SORA 2.5 europea (settembre 2025) è disponibile. Il mercato target è identificato: Regione Liguria, Protezione Civile e cooperative pilota costituiscono un anchor commerciale credibile. Il modello di business è coerente, service-only DaaS/canone/ore-volo (boundary B1).
+
+Gli asset 6A→6B sono riusabili al ~30-40% del CapEx Y1 in valore monetario riutilizzabile in Phase B HALE. La capital intensity è gestibile (€700k-2M Y1, con mix grant 35-55% e equity 25-45%) e le tempistiche sono realistiche: 12 mesi MVP, gate G4 strutturato.
 
 ### 10.3.2 Condizioni per il Go (entry criteria gate M+12)
 
-Il verdetto Go Condizionato è **subordinato** al raggiungimento delle seguenti condizioni:
+Il verdetto Go Condizionato è **subordinato** al raggiungimento delle seguenti condizioni.
 
-> **⚠️ Caveat probabilistico onesto (post Audit Red Team M+3)**: il verdetto "Go Condizionato" ha probabilità di trasformarsi in **Go pieno** al M+10/M+11 stimata effettivamente ~**15-35%** (non 60-80% come potrebbe suggerire una lettura ottimistica). Le 5 hard conditions sotto sono in AND logico: la P(tutte soddisfatte simultaneamente) è il prodotto delle probabilità marginali. Scenario base atteso: **Hold con piano di mitigazione** in 60-80% dei percorsi, con re-review M+13-14. Lo scenario "Go pieno immediato" richiede esecuzione perfetta multi-stakeholder + nessuno slittamento ENAC. Vedi `AUDIT-QUALITY-VOLUME-1.md` §6 per il calcolo dettagliato.
+> **⚠️ Caveat probabilistico onesto (post Audit Red Team M+3)**: il verdetto "Go Condizionato" ha probabilità di trasformarsi in **Go pieno** al M+10/M+11 stimata effettivamente al ~**15-35%** (non 60-80%, come potrebbe suggerire una lettura ottimistica). Le 5 hard conditions sotto sono in AND logico: la P(tutte soddisfatte simultaneamente) è il prodotto delle probabilità marginali. Lo scenario base atteso è **Hold con piano di mitigazione** nel 60-80% dei percorsi, con re-review M+13-14. Lo scenario "Go pieno immediato" richiede esecuzione perfetta multi-stakeholder e nessuno slittamento ENAC. Vedi `AUDIT-QUALITY-VOLUME-1.md` §6 per il calcolo dettagliato.
 
 **Hard conditions** (vincolanti, no-Go se mancanti):
-- ☐ **C1**: LoI o accordo formale Regione Liguria firmato entro M+9 — *FO linkata: FO-ADD-04 (pricing PA €75k/anno ACV)*
+- ☐ **C1**: LoI o accordo formale Regione Liguria firmato entro M+9. *FO linkata: FO-ADD-04 (pricing PA €75k/anno ACV)*
 - ☐ **C2**: Autorizzazione SORA ENAC operativa entro M+9
-- ☐ **C3**: Mix funding ≥ 60% committed (Coopfond + Regione + equity + R&D credit) entro M+10 — *FO linkata: FO-ADD-09 (mix funding 60% threshold)*
-- ☐ **C4**: ≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6 — *FO linkata: FO-ADD-07 (workshop M+6 output) + FO-ADD-01 (cooperative come vantaggio competitivo)*
+- ☐ **C3**: Mix funding ≥ 60% committed (Coopfond + Regione + equity + R&D credit) entro M+10. *FO linkata: FO-ADD-09 (mix funding 60% threshold)*
+- ☐ **C4**: ≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6. *FO linkata: FO-ADD-07 (workshop M+6 output) + FO-ADD-01 (cooperative come vantaggio competitivo)*
 - ☐ **C5**: Pre-application meeting ENAC con feedback documentato entro M+3-6
 
-> **🔬 Falsifying observations aggiuntive linkate alle hard conditions C1-C5**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` per le FO operazionalizzate. Trigger principali: C1 (FO-ADD-04: pricing baseline €75k/anno per servizio EO Regione); C3 (FO-ADD-09: 60% mix funding committed); C4 (FO-ADD-07: workshop M+6 con 8/10 cooperative + FO-ADD-01: cooperative engagement metrics M+12); inoltre per Phase B 6B (§10.4): FO-ADD-05 (EASA HAPS framework apertura M+36) + FO-ADD-06 (CIRA partnership willingness M+12). Tabella consolidata: §10.X "Falsifying observations consolidate per Cap. 10".
+> **🔬 Falsifying observations aggiuntive linkate alle hard conditions C1-C5**: vedi `FALSIFYING-OBSERVATIONS-M3-ADDENDUM.md` per le FO operazionalizzate. I trigger principali sono: C1 (FO-ADD-04: pricing baseline €75k/anno per servizio EO Regione); C3 (FO-ADD-09: 60% mix funding committed); C4 (FO-ADD-07: workshop M+6 con 8/10 cooperative + FO-ADD-01: cooperative engagement metrics M+12). Per Phase B 6B (§10.4) si aggiungono FO-ADD-05 (EASA HAPS framework apertura M+36) e FO-ADD-06 (CIRA partnership willingness M+12). Tabella consolidata: §10.X "Falsifying observations consolidate per Cap. 10".
 
 **Soft conditions** (raccomandate, no blocking ma trigger review):
 - ☐ S1: DPIA pubblica preliminare entro M+6
@@ -178,25 +166,15 @@ Il verdetto Go Condizionato è **subordinato** al raggiungimento delle seguenti 
 
 ### 10.3.3 Scenari alternativi se condizioni non soddisfatte
 
-Se al M+10/M+11:
-- **C1-C2-C3 tutte soddisfatte** → **GO pieno** verso operatività Y1 M+12
-- **C4-C5 mancanti, ma C1-C3 OK** → **GO Condizionato** con re-check M+13
-- **C1 (LoI Regione) mancante** → **HOLD** automatico con re-review M+14 per cercare anchor alternative (es. Regione Piemonte, Calabria)
-- **C2 (SORA) mancante** → **HOLD** con re-application + scope adjustment (VLOS solo Y1)
-- **C3 (funding) < 40%** → **HOLD** con bridge financing strategy
-- **C4 (cooperative) < 6 su 10** → **HOLD + workshop urgenza** per re-confirm impegni
+Al M+10/M+11, le ramificazioni decisionali sono cinque. Con C1-C2-C3 tutte soddisfatte si va a **GO pieno** verso operatività Y1 M+12. Con C4-C5 mancanti ma C1-C3 OK il verdetto è **GO Condizionato** con re-check M+13. Se manca C1 (LoI Regione), scatta **HOLD** automatico con re-review M+14, per cercare anchor alternative (es. Regione Piemonte, Calabria). Se manca C2 (SORA), si va in **HOLD** con re-application e scope adjustment (VLOS solo Y1). Con C3 (funding) < 40% il verdetto è **HOLD** con bridge financing strategy. Con C4 (cooperative) < 6 su 10 si attiva **HOLD + workshop urgenza** per re-confermare gli impegni.
 
 ---
 
-## 10.4 Verdetto Percorso 6B — Hold / Go Condizionato Estremo
+## 10.4 Verdetto Percorso 6B, Hold / Go Condizionato Estremo
 
 ### 10.4.1 Argomenti a supporto del Hold (non No-Go)
 
-1. **Concept tecnicamente plausibile**: HALE solare 80-150 kg MTOW con energy balance estate OK
-2. **Lineage tecnologico italiano disponibile**: POLITO DIMEAS (HELIPLAT history) + CIRA EuroHAPS-adjacent
-3. **Riferimenti internazionali esistenti**: Zephyr AALTO, Skydweller, PHASA-35 dimostrano fattibilità in scala simile
-4. **Boundary B2 (visione EU sovereign) richiede** un Percorso 6B preparatorio per non perdere il vettore strategico
-5. **Funding sovrano EU disponibile** in trajectory (EDF + Horizon + PNRR + potenzialmente futuro programma sovrano stratosferico)
+Il concept è tecnicamente plausibile (HALE solare 80-150 kg MTOW con energy balance estate OK) ed esiste un lineage tecnologico italiano disponibile (POLITO DIMEAS con history HELIPLAT, CIRA EuroHAPS-adjacent). I riferimenti internazionali (Zephyr AALTO, Skydweller, PHASA-35) dimostrano la fattibilità in scala simile. Il boundary B2 (visione EU sovereign) richiede un Percorso 6B preparatorio per non perdere il vettore strategico, e il funding sovrano EU è in trajectory (EDF + Horizon + PNRR + potenzialmente futuro programma sovrano stratosferico).
 
 ### 10.4.2 Argomenti a supporto del No-Go (rigettati)
 
@@ -204,14 +182,14 @@ Argomenti che potrebbero portare a un No-Go diretto, e nostra risposta:
 
 | Argomento No-Go | Risposta |
 |---|---|
-| "Energy balance inverno < 15% margin → progetto perennial impossibile" | Vero per perennial. **Fallback seasonal-only** (operatività marzo-ottobre) resta robusto e commercialmente valido. No-Go non giustificato. |
-| "Framework HAPS EU non esiste, perdiamo 5+ anni per certificazione" | Vero. Mitigation: parallel ops 6A genera revenue + esperienza + engagement EASA in parallelo. No-Go non giustificato; **Defer 6B 1-2 anni** se necessario. |
-| "Capital intensity €10-30B per scala EU sovereign è oltre nostre possibilità" | Vero. Boundary B2 mantiene visione, ma **lo Studio non approva Fase 5 oggi**. Solo Fase 3 R&D è in scope. No-Go non giustificato. |
-| "Competitor Tier 1 (AALTO/Skydweller) sono troppo avanti" | Vero in capacità assoluta. Differenziazione Firmamento è geografica + cooperativa + sovranità italiana, non scale assoluta. No-Go non giustificato. |
+| "Energy balance inverno < 15% margin → progetto perennial impossibile" | Vero per perennial. Il **fallback seasonal-only** (operatività marzo-ottobre) resta solido e commercialmente valido. No-Go non giustificato. |
+| "Framework HAPS EU non esiste, perdiamo 5+ anni per certificazione" | Vero. Mitigation: parallel ops 6A genera revenue, esperienza ed engagement EASA in parallelo. No-Go non giustificato; **Defer 6B 1-2 anni** se necessario. |
+| "Capital intensity €10-30B per scala EU sovereign è oltre nostre possibilità" | Vero. Boundary B2 mantiene la visione, ma **lo Studio non approva Fase 5 oggi**. Solo la Fase 3 R&D è in scope. No-Go non giustificato. |
+| "Competitor Tier 1 (AALTO/Skydweller) sono troppo avanti" | Vero in capacità assoluta. La differenziazione Firmamento è geografica + cooperativa + sovranità italiana, non scale assoluta. No-Go non giustificato. |
 
-### 10.4.3 Condizioni per Go Phase B (gate G5 — M+24)
+### 10.4.3 Condizioni per Go Phase B (gate G5, M+24)
 
-Il commitment Phase B 6B è subordinato al raggiungimento, al gate G5 (M+24), delle seguenti condizioni:
+Il commitment Phase B 6B è subordinato al raggiungimento, al gate G5 (M+24), delle seguenti condizioni.
 
 **Hard conditions Phase B**:
 - ☐ **C-6B-1**: Pilota 6A ha raggiunto KPI gate G4 (≥ 3 contratti + ≥ €200k revenue + 0 FATAL)
@@ -227,51 +205,46 @@ Il commitment Phase B 6B è subordinato al raggiungimento, al gate G5 (M+24), de
 
 ### 10.4.4 Scenari alternativi Phase B
 
-Se al gate G5 (M+24):
-- **Tutte C-6B soddisfatte** → **GO Phase B** pieno (€5.5-13.5M, M+24-48)
-- **3 su 5 soddisfatte** → **GO Phase B ridotto** (focus subscale + simulazione, no full prototype)
-- **Funding < 30%** → **DEFER 6B** a M+36 con re-review
-- **EASA framework chiuso o RMT non aperto entro 2028** → **Hold permanente** 6B fino a 2030+, focus esclusivo su 6A scale-up
-- **Pilota 6A failed (<€100k revenue Y1)** → **No-Go 6B** (incompatibile con strategia ladder)
+Al gate G5 (M+24) si aprono cinque ramificazioni. Con tutte le C-6B soddisfatte: **GO Phase B** pieno (€5.5-13.5M, M+24-48). Con 3 su 5 soddisfatte: **GO Phase B ridotto** (focus subscale + simulazione, no full prototype). Con funding < 30%: **DEFER 6B** a M+36 con re-review. Se l'EASA framework risulta chiuso o RMT non aperto entro 2028: **Hold permanente** 6B fino a 2030+, focus esclusivo su 6A scale-up. Se il pilota 6A è failed (<€100k revenue Y1): **No-Go 6B** (incompatibile con strategia ladder).
 
 ---
 
 ## 10.5 Verdetto Aggregato per la Visione 10 Anni
 
 Lo Studio approva:
-- ✅ **Fase 1 — VTOL Pilota Pentema** (Y1 = M+12)
-- ✅ **Fase 2 — Scale-up Liguria + 1 regione SNAI** (Y2-Y3 = M+12-36) **condizionato a gate G4 (M+12) successo**
-- ⚠️ **Fase 3 — HALE Prototipo R&D Phase B** (Y3-Y5 = M+24-60) **condizionato a gate G5 (M+24) successo**
+- ✅ **Fase 1, VTOL Pilota Pentema** (Y1 = M+12)
+- ✅ **Fase 2, Scale-up Liguria + 1 regione SNAI** (Y2-Y3 = M+12-36), condizionato al successo del gate G4 (M+12)
+- ⚠️ **Fase 3, HALE Prototipo R&D Phase B** (Y3-Y5 = M+24-60), condizionato al successo del gate G5 (M+24)
 
-Lo Studio **NON approva, ma preserva come vettore strategico**:
-- 🎯 **Fase 4 — Costellazione italiana iniziale** (Y6-Y8) — decisione a gate G6 (M+36) e oltre
-- 🎯 **Fase 5 — Consorzio EU stratospheric layer** (Y8-Y10) — decisione a gate futuri post-G6
+Lo Studio non approva, ma preserva come vettore strategico:
+- 🎯 **Fase 4, Costellazione italiana iniziale** (Y6-Y8). Decisione a gate G6 (M+36) e oltre.
+- 🎯 **Fase 5, Consorzio EU stratospheric layer** (Y8-Y10). Decisione a gate futuri post-G6.
 
 I gate G4, G5 e oltre sono i punti di verifica formali per il proseguimento.
 
 ---
 
-## 10.6 Red Team — Critica Combinata al Verdetto
+## 10.6 Red Team, Critica Combinata al Verdetto
 
 Critica aggregata da `red-team-skeptic` + `regulatory-adversary` + `competitor-intelligence` + `business-model-strategist` + `financial-cfo-analyst`.
 
-### Critica 1 — "Go Condizionato 6A è troppo morbido: hard conditions C1-C5 sono ambizione, non realismo"
+### Critica 1: "Go Condizionato 6A è troppo morbido: hard conditions C1-C5 sono ambizione, non realismo"
 **Razionale**: 5 hard conditions tutte da soddisfare al M+9-10 = AND di probabilità ~70%-90% ognuno → P(tutte) ~25-60%. Significa che ~40% scenario è Hold, non Go.
 **Risposta**: confermato. La raccomandazione "Go Condizionato" significa esattamente questo: "Go subordinato a conditions, altrimenti Hold". Il punto del gate è **garantire che decisione Go pieno avvenga solo con condizioni**. Confidence verdetto: medium-high *condizionato* alle conditions.
 
-### Critica 2 — "Hold 6B preserva la visione ma non risolve i 5 showstopper"
+### Critica 2: "Hold 6B preserva la visione ma non risolve i 5 showstopper"
 **Razionale**: ammettere 5 rischi rossi e proseguire (anche solo R&D) è capital-intensive in modo speculativo. Forse meglio Defer 6B 2-3 anni e investire solo in 6A scale-up.
 **Risposta**: parzialmente corretto. La Phase B 6B è R&D, **non manufacturing né operazioni commerciali**. È esattamente la fase dove si dovrebbero risolvere i showstopper. Defer 6B 2-3 anni significa **perdere il vettore B2** (EU sovereign window of opportunity 2028-2032). Il Hold con condizioni stringenti al gate G5 (no Phase B se conditions non soddisfatte) è il bilanciamento corretto tra "preservare il vettore" e "non spendere male".
 
-### Critica 3 — "Boundary B2 (EU sovereign) è preservata ma capital intensity €10-30B fa diventare lo Studio una fantasia"
+### Critica 3: "Boundary B2 (EU sovereign) è preservata ma capital intensity €10-30B fa diventare lo Studio una fantasia"
 **Razionale**: includere capital intensity scenarios fino a €30B in uno Studio di una PMI italiana è surreale. Riduce la credibilità del documento.
-**Risposta**: il numero €10-30B è dichiarato **per scenario "EU sovereign full scale 100+ HAPS"** e dichiarato **precondizione esterna** (programma analog IRIS²). Lo Studio non chiede questi soldi. Lo Studio richiede €0.7-2M Y1 + €5.5-13.5M Phase B. Il number grande serve a **dichiarare onestamente** dove porta la visione 10 anni, non a chiedere finanziamento. Boundary B2 mantenuta come vettore, non come operativa.
+**Risposta**: il numero €10-30B è dichiarato **per scenario "EU sovereign full scale 100+ HAPS"** e dichiarato **precondizione esterna** (programma analog IRIS²). Lo Studio non chiede questi soldi. Lo Studio richiede €0.7-2M Y1 + €5.5-13.5M Phase B. Il numero grande serve a **dichiarare onestamente** dove porta la visione 10 anni, non a chiedere finanziamento. Boundary B2 mantenuta come vettore, non come operativa.
 
-### Critica 4 — "Survivor bias: citate Zephyr/Skydweller/PHASA-35 senza menzionare i programmi falliti"
-**Razionale**: NASA Helios, Aalto HAWK30, Solara 50, Sanswire — tutti falliti. Base rate HALE solari ~30% successo. Lo Studio non incorpora questa base rate nelle confidence.
-**Risposta**: il survivor bias è dichiarato in Cap. 7 §7.1.2 + Cap. 6 §6.0 (lista programmi falliti). Confidence baseline 6B = low-medium proprio per riflettere la base rate. La raccomandazione Hold riflette questa cautela.
+### Critica 4: "Survivor bias: citate Zephyr/Skydweller/PHASA-35 senza menzionare i programmi falliti"
+**Razionale**: NASA Helios, Aalto HAWK30, Solara 50, Sanswire, tutti falliti. Base rate HALE solari ~30% successo. Lo Studio non incorpora questa base rate nelle confidence.
+**Risposta**: il survivor bias è dichiarato in Cap. 7 §7.1.2 + Cap. 6 §6.0 (lista programmi falliti). La confidence baseline 6B = low-medium proprio per riflettere la base rate. La raccomandazione Hold riflette questa cautela.
 
-### Critica 5 — "Verdetto Go Condizionato è 'CYA decisionale': non commetterà mai un errore perché ha hedge ovunque"
+### Critica 5: "Verdetto Go Condizionato è 'CYA decisionale': non commetterà mai un errore perché ha hedge ovunque"
 **Razionale**: vagheggiare un verdetto che dice "Go se tutto va bene, altrimenti Hold" non è una decisione, è una postura.
 **Risposta**: corretto in parte. La differenza tra Go Condizionato e Hold:
 - **Go Condizionato** = "procediamo nell'implementazione, raggiungiamo le conditions, se al M+12 raggiunte → operations Y1"
@@ -279,9 +252,9 @@ Critica aggregata da `red-team-skeptic` + `regulatory-adversary` + `competitor-i
 
 Go Condizionato è una **decisione attiva di procedere con piano di mitigation specificato**. Hold è una **decisione passiva di attendere**. Il verdetto Go Condizionato è la scelta corretta perché lo Studio dimostra che le condizioni sono raggiungibili con effort ragionevole entro M+9-10.
 
-### Critica 6 — "Manca una sezione 'cosa scartiamo'"
+### Critica 6: "Manca una sezione 'cosa scartiamo'"
 **Razionale**: lo Studio non esplicita scelte che NON facciamo (es. "non sviluppiamo dirigibili", "non concorriamo con AALTO scale", "non vendiamo a Difesa pura").
-**Risposta**: corretto. Implicito in boundary B1+B2 ma da esplicitare in §10.7 (aggiunto).
+**Risposta**: corretto. È implicito in boundary B1+B2 ma da esplicitare in §10.7 (aggiunto).
 
 ---
 
@@ -290,7 +263,7 @@ Go Condizionato è una **decisione attiva di procedere con piano di mitigation s
 In coerenza con boundary B1+B2 e con il verdetto, lo Studio dichiara esplicitamente che Firmamento Technologies **non**:
 
 - **Non vende velivoli** né asset hardware (boundary B1). Tutto è erogazione di servizi.
-- **Non concorre con Tier 1 globale HAPS** (AALTO/Skydweller/PHASA-35) in scala assoluta. Si differenzia per geografia + cooperative + sovranità.
+- **Non concorre con Tier 1 globale HAPS** (AALTO/Skydweller/PHASA-35) in scala assoluta. Si differenzia per geografia, cooperative e sovranità.
 - **Non costruisce dirigibili** (HHAA CIRA EuroHAPS è un'altra strada). Focus su HALE solare ala fissa.
 - **Non opera in difesa pura** (può fare dual-use civile, ma non target Difesa primario nel piano M+0-48).
 - **Non promette "alternativa Starlink europea"** nel linguaggio pubblico (boundary B2 RSK-GEO-001).
@@ -303,13 +276,13 @@ In coerenza con boundary B1+B2 e con il verdetto, lo Studio dichiara esplicitame
 
 ## 10.7bis Falsifying Observations Consolidate per il Verdetto Cap. 10
 
-> **Compliance epistemic-rigor Regola 1 (falsifiability)**: ogni claim del verdetto Cap. 10 deve avere almeno una falsifying observation operativamente verificabile. Tabella consolidata di **15 falsifying observations** che, se verificate, attivano revisione del verdetto:
+> **Compliance epistemic-rigor Regola 1 (falsifiability)**: ogni claim del verdetto Cap. 10 deve avere almeno una falsifying observation operativamente verificabile. Tabella consolidata di **15 falsifying observations** che, se verificate, attivano revisione del verdetto.
 
 ### 10.7bis.1 FO per il verdetto Percorso 6A "HOLD CON PIANO REGOLATORIO RAFFORZATO / GO CONDIZIONATO"
 
 | FO-ID | Claim associato | Falsifying observation | Trigger / finestra | Effetto sul verdetto se attivata |
 |---|---|---|---|---|
-| **FO-10A-01** | P(Go pieno) = 5-15% (§10.0bis) | Se al M+10 **5 hard conditions C1-C5 tutte soddisfatte** (LoI Regione + SORA + funding 60% + 8 coop + pre-app ENAC) **simultaneamente**, P(Go pieno) attualizzato sale a 80%+. Inversamente, se **<3** hard conditions soddisfatte al M+10, P(Go pieno) → 0%. | M+10 gate G3 review | Verdetto formale Go pieno OR re-baseline a HOLD esteso |
+| **FO-10A-01** | P(Go pieno) = 5-15% (§10.0bis) | Se al M+10 le **5 hard conditions C1-C5 sono tutte soddisfatte** (LoI Regione + SORA + funding 60% + 8 coop + pre-app ENAC) **simultaneamente**, P(Go pieno) attualizzato sale a 80%+. Inversamente, se **<3** hard conditions soddisfatte al M+10, P(Go pieno) → 0%. | M+10 gate G3 review | Verdetto formale Go pieno OR re-baseline a HOLD esteso |
 | **FO-10A-02** | C1 LoI Regione Liguria firmata entro M+9 | Se al **M+9 nessun atto formale Regione** (LoI, DGR, contratto preliminare) né dialogo attivo con Assessorato Innovazione documentato, C1 falsificata. | M+9, evidenza documentale | Hold automatico + re-review M+14 + pivot anchor alternative (Piemonte, Calabria) |
 | **FO-10A-03** | C2 SORA ENAC SAIL II-III BVLOS operativa entro M+9 | Se al **M+9 ENAC non ha rilasciato autorizzazione** OR la classificazione SAIL effettiva è IV-V (più restrittiva del target), C2 falsificata. | M+9, decisione ENAC formale | Hold con re-application + scope adjustment (VLOS solo Y1) |
 | **FO-10A-04** | C3 mix funding ≥ 60% committed entro M+10 | FO-ADD-09: se committed funding < 40% del CapEx Y1 target M+10, C3 falsificata. | M+10, Letter of Award firmate | Hold con bridge financing emergency + re-baseline CapEx ridotto |
@@ -327,7 +300,7 @@ In coerenza con boundary B1+B2 e con il verdetto, lo Studio dichiara esplicitame
 | **FO-10B-02** | EASA HAPS framework apertura entro Y4-Y5 (2030) | FO-ADD-05: se al **M+36 EASA non ha aperto** RMT HAPS né Special Condition (no CRD/NPA), path Certified 6B bloccato 5-10 anni aggiuntivi. | M+36 EASA pubblicazioni + Innovation Network engagement | Trigger TRG-B2R-01 Cap. 11 §11.6bis; Phase B 6B sospesa; focus esclusivo 6A scale-up |
 | **FO-10B-03** | CIRA partnership willingness per Phase B 6B HALE | FO-ADD-06: se entro **M+12 CIRA non firma né LoI né MoU preliminare** con Firmamento, partner italiano naturale assente. | M+12 comunicazioni formali CIRA + MIMIT | Pivot a POLITO DIMEAS HELIPLAT lineage (substitute con peso istituzionale minore) |
 | **FO-10B-04** | Energy balance HALE feasible con E2 Solar+LiS 350 Wh/kg pack 2028 | FO-ADD-08 + RSK-TEC-001 score 25: simulazione completa M+3 ha già confermato **margine inverno 44°N -50.1% DEFICIT**; al **M+24 gate G5** se TRL pack-level LiS < 5 OR Wh/kg pack < 280, architettura E2 NON implementabile. | M+24 vendor roadmaps (Sion, Lyten, OXIS) + TRL evidence | Attivazione automatica E5 Seasonal-only (operatività marzo-ottobre) + KPI endurance Y3-Y5 ridimensionati |
-| **FO-10B-05** | Asset reuse 6A→6B 30-40% valore monetario | FO-ADD-03: al **M+24 gate G5** valutazione tecnica indipendente — se valore reuse < 15% CapEx 6A, ladder rotto. | M+24 gate G5 assessment | Cap. 6 §6.1.3 riscrittura + Phase B 6B richiede CapEx pieno (€5.5-13.5M) senza scaffold riutilizzato |
+| **FO-10B-05** | Asset reuse 6A→6B 30-40% valore monetario | FO-ADD-03: al **M+24 gate G5** valutazione tecnica indipendente, se valore reuse < 15% CapEx 6A, ladder rotto. | M+24 gate G5 assessment | Cap. 6 §6.1.3 riscrittura + Phase B 6B richiede CapEx pieno (€5.5-13.5M) senza scaffold riutilizzato |
 
 ### 10.7bis.3 FO per la visione 10 anni / B2 (boundary)
 
@@ -337,7 +310,7 @@ In coerenza con boundary B1+B2 e con il verdetto, lo Studio dichiara esplicitame
 
 > **Logica di attivazione consolidata**: il verificarsi di **≥ 2 FO 10A** in finestra simultanea attiva pre-review del verdetto 6A → HOLD esteso. Il verificarsi di **≥ 1 FO 10B critical** (10B-02 OR 10B-04) attiva pre-review del verdetto 6B → trigger B2-relaxed Cap. 11 §11.6bis. Confidence sul framework di attivazione: **medium-high** (definizioni operative + trigger osservabili).
 
-> **Compliance Regola 1 epistemic-rigor**: 15 FO esplicite operative — gap "Cap. 10 = 0 falsifying observations" identificato dall'audit Red Team M+3 è ora chiuso.
+> **Compliance Regola 1 epistemic-rigor**: 15 FO esplicite operative. Il gap "Cap. 10 = 0 falsifying observations" identificato dall'audit Red Team M+3 è ora chiuso.
 
 ---
 
@@ -380,20 +353,16 @@ In coerenza con boundary B1+B2 e con il verdetto, lo Studio dichiara esplicitame
 
 ## 10.9 Considerazioni di Chiusura
 
-Il presente Studio di Fattibilità è il **primo passo formale** del progetto Firmamento Technologies. Il verdetto Go Condizionato 6A + Hold 6B è **deliberatamente prudente**: non si tratta di una corsa né a costruire UAV né a inseguire Starlink, ma di **costruire una infrastruttura di servizi italiana per le Aree Interne** con un vettore strategico chiaro verso un futuro consorzio EU.
+Il presente Studio di Fattibilità è il **primo passo formale** del progetto Firmamento Technologies. Il verdetto Go Condizionato 6A + Hold 6B è **deliberatamente prudente**: non si tratta di una corsa a costruire UAV né di inseguire Starlink, ma di **costruire una infrastruttura di servizi italiana per le Aree Interne**, con un vettore strategico chiaro verso un futuro consorzio EU.
 
-Il successo del progetto si misurerà a tre livelli:
+Il successo del progetto si misurerà a tre livelli. Sul **livello micro (M+12)**, il pilota Pentema deve generare ≥ €200k di revenue ricorrente e dimostrare la validità del modello service-only. Sul **livello meso (M+36)**, la scala multi-regione SNAI deve raggiungere ARR € 1.5-3.5M e attivare la Phase B HALE. Sul **livello macro (M+120 e oltre)** si gioca il posizionamento Firmamento come "principal Italian node" di un futuro consorzio EU sovereign stratosferico, complementare a IRIS², con capability dimostrata.
 
-1. **Livello micro (M+12)**: il pilota Pentema deve generare ≥ €200k di revenue ricorrente e dimostrare la validità del modello service-only.
-2. **Livello meso (M+36)**: la scala multi-regione SNAI deve raggiungere ARR € 1.5-3.5M e attivare la Phase B HALE.
-3. **Livello macro (M+120 e oltre)**: il posizionamento Firmamento come "principal Italian node" di un futuro consorzio EU sovereign stratosferico, complementare a IRIS², con capability dimostrata.
-
-Per ognuno di questi livelli il presente Studio fornisce evidenze, requisiti, e gate decisionali. Le decisioni finali al CdA + sponsor sono ora le seguenti:
+Per ognuno di questi livelli il presente Studio fornisce evidenze, requisiti e gate decisionali. Le decisioni finali al CdA + sponsor sono ora le seguenti.
 
 > **Verdetto finale Studio di Fattibilità M+11**:
 >
-> ✅ **Percorso 6A — GO CONDIZIONATO**
-> ⚠️ **Percorso 6B — HOLD / GO CONDIZIONATO ESTREMO R&D**
+> ✅ **Percorso 6A. GO CONDIZIONATO**
+> ⚠️ **Percorso 6B. HOLD / GO CONDIZIONATO ESTREMO R&D**
 >
 > **Action richiesta**: approvazione formale CdA + sponsor + avvio immediato fase operativa M+12.
 
@@ -401,9 +370,9 @@ Per ognuno di questi livelli il presente Studio fornisce evidenze, requisiti, e 
 
 ## 10.10 Riferimenti
 
-[^1]: NASA SE Handbook Rev 2 — §3.0 Project Life Cycle Reviews. Source: `fonti/NASA04. SysEng Handbook (NASA_SP-2016-6105 Rev 2).md`.
+[^1]: NASA SE Handbook Rev 2, §3.0 Project Life Cycle Reviews. Source: `fonti/NASA04. SysEng Handbook (NASA_SP-2016-6105 Rev 2).md`.
 
-[^2]: D.Lgs. 36/2023 art. 41 — gate review framework PFTE. Source: `fonti/2023_0036.md`.
+[^2]: D.Lgs. 36/2023 art. 41, gate review framework PFTE. Source: `fonti/2023_0036.md`.
 
 [^3]: Skill `gate-review-checklist` + `epistemic-rigor` + `red-team-skeptic`.
 
@@ -415,8 +384,8 @@ Per ognuno di questi livelli il presente Studio fornisce evidenze, requisiti, e 
 
 ## 10.11 Note di chiusura del capitolo
 
-Il Cap. 10 è la **sintesi conclusiva** dello Studio di Fattibilità. È redatto per essere portato al gate review M+11 e alle decisioni formali del CdA + sponsor (Coopfond + Regione Liguria).
+Il Cap. 10 è la **sintesi conclusiva** dello Studio di Fattibilità. È redatto per essere portato al gate review M+11 e alle decisioni formali del CdA + sponsor (Coopfond, Regione Liguria).
 
 Il verdetto è coerente con boundary B1+B2 e con la disciplina epistemica del progetto. Le condizioni del Go Condizionato sono dichiarate ed verificabili. I showstopper sono formalmente registrati e mappati al gate review.
 
-Il capitolo è **chiuso al M+11** (proiezione) con il verdetto finale dello Studio di Fattibilità.
+Il capitolo si chiude al M+11 (proiezione) con il verdetto finale dello Studio di Fattibilità.

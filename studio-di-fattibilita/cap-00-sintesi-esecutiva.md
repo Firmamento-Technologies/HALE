@@ -1,203 +1,152 @@
-# Capitolo 0 — Sintesi Esecutiva
+# Capitolo 0. Sintesi Esecutiva
 
-> **Studio di Fattibilità — Piattaforma Aerea HALE / VTOL per Aree Interne**
-> Firmamento Technologies — bando Cooding Prototypes (Coopfond / Legacoop)
+> **Studio di Fattibilità, Piattaforma Aerea HALE / VTOL per Aree Interne**
+> Firmamento Technologies, bando Cooding Prototypes (Coopfond / Legacoop)
 > Volume 1, Capitolo 0
 >
-> **Destinatari:** CdA Firmamento Technologies, Coopfond, Regione Liguria, MIMIT, ENAC, EASA, finanziatori, stakeholder istituzionali
-> **Versione:** bozza M+11 (proiezione finale Studio)
-> **Lunghezza target:** 5-8 pagine A4
+> Destinatari: CdA Firmamento Technologies, Coopfond, Regione Liguria, MIMIT, ENAC, EASA, finanziatori, stakeholder istituzionali.
+> Versione: bozza M+11 (proiezione finale Studio).
+> Lunghezza target: 5-8 pagine A4.
 
 ---
 
-## 0.0 Confidence Aggregato dello Studio (post audit M+3)
+## 0.0 Confidence aggregato dello Studio (post audit M+3)
 
-> **Confidence framework** (per ogni claim numerico/strategico del Cap. 0, è indicato il livello di confidence basato sulle 7 regole della skill `epistemic-rigor` + 4 audit avversariali condotti M+3: Red Team + Competitor + Regulatory + Quality).
+Per ogni claim numerico o strategico del presente capitolo riportiamo il livello di confidence, costruito secondo le sette regole della skill `epistemic-rigor` e i quattro audit avversariali condotti in fase M+3 (Red Team, Competitor Intelligence, Regulatory Adversary, Quality Consolidation).
 
-| Dimensione del claim | Confidence aggregato | Note evidenze |
+| Claim | Confidence | Evidenze |
 |---|---|---|
-| **CapEx Y1 €700k-2M** | **medium** | Range largo include contingency 15% + IVA; quotation vendor reali (JOUAV/Tekever) ancora pending (DR-001/DR-003); confidence sale a medium-high post-quotation M+3 |
-| **OpEx Y2 RECONCILED €1.18M** | **medium-high** | Componente regulatory team mandatory €400-590k (CISO + DPO + Head Regulatory) derivata da Cap. 5 §5.17 evidenza normativa (Part-IS EASA, NIS2, AgID/PSN, art. 50, ENAV); baseline tecnico €260-480k derivata da modelli `agents/financial-cfo-analyst.md` |
-| **Revenue Y1 €260k centrale (range €220-300k) RECALIBRATED** | **medium** | Pricing post-Cluster D benchmark (Planetek Rheticus Puglia, e-GEOS PC Lazio, NHazca) confidence high; soglia €200k SyR-Cost-003 hard floor; legacy €355-405k **FALSIFICATO**, non più operativamente in uso |
-| **NPV 10y base +€3.5M / IRR 12-18%** | **low** | Out-of-window validazione diretta Y3+; sensitivity in Cap. 8 §8.6.3 mostra range ampio; Monte Carlo non ancora condotto (DR-008) |
-| **Break-even Y5-Y6** | **medium-low** | Post-recalibration revenue Y1; assumption scale-up SNAI Y2-Y3 a 1 nuova regione/anno con pricing tenuto |
-| **P(Go pieno gate G3) 5-15%** | **medium-high** | Calcolo derivato AND 5 hard conditions (Cap. 10 §10.0bis), P marginal stimato red-team-skeptic; coerente con base rate startup deeptech (DR-013/DR-014) |
-| **P(HOLD piano rafforzato G3) 45-60%** | **medium-high** | Scenario realistico atteso; pivot a sliding timeline §9.12 senza loss of strategic value |
-| **5 showstopper formali (Risk Register)** | **high** | Identificati e quantificati da 4 audit avversariali; RSK-TEC-001 score 25 derivato da simulazione completa energy balance HALE 44°N (allegato A.7) |
-| **Visione 10 anni / B2 EU sovereign stratospheric layer** | **low-medium aspirazionale, NON operativa** | Boundary condition strategica (input progetto, non claim falsificabile); B2 full P 6-15%, B2-relaxed standalone IT small fleet P 30-50%; trigger FO-ADD-10 + Cap. 11 §11.6bis |
-| **Posizionamento "complementare IRIS²"** | **medium** | IRIS² baseline LEO+MEO puro confermato (DR-009 closure); finestra opportunity stratospheric gap-filler aperta Y2-Y4 (2027-2030); falsificabile via FO-ADD-02 (M+18 roadmap DG CNECT) |
-| **5 Pilastri vantaggio competitivo** | **mixed**: 1 high (cooperative se strutturazione giuridica), 2 medium (sostenibilità + service-only), 2 low (specializzazione geografica + approccio incrementale) — vedi Cap. 7 §7.5.1 |
-| **Capital intensity Y10 €500M-1.5B small fleet** | **low** (extrapolation 8-10 anni out-of-window) | Bottom-up estimate Cap. 11 §11.6.4; range largo; sostituibile da modelli benchmark internazionali raffinabili in Vol. 2 financial model |
+| CapEx Y1 €700k-2M | medium | Range che include contingency 15% e IVA. Le quotation vendor reali (JOUAV e Tekever) sono ancora pending nei DR-001/DR-003; il livello salirà a medium-high una volta acquisite. |
+| OpEx Y2 RECONCILED €1.18M | medium-high | La componente regulatory team mandatory (€400-590k per CISO, DPO, Head Regulatory) è derivata dal Cap. 5 §5.17 sulla base di evidenza normativa diretta (Part-IS EASA, NIS2, AgID/PSN, art. 50, ENAV). Il baseline tecnico €260-480k proviene dai modelli `agents/financial-cfo-analyst.md`. |
+| Revenue Y1 €260k centrale (range €220-300k) RECALIBRATED | medium | Pricing post-audit Cluster D (benchmark Planetek Rheticus Puglia, e-GEOS PC Lazio, NHazca) con confidence high. La soglia €200k SyR-Cost-003 funge da hard floor. Il legacy €355-405k è stato falsificato e non rientra più nel modello operativo. |
+| NPV 10y base +€3.5M / IRR 12-18% | low | Periodo out-of-window per validazione diretta dal terzo anno in poi. La sensitivity in Cap. 8 §8.6.3 mostra un range ampio. L'analisi Monte Carlo non è ancora stata condotta (DR-008). |
+| Break-even Y5-Y6 | medium-low | Post-recalibration del revenue Y1; assume scale-up SNAI Y2-Y3 a una nuova regione l'anno mantenendo il pricing. |
+| P(Go pieno gate G3) 5-15% | medium-high | Calcolo derivato dall'AND delle 5 hard conditions (Cap. 10 §10.0bis), con P marginali stimate da red-team-skeptic. Coerente con il base rate startup deeptech (DR-013/DR-014). |
+| P(HOLD piano rafforzato G3) 45-60% | medium-high | Scenario realistico atteso. Il pivot a sliding timeline §9.12 non comporta perdita di valore strategico. |
+| 5 showstopper formali (Risk Register) | high | Identificati e quantificati dai quattro audit avversariali. RSK-TEC-001 ha score 25 dopo la simulazione completa di energy balance HALE a 44°N (allegato A.7). |
+| Visione 10 anni / B2 EU sovereign stratospheric layer | low-medium aspirazionale, non operativa | Boundary condition strategica, input progetto non falsificabile. B2 full con P 6-15%; B2-relaxed standalone IT small fleet con P 30-50%. Trigger in FO-ADD-10 e Cap. 11 §11.6bis. |
+| Posizionamento "complementare IRIS²" | medium | IRIS² baseline LEO+MEO puro confermato (DR-009 closure). La finestra di opportunità stratospheric gap-filler è aperta Y2-Y4 (2027-2030). Falsificabile via FO-ADD-02 (M+18, roadmap DG CNECT). |
+| 5 Pilastri vantaggio competitivo | mixed | Uno high (cooperative, se strutturazione giuridica), due medium (sostenibilità e service-only), due low (specializzazione geografica e approccio incrementale). Vedi Cap. 7 §7.5.1. |
+| Capital intensity Y10 €500M-1.5B small fleet | low | Extrapolation 8-10 anni out-of-window. Bottom-up estimate Cap. 11 §11.6.4 con range largo, da affinare nei modelli benchmark internazionali del Vol. 2 financial model. |
 
-> **Confidence aggregato Studio M+3**: **MEDIUM-LOW** (richiede validazione esterna pre-G3 effettivo M+10). **NON investment-grade** per finanziatori istituzionali (VC top-tier, BEI/EIC) senza: LoI Regione Liguria firmata + vendor quotation reali + pre-application ENAC documentata + modello finanziario validato esterno (RINA/DNV) + Monte Carlo analysis. **Coopfond / Regione Liguria / Cooding Prototypes**: confidence sufficiente (medium aggregato) per istruttoria bando e DGR regionale.
-
----
-
-## 0.1 Il Progetto
-
-**Firmamento Technologies** propone lo sviluppo e l'attivazione di una **piattaforma aerea unmanned**, operata come **erogatore di servizi** (non come venditore di velivoli), a beneficio delle **Aree Interne italiane** — territori a bassa densità demografica, orografia complessa, carenza di servizi essenziali e divario digitale strutturale.
-
-Il presente Studio di Fattibilità è redatto in conformità all'**art. 41 D.Lgs. 36/2023** + Allegato I.7 (Codice dei Contratti Pubblici), con metodologia derivata dal **NASA Systems Engineering Handbook Rev 2** e dai template italiani autoritativi (**ENAC AAM Business Plan 2021-2030**, **MIMIT prefattibilità aero**, **DTA Puglia Studio Grottaglie**).
-
-**Caso pilota**: frazione di **Pentema (Comune di Torriglia, Genova)**, area SNAI riconosciuta nel ciclo 2021-2027 (Valli dell'Antola e del Tigullio), in Regione Liguria — laboratorio italiano per le politiche pubbliche delle Aree Interne.
-
-**Rete di utenti-pilota**: **10 cooperative** aderenti a Legacoop, con **Fabrica** come capofila. Le cooperative sono utenti + co-progettiste + custodi di fabbisogni operativi reali.
+> **Confidence aggregato Studio M+3**: MEDIUM-LOW. Lo Studio richiede validazione esterna prima del G3 effettivo M+10 e **non è investment-grade** per finanziatori istituzionali (VC top-tier, BEI, EIC) in assenza di LoI Regione Liguria firmata, vendor quotation reali, pre-application ENAC documentata, modello finanziario validato esternamente (RINA, DNV) e Monte Carlo analysis. Per Coopfond, Regione Liguria e bando Cooding Prototypes il livello aggregato medium è sufficiente all'istruttoria del bando e alla DGR regionale.
 
 ---
 
-## 0.2 Strategia Duale (Percorso 6A + 6B)
+## 0.1 Il progetto
 
-Il progetto adotta una **strategia duale a riduzione del rischio**:
+Firmamento Technologies propone lo sviluppo e l'attivazione di una piattaforma aerea unmanned, operata come erogatore di servizi e non come venditore di velivoli, a beneficio delle Aree Interne italiane: territori a bassa densità demografica, orografia complessa, carenza di servizi essenziali e divario digitale strutturale.
 
-### 🚁 Percorso 6A — VTOL Pilota Pentema (operativo, 0-12 mesi)
+Lo Studio è redatto in conformità all'art. 41 D.Lgs. 36/2023 e all'Allegato I.7 del Codice dei Contratti Pubblici, con metodologia derivata dal NASA Systems Engineering Handbook Rev 2 e dai template italiani autoritativi (ENAC AAM Business Plan 2021-2030, MIMIT prefattibilità aero, DTA Puglia Studio Grottaglie).
 
-**Tecnologia**: piattaforma commerciale Vertical Take-Off and Landing **TRL 8-9** (baseline JOUAV CW-30E con Plan B Tekever AR3 ITAR-free EU), payload modulare EO + IR + telecom backup.
+Il caso pilota è la frazione di Pentema, nel Comune di Torriglia (Genova), area SNAI riconosciuta nel ciclo 2021-2027 (Valli dell'Antola e del Tigullio), Regione Liguria: un laboratorio italiano per le politiche pubbliche delle Aree Interne.
 
-**Casi d'uso target**:
-1. Monitoraggio rischio idrogeologico (frane, dissesto) — Regione Liguria + Protezione Civile
-2. Antincendio boschivo (early detection ≤ 5 min) — VVF + Carabinieri Forestali
-3. Connettività di emergenza — PC + Comune Torriglia
-4. Mapping infrastrutture rurali — Comuni SNAI
-5. Servizi alle cooperative (agricolo, forestale) — rete Legacoop
+La rete di utenti-pilota è composta da dieci cooperative aderenti a Legacoop, con Fabrica come capofila. Le cooperative agiscono come utenti, co-progettisti e custodi di fabbisogni operativi reali.
 
-**Budget**: CapEx Y1 **€700k – €2M** (incluse IVA + contingency 15%). **OpEx run-rate Y2 RECONCILED post Cap. 5 §5.17**: **€1.18M/anno centrale (range €1.05-1.30M)** — include €260-480k baseline tecnico + €400-590k regulatory team mandatory (CISO + DPO + Head Regulatory) + €115-230k overhead amministrativo. Il legacy €260-480k/anno è solo OpEx tecnico, NON sufficiente operativamente post Cap. 5 §5.17 (5+1 critical regolatori: Part-IS, AgID/PSN, NIS2, art. 50, ENAV, EUROCONTROL).
+---
 
-**Revenue Y1 baseline RECALIBRATED post-Cluster D audit (M+3)**: **€260k centrale (range €220-300k)** da 5 contratti pluriennali, min SyR-Cost-003 €200k. **Soglia minima**: €200k (SyR-Cost-003 hard floor). **Pricing PA**: €60-90k/anno base + €30-60k/anno premium persistence/sovranità (post-falsificazione baseline originale €150k/anno → €355-405k da Cluster D benchmark Planetek/e-GEOS/NHazca: €30-80k/anno). Dettaglio Cap. 7 §7.4.4-5 + §7.8.2.
+## 0.2 Strategia duale (Percorso 6A + 6B)
 
-### 🛰 Percorso 6B — HALE Stratosferico (R&D, 24-48+ mesi)
+Il progetto adotta una strategia duale a riduzione del rischio, articolata su due percorsi paralleli.
 
-**Tecnologia**: piattaforma **High Altitude Long Endurance** solare, apertura 25-30 m, MTOW 80-150 kg, quota operativa 18-21 km (FL590-690), endurance target ≥ 30 giorni perennial estate (Y3) / 12 mesi target (Y5).
+### Percorso 6A, VTOL Pilota Pentema (operativo, 0-12 mesi)
 
-**Casi d'uso target post-pilota**:
-- Osservazione persistente persistente del territorio (EO multispettrale)
-- Connettività NTN 5G NR (3GPP Rel-17/18 regenerative gNB)
-- Servizi dual-use civile-difesa (potenziale, condizionato)
+La tecnologia è una piattaforma commerciale Vertical Take-Off and Landing TRL 8-9, con baseline JOUAV CW-30E e Plan B Tekever AR3 ITAR-free EU, payload modulare EO + IR + telecom backup. I casi d'uso target sono cinque: monitoraggio del rischio idrogeologico per Regione Liguria e Protezione Civile, antincendio boschivo con early detection ≤ 5 min per VVF e Carabinieri Forestali, connettività di emergenza per PC e Comune di Torriglia, mapping infrastrutture rurali per i Comuni SNAI, servizi alle cooperative agricole e forestali aderenti a Legacoop.
 
-**Budget Phase B R&D**: **€5.5-13.5M** (M+24 → M+48), con mix 50-75% grant pubblico (EDF + Horizon + PNRR + ASI).
+Il budget CapEx Y1 è stimato in €700k-€2M, incluse IVA e contingency 15%. L'OpEx run-rate Y2 RECONCILED post Cap. 5 §5.17 si attesta su **€1.18M/anno centrale** (range €1.05-1.30M): vi rientrano €260-480k di baseline tecnico, €400-590k di regulatory team mandatory (CISO, DPO, Head Regulatory) e €115-230k di overhead amministrativo. Il legacy €260-480k/anno copre il solo OpEx tecnico e non è sufficiente sul piano operativo dopo l'identificazione, in Cap. 5 §5.17, dei 5+1 critical regolatori (Part-IS, AgID/PSN, NIS2, art. 50, ENAV, EUROCONTROL).
+
+Il revenue Y1 baseline RECALIBRATED post audit Cluster D (M+3) si colloca a **€260k centrale** (range €220-300k) da cinque contratti pluriennali, con minimo SyR-Cost-003 di €200k come hard floor. Il pricing PA è ricalibrato a €60-90k/anno per la componente base e €30-60k/anno per la premium su persistence e sovranità, dopo la falsificazione del baseline originale €150k/anno (revenue €355-405k) operata dal benchmark Cluster D Planetek, e-GEOS e NHazca, attestato a €30-80k/anno. Il dettaglio è in Cap. 7 §7.4.4-5 e §7.8.2.
+
+### Percorso 6B, HALE Stratosferico (R&D, 24-48+ mesi)
+
+La tecnologia è una piattaforma High Altitude Long Endurance a propulsione solare, apertura 25-30 m, MTOW 80-150 kg, quota operativa 18-21 km (FL590-690), endurance target ≥ 30 giorni perennial estate (Y3) e 12 mesi a regime (Y5). I casi d'uso post-pilota includono osservazione persistente del territorio in chiave EO multispettrale, connettività NTN 5G NR (3GPP Rel-17/18 regenerative gNB) e servizi dual-use civile-difesa, questi ultimi potenziali e condizionati.
+
+Il budget Phase B R&D è stimato in €5.5-13.5M nella finestra M+24 → M+48, con un mix di finanziamento al 50-75% di grant pubblico (EDF, Horizon, PNRR, ASI).
 
 ---
 
 ## 0.3 Verdetto dello Studio
 
-### ⚠️ Percorso 6A — **HOLD CON PIANO REGOLATORIO RAFFORZATO** (scenario base default, P 45-60%) / **GO CONDIZIONATO** (scenario ottimistico, P 5-15%)
+### Percorso 6A: HOLD CON PIANO REGOLATORIO RAFFORZATO (scenario base, P 45-60%) / GO CONDIZIONATO (scenario ottimistico, P 5-15%)
 
-> **Caveat probabilistico onesto** (post audit M+3): le 5 hard conditions sotto sono in AND logico. P(AND tutte) realistica al gate G3 = **5-15%** (Go pieno) vs **45-60%** (Hold con piano + re-review M+13-16). Scenario base atteso = HOLD CON PIANO RAFFORZATO. Per dettaglio vedi Cap. 10 §10.0bis.
+Il caveat probabilistico, dichiarato onestamente dopo l'audit M+3, è che le cinque hard conditions del verdetto sono in AND logico. La P(AND tutte) realistica al gate G3 si colloca al 5-15% per il Go pieno e al 45-60% per l'Hold con piano e re-review M+13-16. Lo scenario base atteso è dunque l'Hold con piano rafforzato. Il dettaglio è in Cap. 10 §10.0bis.
 
-**Tecnicamente, regolatoriamente, di mercato e finanziariamente fattibile** entro l'orizzonte di 12 mesi. Il verdetto è subordinato alle seguenti **condizioni vincolanti** (gate M+10-12):
-- LoI/accordo formale Regione Liguria firmato entro M+9
-- Autorizzazione SORA ENAC SAIL II-III BVLOS operativa entro M+9
-- Mix funding ≥ 60% committed entro M+10
-- ≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6
-- Pre-application meeting ENAC con feedback documentato entro M+3-6
+Il Percorso 6A è tecnicamente, regolatoriamente, di mercato e finanziariamente fattibile entro l'orizzonte dei 12 mesi. Il Go pieno resta subordinato a cinque condizioni vincolanti al gate M+10-12: LoI o accordo formale con Regione Liguria firmato entro M+9; autorizzazione SORA ENAC SAIL II-III BVLOS operativa entro M+9; mix funding committed ≥ 60% entro M+10; almeno otto cooperative pilota su dieci che confermino partecipazione formale entro M+6; pre-application meeting ENAC con feedback documentato entro M+3-6.
 
-### ⚠️ Percorso 6B — **HOLD CON CRITERI DI USCITA ESTREMAMENTE STRINGENTI** + Pivot Strutturale
+### Percorso 6B: HOLD CON CRITERI DI USCITA ESTREMAMENTE STRINGENTI + pivot strutturale
 
-**Pivot strategico post audit M+3** (DR-013 + DR-014):
-- Base rate 0% HALE solari commerciali operativi in 22 anni (12 programmi falliti analizzati)
-- Capital intensity benchmark internazionale $50M-1B per programma → Firmamento €5.5-13.5M = **R&D Phase 0/A only**, NON percorso completo a operatività
-- **Pivot raccomandato**: da "HALE proprietario Firmamento" a **"Firmamento operatore di servizi su piattaforme prime contractor"** (Aalto/Sceye/Skydweller/CIRA-EuroHAPS-successor)
+Il pivot strategico post audit M+3 (DR-013 e DR-014) si fonda su tre constatazioni: il base rate di HALE solari commerciali operativi è prossimo allo zero, con dodici programmi falliti analizzati negli ultimi 22 anni; la capital intensity di benchmark internazionale si colloca in $50M-1B per programma, sicché €5.5-13.5M corrispondono in realtà a R&D di Fase 0/A, non al percorso completo verso l'operatività; di conseguenza la raccomandazione è di pivotare da "HALE proprietario Firmamento" a "Firmamento operatore di servizi su piattaforme prime contractor" (Aalto, Sceye, Skydweller, CIRA-EuroHAPS-successor).
 
-Fattibilità tecnologica plausibile ma con **5 showstopper aperti**:
-- **RSK-TEC-001**: energy balance HALE inverno 44°N **margine reale -50.1% DEFICIT** (simulazione completa allegato A.7 supera la stima hand-calc "0-15% critico"); **E5 Seasonal-only (marzo-ottobre) mandatory plan A**; perennial 44°N NON fattibile con tech baseline 2026-2028 — score RSK aggiornato a 25
-- **RSK-TEC-002**: aeroelasticità ala high-AR
-- **RSK-REG-001**: assenza framework regolatorio HAPS EU (EASA Special Condition non ancora aperto)
-- **RSK-FIN-001**: funding Phase B €5.5-13.5M non commitato al M+11
-- **RSK-TEC-003**: tempi Type Certification HALE > 5 anni
+La fattibilità tecnologica resta plausibile, ma rimangono aperti cinque showstopper. RSK-TEC-001 riguarda l'energy balance HALE in inverno a 44°N, con margine reale a -50.1% deficit (la simulazione completa dell'allegato A.7 supera la stima hand-calc "0-15% critico"); l'architettura E5 Seasonal-only marzo-ottobre diventa il plan A mandatory, mentre l'operatività perennial a 44°N non è fattibile con la tecnologia baseline 2026-2028; il punteggio RSK è stato aggiornato a 25. RSK-TEC-002 concerne l'aeroelasticità dell'ala high-AR. RSK-REG-001 attiene all'assenza di framework regolatorio HAPS UE (la EASA Special Condition non è ancora aperta). RSK-FIN-001 è il funding Phase B €5.5-13.5M non commitato al M+11. RSK-TEC-003 riguarda i tempi di Type Certification HALE superiori a cinque anni.
 
-Phase B R&D autorizzata **subordinatamente** al raggiungimento delle conditions al gate G5 (M+24), inclusi funding mix ≥ 50% pubblico e engagement EASA aperto.
+La Phase B R&D resta autorizzata solo subordinatamente al raggiungimento delle condizioni al gate G5 (M+24), incluso un funding mix con ≥ 50% pubblico ed engagement EASA aperto.
 
 ---
 
-## 0.4 Visione 10 Anni
+## 0.4 Visione 10 anni
 
-Posizionamento strategico target: **nodo italiano fondatore di una futura infrastruttura sovrana europea HAPS**, complementare a **IRIS²** (LEO+MEO sovereign EU; €10B, governance SpaceRISE = Airbus + Eutelsat + Thales-Telespazio + Hispasat + OHB + Deutsche Telekom + Orange; **primo lancio 2029, operatività piena 2031**, baseline LEO+MEO **puro senza layer stratosferico** — DR-009 closure M+3, vedi Cap. 5 §5.16bis) e a Galileo/Copernicus. La finestra strategica Y2-Y4 Firmamento (2027-2030) si sovrappone a IRIS² pre-ops, opportunità di posizionamento "stratospheric layer gap-filler" via engagement DG CNECT + SpaceRISE.
+Il posizionamento strategico target è quello di nodo italiano fondatore di una futura infrastruttura sovrana europea HAPS, complementare a IRIS² (LEO+MEO sovereign EU, €10B, governance SpaceRISE che comprende Airbus, Eutelsat, Thales-Telespazio, Hispasat, OHB, Deutsche Telekom e Orange; primo lancio 2029, operatività piena 2031, baseline LEO+MEO puro senza layer stratosferico secondo la closure DR-009 in M+3, vedi Cap. 5 §5.16bis) e a Galileo/Copernicus. La finestra strategica Y2-Y4 di Firmamento (2027-2030) si sovrappone alla fase pre-ops di IRIS², offrendo un'opportunità di posizionamento "stratospheric layer gap-filler" via engagement DG CNECT e SpaceRISE.
 
-**Linguaggio pubblico**: "complementare a IRIS²", **mai** "alternativa europea a Starlink" (per ragioni geopolitiche dichiarate in documento riservato).
+Il linguaggio pubblico raccomandato resta "complementare a IRIS²", mai "alternativa europea a Starlink", per ragioni geopolitiche dichiarate nel documento riservato.
 
-**5 fasi della visione**:
-1. **Y1**: Pilota Pentema VTOL — pilot validato + revenue €200-400k
-2. **Y2-Y3**: Scale-up SNAI Italia (3-4 regioni, flotta 3-8 VTOL/MALE) + R&D HALE subscale
-3. **Y3-Y6**: Primo HALE prototipo operativo italiano + servizio commerciale HAPS pilota
-4. **Y6-Y8**: Costellazione italiana 3-10 HAPS + servizi NTN + EO persistente
-5. **Y8-Y10**: Consorzio EU stratospheric layer (Italia + FR/DE/ES) + posizionamento ufficiale "EU sovereign stratospheric layer" complementare IRIS²
+Le cinque fasi della visione sono ordinate cronologicamente. In Y1 si esegue il pilota Pentema VTOL, con pilot validato e revenue tra €200k e €400k. In Y2-Y3 si effettua lo scale-up SNAI Italia su 3-4 regioni, con una flotta di 3-8 VTOL/MALE e R&D HALE subscale parallelo. In Y3-Y6 entra in servizio il primo HALE prototipo operativo italiano, accompagnato da un servizio commerciale HAPS pilota. In Y6-Y8 si forma la costellazione italiana di 3-10 HAPS, con servizi NTN ed EO persistente. In Y8-Y10 nasce il consorzio EU stratospheric layer (Italia, FR, DE, ES) con posizionamento ufficiale "EU sovereign stratospheric layer" complementare a IRIS².
 
-**Capital intensity 10 anni dichiarata onestamente**: **€500M – €2B** scenario "small fleet" (5-10 HAPS) / **€10-30B** scenario "EU sovereign full scale" (100+ HAPS, richiede programma EU equivalente IRIS² come precondizione esterna).
+La capital intensity dei dieci anni è dichiarata onestamente: €500M-€2B nello scenario "small fleet" (5-10 HAPS) e €10-30B nello scenario "EU sovereign full scale" (100+ HAPS, che richiede come precondizione esterna l'apertura di un programma EU equivalente IRIS²).
 
-Lo Studio approva **solo Y1-Y3** (Fasi 1+2). Le fasi 3-5 sono **vettore strategico mantenuto**, decisione formale ai gate G5 (M+24), G6 (M+36), e oltre.
+Lo Studio approva soltanto Y1-Y3 (Fasi 1 e 2). Le fasi 3-5 restano vettore strategico mantenuto, con decisione formale rinviata ai gate G5 (M+24), G6 (M+36) e successivi.
 
 ---
 
-## 0.5 Modello di Business
+## 0.5 Modello di business
 
-Boundary condition strutturale: **service-only, no product sale**.
+La boundary condition strutturale resta service-only, senza vendita di prodotto. Le linee di servizio (monitoraggio EO, connettività emergenza, analytics) sono erogate in quattro formati alternativi o combinati: canone fisso, ore-volo più analytics, outcome-based, DaaS (Data-as-a-Service). I canali distributivi prevalenti sono B2G regionale (con anchor Regione Liguria), B2G locale (PC, ARPA, Enti Parco) e B2B cooperative (rete Legacoop scaled).
 
-- Linee di servizio: monitoraggio EO + connettività emergenza + analytics — erogate come **canone fisso**, **ore-volo + analytics**, **outcome-based**, **DaaS** (Data-as-a-Service).
-- Canali distributivi prevalenti: **B2G regionale** (anchor Regione Liguria), **B2G locale** (PC, ARPA, Enti Parco), **B2B cooperative** (rete Legacoop scaled).
-- 4 pilastri vantaggio competitivo: (i) specializzazione geografica Aree Interne, (ii) modello cooperativo, (iii) sostenibilità + narrativa ESG (propulsione 100% solare/elettrica + fibra di lino in strutture secondarie), (iv) approccio incrementale VTOL → MALE → HALE che produce **asset riusabili 30-40%** del CapEx Y1.
+Il vantaggio competitivo poggia su quattro pilastri: specializzazione geografica nelle Aree Interne italiane, modello cooperativo come barriera all'imitazione, sostenibilità e narrativa ESG (propulsione 100% solare ed elettrica, fibra di lino in strutture secondarie), approccio incrementale VTOL → MALE → HALE che produce asset riusabili stimati al 30-40% del CapEx Y1.
 
 ---
 
-## 0.6 Quadro Normativo
+## 0.6 Quadro normativo
 
-Lo Studio è conforme a:
-- **D.Lgs. 36/2023 art. 41 + Allegato I.7** (Codice Contratti Pubblici)
-- **Reg. (UE) 2019/947 + 2019/945** (UAS Operations + Design)
-- **EASA AMC/GM Issue 1 Amendment 3** (settembre 2025) — versione europea **SORA 2.5**
-- **ENAC Regolamento Mezzi Aerei a Pilotaggio Remoto Ed. 3 + Emend. 1**
-- **Reg. (UE) 2021/664** + **ENAC LG-2023/006** (U-Space)
-- **GDPR + D.Lgs. 196/2003 novellato** (privacy)
-- **NIS2 + D.Lgs. 138/2024** (cybersecurity)
-- **AS/EN 9100 + ISO 9001** (sistemi di gestione qualità aerospace)
+Lo Studio è conforme al D.Lgs. 36/2023 art. 41 e Allegato I.7 (Codice Contratti Pubblici), ai Reg. UE 2019/947 e 2019/945 (UAS Operations and Design), all'EASA AMC/GM Issue 1 Amendment 3 di settembre 2025 (versione europea di SORA 2.5), al Regolamento ENAC sui Mezzi Aerei a Pilotaggio Remoto Ed. 3 con Emendamento 1, al Reg. UE 2021/664 e alla Linea Guida ENAC LG-2023/006 (U-Space), al GDPR e al D.Lgs. 196/2003 novellato (privacy), alla Direttiva NIS2 e D.Lgs. 138/2024 (cybersecurity), agli standard AS/EN 9100 e ISO 9001 sui sistemi di gestione qualità aerospace.
 
-Strategia regolatoria 6A: **Specific Category** SAIL II-III BVLOS, SORA application + Operations Manual + Operator Declaration ENAC. Strategia 6B: **Certified Category** via Special Condition HAPS negoziata con EASA (5-8 anni timeline tipica).
+La strategia regolatoria per il Percorso 6A poggia sulla Specific Category SAIL II-III BVLOS, con SORA application, Operations Manual e Operator Declaration verso ENAC. Per il 6B la strategia richiede la Certified Category via Special Condition HAPS negoziata con EASA, con timeline tipica nell'ordine dei 5-8 anni.
 
 ---
 
-## 0.7 Stakeholder Critici
+## 0.7 Stakeholder critici
 
 | # | Stakeholder | Ruolo | Commitment richiesto |
 |---|---|---|---|
-| 1 | **Regione Liguria** | Anchor customer + sponsor istituzionale | LoI/DGR formale entro M+9 |
-| 2 | **Coopfond + Legacoop** | Finanziatore primary + governance cooperative | Contratto Cooding + Cooding-Invest |
-| 3 | **Rete 10 cooperative (Fabrica capofila)** | Utenti-pilota + co-progettisti | ≥ 8 su 10 confermano partecipazione M+6 |
-| 4 | **Comune Torriglia + Comunità Pentema** | Sede pilota + accettabilità sociale | Delibera comunale + workshop comunità |
-| 5 | **Protezione Civile Liguria + ARPA Liguria** | Cliente operativo primario | Convenzione operativa + protocollo |
-| 6 | **ENAC** | Regolatore aviazione civile | Autorizzazione SORA SAIL II-III BVLOS |
-| 7 | **EASA** | Regolatore europeo | Engagement Innovation Network HAPS framework |
-| 8 | **AGCOM** | Regolatore spettro radio | Licensing temporaneo bande ISM o commerciali |
-| 9 | **Garante Privacy** | Regolatore protezione dati | DPIA pubblica preliminare M+6 |
-| 10 | **CIRA** | Partner R&D potenziale Phase B 6B | Letter of intent M+9-12 |
+| 1 | Regione Liguria | Anchor customer e sponsor istituzionale | LoI/DGR formale entro M+9 |
+| 2 | Coopfond e Legacoop | Finanziatore primary e governance cooperative | Contratto Cooding e Cooding-Invest |
+| 3 | Rete 10 cooperative (Fabrica capofila) | Utenti-pilota e co-progettisti | ≥ 8 su 10 confermano partecipazione M+6 |
+| 4 | Comune Torriglia e comunità Pentema | Sede pilota e accettabilità sociale | Delibera comunale e workshop comunità |
+| 5 | Protezione Civile Liguria e ARPA Liguria | Cliente operativo primario | Convenzione operativa e protocollo |
+| 6 | ENAC | Regolatore aviazione civile | Autorizzazione SORA SAIL II-III BVLOS |
+| 7 | EASA | Regolatore europeo | Engagement Innovation Network su framework HAPS |
+| 8 | AGCOM | Regolatore spettro radio | Licensing temporaneo bande ISM o commerciali |
+| 9 | Garante Privacy | Regolatore protezione dati | DPIA pubblica preliminare M+6 |
+| 10 | CIRA | Partner R&D potenziale Phase B 6B | Letter of intent M+9-12 |
 
 ---
 
-## 0.8 Risk Aggregato
+## 0.8 Risk aggregato
 
-**Percorso 6A**: nessun rischio rosso (showstopper). 5 rischi gialli con mitigation plan chiaro. Profilo rischio: medio-basso. Compatibile con Go Condizionato.
+Sul Percorso 6A non emergono showstopper formali. Restano cinque rischi gialli con mitigation plan chiaro. Il profilo di rischio è medio-basso, compatibile con un Go Condizionato.
 
-**Percorso 6B**: **5 showstopper rossi** (energy balance inverno, aeroelasticità, framework HAPS, funding Phase B, Type Certification timeline). Mitigation strategy esiste ma non garantita. Profilo rischio: alto. Compatibile con Hold / Go Condizionato Estremo.
+Sul Percorso 6B sono presenti cinque showstopper rossi (energy balance inverno, aeroelasticità ala high-AR, framework HAPS, funding Phase B, Type Certification timeline). Esiste una mitigation strategy, ma non è garantita. Il profilo è di rischio alto, compatibile soltanto con Hold o Go Condizionato Estremo.
 
 ---
 
 ## 0.9 Finanziamento
 
-### Mix raccomandato Y1 Percorso 6A (€0.75-1.75M target)
-- **Coopfond Cooding Prototypes 2026**: €50k (max), 5% mix
-- **Coopfond Cooding-Invest**: €150-300k, 15-20%
-- **Regione Liguria FESR 2021-2027**: €300-500k, 25-40%
-- **PNRR Aerospazio / IS4Aerospace**: €0-300k, 0-20%
-- **Equity privato (founder + seed)**: €200-500k, 25-35%
-- **R&D tax credit (L. 160/2019)**: €50-150k, 5-15%
+Il mix raccomandato per il Y1 del Percorso 6A, su target €0.75-1.75M, prevede €50k da Coopfond Cooding Prototypes 2026 (massimo, 5% del mix), €150-300k da Coopfond Cooding-Invest (15-20%), €300-500k da Regione Liguria FESR 2021-2027 (25-40%), €0-300k da PNRR Aerospazio e IS4Aerospace (0-20%), €200-500k di equity privato founder e seed (25-35%), e €50-150k da R&D tax credit ex L. 160/2019 (5-15%).
 
-### Mix Phase B 6B (€5.5-15.5M target, M+24-48)
-- **EDF** call HAPS post-EuroHAPS: €2-5M, 30-40%
-- **Horizon Europe Cluster 4/5**: €1-3M, 15-25%
-- **PNRR Aerospazio / ASI / MIMIT**: €1-2.5M, 15-20%
-- **Equity privato Series A/B**: €1-2.5M, 10-25%
-- **R&D tax credit + Patent Box**: €0.5-1.5M, 5-10%
+Per la Phase B 6B, su target €5.5-15.5M nella finestra M+24-48, il mix prevede €2-5M da EDF call HAPS post-EuroHAPS (30-40%), €1-3M da Horizon Europe Cluster 4 e 5 (15-25%), €1-2.5M da PNRR Aerospazio, ASI e MIMIT (15-20%), €1-2.5M di equity privato Series A/B (10-25%), e €0.5-1.5M da R&D tax credit e Patent Box (5-10%).
 
 ---
 
-## 0.10 Cronoprogramma e Gate
+## 0.10 Cronoprogramma e gate
 
 ```
 M+0   M+3   M+6   M+10/11   M+12         M+24            M+36            M+48
@@ -208,15 +157,11 @@ M+0   M+3   M+6   M+10/11   M+12         M+24            M+36            M+48
 │  STUDIO DI FATTIBILITÀ    │  PILOTA 6A VTOL OP         │   R&D 6B HALE PHASE B           │
 ```
 
-**Gate principali**:
-- **G3 (M+10-11)** ⭐ — **FEASIBILITY GATE PRIMARIO** — verdetto Go / Hold / No-Go per ciascun percorso (oggetto del presente Studio)
-- **G4 (M+12)** — fine pilota VTOL 6A, decisione scale-up SNAI
-- **G5 (M+24)** — decisione Phase B 6B Go / Defer
-- **G6 (M+36)** — Phase B HALE midterm review
+I gate principali sono quattro. G3 (M+10-11) è il FEASIBILITY GATE PRIMARIO e produce il verdetto Go / Hold / No-Go per ciascun percorso (oggetto del presente Studio). G4 (M+12) chiude il pilota VTOL 6A e attiva la decisione di scale-up SNAI. G5 (M+24) decide la Phase B 6B in modalità Go o Defer. G6 (M+36) è la midterm review della Phase B HALE.
 
 ---
 
-## 0.11 Numeri Chiave
+## 0.11 Numeri chiave
 
 | Metric | Valore |
 |---|---|
@@ -224,8 +169,8 @@ M+0   M+3   M+6   M+10/11   M+12         M+24            M+36            M+48
 | Durata pilota 6A | 12 mesi (M+0 → M+12), operativo da M+9 |
 | Durata Phase B 6B R&D | 24 mesi (M+24 → M+48) |
 | CapEx 6A Y1 | €700k – €2M |
-| OpEx 6A Y2 run-rate (RECONCILED post Cap. 5 §5.17) | €1.18M/anno centrale (range €1.05-1.30M); legacy "tecnico-only" €260-480k/anno NON sufficiente operativamente |
-| Revenue 6A Y1 baseline (RECALIBRATED) | €260k centrale, range €220-300k (min €200k SyR-Cost-003) — post-Cluster D audit |
+| OpEx 6A Y2 run-rate (RECONCILED post Cap. 5 §5.17) | €1.18M/anno centrale (range €1.05-1.30M); il legacy "tecnico-only" €260-480k/anno non è sufficiente operativamente |
+| Revenue 6A Y1 baseline (RECALIBRATED) | €260k centrale, range €220-300k (min €200k SyR-Cost-003), post audit Cluster D |
 | ARR Y3 target | €1.5-3.5M (scale-up Liguria + 1 regione) |
 | ARR Y5 target | €3-8M (multi-regione + HAPS subscale) |
 | Break-even cumulato | Y4-Y5 (scenario base) |
@@ -238,45 +183,33 @@ M+0   M+3   M+6   M+10/11   M+12         M+24            M+36            M+48
 | Stakeholder mappati | 30 |
 | StNeeds baseline | 17 |
 | System Requirements | 42 |
-| Subsystem Requirements | ~80 (sample, ~200 in v1.0) |
+| Subsystem Requirements | ~80 sample (~200 in v1.0) |
 | Showstopper formali | 5 (tutti su 6B) |
 | Falsifying observations dichiarate | ~40 (totale Volume 1) |
 | Citazioni autoritative | ~200 (totale Volume 1) |
 
 ---
 
-## 0.12 Decisione Richiesta
+## 0.12 Decisione richiesta
 
-Ai destinatari del documento (CdA + Coopfond + Regione Liguria + altri sponsor) è richiesto:
-
-1. ☐ **Approvazione formale dello Studio di Fattibilità** Volume 1+2+3
-2. ☐ **Approvazione GO CONDIZIONATO Percorso 6A** con piano di attivazione M+12
-3. ☐ **Approvazione HOLD / GO CONDIZIONATO ESTREMO Percorso 6B** con commitment a gate G5 (M+24)
-4. ☐ **Approvazione budget Y1 6A** (CapEx + OpEx + mix funding)
-5. ☐ **Approvazione engagement plan istituzionale** Cap. 5.11.3
-6. ☐ **Approvazione master schedule** M+12 → M+48
+Ai destinatari del documento (CdA, Coopfond, Regione Liguria, altri sponsor) si chiede formalmente l'approvazione di sei punti: lo Studio di Fattibilità nei suoi tre volumi; il GO CONDIZIONATO sul Percorso 6A con piano di attivazione M+12; l'HOLD o GO CONDIZIONATO ESTREMO sul Percorso 6B con commitment al gate G5 (M+24); il budget Y1 6A nella sua composizione CapEx, OpEx e mix funding; l'engagement plan istituzionale Cap. 5.11.3; il master schedule M+12 → M+48.
 
 ---
 
 ## 0.13 Riferimenti
 
-Per il dettaglio di ciascun argomento, vedere i Cap. 1-11 del presente Volume 1, gli Allegati Tecnici del Volume 2, e i Riferimenti bibliografici del Volume 3.
+Per il dettaglio di ciascun argomento si rinvia ai Cap. 1-11 del Volume 1, agli Allegati Tecnici del Volume 2 e ai Riferimenti bibliografici del Volume 3.
 
-Documenti di contesto:
-- `riferimenti/visione-10-anni.md` — vettore strategico 10 anni
-- `riferimenti/analisi-fac-simili-IT.md` — mappatura art. 41 + NASA SE
-- `riferimenti/ricerche-approfondite.md` — dataset di ricerca
-- `riferimenti/audit-rigore-epistemico.md` — audit confidence levels + debito di rigore
+Documenti di contesto: `riferimenti/visione-10-anni.md` per il vettore strategico decennale, `riferimenti/analisi-fac-simili-IT.md` per la mappatura art. 41 e NASA SE, `riferimenti/ricerche-approfondite.md` per il dataset di ricerca, `riferimenti/audit-rigore-epistemico.md` per gli audit di confidence e per la lista del debito di rigore.
 
-Documento riservato (accesso ristretto, non parte dello Studio pubblico):
-- `riferimenti/RESERVED-rischi-geopolitici.md` — 5 rischi geopolitici e mitigation strategie
+Documento riservato ad accesso ristretto, non parte dello Studio pubblico: `riferimenti/RESERVED-rischi-geopolitici.md` con cinque rischi geopolitici e relative mitigation strategie.
 
 ---
 
-## 0.14 Verdetto in Una Riga
+## 0.14 Verdetto in una riga
 
-> **Lo Studio di Fattibilità raccomanda**: scenario base **HOLD CON PIANO REGOLATORIO RAFFORZATO** Percorso 6A (P 45-60%, re-review M+13-16; eventuale GO pieno P 5-15% solo se 5 hard conditions soddisfatte simultaneamente M+10-11) + **HOLD CON CRITERI USCITA STRINGENTI** Percorso 6B con **pivot strutturale** verso "operatore di servizi su piattaforme prime contractor" (R&D Phase 0/A M+24-48 subordinato a gate G5, NON path autonomo a operatività). Posizionamento strategico 10 anni: "complementare a IRIS²", scenario realistico B2-relaxed "Standalone IT Operator Small Fleet €30-80M ARR Y10" (P 30-50%) vs B2 full "EU sovereign stratospheric layer 100+ HAPS" (P 6-15%).
+> Lo Studio di Fattibilità raccomanda, come scenario base, l'**HOLD CON PIANO REGOLATORIO RAFFORZATO** sul Percorso 6A (P 45-60%, re-review M+13-16; eventuale GO pieno P 5-15% solo se le cinque hard conditions risultano soddisfatte simultaneamente in M+10-11) e l'**HOLD CON CRITERI USCITA STRINGENTI** sul Percorso 6B con pivot strutturale verso il modello "operatore di servizi su piattaforme prime contractor" (R&D Fase 0/A in M+24-48 subordinata al gate G5, non come path autonomo verso l'operatività). Il posizionamento strategico a 10 anni resta "complementare a IRIS²", con scenario realistico B2-relaxed "Standalone IT Operator Small Fleet" (€30-80M ARR Y10, P 30-50%) contro lo scenario B2 full "EU sovereign stratospheric layer 100+ HAPS" (P 6-15%).
 
 ---
 
-*Firmamento Technologies — Studio di Fattibilità HALE/VTOL — Volume 1 Capitolo 0 — Bozza M+11 — Maggio 2026*
+*Firmamento Technologies, Studio di Fattibilità HALE/VTOL, Volume 1 Capitolo 0, bozza M+11, maggio 2026.*
