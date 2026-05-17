@@ -2,3 +2,9 @@
 
 # Download script log (riferimenti/fonti/download.sh output)
 riferimenti/fonti/download.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

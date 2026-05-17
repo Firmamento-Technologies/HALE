@@ -411,7 +411,7 @@ SYREQS = [
      "aviation-regulatory-counsel", "H", "I+A", "Open", "Phase A", "-", "RSK-REG-019,RSK-REG-027", "high",
      "ACN audit rileva ISMS gap → operations on hold"),
     ("SyR-C-005", "Conformità AS/EN 9100 + ISO 9001 per progettazione/produzione aerospaziale",
-     "Bandi pubblici + qualità", "Bandi pubblici Cooding/PNRR", "SyR", "Bandi pubblici",
+     "Bandi pubblici + qualità + governance Coopfond StNeed-028", "Bando Cooding/PNRR + StNeed-028", "SyR", "Bando Cooding,StNeed-028",
      "aviation-regulatory-counsel", "M", "I", "Open", "Phase B", "-", "-", "medium",
      "Certificazione non ottenuta entro Y2 → perdita bandi Cooding follow-up"),
     ("SyR-C-006", "Conformità D.Lgs.36/2023 art.41 + Allegato I.7 per PFTE",
