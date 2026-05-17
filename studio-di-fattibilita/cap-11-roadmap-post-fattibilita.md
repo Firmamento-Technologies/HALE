@@ -74,8 +74,8 @@ La roadmap è documento **"vivente"** (NASA SE Handbook §6.7): aggiornata a ogn
 | Fase 1 | M+0 → M+24 | **high** (Studio approva) |
 | Fase 2 | M+24 → M+36 | **medium** (struttura nota, esecuzione condizionata a Fase 1) |
 | Fase 3 | M+36 → M+72 | **medium-low** (dipendenze EASA + capital esterne) |
-| Fase 4 | M+72 → M+96 | **low** (dipendenza EDF + IRIS² alignment) |
-| Fase 5 | M+96 → M+120 | **speculative** (dipendenza programma EU sovereign analog IRIS²) |
+| Fase 4 | M+72 → M+96 | **low** (dipendenza EDF + IRIS² alignment) — **finestra IRIS² operatività 2031 (vs 2029 primo lancio)** congruente con Fase 4 ramp-up Y6-Y8 |
+| Fase 5 | M+96 → M+120 | **speculative** (dipendenza programma EU sovereign analog IRIS² per stratospheric layer; IRIS² baseline LEO+MEO 2029/2031 esclude HAPS — DR-009 closure) |
 
 ### 11.1.3 Relazione con la visione strategica 10 anni
 
@@ -103,7 +103,7 @@ Il capitolo **aggiunge** rispetto al documento `visione-10-anni.md`:
 La roadmap è soggetta a **5 vincoli strutturali esterni** (sintesi; dettaglio §11.9):
 
 1. **Regolatorio EASA HAPS**: apertura di un framework Special Condition Certified HAPS prima del Y6-Y7 (vedi Cap. 5 RSK-REG-001).
-2. **Finanziario sovrano EU**: apertura di un programma equivalente IRIS² su HAPS con budget multi-miliardario (€10B+) entro Y5-Y6 per abilitare la Fase 5.
+2. **Finanziario sovrano EU**: apertura di un programma equivalente IRIS² su HAPS con budget multi-miliardario (€10B+) entro Y5-Y6 per abilitare la Fase 5. **Riferimento IRIS² baseline (DR-009 closure M+3)**: programma €10B Commissione UE governato da SpaceRISE, **primo lancio 2029, operatività piena 2031**, architettura **LEO+MEO puro (no stratospheric layer nativo)** — vedi Cap. 5 §5.16bis. La finestra strategica Y4-Y6 (2030-2032) di Firmamento si sovrappone a IRIS² ramp-up commerciale; opportunità di posizionamento "stratospheric gap-filler complementary to IRIS²" via engagement DG CNECT + SpaceRISE entro Y2.
 3. **Tecnologico batterie**: disponibilità di celle Li-S / Solid-State con densità pacchetto ≥ 350 Wh/kg entro Y3-Y4 per closing energy balance HALE inverno (vedi RSK-TEC-001 stimato in Cap. 6 — energy balance non chiuso da fonte indipendente).
 4. **Partnership IT**: cooperazione (non antagonismo) di Leonardo / Thales Alenia Space / CIRA fino almeno alla Fase 3. (Vedi RSK-GEO-005 documento riservato.)
 5. **Geopolitica EU-US**: stabilità della cornice transatlantica che consenta supply chain robusta e non escalation di restrizioni export (vedi RSK-GEO-001, RSK-GEO-003).

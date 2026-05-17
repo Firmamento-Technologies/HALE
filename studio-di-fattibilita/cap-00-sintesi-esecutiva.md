@@ -87,7 +87,7 @@ Phase B R&D autorizzata **subordinatamente** al raggiungimento delle conditions 
 
 ## 0.4 Visione 10 Anni
 
-Posizionamento strategico target: **nodo italiano fondatore di una futura infrastruttura sovrana europea HAPS**, complementare a **IRIS²** (LEO sovereign EU) e a Galileo/Copernicus.
+Posizionamento strategico target: **nodo italiano fondatore di una futura infrastruttura sovrana europea HAPS**, complementare a **IRIS²** (LEO+MEO sovereign EU; €10B, governance SpaceRISE = Airbus + Eutelsat + Thales-Telespazio + Hispasat + OHB + Deutsche Telekom + Orange; **primo lancio 2029, operatività piena 2031**, baseline LEO+MEO **puro senza layer stratosferico** — DR-009 closure M+3, vedi Cap. 5 §5.16bis) e a Galileo/Copernicus. La finestra strategica Y2-Y4 Firmamento (2027-2030) si sovrappone a IRIS² pre-ops, opportunità di posizionamento "stratospheric layer gap-filler" via engagement DG CNECT + SpaceRISE.
 
 **Linguaggio pubblico**: "complementare a IRIS²", **mai** "alternativa europea a Starlink" (per ragioni geopolitiche dichiarate in documento riservato).
 

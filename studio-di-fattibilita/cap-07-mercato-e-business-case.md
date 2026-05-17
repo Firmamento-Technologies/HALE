@@ -233,7 +233,7 @@ Per **calibrare** le stime sopra contro un dato ufficiale italiano, citiamo i nu
 |---|---|---|
 | **SpaceX Starlink** [^12] | 6000+ sat LEO broadband globale | **Sostituto per connettività rurale** — €40-60/mese consumer, già disponibile a Pentema oggi |
 | **Eutelsat OneWeb** | 648 sat LEO B2B + government | Sostituto NTN backhaul per telco |
-| **IRIS²** (EU sovereign satcom €10B) [^13] | 170-300 sat LEO+MEO sovereign EU | **Concorrente per il discorso "sovranità EU"** — Firmamento deve posizionarsi come **complementare** (stratospheric layer), non alternativa |
+| **IRIS²** (EU sovereign satcom €10B) [^13] | **170-300 sat LEO + MEO** sovereign EU (architettura LEO+MEO **puro, SENZA layer stratosferico** — DR-009 closure M+3 + Reg. UE 2023/588). **Timeline ufficiale**: **primo lancio 2029, operatività piena 2031**. Governance: **SpaceRISE** (Airbus + Eutelsat + Thales-Telespazio + Hispasat + OHB + Deutsche Telekom + Orange). | **Concorrente per il discorso "sovranità EU"** — Firmamento deve posizionarsi come **complementare** (stratospheric layer gap-filler), non alternativa. Slittamento 2029-2031 **dà finestra Y2-Y4 (2027-2030) a Firmamento** per posizionarsi nella narrativa "EU sovereign multi-orbit + stratospheric". Vedi Cap. 5 §5.16bis + FO-ADD-02. |
 | **Copernicus Sentinel** (ESA/EU) | Sentinel-1/2/3/5p/6 EO gratuiti | Sostituto EO con revisit 5-12 giorni + GSD 10 m |
 | **TIM, Vodafone, Iliad, WindTre, Open Fiber** | 5G FWA rurale via PNRR Banda Ultra Larga €6.7B | Sostituto connettività in aree marginali — gap geografico in chiusura 2025-2028 |
 
