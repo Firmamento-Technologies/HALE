@@ -14,15 +14,15 @@
 | **A.1** | [`A1-RTM/`](A1-RTM/) | Requirements Traceability Matrix v1.0 completa (279 record, 14 sheet) | ✅ |
 | **A.2** | [`A2-Risk-Register/`](A2-Risk-Register/) | Risk Register consolidato v1.0 (116 rischi, 22 sheet, 5+5 showstopper) | ✅ |
 | **A.3** | [`A3-Trade-Studies/`](A3-Trade-Studies/) | DOCFAP — Documento Fattibilità Alternative Progettuali | ✅ |
-| **A.4** | [`A4-ICD/`](A4-ICD/) | Interface Control Document preliminare v1.0 (59 interfacce, 13 sheet) | ✅ |
+| **A.4** | [`A4-ICD/`](A4-ICD/) | ICD preliminary v1.0 (59 interfacce, 13 sheet) **+ Detailed v2.0** (5 interfacce critiche engineering-grade: INT-03 C2 RF MAVLink+AES + INT-04 SATCOM Iridium Certus + INT-05 Payload GigE+CAN FD + INT-13 DAA ADS-B+non-cooperative + INT-15 Privacy blur YOLOv8n) | ✅ v2.0 |
 | **A.5** | [`A5-VV-Plan/`](A5-VV-Plan/) | Verification & Validation Plan v1.0 (71 SyR, 7 sheet, €1.57M test) | ✅ |
 | **A.6** | [`A6-CAD/`](A6-CAD/) | Schemi/disegni CAD del concept (placeholder; CAD binari in `/cad/`) | ✅ |
 | **A.7** | [`A7-Link-Budget/`](A7-Link-Budget/) + [`energy-balance/`](energy-balance/) + [`financial-model/`](financial-model/) | Modelli di calcolo (3 modelli: link budget 14 scenari ITU-R, energy balance HALE 365gg, finanziario 10 sheet) | ✅ |
 | **A.8** | [`A8-Bilanci-Massa/`](A8-Bilanci-Massa/) | Bilanci di massa preliminari (6A + 6B) | ✅ |
 | **A.9** | [`A9-Computo-Metrico/`](A9-Computo-Metrico/) | Computo Metrico Estimativo ground segment | ✅ |
 | **A.10** | [`A10-Piano-Manutenzione/`](A10-Piano-Manutenzione/) | Piano di Manutenzione preliminare | ✅ |
-| **A.11** | [`A11-Safety-Case-SORA/`](A11-Safety-Case-SORA/) | PSC operativo + SORA Safety Case preliminare | ✅ |
-| **A.12** | [`A12-VIA-preliminare/`](A12-VIA-preliminare/) | Relazione VIA preliminare | ✅ |
+| **A.11** | [`A11-Safety-Case-SORA/`](A11-Safety-Case-SORA/) | PSC + SORA Safety Case preliminary v1.0 **+ COMPLETE v2.0** (SORA 2.5 ED Decision 2025/018/R Amd.3: Steps 1-8 completi + 24 OSO + SAIL III preliminary + Pre-Application Package ENAC con Q&A top-10 + 10 OQ-SORA tracciate) | ✅ v2.0 |
+| **A.12** | [`A12-VIA-preliminare/`](A12-VIA-preliminare/) | VIA preliminary v1.0 **+ COMPLETE v2.0** (13 sezioni + VIncA Allegato G DPR 357/1997 + Parco Antola L.R. 12/1995 + SIC/ZSC/ZPS IT1331402 + 3 nuovi RSK-AMB-001/002/003 + 18 mitigazioni M-AVI/NOI/ACQ/PAE + procedura raccomandata Verifica Assoggettabilità art. 19 non-assoggettabile P 60-70%) | ✅ v2.0 |
 | **A.13** | [`A13-Documentazione-Fotografica/`](A13-Documentazione-Fotografica/) | Documentazione fotografica del contesto (placeholder, foto da acquisire) | ✅ |
 
 ## Allegati aggiuntivi (operativi)
@@ -46,6 +46,11 @@
 2. A.2 Risk Register v1.0 — 116 rischi in 11 categorie, 5+5 showstopper, post-mitigation RED da 17→2 (88% reduction)
 3. A.4 ICD v1.0 — 59 interfacce in 8 categorie, 13 sheet Excel
 4. A.5 V&V + A.7 Link Budget — V&V Matrix 71 SyR + 14 scenari link budget ITU-R compliant (12/14 OK)
+
+### Subagent batch 2 — refinement engineering-grade (M+3 post audit Red Team)
+5. **A.4 ICD Detailed v2.0** (77.7 KB / 1260 righe) — 5 interfacce critiche byte-level: MAVLink v2.0 dialect JOUAV + AES-256-GCM nonce mgmt + state machine lost-link, Iridium Certus AT command + escalation timer, MIL-1553 vs Ethernet AVB vs CAN FD trade + verdetto ibrido GigE+CAN FD, DAA ADS-B DO-260B + non-cooperative pseudocode CPA DO-365B + ADS-L ED-270, privacy pipeline 8-step YOLOv8n INT8 TensorRT 8ms + JSON log hash chain ECDSA P-256. Confidence aggregato sistema: medium. 10 GAP tracciati (top 3: GAP-01 MAVLink dialect proprietary M+6, GAP-06 ENAC feedback DAA non-cooperative M+6, GAP-08 DPIA Garante M+7).
+6. **A.11 SORA Safety Case Complete v2.0** (64 KB / 969 righe) — SORA 2.5 ED Decision 2025/018/R Amendment 3: Steps 1-8 + ConOps narrative UC-001..004, Class III, iGRC 5→GRC 3 (M1+M2+M3), iARC b→ARC b (TMPR Standard), **SAIL III preliminary** (driver GRC 3 × ARC b), 24 OSO matrice completa, Containment target <1×10⁻⁴/h via geofence hard+FTS+parachute. Pre-Application Package ENAC: 11 documenti D-01..11 + Q&A top-10 anticipato + 10 OQ-SORA tracciate. Confidence: medium (adeguato pre-app, non sufficiente application formale).
+7. **A.12 VIA Preliminare Complete v2.0** (55 KB / 838 righe) — 13 sezioni + VIncA screening Allegato G DPR 357/1997 + Parco Antola L.R. 12/1995 + SIC/ZSC/ZPS IT1331402 + impatti su 10 fattori ambientali + linkage Risk Register con **3 nuovi RSK-AMB-001/002/003 proposti** (avifauna/rumore/paesaggio) + 18 mitigazioni dettagliate M-AVI/NOI/ACQ/PAE + cronoprogramma engagement M+3-M+12. **Procedura raccomandata**: Verifica di Assoggettabilità ex art. 19 D.Lgs. 152/2006 + L.R. 32/2012 con esito atteso NON-assoggettabilità (P 60-70%) + Screening VIncA Livello I. Proposto **REQ-NF-AMB-01** nuovo per RTM.
 
 ## Conformità art. 41 D.Lgs. 36/2023 + Allegato I.7
 
