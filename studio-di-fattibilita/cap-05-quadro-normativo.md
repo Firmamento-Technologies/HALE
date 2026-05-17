@@ -687,9 +687,37 @@ L'agente `regulatory-adversary` ha condotto stress-test del presente capitolo. S
 
 ---
 
-## 5.16 Showstopper Regolatori Aggiuntivi (post-Audit Regulatory Adversary M+3)
+## 5.16 Showstopper Regolatori Aggiuntivi — Pillar Regolatorio Critico (15 RSK-REG-016..030)
 
-> **Inserimento post-audit M+3**: l'audit `regulatory-adversary` (vedi `AUDIT-REGULATORY-VOLUME-1.md` §10) ha identificato **15 showstopper regolatori non coperti** dalle sezioni precedenti del Cap. 5. Sono qui formalizzati con riferimento normativo, impatto sul progetto, e mitigazione raccomandata. Tutti vanno aggiunti al Risk Register Vol. 2 Allegato A.2 con score P×I dedicato.
+> **Promozione M+3 da addendum a sezione pilastro**: questa sezione era inizialmente concepita come addendum post-audit `regulatory-adversary` (M+3) ma identifica **15 showstopper regolatori critici** non coperti dalle sezioni 5.1-5.15. Per la sua **criticità operativa** (5+1 critical hanno impatto su OpEx Y2 RECONCILED €1.18M con +3 FTE regulatory team obbligatorio — vedi Cap. 8 §8.5.1.B), questa sezione è **promossa a pillar section** del Cap. 5. **Stato registro rischi**: tutti aggiunti al Risk Register Vol. 2 Allegato A.2 con score P×I dedicato (RSK-REG-016..030).
+>
+> **Importanza strategica**: questi 15 showstopper sono **driver primario** del verdetto §5.12 Cap. 5 (regulatory hold con piano rafforzato) e dell'OpEx team mandatory in Cap. 8. Non sono "minor compliance items" ma **5+1 critical** + **9 high-impact**:
+> - **5+1 critical mandatory Y0** (regulatory team obbligatorio): Part-IS EASA Information Security (5.16.4) + AgID/PSN hosting (5.16.6) + NIS2 registrazione (5.16.7) + Codice Contratti art. 50 (5.16.5) + ENAV FL400+ (5.16.8) + EUROCONTROL HAPS (5.16.3)
+> - **9 high-impact** Y0-Y2: AI Act (5.16.1) + EUSPA (5.16.2) + Codice Penale 432-bis (5.16.10) + ATEX (5.16.11) + RoHS/REACH (5.16.12) + Spettro AGCOM (5.16.13) + Diritto d'Autore (5.16.14) + ITU coordination (5.16.15) + altre minori
+
+### 5.16.0 Sintesi tabellare dei 15 showstopper regolatori (RSK-REG-016..030)
+
+> **Stato aggregato pillar regolatorio**: 15 showstopper aggiuntivi, di cui **6 critical mandatory Y0** (score 12-20) + **9 high/medium** (score 4-17). Tutti integrati nel Risk Register Vol. 2 Allegato A.2.
+
+| ID | Showstopper | Probabilità | Impatto | Score | Fase | Mitigation owner |
+|---|---|---|---|---|---|---|
+| RSK-REG-016 | AI Act sistemi biometrici onboard (§5.16.1) | M (40-55%) | M-H | 10-13 | Y1+ | data-privacy-counsel |
+| RSK-REG-017 | EUSPA accreditation downstream (§5.16.2) | M (30-45%) | M | 6-9 | Y3+ | sovereign-strategist |
+| **RSK-REG-018** | **EUROCONTROL HAPS coordination (§5.16.3)** | **H (65-80%)** | **H** | **15-20** | **Y3+** | **avionics-gnc-engineer** |
+| **RSK-REG-019** | **Part-IS EASA Information Security (§5.16.4)** | **H (75-85%)** | **H** | **15-20** | **Y0+ (urgente)** | **aviation-regulatory + CISO new** |
+| RSK-REG-020 | Penale 432-bis incidente BVLOS (§5.16.5) | L-M (10-25%) | H | 6-15 | Y1+ | aviation-regulatory + ops |
+| **RSK-REG-021** | **AgID/PSN hosting dati PA (§5.16.6)** | **H (70-85%)** | **M-H** | **12-17** | **Y1+** | **data-privacy + IT** |
+| RSK-REG-022 | ATEX batterie (§5.16.7) | M (40-60%) | M | 8-12 | Y0+ | propulsion-engineer + safety |
+| RSK-REG-023 | RoHS componenti (§5.16.8) | M (30-50%) | L-M | 4-8 | Y1 | systems-engineer |
+| RSK-REG-024 | Codice Navigazione sorvolo proprietà (§5.16.9) | L-M (15-30%) | M | 3-9 | Y1+ | regulatory + community |
+| **RSK-REG-025** | **Affidamento PA art. 50 D.Lgs.36 (§5.16.10)** | **H (70-85%)** | **M-H** | **12-17** | **Y0+** | **snai-funding + legal** |
+| **RSK-REG-026** | **Insurance BVLOS sostenibilità (§5.16.11)** | **H** | **M** | **12** | **Y0+** | **financial-cfo** |
+| **RSK-REG-027** | **NIS2 registrazione operativa (§5.16.12)** | **H (75%)** | **M-H** | **12-17** | **Y0+ (immediato)** | **CISO new** |
+| RSK-REG-028 | Galileo PRS dual-use (§5.16.13) | L (5-15%) Y1, M (30-45%) Y3+ | M | 3-9 | Y3+ | sovereign-strategist + CASD |
+| RSK-REG-029 | Direttiva Macchine UAS+GS (§5.16.14) | H (60-75%) | M | 9-12 | Y3+ | systems-engineer |
+| **RSK-REG-030** | **ENAV procedure FL400+ (§5.16.15)** | **H (70-85%)** | **H** | **15-20** | **Y3+** | **avionics + sovereign-strategist** |
+
+> **Bold = 6 critical mandatory Y0 con regulatory team obbligatorio** (Part-IS + AgID/PSN + NIS2 + art. 50 + Insurance + ENAV + EUROCONTROL — driver del +3 FTE regulatory team Cap. 8 §8.5.1.B €400-590k/anno). I 6 critical sono integrati nel verdetto §5.12 e nell'engagement plan §5.17.
 
 ### 5.16.1 AI Act (Reg. UE 2024/1689) — sistemi onboard biometrici
 
@@ -809,25 +837,11 @@ L'agente `regulatory-adversary` ha condotto stress-test del presente capitolo. S
 - **Mitigazione**: engagement ENAV precoce (Y2); contributo a definizione procedure standard EUROCONTROL; testing in spazio aereo segregato (es. Sardinia, Apulia GATB)
 - **Falsifying observation**: se ENAV declina procedure dedicate per HAPS perennial entro Y4, operatività italiana 6B bloccata
 
-### 5.16.16 Tabella sintesi 15 showstopper aggiuntivi
+### 5.16.16 Riepilogo
 
-| ID | Showstopper | Probabilità | Impatto | Score | Fase | Mitigation owner |
-|---|---|---|---|---|---|---|
-| RSK-REG-016 | AI Act sistemi biometrici onboard | M (40-55%) | M-H | 10-13 | Y1+ | data-privacy-counsel |
-| RSK-REG-017 | EUSPA accreditation downstream | M (30-45%) | M | 6-9 | Y3+ | sovereign-strategist |
-| RSK-REG-018 | EUROCONTROL HAPS coordination | H (65-80%) | H | 15-20 | Y3+ | avionics-gnc-engineer |
-| RSK-REG-019 | Part-IS EASA Information Security | H (75-85%) | H | 15-20 | Y0+ (urgente) | aviation-regulatory + CISO new |
-| RSK-REG-020 | Penale 432-bis (incidente BVLOS) | L-M (10-25%) | H | 6-15 | Y1+ | aviation-regulatory + ops |
-| RSK-REG-021 | AgID/PSN hosting dati PA | H (70-85%) | M-H | 12-17 | Y1+ | data-privacy + IT |
-| RSK-REG-022 | ATEX batterie | M (40-60%) | M | 8-12 | Y0+ | propulsion-engineer + safety |
-| RSK-REG-023 | RoHS componenti | M (30-50%) | L-M | 4-8 | Y1 | systems-engineer |
-| RSK-REG-024 | Codice Navigazione sorvolo proprietà | L-M (15-30%) | M | 3-9 | Y1+ | regulatory + community |
-| RSK-REG-025 | Affidamento PA art. 50 D.Lgs.36 | H (70-85%) | M-H | 12-17 | Y0+ | snai-funding + legal |
-| RSK-REG-026 | Insurance BVLOS sostenibilità | H | M | 12 | Y0+ | financial-cfo |
-| RSK-REG-027 | NIS2 registrazione operativa | H (75%) | M-H | 12-17 | Y0+ (immediato) | CISO new |
-| RSK-REG-028 | Galileo PRS dual-use | L (5-15%) Y1, M (30-45%) Y3+ | M | 3-9 | Y3+ | sovereign-strategist + CASD |
-| RSK-REG-029 | Direttiva Macchine UAS+GS | H (60-75%) | M | 9-12 | Y3+ | systems-engineer |
-| RSK-REG-030 | ENAV procedure FL400+ | H (70-85%) | H | 15-20 | Y3+ | avionics + sovereign-strategist |
+La tabella sintesi dei 15 showstopper è stata **promossa a §5.16.0** in apertura della sezione, per riflettere il loro status di **pillar regolatorio critico** del Cap. 5. La numerazione interna §5.16.1..§5.16.15 mantiene la corrispondenza 1:1 con RSK-REG-016..030 nel Risk Register Vol. 2 Allegato A.2.
+
+> **Impact summary**: 15 RSK-REG aggiuntivi → di cui **6 critical mandatory Y0** (Part-IS, AgID/PSN, NIS2, art. 50, Insurance, ENAV/EUROCONTROL) → driver del **regulatory team obbligatorio +3 FTE** (CISO + DPO + Head Regulatory) → impatto OpEx Y2 RECONCILED €1.18M (vs legacy €260-480k tecnico-only) → vedi Cap. 8 §8.5.1.B + §0.0 confidence aggregato.
 
 **Impatto aggregato**: 15 nuovi RSK-REG-XXX da aggiungere al Risk Register. **5 con score H (15-20)** = showstopper effettivi: Part-IS, EUROCONTROL, AgID/PSN, Affidamento PA art.50, ENAV FL400+.
 
