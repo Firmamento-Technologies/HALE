@@ -56,7 +56,9 @@ Il progetto adotta una **strategia duale a riduzione del rischio**:
 
 ## 0.3 Verdetto dello Studio
 
-### ✅ Percorso 6A — **GO CONDIZIONATO**
+### ⚠️ Percorso 6A — **HOLD CON PIANO REGOLATORIO RAFFORZATO** (scenario base default, P 45-60%) / **GO CONDIZIONATO** (scenario ottimistico, P 5-15%)
+
+> **Caveat probabilistico onesto** (post audit M+3): le 5 hard conditions sotto sono in AND logico. P(AND tutte) realistica al gate G3 = **5-15%** (Go pieno) vs **45-60%** (Hold con piano + re-review M+13-16). Scenario base atteso = HOLD CON PIANO RAFFORZATO. Per dettaglio vedi Cap. 10 §10.0bis.
 
 **Tecnicamente, regolatoriamente, di mercato e finanziariamente fattibile** entro l'orizzonte di 12 mesi. Il verdetto è subordinato alle seguenti **condizioni vincolanti** (gate M+10-12):
 - LoI/accordo formale Regione Liguria firmato entro M+9
@@ -65,10 +67,15 @@ Il progetto adotta una **strategia duale a riduzione del rischio**:
 - ≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6
 - Pre-application meeting ENAC con feedback documentato entro M+3-6
 
-### ⚠️ Percorso 6B — **HOLD / GO CONDIZIONATO ESTREMO R&D**
+### ⚠️ Percorso 6B — **HOLD CON CRITERI DI USCITA ESTREMAMENTE STRINGENTI** + Pivot Strutturale
+
+**Pivot strategico post audit M+3** (DR-013 + DR-014):
+- Base rate 0% HALE solari commerciali operativi in 22 anni (12 programmi falliti analizzati)
+- Capital intensity benchmark internazionale $50M-1B per programma → Firmamento €5.5-13.5M = **R&D Phase 0/A only**, NON percorso completo a operatività
+- **Pivot raccomandato**: da "HALE proprietario Firmamento" a **"Firmamento operatore di servizi su piattaforme prime contractor"** (Aalto/Sceye/Skydweller/CIRA-EuroHAPS-successor)
 
 Fattibilità tecnologica plausibile ma con **5 showstopper aperti**:
-- **RSK-TEC-001**: energy balance HALE inverno 44°N margin 0-15% — fallback **seasonal-only** in scenario peggiore
+- **RSK-TEC-001**: energy balance HALE inverno 44°N **margine reale -50.1% DEFICIT** (simulazione completa allegato A.7 supera la stima hand-calc "0-15% critico"); **E5 Seasonal-only (marzo-ottobre) mandatory plan A**; perennial 44°N NON fattibile con tech baseline 2026-2028 — score RSK aggiornato a 25
 - **RSK-TEC-002**: aeroelasticità ala high-AR
 - **RSK-REG-001**: assenza framework regolatorio HAPS EU (EASA Special Condition non ancora aperto)
 - **RSK-FIN-001**: funding Phase B €5.5-13.5M non commitato al M+11
@@ -245,7 +252,7 @@ Documento riservato (accesso ristretto, non parte dello Studio pubblico):
 
 ## 0.14 Verdetto in Una Riga
 
-> **Lo Studio di Fattibilità raccomanda: GO CONDIZIONATO Percorso 6A (VTOL Pentema Y1) + HOLD Percorso 6B (R&D Phase B M+24-48 subordinato a gate G5), in coerenza con la visione strategica 10 anni "complementare a IRIS²".**
+> **Lo Studio di Fattibilità raccomanda**: scenario base **HOLD CON PIANO REGOLATORIO RAFFORZATO** Percorso 6A (P 45-60%, re-review M+13-16; eventuale GO pieno P 5-15% solo se 5 hard conditions soddisfatte simultaneamente M+10-11) + **HOLD CON CRITERI USCITA STRINGENTI** Percorso 6B con **pivot strutturale** verso "operatore di servizi su piattaforme prime contractor" (R&D Phase 0/A M+24-48 subordinato a gate G5, NON path autonomo a operatività). Posizionamento strategico 10 anni: "complementare a IRIS²", scenario realistico B2-relaxed "Standalone IT Operator Small Fleet €30-80M ARR Y10" (P 30-50%) vs B2 full "EU sovereign stratospheric layer 100+ HAPS" (P 6-15%).
 
 ---
 
