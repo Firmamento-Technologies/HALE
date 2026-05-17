@@ -1,4 +1,4 @@
-# Piano di lavoro — Volume 1 dello Studio di Fattibilità
+# Piano di lavoro Volume 1 dello Studio di Fattibilità
 
 **Decisione utente:** completare l'intero Volume 1 in una sessione intensiva continua, autonoma. Limite tecnico noto: il runtime Claude Code on the web non supporta esecuzione schedulata multi-sessione, quindi tutto il lavoro è in **una singola sessione viva**.
 
@@ -7,7 +7,7 @@
 - **4 subagent in parallelo** (background): Cap. 1, 2, 4, 11 (capitoli stand-alone, struttura ben definita)
 - **5 capitoli in sequenza diretta**: Cap. 6 → 8 → 9 → 10 → 0 (tecnico-integrati, richiedono coerenza con capitoli vicini)
 - **Commit progressivo dopo ogni capitolo** per non perdere lavoro
-- **Quality bar costante**: stessa struttura dei Cap. 3, 5, 7 — NASA SE + art. 41 + epistemic rigor + Red Team check + boundary conditions B1, B2
+- **Quality bar costante**: stessa struttura dei Cap. 3, 5, 7 (NASA SE + art. 41 + epistemic rigor + Red Team check + boundary conditions B1, B2)
 
 ## Ordine e dipendenze
 
@@ -36,9 +36,9 @@
 
 ## Stato corrente all'avvio
 
-- ✅ Cap. 3 (Requisiti + RTM) — commit 937edd2
-- ✅ Cap. 5 (Quadro Normativo) — commit 25581d4
-- ✅ Cap. 7 (Mercato + Business Case) — commit 67e4f44
+- ✅ Cap. 3 (Requisiti + RTM), commit 937edd2
+- ✅ Cap. 5 (Quadro Normativo), commit 25581d4
+- ✅ Cap. 7 (Mercato + Business Case), commit 67e4f44
 
 ## Target finale Volume 1
 

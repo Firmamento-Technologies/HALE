@@ -1,4 +1,4 @@
-# 10 Falsifying Observations Aggiuntive — Addendum Post-Audit M+3
+# 10 Falsifying Observations Aggiuntive. Addendum Post-Audit M+3
 
 > **Inserimento post-audit M+3**: l'audit `red-team-skeptic` (vedi `AUDIT-REDTEAM-VOLUME-1.md` §3) ha identificato **10 claim importanti del Volume 1 senza falsifying observation dichiarata** (violazione Regola 1 della skill `epistemic-rigor`).
 >
@@ -13,7 +13,7 @@
 
 ---
 
-## FO-ADD-01 — Modello cooperativo Legacoop come vantaggio competitivo
+## FO-ADD-01. Modello cooperativo Legacoop come vantaggio competitivo
 
 **Claim originale** (Cap. 7 §7.5.1, Cap. 2 §2.3): "Il modello cooperativo con la rete Legacoop è un pilastro del vantaggio competitivo (community + fidelity + barrier to entry per competitor)."
 
@@ -31,7 +31,7 @@
 
 ---
 
-## FO-ADD-02 — Linguaggio pubblico "complementare a IRIS²"
+## FO-ADD-02. Linguaggio pubblico "complementare a IRIS²"
 
 **Claim originale** (Cap. 5 §5.0bis, Cap. 7 §7.0bis, Cap. 11 §11.0bis, Cap. 10 §10.7): "Posizionamento Firmamento = complementare a IRIS², mai alternativa a Starlink in linguaggio pubblico" (per ragioni geopolitiche RSK-GEO-001).
 
@@ -39,7 +39,7 @@
 
 **Trigger**: pubblicazioni DG CNECT, IRIS² Mission Implementation Plan, dichiarazioni Commissario; engagement con consorzio operatore IRIS² (Airbus-Eutelsat-TAS).
 
-**Action se attivata**: re-baseline boundary B2: "EU sovereign stratospheric layer complementary to IRIS²" → "Italian sovereign stratospheric services + future EU consortium option". Comunicazione esterna ridotta a Italia + bilaterali UE.
+**Action se attivata**: re-baseline boundary B2 da "EU sovereign stratospheric layer complementary to IRIS²" a "Italian sovereign stratospheric services + future EU consortium option". Comunicazione esterna ridotta a Italia + bilaterali UE.
 
 **Owner**: sovereign-infrastructure-strategist + CEO.
 
@@ -47,7 +47,7 @@
 
 ---
 
-## FO-ADD-03 — Asset reuse 6A→6B 30-40% (valore monetario)
+## FO-ADD-03. Asset reuse 6A→6B 30-40% (valore monetario)
 
 **Claim originale** (Cap. 6 §6.1.3, Cap. 10 §10.3.1, Cap. 0): "Asset 6A riusabili in 6B ≈ 30-40% del CapEx Y1 in valore monetario; ladder tecnologico produce asset capitalizzabili."
 
@@ -63,13 +63,13 @@
 
 ---
 
-## FO-ADD-04 — Pricing PA €150k/anno servizio EO Regione
+## FO-ADD-04. Pricing PA €150k/anno servizio EO Regione
 
 **Claim originale** (Cap. 7 §7.8.2, baseline revenue Y1): "Canone €150k/anno per servizio EO Regione Liguria + €60k antincendio + €45-95k connettività".
 
 **Note**: il Cap. 7 stesso, post-revisione Cluster D §7.4.4-5, **già dichiara** che il pricing baseline è **falsificato** da contratti reali e-GEOS/Planetek (€30-80k/anno tipici). Questa FO formalizza la soglia.
 
-**Falsifying observation**: se entro M+9 nessun contratto Regione Liguria è firmato a **pricing ≥ €75k/anno** (annual contract value, ACV) per il servizio EO baseline (post-recalibration M+3), il pricing model **RECALIBRATED** è falsificato. Il revenue Y1 baseline scende da €260k (centrale post-Cluster D) a €130-180k → soglia minima SyR-Cost-003 (€200k) a rischio. **Stato attuale M+3**: il legacy €150k/anno → €355-405k è **già falsificato** da Cluster D (Planetek/e-GEOS/NHazca €30-80k/anno) e il baseline è stato ricalibrato a €260k centrale (range €220-300k, vedi Cap. 7 §7.8.2 RECALIBRATED + Cap. 0 + Cap. 8 §8.0.1 + Cap. 11 §11.2.3).
+**Falsifying observation**: se entro M+9 nessun contratto Regione Liguria è firmato a **pricing ≥ €75k/anno** (annual contract value, ACV) per il servizio EO baseline (post-recalibration M+3), il pricing model **RECALIBRATED** è falsificato. Il revenue Y1 baseline scende da €260k (centrale post-Cluster D) a €130-180k, con soglia minima SyR-Cost-003 (€200k) a rischio. **Stato attuale M+3**: il legacy €150k/anno (€355-405k) è **già falsificato** da Cluster D (Planetek/e-GEOS/NHazca €30-80k/anno) e il baseline è stato ricalibrato a €260k centrale (range €220-300k, vedi Cap. 7 §7.8.2 RECALIBRATED + Cap. 0 + Cap. 8 §8.0.1 + Cap. 11 §11.2.3).
 
 **Trigger**: contratti firmati ACV; benchmark gare Consip / Mepa-Liguria.
 
@@ -81,7 +81,7 @@
 
 ---
 
-## FO-ADD-05 — EASA HAPS framework apertura entro 2030
+## FO-ADD-05. EASA HAPS framework apertura entro 2030
 
 **Claim originale** (Cap. 5 §5.10.1, Cap. 11 §11.4.3): "Phase B 6B HALE prosegue con engagement EASA Special Condition o RMT HAPS aperto entro 2027-2030."
 
@@ -97,7 +97,7 @@
 
 ---
 
-## FO-ADD-06 — CIRA partnership willingness
+## FO-ADD-06. CIRA partnership willingness
 
 **Claim originale** (Cap. 5 §5.11.3, Cap. 11 §11.4.5): "CIRA come partner R&D italiano per Phase B 6B HALE; partnership formalizzata Y1-Y2."
 
@@ -113,7 +113,7 @@
 
 ---
 
-## FO-ADD-07 — 8 cooperative su 10 partecipano post-workshop M+6
+## FO-ADD-07. 8 cooperative su 10 partecipano post-workshop M+6
 
 **Claim originale** (Cap. 3 §3.2.5, Cap. 10 §10.3.2 C4): "≥ 8 cooperative pilota su 10 confermano partecipazione formale entro M+6."
 
@@ -129,7 +129,7 @@
 
 ---
 
-## FO-ADD-08 — Tech batterie LiS pack 350 Wh/kg entro 2028
+## FO-ADD-08. Tech batterie LiS pack 350 Wh/kg entro 2028
 
 **Claim originale** (Cap. 6 §6.2.2.2, Cap. 6.3.3 TS-PROP-6B): "Architettura energetica Solar + LiS pack 350 Wh/kg target 2028, margine inverno 0-30%."
 
@@ -145,7 +145,7 @@
 
 ---
 
-## FO-ADD-09 — Mix funding Y1 ≥ 60% committed entro M+10
+## FO-ADD-09. Mix funding Y1 ≥ 60% committed entro M+10
 
 **Claim originale** (Cap. 10 §10.3.2 C3, Cap. 8 §8.7.1): "Mix funding Y1 ≥ 60% committed (Coopfond + Regione + equity + R&D credit) entro M+10."
 
@@ -161,16 +161,16 @@
 
 ---
 
-## FO-ADD-10 — Visione 10 anni operazionalizzata (vettore B2)
+## FO-ADD-10. Visione 10 anni operazionalizzata (vettore B2)
 
 **Claim originale** (Cap. 11 §11.5-11.6, `visione-10-anni.md`): "Visione 10 anni: Fase 5 Y8-Y10 = consorzio EU stratospheric layer, ARR €100-500M, Firmamento principal Italian node."
 
 **Falsifying observation aggregata**: se in **2 dei seguenti 4 milestone** (Y4, Y6, Y8, Y9) Firmamento non raggiunge una soglia oggettiva, la visione B2 full è falsificata e si attiva **automaticamente** scenario B2-relaxed del Cap. 11 §11.6bis:
 
-- **Y4 (M+48)**: ARR < €5M OR funding Phase B 6B < €5M committed → segnale early
-- **Y6 (M+72)**: ARR < €15M OR no HALE subscale operativo → segnale strong
-- **Y8 (M+96)**: ARR < €40M OR no programma EU sovereign analog IRIS² stratospheric → segnale critical
-- **Y9 (M+108)**: ARR < €60M OR no consorzio EU lettera intent firmata → falsificazione conclamata
+- **Y4 (M+48)**: ARR < €5M OR funding Phase B 6B < €5M committed (segnale early)
+- **Y6 (M+72)**: ARR < €15M OR no HALE subscale operativo (segnale strong)
+- **Y8 (M+96)**: ARR < €40M OR no programma EU sovereign analog IRIS² stratospheric (segnale critical)
+- **Y9 (M+108)**: ARR < €60M OR no consorzio EU lettera intent firmata (falsificazione conclamata)
 
 **Trigger**: KPI annuali revenue + asset operativi + posizionamento istituzionale EU.
 
@@ -202,15 +202,15 @@
 ## Integrazione con i capitoli
 
 Queste 10 FO sono **integrate per riferimento** nei capitoli rilevanti:
-- Cap. 2 §2.3 (cooperative) — agganciare FO-ADD-01, 07
-- Cap. 5 §5.0bis (boundary B2) — agganciare FO-ADD-02
-- Cap. 5 §5.16 (15 showstopper) — agganciare FO-ADD-05
-- Cap. 6 §6.1.3 (asset reuse) — agganciare FO-ADD-03
-- Cap. 6 §6.2.2.2 (energy balance) + §6.3.3 (TS-PROP) — agganciare FO-ADD-08
-- Cap. 7 §7.8.2 (pricing) — agganciare FO-ADD-04
-- Cap. 8 §8.7.1 (mix funding) — agganciare FO-ADD-09
-- Cap. 10 §10.3.2 (hard conditions) — agganciare FO-ADD-01, 04, 06, 07, 09
-- Cap. 11 §11.5-11.6 + §11.6bis — agganciare FO-ADD-02, 05, 06, 10
+- Cap. 2 §2.3 (cooperative): agganciare FO-ADD-01, 07
+- Cap. 5 §5.0bis (boundary B2): agganciare FO-ADD-02
+- Cap. 5 §5.16 (15 showstopper): agganciare FO-ADD-05
+- Cap. 6 §6.1.3 (asset reuse): agganciare FO-ADD-03
+- Cap. 6 §6.2.2.2 (energy balance) + §6.3.3 (TS-PROP): agganciare FO-ADD-08
+- Cap. 7 §7.8.2 (pricing): agganciare FO-ADD-04
+- Cap. 8 §8.7.1 (mix funding): agganciare FO-ADD-09
+- Cap. 10 §10.3.2 (hard conditions): agganciare FO-ADD-01, 04, 06, 07, 09
+- Cap. 11 §11.5-11.6 + §11.6bis: agganciare FO-ADD-02, 05, 06, 10
 
 **Aggiornamento implicito ai capitoli**: queste 10 FO sono **considerate dichiarate** e applicabili come parte del Volume 1 dello Studio di Fattibilità. La RTM v0.6 (target M+6, vedi Cap. 3 §3.8.2) deve includerle nella colonna "Falsifying observation".
 
@@ -221,6 +221,6 @@ Queste 10 FO sono **integrate per riferimento** nei capitoli rilevanti:
 Queste 10 FO chiudono la lacuna identificata dal Red Team (Critica G-03 + audit consolidato `AUDIT-QUALITY-VOLUME-1.md` §3). Il Volume 1 passa da ~40 FO totali a **~50 FO totali** (≥ 4-7 per capitolo, target rispettato).
 
 **Versionamento**: questa è la **versione M+3 baseline**. Aggiornamenti previsti:
-- M+6: gate G2 — re-baseline FO con evidenze pre-application ENAC + workshop cooperative
-- M+10: gate G3 — FO definitive per gate decision
+- M+6: gate G2, re-baseline FO con evidenze pre-application ENAC + workshop cooperative
+- M+10: gate G3, FO definitive per gate decision
 - M+12+: FO operative validabili in fase operations Y1

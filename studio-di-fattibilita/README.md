@@ -1,4 +1,4 @@
-# Studio di Fattibilità — Volume 1 (Studio testuale)
+# Studio di Fattibilità, Volume 1 (Studio testuale)
 
 **Soggetto proponente:** Firmamento Technologies
 **Bando:** Cooding Prototypes (Coopfond / Legacoop)
@@ -30,9 +30,9 @@
 
 ## Verdetto Studio di Fattibilità
 
-> ✅ **Percorso 6A (VTOL pilota Pentema): GO CONDIZIONATO** — fattibilità tecnica, regolatoria, di mercato e finanziaria confermata; subordinato a 5 hard conditions al gate G3 (M+10-11).
+> ✅ **Percorso 6A (VTOL pilota Pentema): GO CONDIZIONATO**. Fattibilità tecnica, regolatoria, di mercato e finanziaria confermata; subordinato a 5 hard conditions al gate G3 (M+10-11).
 >
-> ⚠️ **Percorso 6B (HALE stratosferico): HOLD / GO CONDIZIONATO ESTREMO R&D** — 5 showstopper aperti (energy balance inverno, aeroelasticità, framework HAPS, funding Phase B, Type Cert timeline); commitment Phase B subordinato al gate G5 (M+24).
+> ⚠️ **Percorso 6B (HALE stratosferico): HOLD / GO CONDIZIONATO ESTREMO R&D**. 5 showstopper aperti (energy balance inverno, aeroelasticità, framework HAPS, funding Phase B, Type Cert timeline); commitment Phase B subordinato al gate G5 (M+24).
 
 ---
 
@@ -46,11 +46,11 @@
 
 ## Documenti di Contesto (in `../riferimenti/`)
 
-- [`visione-10-anni.md`](../riferimenti/visione-10-anni.md) — Vettore strategico 10 anni (Fasi 1-5)
-- [`analisi-fac-simili-IT.md`](../riferimenti/analisi-fac-simili-IT.md) — Mappatura art. 41 D.Lgs. 36/2023 vs NASA SE
-- [`ricerche-approfondite.md`](../riferimenti/ricerche-approfondite.md) — Dataset di ricerca (mercato, competitor, fonti)
-- [`audit-rigore-epistemico.md`](../riferimenti/audit-rigore-epistemico.md) — Audit confidence levels + debito di rigore
-- 🔒 `RESERVED-rischi-geopolitici.md` — accesso ristretto (5 rischi geopolitici)
+- [`visione-10-anni.md`](../riferimenti/visione-10-anni.md): Vettore strategico 10 anni (Fasi 1-5)
+- [`analisi-fac-simili-IT.md`](../riferimenti/analisi-fac-simili-IT.md): Mappatura art. 41 D.Lgs. 36/2023 vs NASA SE
+- [`ricerche-approfondite.md`](../riferimenti/ricerche-approfondite.md): Dataset di ricerca (mercato, competitor, fonti)
+- [`audit-rigore-epistemico.md`](../riferimenti/audit-rigore-epistemico.md): Audit confidence levels + debito di rigore
+- 🔒 `RESERVED-rischi-geopolitici.md`: accesso ristretto (5 rischi geopolitici)
 
 ---
 
@@ -87,8 +87,8 @@
 
 ## Documenti di lavoro
 
-- [`PIANO-DI-LAVORO.md`](PIANO-DI-LAVORO.md) — Strategia di completamento Volume 1 (4 subagent paralleli + 5 capitoli sequenziali)
+- [`PIANO-DI-LAVORO.md`](PIANO-DI-LAVORO.md): Strategia di completamento Volume 1 (4 subagent paralleli + 5 capitoli sequenziali)
 
 ---
 
-*Firmamento Technologies — Studio di Fattibilità HALE/VTOL — Volume 1 — Maggio 2026*
+*Firmamento Technologies. Studio di Fattibilità HALE/VTOL. Volume 1. Maggio 2026*
