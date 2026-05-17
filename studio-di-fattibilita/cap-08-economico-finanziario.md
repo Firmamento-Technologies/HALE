@@ -20,7 +20,7 @@ Il presente capitolo presenta l'**analisi economica e finanziaria** dei due perc
 
 | Percorso | CapEx totale | OpEx Y2 run-rate | Revenue Y1 baseline | NPV (10y) scenario base | IRR scenario base | Payback | Verdetto |
 |---|---|---|---|---|---|---|---|
-| **6A — VTOL pilota Y1-Y3** | €700-1200k Y1 + €0.5-1.5M scale Y2-Y3 | €260-480k | €355-405k (target ≥ €200k) | NPV positivo Y4-Y5 con scale-up | 15-25% | 4-6 anni | ✅ **GO** finanziariamente |
+| **6A — VTOL pilota Y1-Y3** | €700-1200k Y1 + €0.5-1.5M scale Y2-Y3 | €260-480k baseline / **€1.18M con +3 FTE regulatory (Cap. 5 §5.17)** | **€260k centrale (range €220-300k) RECALIBRATED** post-Cluster D (legacy €355-405k FALSIFICATO), min €200k SyR-Cost-003 | NPV positivo Y5-Y6 con scale-up (vs Y4-Y5 pre-recalibration) | 12-20% (vs 15-25% pre-recalibration) | 5-7 anni | ⚠️ **GO CONDIZIONATO** finanziariamente (peggioramento margine post-Cluster D; richiede LoI Regione €75-100k/anno) |
 | **6B — HALE R&D Phase B** | €5.5-13.5M (Y3-Y5 cumulato) | n/a (R&D phase) | n/a (revenue commerciale post-Y6) | NPV solo qualitativo (R&D phase) | n/a | n/a (commercial Y8+) | ⚠️ **GO condizionato R&D** subordinato a funding mix specifico |
 
 ### 8.0.2 Mix finanziamenti raccomandato
@@ -305,17 +305,18 @@ TOTALE Phase B baseline                       100%    ← €5.5-13.5M
 
 ### 8.6.2 Scenari worst/base/best
 
-| Indicatore | Worst (P10) | Base (P50) | Best (P90) |
+| Indicatore | Worst (P10) | Base (P50) RECALIBRATED | Best (P90) |
 |---|---|---|---|
-| **Revenue Y1** | €150k (3 contratti deboli) | €380k (5 contratti baseline) | €600k (5 contratti + 1 espansione) |
-| **Revenue Y3** | €1.0M (rallentamento PA) | €2.5M (scale-up Liguria + 1 regione) | €4.5M (scale-up + utility pilot precoce) |
-| **Revenue Y5** | €2.5M (no HAPS, no utility) | €6.5M (modello operativo stabile multi-regione) | €15M (HAPS subscale operativo + utility expansion) |
+| **Revenue Y1** (post-Cluster D recalibration) | €130k (3 contratti deboli, pricing piegato a benchmark Cluster D €40-60k/anno) | **€260k** (5 contratti baseline, pricing €60-90k/anno PA + €25-40k premium) | €380k (5 contratti + 1 espansione, pricing premium accettato) |
+| **Revenue Y3** | €0.8M (rallentamento PA) | €2.0M (scale-up Liguria + 1 regione, post-recalibration pricing) | €3.5M (scale-up + utility pilot precoce) |
+| **Revenue Y5** | €2.0M (no HAPS, no utility) | €5.0M (modello operativo stabile multi-regione) | €12M (HAPS subscale operativo + utility expansion) |
 | **CapEx Y1** | €1.96M (overrun massimo) | €1.4M (baseline) | €0.97M (efficient execution) |
-| **OpEx Y2 run-rate** | €480k | €370k | €280k |
-| **Break-even** | Y6+ | Y4.5 | Y3.5 |
-| **NPV 10y (WACC 12%)** | negativo | +€3-8M | +€20-40M |
-| **IRR 10y** | <8% | 18-25% | 35-50% |
-| **Payback** | 7-8 anni | 5 anni | 3 anni |
+| **OpEx Y2 run-rate** baseline | €480k | €370k | €280k |
+| **OpEx Y2 run-rate +3 FTE regulatory** (Cap. 5 §5.17 mandatory) | €1.3M | €1.18M | €1.05M |
+| **Break-even cumulato (vs baseline OpEx)** | Y7+ (vs Y6+ pre-recalibration) | Y5-Y6 (vs Y4.5 pre-recalibration) | Y4 (vs Y3.5 pre-recalibration) |
+| **NPV 10y (WACC 12%)** | -€2M (vs negativo pre-recalibration) | **+€3.5M** (vs +€3-8M pre-recalibration) | +€20-25M (vs +€20-40M pre-recalibration) |
+| **IRR 10y** | <5% | 12-18% (vs 18-25% pre-recalibration) | 28-40% (vs 35-50% pre-recalibration) |
+| **Payback** | 8-10 anni (vs 7-8 pre-recalibration) | 6 anni (vs 5 pre-recalibration) | 3.5 anni (vs 3 pre-recalibration) |
 
 > **Falsifying observation §8.6.2 (CRITICA)**: se al gate M+24 (fine Y2) il cumulato FCF è < -€2.5M (sotto worst-case), il modello operativo è in stato critico e va attivata strategic review (es. pivot mercato, acquisition difensiva da considerare, ridimensionamento Phase B 6B).
 
@@ -441,9 +442,9 @@ Critica condotta da `red-team-skeptic` + `financial-cfo-analyst` + `business-mod
 **Razionale**: il range stimato non include adeguatamente i rischi tipici aerospace.
 **Risposta**: il range €975k-1.96M già include contingency 15% (limite inferiore base rate). Se overrun raggiunge 50% (centro base rate), CapEx Y1 effettivo €1.8-2.5M. Falsifying observation §8.3.1 attiva review scope se cumulato >€2M al M+6.
 
-### Critica 2 — "Revenue Y1 €380k baseline è ottimistico per cicli PA italiani 6-18 mesi"
-**Razionale**: cicli appalti PA italiani sono lenti. 5 contratti firmati in 12 mesi è raro.
-**Risposta**: confermato. Soglia minima MVP è 3 contratti + €200k (SyR-Cost-003). Scenario worst (€150k) attiva pivot. Pre-engagement Q1 2026 critico per non perdere finestra di gara.
+### Critica 2 — "Revenue Y1 €380k baseline è ottimistico per cicli PA italiani 6-18 mesi" — RECALIBRATED post-Cluster D
+**Razionale**: cicli appalti PA italiani sono lenti. 5 contratti firmati in 12 mesi è raro. **In aggiunta (audit Cluster D M+3)**: pricing baseline €150k/anno per servizio EO Regione (§7.8.2 originale) è **FALSIFICATO** dal benchmark Cluster D (Planetek/e-GEOS/NHazca €30-80k/anno per area).
+**Risposta**: confermato in entrambe le dimensioni. **Azione applicata M+3**: revenue Y1 baseline ricalibrato a **€260k centrale (range €220-300k, min €200k SyR-Cost-003)** con pricing €60-90k/anno PA + €25-40k premium persistence (vedi Cap. 7 §7.8.2 RECALIBRATED). Soglia minima MVP è 3 contratti + €200k SyR-Cost-003 hard floor. Scenario worst (€130k) attiva pivot. Pre-engagement Q1 2026 + benchmark Cluster D pubblicizzato (DR-006 closure) critici per non perdere finestra di gara.
 
 ### Critica 3 — "WACC 12% blended è basso per startup aerospace early-stage"
 **Razionale**: equity venture aerospace tipicamente 25-35%; il WACC 12% suppone mix grant pesante.
@@ -504,7 +505,7 @@ Il Cap. 8 è bozza M+3 con **confidence medium-low** sulle proiezioni finanziari
 
 **Punti deboli dichiarati**:
 - CapEx Y1 €975k-1.96M (range ampio, da stretto al M+6)
-- Revenue Y1 €380k baseline ottimistico (worst case €150k)
+- Revenue Y1 **€260k centrale (range €220-300k) RECALIBRATED post-Cluster D** (worst case €130k); legacy €355-405k FALSIFICATO da benchmark Planetek/e-GEOS/NHazca
 - Capital intensity full scale Y10 €10-30B realisticamente raggiungibile solo via programma EU sovrano dedicato (precondizione esterna)
 - Bandi 2026 non ancora confermati (DR-002 audit-rigore-epistemico.md)
 

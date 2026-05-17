@@ -69,7 +69,7 @@
 
 **Note**: il Cap. 7 stesso, post-revisione Cluster D §7.4.4-5, **già dichiara** che il pricing baseline è **falsificato** da contratti reali e-GEOS/Planetek (€30-80k/anno tipici). Questa FO formalizza la soglia.
 
-**Falsifying observation**: se entro M+9 nessun contratto Regione Liguria è firmato a **pricing ≥ €100k/anno** (annual contract value, ACV) per il servizio EO baseline, il pricing model è falsificato. Il revenue Y1 baseline scende da €355-405k a €150-250k → soglia minima SyR-Cost-003 (€200k) a rischio.
+**Falsifying observation**: se entro M+9 nessun contratto Regione Liguria è firmato a **pricing ≥ €75k/anno** (annual contract value, ACV) per il servizio EO baseline (post-recalibration M+3), il pricing model **RECALIBRATED** è falsificato. Il revenue Y1 baseline scende da €260k (centrale post-Cluster D) a €130-180k → soglia minima SyR-Cost-003 (€200k) a rischio. **Stato attuale M+3**: il legacy €150k/anno → €355-405k è **già falsificato** da Cluster D (Planetek/e-GEOS/NHazca €30-80k/anno) e il baseline è stato ricalibrato a €260k centrale (range €220-300k, vedi Cap. 7 §7.8.2 RECALIBRATED + Cap. 0 + Cap. 8 §8.0.1 + Cap. 11 §11.2.3).
 
 **Trigger**: contratti firmati ACV; benchmark gare Consip / Mepa-Liguria.
 

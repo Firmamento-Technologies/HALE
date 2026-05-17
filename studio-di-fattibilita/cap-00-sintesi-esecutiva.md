@@ -39,7 +39,7 @@ Il progetto adotta una **strategia duale a riduzione del rischio**:
 
 **Budget**: CapEx Y1 **€700k – €2M** (incluse IVA + contingency 15%), OpEx run-rate Y2 €260-480k/anno.
 
-**Revenue Y1 baseline**: **€355-405k** da 5 contratti pluriennali (3 minimo, SyR-Cost-003).
+**Revenue Y1 baseline RECALIBRATED post-Cluster D audit (M+3)**: **€260k centrale (range €220-300k)** da 5 contratti pluriennali, min SyR-Cost-003 €200k. **Soglia minima**: €200k (SyR-Cost-003 hard floor). **Pricing PA**: €60-90k/anno base + €30-60k/anno premium persistence/sovranità (post-falsificazione baseline originale €150k/anno → €355-405k da Cluster D benchmark Planetek/e-GEOS/NHazca: €30-80k/anno). Dettaglio Cap. 7 §7.4.4-5 + §7.8.2.
 
 ### 🛰 Percorso 6B — HALE Stratosferico (R&D, 24-48+ mesi)
 
@@ -202,7 +202,7 @@ M+0   M+3   M+6   M+10/11   M+12         M+24            M+36            M+48
 | Durata Phase B 6B R&D | 24 mesi (M+24 → M+48) |
 | CapEx 6A Y1 | €700k – €2M |
 | OpEx 6A Y2 run-rate | €260-480k/anno |
-| Revenue 6A Y1 baseline | €355-405k (min €200k SyR-Cost-003) |
+| Revenue 6A Y1 baseline (RECALIBRATED) | €260k centrale, range €220-300k (min €200k SyR-Cost-003) — post-Cluster D audit |
 | ARR Y3 target | €1.5-3.5M (scale-up Liguria + 1 regione) |
 | ARR Y5 target | €3-8M (multi-regione + HAPS subscale) |
 | Break-even cumulato | Y4-Y5 (scenario base) |

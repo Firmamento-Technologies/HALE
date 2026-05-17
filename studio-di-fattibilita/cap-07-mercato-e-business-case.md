@@ -21,7 +21,7 @@ Il presente capitolo presenta l'**analisi di mercato e il business case** per i 
 1. **Esiste un mercato indirizzabile reale** per servizi persistenti EO + NTN nelle Aree Interne italiane, ancorato da committenti PA (Regione Liguria, Protezione Civile) + rete cooperative Legacoop (10 cooperative pilota). Stima TAM-IT addressable Y5 (2030) per la categoria HAPS + UAV servizi territoriali: **€40-180M** (range a confidence low-medium).
 2. **Firmamento si posiziona come operatore di servizi**, non OEM aeronautico (boundary condition B1). Il modello di revenue è ricorrente (canoni, DaaS, ore-volo + analytics, outcome-based), non transattivo. **Nessun ricavo da vendita di velivoli** previsto né nel pilota né nello scale-up.
 3. **Vantaggio competitivo difendibile** poggia su 4 pilastri: (i) specializzazione geografica Aree Interne IT, (ii) modello cooperativo, (iii) sostenibilità + narrativa ESG, (iv) approccio incrementale VTOL → MALE → HALE che produce asset riusabili. **Nota di onestà post-audit competitor**: il pilastro (i) è difendibile vs Tier 1 globali (AALTO/Skydweller) **ma NON vs Cluster D italiani** (e-GEOS, Planetek, NHazca, FlyingBasket) che presidiano già il mercato B2G regionale (vedi §7.4.4 e §7.5.1).
-4. **MVP Y1 (Percorso 6A Pentema)**: budget €700-1100k, target revenue Y1 €200-400k da 3-5 contratti pluriennali con PA + cooperative. Sostenibilità break-even Y3-Y4 dopo scale-up SNAI Liguria. **Avvertenza pricing**: il baseline €150k/anno per servizio EO Regione (§7.8.2) è **falsificato** da contratti reali Cluster D (tipicamente €30-80k/anno per area, contratti pluriennali consolidati); il margine difensivo passa per persistence + latency + sovranità, NON per pricing (vedi §7.4.5).
+4. **MVP Y1 (Percorso 6A Pentema)**: budget €700-1100k, **target revenue Y1 €260k centrale (range €220-300k, min €200k SyR-Cost-003)** da 5 contratti pluriennali con PA + cooperative, pricing **RECALIBRATED post-Cluster D audit M+3** (vs originale €355-405k FALSIFICATO). Sostenibilità break-even Y4-Y5 dopo scale-up SNAI Liguria (vs Y3-Y4 originale). **Pricing baseline RECALIBRATED**: €60-90k/anno EO PA base + €25-40k premium persistence/sovranità (vs €150k/anno originale falsificato). Il margine difensivo passa per persistence sub-day + latency <1 s + sovranità dati IT, NON per pricing (vedi §7.4.5 + §7.8.2).
 5. **Fase 2-5 della visione 10 anni**: traiettoria progressiva verso "nodo italiano di un futuro consorzio sovrano europeo HAPS" (boundary condition B2), con capital intensity totale stimata **€500M-€2B** per piccola flotta (5-10 HAPS) o **€10-30B** per scala "EU sovereign layer" (vedi `riferimenti/visione-10-anni.md`).
 
 **Verdetto business per il gate M+10**: **GO Percorso 6A** (MVP commerciale validabile in 12 mesi); **GO CONDIZIONATO Percorso 6B** (preparatorio R&D, no commitment a manufacturing né operations commerciali fino al gate M+24).
@@ -585,20 +585,23 @@ In coerenza con boundary condition B1 (service-only, no product sale), il revenu
 | **Outcome-based** | PC, assicurazioni | Pay-per-event (alert verificato, danno prevenuto) | €1-10k/event verificato | Y2+ |
 | **DaaS (Data-as-a-Service)** | Cooperative, B2B leggero | Abbonamento dati su area + processing | €5-50k/anno per cooperativa | Y2+ |
 
-### 7.8.2 Pricing baseline MVP Y1 (preliminare, confidence low)
+### 7.8.2 Pricing baseline MVP Y1 RECALIBRATED post-Cluster D audit (M+3, confidence medium-low)
 
-Lo Studio adotta i seguenti **pricing baseline** per il MVP Y1, da validare con LoI/contratti effettivi:
+> **Stato baseline**: la versione originale "€355-405k da pricing Regione €150k/anno" è **FALSIFICATA** dal benchmark Cluster D (Planetek Rheticus Puglia €30-50k/anno, e-GEOS PC Lazio canone implicito €40-60k/anno, NHazca monitoraggio frane €20-40k/anno per area). Il pricing baseline pre-audit è qui mantenuto in **legacy** solo come traccia falsifying observation §7.4.4 (vedi §7.4.5 azione obbligatoria pre-G3).
 
-| Linea servizio | Cliente | Pricing baseline Y1 | Volume target Y1 | Revenue Y1 stimato |
+Lo Studio adotta i seguenti **pricing baseline RECALIBRATED** per il MVP Y1, allineati al benchmark Cluster D, da validare con LoI/contratti effettivi:
+
+| Linea servizio | Cliente | Pricing baseline Y1 RECALIBRATED | Volume target Y1 | Revenue Y1 stimato |
 |---|---|---|---|---|
-| Monitoraggio frane settimanale Liguria interna | Regione Liguria | Canone €150k/anno | 1 contratto | €150k |
-| Antincendio boschivo stagione estate | PC Liguria + 1 Ente Parco | Canone €60k stagione + €5k/event verificato (max 5 event) | 1 PC + 1 Parco | €85k |
-| Backup connettività emergenza | PC Liguria | On-demand €5-15k/event (max 5) + €20k retainer | 1 contratto retainer | €45-95k |
-| Mapping agricolo cooperative | 3 cooperative agricole pilota | Abbonamento DaaS €10k/anno per cooperativa | 3 contratti | €30k |
-| Mapping infrastrutture stradali Comune | Comune Torriglia + 2 altri Comuni SNAI | Servizio €15k per Comune | 3 contratti | €45k |
-| **Totale revenue Y1 baseline** | | | | **€355-405k** |
+| Monitoraggio frane settimanale Liguria interna | Regione Liguria | Canone €75k/anno base + €25k premium persistence/sovranità | 1 contratto | €75-100k |
+| Antincendio boschivo stagione estate | PC Liguria + 1 Ente Parco | Canone €40k stagione + €3-5k/event verificato (max 5 event) | 1 PC + 1 Parco | €55-65k |
+| Backup connettività emergenza | PC Liguria | On-demand €3-10k/event (max 5) + €15k retainer | 1 contratto retainer | €30-65k |
+| Mapping agricolo cooperative | 3 cooperative agricole pilota | Abbonamento DaaS €8k/anno per cooperativa | 3 contratti | €24k |
+| Mapping infrastrutture stradali Comune | Comune Torriglia + 2 altri Comuni SNAI | Servizio €12k per Comune | 3 contratti | €36k |
+| **Totale revenue Y1 baseline RECALIBRATED** | | | | **€220-290k (centrale €260k)** |
+| **(legacy pre-audit, FALSIFICATO)** | | | | (€355-405k) |
 
-> **Falsifying observation §7.8.2**: se entro M+9 non sono firmati ≥ 3 contratti pluriennali con valore aggregato ≥ €200k, il SyR-Cost-003 (revenue Y1 ≥ €200k) è in stato "Failed", e va attivata revisione del modello (es. pivot a more aggressive PA push o pure cooperative agricola). **Probabilità: M, impatto: H**. Mitigazione: engagement intensivo Regione + PC entro M+0-6.
+> **Falsifying observation §7.8.2 RECALIBRATED**: se entro M+9 non sono firmati ≥ 3 contratti pluriennali con valore aggregato ≥ €200k al pricing baseline €75-100k/anno PA + €8-12k DaaS, il SyR-Cost-003 (revenue Y1 ≥ €200k) è in stato "Failed", e va attivata revisione del modello (es. pivot a more aggressive PA push, pure cooperative agricola, o pivot pricing dual-use con MOI/MAECI). **Probabilità: M, impatto: H**. Mitigazione: engagement intensivo Regione + PC entro M+0-6 + benchmark Cluster D pubblicizzato (DR-006 closure).
 
 ### 7.8.3 Pricing post-MVP — scale-up Y2-Y5
 
@@ -637,7 +640,7 @@ MVP scope (M+0 → M+12):
 | Sicurezza | Incidenti FATAL o major | 0 | 0 (vincolo assoluto) |
 | Compliance | Autorizzazione SORA attiva | ✓ | ✓ (necessario) |
 | Customer | Contratti pluriennali firmati | ≥ 5 | ≥ 3 |
-| Revenue | Revenue Y1 cumulato | €355-405k baseline | ≥ €200k (SyR-Cost-003) |
+| Revenue | Revenue Y1 cumulato | €260k centrale (range €220-300k) RECALIBRATED post-Cluster D | ≥ €200k (SyR-Cost-003 hard floor) |
 | Satisfaction | NPS stakeholder PA/coop | ≥ 50 | ≥ 40 |
 | Service quality | Utilization rate (% ore disponibili fatturate) | ≥ 60% | ≥ 40% |
 | Replicabilità | Letters of Interest per scale-up SNAI | ≥ 2 regioni | ≥ 1 regione |
@@ -701,9 +704,9 @@ Il Cap. 8 fornisce il **Quadro Economico** (ex art. 41 D.Lgs. 36/2023), il **Pia
 
 | Indicatore | Valore baseline | Note |
 |---|---|---|
-| Revenue Y1 | €355-405k | Da SyR-Cost-003 + §7.8.2 |
-| OpEx Y1 | €260-480k | Da `agents/financial-cfo-analyst.md` |
-| Margine operativo Y1 | -€125k → +€145k | In funzione di OpEx mix + utilization |
+| Revenue Y1 (RECALIBRATED post-Cluster D) | €260k centrale (range €220-300k) | Da SyR-Cost-003 + §7.8.2 RECALIBRATED; min €200k hard floor; legacy €355-405k FALSIFICATO |
+| OpEx Y1 baseline (pre-+3 FTE regulatory) | €260-480k | Da `agents/financial-cfo-analyst.md` — vedi §8.X per OpEx Y2 €1.18M con +3 FTE regulatory mandatory |
+| Margine operativo Y1 (baseline OpEx €260-480k) | **-€220k → +€40k** | In funzione di OpEx mix + utilization; **post-recalibration revenue, margine peggiora rispetto a originale** |
 | CapEx Y1 | €700-1200k | Da `agents/financial-cfo-analyst.md` |
 | Break-even Y2-Y3 con scale-up | OK se ARR raggiunge €1.5M+ | Da modello finanziario Y2-Y3 |
 | Payback Y4-Y5 | OK se ARR raggiunge €3.5M+ | Da modello finanziario Y4-Y5 |

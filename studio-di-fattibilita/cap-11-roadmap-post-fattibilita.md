@@ -152,7 +152,7 @@ I KPI sono ereditati dal Cap. 7 §7.9.2 (MVP Y1) e dal `riferimenti/visione-10-a
 | Sicurezza | Incidenti FATAL o major | 0 | 0 (vincolo assoluto) | 0 |
 | Compliance | SORA SAIL II-III approvato | ✓ | ✓ | ✓ + estensione areale |
 | Customer | Contratti pluriennali firmati | ≥ 5 | ≥ 3 | ≥ 10 |
-| Revenue | ARR cumulato | €355-405k | ≥ €200k | €1.0-1.5M |
+| Revenue (RECALIBRATED post-Cluster D M+3) | ARR cumulato | €260k centrale (range €220-300k) | ≥ €200k (SyR-Cost-003 hard floor) | €0.8-1.2M (vs €1.0-1.5M pre-recalibration) |
 | Satisfaction | NPS stakeholder PA/coop | ≥ 50 | ≥ 40 | ≥ 50 sostenuto |
 | Service quality | Utilization rate (% ore disponibili fatturate) | ≥ 60% | ≥ 40% | ≥ 65% |
 | Replicabilità | Letters of Interest scale-up SNAI | ≥ 2 regioni | ≥ 1 regione | ≥ 2 regioni firmate |
