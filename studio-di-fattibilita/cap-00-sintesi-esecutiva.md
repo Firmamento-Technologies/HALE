@@ -10,6 +10,29 @@
 
 ---
 
+## 0.0 Confidence Aggregato dello Studio (post audit M+3)
+
+> **Confidence framework** (per ogni claim numerico/strategico del Cap. 0, è indicato il livello di confidence basato sulle 7 regole della skill `epistemic-rigor` + 4 audit avversariali condotti M+3: Red Team + Competitor + Regulatory + Quality).
+
+| Dimensione del claim | Confidence aggregato | Note evidenze |
+|---|---|---|
+| **CapEx Y1 €700k-2M** | **medium** | Range largo include contingency 15% + IVA; quotation vendor reali (JOUAV/Tekever) ancora pending (DR-001/DR-003); confidence sale a medium-high post-quotation M+3 |
+| **OpEx Y2 RECONCILED €1.18M** | **medium-high** | Componente regulatory team mandatory €400-590k (CISO + DPO + Head Regulatory) derivata da Cap. 5 §5.17 evidenza normativa (Part-IS EASA, NIS2, AgID/PSN, art. 50, ENAV); baseline tecnico €260-480k derivata da modelli `agents/financial-cfo-analyst.md` |
+| **Revenue Y1 €260k centrale (range €220-300k) RECALIBRATED** | **medium** | Pricing post-Cluster D benchmark (Planetek Rheticus Puglia, e-GEOS PC Lazio, NHazca) confidence high; soglia €200k SyR-Cost-003 hard floor; legacy €355-405k **FALSIFICATO**, non più operativamente in uso |
+| **NPV 10y base +€3.5M / IRR 12-18%** | **low** | Out-of-window validazione diretta Y3+; sensitivity in Cap. 8 §8.6.3 mostra range ampio; Monte Carlo non ancora condotto (DR-008) |
+| **Break-even Y5-Y6** | **medium-low** | Post-recalibration revenue Y1; assumption scale-up SNAI Y2-Y3 a 1 nuova regione/anno con pricing tenuto |
+| **P(Go pieno gate G3) 5-15%** | **medium-high** | Calcolo derivato AND 5 hard conditions (Cap. 10 §10.0bis), P marginal stimato red-team-skeptic; coerente con base rate startup deeptech (DR-013/DR-014) |
+| **P(HOLD piano rafforzato G3) 45-60%** | **medium-high** | Scenario realistico atteso; pivot a sliding timeline §9.12 senza loss of strategic value |
+| **5 showstopper formali (Risk Register)** | **high** | Identificati e quantificati da 4 audit avversariali; RSK-TEC-001 score 25 derivato da simulazione completa energy balance HALE 44°N (allegato A.7) |
+| **Visione 10 anni / B2 EU sovereign stratospheric layer** | **low-medium aspirazionale, NON operativa** | Boundary condition strategica (input progetto, non claim falsificabile); B2 full P 6-15%, B2-relaxed standalone IT small fleet P 30-50%; trigger FO-ADD-10 + Cap. 11 §11.6bis |
+| **Posizionamento "complementare IRIS²"** | **medium** | IRIS² baseline LEO+MEO puro confermato (DR-009 closure); finestra opportunity stratospheric gap-filler aperta Y2-Y4 (2027-2030); falsificabile via FO-ADD-02 (M+18 roadmap DG CNECT) |
+| **5 Pilastri vantaggio competitivo** | **mixed**: 1 high (cooperative se strutturazione giuridica), 2 medium (sostenibilità + service-only), 2 low (specializzazione geografica + approccio incrementale) — vedi Cap. 7 §7.5.1 |
+| **Capital intensity Y10 €500M-1.5B small fleet** | **low** (extrapolation 8-10 anni out-of-window) | Bottom-up estimate Cap. 11 §11.6.4; range largo; sostituibile da modelli benchmark internazionali raffinabili in Vol. 2 financial model |
+
+> **Confidence aggregato Studio M+3**: **MEDIUM-LOW** (richiede validazione esterna pre-G3 effettivo M+10). **NON investment-grade** per finanziatori istituzionali (VC top-tier, BEI/EIC) senza: LoI Regione Liguria firmata + vendor quotation reali + pre-application ENAC documentata + modello finanziario validato esterno (RINA/DNV) + Monte Carlo analysis. **Coopfond / Regione Liguria / Cooding Prototypes**: confidence sufficiente (medium aggregato) per istruttoria bando e DGR regionale.
+
+---
+
 ## 0.1 Il Progetto
 
 **Firmamento Technologies** propone lo sviluppo e l'attivazione di una **piattaforma aerea unmanned**, operata come **erogatore di servizi** (non come venditore di velivoli), a beneficio delle **Aree Interne italiane** — territori a bassa densità demografica, orografia complessa, carenza di servizi essenziali e divario digitale strutturale.
