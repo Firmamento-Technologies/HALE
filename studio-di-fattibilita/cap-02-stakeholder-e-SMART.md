@@ -319,7 +319,7 @@ Cinque stakeholder sono **show-stopper o show-maker** per il successo del Percor
 
 #### Top-5 — Comunità Pentema (S-07)
 
-**Razionale di criticità**: ~150 residenti, accettabilità sociale del pilota. Senza accettabilità — anche solo con uno o due cittadini ostili che attivano media o Garante — il pilota è bloccato. Vedi caso recenti drone deployments urbani 2023-2024 (sospensione rapida).
+**Razionale di criticità**: comunità di **14 residenti ISTAT** — accettabilità sociale del pilota su comunità così minuscola è critica per visibilità mediatica. Senza accettabilità — anche solo con uno o due cittadini ostili che attivano media o Garante — il pilota è bloccato. Vedi caso recenti drone deployments urbani 2023-2024 (sospensione rapida).
 
 **Soggetti chiave**: Comune di Torriglia (Sindaco + Consiglio); cooperativa Val Pentemina (cooperativa di comunità di Pentema); abitanti — incluse leve di influencer locali (parroco, presidente Pro Loco, etc.).
 
@@ -771,7 +771,7 @@ Calendario dei gate decisionali (cf. Cap. 9 + skill `gate-review-checklist`):
 | **Meteo estivo** | Termiche pomeridiane, raffiche montane fino 17 m/s | Vincoli wind margin operativi |
 | **Connettività esistente** | Mobile 4G/5G discontinua; banda fissa via radio link | Necessità GS robusto + backup SATCOM |
 | **Accessibilità terrestre** | Strada secondaria SP, 30 min da Torriglia, 1.5h da GE | Logistica trasporto piattaforma vincolata |
-| **Comunità** | ~150 residenti, cooperativa di comunità attiva | Accettabilità sociale favorita ma da curare |
+| **Comunità** | **14 residenti ISTAT** (7M + 7F), 11 famiglie, 100 edifici; cooperativa di comunità attiva | Accettabilità sociale favorita ma da curare per visibilità mediatica |
 | **Spazio aereo** | Class G fino a 1500m AGL; class E sopra | Operazioni VLL ≤500 ft AGL semplificate da SORA 2.5 EU |
 
 ### 2.5.5 Assunzioni baseline (richiamo Cap. 3.9.1)

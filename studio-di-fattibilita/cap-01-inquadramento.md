@@ -24,7 +24,7 @@ In sintesi:
 - **Stakeholder istituzionali**: Regione Liguria (anchor istituzionale), Comune di Torriglia (sito pilota), ENAC (autorità UAS), AGCOM (spettro radio), Protezione Civile Liguria + ARPA Liguria (cliente operativo primario).
 - **Razionale pubblico**: contrasto allo spopolamento, al digital divide e all'isolamento informativo delle Aree Interne, in coerenza con la **Strategia Nazionale Aree Interne (SNAI)** 2021-2027 e con il **Piano Strategico Nazionale Aree Interne (PSNAI)** approvato dal Ministro per la Coesione il 30 luglio 2025[^4].
 - **Visione tecnologica di lungo termine**: piattaforma **H.A.L.E. (High Altitude Long Endurance)** solare, capace di operare in stratosfera (~20 km AGL) per settimane/mesi continuativi, posizionata come **layer stratosferico complementare** all'infrastruttura sovrana europea multi-orbita (Galileo, Copernicus, IRIS²).
-- **Strategia duale risk-informed**: Percorso **6A** (pilota VTOL commerciale TRL 8-9, 0-12 mesi, €600k-900k, rischio Basso) come deliverable operativo; Percorso **6B** (R&D HALE stratosferico, 24-48+ mesi, €5.5-11M, rischio Alto) come orizzonte preparatorio.
+- **Strategia duale risk-informed**: Percorso **6A** (pilota VTOL commerciale TRL 8-9, 0-12 mesi, €700-1200k baseline + €975k-1.96M con IVA+contingency 15%, sliding realistic €2.5-3.5M, rischio Basso) come deliverable operativo; Percorso **6B** (R&D HALE stratosferico Phase 0/A only, 24-48+ mesi, €5.5-13.5M, rischio Alto, NB: benchmark globale operativa $50M-1B vedi DR-014) come orizzonte preparatorio.
 - **Orizzonte dello Studio**: M+0 → M+11, gate decisionale M+10/M+11 con verdetto **Go Condizionato** per 6A e **Hold / Go Condizionato Estremo** per 6B.
 
 Il capitolo non duplica i contenuti già coperti: i requisiti dettagliati sono nel Cap. 3 (Requisiti e RTM); il quadro normativo è nel Cap. 5; il business case è nel Cap. 7. Qui si dichiara **a cosa serve l'intervento, perché è necessario, chi sono i destinatari e quale forma di attuazione si propone**, in conformità all'art. 1 dell'Allegato I.7 del Codice dei Contratti[^1].
@@ -152,7 +152,7 @@ La **frazione di Pentema**, nel **Comune di Torriglia (Città Metropolitana di G
 | Dimensione | Caratteristica |
 |---|---|
 | Popolazione | Poche centinaia di abitanti (borgo storico) |
-| Quota | ~870 m s.l.m. |
+| Quota | 1100-1300 m s.l.m. (verificato ISTAT) |
 | Orografia | Vallata appenninica stretta, esposizione nord |
 | Connettività esistente | Marginale (linea fissa rame storica, copertura mobile parziale) |
 | Vie d'accesso | Strada provinciale unica, soggetta a interruzioni invernali |
@@ -296,7 +296,7 @@ Il cuore del Quadro Esigenziale è la **strategia duale risk-informed**, articol
 - **Categoria EASA**: **Specific Category, SAIL II-III** (vedi Cap. 5 §5.4.1).
 - **Sito pilota**: Pentema (Torriglia, GE), con possibile estensione altre frazioni Area SNAI Antola Tigullio.
 - **Orizzonte temporale**: M+12 → M+24 operatività Fase 1.
-- **Budget stimato**: **€600k – 900k** (acquisto piattaforma + integrazione + SORA + operatività Y1).
+- **Budget stimato**: **€700-1200k** baseline ingegneristico (con IVA + contingency 15%: €975k-1.96M; sliding realistic post-audit M+3: €2.5-3.5M per acquisto piattaforma + integrazione + SORA + operatività Y1 + 3 FTE regulatory).
 - **Rischio complessivo**: **Basso**, con verdetto **Go Condizionato** (vedi Cap. 5 §5.12 e Cap. 10).
 - **Output operativi attesi**:
   - ≥ 50 missioni operative eseguite (M+12-24);
@@ -326,7 +326,7 @@ Il cuore del Quadro Esigenziale è la **strategia duale risk-informed**, articol
 | Orizzonte | 0-12 mesi (operatività Y1-Y3) | 24-48+ mesi (R&D + operatività Y4+) |
 | Tecnologia | Commerciale TRL 8-9 | R&D, TRL 3-4 → 7-8 |
 | Categoria EASA | Specific SAIL II-III | Certified, Special Condition |
-| Budget | €600k – 900k (operatività Y1) | €5.5M – 11M (R&D Phase B) |
+| Budget | €700-1200k baseline + IVA → €975k-1.96M (sliding €2.5-3.5M) | €5.5-13.5M (R&D Phase 0/A only — DR-014 benchmark $50M-1B operativa) |
 | Rischio | Basso | Alto |
 | Verdetto target M+10 | **GO Condizionato** | **HOLD / Go Condizionato Estremo** |
 | Funzione strategica | Validazione operativa, revenue Y1-Y3 | Preparazione visione 10 anni |
@@ -447,7 +447,7 @@ Le **Open Questions** sono questioni aperte che devono essere chiuse prima del g
 | OQ-CAP1-02 | NDA + LoI 10 cooperative Legacoop (capofila Fabrica) | Firmamento + Fabrica | M+4 | Open (in corso) |
 | OQ-CAP1-03 | Confidenza accettabilità sociale Pentema (workshop pubblico) | data-privacy-counsel + Firmamento | M+9 | Open |
 | OQ-CAP1-04 | Verifica formale che il committente del PFTE coincida con il proponente (vs richiesta committente pubblico) | aviation-regulatory-counsel | M+6 | Open |
-| OQ-CAP1-05 | Confidence intervalli budget Percorso 6A €600k-900k post-trade study M+6 | systems-engineer + finance-counsel | M+8 | Open |
+| OQ-CAP1-05 | Confidence intervalli budget Percorso 6A €700-1200k baseline (€975k-1.96M con IVA) post-trade study M+6 | systems-engineer + finance-counsel | M+8 | Open |
 | OQ-CAP1-06 | Mappa Aree SNAI 2026 aggiornata (vs istruttoria 2022) | territorial-planning | M+5 | Open |
 | OQ-CAP1-07 | Posizionamento Firmamento nel Piano ENAC AAM (formalizzato in position paper) | sovereign-strategist | M+12 | Open |
 
