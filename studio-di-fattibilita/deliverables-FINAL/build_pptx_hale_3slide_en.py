@@ -1,6 +1,11 @@
 """
-Build PPTX deck HALE 3-slide in English, style coerente con il deck master
-Firmamento Technologies (dark navy + gold accents, monospace + sans-serif).
+Build PPTX deck 3 slide EN:
+1. DOPE Hubs + Firmamento Technologies (team photo + ecosystem)
+2. Project HALE (intro + tech specs + 4 use cases)
+3. Beyond the Drone (3 pillars + Pentema pilot + numbers)
+
+Stile coerente con il deck master Firmamento Technologies (dark navy + gold +
+light blue, font sans-serif + monospace).
 """
 
 import os
@@ -9,14 +14,13 @@ from pptx.util import Inches, Pt, Cm, Emu
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
-from pptx.oxml.ns import qn
-from lxml import etree
 
 BASE = "/home/user/HALE/studio-di-fattibilita"
 ASSETS = "/home/user/HALE/cad"
 OUT = os.path.join(BASE, "deliverables-FINAL")
 LOGO = os.path.join(ASSETS, "LogoFirmamento Technologies.png")
 HALE_RENDER = os.path.join(ASSETS, "HALE2.png")
+TEAM_PHOTO = os.path.join(ASSETS, "team_firmamento_wide.jpg")
 OUT_PPTX = os.path.join(OUT, "DECK-HALE-3slide-EN.pptx")
 
 NAVY = RGBColor(0x0a, 0x1a, 0x3d)
@@ -34,9 +38,10 @@ SW = prs.slide_width
 SH = prs.slide_height
 BLANK = prs.slide_layouts[6]
 
-FONT_DISPLAY = "Inter"     # fallback Calibri
+FONT_DISPLAY = "Inter"
 FONT_BODY = "Inter"
-FONT_MONO = "Consolas"     # monospace
+FONT_MONO = "Consolas"
+
 
 def text_box(slide, x, y, w, h, text, font_size=14, bold=False, italic=False,
              color=WHITE, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP,
@@ -63,9 +68,9 @@ def text_box(slide, x, y, w, h, text, font_size=14, bold=False, italic=False,
         r.font.name = font_name
     return tb
 
+
 def rich_text_box(slide, x, y, w, h, runs, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP,
                   line_spacing=1.3):
-    """runs = list of dicts {text, size, bold, italic, color, font}"""
     tb = slide.shapes.add_textbox(x, y, w, h)
     tf = tb.text_frame
     tf.word_wrap = True
@@ -87,6 +92,7 @@ def rich_text_box(slide, x, y, w, h, runs, align=PP_ALIGN.LEFT, anchor=MSO_ANCHO
         r.font.name = r_def.get("font", FONT_BODY)
     return tb
 
+
 def add_rect(slide, x, y, w, h, fill=NAVY, line=None, line_w=0.75):
     shape = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, x, y, w, h)
     shape.fill.solid()
@@ -98,11 +104,13 @@ def add_rect(slide, x, y, w, h, fill=NAVY, line=None, line_w=0.75):
         shape.line.fill.background()
     return shape
 
+
 def add_line(slide, x1, y1, x2, y2, color=GOLD, weight=1.0):
     line = slide.shapes.add_connector(1, x1, y1, x2, y2)
     line.line.color.rgb = color
     line.line.width = Pt(weight)
     return line
+
 
 def add_image(slide, path, x, y, w=None, h=None):
     if not os.path.exists(path):
@@ -115,119 +123,170 @@ def add_image(slide, path, x, y, w=None, h=None):
         return slide.shapes.add_picture(path, x, y, height=h)
     return slide.shapes.add_picture(path, x, y)
 
-# ============== SLIDE 1: PROJECT HALE ==============
-def slide_1_intro():
+
+# ============== SLIDE 1: ECOSYSTEM (DOPE + FIRMAMENTO) ==============
+def slide_1_ecosystem():
     s = prs.slides.add_slide(BLANK)
     add_rect(s, 0, 0, SW, SH, fill=NAVY)
 
-    # Title block top-left
-    text_box(s, Cm(1.5), Cm(1.5), Cm(20), Cm(2),
-             "Project H.A.L.E.",
-             font_size=46, bold=True, color=WHITE, font_name=FONT_DISPLAY,
-             anchor=MSO_ANCHOR.TOP)
-    text_box(s, Cm(1.5), Cm(3.5), Cm(20), Cm(1),
-             "(High Altitude Long Endurance)",
-             font_size=22, color=WHITE, font_name=FONT_DISPLAY)
+    # Team photo: pre-cropped wide format 2400×779 ratio 3.08
+    # Slide width SW = 33.867 cm, photo height auto = 33.867 / 3.08 = ~11 cm
+    add_image(s, TEAM_PHOTO, 0, 0, w=SW)
 
-    # Subtitle
-    text_box(s, Cm(1.5), Cm(5.5), Cm(15), Cm(2.5),
-             "The cooperative pseudo-satellite\nfor national resilience.",
-             font_size=20, color=WHITE, font_name=FONT_MONO, line_spacing=1.4)
+    # Tagline overlay top of photo - dark band semi-transparent
+    overlay_top = add_rect(s, 0, 0, SW, Cm(3.5), fill=NAVY)
+    # transparency via XML
+    from pptx.oxml.ns import qn
+    from lxml import etree
+    sppr = overlay_top.fill._xPr.find(qn("a:solidFill"))
+    if sppr is not None:
+        clr = sppr.find(qn("a:srgbClr"))
+        if clr is not None:
+            alpha = etree.SubElement(clr, qn("a:alpha"))
+            alpha.set("val", "55000")  # 55% opacity
 
-    # Tech specs (style monospace, code-like)
-    specs_y = Cm(9.5)
-    specs = [
-        ("Operating altitude", "20 km", LIGHT_BLUE, WHITE),
-        ("Macro-regional coverage", "> 500 km", LIGHT_BLUE, WHITE),
-        ("Latency", "< 20 ms", LIGHT_BLUE, WHITE),
-        ("Propulsion", "Solar-electric", LIGHT_BLUE, WHITE),
-        ("Endurance target", "30+ days perennial (Y3)", LIGHT_BLUE, WHITE),
+    text_box(s, Cm(1.5), Cm(0.9), SW - Cm(3), Cm(0.9),
+             "DEEP-TECH ECOSYSTEM",
+             font_size=13, bold=True, color=GOLD, font_name=FONT_DISPLAY,
+             align=PP_ALIGN.CENTER, line_spacing=1.0)
+    text_box(s, Cm(1.5), Cm(1.6), SW - Cm(3), Cm(1.8),
+             "Humans Keep Purpose",
+             font_size=40, bold=True, color=WHITE, font_name=FONT_DISPLAY,
+             align=PP_ALIGN.CENTER, line_spacing=1.0)
+
+    # No overlap: photo is exactly 11 cm tall now (pre-cropped ratio matches)
+    # Add subtle gradient strip under photo
+    add_rect(s, 0, Cm(11), SW, Cm(0.1), fill=GOLD)
+
+    # Two columns DOPE + Firmamento
+    bottom_y = Cm(11.5)
+    col_w = Cm(14)
+
+    # Left column: DOPE Hubs
+    text_box(s, Cm(2), bottom_y, col_w, Cm(0.9),
+             "DOPE Hubs (Non-Profit)",
+             font_size=20, bold=True, color=LIGHT_BLUE, font_name=FONT_DISPLAY)
+    text_box(s, Cm(2), bottom_y + Cm(1.2), col_w, Cm(2.5),
+             "Excellence training and applied research.\nThe product is the people.",
+             font_size=13, color=WHITE, font_name=FONT_MONO, line_spacing=1.5)
+
+    # Arrow between columns (positioned above text to avoid overlap)
+    arrow = s.shapes.add_shape(MSO_SHAPE.RIGHT_ARROW, Cm(16.5), bottom_y + Cm(0.3), Cm(1.0), Cm(0.6))
+    arrow.fill.solid()
+    arrow.fill.fore_color.rgb = GOLD
+    arrow.line.fill.background()
+
+    # Right column: Firmamento Technologies
+    text_box(s, Cm(18), bottom_y, col_w, Cm(0.9),
+             "Firmamento Technologies",
+             font_size=20, bold=True, color=GOLD, font_name=FONT_DISPLAY)
+    text_box(s, Cm(18), bottom_y + Cm(0.9), col_w, Cm(0.5),
+             "Deep-Tech Cooperative",
+             font_size=11, italic=True, color=GOLD_DARK, font_name=FONT_MONO)
+    text_box(s, Cm(18), bottom_y + Cm(1.6), col_w, Cm(2.5),
+             "Industrialization and Venture Building.\nThe product is digital sovereignty.",
+             font_size=13, color=WHITE, font_name=FONT_MONO, line_spacing=1.5)
+
+    # KPI strip
+    kpi_y = Cm(15.5)
+    add_line(s, Cm(1.5), kpi_y, SW - Cm(1.5), kpi_y, color=GOLD, weight=0.6)
+
+    kpi_data = [
+        ("20 → 120", "active researchers in 10 months"),
+        ("9", "parallel projects, Aerospace, Health, AI, Cyber, EO"),
+        ("6th worldwide", "UAS Challenge 2025 + Best Newcomer Award"),
+        ("Institutional", "University of Genoa, Liguria Region, RINA, Legacoop"),
     ]
-    for label, val, color_l, color_v in specs:
-        rich_text_box(s, Cm(1.5), specs_y, Cm(15), Cm(0.9), [
-            {"text": label + " ", "size": 16, "color": color_l, "font": FONT_MONO},
-            {"text": val, "size": 16, "color": color_v, "bold": True, "font": FONT_MONO},
-        ])
-        specs_y += Cm(1.1)
-
-    # HALE Render right side
-    add_image(s, HALE_RENDER, Cm(16.5), Cm(4.5), w=Cm(16), h=Cm(11))
-
-    # Footer / branding
-    add_line(s, Cm(1.5), SH - Cm(1.6), SW - Cm(1.5), SH - Cm(1.6), color=GOLD, weight=0.5)
-    text_box(s, Cm(1.5), SH - Cm(1.2), Cm(15), Cm(0.6),
-             "FIRMAMENTO TECHNOLOGIES",
-             font_size=9, bold=True, color=GOLD, font_name=FONT_DISPLAY)
-    text_box(s, SW - Cm(16.5), SH - Cm(1.2), Cm(15), Cm(0.6),
-             "Pentema pilot . Liguria SNAI . Cooperative Deep-Tech",
-             font_size=9, color=WHITE, font_name=FONT_MONO,
-             align=PP_ALIGN.RIGHT)
-
-# ============== SLIDE 2: VALUE / USE CASES ==============
-def slide_2_value():
-    s = prs.slides.add_slide(BLANK)
-    add_rect(s, 0, 0, SW, SH, fill=WHITE)
-
-    # Title
-    text_box(s, Cm(1.5), Cm(1.2), Cm(30), Cm(1.8),
-             "Public Value & Territorial Resilience",
-             font_size=36, bold=True, color=NAVY, font_name=FONT_DISPLAY)
-    text_box(s, Cm(1.5), Cm(3.1), Cm(30), Cm(0.9),
-             "Standardized plug-and-play interface for rapid sensor integration.",
-             font_size=15, color=GREY, font_name=FONT_MONO)
-
-    # H.A.L.E. Core vertical box (left side)
-    core_x = Cm(2)
-    core_y = Cm(6)
-    core_w = Cm(2.2)
-    core_h = Cm(11)
-    add_rect(s, core_x, core_y, core_w, core_h, fill=WHITE, line=NAVY, line_w=1.5)
-    # Vertical text inside
-    text_box(s, core_x, core_y, core_w, core_h,
-             "H.A.L.E.\nCore",
-             font_size=15, bold=True, color=NAVY, font_name=FONT_MONO,
-             align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-
-    # Connecting line
-    conn_x = Cm(4.4)
-    add_line(s, conn_x, Cm(11.5), Cm(6.5), Cm(11.5), color=NAVY, weight=1.2)
-
-    # 4 use case boxes (right side, vertical stack)
-    use_cases = [
-        ("Disaster Response", "Rapid", "network restoration after floods or landslides.", LIGHT_BLUE),
-        ("Environmental Monitoring", "Wildfire alert", "and hydrogeological surveillance, multispectral / thermal sensors.", LIGHT_BLUE),
-        ("Telemedicine", "Ultra-reliable", "network links for remote health posts.", LIGHT_BLUE),
-        ("Civic Connectivity", "Smart agriculture", "and local e-governance support.", LIGHT_BLUE),
-    ]
-    uc_y = Cm(6)
-    uc_x = Cm(6.5)
-    uc_w = Cm(25)
-    uc_h = Cm(2.5)
-    uc_spacing = Cm(0.4)
-    for title, keyword, desc, key_color in use_cases:
-        add_rect(s, uc_x, uc_y, uc_w, uc_h, fill=WHITE, line=NAVY, line_w=1.0)
-        # connector to core
-        add_line(s, conn_x, uc_y + uc_h / 2, uc_x, uc_y + uc_h / 2, color=NAVY, weight=0.8)
-        # Title
-        text_box(s, uc_x + Cm(0.4), uc_y + Cm(0.3), uc_w - Cm(0.8), Cm(0.9),
-                 title,
-                 font_size=15, bold=True, color=NAVY, font_name=FONT_DISPLAY)
-        # Description with colored keyword
-        rich_text_box(s, uc_x + Cm(0.4), uc_y + Cm(1.3), uc_w - Cm(0.8), Cm(1.0),
-            [
-                {"text": keyword, "size": 13, "color": key_color, "bold": True, "font": FONT_MONO},
-                {"text": " " + desc, "size": 13, "color": GREY, "font": FONT_MONO},
-            ])
-        uc_y += uc_h + uc_spacing
+    kpi_x = Cm(1.5)
+    kpi_w = (SW - Cm(3)) / 4
+    for value, desc in kpi_data:
+        text_box(s, kpi_x, kpi_y + Cm(0.3), kpi_w - Cm(0.3), Cm(0.9),
+                 value,
+                 font_size=18, bold=True, color=GOLD, font_name=FONT_DISPLAY,
+                 align=PP_ALIGN.LEFT)
+        text_box(s, kpi_x, kpi_y + Cm(1.4), kpi_w - Cm(0.3), Cm(1.5),
+                 desc,
+                 font_size=9, color=WHITE, font_name=FONT_MONO,
+                 align=PP_ALIGN.LEFT, line_spacing=1.4)
+        kpi_x += kpi_w
 
     # Footer
-    add_line(s, Cm(1.5), SH - Cm(1.6), SW - Cm(1.5), SH - Cm(1.6), color=GOLD, weight=0.5)
-    text_box(s, Cm(1.5), SH - Cm(1.2), Cm(15), Cm(0.6),
+    text_box(s, Cm(1.5), SH - Cm(0.7), SW - Cm(3), Cm(0.5),
+             "FIRMAMENTO TECHNOLOGIES SOCIETA' COOPERATIVA . P.IVA IT03038500991 . PEC firmamentotechnologies@pec.it",
+             font_size=7, color=GREY_LIGHT, font_name=FONT_MONO,
+             align=PP_ALIGN.CENTER)
+
+
+# ============== SLIDE 2: PROJECT HALE (intro + use cases) ==============
+def slide_2_hale_intro():
+    s = prs.slides.add_slide(BLANK)
+    add_rect(s, 0, 0, SW, SH, fill=NAVY)
+
+    # Title
+    text_box(s, Cm(1.5), Cm(1.2), Cm(20), Cm(1.8),
+             "Project H.A.L.E.",
+             font_size=40, bold=True, color=WHITE, font_name=FONT_DISPLAY)
+    text_box(s, Cm(1.5), Cm(3.0), Cm(20), Cm(0.8),
+             "(High Altitude Long Endurance)",
+             font_size=18, color=WHITE, font_name=FONT_DISPLAY)
+
+    text_box(s, Cm(1.5), Cm(4.6), Cm(15), Cm(2.0),
+             "The cooperative pseudo-satellite\nfor national resilience.",
+             font_size=16, color=WHITE, font_name=FONT_MONO, line_spacing=1.4)
+
+    # Tech specs
+    specs_y = Cm(8)
+    specs = [
+        ("Operating altitude", "20 km"),
+        ("Macro-regional coverage", "> 500 km"),
+        ("Latency", "< 20 ms"),
+        ("Propulsion", "Solar-electric"),
+        ("Endurance target", "30+ days perennial (Y3)"),
+    ]
+    for label, val in specs:
+        rich_text_box(s, Cm(1.5), specs_y, Cm(15), Cm(0.9), [
+            {"text": label + " ", "size": 13, "color": LIGHT_BLUE, "font": FONT_MONO},
+            {"text": val, "size": 13, "color": WHITE, "bold": True, "font": FONT_MONO},
+        ])
+        specs_y += Cm(0.85)
+
+    # HALE Render right (medium size)
+    add_image(s, HALE_RENDER, Cm(16), Cm(3.5), w=Cm(12.5), h=Cm(8.5))
+
+    # Use cases right column
+    uc_y = Cm(13)
+    uc_x = Cm(1.5)
+    uc_w = SW - Cm(3)
+    text_box(s, uc_x, uc_y, uc_w, Cm(0.8),
+             "Public value, four mission profiles",
+             font_size=15, bold=True, color=GOLD, font_name=FONT_DISPLAY)
+
+    cases = [
+        ("Disaster Response", "Rapid network restoration after floods and landslides."),
+        ("Environmental Monitoring", "Wildfire alert and hydrogeological surveillance (multispectral / thermal)."),
+        ("Telemedicine", "Ultra-reliable links for remote health posts."),
+        ("Civic Connectivity", "Smart agriculture and local e-governance support."),
+    ]
+    case_w = (uc_w - Cm(1.5)) / 4
+    case_x = uc_x
+    for title, desc in cases:
+        text_box(s, case_x, uc_y + Cm(1.1), case_w, Cm(0.7),
+                 title,
+                 font_size=12, bold=True, color=LIGHT_BLUE, font_name=FONT_DISPLAY)
+        text_box(s, case_x, uc_y + Cm(2.0), case_w, Cm(2.5),
+                 desc,
+                 font_size=10, color=WHITE, font_name=FONT_MONO, line_spacing=1.4)
+        case_x += case_w + Cm(0.5)
+
+    # Footer
+    add_line(s, Cm(1.5), SH - Cm(1.4), SW - Cm(1.5), SH - Cm(1.4), color=GOLD, weight=0.5)
+    text_box(s, Cm(1.5), SH - Cm(1.0), Cm(15), Cm(0.5),
              "FIRMAMENTO TECHNOLOGIES",
-             font_size=9, bold=True, color=NAVY, font_name=FONT_DISPLAY)
-    text_box(s, SW - Cm(16.5), SH - Cm(1.2), Cm(15), Cm(0.6),
-             "H.A.L.E. Stratospheric Layer . 20 km AGL",
-             font_size=9, color=GREY, font_name=FONT_MONO, align=PP_ALIGN.RIGHT)
+             font_size=9, bold=True, color=GOLD, font_name=FONT_DISPLAY)
+    text_box(s, SW - Cm(16.5), SH - Cm(1.0), Cm(15), Cm(0.5),
+             "Pentema pilot . Liguria SNAI . H.A.L.E. Stratospheric Layer",
+             font_size=9, color=WHITE, font_name=FONT_MONO, align=PP_ALIGN.RIGHT)
+
 
 # ============== SLIDE 3: BEYOND THE DRONE ==============
 def slide_3_beyond():
@@ -257,23 +316,20 @@ def slide_3_beyond():
     col_h = Cm(8)
     spacing = Cm(0.5)
     for title, color, desc in cols:
-        # Title large color
         text_box(s, col_x, col_y, col_w, Cm(3),
                  title,
                  font_size=32, bold=True, color=color, font_name=FONT_DISPLAY,
                  line_spacing=1.05)
-        # Description body
         text_box(s, col_x, col_y + Cm(3.5), col_w, col_h - Cm(3.5),
                  desc,
                  font_size=13, color=NAVY, font_name=FONT_MONO, line_spacing=1.4)
         col_x += col_w + spacing
 
-    # Bottom box: pilot + numbers (Pentema)
+    # Bottom box: pilot + numbers
     bottom_y = Cm(14)
     bottom_h = Cm(3.5)
     add_rect(s, Cm(1.5), bottom_y, SW - Cm(3), bottom_h, fill=NAVY)
 
-    # Pilot info inside dark box
     rich_text_box(s, Cm(2), bottom_y + Cm(0.4), Cm(13), Cm(1),
         [
             {"text": "Pilot site . ", "size": 11, "color": GOLD, "font": FONT_MONO, "bold": True},
@@ -283,7 +339,7 @@ def slide_3_beyond():
     rich_text_box(s, Cm(2), bottom_y + Cm(1.0), Cm(13), Cm(1),
         [
             {"text": "Network . ", "size": 11, "color": GOLD, "font": FONT_MONO, "bold": True},
-            {"text": "10 Legacoop cooperatives . capofila Fabrica",
+            {"text": "10 Legacoop cooperatives . lead Fabrica",
              "size": 11, "color": WHITE, "font": FONT_MONO},
         ])
     rich_text_box(s, Cm(2), bottom_y + Cm(1.6), Cm(13), Cm(1),
@@ -299,12 +355,11 @@ def slide_3_beyond():
              "size": 11, "color": WHITE, "font": FONT_MONO},
         ])
 
-    # Key numbers right side of bottom box
     nums_x = Cm(17)
     nums_w = Cm(13)
     rich_text_box(s, nums_x, bottom_y + Cm(0.4), nums_w, Cm(1.2),
         [
-            {"text": "€700k – €2M ", "size": 18, "color": GOLD, "bold": True, "font": FONT_DISPLAY},
+            {"text": "€700k - €2M ", "size": 18, "color": GOLD, "bold": True, "font": FONT_DISPLAY},
             {"text": "CapEx Y1", "size": 12, "color": WHITE, "font": FONT_MONO},
         ])
     rich_text_box(s, nums_x, bottom_y + Cm(1.4), nums_w, Cm(1.2),
@@ -326,13 +381,15 @@ def slide_3_beyond():
              "P.IVA IT03038500991 . PEC firmamentotechnologies@pec.it",
              font_size=8, color=GREY, font_name=FONT_MONO, align=PP_ALIGN.RIGHT)
 
+
 def build():
-    slide_1_intro()
-    slide_2_value()
+    slide_1_ecosystem()
+    slide_2_hale_intro()
     slide_3_beyond()
     prs.save(OUT_PPTX)
     print(f"PPTX generato: {OUT_PPTX}")
     print(f"Size: {os.path.getsize(OUT_PPTX)/1024:.1f} KB")
+
 
 if __name__ == "__main__":
     build()
