@@ -95,7 +95,19 @@ aggiornati. Deliverable finali in `.docx/.pptx/.xlsx`.
 ## Stato
 
 - [x] Inventario archivio esistente
-- [ ] **Fase 1 — ricerca mercato multiagente (in corso, background)**
-- [ ] Fase 1 — sintesi e re-ranking
+- [x] **Fase 1 — ricerca mercato multiagente** (9 lenti + verifica red-team, completata 10/07/2026)
+- [x] Fase 1 — sintesi e re-ranking → `fase-1-mercato/00-SINTESI-mercato-v2.md`
 - [ ] Fase 2 — trade study prodotti
 - [ ] Fase 3 — riscrittura studio
+
+## Esito Fase 1 (sintesi)
+
+> Verdetto portante (confidenza alta): **nessuna nicchia downstream ha oggi un pagatore
+> che firma e paga in modo ricorrente** per un servizio aereo Firmamento. I dati 2026
+> **confermano e rafforzano** la strategia barbell d'archivio; **il marittimo NON apre
+> spazio non-conteso** (è il più presidiato: EMSA vola già da Sarzana). Nessun servizio
+> a domanda reale giustifica **T3-MALE/T4-HALE dedicati**: classe operatore =
+> **T2-midVTOL / T1-C3 / T0-COTS, da comprare non costruire**. HALE = vettore
+> strategico extra-mercato. Top nicchie (le "meno peggio", tutte grant-dipendenti):
+> **(1) EO/dissesto+PC in bundle**, (2) logistica medicale asset-light in partnership,
+> (3) sorveglianza locale + resilienza come funzioni secondarie.
