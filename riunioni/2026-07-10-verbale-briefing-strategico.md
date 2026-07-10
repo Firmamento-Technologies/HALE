@@ -5,7 +5,7 @@
 - **Partecipanti:** Luca, Gigi, Fede, Ema
 - **Oggetto:** definizione del metodo di analisi (mercato-first → prodotto) e criteri per lo Studio di Fattibilità della piattaforma aerea; introduzione del vettore marittimo/subacqueo.
 - **Registrazione:** trascrizione integrale in coda a questo documento.
-- **Risposta operativa di progetto:** vedi [`2026-07-10-risposta-operativa.md`](./2026-07-10-risposta-operativa.md) e l'analisi del nuovo vettore in [`../analisi-bottom-up/31-marittimo-nuovo-vettore.md`](../analisi-bottom-up/31-marittimo-nuovo-vettore.md).
+- **Piano operativo di progetto:** vedi [`2026-07-10-piano-rifatto-da-zero.md`](./2026-07-10-piano-rifatto-da-zero.md) — metodo a due fasi, criteri, risposte preliminari alle domande aperte e primo screening del vettore marittimo (Annex A).
 
 > **Nota di provenienza.** La sezione "verbale strutturato" qui sotto è la sintesi già prodotta a partire dalla registrazione; la "Trascrizione integrale" è il testo grezzo così come raccolto (contiene errori di trascrizione automatica, mantenuti fedeli). Questo file è il **record canonico** della riunione all'interno del repository.
 
@@ -68,7 +68,7 @@ La riunione si è concentrata sulla definizione della strategia per il progetto 
 3. Si riesce a realizzare un velivolo **C3 < 25 kg** con **autonomia ≥ 24 h**?
 4. Quale sarà il **peso effettivo del payload** (sensori) e come influenzerà la scelta della piattaforma?
 
-> Le risposte a queste domande — nella misura in cui il corpus di ricerca già le stabilisce — e l'analisi del nuovo vettore marittimo sono nella **risposta operativa** allegata.
+> Le risposte a queste domande — nella misura in cui il corpus di ricerca già le stabilisce — e il primo screening del vettore marittimo sono nel **piano rifatto da zero** allegato (§5 e Annex A).
 
 ---
 
