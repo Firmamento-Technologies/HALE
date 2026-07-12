@@ -82,6 +82,8 @@ Il caso è particolare perché il prodotto deve stare all'intersezione di tre do
               PRODOTTO TARGET
 ```
 
+**Sequenza operativa del vincolo — strategia "ancora → scala" (emersa in Fase A):** i tre insiemi non vanno soddisfatti simultaneamente da zero, ma **in sequenza temporale**. L'**ancora politico-istituzionale** (aree interne/SNAI: bando già vinto, spinta politica, fondi pubblici non diluitivi, primo pilota) **finanzia e legittima** il primo prodotto; il **mercato di scala** (marittimo, domanda ricorrente EMSA-like) ne sostiene la **crescita**. Il ponte è **un unico prodotto multi-ruolo modulare (C3 < 25 kg)**. L'ancora si misura con la **spesa pubblica attivabile**, non con il TAM di mercato.
+
 ### 1.3 Funzione obiettivo — parametri da ottimizzare
 
 Criteri emersi in riunione, con direzione di ottimizzazione:
@@ -237,6 +239,7 @@ Tutto è finalizzato alla **consegna dello Studio di Fattibilità** (primo passa
 #### WP-B7 · Generalista vs specializzati *(domanda aperta della riunione)*
 - **Obiettivo:** rispondere in modo argomentato al dilemma Gigi (2 progetti verticali) vs Ema ("barcone" generalista più attrattivo).
 - **Attività:** modellare tre strategie di prodotto — (a) piattaforma unica generalista modulare, (b) due velivoli verticali specializzati, (c) piattaforma comune + payload verticali — confrontandole su costo, casi d'uso, time-to-market, attrattività investitori, rischio.
+- **Ipotesi guida (da Fase A):** strategia **"ancora → scala"** con **prodotto multi-ruolo modulare** = opzione (c) → piattaforma comune C3 < 25 kg + payload intercambiabili. L'ancora **aree interne/SNAI** (bando vinto, politica, fondi pubblici) aggancia l'interesse e i fondi; il **mercato marittimo** (domanda ricorrente EMSA-like) fa scalare. WP-B7 deve **validare o falsificare** questa ipotesi con i numeri, non assumerla.
 - **Output:** raccomandazione motivata sulla strategia di prodotto.
 
 #### WP-B8 · Normativa per la configurazione candidata

@@ -22,7 +22,7 @@
 
 4. **Il benchmark tecnico valida l'ipotesi C3 < 25 kg.** Le piattaforme che vincono i contratti EMSA sono nella classe **~25 kg** (Flexrotor: 25 kg VTOL, payload 8 kg, endurance 10–14 h) o MALE ala fissa (AR5: 12 h, max 20 h). Il velivolo ipotizzato dal gruppo (C3 < 25 kg, alta endurance) è **direttamente confrontabile** con i sistemi già in servizio.
 
-5. **Tensione strategica da gestire:** la domanda **marittima** ha evidenza economica *forte*; la domanda **aree interne / SNAI** (l'ancora politica del progetto) ha evidenza di mercato *debole/non quantificata* nelle fonti sopravvissute alla verifica. Il "triplo vincolo" del progetto (mercato ∩ politica ∩ funding) va bilanciato consapevolmente.
+5. **Strategia "ancora politica → scala di mercato" (prodotto multi-ruolo).** Le due direttrici **non sono in competizione ma in sequenza**. Le **aree interne / SNAI** sono l'**ancora**: è la domanda che ha **già fatto ottenere il bando**, con spinta politica, sito pilota e accesso a **fondi pubblici non diluitivi** — il suo valore è **legittimazione + funding + primo cliente captive**, *non* la dimensione di mercato. Il **marittimo** è il **mercato di scala**: domanda pubblica ricorrente e finanziata (modello EMSA ~30 mln EUR/contratto). Un **prodotto multi-ruolo modulare (C3 < 25 kg)** aggancia l'interesse politico per raccogliere fondi e poi scala sul mercato. → **Nota metodologica:** misurare l'ancora con la metrica *sbagliata* (TAM di mercato) la fa sembrare "debole"; la metrica giusta è la **spesa pubblica attivabile** (§9, lacuna 2), che è la vera priorità della seconda passata.
 
 ---
 
@@ -132,10 +132,10 @@ Griglia di confronto derivata dai sistemi realmente in servizio (per WP-B1/B2/B3
 |---|---|---|---|---|
 | **N1** | **Sorveglianza marittima/costiera istituzionale** (SAR, pesca, ambiente, confini) | Domanda pubblica ricorrente e finanziata centralmente (EMSA/Frontex); lead sul Golfo di Genova; benchmark ~25 kg valida l'architettura | Forte (verificata) | **Alta** |
 | **N2** | **Monitoraggio ambientale marino** (sversamenti, plastica, emissioni) | Sotto-segmento di N1, stessa piattaforma/payload; leva ESG e fondi UE | Media | Media |
-| **N3** | **Aree interne — emergenze/protezione civile e connettività** (ancora politica del progetto) | Sponsorship politica forte (Regione, Legacoop, SNAI); U-space IT come abilitatore | **Debole sul mercato** (non quantificata); forte sul piano politico | **Bassa (dati) / Alta (politica)** |
+| **N3** | **Aree interne — connettività, monitoraggio, emergenze/protezione civile** (ancora del progetto) | **Ancora politica e di funding**: ha già ottenuto il bando; sito pilota, sponsorship Regione/Legacoop/SNAI, **fondi pubblici non diluitivi**; U-space IT come abilitatore. Da misurare con la **spesa pubblica attivabile**, non con il TAM | Politica/funding **forte**; dimensione di mercato non quantificata | **Alta (funding/politica)** |
 | **N4** | **Ispezione infrastrutture critiche** (energia, coste, offshore) | Mercato B2B maturo, willingness-to-pay privata | Non quantificata | Da valutare |
 
-> **Raccomandazione preliminare:** N1 (marittimo) è la nicchia con il caso di mercato più solido; N3 (aree interne) resta il motore politico-mediatico e di funding. La strategia vincente è probabilmente **una piattaforma comune (C3 < 25 kg, modulare) che serva N1 come mercato "pagante" e N3 come mercato "istituzionale/ancora"** — coerente con la domanda aperta "generalista vs specializzati" (WP-B7).
+> **Raccomandazione preliminare — strategia "ancora → scala":** **N3 (aree interne) è l'ancora** che porta bando, spinta politica e fondi pubblici; **N1 (marittimo) è il mercato di scala** con willingness-to-pay ricorrente. La strategia vincente è **un prodotto multi-ruolo modulare (C3 < 25 kg)**: stesso velivolo, payload intercambiabili, che aggancia l'interesse politico (N3) per raccogliere fondi e poi scala sul mercato (N1). Questo **risolve di fatto la domanda "generalista vs specializzati" (WP-B7)** a favore di una **piattaforma comune modulare** — né due velivoli separati né un "barcone" indifferenziato.
 
 ---
 
@@ -154,7 +154,7 @@ La ricerca ha prodotto evidenza forte su marittimo istituzionale + dimensionamen
 
 ## 10. Implicazioni per il progetto e ponte verso la Fase B
 
-- **Confermare N1 (marittimo) come nicchia di testa** e usarla come benchmark tecnico-economico nella Fase B; mantenere **N3 (aree interne)** come motore politico e di funding, sfruttando la piattaforma modulare comune.
+- **Impostare la strategia "ancora → scala":** N3 (aree interne) come **ancora** politica e di funding che finanzia il primo velivolo/pilota; N1 (marittimo) come **mercato di scala** che ne sostiene la crescita; **un unico prodotto multi-ruolo modulare C3 < 25 kg** a fare da ponte. Usare N1 come benchmark tecnico-economico nella Fase B.
 - **Il vincolo C3 < 25 kg del gruppo è validato dal mercato**: i sistemi che vincono i contratti pubblici marittimi sono proprio in quella classe. La Fase B deve verificare se un C3 proprietario può competere su endurance/payload con Flexrotor/AR5 (WP-B3), o se conviene **integrare** una piattaforma commerciale (make-vs-buy, WP-B2/B5).
 - **Il modello data-as-a-service** con committente pubblico ricorrente è la via più attrattiva per gli investitori → alimenta WP-A6/C2.
 - **Prossimo passo operativo:** lanciare la **seconda passata di ricerca** sulle 6 lacune di §9 (in particolare segmenti terrestri quantificati, spesa pubblica IT attivabile e verifica del lead ligure), poi chiudere il Market Analysis Report e aprire la Fase B.
