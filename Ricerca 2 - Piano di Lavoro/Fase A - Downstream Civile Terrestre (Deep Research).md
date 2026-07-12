@@ -12,6 +12,8 @@
 
 ---
 
+> ⚠️ **Correzioni post-verifica (Dossier di Verifica):** (D1) EO **€3,5→7,9 mld (2034) confermato**, ma **"servizi a valore aggiunto €2,8→6,7 mld" NON verificabile** indipendentemente → non citarlo come dato EUSPA senza il PDF. (D3) anche **"agricoltura = 21%" non verificabile** (agricoltura come segmento maggiore resta plausibile). (D7) la mia etichetta "confutato in blocco" era imprecisa: il **divario digitale 2,6 mld persone è reale (ITU 2023)**; i ricavi GNSS €300→580 mld sono reali ma **globali, non europei**; solo l'**1 mln km²/HAPS è sovrastimato ~10×**. Confermati: **Calabria €5 mln** antincendio, **Aiviewgroup/RFI 97,94/100**.
+
 ## 0. Messaggio chiave
 
 1. **I due verticali civili con committenti paganti già confermati in Italia sono la PREVENZIONE RISCHI (incendi) e l'ISPEZIONE INFRASTRUTTURE** — non la connettività.

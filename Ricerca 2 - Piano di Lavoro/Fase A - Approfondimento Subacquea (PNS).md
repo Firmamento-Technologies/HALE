@@ -12,6 +12,8 @@
 
 ---
 
+> ⚠️ **Correzioni post-verifica (Dossier di Verifica):** (S9) i **~€50 mln/anno del PNS sono fabbisogno stimato (AIAD), NON stanziati** — ad oggi investiti ~€3 mln (€2 mln Marina + €1 mln L.Bilancio 2024). (S18) il topic **EDF "seabed" ha budget ~€20 mln** (i ~€30 mln sono l'intera call; ~€50 mln su due topic). (S7) i soci fondatori del PNS sono **OTTO** (manca "Centri di Ricerca/ConPER"). (S15) l'**AR3 EVO non è marcatura "C3"** (apertura >3 m, ISR militare); specifiche tecniche confermate. Confermati: fondazione PNS 21/5/2025, governance Pinotti, NATO Underwater COE a La Spezia, seed €2 mln/anno.
+
 ## 0. Messaggio chiave
 
 1. **Esiste un cluster subacqueo istituzionale unico in Europa, ed è a La Spezia (Liguria).** Nello stesso compound militare convivono **NATO STO CMRE**, il **PNS** (Polo Nazionale della Dimensione Subacquea) e il **CSSN** (Marina Militare), sotto il **NATO Underwater Centre of Excellence** ospitato dall'Italia. È la stessa regione dell'ancora aree interne del progetto → **potenziale "seconda ancora", dual-use e territorialmente coerente**. *(alta confidenza)*

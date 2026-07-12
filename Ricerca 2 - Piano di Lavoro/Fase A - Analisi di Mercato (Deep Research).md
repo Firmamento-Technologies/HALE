@@ -12,6 +12,8 @@
 
 ---
 
+> ⚠️ **Correzioni post-verifica (Dossier di Verifica):** (M6) i servizi RPAS **EMSA sono finanziati dal bilancio/appalti propri di EMSA**, *non* dal Copernicus Contribution Agreement (che finanzia il servizio satellitare distinto); beneficiari = Stati UE **+ Paesi candidati + EFTA**. (M14) San Salvo = primo U-space **d'Italia** (nov 2024); "d'Europa" legato all'avvio operativo gen 2026. Le cifre di mercato (DRONEII, Grand View, €160 mln Italia, EMSA ~€30 mln, specifiche Flexrotor) sono **confermate**.
+
 ## 0. Messaggio chiave (executive summary)
 
 1. **Il mercato dei servizi downstream da droni è ampio e in crescita solida**, ma il segmento professionale italiano è ancora piccolo (~€160 mln nel 2024) e **in consolidamento** (operatori in calo): il valore non sta nel "fare il service provider generico", ma nel presidiare una **nicchia ad alta willingness-to-pay**.

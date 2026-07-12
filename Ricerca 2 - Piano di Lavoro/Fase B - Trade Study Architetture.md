@@ -14,6 +14,8 @@
 
 ---
 
+> ⚠️ **Correzioni post-verifica (Dossier di Verifica, 2026-07-12):** (1) **Batteria** — 250–300 Wh/kg è a livello di **cella**, non di pacco: il pacco aeronautico reale è **~160–200 Wh/kg** (celle SOTA ~450, Amprius 2025). → **rafforza** la conclusione (batteria-sola dà ancora meno di 9–11 h). (2) **L'AR3 EVO NON è marcatura "C3"** (apertura 3,5–4,2 m > 3 m; UAS militare ISR): le sue specifiche 25 kg/6 kg/22 h/14 h restano valide come **benchmark di prestazione**, ma "C3 open" è un obiettivo **normativo** distinto (e le operazioni BVLOS long-endurance restano comunque "specific"/SORA). Le conclusioni fisiche di questo documento **non cambiano**.
+
 ## 0. Executive summary — la risposta al nodo "24 h in < 25 kg"
 
 **Sì, 24 h a < 25 kg è fisicamente possibile — ma solo ad ala fissa e con propulsione a combustibile/ibrida. NON con batteria-sola e NON con solare-solo.**

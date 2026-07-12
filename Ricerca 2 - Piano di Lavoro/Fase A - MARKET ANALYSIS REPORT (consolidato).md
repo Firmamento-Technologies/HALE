@@ -136,14 +136,14 @@ Griglia derivata dai sistemi realmente in servizio e dalle esigenze delle nicchi
 
 | Tipo | Canale | Importo | Conf. |
 |---|---|---|---|
-| **Civile (ancora N3)** | SNAI — CIPESS 41/2022 e 42/2022 | €100 mln + €100 mln | Alta (archivio) |
-| | SNAI — incremento fondo | €120 mln | Alta (archivio) |
-| | SNAI — riparto assegnazione | €172 mln (FSC 100 + FdR 72) | Media (da verificare) |
+| **Civile (ancora N3)** | SNAI — Delibera CIPESS 41/2022 | **€198,6 mln** (di cui €172 mln a 43 nuove aree, €4 mln/area) | **Alta (verificata, Dossier A1)** |
+| | SNAI — Delibera CIPESS 42/2022 (Isole minori) | €11,4 mln | Alta (verificata) |
 | | Modello regionale (analogo) | €5 mln (Calabria FESR) | Alta |
 | | Bando **Cooding II / Coopfond** | (finanzia lo Studio) | — |
-| **Dual-use (ancora N2)** | PNS — seed | €2 mln/anno dal 2023 | Alta |
+| **Dual-use (ancora N2)** | PNS — seed effettivo | ~€3 mln (€2 mln Marina + €1 mln L.Bilancio 2024) | Alta (Dossier S8/S9) |
+| | PNS — fabbisogno stimato (AIAD, *non stanziato*) | ~€50 mln/anno | Bassa (stima stampa) |
 | | Bando "Underwater Liguria" | ~€7,5 mln | Media (da verificare) |
-| | **EDF 2026** — protezione fondali (consorzio) | ~€30 mln (scad. 29/9/2026) | Alta |
+| | **EDF 2026** — topic protezione fondali (consorzio) | **~€20 mln** (topic; ~€50 mln l'intera call), scad. 29/9/2026 | Alta (Dossier S18) |
 | | NATO DIANA / NIF | acceleratore/fondo | Media |
 | **Mercato ricorrente** | EMSA / Frontex | ~€30 mln/contratto quadro | Alta |
 | | Ispezione (Enel/Terna/RFI) | ricorrente B2B | Media |
@@ -156,10 +156,10 @@ Griglia derivata dai sistemi realmente in servizio e dalle esigenze delle nicchi
 
 1. **PNRR + Protezione Civile/Liguria** in EUR (dissesto, connettività) — completa la metrica dell'ancora.
 2. **Verifica lead Golfo di Genova** (EMSA/AR-5 Evo/REACT/Guardia Costiera) — domanda marittima sul territorio.
-3. **Numeri di funding PNS** (€7,5 mln bando, ~€50 mln/anno) e **legge subacquea** — verificare sui PDF caricati (Slides_PNS, dossier Camera).
+3. **Numeri di funding PNS** — il bando "Underwater Liguria" ~€7,5 mln resta da confermare; i ~€50 mln/anno sono **fabbisogno stimato, non stanziato** (verificato, Dossier S9).
 4. **Agricoltura di precisione Italia** — adozione, ettari, WTP per ettaro (Osservatorio Smart AgriFood PoliMi).
 5. **Make-vs-buy** — integrare una piattaforma commerciale (Flexrotor/AR3) vs costruire; partner consorzio EDF.
-6. **Cifre tabellari SNAI** (€172 mln, riparto) — verificare a vista sul PDF.
+6. **Cifre EUSPA** — "servizi a valore aggiunto €2,8→6,7 mld" e "agricoltura 21%" **non verificabili indipendentemente** (Dossier D1/D3): non citarle come dati EUSPA senza il PDF integrale.
 
 ---
 
