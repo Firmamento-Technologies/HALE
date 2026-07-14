@@ -8,7 +8,7 @@
 | **Data** | 2026-07-14 |
 | **Input** | Lavagna di riunione (foto) + intero corpus repository (`Market`, `Trade Study`, `WP-B5`, `Trade Propulsione`, `One-pager`, `Dossier`) + **ricerca dedicata 2026-07-14** (concorrenza italiana: Supair/Overspace/Sky Eye…; quadro certificativo EASA/ENAC SORA 2.5). |
 | **Metodo** | Ogni punto della lavagna è **valutato** contro l'evidenza, con verdetto (✅ confermato · 🔶 da sfumare · ⚠️ da verificare · ❌ smentito) e la stessa onestà del Dossier di Verifica. Include **§2.6 confronto concorrenza italiana** e **§2.7 excursus certificazioni**. |
-| **Rev.** | 0.2 (2026-07-14): corretta la tesi "nessuna opzione italiana ibrida" (Sky Eye esiste); Supair/Overspace identificate; aggiunti confronto concorrenza, tabella costi powertrain sovrano, excursus certificazioni; riqualificato il box-wing. |
+| **Rev.** | 0.3 (2026-07-14): §2.7 riscritta e ampliata — distinzione netta C3-pieno vs > 3 m (anche lato ENAC), iter operativo+certificativo passo-passo con fatturazione in VLOS, e **casi italiani reali** di BVLOS/SORA con ENAC (tempi, costi, sostentamento, modifiche, scogli). 0.2: corretta la tesi "nessuna opzione italiana ibrida" (Sky Eye esiste); Supair/Overspace identificate; confronto concorrenza; tabella costi powertrain; box-wing riqualificato. |
 | **Tesi** | Il salto strategico non è "costruire la macchina più impressionante" (HALE), ma **catturare la posizione di mercato e di sovranità con la macchina giusta**. Paradossalmente, salire di livello strategico significa **scendere di quota**. |
 
 ---
@@ -167,42 +167,89 @@ Il mercato italiano dei VTOL ad ala fissa < 25 kg **esiste già ed è giovane** 
 
 > **Fatto strutturale n.1:** l'**Open è solo VLOS**. Qualunque BVLOS → **Specific**, **indipendentemente da peso e classe**. Quindi il nostro drone, appena vuole fare BVLOS, è in **Specific + SORA**, punto.
 
-#### 2.7.2 La classe C3 e il limite dei 3 metri (il nodo che sollevi)
-La classe **C3** richiede **MTOM < 25 kg _e_ dimensione caratteristica massima < 3 m** (per un'ala fissa, la **dimensione caratteristica = apertura alare**).
+#### 2.7.2 C3 "pieno" (< 25 kg **E** < 3 m) vs < 25 kg ma apertura **> 3 m** — cosa serve e cosa no
+La classe **C3** richiede **due** condizioni: **MTOM < 25 kg _e_ dimensione caratteristica < 3 m** (per un'ala fissa la dimensione caratteristica **è l'apertura alare**). Le classi < 25 kg e i loro limiti:
 
-| Classe | MTOM | Dim. max | Note |
+| Classe | MTOM | Dim. max | A cosa serve |
 |---|---|---|---|
-| **C3** | < 25 kg | **< 3 m** | Open sottocategoria **A3** ("lontano da persone"), VLOS |
-| C5 | < 25 kg | < 3 m | **vietata ala fissa** salvo cavo; STS-01 (VLOS) |
-| C6 | < 25 kg | < 3 m | ≤ 50 m/s; **STS-02** (BVLOS con osservatori, ≤ 2 km) |
-| C4 | < 25 kg | nessun limite dim. | **ma vietati i modi automatici** (no autopilota/VTOL) |
+| **C3** | < 25 kg | **< 3 m** | Open/A3 (VLOS, no autorizzazione) |
+| C5 | < 25 kg | < 3 m | **ala fissa vietata** salvo cavo; STS-01 (VLOS) |
+| C6 | < 25 kg | < 3 m | ≤ 50 m/s; **STS-02** (BVLOS corto raggio ≤ 2 km con osservatori) |
+| C4 | < 25 kg | nessun limite | **ma vietati i modi automatici** (no autopilota/VTOL) → inutile per noi |
 
-> **Fatto strutturale n.2 (conferma la tua ipotesi):** un'**ala fissa alto-allungamento con apertura > 3 m**, pur restando < 25 kg, **NON può essere C3** (né C5/C6). Non può nemmeno usare gli **scenari standard STS-01/02** né i **PDRA-G01/G02** (tutti limitati a < 3 m). → **resta esclusa da ogni scorciatoia e deve passare per un SORA su misura.**
+**Il confronto che ti interessa — cosa cambia davvero tra le due configurazioni:**
+
+| | **C3 pieno** (< 25 kg **E** < 3 m) | **< 25 kg ma apertura > 3 m** |
+|---|---|---|
+| **Etichetta di classe CE** | ✅ C3 (o C6 se costruito per) | ❌ **nessuna classe C possibile** (C3/C5/C6 tutte < 3 m; C4 vieta l'autopilota) |
+| **VLOS commerciale** | ✅ **Open/A3 senza autorizzazione** (basta operatore registrato + patentino A3) | ⚠️ **niente Open come prodotto** → VLOS solo in **Specific con autorizzazione** (o come "autocostruito/legacy", non adatto a un prodotto a catalogo) |
+| **BVLOS — scorciatoie STS-02 / PDRA-G / IT-PDRA** | ✅ **disponibili** come opzione (se marcato C6 e missione entro l'inviluppo) | ❌ **tutte escluse** (cap dimensionale ≤ 3 m) |
+| **BVLOS — SORA su misura** | ✅ come fallback (e comunque per il long-endurance) | ✅ **unica via possibile** |
+| **iGRC / SAIL (rischio a terra)** | banda dimensionale più bassa → **SAIL potenzialmente più basso** → meno OSO | banda più alta → **SAIL più alto** → più OSO, più costo/tempo |
+| **Lato ENAC** | può **dichiarare** STS/IT-PDRA se applicabile (percorso più rapido) | deve presentare **SORA completo** in ogni caso |
+
+> **In chiaro (conferma la tua ipotesi):** un'ala fissa alto-allungamento **> 3 m**, anche se < 25 kg, **perde la classe C3 e ogni scorciatoia**; VLOS e BVLOS diventano **entrambi** pratiche in categoria Specific con autorizzazione ENAC (SORA per il BVLOS). Lato ENAC **non c'è un "divieto"**, c'è **più carta e più costo**: SAIL più alto → più OSO da dimostrare.
 >
-> **Corollario che premia il box-wing:** tenere l'apertura **< 3 m** (compattezza box-wing, §2.3) **riapre** la classe C3 (VLOS/A3) e potenzialmente C6/STS-02 → **è una leva di progetto decisiva, non solo estetica.** *(Attenzione: il long-endurance/long-range eccede comunque gli inviluppi STS/PDRA di corto raggio ≤ 1–2 km → il SORA su misura resta probabile anche sotto i 3 m.)*
+> **Onestà (il vantaggio del < 3 m è reale ma limitato):** anche stando **< 3 m**, il **long-endurance/long-range eccede gli inviluppi di corto raggio** di STS-02 (≤ 2 km) e dei PDRA → **il SORA su misura resta probabile comunque**. Quindi il beneficio concreto del box-wing compatto **non è "evitare il SORA"**, ma: **(a)** avere il **VLOS commerciale gratis** in Open/A3 (fatturi subito senza autorizzazione), e **(b)** un **SAIL più basso** nel SORA BVLOS (meno OSO, meno costo). Entrambi contano, ma non azzerano l'iter BVLOS.
 
-#### 2.7.3 Cosa serve per il BVLOS: il SORA
-Il **SORA 2.5** (vigente dal 29/09/2025, EASA ED Decision 2025/018/R) è la metodologia per l'autorizzazione Specific. Processo: **ConOps → iGRC** (rischio a terra, da dimensione+velocità × densità popolazione) **→ GRC finale** (mitigazioni) **→ ARC** (rischio in aria; il BVLOS lo alza) **→ SAIL** (I–VI) **→ 24 OSO** (obiettivi di sicurezza, robustezza crescente col SAIL).
-- Un BVLOS ~25 kg su area scarsamente popolata è tipicamente **SAIL II–IV** → richiede link C2 verificato, terminazione di volo/geofencing, schema di **Detect-And-Avoid**/deconfliction, evidenze di progetto/produzione, manuale operativo. **SAIL V/VI → Certified** (da evitare scegliendo area/profilo di missione).
-- **> 3 m aumenta l'iGRC** (banda dimensionale più alta) → SAIL più alto → più OSO. *Ulteriore argomento a favore della compattezza.*
+#### 2.7.3 Cosa serve per il BVLOS: il SORA (in breve)
+Il **SORA 2.5** (vigente dal 29/09/2025, EASA ED Decision 2025/018/R) è la metodologia per l'autorizzazione Specific: **ConOps → iGRC** (rischio a terra: dimensione+velocità × densità popolazione) **→ GRC finale** (mitigazioni: paracadute/terminazione, area non popolata) **→ ARC** (rischio in aria; il BVLOS lo alza) **→ SAIL** (I–VI) **→ 24 OSO** (obiettivi di sicurezza, robustezza crescente col SAIL). Un BVLOS ~25 kg su area scarsamente popolata è tipicamente **SAIL II–IV**; **SAIL V/VI → Certified** (da evitare scegliendo area/profilo).
 
-#### 2.7.4 La strategia: VLOS-first, BVLOS in parallelo (rispondendo al tuo punto)
-**Non si aspetta il BVLOS per andare a mercato.** Percorso a fasi:
+#### 2.7.4 L'iter operativo + certificativo, passo per passo (il percorso che chiedi)
+Il modello è: **produco → testo → fatturo in VLOS col mio pilota → istruisco il BVLOS in parallelo.** Non si aspetta il BVLOS per generare ricavi.
 
-| Fase | Percorso | Sforzo/tempi | Cosa ottieni |
-|---|---|---|---|
-| **1 — VLOS** | Autorizzazione Specific per ConOps VLOS (SAIL basso, I–II) | **settimane–mesi**, documentazione modesta | Ricavi subito, dati operativi, rapporto con ENAC |
-| **1b — EVLOS** | VLOS esteso con osservatori | moderato | Estende il raggio; costruisce l'evidenza per il DAA del BVLOS |
-| **2 — BVLOS** | **SORA 2.5 completo** per long-endurance | **molti mesi**, ingegneria pesante (DAA/C2/FTS), OSO a robustezza media/alta | La capacità finale long-endurance BVLOS |
+| # | Fase | Cosa faccio | Stato certificativo | Ricavi? |
+|---|---|---|---|---|
+| **0** | **ConOps** | Definisco missioni/aree/quote → determina il **SAIL target** e i requisiti di sicurezza | — | — |
+| **1** | **Progetto & produzione** | Costruisco il drone **già con** i requisiti SORA a bordo (FTS, C2 ridondante, geofencing, Remote ID) — aggiungerli dopo costa di più | — | — |
+| **2** | **Marcatura / qualifica** | Se < 3 m: dichiarazione di conformità **C3** (o C6). Se > 3 m: nessuna classe → si prepara il **SORA** | Classe CE o predisposizione SORA | — |
+| **3** | **Test in volo** | Prove in **area segregata/ristretta** o con **autorizzazione sperimentale ENAC**; se C3, anche VLOS/A3 senza autorizzazione | Test | — |
+| **4** | **Avvio operativo VLOS/EVLOS** | **Autorizzazione Specific "leggera"** (SAIL basso) o dichiarazione → **opero servizi in VLOS/EVLOS**: Firmamento fornisce **pilota competente** (patentino, CRM+SORA), **operatore registrato**, **manuale operativo**, **DOP su D-Flight** | Specific (VLOS) | ✅ **SÌ — qui inizia la fatturazione** (ispezione, sorveglianza, monitoraggio) |
+| **5** | **Istruzione SORA BVLOS (in parallelo)** | Preparo il **SORA completo** usando i **dati di affidabilità raccolti in VLOS** come evidenza per gli OSO | Domanda in corso | ✅ continuo a fatturare in VLOS |
+| **6** | **Autorizzazione BVLOS** | Ottengo l'autorizzazione (spesso prima su **corridoio/spazio ristretto/sandbox**, poi estesa) → scalo ai servizi **long-endurance oltre-orizzonte** | Specific (BVLOS) | ✅ ricavi premium BVLOS |
+| **7** | **(Opz.) LUC** | **Light UAS Operator Certificate**: mi **auto-autorizzo** le operazioni successive (maturità operatore) | LUC | ✅ massima agilità |
 
-I dati di affidabilità raccolti in VLOS/EVLOS **rafforzano** la domanda SORA BVLOS. → **le due tracce corrono insieme; si fattura mentre il BVLOS matura.**
+> **Il punto chiave:** le fasi **4–5 corrono insieme**. Firmamento **vende il servizio in VLOS dalla fase 4** (con pilota proprio), mentre il BVLOS matura in parallelo. I log di affidabilità del servizio VLOS **sono** l'evidenza che rafforza il SORA BVLOS. È il modello **"VLOS-first, revenue-first"** confermato dai casi italiani reali (§2.7.5).
 
-#### 2.7.5 Italia (ENAC / D-Flight) e i due "scogli"
-- **ENAC** è l'autorità; **D-Flight** la piattaforma di registrazione/dichiarazioni. Gli **IT-STS nazionali sono scaduti il 31/12/2025** → dal 2026 valgono gli **STS EU**. Esistono **PDRA nazionali IT-PDRA-01…09** (l'**IT-PDRA-01** copre BVLOS vicino a ostacoli su area non popolata): **da verificare** se uno si adatta al nostro ConOps e dimensione (più leggero del SORA pieno).
-- **Scoglio 1 — apertura > 3 m:** esce da C3/STS/PDRA-G → **SORA su misura** obbligato.
-- **Scoglio 2 — MTOM > 25 kg:** toglie ogni eleganza Open; resta Specific ma con iGRC/SAIL più alti. **Restare < 25 kg è un vincolo di progetto, non solo di marketing.**
+#### 2.7.5 Chi in Italia ha davvero ottenuto il BVLOS/SORA con ENAC (casi reali)
+La ricerca dedicata (fonti: EuroUSC Italia, Quadricottero, DronEzine, comunicati ENAC) mostra un pattern chiaro: **ci arrivano utility, primi aerospaziali e poche startup ben assistite — quasi sempre con consulenza e spesso confinati a corridoi/spazi ristretti/sandbox.**
 
-> **Sintesi certificativa:** il nostro percorso è **Specific → SORA 2.5 (ENAC)**, con target di missione/area che tenga il **SAIL ≤ IV** (per non cadere in Certified). Partenza **VLOS/EVLOS**; BVLOS in parallelo. **Le due variabili di progetto che spostano il costo autorizzativo sono apertura (< 3 m) e peso (< 25 kg)** — entrambe a favore di un design **compatto (box-wing) e leggero**.
+| Operatore | Uso | Tipo di autorizzazione | Anno | Note-chiave |
+|---|---|---|---|---|
+| **E-Distribuzione (Enel)** | Ispezione linee MT | **1° BVLOS "non geografico" in Italia**, via **IT-PDRA-01** | **2022** | Consulenza EuroUSC Italia; **prima scala VLOS** (~400 piloti, ~350 droni, 200.000 km rete) **poi** BVLOS |
+| **Telespazio** (Leonardo/Thales) | Infrastrutture, agri, biomedicale | **PDRA generico come drone-operator** (piattaforma T-DROMES) | **2024** | Privilegio a livello aziendale |
+| **FlyingBasket** (Bolzano) | Cargo heavy-lift alpino | **1° LUC in Italia** (auto-autorizzazione incl. BVLOS) | **2024** | La posizione BVLOS più forte tra gli operatori IT |
+| **ABzero** (Pisa) | Trasporto biomedicale | Autorizzazione operativa BVLOS; **1ª rotta biomedicale 37 km** (Eolie) | **2024** | Consulenza EuroUSC; opera in **sandbox** |
+| **UrbanV + Speedbird** (DLV-2) | Logistica urbana | **1ª autorizzazione SAIL III in Italia** (BVLOS su autostrada+ferrovia) | **2026** | Attuale massimo di complessità in Italia |
+| **Horus Technologies + Hangar 84** | VTOL ala fissa, prove/sorveglianza | Autorizzazione operativa ENAC **ITA-OAT-00118/000** | **2024–25** | **Il caso più vicino a noi** (VTOL ala fissa **Songbird 150**), ma **BVLOS dentro spazio ristretto R315** (rischio aria mitigato per **segregazione**, non con DAA) |
+| **Aermatica3D** | Agri + **fornitore FTS** | Autorizzazione Specific; vende **terminatori di volo** e "Kit autorizzazione ENAC" a terzi | 2022–24 | Il FTS come prodotto abilitante |
+| **Polizia Locale Colline Moreniche** | Sorveglianza | **1° PDRA-G03** in Italia (BVLOS istituzionale) | **2025** | Ente pubblico |
+
+**Tempi:** ENAC **non pubblica** i tempi delle singole autorizzazioni. Benchmark europeo (guida CAA danese, non ENAC): **~3–6 mesi** per l'assegnazione di un istruttore + **~4–12 mesi** all'autorizzazione = tipicamente **~7–18 mesi**, di più a SAIL alto. Il ritardo n.1 sono le **domande incomplete** (round ripetuti di richieste ENAC). *(La storia ABzero — dal volo sperimentale non autorizzato 2018 alla rotta Eolie 2024 — implica un arco pluriennale.)*
+
+**Costi:** la **tariffa ENAC è €355** (solo la marca di deposito — **un'inezia**, fuorviante). Il costo vero del BVLOS è **ingegneria (FTS, C2 ridondante, DAA o strategia di spazio segregato), documentazione/consulenza e prove di volo** — e **nessun operatore italiano li ha pubblicati** (consulenze case-by-case, riservate). Riferimenti d'ordine di grandezza (non Italia): EASA **€250/h** se si sale a design assurance; UK CAA SAIL I **~£2.185**. → **Qualsiasi voce di budget BVLOS è una stima, non un dato benchmarkato.**
+
+**Come si sono sostenuti nel frattempo (revenue-during):** è il modello **VLOS-first**. Esiste un mercato **drone-as-a-service** in VLOS consolidato (Droinservice dal 2014, Overfly, ecc.; compensi pilota ~€2.500–5.000/mese). **E-Distribuzione** è il caso-scuola: enorme operazione **VLOS** (400 piloti/350 droni) **prima e durante** il BVLOS — il BVLOS è stato un *upgrade di efficienza su ricavi già esistenti*. **ABzero** si è retta su **dimostrazioni/sandbox/partnership ospedaliere e fondi** (PNRR-like). **Horus** monetizza come **distributore VTOL + prove di volo**.
+
+**Quali modifiche hanno dovuto fare (per superare gli OSO):** **FTS/terminatore di volo** (la mitigazione più citata — il core business di Aermatica3D; l'intero scopo delle prove Horus a Grottaglie era **validare l'FTS**), **C2 ridondante/multi-canale**, **DAA/collision-prevention** (o, più spesso, **spazio aereo segregato/ristretto** al posto del DAA), **paracadute/mitigazione rischio a terra**, **geofencing/Remote ID/containment**, **DOP su D-Flight** per ogni volo, **patentino CRM+SORA** del pilota, ed **evidenze di design/production assurance** al salire del SAIL (III+).
+
+**Gli scogli (perché chi ha già il drone NON ha ancora il BVLOS):**
+1. **Il DAA immaturo è IL problema.** In BVLOS il pilota non vede-ed-evita → serve un **Detect-And-Avoid** equivalente, che a questa scala **non esiste ancora maturo/certificabile/economico**. Il workaround italiano è **evitarlo** volando in **spazio ristretto/sandbox** (è ciò che ha fatto Horus in R315), non risolverlo.
+2. **ENAC tratta il BVLOS come "rischio alto"**: ~4 sandbox, resta in gran parte **eccezione sperimentale** (dichiarazione ENAC, nov. 2025); l'obiettivo dichiarato è passare "da eccezione sperimentale a pratica sistematica" — **non ancora sistematica**.
+3. **SAIL alto = design/production assurance** (vicino alla certificazione di un aeromobile): caro e documentale.
+4. **U-space immaturo e la sua economia** ("chi paga i costi?", dibattito ENAC nov. 2025).
+5. **Barriere non-aeronautiche:** anche col BVLOS in mano, **hub/piazzole richiedono permessi edilizi comunali**; i payload biologici possono attivare le regole **merci pericolose**.
+
+> **Costruire il drone è la parte facile.** Il BVLOS richiede di provare la **sicurezza dell'intera operazione come sistema** (mitigazioni rischio a terra/aria al SAIL richiesto, DAA o segregazione, integrità C2, containment, Remote ID, OSO robusti, assurance di progetto) **+ integrazione nello spazio aereo + permessi locali**. È un problema **di ingegneria di sistema + regolatorio + spazio aereo**, non di cellula.
+
+#### 2.7.6 Cosa impariamo per Firmamento (e i due "scogli" di progetto)
+- **Il precedente più vicino a noi (Horus VTOL) ha fatto BVLOS in spazio ristretto R315**, non in spazio aperto → **pianificare il BVLOS iniziale su sandbox / spazio segregato / corridoi ristretti** per aggirare il DAA immaturo.
+- **Sequenziare i ricavi in VLOS** (ispezione/sorveglianza/prove) — come E-Distribuzione e il mercato DaaS — mentre si costruisce il caso SORA.
+- **Ingaggiare presto una consulenza tipo EuroUSC Italia** (presente in quasi tutti i casi-landmark). Consulenze: **EuroUSC Italia** (dominante), **Murzilli** (pan-UE), **Aermatica3D** (FTS+kit), **D-Flight** (USSP, obbligatoria per il DOP).
+- **Scoglio di progetto 1 — apertura > 3 m:** esce da C3/STS/PDRA → **SORA su misura** obbligato e SAIL più alto. **Scoglio 2 — MTOM > 25 kg:** toglie l'Open, alza iGRC/SAIL. → **compatto (< 3 m) e leggero (< 25 kg) abbassano il costo autorizzativo**: altro punto a favore del box-wing.
+- **Verifiche presso ENAC** (da chiudere): deadline transizione **SORA 2.0→2.5**; quale **IT-PDRA-01…09** eventualmente si adatta al nostro ConOps e dimensione.
+
+> **Sintesi certificativa:** percorso **Specific → SORA 2.5 (ENAC)**, area/missione a **SAIL ≤ IV**; **fatturazione dalla fase VLOS** (§2.7.4) con pilota Firmamento; **BVLOS iniziale in spazio ristretto/sandbox** (aggira il DAA), poi estensione. Le due variabili di progetto che spostano il costo — **apertura < 3 m** e **peso < 25 kg** — spingono verso un design **compatto e leggero**.
 
 ---
 
@@ -253,7 +300,7 @@ I dati di affidabilità raccolti in VLOS/EVLOS **rafforzano** la domanda SORA BV
 3. **Livello di sovranità sul powertrain (§2.2.1):** COTS estero (A, veloce) · licenza + produzione IT (B) · partner motorista italiano (C) · sviluppo proprietario (D, caro)? *(Raccomandato: A/B + IP sull'architettura.)*
 4. **Apertura alare vs certificazione (§2.7):** puntare a **< 3 m** (box-wing → resta C3, riapre STS/PDRA) o accettare **> 3 m** (ala fissa alto-allungamento → SORA su misura obbligato)?
 5. **Posizionamento vs Sky Eye/Overspace (§2.6):** confermiamo il framing "primo ibrido C3 civile/dual-use", citando Sky Eye come prova di fattibilità?
-6. **BVLOS/SORA:** chi guida il dossier autorizzativo (VLOS-first + SORA in parallelo) e con quale budget/tempistica (rischio di programma n.1)?
+6. **BVLOS/SORA (§2.7):** confermiamo il modello **VLOS-first fatturante** (fase 4) + **BVLOS iniziale in sandbox/spazio ristretto** (aggira il DAA, come Horus in R315)? Chi guida il dossier e con quale consulenza (EuroUSC Italia-class) e budget (tempi ~7–18 mesi; costi = stima, non pubblici)?
 
 ---
 
@@ -281,7 +328,19 @@ I dati di affidabilità raccolti in VLOS/EVLOS **rafforzano** la domanda SORA BV
 - STS/PDRA (limite 3 m): https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/specific-category-civil-drones/standard-scenario-sts
 - ENAC (categoria specifica, IT-PDRA-01…09, D-Flight): https://www.enac.gov.it/sicurezza-aerea/droni/categoria-specifica-specific-category/
 
-> ⚠️ Alcuni siti (EASA/EUR-Lex, vendor italiani) bloccano il fetch automatico (403): dati raccolti via indicizzazione + corroborazione multipla. Da verificare su fonte primaria/ENAC: deadline transizione SORA 2.0→2.5 in Italia; caps dimensionali degli IT-PDRA; specifiche esatte (MTOM Supair, cc Sky Eye).
+**Casi italiani BVLOS/SORA con ENAC (§2.7.5):**
+- E-Distribuzione (1° BVLOS non geografico, IT-PDRA-01) — EuroUSC Italia: https://www.eurousc-italia.it/it/e-distribuzione-autorizzazione-non-geografica-per-operazioni-bvlos-contributo-di-eurousc-italia/ · https://www.dronezine.it/326702/e-distribuzione-nel-2022-piu-droni-piu-piloti-e-voli-bvlos-autorizzati-da-enac/
+- Telespazio T-DROMES (PDRA operator): https://www.telespazio.com/en/press-release-detail/-/detail/enac_certificazione_telespazio_tdromes
+- FlyingBasket (1° LUC in Italia): https://droneintelligence.ai/companies/flyingbasket
+- ABzero (1ª rotta biomedicale 37 km Eolie) — EuroUSC: https://www.eurousc-italia.it/it/trasporto-biomedicale-isole-eolie/
+- UrbanV/Speedbird DLV-2 (1° SAIL III Italia, 2026): https://www.quadricottero.com/2026/03/primo-volo-sail-iii-in-italia-enac.html
+- Horus Songbird 150 VTOL (BVLOS in R315, ITA-OAT-00118/000): https://www.horus-technologies.com/bvlos-songbird-flight-testing/ · https://www.quadricottero.com/2025/02/grottaglie-voli-sperimentali-bvlos-con.html
+- Aermatica3D (FTS / Kit autorizzazione ENAC): https://www.aermatica.com/air-abruzzo-ottiene-autorizzazione-enac-con-i-terminatori-di-volo-aermatica3d/
+- Benchmark tempi SORA (CAA danese): https://www.en.droneregler.dk/commercial-drone-operations/overview-of-drone-operations-in-the-specific-category/sora-risk-assessment-for-the-specific-category
+- ENAC rischio "alto" e sandbox medicali (nov. 2025): https://www.quadricottero.com/2025/11/droni-sanitari-parla-lenac-rischio-alto.html
+- Consulenza SORA: EuroUSC Italia https://www.eurousc-italia.it/it/ · Murzilli https://murzilliconsulting.com/service/operational-authorisations-sora/
+
+> ⚠️ Alcuni siti (EASA/EUR-Lex, ENAC, vendor e testate IT) bloccano il fetch automatico (403): dati raccolti via indicizzazione + corroborazione multipla. **Tempi e costi delle singole autorizzazioni italiane NON sono pubblici** (consulenze/ingegneria riservate): le cifre BVLOS vanno trattate come **stime**. Da verificare su fonte primaria/ENAC: deadline transizione SORA 2.0→2.5; caps dimensionali degli IT-PDRA; specifiche esatte (MTOM Supair, cc Sky Eye).
 
 ---
 
