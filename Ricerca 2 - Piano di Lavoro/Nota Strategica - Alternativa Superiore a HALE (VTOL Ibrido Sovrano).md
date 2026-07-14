@@ -94,7 +94,7 @@ La ricerca propulsione non ha trovato **alcun** fornitore/piattaforma ibrida ita
 | **"Mercato possibile: marittima"** | ✅ **Confermato — è la scala più solida** | N1 marittimo istituzionale: EMSA/Frontex/Guardia Costiera, ~€30 mln/contratto, benchmark nella classe, **lead sul Golfo di Genova** da verificare (`Market` N1). |
 | **"Multi-ruolo modulare"** | ✅ **Confermato — è il vincolo di prodotto** | Piattaforma unica + payload intercambiabili (EO/IR, SAR, relay): serve N1–N5 meglio di due velivoli (`Market` §4, `Trade Study` §5). |
 | **"Sovranità ← quale leva (loro/nostra)"** | ✅ **La leva giusta** | La sovranità tecnologica è ciò che sblocca i **fondi dual-use** e differenzia dagli incumbent esteri (§2.2). "Loro" (incumbent esteri) vs "nostra" (opzione italiana) = il posizionamento. |
-| **"Realizzare un drone figo = tanti soldi e prestigio"** | 🔶 **Vero per il funding, ❌ non per la performance** | L'appeal ("wow"/box-wing) apre bandi e prestigio (P9, `Trade Study`). **Ma** il `WP-B5` ha **confutato** il vantaggio aerodinamico del box-wing: il "drone figo" va giustificato come **vetrina d'innovazione finanziata** (immagine + accesso bandi), **non** come necessità prestazionale. Se il funding R&D non arriva → ripiego su ala fissa convenzionale. |
+| **"Realizzare un drone figo = tanti soldi e prestigio"** | ✅ **Vero per il funding, e con potenziale di performance** | L'appeal ("wow"/box-wing) apre bandi e prestigio (P9, `Trade Study`). Il box-wing, oltre all'immagine, mostra nelle **prime simulazioni interne** un potenziale su **efficienza aerodinamica + rigidità strutturale + compattezza** (stime preliminari, da validare con CFD/galleria/dimostratore) → **non solo vetrina, ma candidato di prestazione**. La compattezza dà anche un **bonus normativo** (apertura ≤ 3 m → classe C3, §2.6). Resta a **TRL più basso**: se la validazione non conferma → ripiego ala fissa convenzionale. |
 
 ### 2.4 Il modello di business — "vendiamo il servizio" + "cooperative nostro forte"
 
@@ -135,7 +135,7 @@ La ricerca propulsione non ha trovato **alcun** fornitore/piattaforma ibrida ita
 |---|---|---|
 | **BVLOS/SORA** non arriva nei tempi | **Alto** (blocca la capillarità e il servizio) | Dossier SORA fin da subito; partire da scenari LOS/nicchie già autorizzabili (incendi, ispezione) mentre si istruisce il BVLOS. |
 | **"Nessuna opzione italiana"** smentita da uno scouting serio | Medio | Verifica formale (§2.2). Anche se emerge un player, quasi certamente non ibrido/long-endurance C3 → riformulare con precisione. |
-| **Il "drone figo" (box-wing)** brucia budget senza performance | Medio | Tenerlo come **vetrina finanziata**, non come prodotto di reddito; ripiego ala fissa convenzionale (`WP-B5`). |
+| **Box-wing a TRL basso:** budget/tempo di validazione, benefici da confermare | Medio | Validare i benefici (efficienza + rigidità + compattezza) delle simulazioni interne con **CFD/galleria/dimostratore**; ripiego ala fissa convenzionale se non confermati (`WP-B5`). |
 | **Attrition** (i UAS si perdono più spesso) | Medio | Dimensionare flotta +~22% e ricambi nel business case (metodologia CBO, `WP-B5`). |
 | **Numeri di costo/prezzo** ancora stimati | Medio | RFQ ai vendor + banche dati procurement (TED/EU) prima dello Studio. |
 | **Dipendenza dal motore estero** (se compriamo il powerplant) | Medio-alto | Se la tesi è "sovranità", il **powertrain** è il punto in cui la sovranità va difesa: valutare licenza/partnership (es. rotativo AIE) o sviluppo con partner italiano. |
@@ -167,7 +167,7 @@ La ricerca propulsione non ha trovato **alcun** fornitore/piattaforma ibrida ita
 ## Riferimenti (documenti del repository)
 - `Fase A - MARKET ANALYSIS REPORT (consolidato)` — nicchie N1–N6, strategia multi-ancora → scala, funding.
 - `Fase B - Trade Study Architetture` — 24 h in < 25 kg, ala fissa vince, VTOL a modulo, box-wing flagship.
-- `Fase B - WP-B5 Costi TRL Make-vs-Buy` — doppio binario BUY/MAKE, costi, TRL, box-wing confutato.
+- `Fase B - WP-B5 Costi TRL Make-vs-Buy` — doppio binario BUY/MAKE, costi, TRL, box-wing riqualificato (simulazioni interne promettenti).
 - `Fase B - Trade Propulsione Dettagliato (Powertrain Ibrido)` — architetture powertrain, motori concorrenti, differenziazione ibrida.
 - `One-pager - Sintesi per la riunione` — tesi in 3 righe, roadmap, decisioni.
 - `Dossier di Verifica` — standard di onestà (verificato vs stima vs confutato).
