@@ -12,7 +12,7 @@
 
 ---
 
-> ⚠️ **Correzioni post-verifica (Dossier di Verifica):** (M6) i servizi RPAS **EMSA sono finanziati dal bilancio/appalti propri di EMSA**, *non* dal Copernicus Contribution Agreement (che finanzia il servizio satellitare distinto); beneficiari = Stati UE **+ Paesi candidati + EFTA**. (M14) San Salvo = primo U-space **d'Italia** (nov 2024); "d'Europa" legato all'avvio operativo gen 2026. Le cifre di mercato (DRONEII, Grand View, €160 mln Italia, EMSA ~€30 mln, specifiche Flexrotor) sono **confermate**.
+> ⚠️ **Correzioni post-verifica (Dossier di Verifica):** (M6) i servizi RPAS **EMSA sono finanziati dal bilancio/appalti propri di EMSA**, *non* dal Copernicus Contribution Agreement (che finanzia il servizio satellitare distinto); beneficiari = Stati UE **+ Paesi candidati + EFTA**. (M14) San Salvo = primo U-space **d'Italia** (nov 2024); "d'Europa" legato all'avvio operativo gen 2026. Le cifre di mercato (DRONEII, Grand View, €160 mln Italia, EMSA ~€30 mln, specifiche Flexrotor) sono **confermate**. **(C3)** dove nel testo si legge "C3 < 25 kg" riferito ai benchmark (Flexrotor, AR3/AR5), si intende la **fascia di peso ~25 kg**: quei sistemi **non sono marcati C3** (apertura > 3 m / uso militare). La **classe C3 (< 25 kg E < 3 m) resta l'obiettivo di Firmamento**, distinto e più stringente del solo peso.
 
 ## 0. Messaggio chiave (executive summary)
 
@@ -22,7 +22,7 @@
 
 3. **Lead strategico per la Liguria:** tra i risultati compare un servizio EMSA RPAS **operativo sul Golfo di Genova** a supporto della Guardia Costiera italiana (AR-5 Evo, consorzio REACT = CLS + Tekever). Se confermato, significa **domanda marittima già finanziata nel nostro territorio** → sia opportunità sia concorrente in casa. **DA VERIFICARE come priorità** (§9).
 
-4. **Il benchmark tecnico valida l'ipotesi C3 < 25 kg.** Le piattaforme che vincono i contratti EMSA sono nella classe **~25 kg** (Flexrotor: 25 kg VTOL, payload 8 kg, endurance 10–14 h) o MALE ala fissa (AR5: 12 h, max 20 h). Il velivolo ipotizzato dal gruppo (C3 < 25 kg, alta endurance) è **direttamente confrontabile** con i sistemi già in servizio.
+4. **Il benchmark tecnico valida la fascia di peso ~25 kg** (non la classe normativa C3, vedi banner). Le piattaforme che vincono i contratti EMSA sono nella classe **~25 kg** (Flexrotor: 25 kg VTOL, payload 8 kg, endurance 10–14 h) o MALE ala fissa (AR5: 12 h, max 20 h) — **nessuna è C3**. Il velivolo ipotizzato dal gruppo (**obiettivo C3, < 25 kg E < 3 m**, alta endurance) è **direttamente confrontabile per fascia**, con la consapevolezza che **restare in C3 comporta un target leggermente inferiore o al più paritario** rispetto a questi sistemi non-C3.
 
 5. **Strategia "ancora politica → scala di mercato" (prodotto multi-ruolo).** Le due direttrici **non sono in competizione ma in sequenza**. Le **aree interne / SNAI** sono l'**ancora**: è la domanda che ha **già fatto ottenere il bando**, con spinta politica, sito pilota e accesso a **fondi pubblici non diluitivi** — il suo valore è **legittimazione + funding + primo cliente captive**, *non* la dimensione di mercato. Il **marittimo** è il **mercato di scala**: domanda pubblica ricorrente e finanziata (modello EMSA ~30 mln EUR/contratto). Un **prodotto multi-ruolo modulare (C3 < 25 kg)** aggancia l'interesse politico per raccogliere fondi e poi scala sul mercato. → **Nota metodologica:** misurare l'ancora con la metrica *sbagliata* (TAM di mercato) la fa sembrare "debole"; la metrica giusta è la **spesa pubblica attivabile** (§9, lacuna 2), che è la vera priorità della seconda passata.
 
@@ -84,7 +84,7 @@ Tra i risultati di ricerca (fonte primaria EMSA, pagina non scaricabile → **no
 
 | Piattaforma | Tipo | MTOW | Payload | Endurance | Note (confidenza) |
 |---|---|---|---|---|---|
-| **Airbus Flexrotor** | VTOL | **25 kg** | 8 kg | 12–14 h (10 h config EMSA) | Decollo/recupero autonomo in 3,7×3,7 m; ceiling ~21.000 ft. **Confrontabile 1:1 con HALE C3 <25 kg** (alta) |
+| **Airbus Flexrotor** | VTOL | **25 kg** | 8 kg | 12–14 h (10 h config EMSA) | Decollo/recupero autonomo in 3,7×3,7 m; ceiling ~21.000 ft. **Confrontabile per fascia di peso con HALE** (il cui obiettivo è C3; Flexrotor non è C3) (alta) |
 | **TEKEVER AR5** | Ala fissa MALE | tattico | EO/IR+radar+AIS | 12 h (max 20 h), SATCOM | Vincitore EMSA nov 2025 (alta) |
 | EMSA — 3 tipologie in uso | mix | — | — | Hermes 900 >12 h; Skeldar V-200 VTOL >4 h/>50 km; Indago2 VTOL leggero | Taxonomia persistenza×taglia (alta) |
 | **Airbus Zephyr 8** (HAPS) | Ala fissa solare stratosferica | ~60–75 kg | **solo ~5 kg** (frazione ~8%) | settimane/mesi | Payload fraction molto bassa → vincola i sensori. Attività scorporata in **AALTO HAPS** (media) |
@@ -157,7 +157,7 @@ La ricerca ha prodotto evidenza forte su marittimo istituzionale + dimensionamen
 ## 10. Implicazioni per il progetto e ponte verso la Fase B
 
 - **Impostare la strategia "ancora → scala":** N3 (aree interne) come **ancora** politica e di funding che finanzia il primo velivolo/pilota; N1 (marittimo) come **mercato di scala** che ne sostiene la crescita; **un unico prodotto multi-ruolo modulare C3 < 25 kg** a fare da ponte. Usare N1 come benchmark tecnico-economico nella Fase B.
-- **Il vincolo C3 < 25 kg del gruppo è validato dal mercato**: i sistemi che vincono i contratti pubblici marittimi sono proprio in quella classe. La Fase B deve verificare se un C3 proprietario può competere su endurance/payload con Flexrotor/AR5 (WP-B3), o se conviene **integrare** una piattaforma commerciale (make-vs-buy, WP-B2/B5).
+- **La fascia di peso ~25 kg del gruppo è validata dal mercato**: i sistemi che vincono i contratti pubblici marittimi sono proprio in quel peso (ma **non sono C3**, > 3 m). La Fase B deve verificare se un velivolo **C3 proprietario (< 25 kg E < 3 m)** può competere su endurance/payload con Flexrotor/AR5 — attendendosi un target **leggermente inferiore o paritario**, con la **conformità C3** come differenziatore (WP-B3), o se conviene **integrare** una piattaforma commerciale (make-vs-buy, WP-B2/B5).
 - **Il modello data-as-a-service** con committente pubblico ricorrente è la via più attrattiva per gli investitori → alimenta WP-A6/C2.
 - **Prossimo passo operativo:** lanciare la **seconda passata di ricerca** sulle 6 lacune di §9 (in particolare segmenti terrestri quantificati, spesa pubblica IT attivabile e verifica del lead ligure), poi chiudere il Market Analysis Report e aprire la Fase B.
 

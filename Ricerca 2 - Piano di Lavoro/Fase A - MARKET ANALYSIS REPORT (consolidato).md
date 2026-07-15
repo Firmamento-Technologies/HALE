@@ -19,7 +19,7 @@
 
 L'analisi di mercato "market-first" porta a **tre conclusioni operative**:
 
-1. **Il prodotto è uno solo: una piattaforma aerea multi-ruolo modulare C3 < 25 kg**, con payload intercambiabili. Non un "barcone" generalista né due velivoli separati: **una cellula comune, tanti payload**. Il mercato valida la classe < 25 kg (i sistemi che vincono i contratti pubblici — Flexrotor, AR3/AR5 — sono proprio lì).
+1. **Il prodotto è uno solo: una piattaforma aerea multi-ruolo modulare C3 < 25 kg**, con payload intercambiabili. Non un "barcone" generalista né due velivoli separati: **una cellula comune, tanti payload**. Il mercato valida la **fascia di peso ~25 kg** (i sistemi che vincono i contratti pubblici — Flexrotor, AR3/AR5 — sono proprio lì), **non** la classe normativa **C3**: quei sistemi **non sono C3** (apertura > 3 m). La **C3 (< 25 kg E < 3 m) è l'obiettivo distintivo di Firmamento** — restarvi comporta un target di prestazione **leggermente inferiore o, al meglio, paritario** a quei benchmark non-C3.
 
 2. **La strategia è "multi-ancora → scala".** Due **ancore** politico-istituzionali, entrambe in **Liguria**, finanziano e legittimano il primo velivolo; il **mercato** ne sostiene la crescita:
    - **Ancora civile:** Aree Interne / SNAI (bando già vinto, Regione, Legacoop) → payload monitoraggio/emergenza.

@@ -2,7 +2,7 @@
 ### Firmamento Technologies · 2026-07-12 · *dati verificati (Dossier di Verifica)*
 
 ## La tesi in 3 righe
-Costruiamo **un unico velivolo multi-ruolo modulare, leggero (< 25 kg), ad ala fissa, ibrido con assistenza solare**. Lo finanziamo con **due ancore politico-istituzionali liguri** (aree interne/SNAI + Polo Subacqueo di La Spezia) e lo **scaliamo su mercati che già pagano** (sorveglianza marittima, monitoraggio rischi, ispezione infrastrutture). **Vendiamo il servizio, non il mezzo.**
+Costruiamo **un unico velivolo multi-ruolo modulare, in classe C3 (< 25 kg E < 3 m), ad ala fissa, ibrido a genset** (solare solo come opzione dimostrativa). Lo finanziamo con **due ancore politico-istituzionali liguri** (aree interne/SNAI + Polo Subacqueo di La Spezia) e lo **scaliamo su mercati che già pagano** (sorveglianza marittima, monitoraggio rischi, ispezione infrastrutture). **Vendiamo il servizio, non il mezzo.**
 
 ---
 
@@ -19,9 +19,9 @@ Costruiamo **un unico velivolo multi-ruolo modulare, leggero (< 25 kg), ad ala f
 ---
 
 ## Il prodotto
-**Categoria C3 (< 25 kg) · ala fissa (versione flagship box-wing) · propulsione ibrido-elettrica + pannelli solari · lancio assistito · payload intercambiabili (EO/IR termico, SAR, relay) · endurance target 24 h.**
+**Obiettivo classe C3 (< 25 kg E < 3 m) · ala fissa · propulsione ibrido-elettrica a GENSET (serie) · lancio assistito · payload intercambiabili di progetto ~4 kg (EO/IR termico, SAR, relay) · endurance di progetto ~20–22 h.** *(Solare e VTOL: opzioni/moduli, fuori dalla baseline in target — vedi sotto.)*
 
-**Il nodo "24 h in < 25 kg" — risolto (calcolo):** ✅ **possibile ad ala fissa con propulsione ibrida** (l'AR3 EVO fa già 22 h). ❌ impossibile a sola batteria (servirebbero 30–47 kg). Il **solare** dà autonomia e immagine ("pseudo-satellite"), ma è un **supplemento** (a bassa quota copre ~15% del fabbisogno). Il **VTOL** dimezza l'autonomia → resta come **modulo opzionale** per l'hover.
+**Il nodo "endurance in < 25 kg" — risolto (calcolo):** ✅ **possibile ad ala fissa con propulsione ibrida** (l'AR3 EVO fa 22 h — ma **non è C3**: > 3 m). ❌ impossibile a sola batteria (servirebbero 30–47 kg). **Restare in C3 con margine 5%** (`Bilancio di Massa`) costa un po' di prestazione: si punta a **~20–22 h e 4 kg di payload**, cioè **target leggermente inferiore o al più paritario** ai benchmark **non-C3** — con la **conformità C3 come differenziatore**. Il **solare** dà immagine ("pseudo-satellite") ma sotto cap di peso/budget è un **guadagno netto negativo** → **fuori dalla baseline** (resta opzione dimostrativa). Il **VTOL** dimezza l'autonomia → **modulo opzionale** per l'hover. Il **genset** è la scelta di team (ridondanza: rientro a batteria su avaria motore; motore al regime ottimale → durata/TBO).
 
 ---
 

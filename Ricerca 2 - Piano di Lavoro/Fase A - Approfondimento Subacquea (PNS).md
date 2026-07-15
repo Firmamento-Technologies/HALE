@@ -24,7 +24,7 @@
 
 4. **Il ruolo della piattaforma aerea nel subacqueo è reale e già praticato — ma dagli incumbent pesanti.** Il **Leonardo AWHero** vende esplicitamente "Communication Relay" e "Sonobuoy Data Relay" per ASW: conferma il paradigma "**aereo come nodo relay/gateway** nella catena di rilevamento subacqueo", **non** come sostituto del mezzo subacqueo. Ma è una classe da **200 kg** (un ordine di grandezza sopra il C3). *(alta confidenza)*
 
-5. **Lo spazio "gateway aereo leggero → dominio subacqueo" NON è presidiato.** Il benchmark più vicino alla vostra classe, il **TEKEVER AR3 EVO** (~23–25 kg, payload ~6 kg, C3), fa ISR marittimo di **superficie** e **non menziona alcun ruolo di relay per AUV/ROV o sorveglianza cavi**: è uno **spazio libero per un nuovo entrante**. *(alta confidenza)*
+5. **Lo spazio "gateway aereo leggero → dominio subacqueo" NON è presidiato.** Il benchmark più vicino alla vostra classe, il **TEKEVER AR3 EVO** (~23–25 kg, payload ~6 kg — **classe di peso simile ma NON C3**: apertura > 3 m, UAS militare), fa ISR marittimo di **superficie** e **non menziona alcun ruolo di relay per AUV/ROV o sorveglianza cavi**: è uno **spazio libero per un nuovo entrante**. *(alta confidenza)*
 
 6. **Esiste un canale di finanziamento UE mirato:** **EDF 2026** ha un topic dedicato alla **protezione stratificata delle infrastrutture del fondale** (~€30 mln), con linguaggio "payload intercambiabili", MUM-T, "**dal fondale allo spazio**" — coerente con una piattaforma aerea modulare nello strato aria/multi-dominio. **Ma serve un consorzio** (≥3 organizzazioni in 3 Paesi), scadenza **29 set 2026**. *(alta confidenza)*
 
@@ -85,11 +85,11 @@ Il punto tecnico chiave. La ricerca conferma un paradigma preciso: **l'aereo non
 |---|---|---|---|---|---|
 | **Leonardo AWHero** | RUAS **~200 kg** | 20 kg naso / 40 kg pancia | 6 h; datalink **100 km** | **Sì**: "Communication Relay" + "Sonobuoy Data Relay", ottimizzato **ASW** | Incumbent multi-dominio, ma **un ordine di grandezza più pesante** del C3 |
 | **LeVanta HALIA** | "float-and-fly" amfibio, famiglia scalabile | 50–2200 lb | **30+ giorni** in superficie + riposizionamento aereo | **Sì**: ASW + **MCM**, payload modulari **incl. comms relay** | Finanziato **SBIR US Air Force/Navy** (dual-use) → i committenti difesa **pagano** per aerei nel dominio ASW/MCM |
-| **TEKEVER AR3 EVO** | **~23–25 kg (C3)** ibrido VTOL/ala fissa | ~6 kg | **22 h** ala fissa / 14 h VTOL; 100 km LOS + BLOS | **NO** (solo ISR marittimo di superficie) | **Benchmark diretto della vostra classe**; decolla/atterra in **5×5 m** anche da piccole imbarcazioni |
+| **TEKEVER AR3 EVO** | **~23–25 kg (classe di peso; NON C3: apertura > 3 m)** ibrido VTOL/ala fissa | ~6 kg | **22 h** ala fissa / 14 h VTOL; 100 km LOS + BLOS | **NO** (solo ISR marittimo di superficie) | **Benchmark di prestazione della vostra fascia di peso**; decolla/atterra in **5×5 m** anche da piccole imbarcazioni |
 
-> **Lo spazio non presidiato (il varco):** l'AR3 EVO — l'unico nella **stessa classe C3 <25 kg** — fa sorveglianza di **superficie** e la sua scheda **non menziona alcun ruolo di relay per AUV/ROV, gateway di navigazione subacquea o sorveglianza cavi/condotte**. Il ruolo di **gateway aereo leggero verso il dominio subacqueo è libero**. Gli unici che coprono l'underwater (AWHero, HALIA) sono piattaforme **molto più grandi e costose**. → **Posizionamento differenziante possibile:** *gateway/relay + ISR multi-dominio in classe C3, leggero e a basso costo*.
+> **Lo spazio non presidiato (il varco):** l'AR3 EVO — l'unico nella **stessa fascia di peso ~25 kg** (che però **non è C3**: > 3 m) — fa sorveglianza di **superficie** e la sua scheda **non menziona alcun ruolo di relay per AUV/ROV, gateway di navigazione subacquea o sorveglianza cavi/condotte**. Il ruolo di **gateway aereo leggero verso il dominio subacqueo è libero**. Gli unici che coprono l'underwater (AWHero, HALIA) sono piattaforme **molto più grandi e costose**. → **Posizionamento differenziante possibile:** *gateway/relay + ISR multi-dominio in classe C3, leggero e a basso costo*.
 
-> ⚠️ *Precisione (3 claim confutati riguardavano proprio i pesi TEKEVER):* l'**AR3 EVO** è ~**25 kg MTOW / ~6 kg payload**; l'**AR3 originale** era ~**23 kg / 4 kg**. Da citare correttamente nella Fase B.
+> ⚠️ *Precisione (3 claim confutati riguardavano proprio i pesi TEKEVER):* l'**AR3 EVO** è ~**25 kg MTOW / ~6 kg payload**; l'**AR3 originale** era ~**23 kg / 4 kg**. **Nessuno dei due è C3** (apertura > 3 m; UAS militare): sono benchmark di **peso/prestazione**, non di **classe normativa**. La **classe C3 (< 25 kg E < 3 m) è l'obiettivo di Firmamento**: restandovi si punta a un target **leggermente inferiore o, al meglio, paritario** rispetto a questi droni non-C3 (cfr. `Bilancio di Massa ed Energia`, `Studio Pesi Payload`). Da citare correttamente nella Fase B.
 
 ---
 
@@ -142,7 +142,7 @@ Il punto tecnico chiave. La ricerca conferma un paradigma preciso: **l'aereo non
 
 | Parametro | Valore di riferimento |
 |---|---|
-| Classe/peso | C3 < 25 kg (benchmark AR3 EVO ~25 kg) |
+| Classe/peso | **Obiettivo C3 (< 25 kg E < 3 m)**; benchmark di peso AR3 EVO ~25 kg (che però è **non-C3**, > 3 m) |
 | Payload | ~6 kg, **intercambiabile** (relay comms, EO/IR, SAR) |
 | Endurance | 14 h (VTOL) – 22 h (ala fissa) — target vs AR3 EVO |
 | Comms | 100 km LOS + **BLOS/SATCOM** (essenziale per il ruolo di relay) |
@@ -164,7 +164,7 @@ Il punto tecnico chiave. La ricerca conferma un paradigma preciso: **l'aereo non
 - **Finanziamento €2 mln/anno**: Legge di Bilancio (via fonti PNS)
 - **Strategia CeSI + Marina + MAECI** (18 giu 2024)
 - **Leonardo AWHero** (relay/ASW, specifiche): aeronautics.leonardo.com/products/awhero
-- **TEKEVER AR3 EVO** (C3, payload, endurance): tekever.com/ar3-evo
+- **TEKEVER AR3 EVO** (peso/payload/endurance; **non-C3**, > 3 m): tekever.com/ar3-evo
 - **LeVanta HALIA** (float-and-fly, ASW/MCM, SBIR)
 - **Architettura comms underwater-surface-aerial**: letteratura (drones/UAV relay + 5G)
 - **EDF 2026 — CSBI topic** (~€30 mln, deadline 29/9/2026): defence-industry-space.ec.europa.eu, EUDIS, scientifyresearch, fasi.eu
