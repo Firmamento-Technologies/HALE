@@ -27,9 +27,11 @@
 | **Solare-solo** | ❌ (a bassa quota/44°N) | L'ala raccoglie **~15% del fabbisogno in estate, ~4% in inverno**. È un **supplemento**, non il motore. |
 | **VTOL** | ⚠️ dimezza | Config VTOL **−36% endurance** (dato AR3 EVO: 22 h→14 h) + massa e drag. |
 
-**Conseguenza progettuale:** il team desidera insieme (a) 24 h, (b) pannelli solari, (c) VTOL/hover — **la fisica non le concede tutte e tre a 25 kg**. La sintesi che le concilia:
+**Conseguenza progettuale:** il team desidera insieme (a) 24 h, (b) payload pieno, (c) pannelli solari, (d) VTOL/hover — **la fisica non le concede tutte a 25 kg** (bilancio di massa: `Bilancio di Massa ed Energia`, che con l'ambizione piena arriva a ~33 kg). La sintesi che le concilia, **restando in classe C3 con margine 5%**:
 
-> **Ala fissa (box-wing come versione "flagship") · propulsione ibrido-elettrica · assistenza solare · lancio assistito (elastico/catapulta) · modulo VTOL opzionale e removibile per le missioni che richiedono hover.**
+> **Ala fissa · propulsione ibrido-elettrica a GENSET (serie) · lancio assistito (elastico/catapulta) · payload di progetto 4 kg · modulo VTOL opzionale e removibile per le missioni che richiedono hover · solare solo opzionale/dimostrativo (fuori dalla baseline in target).**
+
+**L'obiettivo è la classe C3** (< 25 kg **e** < 3 m): per rispettarla con margine, l'endurance di progetto si assesta su **~20–22 h** e il payload su **4 kg** — cioè **target leggermente inferiore o, al meglio, paritario** rispetto ai benchmark di prestazione (AR3 EVO 22 h/6 kg) che però **non sono C3** (> 3 m). Il vantaggio distintivo è proprio **restare in C3**. Dettaglio in `Bilancio di Massa ed Energia` e `Studio Pesi Payload`.
 
 Matrice di trade-off (P1–P9): **box-wing 81/100** e **ala fissa lancio-assistito 80/100** in testa; **VTOL ultimo (68)** per la penalità di endurance.
 
@@ -41,16 +43,16 @@ Derivati dai profili di missione consolidati (Fase A §6). Soglia = minimo accet
 
 | ID | Requisito ("shall") | Soglia | Obiettivo |
 |---|---|---|---|
-| REQ-01 | Il sistema **deve** avere MTOM < 25 kg (categoria C3) | < 25 kg | < 25 kg con margine 10% |
-| REQ-02 | Il sistema **deve** fornire endurance | ≥ 12 h | **≥ 24 h** |
-| REQ-03 | Il sistema **deve** trasportare payload utile intercambiabile | ≥ 4 kg | ≥ 6–8 kg |
+| REQ-01 | Il sistema **deve** avere MTOM < 25 kg **e apertura < 3 m** (categoria **C3** — obiettivo di progetto) | < 25 kg | **< 25 kg con margine ≥ 5% (≤ 23,75 kg) e < 3 m** |
+| REQ-02 | Il sistema **deve** fornire endurance | ≥ 12 h | **~20–22 h** (di progetto, in target C3); 24 h aspirazionale |
+| REQ-03 | Il sistema **deve** trasportare payload utile intercambiabile | ≥ 4 kg | **4 kg di progetto** (6 kg capacità strutturale max, budget-permitting) |
 | REQ-04 | Il sistema **deve** consentire lo **scambio rapido** del payload (EO/IR, SAR, multispettrale, relay) | bay modulare | < 15 min, plug-and-play |
 | REQ-05 | Il sistema **deve** fornire datalink | LOS ≥ 100 km | **+ BLOS/SATCOM** |
 | REQ-06 | Il sistema **deve** decollare/recuperare da area non preparata | lancio elastico/catapulta | **anche shipborne (≤ 5×5 m)** |
 | REQ-07 | Il sistema **deve** operare in autonomia di volo con elaborazione **AI a bordo** | BVLOS auto | swarm/hub-ready |
 | REQ-08 | Il sistema **deve** operare in condizioni meteo tipiche | vento ≤ 25 kn | −10…+45 °C |
 | REQ-09 | Il payload **deve** includere sensori termici (IR) per il caso rischi/incendi | EO + IR | + multispettrale |
-| REQ-10 | Il sistema **deve** integrare **assistenza solare** sull'ala (autonomia + narrativa) | celle su ala | riduzione consumo ≥ 15% estivo |
+| REQ-10 | Il sistema **può** integrare **assistenza solare** sull'ala (narrativa/dimostratore) — **fuori dalla baseline in target** perché sotto cap di peso/budget il solare è un guadagno netto negativo (`Bilancio di Massa` §3) | opzionale | celle solo se il bilancio di massa chiude con margine |
 | REQ-11 | Il costo unitario di realizzazione **deve** restare contenuto | [DA DEFINIRE] | minimizzare |
 
 > REQ-02/REQ-07/REQ-10 codificano l'ambizione "24 h + autonomia + solare"; REQ-04/REQ-03 la modularità ("molti casi d'uso"). Il conflitto REQ-01↔REQ-02 è il nodo risolto in §3.
@@ -101,6 +103,8 @@ Ala S≈2 m², area celle ~1,4 m², celle 24%, perdite 20%:
 
 Picco a mezzogiorno ~270 W < crociera ~400–500 W. → **Un C3 a bassa quota NON può volare a energia solare in modo persistente** (è il "showstopper energia invernale" dell'HALE, in miniatura). **Ma** il solare resta prezioso come: (a) **range-extender** che taglia il consumo di carburante di giorno; (b) **narrativa green / "pseudo-satellite" / autonomia** ad alto impatto mediatico-politico (P8/P9). → Framing corretto: **"ibrido solar-assistito"**, non "drone solare".
 
+> ⚠️ **Verifica sotto cap di peso e budget (aggiornamento 2026-07-15):** il sistema solare (celle 1,4 m² + **MPPT** + cablaggi) pesa **~1,5 kg** e risparmia **≤ 0,6 kg** di carburante d'estate (~0,15 kg d'inverno). Sotto un **vincolo duro di 25 kg**, aggiunge quindi **più massa di quanta ne liberi** (+0,9…+1,35 kg netti), oltre a erodere il **budget €** (celle ad alta efficienza + MPPT). **Conclusione operativa: il solare esce dalla baseline certificata/in target** e resta **solo come opzione dimostrativa/narrativa** quando il bilancio di massa ha margine. Confronto quantitativo con/senza in `Bilancio di Massa ed Energia` §3.
+
 ### 3.5 Penalità VTOL (dato reale)
 **AR3 EVO: 22 h ala fissa → 14 h in VTOL = −36% endurance**, oltre a +2–4 kg di sistema di sollevamento e drag parassita in crociera. → **Incompatibile con l'obiettivo 24 h** se il VTOL è permanente. Conferma l'osservazione di Gigi in riunione (l'ala fissa vince sull'endurance).
 
@@ -134,22 +138,22 @@ Pesi (somma 100): P1 Autonomia **15** · P2 Costo(basso) 12 · P3 Modularità 12
 
 **Architettura raccomandata: ala fissa ad alto allungamento, con due configurazioni di prodotto sulla stessa cellula/famiglia:**
 
-1. **Versione "performance" (B):** ala fissa convenzionale, lancio assistito (elastico/catapulta), **propulsione ibrido-elettrica + assistenza solare** → **è la variante che centra le 24 h** con rischio contenuto (TRL 8–9). Il cavallo di battaglia tecnico.
+1. **Versione "performance" (B):** ala fissa convenzionale, lancio assistito (elastico/catapulta), **propulsione ibrido-elettrica a genset (serie)**, **niente solare nella baseline in target** → **è la variante che centra l'endurance di progetto (~20–22 h)** in classe C3 con margine e con rischio contenuto (TRL 8–9). Il cavallo di battaglia tecnico.
 2. **Versione "flagship" (C, box-wing):** stessa avionica/propulsione, **ala scatolata** per la **silhouette distintiva** e il messaggio d'innovazione → **è la variante che fa colpo** su politica/investitori/media. Rischio maggiore (TRL 5–6) → da validare con CFD e un dimostratore in scala.
 
 **Elementi trasversali (entrambe le versioni):**
-- **Propulsione ibrido-elettrica** (24 h garantite tutto l'anno + modalità elettrica silenziosa).
-- **Assistenza solare** sull'ala (autonomia + narrativa "pseudo-satellite", **senza** promettere volo solare perpetuo).
-- **Bay payload modulare** (EO/IR termico, SAR, multispettrale, relay) → i "molti casi d'uso".
+- **Propulsione ibrido-elettrica a GENSET (serie, A2)** — motore al regime ottimale, **ridondanza** (rientro a batteria su avaria ICE), endurance di progetto ~20–22 h in target C3 (`Trade Propulsione` §8, `Bilancio di Massa`).
+- **Solare solo opzionale/dimostrativo** — **fuori dalla baseline in target** (sotto cap di peso/budget è un guadagno netto negativo, §3.4); resta come narrativa "pseudo-satellite" **senza** promettere volo solare perpetuo.
+- **Bay payload modulare** (EO/IR termico, SAR, multispettrale, relay) → i "molti casi d'uso"; **payload di progetto 4 kg** (`Studio Pesi Payload`).
 - **Modulo VTOL opzionale e removibile** per le missioni che richiedono hover/decollo confinato (accettando la penalità di endurance solo su quelle missioni) → **concilia il dibattito Fede (VTOL/modularità) vs Gigi (ala fissa/endurance)**: cuore ala fissa + VTOL a modulo.
 
 **Come scioglie le tensioni del team:**
 | Desiderata | Risoluzione |
 |---|---|
-| 24 h endurance | Ala fissa + ibrido (fisica) |
-| Pannelli solari / "wow" | Solar-assist + box-wing flagship (narrativa, non motore) |
+| Endurance (24 h aspirazionale) | Ala fissa + genset → **~20–22 h di progetto** in target C3 (la fisica del cap non concede i 24 h pieni con margine) |
+| Pannelli solari / "wow" | Narrativa "pseudo-satellite" sì, ma **fuori dalla baseline in target** (peso/budget); solo opzione dimostrativa |
 | VTOL / hover / modularità | Modulo VTOL removibile + payload swap (non permanente) |
-| C3 < 25 kg | Rispettato in tutte le varianti |
+| **Classe C3 (< 25 kg E < 3 m)** | **Obiettivo di progetto**, rispettato con **margine ≥ 5% (≤ 23,75 kg)** grazie a: genset, no-solare, payload 4 kg, VTOL rimovibile (`Bilancio di Massa`). Prezzo: endurance/payload leggermente inferiori ai benchmark **non-C3** |
 | Molti casi d'uso / investitori | Piattaforma comune modulare + versione flagship |
 
 ---
