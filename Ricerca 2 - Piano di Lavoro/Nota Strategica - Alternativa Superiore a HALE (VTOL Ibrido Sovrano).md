@@ -223,6 +223,7 @@ Il mercato italiano dei VTOL ad ala fissa < 25 kg **esiste già ed è giovane** 
 - `Fase B - WP-B5 Costi TRL Make-vs-Buy` — doppio binario BUY/MAKE, costi, TRL, box-wing riqualificato (simulazioni interne promettenti).
 - `Fase B - Trade Propulsione Dettagliato (Powertrain Ibrido)` — architetture powertrain, motori concorrenti, differenziazione ibrida.
 - `Guida - Certificazione ENAC-SORA per il volo BVLOS` — **approfondimento dedicato** (§2.7): glossario delle sigle, workflow operativo, tabella dei casi italiani autorizzati. Per non addetti ai lavori.
+- `Guida - Tecnologie e Costi per la Certificazione BVLOS (superare gli OSO)` — **companion tecnologico**: mercato IT/estero delle dotazioni (FTS/paracadute, C2 ridondante, DAA, geofencing/Remote ID, autopilota) + servizi (D-Flight, formazione, consulenza SORA, DVR), workflow di equipaggiamento e **stima costi per scenari** (~€8–15k pragmatico → €90–250k+ SAIL III+).
 - `One-pager - Sintesi per la riunione` — tesi in 3 righe, roadmap, decisioni.
 - `Dossier di Verifica` — standard di onestà (verificato vs stima vs confutato).
 
