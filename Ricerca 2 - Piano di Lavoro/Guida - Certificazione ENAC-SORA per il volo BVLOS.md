@@ -143,6 +143,8 @@ Ci si mantiene **vendendo servizi "a vista" (VLOS)**, che **non richiedono il pe
 
 ## 7. Cosa bisogna aggiungere al drone per ottenere il permesso
 
+> 📄 **Per prezzi, prodotti (Italia/estero) e stima costi** di ognuna di queste dotazioni, più il workflow di equipaggiamento, vedi il documento **`Guida - Tecnologie e Costi per la Certificazione BVLOS (superare gli OSO)`**.
+
 Le **modifiche tecniche** più richieste dall'ENAC (per superare gli "obiettivi di sicurezza" OSO):
 
 - **Paracadute / sistema di arresto del volo (FTS)** — la contromisura più citata: ferma il drone in sicurezza in caso di guasto.

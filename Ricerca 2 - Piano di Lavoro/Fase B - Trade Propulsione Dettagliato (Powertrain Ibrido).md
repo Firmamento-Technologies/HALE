@@ -17,7 +17,9 @@
 
 ## 0. Executive summary — la risposta al quesito
 
-**Non è "l'alternatore" o "l'elica in asse" in assoluto: la risposta dipende da UNA condizione — se il velivolo deve fare VTOL o no.**
+> ✅ **Decisione di team (2026-07-15): il powertrain di riferimento è il GENSET (ibrido-serie, config A2).** Pur pagando la penalità di doppia conversione (~5–12% in crociera), il genset è preferito perché: **(1) doppia ridondanza** (genset + batteria buffer) → in avaria del motore termico si vola a batteria con **riserva sufficiente al rientro (~15–20 min, soprattutto in VLOS)**, il che **vanifica il vantaggio di affidabilità che giustificherebbe il motore in presa diretta all'elica**; **(2) motore al punto di regime ottimale costante**, che **elimina le variazioni dirette di erogazione e di giri** → **maggiore durata del motore e intervalli di revisione (TBO) più lunghi** (oltre a emissioni più controllabili → più certificabile); **(3)** la matrice §6 già assegna ad A2 il punteggio più alto. La sezione qui sotto conserva il confronto tecnico completo; la raccomandazione operativa (§8) è aggiornata di conseguenza.
+
+**Il quesito "alternatore vs elica in asse" resta legato a UNA condizione — quanto pesa il VTOL/hover nella missione — ma per HALE la scelta di team è il genset (serie), per ridondanza, regime ottimale e durata (vedi box sopra).**
 
 | Missione del velivolo | Architettura di crociera migliore | Perché |
 |---|---|---|
@@ -28,13 +30,13 @@
 
 | # | Configurazione | Architettura | Verdetto per HALE | Punteggio |
 |---|---|---|---|---|
-| **A1** | **5 motori, spingente/traente in asse al termico** (4 lift elettrici + 1 elica a trasmissione diretta ICE) | Ibrido **parallelo/diretto** (termico meccanico in crociera, batteria per il VTOL) | ✅ **Miglior endurance.** Evoluzione naturale del CAD attuale (elica al muso a trasmissione diretta) + modulo VTOL a batteria. **È il pattern reale di AeroVironment JUMP 20 e Foxtech Great Shark.** | **★ Raccomandato per l'endurance** |
-| **A2** | **5 motori, spingente/traente elettrico su bus** (4 lift + 1 crociera elettrici; ICE→alternatore→bus+batteria) | Ibrido-**serie** puro | ✅ Miglior flessibilità operativa (silenzioso, ridondante). Paga ~5–12% di consumo in crociera. | ★ Raccomandato se serve modo elettrico/ridondanza |
+| **A1** | **5 motori, spingente/traente in asse al termico** (4 lift elettrici + 1 elica a trasmissione diretta ICE) | Ibrido **parallelo/diretto** (termico meccanico in crociera, batteria per il VTOL) | ✅ **Miglior endurance pura.** Evoluzione naturale del CAD attuale (elica al muso a trasmissione diretta) + modulo VTOL a batteria. **È il pattern reale di AeroVironment JUMP 20 e Foxtech Great Shark.** Nessuna ridondanza di crociera. | Alternativa endurance-pura |
+| **A2** | **5 motori, spingente/traente elettrico su bus** (4 lift + 1 crociera elettrici; ICE→alternatore→bus+batteria) | Ibrido-**serie** puro | ✅ **Ridondanza (rientro a batteria su avaria ICE), modo silenzioso, motore al regime ottimale (TBO più lungo).** Paga ~5–12% di consumo in crociera. | **★★ Raccomandato (scelta di team)** |
 | **A3** | **4 motori tilt-rotor** (gli stessi 4 rotori fanno VTOL e crociera; ICE→alternatore→bus+batteria) | Ibrido-**serie obbligato** (non si può mettere in asse un termico su 4 rotori basculanti) | ⚠️ Elegante come conteggio parti, ma **peggiore per l'endurance** (penalità serie su tutte le 24 h) + rischio meccanismo di tilt + eliche "di compromesso". | Ultimo per QUESTA missione |
 
 **Osservazione dell'utente confermata dalla fisica:** con i tilt-rotor **non ha senso un termico per rotore** (4 motori termici basculanti = massa, vibrazioni, logistica, sincronizzazione impossibili). **Un solo alternatore che alimenta i 4 motori è l'unica opzione sensata** → il tilt-rotor **impone** l'architettura serie. Questo è il punto chiave: *scelta serie/diretto e conteggio motori NON sono indipendenti* (vedi §2).
 
-**Raccomandazione sintetica:** cellula ad **ala fissa con elica al muso a trasmissione diretta** (motore termico in asse) come **spina dorsale dell'endurance**, con **piccolo alternatore/ISG sull'albero** per ricaricare il buffer e alimentare avionica/payload; **modulo VTOL a 4 rotori elettrici, rimovibile**, alimentato dalla batteria buffer per le sole missioni con decollo verticale. Se il caso d'uso è **hover-loiter frequente o modalità silenziosa obbligatoria** (ISR/marittimo), si passa alla variante **serie A2**. Il tilt-rotor A3 resta come opzione da valutare solo se il profilo di missione diventasse VTOL-intensivo.
+**Raccomandazione sintetica (aggiornata alla decisione di team):** cellula ad **ala fissa** con **powertrain genset (ibrido-serie, A2)**: motore termico **al regime ottimale** che alimenta, tramite alternatore/PMSG e bus DC con **batteria buffer**, il **motore elettrico di crociera** e i **4 rotori lift** del modulo VTOL rimovibile. Si accetta la penalità di crociera (~5–12%) in cambio di **ridondanza** (rientro a batteria su avaria ICE, ~15–20 min, critico soprattutto in VLOS), **modalità silenziosa** e **maggiore durata/TBO del motore** (regime costante). La variante **A1 a trasmissione diretta** resta l'alternativa da preferire **solo** se il profilo diventasse endurance-purissimo con VTOL trascurabile e senza esigenza di ridondanza. Il tilt-rotor A3 resta ultimo, da valutare solo se il profilo diventasse VTOL-intensivo.
 
 ---
 
@@ -151,6 +153,8 @@ Nel momento in cui il velivolo **deve** fare hover, deve avere **spinta elettric
 >
 > **Il tilt-rotor (A3) elimina la scelta: impone la serie.** E paga la penalità serie su tutte le 24 h → è la peggiore proprio sul parametro che conta di più (endurance).
 
+> **Decisione di team (2026-07-15):** per HALE si sceglie la **via serie (genset, A2)** anche nella baseline ad ala fissa. Il ragionamento: la penalità di ~5–12% **non** compromette la missione perché (i) è già messa a bilancio nel carburante (`Bilancio di Massa` CFG-A) e (ii) è **compensata dal recupero al punto ottimo** (§3.2); in cambio si ottiene una **ridondanza reale** — su avaria del motore termico si **rientra a batteria** (~15–20 min, sufficienti soprattutto in **VLOS**), il che rende **superfluo** il vantaggio di affidabilità della presa diretta all'elica — e un **regime motore costante** che allunga durata e TBO. La "protezione delle 24 h" del diretto viene quindi **barattata consapevolmente** con ridondanza + durata, con l'endurance di progetto ritarata a ~20–22 h (vedi `Bilancio di Massa`).
+
 ---
 
 ## 4. Dimensionamento first-order (potenza, energia, massa)
@@ -192,7 +196,9 @@ Poiché il VTOL dura **poco** (transizione ~1–2 min per lato + eventuale hover
 | Carburante 24 h | ~3,7–4,5 kg | ~4,0–5,0 kg (penalità serie) |
 | **Nota** | miglior rendimento crociera; VTOL "a budget" | hardware riusato; +carburante, +modo silenzioso |
 
-> I due bilanci sono **vicini**: A1 risparmia carburante ma spende in complessità di doppia catena; A2 spende carburante ma semplifica e aggiunge capacità. La scelta è **operativa**, non di sola massa (vedi §6).
+> I due bilanci sono **vicini**: A1 risparmia carburante ma spende in complessità di doppia catena; A2 spende carburante ma semplifica e aggiunge capacità/ridondanza. La scelta è **operativa**, non di sola massa (vedi §6). **Team → A2 (genset).**
+
+> ⚠️ **Questo è solo il sotto-bilancio del powertrain.** Il **bilancio di massa completo** — che include **struttura/cellula, avionica certificabile ENAC e celle solari** (le voci prima omesse) — è nel documento dedicato **`Fase B - Bilancio di Massa ed Energia (preliminare)`**, che mostra come l'"ambizione piena" sfondi i 25 kg e **dimensiona le riduzioni** (togliere il solare, payload 6→4 kg, VTOL rimovibile, ri-taratura carburante) per rientrare a **≤ 23,75 kg** (margine 5%). Il carburante "24 h" qui indicato va letto alla luce di quella ri-taratura (endurance di progetto ~20–22 h).
 
 ---
 
@@ -257,7 +263,7 @@ P1 **Endurance/consumo crociera 22** · P2 Affidabilità/ridondanza 16 · P3 Sem
 - **⚠️ Ma la matrice bilanciata non cattura un fatto esistenziale:** per HALE l'endurance non è "un criterio fra tanti", è **il** proposito del prodotto. Il ~5–12% di carburante in più della serie può essere la differenza tra "24 h" e "21–23 h" — e quel divario **erode l'unica cosa che rende vendibile il velivolo**. Per questo la **revealed-preference del mercato** dei VTOL ad ala fissa a benzina (JUMP 20, Great Shark) è **A1**, non A2: chi vive di endurance **rifiuta** la doppia conversione. La matrice, con P1 a 22, sotto-pesa quanto l'endurance sia *dominante* in questa nicchia.
 - **A1 (diretto) è lo specialista dell'endurance (68,8 nella matrice bilanciata, ma 1° se si pesa l'endurance come esistenziale):** imbattibile su P1 (consumo crociera) e alto TRL (è il pattern fielded di JUMP 20), a scapito di ridondanza, modo silenzioso e complessità della doppia catena. **A1b (parallelo ISG, 73,2)** lo migliora con ricarica e un minimo di ridondanza, a costo di complessità sull'albero (delicata con un monocilindrico).
 - **A3 (tilt-rotor) ultimo (66,8):** miglior VTOL/hover e massa di sistema, ma **penalizzato su endurance, rischio meccanico (tilt) e TRL** (nessun tilt-rotor ibrido commerciale a 25 kg, §7.5). Buono solo se la missione fosse hover-intensiva; **subottimo per le 24 h ISR**.
-- **Sensibilità (onesta):** la matrice bilanciata favorisce **A2 in modo robusto** (resta 1° anche pesando l'endurance a 30) — perché A2 perde poco su P1 e vince quasi tutto il resto. **A1 vince solo quando il criterio decisionale è "massima endurance a parità di costo/TRL, con VTOL leggero/occasionale"**, cioè quando si esce dalla logica multi-criterio e si ottimizza la sola metrica di prodotto. → **La scelta A1 vs A2 non è un numero di matrice: è una decisione di posizionamento** (endurance-puro vs piattaforma versatile).
+- **Sensibilità (onesta):** la matrice bilanciata favorisce **A2 in modo robusto** (resta 1° anche pesando l'endurance a 30) — perché A2 perde poco su P1 e vince quasi tutto il resto. **A1 vince solo quando il criterio decisionale è "massima endurance a parità di costo/TRL, con VTOL leggero/occasionale"**, cioè quando si esce dalla logica multi-criterio e si ottimizza la sola metrica di prodotto. → **La scelta A1 vs A2 non è un numero di matrice: è una decisione di posizionamento** (endurance-puro vs piattaforma versatile). **→ Decisione di team (2026-07-15): A2 (genset)** — si privilegia la **piattaforma versatile e ridondante** rispetto all'endurance-purissima, accettando il ~5–12% e ritarando l'endurance di progetto a ~20–22 h. La matrice (86,8) e la decisione ora **coincidono**.
 
 ---
 
@@ -330,19 +336,21 @@ Al posto dell'ICE-genset, una **cella a combustibile PEM** può fare da sorgente
 
 ## 8. Raccomandazione
 
-**Configurazione raccomandata, condizionata al profilo di missione dominante:**
+**Configurazione raccomandata (decisione di team 2026-07-15): A2 — genset (ibrido-serie).**
 
-1. **Se domina l'endurance ISR ad ala fissa (il cuore HALE, coerente col CAD):**
-   → **A1/A1b — elica principale in asse al motore termico (trasmissione diretta)**, con **ISG/alternatore** per ricarica-buffer, avionica e solar-assist; **modulo VTOL a 4 rotori elettrici rimovibile** a batteria per i soli decolli confinati. Massimo rendimento di crociera, minimo rischio, minima modifica al concept esistente.
+1. **★★ Baseline HALE — A2, genset a 5 motori** (4 lift + 1 crociera elettrici; ICE al **regime ottimale** → alternatore/PMSG → bus + batteria buffer). Si accetta la penalità di crociera (~5–12%, a bilancio) in cambio di:
+   - **Doppia ridondanza:** in avaria del motore termico si **rientra a batteria** (~15–20 min di riserva, sufficienti **soprattutto in VLOS**) → **rende superfluo** il vantaggio di affidabilità della presa diretta all'elica;
+   - **Motore al punto di regime ottimale costante** → **maggiore durata e TBO** del motore, più **emissioni controllabili** (certificabilità, cfr. `Bilancio di Massa` §4);
+   - **Modalità silenziosa**, stabilità gimbal, semplicità meccanica; riuso del bus elettrico dell'hover.
+   È l'architettura del 100% dei VTOL ibridi *multirotore* commerciali di classe, ed è la **prima in matrice** (§6).
 
-2. **Se serve hover-loiter frequente, decollo verticale operativo di routine, o modalità elettrica silenziosa obbligatoria (ISR sensibile/marittimo):**
-   → **A2 — ibrido-serie a 5 motori** (4 lift + 1 crociera elettrici, ICE→alternatore→bus+buffer). Si accetta ~5–12% di consumo in più in cambio di ridondanza, silenzio, stabilità gimbal e semplicità meccanica. **È l'architettura del 100% dei VTOL ibridi commerciali di classe.**
+2. **Alternativa endurance-purissima — A1/A1b (trasmissione diretta):** da preferire **solo** se il profilo diventasse endurance-massimo con VTOL trascurabile **e senza** esigenza di ridondanza/regime costante. Massimo rendimento di crociera, ma **nessun rientro a batteria** su avaria e motore a giri variabili (TBO più corto).
 
 3. **Tilt-rotor A3:** tenere come opzione **solo** se il profilo diventasse VTOL-intensivo; non è la scelta per una piattaforma il cui KPI è l'endurance.
 
 **Elementi trasversali:**
 - **Buffer batteria per peak-shaving** → genset piccolo (~1–1,5 kW) invece che dimensionato sul picco VTOL (~5 kW).
-- **Motore:** benzina monocilindrica per il **dimostratore**; **rotativo o heavy-fuel** in vista per la versione **navale/difesa** (shipborne, single-fuel, coppia liscia).
+- **Motore:** benzina monocilindrica **solo** per il **dimostratore**; per il **prodotto certificabile** serve un motore **conforme alle normative sulle emissioni** (esclude il 2T a carburatore "sporco" → **4T/EFI o heavy-fuel** con controllo emissioni). Il funzionamento genset a **regime costante ottimale** è ciò che rende praticabile sia l'efficienza sia la conformità emissioni. **Rotativo o heavy-fuel** in vista per la versione **navale/difesa** (shipborne, single-fuel, coppia liscia).
 - **Isolamento antivibrante** del gruppo termico (critico in A1 per il gimbal; importante in A2/A3 per l'alternatore).
 - **Coerenza col Trade Study:** ala fissa = motore dell'endurance; VTOL = modulo. Questo documento specifica **come** realizzare la parte "ibrido-elettrico" lì raccomandata.
 

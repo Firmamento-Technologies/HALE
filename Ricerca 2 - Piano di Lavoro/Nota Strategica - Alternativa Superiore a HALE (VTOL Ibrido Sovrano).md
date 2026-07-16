@@ -17,7 +17,7 @@
 
 La riunione è arrivata, correttamente, alla conclusione che il repository aveva già imposto sul piano fisico: **HALE (pseudo-satellite stratosferico) è realizzabile ma non necessario.** L'alternativa **di livello superiore** — superiore su *implementazione, economia e strategia* — è:
 
-> **Una piattaforma aerea unica, C3 (< 25 kg), ad ala fissa long-endurance, a propulsione ibrida moderna, con capacità VTOL modulare, venduta come servizio, posizionata come la prima opzione ibrida _sovrana italiana_ — ancorata a bando Aree Interne + Polo Subacqueo di La Spezia + mercato marittimo.**
+> **Una piattaforma aerea unica, in classe C3 (< 25 kg _e_ < 3 m come obiettivo di progetto), ad ala fissa long-endurance, a propulsione ibrida a genset, con capacità VTOL modulare, venduta come servizio, posizionata come la prima opzione ibrida _sovrana italiana_ — ancorata a bando Aree Interne + Polo Subacqueo di La Spezia + mercato marittimo.**
 
 Non è un ripiego: è la mossa a ROI più alto e rischio più basso, e **cattura quasi tutto il valore strategico** che si attribuiva a HALE (persistenza, dual-use, "pseudo-satellite" narrativo, sovranità) a **una frazione del costo e del rischio**.
 
@@ -82,7 +82,7 @@ Il **contesto motoristico** resta a favore della tesi: i powerplant della fascia
 | Quaternium HYBRiX | Spagna | 2T benzina 32 cc Zenoah |
 | Pegasus / Löweheiser (genset) | Canada / — | 2T benzina 32–70 cc |
 | Sky Power / AIE / Rotron | Germania / UK | 2T / Wankel (anche heavy-fuel) |
-| **Firmamento (proposta)** | **🇮🇹 Italia** | serie/parallelo ottimizzato, rotativo o heavy-fuel moderno |
+| **Firmamento (proposta)** | **🇮🇹 Italia** | **genset ibrido-serie** ottimizzato (motore al regime costante), rotativo o heavy-fuel moderno emissioni-conforme |
 
 **Il dato che rende la sovranità concreta:** il campione storico italiano dei motori per UAV, **Zanzottera**, è stato **venduto all'estero (Canada → Cina, Fiate 2017)**. Restano motoristi italiani (**Simonini Racing** — Victor 2 ~92–100 hp 2T; **Vittorazi**, **Polini**), ma **nessun powertrain ibrido UAV "chiavi in mano" italiano esiste**. → *Il vuoto è reale a livello di **powertrain ibrido integrato**, non di "drone ibrido" in assoluto.* È qui che la sovranità diventa IP finanziabile dai fondi dual-use (EDF/PNRM/DIANA/PNS — `WP-B5` §4).
 
@@ -168,11 +168,11 @@ Il mercato italiano dei VTOL ad ala fissa < 25 kg **esiste già ed è giovane** 
 
 ## 3. La sintesi difendibile (il posizionamento in una frase)
 
-> **"La prima piattaforma aerea sovrana italiana C3 (< 25 kg), long-endurance ibrida moderna, VTOL-capace e modulare, venduta come servizio — ancorata alle Aree Interne e al Polo Subacqueo, scalata sul marittimo istituzionale."**
+> **"La prima piattaforma aerea sovrana italiana in classe C3 (< 25 kg _e_ < 3 m), long-endurance ibrida a genset, VTOL-capace e modulare, venduta come servizio — ancorata alle Aree Interne e al Polo Subacqueo, scalata sul marittimo istituzionale."**
 
 **I quattro pilastri, ciascuno con la sua evidenza:**
 1. **Sovranità** — occupa il quadrante libero "ibrido ≤ 25 kg C3 civile/dual-use long-endurance" (§2.6); sovranità difesa su **architettura + integrazione + catena italiana** (§2.2.1) → finanziabile dai fondi dual-use.
-2. **Persistenza** — 24 h ad ala fissa ibrida con powertrain moderno (`Trade Study`, `Trade Propulsione`) — il delta vs Overspace (elettrico, 2 h).
+2. **Persistenza** — endurance di progetto **~20–22 h** ad ala fissa ibrida a **genset** (target in classe C3 con margine 5%; 24 h aspirazionali — `Trade Study`, `Trade Propulsione`, `Bilancio di Massa`) — comunque un delta enorme vs Overspace (elettrico, 2 h).
 3. **Capillarità** — VTOL modulare + canale cooperativo = operabile ovunque da chiunque (§2.4–2.5), con percorso certificativo VLOS→BVLOS (§2.7).
 4. **Servizio** — data-as-a-service su nicchie paganti, doppio binario BUY/MAKE (§2.4).
 
@@ -223,6 +223,7 @@ Il mercato italiano dei VTOL ad ala fissa < 25 kg **esiste già ed è giovane** 
 - `Fase B - WP-B5 Costi TRL Make-vs-Buy` — doppio binario BUY/MAKE, costi, TRL, box-wing riqualificato (simulazioni interne promettenti).
 - `Fase B - Trade Propulsione Dettagliato (Powertrain Ibrido)` — architetture powertrain, motori concorrenti, differenziazione ibrida.
 - `Guida - Certificazione ENAC-SORA per il volo BVLOS` — **approfondimento dedicato** (§2.7): glossario delle sigle, workflow operativo, tabella dei casi italiani autorizzati. Per non addetti ai lavori.
+- `Guida - Tecnologie e Costi per la Certificazione BVLOS (superare gli OSO)` — **companion tecnologico**: mercato IT/estero delle dotazioni (FTS/paracadute, C2 ridondante, DAA, geofencing/Remote ID, autopilota) + servizi (D-Flight, formazione, consulenza SORA, DVR), workflow di equipaggiamento e **stima costi per scenari** (~€8–15k pragmatico → €90–250k+ SAIL III+).
 - `One-pager - Sintesi per la riunione` — tesi in 3 righe, roadmap, decisioni.
 - `Dossier di Verifica` — standard di onestà (verificato vs stima vs confutato).
 
